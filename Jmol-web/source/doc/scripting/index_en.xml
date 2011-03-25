@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE somethingOrAnything [
+<!ENTITY eye_candy          SYSTEM "eye_candy.xml" >
+<!ENTITY basic_scripting    SYSTEM "basic_scripting.xml" >
+]>
+<document>
+	<body>
+		<title>Scripting JmolApplet Without Using Jmol.js</title>
+		<header>
+			<p><i>
+	Please, note that the methods in this page <b>are not recommended</b>, since they
+	do not use the Jmol.js library. They are kept here for reference, particularly
+	for experienced programmers.
+  			</i></p>
+			<p>
+        A description of the Jmol implementation of the scripting language
+	is available at 
+	<a href="http://www.stolaf.edu/academics/chemapps/jmol/docs/">
+	Interactive Online Scripting Documentation page</a>. 
+      </p>
+			<p>
+        For small scripts the transition from
+	Chime to Jmol should be straightforward. 
+	With larger, more
+	complicated Chime web applications you may have challenges
+	because the button/event mechanism is different. 
+	It is strongly recommended that you use the functionality
+	built into <a href="../jslibrary/">Jmol.js</a>,
+	a library written in JavaScript which is
+	included in the standard downloadable Jmol package.
+      </p>
+			<p>
+        Simple scripts which are executed at applet load time can be
+	executed using the "script" parameter as part of your applet
+	definition in HTML. These scripts will execute 
+	on browser platforms which do not support JavaScript or the
+	LiveConnect interface between JavaScript and Java applets.
+	If you choose to use this method, see the examples below.
+      </p>
+			<p>
+        To develop more flexible web applications using the Jmol applet,
+	you must write JavaScript code which passes text strings using the
+	"script" method of the applet, but you don't need to write the code
+	since it is all easily implemented 
+	by using the functions in Jmol.js library.
+      </p>
+			<p>
+        For additional examples and documentation on Jmol applet scripting
+	see the <a href="../docs/">documentation page</a>.
+      </p>
+      <p>
+      The following examples are kept for reference by experienced programmers.
+Please, note that they use the <code>applet</code> tag, with is deprecated since 
+HTML 4 and may become nonfunctional in modern browsers when HTML 5 becomes the default.
+The recommended altenative is to use the <code>object</code> tag instead, but this 
+is tricky to implement because it requires different code for each browser. 
+Therefore, it is <b>strongly recommended that you make your pages with JmolApplets 
+using the <a href="../jslibrary">Jmol.js library</a></b> provided with Jmol 
+distributions, since that takes care of inserting the proper code.
+      </p>
+		</header>
+		<section title="Eye Candy Without JavaScript">
+			<p>This example demonstrates how scripting can be used without
+      JavaScript. Browsers that do not support LiveConnect communication
+      between JavaScript and Java applets will still run this type
+      of script.
+
+      <table border="1"><tr><td>
+							<appletExample>&eye_candy;</appletExample>
+						</td></tr></table>
+			</p>
+			<br/>
+		</section>
+		<section title="Basic Scripting">
+			<p>
+        This example shows some of the scripting available.
+        <appletExample>&basic_scripting;</appletExample>
+			</p>
+		</section>
+		<section title="Advanced Scripting">
+			<p>
+        More sophisticated and easier to code methods of interaction 
+        are based on JavaScript, and provided by Jmol.js library.                	
+        	</p>
+		</section>
+	</body>
+</document>

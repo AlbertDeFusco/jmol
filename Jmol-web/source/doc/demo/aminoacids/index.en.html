@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>jmol applet amino acids demo</title>
+    <script src="../../jmol/Jmol.js"></script>
+    <script src="./aminoacids.js"></script>
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <form>
+      <table border="1">
+	<tr>
+	  <td>
+	    <h2>amino acids</h2>
+	    <script>jmolApplet(350);</script>
+	  </td>
+	  
+	  <td>
+	    <script>
+	      doc.writeln("<table border=0><tr>");
+	      writeAminoControl('ala', 'ala - alanine');
+	      writeAminoControl('arg', 'arg - arginine');
+	      writeAminoControl('asn', 'asn - asparagine');
+	      writeAminoControl('asp', 'asp - aspartate');
+	      doc.writeln("</tr><tr>");
+	      writeAminoControl('cys', 'cys - cystine');
+	      writeAminoControl('gln', 'gln - glutamine');
+	      writeAminoControl('glu', 'glu - glutamate');
+	      writeAminoControl('gly', 'gly - glycine');
+	      doc.writeln("</tr><tr>");
+	      writeAminoControl('his', 'his - histidine');
+	      writeAminoControl('ile', 'ile - isoleucine');
+	      writeAminoControl('leu', 'leu - leucine');
+	      writeAminoControl('lys', 'lys - lysine');
+	      doc.writeln("</tr><tr>");
+	      writeAminoControl('met', 'met - methionine');
+	      writeAminoControl('phe', 'phe - phenylalanine');
+	      writeAminoControl('pro', 'pro - proline');
+	      writeAminoControl('ser', 'ser - serine');
+	      doc.writeln("</tr><tr>");
+	      writeAminoControl('thr', 'thr - threonine');
+	      writeAminoControl('trp', 'trp - tryptophan');
+	      writeAminoControl('tyr', 'tyr - tyrosine');
+	      writeAminoControl('val', 'val - valine');
+	      doc.writeln("</tr></table>")
+
+	      writeScriptControls();
+	    </script>
+	      
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

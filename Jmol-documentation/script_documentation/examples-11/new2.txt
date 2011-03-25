@@ -1,0 +1,222 @@
+Complete(?) list of new Jmol script/JavaScript functionality in 11.2 relative to 11.0. 
+See http://www.stolaf.edu/academics/chemapps/jmol/docs for details. Some of these 
+commands are not documented because they are intended for serialization only -- for the
+construction of a Jmol script describing the precise state of the applet or application.
+
+color atoms property_X absolute -0.3 3.0
+color axis1 purple
+color axis2 [xFFFF00]
+color axis3 [200,100,50]
+color isosurface translucent -1
+color isosurface translucent 0.0
+color isosurface translucent 1.0
+color isosurface translucent 2
+color isosurface translucent 128
+color dots property_x
+
+connect ... radius x.y
+connect ... [color/translucency] 
+connect ... [radius or color/translucency] ADJUST  # finds bonds and sets radius/color/translucency
+
+data "coord set"
+data "property_x @x"
+
+
+depth hkl {h k l}     # internal depth and slab
+depth plane {a b c d}
+depth plane $object
+depth plane [xy|xz|yz]
+depth plane [x or y or z] = (value)
+depth reference {x y z} 
+depth reference $object
+depth reference (atom expression)
+depth reset
+
+echo bottom script "if backGroundColor == \"[xffffff]\";backGround black;else;background white;endif "
+echo %{javascript("document.location").split("/")[-1]}
+echo %{script("show symmetry").lines.find("Spacegroup").split(":")[2]}
+
+file n
+
+goto messageTextToGoTo   # script execution jump
+
+invertSelected
+invertSelected POINT
+invertSelected PLANE
+invertSelected HKL
+
+isosurface backlit
+isosurface sasurface 1.2 map colorscheme bwr property temperature  #colorscheme bwr
+isosurface frontlit
+isosurface fullylit
+isosurface functionxy "file:data.dat" ...
+isosurface functionxy "functionName" {x0 y0 z0} {-ni ...} ...
+isosurface functionxy "functionName" {x0 y0 z0} {-ni ...}{-nj ...} ...
+isosurface minset 500 pocket sasurface
+isosurface POCKET [cavity] sasurface
+isosurface INTERIOR [cavity] sasurface
+isosurface mo HOMO/LUMO [+/- n]
+isosurface model 1.2 plane {1 1 1 0};
+isosurface within 10.0 (atomno=185) sasurface
+
+
+javascript alert("this is a message from Jmol")
+javascript jmolScript("javascript alert('this is nuts')")
+
+Jmol.js: jmolEvaluate(prompt('enter molecular math','({oxygen}.xyz).distance({carbon}.xyz)'))
+Jmol.js: jmolSetCallback("language", "de")
+
+label @x
+label <sup>13</sup>C<sub>2</sub>H<sub>4</sub>
+
+lcaoCartoon select (atomno=30) translucent 0.5 create "pz"
+
+load append cyclohexane_movie.xyz
+load =1crn
+load files "=1crn" "=2by9"
+load trajectory
+load xxx::filename
+
+message @x
+message text # text also serves as target of GOTO command
+message _text # initial underscore indicates SILENT target text; essentially a label
+
+mo homo
+mo lumo
+mo mesh [not]frontonly
+mo fill [no]triangles
+
+moveTo timeSec {x y z w} (atom expression) [zoom factor]
+moveTo timeSec {x y z w} 0 transX transY (atom expression) [zoom factor]
+
+
+navigate nSec center {x y z}
+navigate nSec center $object
+navigate nSec center (atom expression)
+navigate nSec depth p # a depth value, like slab, in percent (0 rear, 100 front)
+navigate nSec path $object indexStart indexEnd
+navigate nSec path (atom expr) {x y z} (atomexpr) (atomexpr) {x y z} etc...
+navigate nSec path {x y z theta} {x y z theta}{x y z theta}{x y z theta}...
+navigate nSec rotate X degrees
+navigate nSec rotate Y degrees
+navigate nSec rotate Z degrees
+navigate nSec trace (atom expression)
+navigate nSec translate x.xx y.yy  # percentages; 0 0 center
+navigate nSec translate X x.xx # relative percent
+navigate nSec translate Y y.yy # relative percent
+navigate nSec translate {x y z}
+navigate nSec translate $object # could be a draw object
+navigate nSec translate (atom expression) #average of values
+
+rotateSelected ....  # same as "rotate" but only the selected model.
+rotateselected spin internal
+
+script filename CHECK
+script file.spt line 1
+script file.spt lines 1-5
+script file.spt lines 3-
+script file.spt command 1
+script file.spt commands 1-5
+script file.spt commands 3-
+
+select/display */2.1		# file.model identifier
+select (oxygen)[1]              # selector for atom expressions
+select (oxygen)[1][5]           # selector for atom expressions
+select connected(hbonds)        # new connected options -- bond type
+select connected(quadruple)
+select connected(3,single,carbon)
+select connected(unspecified)
+select model=n
+select file=n
+select within(plane,$plane1)
+select within(x.x,plane,$plane1)
+
+set allowEmbeddedScripts
+set allowRotateSelected (alt-left then effects selected rotation)
+set appendNew true
+set applySymmetryToBondsset cameraDepth x.xx
+set hideNavigationPoint
+set language "de"
+set loadFormat "./%FILE.pdb"
+set navigationMode TRUE/FALSE
+set navigate nSlab #depth from navigation point; positive toward user
+set navigate nSpeed [5]
+set navigationPeriodic # for crystals, creates the effect of an infinite array in all directions
+set perspectiveModel 10 # (default; same as Jmol 10.2)
+set perspectiveModel 11 # (allows far greater zooming; fixes nonlinearity of Jmol 10 model)
+set pickcallback "script: script doCallback.spt"  # non-Javascript callbacks
+set picking navigation
+set propertyDataField 0  # no fields -- just read tokens
+set propertyDataField 2  # data are in field 2 (second from the left)
+set propertyMatchField 1 # data must match atomNo in field 1
+set resizeCallback
+set rotationRadius x.xx
+set showNavigationPointAlways
+set showScript x.xx
+set visualRange x.xx
+set zShade
+
+show x
+
+slab hkl {h k l}    # internal depth and slab
+slab plane {a b c d}
+slab plane $object
+slab plane [xy|xz|yz]
+slab plane [x or y or z] = (value)
+slab reference {x y z} 
+slab reference $object
+slab reference (atom expression)
+slab reset
+
+trajectory n
+
+translateSelected {0.1 0.2 0.3}
+
+variables: _currentFileNumber, _currentModelNumberInFile, _memory, _modelNumber,
+variables: _modelFile, _modelTitle, _spinning, _version
+variables: x = 3    # unlimited user-setable variables
+variables: loglevel = 5   # alternative assignment option to "set"
+variables: x = {carbon}  # atom expression evaluate to the number of matching atoms
+variables: x = {some atom expression}.atomProperty 
+variables: x = {some atom expression}[n]
+variables: x = {some atom expression}[n][m]
+variables: x = "testing"%3   ==> "tes"
+variables: x = "testing"%-3   ==> "ing"
+variables: x = 1.345%2  ==> 1.34
+variables: x = 13.45%-2 ==> "1.3E+1"
+variables: x = 1.6%0 ==> 2
+variables: x = {carbon}[{carbon}]  # the last carbon in the set.
+variables: a = 3;x = {carbon}[a].xyz  # the xyz coordinate of the 3rd carbon in the set.
+variables: x = {carbon}[3][5]  # "x" = 3 (because there are 3 atoms, #3, #4, and #5)
+variables: x = {oxygen}.xyz;y = $x + .....
+variables: x = [{...} {...} {...}].measure  # for distances, angles, and dihedrals.
+variables: x = "......".lines
+variables: x = "......".lines[3]
+variables: x = "......".lines[5][8]
+variables: x = ["line1" "line2" "line3"]
+variables: x = javascript("document.location")
+variables: x = script("show symmetry");message @x
+variables: x = script("show symmetry").lines.find("Spacegroup");message @x
+variables: x = script("show symmetry").lines.find("Spacegroup").split(":")[2];message @x
+variables: x = {*}.property_x
+variables: x = {carbon}[5].property_x
+varibales: x = {carbon}.property_x.min
+variables: x = {carbon}.property_x.max
+
+variables: select x_set # "x_set" represents the bitset for select
+variables: use of @x
+variables: select xxx;property_x = (expression)
+
+write coords MOL "filename.mol"
+write coords PDB "filename.pdb"
+write coords XYZ "filename.xyz"
+write image 800 600 "pic.jpg" 
+write ISOSURFACE filename
+write MO filename
+write VAR varName "filename"
+
+zoomTo (atom expression) 0
+zoomTo (atom expression) 0 +n
+zoomTo (atom expression) 0 -n
+zoomTo (atom expression) 0 *n
+zoomTo (atom expression) 0 /n

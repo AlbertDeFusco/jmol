@@ -1,0 +1,19 @@
+<script type="text/javascript" src=examples.js></script>
+<script type="text/javascript" src=predefinedsets.js></script>
+<script type=text/javascript>
+
+title="PREDEFINED SETS";model="1a31.pdb";ref="select"
+remark="These predefined sets also work with the \"restrict\" and \"define\" commands. See also <a href=select.htm>select.htm</a>"
+height=400
+width=700
+style=";wireframe 0.4;color white;cartoons on;"
+loadscript="moveTo 2 -182 -732 -657 171.9 146;zoom 146"
+
+Scripts=new Array("select *;color cpk;labels off;wireframe 0.1;spacefill 0.4;cartoons on"
+," <form name=dropdowns>"+showdefs()+"</form>"
+)
+
+</script>
+</head>
+<body onload="setTimeout('document.dropdowns.reset()',100)">
+<script type="text/javascript">showpage()</script>

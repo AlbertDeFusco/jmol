@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Simple example</title>
+    <script src="../../jmol/Jmol.js" type="text/javascript"></script> <!-- REQUIRED -->
+    <link href="default.css" rel="stylesheet" type="text/css">
+    <link href="./jssample0.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  <table border="0"><tr valign="top">
+  <td nowrap>
+    <form>
+      <script type="text/javascript">
+    jmolInitialize("../../jmol");
+    jmolApplet(200, "load caffeine.xyz");
+      </script>
+    </form>
+  </td>
+  <td><p><strong>Code for this page:</strong></p>
+    <p> &lt;head&gt;<br>
+&nbsp;&nbsp;&lt;title&gt;Simple example&lt;/title&gt;<br>
+&nbsp;&nbsp;<span class="hilite1">&lt;script src=&quot;<strong class="userData">../../jmol/Jmol.js</strong>&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</span> &lt;!--<span class="comments">&nbsp;&nbsp;Use your own path here {#1} </span> --&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&nbsp;&nbsp;&lt;form&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script type=&quot;text/javascript&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hilite1"><strong>jmolInitialize</strong>(&quot;<span class="userData">../../jmol</span>&quot;);</span> // &nbsp;&nbsp;&nbsp;<span class="comments">Use your own path here {#2} </span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hilite2"><strong>jmolApplet</strong>(200, &quot;load <span class="userData">caffeine.xyz</span>&quot;);</span>&nbsp; /*&nbsp;&nbsp;&nbsp;<span class="comments">Use your own path and filename here {#3}, but...</span> <span class="comments">CAUTION! If you are running the page from disk, not from web server, molecules (path #3) MUST be in the same folder than JmolApplet.jar (path #2 above) or in a folder below it. This example, as shown, will NOT run from disk. It will run if set-up in this other way:</span> 
+  <br>
+  &quot;load <span class="userData">../../jmol/models/caffeine.xyz</span>&quot;<br>
+  */
+  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;<br>
+&nbsp;&nbsp;&lt;/form&gt;<br>
+&lt;/body&gt;</p>
+    </td>
+  </tr>
+  </table>
+</body>
+</html>
+

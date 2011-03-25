@@ -1,0 +1,21 @@
+parallel twoIsosurfaces(model1, model2) {
+  var msg = ""
+  process { 
+	msg += "process 1..."
+	echo @{msg}
+	isosurface s1 model @model1 molecular; color isosurface red 
+  }
+  process { 
+	msg += "process 2..."
+	echo @{msg}
+	isosurface s2 model @model2 molecular; color isosurface green 
+  }
+  echo "starting processes..."
+}
+
+load files "1crn.pdb" "1blu.pdb"
+frame *
+refresh;
+t = now()
+twoIsosurfaces("1.1", "2.1")
+print "time in milliseconds: " + (now() - t) 

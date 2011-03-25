@@ -1,0 +1,426 @@
+Job CH3Cl_STO-31G started on chem-alpha at Tue Aug 21 07:32:20 2007
+jobid: chem-alpha-0-46669b41
+
+  +--------------------------------------------------------------------+
+  |  Jaguar version 7.0, release 109                                   |
+  |                                                                    |
+  |  Copyright (c) 2007 Schrodinger,  LLC.                             |
+  |  All Rights Reserved.                                              |
+  |                                                                    |
+  |  Use of this program should be acknowledged in publications as:    |
+  |  Jaguar, version 7.0, Schrodinger, LLC, New York, NY, 2007.        |
+  +--------------------------------------------------------------------+
+   
+  start of program pre
+  Job name: CH3Cl_STO-31G
+  Executables used: /software/schrodinger/jaguar-v70109/bin/Linux-x86
+  Temporary files : /var/tmp/hatuey/CH3Cl_STO-31G
+  Maestro file (input):  CH3Cl_STO-31G.mae
+  Maestro file (output): CH3Cl_STO-31G.01.mae
+  
+  
+  Dynamic memory assumed available (MB):     256
+  
+  basis set:             sto-3g          
+  net molecular charge:    0
+  multiplicity:            1
+  
+  number of basis functions....           17
+  
+  Basis set name for each atom
+  
+  Atom     Basis 
+  C1       sto-3g          
+  Cl2      sto-3g          
+  H3       sto-3g          
+  H4       sto-3g          
+  H5       sto-3g          
+  
+  Gaussian Functions - Shell information
+  
+             s    j
+             h    c  i       n
+             e    o  s       f
+             l    n  h       s
+  atom       l    t  l  l    h          z              coef            rcoef
+--------    ---  --- -- --  ---     ----------      ----------       ---------
+ C1          1    3  0  1    0      71.6168373       0.1543290       2.7078144
+ C1          2   -1  0  1    0      13.0450963       0.5353281       2.6188802
+ C1          3   -1  0  1    0       3.5305122       0.4446345       0.8161906
+ C1          4    2  2  1    1       2.9412494      -0.2956454      -0.4732386
+ C1          5   -4  2  1    1       0.6834831       1.1815287       0.6329949
+ C1          6    2 -1  2    2       2.9412494       0.2213487       1.2152952
+ C1          7   -6 -1  2    2       0.6834831       0.8627064       0.7642102
+ C1          8    1  1  1    1       0.2222899       1.0000000       0.2307278
+ C1          9    1 -1  2    2       0.2222899       1.0000000       0.2175654
+ Cl2         1    3  0  1    5     601.3456136       0.1543290      13.3567456
+ Cl2         2   -1  0  1    5     109.5358542       0.5353281      12.9180628
+ Cl2         3   -1  0  1    5      29.6446769       0.4446345       4.0259959
+ Cl2         4    3  3  1    6      38.9604189      -0.0999672      -1.1110547
+ Cl2         5   -4  3  1    6       9.0535635       0.3995128       1.4861255
+ Cl2         6   -4  3  1    6       2.9444998       0.7001155       1.1216011
+ Cl2         7    3 -1  2    7      38.9604189       0.1559163      21.6327166
+ Cl2         8   -7 -1  2    7       9.0535635       0.6076837      13.6032327
+ Cl2         9   -7 -1  2    7       2.9444998       0.3919574       2.1549806
+ Cl2        10    2  2  1   10       2.1293865      -1.3961841      -1.7540569
+ Cl2        11  -10  2  1   10       0.5940934       1.4341692       0.6916741
+ Cl2        12    2 -1  2   11       2.1293865       0.0175936       0.0645077
+ Cl2        13  -12 -1  2   11       0.5940934       0.9889965       0.7352809
+ Cl2        14    1  1  1   10       0.2325241       1.0000000       0.2386498
+ Cl2        15    1 -1  2   11       0.2325241       1.0000000       0.2301575
+ H3          1    2  0  1   14       3.4252509       0.2405014       0.4315658
+ H3          2   -1  0  1   14       0.6239137       0.8342385       0.4173916
+ H3          3    1  0  1   14       0.1688554       1.0000000       0.1877355
+ H4          1    2  0  1   15       3.4252509       0.2405014       0.4315658
+ H4          2   -1  0  1   15       0.6239137       0.8342385       0.4173916
+ H4          3    1  0  1   15       0.1688554       1.0000000       0.1877355
+ H5          1    2  0  1   16       3.4252509       0.2405014       0.4315658
+ H5          2   -1  0  1   16       0.6239137       0.8342385       0.4173916
+ H5          3    1  0  1   16       0.1688554       1.0000000       0.1877355
+  
+  
+  Gaussian Functions - Normalized coefficients
+  
+             s
+             h    t
+             e    y
+             l    p    f
+  atom       l    e    n          z          rcoef        rmfac     rcoef*rmfac
+--------    ---  ---  ---     ---------    ----------   ----------  -----------
+ C1          1    S    1      71.616837     2.707814     1.000000     2.707814
+ C1          2    S    1      13.045096     2.618880     1.000000     2.618880
+ C1          3    S    1       3.530512     0.816191     1.000000     0.816191
+ C1          4    S    2       2.941249    -0.473239     1.000000    -0.473239
+ C1          5    S    2       0.683483     0.632995     1.000000     0.632995
+ C1          6    X    3       2.941249     1.215295     1.000000     1.215295
+                  Y    4                                 1.000000     1.215295
+                  Z    5                                 1.000000     1.215295
+ C1          7    X    3       0.683483     0.764210     1.000000     0.764210
+                  Y    4                                 1.000000     0.764210
+                  Z    5                                 1.000000     0.764210
+ C1          8    S    2       0.222290     0.230728     1.000000     0.230728
+ C1          9    X    3       0.222290     0.217565     1.000000     0.217565
+                  Y    4                                 1.000000     0.217565
+                  Z    5                                 1.000000     0.217565
+ Cl2         1    S    6     601.345614    13.356746     1.000000    13.356746
+ Cl2         2    S    6     109.535854    12.918063     1.000000    12.918063
+ Cl2         3    S    6      29.644677     4.025996     1.000000     4.025996
+ Cl2         4    S    7      38.960419    -1.111055     1.000000    -1.111055
+ Cl2         5    S    7       9.053563     1.486125     1.000000     1.486125
+ Cl2         6    S    7       2.944500     1.121601     1.000000     1.121601
+ Cl2         7    X    8      38.960419    21.632717     1.000000    21.632717
+                  Y    9                                 1.000000    21.632717
+                  Z   10                                 1.000000    21.632717
+ Cl2         8    X    8       9.053563    13.603233     1.000000    13.603233
+                  Y    9                                 1.000000    13.603233
+                  Z   10                                 1.000000    13.603233
+ Cl2         9    X    8       2.944500     2.154981     1.000000     2.154981
+                  Y    9                                 1.000000     2.154981
+                  Z   10                                 1.000000     2.154981
+ Cl2        10    S   11       2.129386    -1.754057     1.000000    -1.754057
+ Cl2        11    S   11       0.594093     0.691674     1.000000     0.691674
+ Cl2        12    X   12       2.129386     0.064508     1.000000     0.064508
+                  Y   13                                 1.000000     0.064508
+                  Z   14                                 1.000000     0.064508
+ Cl2        13    X   12       0.594093     0.735281     1.000000     0.735281
+                  Y   13                                 1.000000     0.735281
+                  Z   14                                 1.000000     0.735281
+ Cl2        14    S   11       0.232524     0.238650     1.000000     0.238650
+ Cl2        15    X   12       0.232524     0.230158     1.000000     0.230158
+                  Y   13                                 1.000000     0.230158
+                  Z   14                                 1.000000     0.230158
+ H3          1    S   15       3.425251     0.431566     1.000000     0.431566
+ H3          2    S   15       0.623914     0.417392     1.000000     0.417392
+ H3          3    S   15       0.168855     0.187735     1.000000     0.187735
+ H4          1    S   16       3.425251     0.431566     1.000000     0.431566
+ H4          2    S   16       0.623914     0.417392     1.000000     0.417392
+ H4          3    S   16       0.168855     0.187735     1.000000     0.187735
+ H5          1    S   17       3.425251     0.431566     1.000000     0.431566
+ H5          2    S   17       0.623914     0.417392     1.000000     0.417392
+ H5          3    S   17       0.168855     0.187735     1.000000     0.187735
+  
+  Effective Core Potential 
+  
+  Atom      Electrons represented by ECP
+ C1                     0
+ Cl2                    0
+ H3                     0
+ H4                     0
+ H5                     0
+  
+  no dealiasing set available for atom            1
+  switch to all-analytic calculation
+  
+ Input geometry:
+                                   angstroms
+  atom               x                 y                 z
+  C1           -0.8418050000      0.7755600000      2.5492930000 
+  Cl2          -0.8530460000      1.8602200000      1.5132490000 
+  H3            0.0264640000      0.8995500000      3.1964670000 
+  H4           -1.7512950000      0.8340770000      3.1472100000 
+  H5           -0.7924050000     -0.1962520000      2.0581300000 
+   
+  principal moments of inertia:
+        amu*angstrom^2:        3.19192       27.92506       27.92506
+                g*cm^2: 5.30031366E-40 4.63706456E-39 4.63706494E-39
+   
+  rotational constants:
+               cm^(-1):     5.28133806     0.60367389     0.60367385
+                   GHz:   158.33053171    18.09768807    18.09768662
+   
+  Molecular weight:      49.99 amu
+   
+  Stoichiometry: CH3Cl
+  Molecular Point Group: Cs      
+	Molecule translated to center of mass 
+	Molecule reoriented along symmetry axes
+  Point Group used: Cs
+  
+  
+ Symmetrized geometry:
+                                   angstroms
+  atom               x                 y                 z
+  C1            0.5004081970      0.8970930171      0.0000000000 
+  Cl2          -0.2303128487     -0.4128869824      0.0000000000 
+  H3           -0.2196611761      1.7153832228      0.0000000000 
+  H4            1.1263154205      0.9645829645      0.8898234553 
+  H5            1.1263154205      0.9645829645     -0.8898234553 
+   
+  nuclear repulsion energy.......      58.295376758 hartrees
+  Plot box parameters (in Angstoms):
+   x min,max:          -2.579313    3.420687
+   y min,max:          -2.761887    3.638113
+   z min,max:          -2.806823    3.193177
+   plot resolution:     2.500000
+   points:    15   16   15
+  
+ 
+ Non-default options chosen:
+   Highest accuracy cutoffs used in SCF
+   Electrostatic potential fit to point charges on atomic centers
+   Electron density computed on grid number  -7
+  
+ Non-default print settings:
+      1=  2 102=  8
+  
+  end of program pre
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.970E-01
+  number of canonical orbitals.....           17
+  end of program onee
+   
+   
+  start of program hfig
+  initial wavefunction generated automatically from atomic wavefunctions
+ 
+  Irreducible     Total no   No of occupied orbitals 
+  representation  orbitals   Shell_1  Shell_2    ...
+  Ap                13         10
+  App                4          3
+  ------------------------
+  Orbital occupation/shell    1.000
+ 
+  end of program hfig
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom         C1       Cl2        H3        H4        H5     total
+  grid # 1         5       898       690      1280         0      2873
+  grid # 2        39      1187       738       888       748      3600
+   
+  end of program grid
+   
+   
+  start of program scf
+ number of electrons..........         26
+ number of alpha electrons....         13
+ number of beta electrons.....         13
+ number of orbitals, total....         17
+ number of doubly-occ'd orbs..         13
+ number of open shell orbs....          0
+ number of occupied orbitals..         13
+ number of virtual orbitals...          4
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: HF
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot   1  N  N  0  N    -493.49477498255           1.5E-02  1.7E-01
+etot   2  N  Y  0  N    -493.62864774791  1.3E-01  2.3E-03  3.0E-02
+etot   3  N  Y  0  N    -493.63337905211  4.7E-03  7.2E-04  7.1E-03
+etot   4  N  Y  0  N    -493.63362195147  2.4E-04  8.6E-05  7.7E-04
+etot   5  N  N  0  N    -493.63362619377  4.2E-06  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............      58.29537675806
+   (E)  Total one-electron terms.....    -797.04297496979
+   (I)  Total two-electron terms.....     245.11397201796
+   (L)  Electronic energy............    -551.92900295183  (E+I)
+   (N)  Total energy.................    -493.63362619377  (A+L)
+  
+ SCFE: SCF energy: HF      -493.63362619377 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.37717
+ LUMO energy:     0.59206
+ 
+  Orbital energies/symmetry label: 
+ -103.73064 Ap       -11.11921 Ap       -10.41465 Ap        -7.86035 Ap     
+   -7.85192 App       -7.85192 Ap        -1.17887 Ap        -0.84076 Ap     
+   -0.62851 Ap        -0.62851 App       -0.54782 Ap        -0.37717 Ap     
+   -0.37717 App        0.59206 Ap         0.65800 App        0.65800 Ap     
+    0.70390 Ap     
+ 
+  end of program scf
+   
+   
+  start of program ch
+  gridpoints used for charge fit         2791
+    out of a possible maximum of         2873
+  
+   Electrostatic potential fitting constrained to reproduce
+     total charge:                yes
+     dipole moment:               no 
+     traceless quadrupole moment: no 
+     traceless octapole moment:   no 
+  
+  Atomic charges from electrostatic potential: 
+   
+ Atom       C1           Cl2          H3           H4           H5      
+ Charge    0.20497     -0.21803      0.00435      0.00435      0.00435
+  
+  sum of atomic charges:     0.000000
+   
+ RMS Error   1.68E-03 hartrees
+ 
+  end of program ch
+   
+   
+  start of program elden
+  
+  Calculating electrostatic potential in units of kcal/mol
+  File written:
+    CH3Cl_STO-31G_potential.plt
+ 
+  Calculating orbital amplitude...
+  Files written:
+    CH3Cl_STO-31G_MO_13.plt
+    CH3Cl_STO-31G_MO_14.plt
+ 
+  Calculating electron density...
+  charge density evaluated on         3600  gridpoints
+  File written:
+    CH3Cl_STO-31G_density.plt
+  
+  end of program elden
+   
+   
+  start of program post
+  ***************************************** 
+ 
+ Occupied + virtual Orbitals- final wvfn
+ 
+  ***************************************** 
+   
+   
+                              1         2         3         4         5
+  eigenvalues-           -103.73064 -11.11921 -10.41465  -7.86035  -7.85192
+    1 C1               S   -0.00006   0.99164  -0.00104  -0.00071   0.00000
+    2 C1               S    0.00062   0.04016   0.01197   0.01698   0.00000
+    3 C1               X   -0.00024  -0.00139  -0.00411  -0.00525   0.00000
+    4 C1               Y   -0.00042  -0.00250  -0.00738  -0.00940   0.00000
+    5 C1               Z    0.00000   0.00000   0.00000   0.00000  -0.00447
+    6 Cl2              S    0.99450   0.00001   0.37693  -0.00650   0.00000
+    7 Cl2              S    0.01575  -0.00041  -1.05332   0.01829   0.00000
+    8 Cl2              X    0.00008   0.00028  -0.00695  -0.48114   0.00000
+    9 Cl2              Y    0.00015   0.00051  -0.01246  -0.86255   0.00000
+   10 Cl2              Z    0.00000   0.00000   0.00000   0.00000   0.99003
+   11 Cl2              S   -0.00202  -0.00765  -0.04828  -0.01098   0.00000
+   12 Cl2              X   -0.00022  -0.00312  -0.00477  -0.02522   0.00000
+   13 Cl2              Y   -0.00039  -0.00560  -0.00854  -0.04521   0.00000
+   14 Cl2              Z    0.00000   0.00000   0.00000   0.00000   0.03992
+   15 H3               S    0.00001  -0.00693   0.00041  -0.00009   0.00000
+   16 H4               S    0.00001  -0.00693   0.00041  -0.00009  -0.00013
+   17 H5               S    0.00001  -0.00693   0.00041  -0.00009   0.00013
+   
+                              6         7         8         9        10
+  eigenvalues-             -7.85192  -1.17887  -0.84076  -0.62851  -0.62851
+    1 C1               S    0.00000   0.15437   0.16477   0.00000   0.00000
+    2 C1               S    0.00000  -0.37811  -0.53792   0.00000   0.00000
+    3 C1               X   -0.00391   0.06817  -0.07720  -0.47616   0.00000
+    4 C1               Y    0.00218   0.12220  -0.13840   0.26561   0.00000
+    5 C1               Z    0.00000   0.00000   0.00000   0.00000  -0.54524
+    6 Cl2              S    0.00000  -0.06571   0.05325   0.00000   0.00000
+    7 Cl2              S    0.00000   0.22278  -0.17093   0.00000   0.00000
+    8 Cl2              X    0.86461   0.03362   0.01811   0.10097   0.00000
+    9 Cl2              Y   -0.48229   0.06027   0.03247  -0.05632   0.00000
+   10 Cl2              Z    0.00000   0.00000   0.00000   0.00000   0.11562
+   11 Cl2              S    0.00000  -0.65701   0.67989   0.00000   0.00000
+   12 Cl2              X    0.03486  -0.08939  -0.04838  -0.34673   0.00000
+   13 Cl2              Y   -0.01945  -0.16025  -0.08673   0.19341   0.00000
+   14 Cl2              Z    0.00000   0.00000   0.00000   0.00000  -0.39703
+   15 H3               S    0.00015  -0.06129  -0.18962   0.36931   0.00000
+   16 H4               S   -0.00008  -0.06129  -0.18962  -0.18466  -0.31983
+   17 H5               S   -0.00008  -0.06129  -0.18962  -0.18466   0.31983
+   
+                             11        12        13        14        15
+  eigenvalues-             -0.54782  -0.37717  -0.37717   0.59206   0.65800
+    1 C1               S    0.00968   0.00000   0.00000   0.11260   0.00000
+    2 C1               S   -0.04434   0.00000   0.00000  -0.76806   0.00000
+    3 C1               X    0.23952   0.22645   0.00000   0.54053   0.00000
+    4 C1               Y    0.42939  -0.12631   0.00000   0.96903   0.00000
+    5 C1               Z    0.00000   0.00000   0.25929   0.00000   1.10807
+    6 Cl2              S    0.02520   0.00000   0.00000   0.02959   0.00000
+    7 Cl2              S   -0.07448   0.00000   0.00000  -0.06852   0.00000
+    8 Cl2              X    0.09683   0.22023   0.00000  -0.11119   0.00000
+    9 Cl2              Y    0.17358  -0.12285   0.00000  -0.19933   0.00000
+   10 Cl2              Z    0.00000   0.00000   0.25217   0.00000   0.04109
+   11 Cl2              S    0.41679   0.00000   0.00000   0.75534   0.00000
+   12 Cl2              X   -0.31977  -0.83253   0.00000   0.53866   0.00000
+   13 Cl2              Y   -0.57326   0.46439   0.00000   0.96568   0.00000
+   14 Cl2              Z    0.00000   0.00000  -0.95329   0.00000  -0.19023
+   15 H3               S    0.14289  -0.31802   0.00000  -0.03715   0.00000
+   16 H4               S    0.14289   0.15901   0.27542  -0.03715  -0.86556
+   17 H5               S    0.14289   0.15901  -0.27542  -0.03715   0.86556
+   
+                             16        17
+  eigenvalues-              0.65800   0.70390
+    1 C1               S    0.00000   0.22918
+    2 C1               S   -0.00002  -1.49150
+    3 C1               X   -0.96770  -0.21031
+    4 C1               Y    0.53979  -0.37705
+    5 C1               Z    0.00000   0.00000
+    6 Cl2              S    0.00000   0.00396
+    7 Cl2              S    0.00000  -0.00941
+    8 Cl2              X   -0.03588  -0.01961
+    9 Cl2              Y    0.02002  -0.03516
+   10 Cl2              Z    0.00000   0.00000
+   11 Cl2              S    0.00000   0.09634
+   12 Cl2              X    0.16613   0.09290
+   13 Cl2              Y   -0.09267   0.16655
+   14 Cl2              Z    0.00000   0.00000
+   15 H3               S   -0.99946   0.75241
+   16 H4               S    0.49974   0.75239
+   17 H5               S    0.49974   0.75239
+   
+  
+  end of program post
+   
+ Total cpu seconds     user:       1.340   user+sys:       1.790
+  
+ Total elapsed time:    4 seconds
+
+Job CH3Cl_STO-31G completed on chem-alpha at Tue Aug 21 07:32:24 2007

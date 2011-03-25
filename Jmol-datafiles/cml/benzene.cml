@@ -1,0 +1,32 @@
+<molecule title="benzene.mol" xmlns="http://www.xml-cml.org/schema/cml2/core"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.xml-cml.org/schema/cml2/core cmlAll.xsd">
+  <atomArray>
+    <atom id="a1" elementType="C" x3="-1.3961" y3="0.0013" z3="-0.0504"/>
+    <atom id="a2" elementType="C" x3="-0.7402" y3="-0.3516" z3="1.1313"/>
+    <atom id="a3" elementType="C" x3="0.6556" y3="-0.344" z3="1.1844"/>
+    <atom id="a4" elementType="C" x3="1.3956" y3="0.0123" z3="0.0546"/>
+    <atom id="a5" elementType="C" x3="0.7398" y3="0.3611" z3="-1.1284"/>
+    <atom id="a6" elementType="C" x3="-0.656" y3="0.3577" z3="-1.1803"/>
+    <atom id="a7" elementType="H" x3="-2.4975" y3="-0.0029" z3="-0.0919"/>
+    <atom id="a8" elementType="H" x3="-1.3241" y3="-0.6376" z3="2.0213"/>
+    <atom id="a9" elementType="H" x3="1.1731" y3="-0.6224" z3="2.1169"/>
+    <atom id="a10" elementType="H" x3="2.4971" y3="0.0152" z3="0.0956"/>
+    <atom id="a11" elementType="H" x3="1.3239" y3="0.6376" z3="-2.0214"/>
+    <atom id="a12" elementType="H" x3="-1.1735" y3="0.6347" z3="-2.1132"/>
+  </atomArray>
+  <bondArray>
+    <bond atomRefs2="a1 a2" order="A"/>
+    <bond atomRefs2="a1 a6" order="A"/>
+    <bond atomRefs2="a1 a7" order="S"/>
+    <bond atomRefs2="a2 a3" order="A"/>
+    <bond atomRefs2="a2 a8" order="S"/>
+    <bond atomRefs2="a3 a4" order="A"/>
+    <bond atomRefs2="a3 a9" order="S"/>
+    <bond atomRefs2="a4 a5" order="A"/>
+    <bond atomRefs2="a4 a10" order="S"/>
+    <bond atomRefs2="a5 a6" order="A"/>
+    <bond atomRefs2="a5 a11" order="S"/>
+    <bond atomRefs2="a6 a12" order="S"/>
+  </bondArray>
+</molecule>

@@ -1,0 +1,56 @@
+#minrot.spt -- bob hanson 10:13 PM 3/29/2008
+#
+# http://chemapps.stolaf.edu/jmol/docs/examples-11/minrot.spt
+#
+# demonstrates minimization in Jmol 11.5.22
+#
+
+load caffeine.xyz;
+moveto /* time, axisAngle */ 1.0 { -997 -51 -56 89.77} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {-0.23140144 0.61279976 0.071704745} 5.580881 /* navigation center, translation, depth */ {0.0 0.0 0.0} 1.4631552 0.685674 50.0;
+select _H and connected(C10);color yellow
+set drawPicking true
+set pickCallback "jmolScript: checkDraw()";
+measure {c5} {n4} {c10} {h15};
+resetAngle(0);
+doRotate();
+
+function doRotate();
+  minimize energy
+  e0 = _minimizationEnergy
+  draw delete;
+  for (var i =0; i < 36; i = i + 1);
+	  rot(10);
+	  var x0 = -3.5
+	  var z0 = -4.4
+	  var s = "draw_"+(i*10 + 10)+"_"
+	  var x=i/10.0 + x0
+	  var y=0
+	  var z=0 + z0
+	  var x1=i/10.0 + x0
+	  var z1=(_minimizationEnergy-e0)/5.0 + z0
+	  var y1=0
+	  draw @s {@x,@y,@z} {@x1,@y1,@z1}
+  end for;
+end function;
+
+function resetAngle(ang);
+  var currentAngle = getproperty("measurementInfo", 1,"value");
+  rot(ang-currentAngle)
+end function;
+
+function rot(n);
+  #delay 1;
+  select hydrogen and connected(c10);rotateselected {c10} {n4} @n;refresh
+  var ang = angle({c5}, {n4},{c10},{h15})
+  minimization energy;
+  var s = "angle = " + ("   "+ang%0)%-5 + " Energy = " + ("    "+(_minimizationEnergy-e0)%2)%-8 + " kJ/mol"
+  set echo top left; font echo 14; echo @s
+  set echo bottom left; font echo 14; echo "click a bar to see that rotation"
+end function;
+
+
+function checkDraw();
+  if (_atomPicked >= 0);return;endif;
+  var ang = 0 + _pickInfo.split("_")[2];
+  resetAngle(ang)
+end function;

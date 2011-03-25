@@ -1,0 +1,4444 @@
+Job CH4_no_sym_ir started on huygens at Sun May 23 14:33:50 2004
+  +--------------------------------------------------------------------+
+  |  Jaguar version 4.0, release  20                                   |
+  |                                                                    |
+  |  Copyright 1991-2000 Schrodinger, Inc.                             |
+  |  All Rights Reserved.                                              |
+  |                                                                    |
+  |  Use of this program should be acknowledged in publications as:    |
+  |  Jaguar 4.0, Schrodinger, Inc., Portland, Oregon, 2000.            |
+  +--------------------------------------------------------------------+
+   
+  start of program pre
+  Job name: CH4_no_sym_ir
+  Executables used: /usr/local/jaguar/v4.0/irix65-r10k
+  Temporary files : /tmp/fielicke/CH4_no_sym_ir
+  
+  
+  basis set:             6-31g**         
+  net molecular charge:    0
+  multiplicity:            1
+  
+  keygrid settings 
+    wispc.....   7.500E-01
+    ldens.....   0
+    denspc....   7.500E-01
+  
+   grid     daf set  nls  grid set  Q type
+  ------    -------  ---  --------  ------
+  coarse       1      1       1        1
+  medium       2      2       2        1
+  fine         3      2       3        0
+  ultrafine    4      2       4        1
+  charge       0      1       0        1
+  gradient     5      2       4        1
+  density      0      1       0        0
+  DFT-fine     0      1     -13        2
+  DFT-med.     0      1     -13        2
+  DFT-grad     0      1     -13        2
+  
+  idftgrdm  100
+  ndftgrdm   50    0    0
+  idftgrdf  111
+  ndftgrdf   85    0    0
+  idftgrdg  111
+  ndftgrdg   80    3    0
+  idftgrdu  111
+  ndftgrdu   75    6    0
+  
+  number of basis functions....           35
+  
+ Input geometry:
+                                angstroms
+  atom            x                 y                 z
+  C1        0.0000074386      0.0000179188     -0.0000188703 
+  H2        0.8911804530      0.0005059181      0.6307420711 
+  H3       -0.8919294325      0.0005082302      0.6297426106 
+  H4        0.0003018964      0.8910248608     -0.6309712004 
+  H5        0.0003585131     -0.8922523650     -0.6292887955 
+   
+ 
+Number of optimization coordinates:    12
+Number of independent coordinates:     12
+Number of non-redundant coordinates:   15
+Number of constrained coordinates:      0
+ 
+Number of geometric degrees of freedom:     9
+Maximum geometric degrees of freedom:       9
+ " " " " " excluding dummy atoms:           9
+ 
+  Molecular weight:      16.03 amu
+   
+  Stoichiometry: CH4
+  Molecular Point Group: C1      
+  Point Group used: C1 (symmetry turned off)
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412941151 hartrees
+
+ Non-default options chosen:
+   SCF calculation type: DFT             
+   DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+   Geometry will be optimized in redundant internal coordinates
+   Culot/Fletcher trust radius adjustment
+   Numerical 2nd derivatives will be computed
+   Vibrational frequencies and related properties will be computed
+   Molecular symmetry not used
+   HF Initial guess: read from Jaguar .in file
+   high accuracy cutoffs used in SCF
+   Initial Hessian: read from Jaguar .in file in cartesian coordinates
+   J and K strips stored in core if nfb*nham < 1500
+  
+ Non-default print settings:
+     11= 2
+  
+  end of program pre
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.732E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program hfig
+  initial wavefunction read from .in file
+  reading wavefunction from input file
+           15 orbitals read from .in file
+  virtual orbitals input are ignored
+  Largest Normalization error   1.3383072428041487E-11
+  RMS Normalization error   6.1959408301833314E-12
+
+  Irreducible     Total no   No of occupied orbitals 
+  representation  orbitals   Shell_1  Shell_2    ...
+  No Symm           35          5
+  ------------------------
+  Orbital occupation/shell    1.000
+
+  end of program hfig
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       77    110    111    111    111    520
+  grid # 3      138    222    222    222    222   1026
+  grid # 4      279    231    231    231    231   1203
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52402840079           6.2E-07  6.0E-06
+etot   2  Y  N  4  M   -40.52402824620 -1.5E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41294115134
+   (E)  Total one-electron terms.....   -79.80613244304
+   (I)  Total two-electron terms.....    25.86916304550
+   (J)    Coulomb....................    32.77699147135
+   (K)    Exchange+Correlation.......    -6.90782842584
+   (L)  Electronic energy............   -53.93696939754  (E+I)
+   (N)  Total energy.................   -40.52402824620  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52402824620 hartrees   iterations:   2
+  
+ 
+ HOMO energy:    -0.38827
+ LUMO energy:     0.11773
+ 
+  Orbital energies: 
+  -10.16700   -0.69044   -0.38839   -0.38836   -0.38827    0.11773
+    0.17654    0.17663    0.17663    0.52907    0.52916    0.52916
+    0.87423    0.87433    0.87434
+ 
+  end of program scf 
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -2.530726E-05  -5.062039E-05   5.660763E-05
+   2    H2      1.672938E-05   7.529095E-06   5.734308E-05
+   3    H3      2.318099E-05   8.437541E-06   3.670251E-05
+   4    H4     -1.046435E-06   2.255939E-05  -7.393148E-05
+   5    H5      4.626120E-07   2.541574E-05  -5.528334E-05
+ -----------   -------------  -------------  -------------
+    total       1.401929E-05   1.332137E-05   2.143839E-05
+   
+  end of program der1b
+   
+   
+  start of program geopt   1
+  
+  geometry optimization step  1
+  reading input hessian of dimension    15
+   in five columns format
+  
+  
+  gradient maximum:        1.0092E-04 *  (  4.5000E-04 )
+  gradient rms:            5.0265E-05 #  (  3.0000E-04 )
+  step size:   0.00061  trust radius:   0.30000
+  displacement maximum:    3.3435E-04 #  (  1.8000E-03 )
+  displacement rms:        1.7650E-04 #  (  1.2000E-03 )
+  predicted energy change:    -5.2601E-08
+  
+  ********************************************************
+  **           Geometry optimization complete           **
+  ********************************************************
+  
+  center of mass moved by:
+     x:     0.0000E+00     y:     0.0000E+00     z:     0.0000E+00
+  
+  final geometry: 
+                                angstroms
+  atom            x                 y                 z
+  C1        0.0000074386      0.0000179188     -0.0000188703 
+  H2        0.8911804530      0.0005059181      0.6307420711 
+  H3       -0.8919294325      0.0005082302      0.6297426106 
+  H4        0.0003018964      0.8910248608     -0.6309712004 
+  H5        0.0003585131     -0.8922523650     -0.6292887955 
+   
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412941151 hartrees
+  -------------------------------------------------
+ /  end of geometry optimization iteration   1   /
+ -------------------------------------------------
+   
+  end of program geopt
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.732E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program hfig
+  initial wavefunction read from .in file
+  reading wavefunction from input file
+           15 orbitals read from .in file
+  virtual orbitals input are ignored
+  Largest Normalization error   1.3383072428041487E-11
+  RMS Normalization error   6.1959408301833314E-12
+
+  Irreducible     Total no   No of occupied orbitals 
+  representation  orbitals   Shell_1  Shell_2    ...
+  No Symm           35          5
+  ------------------------
+  Orbital occupation/shell    1.000
+
+  end of program hfig
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       77    110    111    111    111    520
+  grid # 3      138    222    222    222    222   1026
+  grid # 4      279    231    231    231    231   1203
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52402840079           6.2E-07  6.0E-06
+etot   2  Y  N  4  M   -40.52402824620 -1.5E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41294115134
+   (E)  Total one-electron terms.....   -79.80613244304
+   (I)  Total two-electron terms.....    25.86916304550
+   (J)    Coulomb....................    32.77699147135
+   (K)    Exchange+Correlation.......    -6.90782842584
+   (L)  Electronic energy............   -53.93696939754  (E+I)
+   (N)  Total energy.................   -40.52402824620  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52402824620 hartrees   iterations:   2
+  
+ 
+ HOMO energy:    -0.38827
+ LUMO energy:     0.11773
+ 
+  Orbital energies: 
+  -10.16700   -0.69044   -0.38839   -0.38836   -0.38827    0.11773
+    0.17654    0.17663    0.17663    0.52907    0.52916    0.52916
+    0.87423    0.87433    0.87434
+ 
+  end of program scf 
+   
+   
+  start of program nude 
+  calculation at perturbed geometry   1 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.070322       C1   H3  :   1.113576
+  C1   H4  :   1.092098       C1   H5  :   1.092158
+
+  bond angles
+
+  H3   C1   H2  : 109.452134       H4   C1   H2  : 111.066939
+  H4   C1   H3  : 107.855273       H5   C1   H2  : 111.053138
+  H5   C1   H3  : 107.847679       H5   C1   H4  : 109.456720
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412941678 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.732E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       80    112    111    111    111    525
+  grid # 3      138    222    222    222    222   1026
+  grid # 4      277    223    231    232    231   1194
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52311689712           3.9E-04  4.2E-03
+etot   2  Y  Y  4  M   -40.52333733541  2.2E-04  8.5E-05  6.6E-04
+etot   3  Y  Y  4  M   -40.52334348117  6.1E-06  1.8E-05  1.9E-04
+etot   4  Y  Y  4  M   -40.52334384158  3.6E-07  3.7E-06  2.0E-05
+etot   5  Y  N  4  M   -40.52334405904  2.2E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41294167799
+   (E)  Total one-electron terms.....   -79.80443629941
+   (I)  Total two-electron terms.....    25.86815056238
+   (J)    Coulomb....................    32.77590005780
+   (K)    Exchange+Correlation.......    -6.90774949542
+   (L)  Electronic energy............   -53.93628573703  (E+I)
+   (N)  Total energy.................   -40.52334405904  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52334405904 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38141
+ LUMO energy:     0.11759
+ 
+  Orbital energies: 
+  -10.16710   -0.69052   -0.39530   -0.38831   -0.38141    0.11759
+    0.17065    0.17651    0.18245    0.52572    0.52921    0.53252
+    0.86250    0.87406    0.88520
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0006     Y=     0.0000     Z=    -0.0007  Tot=     0.0009
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -2.779413E-02  -3.716613E-05  -1.555916E-03
+   2    H2      1.218115E-02   1.669151E-05   7.224737E-03
+   3    H3      1.095267E-02   2.627120E-06  -5.854424E-03
+   4    H4      2.347223E-03  -1.251894E-04   7.403097E-05
+   5    H5      2.344048E-03   1.580095E-04   8.221497E-05
+ -----------   -------------  -------------  -------------
+    total       3.096486E-05   1.497257E-05  -2.935601E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry   2 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.113512       C1   H3  :   1.070351
+  C1   H4  :   1.092113       C1   H5  :   1.092175
+
+  bond angles
+
+  H3   C1   H2  : 109.454813       H4   C1   H2  : 107.861650
+  H4   C1   H3  : 111.060646       H5   C1   H2  : 107.848576
+  H5   C1   H3  : 111.052241       H5   C1   H4  : 109.454400
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412942413 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.732E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       80    110    111    111    111    523
+  grid # 3      138    222    222    222    222   1026
+  grid # 4      276    231    223    231    232   1193
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52312000683           3.9E-04  4.2E-03
+etot   2  Y  Y  4  M   -40.52334017925  2.2E-04  8.5E-05  6.6E-04
+etot   3  Y  Y  4  M   -40.52334629004  6.1E-06  1.8E-05  1.9E-04
+etot   4  Y  Y  4  M   -40.52334654759  2.6E-07  3.7E-06  2.0E-05
+etot   5  Y  N  4  M   -40.52334679931  2.5E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41294241269
+   (E)  Total one-electron terms.....   -79.80444451201
+   (I)  Total two-electron terms.....    25.86815530001
+   (J)    Coulomb....................    32.77590531767
+   (K)    Exchange+Correlation.......    -6.90775001766
+   (L)  Electronic energy............   -53.93628921200  (E+I)
+   (N)  Total energy.................   -40.52334679931  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52334679931 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38143
+ LUMO energy:     0.11760
+ 
+  Orbital energies: 
+  -10.16710   -0.69052   -0.39529   -0.38830   -0.38143    0.11760
+    0.17067    0.17651    0.18243    0.52572    0.52922    0.53251
+    0.86253    0.87405    0.88518
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=    -0.0006     Y=     0.0000     Z=    -0.0007  Tot=     0.0009
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1      2.773741E-02  -3.679160E-05  -1.547299E-03
+   2    H2     -1.091764E-02   6.338739E-06  -5.847967E-03
+   3    H3     -1.216972E-02   1.340364E-05   7.203478E-03
+   4    H4     -2.338474E-03  -1.310319E-04   7.826559E-05
+   5    H5     -2.342298E-03   1.654067E-04   8.718582E-05
+ -----------   -------------  -------------  -------------
+    total      -3.071039E-05   1.732554E-05  -2.633681E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry   3 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.092119       C1   H3  :   1.092165
+  C1   H4  :   1.070301       C1   H5  :   1.113573
+
+  bond angles
+
+  H3   C1   H2  : 109.439395       H4   C1   H2  : 111.067009
+  H4   C1   H3  : 111.060415       H5   C1   H2  : 107.848173
+  H5   C1   H3  : 107.847344       H5   C1   H4  : 109.469187
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412933966 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.732E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       80    111    111    111    111    524
+  grid # 3      138    222    222    222    222   1026
+  grid # 4      276    231    232    223    232   1194
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52311617330           3.9E-04  4.2E-03
+etot   2  Y  Y  4  M   -40.52333657704  2.2E-04  8.5E-05  6.6E-04
+etot   3  Y  Y  4  M   -40.52334272038  6.1E-06  1.8E-05  1.9E-04
+etot   4  Y  Y  4  M   -40.52334303895  3.2E-07  3.7E-06  2.0E-05
+etot   5  Y  N  4  M   -40.52334320688  1.7E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41293396574
+   (E)  Total one-electron terms.....   -79.80441959012
+   (I)  Total two-electron terms.....    25.86814241750
+   (J)    Coulomb....................    32.77589069441
+   (K)    Exchange+Correlation.......    -6.90774827691
+   (L)  Electronic energy............   -53.93627717261  (E+I)
+   (N)  Total energy.................   -40.52334320688  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52334320688 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38142
+ LUMO energy:     0.11759
+ 
+  Orbital energies: 
+  -10.16710   -0.69052   -0.39533   -0.38827   -0.38142    0.11759
+    0.17066    0.17650    0.18245    0.52572    0.52920    0.53252
+    0.86251    0.87404    0.88522
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0000     Y=     0.0006     Z=     0.0009  Tot=     0.0010
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -3.059286E-05  -2.781215E-02   1.634615E-03
+   2    H2     -1.225317E-04   2.353849E-03  -8.924192E-05
+   3    H3      1.476254E-04   2.350593E-03  -1.028452E-04
+   4    H4      8.049285E-06   1.217766E-02  -7.243259E-03
+   5    H5     -2.565600E-06   1.096956E-02   5.831570E-03
+ -----------   -------------  -------------  -------------
+    total      -1.542893E-08   3.951213E-05   3.083774E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry   4 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.092142       C1   H3  :   1.092189
+  C1   H4  :   1.113483       C1   H5  :   1.070332
+
+  bond angles
+
+  H3   C1   H2  : 109.435880       H4   C1   H2  : 107.861584
+  H4   C1   H3  : 107.855462       H5   C1   H2  : 111.053616
+  H5   C1   H3  : 111.052621       H5   C1   H4  : 109.473643
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412951976 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.732E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       80    112    111    111    111    525
+  grid # 3      138    222    222    222    222   1026
+  grid # 4      276    231    231    232    223   1193
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52312048352           3.9E-04  4.2E-03
+etot   2  Y  Y  4  M   -40.52334067536  2.2E-04  8.5E-05  6.6E-04
+etot   3  Y  Y  4  M   -40.52334679108  6.1E-06  1.8E-05  1.9E-04
+etot   4  Y  Y  4  M   -40.52334710174  3.1E-07  3.7E-06  2.0E-05
+etot   5  Y  N  4  M   -40.52334724194  1.4E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41295197551
+   (E)  Total one-electron terms.....   -79.80446360334
+   (I)  Total two-electron terms.....    25.86816438589
+   (J)    Coulomb....................    32.77591591038
+   (K)    Exchange+Correlation.......    -6.90775152449
+   (L)  Electronic energy............   -53.93629921745  (E+I)
+   (N)  Total energy.................   -40.52334724194  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52334724194 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38145
+ LUMO energy:     0.11759
+ 
+  Orbital energies: 
+  -10.16710   -0.69052   -0.39530   -0.38826   -0.38145    0.11759
+    0.17067    0.17649    0.18245    0.52572    0.52921    0.53251
+    0.86254    0.87401    0.88519
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0000     Y=    -0.0006     Z=     0.0009  Tot=     0.0011
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -3.061155E-05   2.773995E-02   1.622614E-03
+   2    H2     -1.316579E-04  -2.332699E-03  -9.566528E-05
+   3    H3      1.570427E-04  -2.336449E-03  -1.092139E-04
+   4    H4      1.875214E-06  -1.091900E-02   5.833751E-03
+   5    H5      4.848685E-06  -1.216964E-02  -7.222892E-03
+ -----------   -------------  -------------  -------------
+    total       1.497119E-06  -1.783467E-05   2.859421E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry   5 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.076741       C1   H3  :   1.076813
+  C1   H4  :   1.107286       C1   H5  :   1.107306
+
+  bond angles
+
+  H3   C1   H2  : 111.784623       H4   C1   H2  : 109.428290
+  H4   C1   H3  : 109.420108       H5   C1   H2  : 109.417897
+  H5   C1   H3  : 109.415155       H5   C1   H4  : 107.266854
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412953009 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.732E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       80     72     72     72     72    368
+  grid # 2       86    110    111    111    111    529
+  grid # 3      151    222    222    222    222   1039
+  grid # 4      276    223    223    231    231   1184
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52310391707           3.9E-04  4.1E-03
+etot   2  Y  Y  4  M   -40.52332434814  2.2E-04  8.6E-05  7.0E-04
+etot   3  Y  Y  4  M   -40.52333039050  6.0E-06  1.9E-05  1.9E-04
+etot   4  Y  Y  4  M   -40.52333085320  4.6E-07  3.7E-06  1.8E-05
+etot   5  Y  N  4  M   -40.52333109749  2.4E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41295300929
+   (E)  Total one-electron terms.....   -79.80446128155
+   (I)  Total two-electron terms.....    25.86817717477
+   (J)    Coulomb....................    32.77592679070
+   (K)    Exchange+Correlation.......    -6.90774961594
+   (L)  Electronic energy............   -53.93628410678  (E+I)
+   (N)  Total energy.................   -40.52333109749  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52333109749 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38153
+ LUMO energy:     0.11755
+ 
+  Orbital energies: 
+  -10.16710   -0.69051   -0.39538   -0.38810   -0.38153    0.11755
+    0.17062    0.17651    0.18237    0.52595    0.52881    0.53272
+    0.86317    0.87248    0.88619
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0000     Y=     0.0000     Z=     0.0007  Tot=     0.0007
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -3.865622E-05  -2.802445E-05  -2.766359E-02
+   2    H2      6.901914E-03   1.502936E-05   7.104578E-03
+   3    H3     -6.865403E-03   1.282984E-05   7.072979E-03
+   4    H4      2.832996E-06  -6.141663E-03   6.762763E-03
+   5    H5     -1.089155E-06   6.163933E-03   6.746367E-03
+ -----------   -------------  -------------  -------------
+    total      -4.020755E-07   2.210405E-05   2.310191E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry   6 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.107306       C1   H3  :   1.107329
+  C1   H4  :   1.076711       C1   H5  :   1.076814
+
+  bond angles
+
+  H3   C1   H2  : 107.249205       H4   C1   H2  : 109.429004
+  H4   C1   H3  : 109.424461       H5   C1   H2  : 109.412503
+  H5   C1   H3  : 109.413401       H5   C1   H4  : 111.802848
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412922309 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.732E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       79     72     72     72     72    367
+  grid # 2       86    111    111    111    111    530
+  grid # 3      150    222    222    222    222   1038
+  grid # 4      276    231    231    224    224   1186
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52310044877           3.9E-04  4.1E-03
+etot   2  Y  Y  4  M   -40.52332066322  2.2E-04  8.6E-05  6.9E-04
+etot   3  Y  Y  4  M   -40.52332667706  6.0E-06  1.9E-05  1.9E-04
+etot   4  Y  Y  4  M   -40.52332703999  3.6E-07  3.7E-06  1.8E-05
+etot   5  Y  N  4  M   -40.52332738982  3.5E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41292230880
+   (E)  Total one-electron terms.....   -79.80440243304
+   (I)  Total two-electron terms.....    25.86815273442
+   (J)    Coulomb....................    32.77589816574
+   (K)    Exchange+Correlation.......    -6.90774543132
+   (L)  Electronic energy............   -53.93624969862  (E+I)
+   (N)  Total energy.................   -40.52332738982  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52332738982 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38150
+ LUMO energy:     0.11754
+ 
+  Orbital energies: 
+  -10.16710   -0.69051   -0.39541   -0.38810   -0.38150    0.11754
+    0.17059    0.17651    0.18238    0.52596    0.52881    0.53271
+    0.86314    0.87248    0.88621
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0000     Y=     0.0000     Z=    -0.0005  Tot=     0.0005
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -2.845624E-05  -4.126843E-05   2.774330E-02
+   2    H2     -6.137261E-03   7.805506E-06  -6.774777E-03
+   3    H3      6.156292E-03   4.374681E-06  -6.773388E-03
+   4    H4      6.524240E-06   6.902814E-03  -7.124594E-03
+   5    H5      3.903514E-06  -6.853924E-03  -7.087508E-03
+ -----------   -------------  -------------  -------------
+    total       1.002205E-06   1.980169E-05  -1.696842E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry   7 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.113512       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 110.271758       H4   C1   H2  : 109.073635
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 109.060421
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.347507595 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.760E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       73     72     72     72     72    361
+  grid # 2       78    111    111    111    111    522
+  grid # 3      140    222    222    222    222   1028
+  grid # 4      278    232    232    231    231   1204
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52366238145           2.4E-04  2.4E-03
+etot   2  Y  Y  4  M   -40.52372909843  6.7E-05  8.1E-05  9.0E-04
+etot   3  Y  Y  4  M   -40.52373450307  5.4E-06  2.6E-05  4.4E-04
+etot   4  Y  Y  4  M   -40.52373617613  1.7E-06  4.6E-06  4.2E-05
+etot   5  Y  N  4  M   -40.52373602875 -1.5E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.34750759522
+   (E)  Total one-electron terms.....   -79.68313123802
+   (I)  Total two-electron terms.....    25.81188761405
+   (J)    Coulomb....................    32.71201794944
+   (K)    Exchange+Correlation.......    -6.90013033539
+   (L)  Electronic energy............   -53.87124362397  (E+I)
+   (N)  Total energy.................   -40.52373602875  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52373602875 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38462
+ LUMO energy:     0.11635
+ 
+  Orbital energies: 
+  -10.16924   -0.68883   -0.38903   -0.38863   -0.38462    0.11635
+    0.17163    0.17654    0.17673    0.52847    0.52878    0.53422
+    0.86426    0.87433    0.87446
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=    -0.0097     Y=    -0.0001     Z=    -0.0129  Tot=     0.0162
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1      1.089877E-02  -3.375808E-05   5.872880E-03
+   2    H2     -1.176081E-02   7.073319E-06  -6.522630E-03
+   3    H3      9.518429E-04   6.459425E-06   8.409182E-04
+   4    H4     -5.262671E-05  -1.661259E-05  -1.406797E-04
+   5    H5     -5.352046E-05   4.622954E-05  -1.452658E-04
+ -----------   -------------  -------------  -------------
+    total      -1.634385E-05   9.391607E-06  -9.477753E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry   8 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.070322       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 108.666901       H4   C1   H2  : 109.875811
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 109.862150
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.480177906 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.703E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       80    111    111    111    111    524
+  grid # 3      137    222    222    222    222   1025
+  grid # 4      273    222    232    231    231   1189
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52364088857           2.4E-04  2.3E-03
+etot   2  Y  Y  4  M   -40.52370991582  6.9E-05  8.4E-05  9.4E-04
+etot   3  Y  Y  4  M   -40.52371561983  5.7E-06  2.6E-05  4.4E-04
+etot   4  Y  Y  4  M   -40.52371729092  1.7E-06  4.5E-06  4.3E-05
+etot   5  Y  N  4  M   -40.52371753639  2.5E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.48017790642
+   (E)  Total one-electron terms.....   -79.93130529228
+   (I)  Total two-electron terms.....    25.92740984946
+   (J)    Coulomb....................    32.84313397063
+   (K)    Exchange+Correlation.......    -6.91572412116
+   (L)  Electronic energy............   -54.00389544281  (E+I)
+   (N)  Total energy.................   -40.52371753639  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52371753639 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38757
+ LUMO energy:     0.11897
+ 
+  Orbital energies: 
+  -10.16473   -0.69216   -0.39200   -0.38816   -0.38757    0.11897
+    0.17646    0.17668    0.18183    0.52409    0.52953    0.52977
+    0.87418    0.87422    0.88289
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0086     Y=     0.0000     Z=     0.0127  Tot=     0.0153
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -1.221697E-02  -6.171011E-05  -7.208915E-03
+   2    H2      1.300334E-02   1.718411E-05   7.804304E-03
+   3    H3     -9.848219E-04   4.851066E-06  -8.178339E-04
+   4    H4      9.082004E-05   8.142730E-06   5.639788E-05
+   5    H5      8.347822E-05   2.751564E-05   7.469395E-05
+ -----------   -------------  -------------  -------------
+    total      -2.415848E-05  -4.016562E-06  -9.135293E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry   9 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.092142       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.478369       H4   C1   H2  : 108.264985
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 110.656270
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412001238 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.733E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       73     72     72     72     72    361
+  grid # 2       81    111    111    111    111    525
+  grid # 3      141    222    222    222    222   1029
+  grid # 4      278    231    231    231    231   1202
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52394130220           1.3E-04  1.2E-03
+etot   2  Y  Y  4  M   -40.52397041407  2.9E-05  3.0E-05  2.3E-04
+etot   3  Y  Y  4  M   -40.52397143056  1.0E-06  7.2E-06  4.3E-05
+etot   4  Y  Y  4  M   -40.52397151855  8.8E-08  2.0E-06  1.2E-05
+etot   5  Y  N  4  M   -40.52397281751  1.3E-06  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41200123774
+   (E)  Total one-electron terms.....   -79.80445668130
+   (I)  Total two-electron terms.....    25.86848262604
+   (J)    Coulomb....................    32.77619934978
+   (K)    Exchange+Correlation.......    -6.90771672374
+   (L)  Electronic energy............   -53.93597405525  (E+I)
+   (N)  Total energy.................   -40.52397281751  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52397281751 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38594
+ LUMO energy:     0.11776
+ 
+  Orbital energies: 
+  -10.16699   -0.69041   -0.39070   -0.38828   -0.38594    0.11776
+    0.17546    0.17663    0.17767    0.52789    0.52913    0.53055
+    0.87221    0.87431    0.87625
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=    -0.0003     Y=     0.0088     Z=    -0.0001  Tot=     0.0088
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1      8.632344E-05   2.286488E-03   1.333925E-04
+   2    H2     -1.189495E-04  -2.273811E-03  -5.279098E-05
+   3    H3      5.767962E-06   9.508861E-05   2.167840E-05
+   4    H4     -1.181145E-03  -6.517861E-05  -7.809743E-04
+   5    H5      1.185767E-03  -5.452726E-05   6.817279E-04
+ -----------   -------------  -------------  -------------
+    total      -2.223674E-05  -1.194024E-05   3.033547E-06
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  10 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.092119       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.480130       H4   C1   H2  : 110.668622
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 108.250436
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412075965 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.733E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       73     72     72     72     72    361
+  grid # 2       81    111    111    111    111    525
+  grid # 3      141    222    222    222    222   1029
+  grid # 4      282    231    231    231    231   1206
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52393992074           1.3E-04  1.2E-03
+etot   2  Y  Y  4  M   -40.52396897282  2.9E-05  3.0E-05  2.3E-04
+etot   3  Y  Y  4  M   -40.52396994159  9.7E-07  7.2E-06  4.3E-05
+etot   4  Y  Y  4  M   -40.52397001681  7.5E-08  2.0E-06  1.1E-05
+etot   5  Y  N  4  M   -40.52397115249  1.1E-06  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41207596466
+   (E)  Total one-electron terms.....   -79.80459321731
+   (I)  Total two-electron terms.....    25.86854610016
+   (J)    Coulomb....................    32.77627089001
+   (K)    Exchange+Correlation.......    -6.90772478984
+   (L)  Electronic energy............   -53.93604711715  (E+I)
+   (N)  Total energy.................   -40.52397115249  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52397115249 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38591
+ LUMO energy:     0.11776
+ 
+  Orbital energies: 
+  -10.16699   -0.69041   -0.39073   -0.38828   -0.38591    0.11776
+    0.17545    0.17662    0.17769    0.52788    0.52913    0.53056
+    0.87219    0.87431    0.87628
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=    -0.0003     Y=    -0.0089     Z=    -0.0001  Tot=     0.0089
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1      7.895909E-05  -2.387864E-03   1.272497E-04
+   2    H2     -1.061284E-04   2.296836E-03  -4.413025E-05
+   3    H3      8.246687E-06  -8.252476E-05   2.366942E-05
+   4    H4      1.190101E-03   8.956025E-05   6.694039E-04
+   5    H5     -1.186849E-03   9.702328E-05  -7.713774E-04
+ -----------   -------------  -------------  -------------
+    total      -1.567092E-05   1.303082E-05   4.815371E-06
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  11 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.107306       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 108.367646       H4   C1   H2  : 110.024976
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 110.009392
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.366010430 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.752E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       73     72     72     72     72    361
+  grid # 2       78    111    111    111    111    522
+  grid # 3      145    222    222    222    222   1033
+  grid # 4      282    232    231    231    231   1207
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52380641792           1.9E-04  2.1E-03
+etot   2  Y  Y  4  M   -40.52385467037  4.8E-05  6.4E-05  5.9E-04
+etot   3  Y  Y  4  M   -40.52385766397  3.0E-06  2.3E-05  3.8E-04
+etot   4  Y  Y  4  M   -40.52385895863  1.3E-06  4.0E-06  4.0E-05
+etot   5  Y  N  4  M   -40.52385874506 -2.1E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.36601042952
+   (E)  Total one-electron terms.....   -79.71802158903
+   (I)  Total two-electron terms.....    25.82815241445
+   (J)    Coulomb....................    32.73045089586
+   (K)    Exchange+Correlation.......    -6.90229848142
+   (L)  Electronic energy............   -53.88986917459  (E+I)
+   (N)  Total energy.................   -40.52385874506  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52385874506 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38501
+ LUMO energy:     0.11674
+ 
+  Orbital energies: 
+  -10.16860   -0.68928   -0.38947   -0.38857   -0.38501    0.11674
+    0.17298    0.17642    0.17688    0.52865    0.52872    0.53297
+    0.86700    0.87422    0.87466
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=    -0.0131     Y=     0.0000     Z=    -0.0004  Tot=     0.0131
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1      6.077237E-03  -4.399044E-05   6.815350E-03
+   2    H2     -6.775973E-03   7.375087E-06  -7.197389E-03
+   3    H3     -7.938816E-04   5.009328E-06  -6.311062E-04
+   4    H4      7.184944E-04   1.138924E-04   4.564316E-04
+   5    H5      7.123232E-04  -8.493584E-05   4.643568E-04
+ -----------   -------------  -------------  -------------
+    total      -6.180037E-05  -2.649472E-06  -9.235714E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  12 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.076741       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 110.634482       H4   C1   H2  : 108.889760
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 108.878526
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.459873375 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.712E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       77    111    111    111    111    521
+  grid # 3      141    222    222    222    222   1029
+  grid # 4      277    224    232    231    231   1195
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52379289162           1.9E-04  2.0E-03
+etot   2  Y  Y  4  M   -40.52384180241  4.9E-05  6.5E-05  5.9E-04
+etot   3  Y  Y  4  M   -40.52384457986  2.8E-06  2.3E-05  3.9E-04
+etot   4  Y  Y  4  M   -40.52384577473  1.2E-06  4.0E-06  4.0E-05
+etot   5  Y  N  4  M   -40.52384603273  2.6E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.45987337501
+   (E)  Total one-electron terms.....   -79.89362147758
+   (I)  Total two-electron terms.....    25.90990206984
+   (J)    Coulomb....................    32.82323509598
+   (K)    Exchange+Correlation.......    -6.91333302614
+   (L)  Electronic energy............   -53.98371940774  (E+I)
+   (N)  Total energy.................   -40.52384603273  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52384603273 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38697
+ LUMO energy:     0.11857
+ 
+  Orbital energies: 
+  -10.16540   -0.69163   -0.39171   -0.38822   -0.38697    0.11857
+    0.17610    0.17678    0.18043    0.52537    0.52961    0.52966
+    0.87357    0.87445    0.88079
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0124     Y=    -0.0001     Z=    -0.0002  Tot=     0.0124
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -6.992147E-03  -5.838603E-05  -7.052500E-03
+   2    H2      7.524405E-03   1.614914E-05   7.464158E-03
+   3    H3      8.680984E-04   6.464742E-06   7.023911E-04
+   4    H4     -7.373681E-04  -8.565306E-05  -6.097527E-04
+   5    H5     -7.416392E-04   1.210767E-04  -5.971045E-04
+ -----------   -------------  -------------  -------------
+    total      -7.865033E-05  -3.485242E-07  -9.280756E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  13 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.070351
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 108.668255       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 109.868829       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 109.860579       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.480229710 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.703E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       71     72     72     72     72    359
+  grid # 2       78    111    111    111    111    522
+  grid # 3      138    222    222    222    222   1026
+  grid # 4      274    232    222    231    231   1190
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52364122129           2.4E-04  2.3E-03
+etot   2  Y  Y  4  M   -40.52371020980  6.9E-05  8.4E-05  9.4E-04
+etot   3  Y  Y  4  M   -40.52371593856  5.7E-06  2.6E-05  4.4E-04
+etot   4  Y  Y  4  M   -40.52371754313  1.6E-06  4.6E-06  4.3E-05
+etot   5  Y  N  4  M   -40.52371777769  2.3E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.48022971041
+   (E)  Total one-electron terms.....   -79.93140431543
+   (I)  Total two-electron terms.....    25.92745682734
+   (J)    Coulomb....................    32.84318706872
+   (K)    Exchange+Correlation.......    -6.91573024139
+   (L)  Electronic energy............   -54.00394748809  (E+I)
+   (N)  Total energy.................   -40.52371777769  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52371777769 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38758
+ LUMO energy:     0.11897
+ 
+  Orbital energies: 
+  -10.16473   -0.69216   -0.39198   -0.38816   -0.38758    0.11897
+    0.17646    0.17668    0.18182    0.52409    0.52953    0.52976
+    0.87419    0.87423    0.88287
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=    -0.0086     Y=     0.0000     Z=     0.0127  Tot=     0.0153
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1      1.217007E-02  -6.491715E-05  -7.201057E-03
+   2    H2      1.008917E-03   1.004129E-05  -8.020242E-04
+   3    H3     -1.299379E-02   1.136393E-05   7.782028E-03
+   4    H4     -7.996064E-05   9.417586E-06   5.281884E-05
+   5    H5     -8.233381E-05   2.613234E-05   7.515722E-05
+ -----------   -------------  -------------  -------------
+    total       2.289713E-05  -7.962007E-06  -9.307741E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  14 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.113576
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 110.270432       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 109.067907       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 109.060165       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.347461447 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.760E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       71     72     72     72     72    359
+  grid # 2       78    111    111    111    111    522
+  grid # 3      143    222    222    222    222   1031
+  grid # 4      280    232    232    231    231   1206
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52365882670           2.4E-04  2.5E-03
+etot   2  Y  Y  4  M   -40.52372570286  6.7E-05  8.1E-05  9.0E-04
+etot   3  Y  Y  4  M   -40.52373111480  5.4E-06  2.6E-05  4.4E-04
+etot   4  Y  Y  4  M   -40.52373285934  1.7E-06  4.6E-06  4.2E-05
+etot   5  Y  N  4  M   -40.52373270088 -1.6E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.34746144709
+   (E)  Total one-electron terms.....   -79.68303967917
+   (I)  Total two-electron terms.....    25.81184553120
+   (J)    Coulomb....................    32.71197018485
+   (K)    Exchange+Correlation.......    -6.90012465365
+   (L)  Electronic energy............   -53.87119414797  (E+I)
+   (N)  Total energy.................   -40.52373270088  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52373270088 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38461
+ LUMO energy:     0.11634
+ 
+  Orbital energies: 
+  -10.16924   -0.68883   -0.38904   -0.38863   -0.38461    0.11634
+    0.17161    0.17654    0.17672    0.52846    0.52878    0.53423
+    0.86422    0.87434    0.87446
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0098     Y=    -0.0001     Z=    -0.0130  Tot=     0.0162
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -1.097105E-02  -3.087085E-05   5.862730E-03
+   2    H2     -9.281913E-04   1.161916E-05   8.535335E-04
+   3    H3      1.179633E-02   2.214127E-06  -6.528000E-03
+   4    H4      6.262605E-05  -1.336084E-05  -1.404246E-04
+   5    H5      5.180028E-05   4.356905E-05  -1.473854E-04
+ -----------   -------------  -------------  -------------
+    total       1.152247E-05   1.317064E-05  -9.954614E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  15 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.092189
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.478372       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 108.258729       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 110.655299       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412001402 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.733E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       73     72     72     72     72    361
+  grid # 2       81    111    111    111    111    525
+  grid # 3      139    222    222    222    222   1027
+  grid # 4      278    231    231    231    231   1202
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52394096709           1.3E-04  1.2E-03
+etot   2  Y  Y  4  M   -40.52396998926  2.9E-05  3.0E-05  2.3E-04
+etot   3  Y  Y  4  M   -40.52397098140  9.9E-07  7.2E-06  4.3E-05
+etot   4  Y  Y  4  M   -40.52397108574  1.0E-07  2.0E-06  1.2E-05
+etot   5  Y  N  4  M   -40.52397235921  1.3E-06  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41200140155
+   (E)  Total one-electron terms.....   -79.80445666258
+   (I)  Total two-electron terms.....    25.86848290182
+   (J)    Coulomb....................    32.77619959096
+   (K)    Exchange+Correlation.......    -6.90771668914
+   (L)  Electronic energy............   -53.93597376076  (E+I)
+   (N)  Total energy.................   -40.52397235921  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52397235921 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38592
+ LUMO energy:     0.11776
+ 
+  Orbital energies: 
+  -10.16699   -0.69041   -0.39070   -0.38829   -0.38592    0.11776
+    0.17545    0.17663    0.17767    0.52789    0.52912    0.53056
+    0.87219    0.87433    0.87625
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0003     Y=     0.0088     Z=    -0.0001  Tot=     0.0088
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -1.467492E-04   2.286005E-03   1.332148E-04
+   2    H2      1.939747E-05   1.004627E-04   3.542544E-05
+   3    H3      1.437315E-04  -2.279566E-03  -6.616456E-05
+   4    H4      1.193020E-03  -6.572460E-05  -7.798051E-04
+   5    H5     -1.186564E-03  -5.525432E-05   6.799857E-04
+ -----------   -------------  -------------  -------------
+    total       2.283663E-05  -1.407721E-05   2.656322E-06
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  16 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.092165
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.480129       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 110.662170       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 108.249584       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412076020 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.733E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       81    111    111    111    111    525
+  grid # 3      140    222    222    222    222   1028
+  grid # 4      282    231    231    231    231   1206
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52393988926           1.3E-04  1.2E-03
+etot   2  Y  Y  4  M   -40.52396903490  2.9E-05  3.0E-05  2.3E-04
+etot   3  Y  Y  4  M   -40.52397001568  9.8E-07  7.2E-06  4.3E-05
+etot   4  Y  Y  4  M   -40.52397006590  5.0E-08  2.0E-06  1.1E-05
+etot   5  Y  N  4  M   -40.52397119489  1.1E-06  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41207602039
+   (E)  Total one-electron terms.....   -79.80459331175
+   (I)  Total two-electron terms.....    25.86854609647
+   (J)    Coulomb....................    32.77627089920
+   (K)    Exchange+Correlation.......    -6.90772480273
+   (L)  Electronic energy............   -53.93604721528  (E+I)
+   (N)  Total energy.................   -40.52397119489  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52397119489 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38591
+ LUMO energy:     0.11776
+ 
+  Orbital energies: 
+  -10.16699   -0.69041   -0.39072   -0.38829   -0.38591    0.11776
+    0.17545    0.17663    0.17768    0.52789    0.52912    0.53056
+    0.87218    0.87433    0.87627
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0003     Y=    -0.0089     Z=    -0.0001  Tot=     0.0089
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -1.401990E-04  -2.387713E-03   1.272779E-04
+   2    H2      1.645302E-05  -7.713144E-05   3.774660E-05
+   3    H3      1.306166E-04   2.291839E-03  -5.752289E-05
+   4    H4     -1.180239E-03   9.032753E-05   6.676775E-04
+   5    H5      1.187608E-03   9.767296E-05  -7.700925E-04
+ -----------   -------------  -------------  -------------
+    total       1.424028E-05   1.499456E-05   5.086638E-06
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  17 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.107329
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 108.366759       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 110.019127       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 110.008929       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.366087129 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.752E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       73     72     72     72     72    361
+  grid # 2       77    111    111    111    111    521
+  grid # 3      146    222    222    222    222   1034
+  grid # 4      282    231    232    231    231   1207
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52380622078           1.9E-04  2.1E-03
+etot   2  Y  Y  4  M   -40.52385448382  4.8E-05  6.4E-05  5.9E-04
+etot   3  Y  Y  4  M   -40.52385745241  3.0E-06  2.3E-05  3.8E-04
+etot   4  Y  Y  4  M   -40.52385875478  1.3E-06  4.0E-06  4.0E-05
+etot   5  Y  N  4  M   -40.52385851472 -2.4E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.36608712925
+   (E)  Total one-electron terms.....   -79.71816434907
+   (I)  Total two-electron terms.....    25.82821870510
+   (J)    Coulomb....................    32.73052625761
+   (K)    Exchange+Correlation.......    -6.90230755251
+   (L)  Electronic energy............   -53.88994564397  (E+I)
+   (N)  Total energy.................   -40.52385851472  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52385851472 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38501
+ LUMO energy:     0.11675
+ 
+  Orbital energies: 
+  -10.16859   -0.68928   -0.38948   -0.38857   -0.38501    0.11675
+    0.17297    0.17642    0.17689    0.52865    0.52872    0.53297
+    0.86700    0.87422    0.87469
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0131     Y=     0.0000     Z=    -0.0004  Tot=     0.0131
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -6.131713E-03  -4.498477E-05   6.800258E-03
+   2    H2      8.211197E-04   1.029237E-05  -6.167885E-04
+   3    H3      6.794064E-03   1.789666E-06  -7.195102E-03
+   4    H4     -7.086057E-04   1.136079E-04   4.558589E-04
+   5    H5     -7.131530E-04  -8.535741E-05   4.637411E-04
+ -----------   -------------  -------------  -------------
+    total       6.171187E-05  -4.652233E-06  -9.203264E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  18 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.076813
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 110.635341       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 108.882905       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 108.877172       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.459790806 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.712E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       77    111    111    111    111    521
+  grid # 3      142    222    222    222    222   1030
+  grid # 4      276    232    224    231    231   1194
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52379372302           1.9E-04  2.0E-03
+etot   2  Y  Y  4  M   -40.52384249757  4.9E-05  6.5E-05  5.9E-04
+etot   3  Y  Y  4  M   -40.52384528922  2.8E-06  2.3E-05  3.8E-04
+etot   4  Y  Y  4  M   -40.52384645285  1.2E-06  4.0E-06  4.0E-05
+etot   5  Y  N  4  M   -40.52384674084  2.9E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.45979080623
+   (E)  Total one-electron terms.....   -79.89346977870
+   (I)  Total two-electron terms.....    25.90983223163
+   (J)    Coulomb....................    32.82315551774
+   (K)    Exchange+Correlation.......    -6.91332328611
+   (L)  Electronic energy............   -53.98363754707  (E+I)
+   (N)  Total energy.................   -40.52384674084  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52384674084 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38697
+ LUMO energy:     0.11857
+ 
+  Orbital energies: 
+  -10.16541   -0.69163   -0.39170   -0.38822   -0.38697    0.11857
+    0.17611    0.17678    0.18041    0.52538    0.52961    0.52965
+    0.87359    0.87445    0.88076
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=    -0.0124     Y=    -0.0001     Z=    -0.0002  Tot=     0.0124
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1      6.922579E-03  -5.834570E-05  -7.034710E-03
+   2    H2     -8.449964E-04   1.169966E-05   7.158765E-04
+   3    H3     -7.490592E-03   1.107148E-05   7.431721E-03
+   4    H4      7.489217E-04  -8.483685E-05  -6.092683E-04
+   5    H5      7.425599E-04   1.211046E-04  -5.966394E-04
+ -----------   -------------  -------------  -------------
+    total       7.847246E-05   6.931872E-07  -9.302056E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  19 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.092113       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 108.264844
+  H4   C1   H3  : 110.663057       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 109.496577
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412016230 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.733E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       73     72     72     72     72    361
+  grid # 2       81    111    111    111    109    523
+  grid # 3      141    222    222    222    222   1029
+  grid # 4      280    231    231    231    231   1204
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52394111260           1.3E-04  1.2E-03
+etot   2  Y  Y  4  M   -40.52397020974  2.9E-05  3.0E-05  2.3E-04
+etot   3  Y  Y  4  M   -40.52397116525  9.6E-07  7.2E-06  4.3E-05
+etot   4  Y  Y  4  M   -40.52397119255  2.7E-08  2.0E-06  1.2E-05
+etot   5  Y  N  4  M   -40.52397242136  1.2E-06  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41201622964
+   (E)  Total one-electron terms.....   -79.80448429367
+   (I)  Total two-electron terms.....    25.86849564268
+   (J)    Coulomb....................    32.77621397992
+   (K)    Exchange+Correlation.......    -6.90771833724
+   (L)  Electronic energy............   -53.93598865100  (E+I)
+   (N)  Total energy.................   -40.52397242136  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52397242136 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38593
+ LUMO energy:     0.11775
+ 
+  Orbital energies: 
+  -10.16699   -0.69041   -0.39071   -0.38828   -0.38593    0.11775
+    0.17547    0.17662    0.17767    0.52789    0.52913    0.53056
+    0.87221    0.87431    0.87625
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0089     Y=    -0.0004     Z=     0.0003  Tot=     0.0089
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1      2.307212E-03   6.340775E-05  -5.634533E-05
+   2    H2     -6.359828E-05  -1.173399E-03   7.644768E-04
+   3    H3     -6.390001E-05   1.190632E-03  -7.016148E-04
+   4    H4     -2.279783E-03  -1.178950E-04   3.421161E-05
+   5    H5      8.857915E-05   1.593784E-05  -4.227270E-05
+ -----------   -------------  -------------  -------------
+    total      -1.149032E-05  -2.131609E-05  -1.544379E-06
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  20 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.092098       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 110.668754
+  H4   C1   H3  : 108.257812       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 109.497789
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412060853 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.733E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       73     72     72     72     72    361
+  grid # 2       81    111    111    111    109    523
+  grid # 3      142    222    222    222    222   1030
+  grid # 4      280    231    231    231    231   1204
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52394037654           1.3E-04  1.2E-03
+etot   2  Y  Y  4  M   -40.52396947938  2.9E-05  3.0E-05  2.3E-04
+etot   3  Y  Y  4  M   -40.52397046299  9.8E-07  7.2E-06  4.3E-05
+etot   4  Y  Y  4  M   -40.52397062555  1.6E-07  2.0E-06  1.2E-05
+etot   5  Y  N  4  M   -40.52397182698  1.2E-06  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41206085284
+   (E)  Total one-electron terms.....   -79.80456521384
+   (I)  Total two-electron terms.....    25.86853253401
+   (J)    Coulomb....................    32.77625564004
+   (K)    Exchange+Correlation.......    -6.90772310603
+   (L)  Electronic energy............   -53.93603267982  (E+I)
+   (N)  Total energy.................   -40.52397182698  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52397182698 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38592
+ LUMO energy:     0.11775
+ 
+  Orbital energies: 
+  -10.16699   -0.69041   -0.39072   -0.38828   -0.38592    0.11775
+    0.17546    0.17662    0.17768    0.52788    0.52913    0.53056
+    0.87219    0.87431    0.87628
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=    -0.0089     Y=    -0.0004     Z=     0.0003  Tot=     0.0089
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -2.367301E-03   5.876421E-05  -5.245888E-05
+   2    H2      8.982833E-05   1.195437E-03  -6.869611E-04
+   3    H3      8.770700E-05  -1.179077E-03   7.514227E-04
+   4    H4      2.290373E-03  -1.104641E-04   2.910900E-05
+   5    H5     -8.855257E-05   1.736022E-05  -4.333700E-05
+ -----------   -------------  -------------  -------------
+    total       1.205523E-05  -1.797993E-05  -2.225309E-06
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  21 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.113483       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 109.073433
+  H4   C1   H3  : 109.067214       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 110.289974
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.347516543 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.760E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       73     72     72     72     72    361
+  grid # 2       80    111    111    111    111    524
+  grid # 3      138    222    222    222    222   1026
+  grid # 4      275    231    231    232    232   1201
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52366418480           2.4E-04  2.4E-03
+etot   2  Y  Y  4  M   -40.52373092510  6.7E-05  8.1E-05  9.0E-04
+etot   3  Y  Y  4  M   -40.52373632306  5.4E-06  2.6E-05  4.4E-04
+etot   4  Y  Y  4  M   -40.52373805422  1.7E-06  4.6E-06  4.2E-05
+etot   5  Y  N  4  M   -40.52373785997 -1.9E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.34751654291
+   (E)  Total one-electron terms.....   -79.68315183425
+   (I)  Total two-electron terms.....    25.81189743137
+   (J)    Coulomb....................    32.71202914379
+   (K)    Exchange+Correlation.......    -6.90013171242
+   (L)  Electronic energy............   -53.87125440288  (E+I)
+   (N)  Total energy.................   -40.52373785997  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52373785997 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38464
+ LUMO energy:     0.11637
+ 
+  Orbital energies: 
+  -10.16924   -0.68883   -0.38904   -0.38860   -0.38464    0.11637
+    0.17165    0.17657    0.17672    0.52847    0.52877    0.53423
+    0.86429    0.87435    0.87443
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0000     Y=    -0.0098     Z=     0.0131  Tot=     0.0163
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -2.397798E-05   1.087619E-02  -5.802765E-03
+   2    H2     -1.898595E-05  -4.567238E-05   1.259481E-04
+   3    H3      4.107444E-05  -4.951343E-05   1.183070E-04
+   4    H4      2.281433E-06  -1.176069E-02   6.508061E-03
+   5    H5      3.109017E-07   9.581550E-04  -8.613027E-04
+ -----------   -------------  -------------  -------------
+    total       7.028517E-07  -2.152827E-05   8.824866E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  22 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.070301       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 109.876017
+  H4   C1   H3  : 109.869522       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 108.684557
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.480167847 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.703E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       80    111    111    111    111    524
+  grid # 3      135    222    222    222    222   1023
+  grid # 4      274    231    231    222    232   1190
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52364123041           2.4E-04  2.3E-03
+etot   2  Y  Y  4  M   -40.52371020786  6.9E-05  8.4E-05  9.4E-04
+etot   3  Y  Y  4  M   -40.52371590991  5.7E-06  2.6E-05  4.4E-04
+etot   4  Y  Y  4  M   -40.52371750846  1.6E-06  4.5E-06  4.3E-05
+etot   5  Y  N  4  M   -40.52371782304  3.1E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.48016784740
+   (E)  Total one-electron terms.....   -79.93128626228
+   (I)  Total two-electron terms.....    25.92740059184
+   (J)    Coulomb....................    32.84312404272
+   (K)    Exchange+Correlation.......    -6.91572345087
+   (L)  Electronic energy............   -54.00388567044  (E+I)
+   (N)  Total energy.................   -40.52371782304  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52371782304 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38758
+ LUMO energy:     0.11898
+ 
+  Orbital energies: 
+  -10.16473   -0.69216   -0.39202   -0.38813   -0.38758    0.11898
+    0.17644    0.17668    0.18185    0.52410    0.52952    0.52977
+    0.87416    0.87421    0.88292
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0000     Y=     0.0085     Z=    -0.0125  Tot=     0.0151
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -3.586940E-05  -1.223543E-02   7.286206E-03
+   2    H2      8.157233E-06   9.663385E-05  -7.646145E-05
+   3    H3      1.827301E-05   9.027509E-05  -9.375388E-05
+   4    H4      8.766070E-06   1.300000E-02  -7.823846E-03
+   5    H5     -7.486541E-07  -9.750889E-04   7.982500E-04
+ -----------   -------------  -------------  -------------
+    total      -1.421737E-06  -2.360901E-05   9.039402E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  23 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.076711       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 108.890119
+  H4   C1   H3  : 108.885097       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 110.652266
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.459892176 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.712E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       78    111    111    111    111    522
+  grid # 3      141    222    222    222    222   1029
+  grid # 4      277    231    231    224    232   1195
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52379223436           1.9E-04  2.0E-03
+etot   2  Y  Y  4  M   -40.52384107584  4.9E-05  6.5E-05  5.9E-04
+etot   3  Y  Y  4  M   -40.52384385852  2.8E-06  2.3E-05  3.8E-04
+etot   4  Y  Y  4  M   -40.52384504012  1.2E-06  4.0E-06  4.0E-05
+etot   5  Y  N  4  M   -40.52384528941  2.5E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.45989217550
+   (E)  Total one-electron terms.....   -79.89365404876
+   (I)  Total two-electron terms.....    25.90991658384
+   (J)    Coulomb....................    32.82325150852
+   (K)    Exchange+Correlation.......    -6.91333492468
+   (L)  Electronic energy............   -53.98373746491  (E+I)
+   (N)  Total energy.................   -40.52384528941  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52384528941 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38697
+ LUMO energy:     0.11857
+ 
+  Orbital energies: 
+  -10.16540   -0.69163   -0.39174   -0.38819   -0.38697    0.11857
+    0.17610    0.17676    0.18044    0.52537    0.52960    0.52966
+    0.87357    0.87441    0.88082
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0000     Y=     0.0124     Z=     0.0003  Tot=     0.0124
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -3.521408E-05  -7.016035E-03   7.132037E-03
+   2    H2     -8.546233E-05  -7.308337E-04   5.921890E-04
+   3    H3      1.114579E-04  -7.353846E-04   5.771863E-04
+   4    H4      7.977311E-06   7.526189E-03  -7.485889E-03
+   5    H5      1.934399E-07   8.770219E-04  -7.226444E-04
+ -----------   -------------  -------------  -------------
+    total      -1.047767E-06  -7.904228E-05   9.287967E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  24 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.107286       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 110.024621
+  H4   C1   H3  : 110.016964       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 108.385748
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.365992859 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.752E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       80    111    111    111    111    524
+  grid # 3      148    222    222    222    222   1036
+  grid # 4      280    231    231    232    231   1205
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52380761150           1.9E-04  2.1E-03
+etot   2  Y  Y  4  M   -40.52385597008  4.8E-05  6.4E-05  5.9E-04
+etot   3  Y  Y  4  M   -40.52385893742  3.0E-06  2.3E-05  3.8E-04
+etot   4  Y  Y  4  M   -40.52386027171  1.3E-06  4.0E-06  4.0E-05
+etot   5  Y  N  4  M   -40.52386002907 -2.4E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.36599285899
+   (E)  Total one-electron terms.....   -79.71799144563
+   (I)  Total two-electron terms.....    25.82813855756
+   (J)    Coulomb....................    32.73043535462
+   (K)    Exchange+Correlation.......    -6.90229679705
+   (L)  Electronic energy............   -53.88985288806  (E+I)
+   (N)  Total energy.................   -40.52386002907  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52386002907 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38504
+ LUMO energy:     0.11674
+ 
+  Orbital energies: 
+  -10.16860   -0.68928   -0.38947   -0.38854   -0.38504    0.11674
+    0.17299    0.17641    0.17688    0.52865    0.52871    0.53298
+    0.86703    0.87419    0.87466
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0000     Y=    -0.0131     Z=     0.0006  Tot=     0.0132
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -2.475867E-05   6.058769E-03  -6.744830E-03
+   2    H2      1.159410E-04   7.244427E-04  -4.733840E-04
+   3    H3     -9.241714E-05   7.182909E-04  -4.854492E-04
+   4    H4      3.151221E-06  -6.780499E-03   7.184772E-03
+   5    H5     -4.868322E-07  -7.824727E-04   6.113989E-04
+ -----------   -------------  -------------  -------------
+    total       1.429555E-06  -6.146818E-05   9.250759E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  25 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.092175
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 108.251554
+  H5   C1   H3  : 110.654913       H5   C1   H4  : 109.496628
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412012389 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.733E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       73     72     72     72     72    361
+  grid # 2       81    111    111    110    111    524
+  grid # 3      138    222    222    222    222   1026
+  grid # 4      280    231    231    231    231   1204
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52394055642           1.3E-04  1.2E-03
+etot   2  Y  Y  4  M   -40.52396956723  2.9E-05  3.0E-05  2.3E-04
+etot   3  Y  Y  4  M   -40.52397052308  9.6E-07  7.2E-06  4.3E-05
+etot   4  Y  Y  4  M   -40.52397056546  4.2E-08  2.0E-06  1.2E-05
+etot   5  Y  N  4  M   -40.52397169530  1.1E-06  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41201238859
+   (E)  Total one-electron terms.....   -79.80447651436
+   (I)  Total two-electron terms.....    25.86849243047
+   (J)    Coulomb....................    32.77621019510
+   (K)    Exchange+Correlation.......    -6.90771776463
+   (L)  Electronic energy............   -53.93598408389  (E+I)
+   (N)  Total energy.................   -40.52397169530  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52397169530 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38591
+ LUMO energy:     0.11776
+ 
+  Orbital energies: 
+  -10.16699   -0.69041   -0.39070   -0.38831   -0.38591    0.11776
+    0.17546    0.17663    0.17767    0.52788    0.52913    0.53056
+    0.87219    0.87435    0.87625
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0089     Y=     0.0003     Z=     0.0003  Tot=     0.0089
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1      2.305111E-03  -1.659030E-04  -5.721606E-05
+   2    H2     -6.471881E-05   1.198550E-03   7.626203E-04
+   3    H3     -6.518822E-05  -1.179685E-03  -6.988344E-04
+   4    H4      9.399864E-05   1.762877E-05  -5.319056E-05
+   5    H5     -2.285751E-03   1.514169E-04   4.465211E-05
+ -----------   -------------  -------------  -------------
+    total      -1.654861E-05   2.200782E-05  -1.968669E-06
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  26 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.092158
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 110.655182
+  H5   C1   H3  : 108.249972       H5   C1   H4  : 109.497738
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412064983 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.733E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       73     72     72     72     72    361
+  grid # 2       81    111    111    110    111    524
+  grid # 3      138    222    222    222    222   1026
+  grid # 4      280    231    231    231    231   1204
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52394027856           1.3E-04  1.2E-03
+etot   2  Y  Y  4  M   -40.52396937799  2.9E-05  3.0E-05  2.3E-04
+etot   3  Y  Y  4  M   -40.52397037699  1.0E-06  7.2E-06  4.3E-05
+etot   4  Y  Y  4  M   -40.52397050944  1.3E-07  2.0E-06  1.2E-05
+etot   5  Y  N  4  M   -40.52397156563  1.1E-06  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41206498281
+   (E)  Total one-electron terms.....   -79.80457242320
+   (I)  Total two-electron terms.....    25.86853587476
+   (J)    Coulomb....................    32.77625939659
+   (K)    Exchange+Correlation.......    -6.90772352183
+   (L)  Electronic energy............   -53.93603654844  (E+I)
+   (N)  Total energy.................   -40.52397156563  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52397156563 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38591
+ LUMO energy:     0.11776
+ 
+  Orbital energies: 
+  -10.16699   -0.69041   -0.39070   -0.38831   -0.38591    0.11776
+    0.17546    0.17663    0.17767    0.52789    0.52913    0.53055
+    0.87218    0.87434    0.87626
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=    -0.0089     Y=     0.0003     Z=     0.0003  Tot=     0.0089
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -2.365488E-03  -1.609788E-04  -5.265883E-05
+   2    H2      9.121325E-05  -1.173807E-03  -6.842755E-04
+   3    H3      8.877027E-05   1.193151E-03   7.494484E-04
+   4    H4     -8.315999E-05   1.595525E-05  -5.454783E-05
+   5    H5      2.285515E-03   1.426359E-04   3.881471E-05
+ -----------   -------------  -------------  -------------
+    total       1.685012E-05   1.695712E-05  -3.219034E-06
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  27 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.070332
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 109.861490
+  H5   C1   H3  : 109.860555       H5   C1   H4  : 108.686809
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.480256286 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.703E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       79    111    111    111    111    523
+  grid # 3      137    222    222    222    222   1025
+  grid # 4      273    231    231    232    222   1189
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52364201373           2.4E-04  2.3E-03
+etot   2  Y  Y  4  M   -40.52371101486  6.9E-05  8.4E-05  9.4E-04
+etot   3  Y  Y  4  M   -40.52371673754  5.7E-06  2.6E-05  4.4E-04
+etot   4  Y  Y  4  M   -40.52371834604  1.6E-06  4.5E-06  4.3E-05
+etot   5  Y  N  4  M   -40.52371852946  1.8E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.48025628606
+   (E)  Total one-electron terms.....   -79.93145432152
+   (I)  Total two-electron terms.....    25.92747950601
+   (J)    Coulomb....................    32.84321330640
+   (K)    Exchange+Correlation.......    -6.91573380039
+   (L)  Electronic energy............   -54.00397481551  (E+I)
+   (N)  Total energy.................   -40.52371852946  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52371852946 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38762
+ LUMO energy:     0.11897
+ 
+  Orbital energies: 
+  -10.16472   -0.69216   -0.39199   -0.38813   -0.38762    0.11897
+    0.17644    0.17670    0.18183    0.52410    0.52952    0.52977
+    0.87417    0.87425    0.88288
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0000     Y=    -0.0087     Z=    -0.0125  Tot=     0.0152
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -4.055644E-05   1.215807E-02   7.274420E-03
+   2    H2      9.526425E-06  -7.262184E-05  -7.149475E-05
+   3    H3      1.753851E-05  -7.592892E-05  -9.472233E-05
+   4    H4      4.292024E-06   1.007397E-03   7.843570E-04
+   5    H5      3.507406E-06  -1.299338E-02  -7.799968E-03
+ -----------   -------------  -------------  -------------
+    total      -5.692075E-06   2.354004E-05   9.259159E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  28 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.113573
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 109.061089
+  H5   C1   H3  : 109.060200       H5   C1   H4  : 110.287769
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.347437626 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.760E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       73     72     72     72     72    361
+  grid # 2       79    111    111    111    111    523
+  grid # 3      139    222    222    222    222   1027
+  grid # 4      277    231    231    232    232   1203
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52366156380           2.4E-04  2.5E-03
+etot   2  Y  Y  4  M   -40.52372849501  6.7E-05  8.1E-05  9.0E-04
+etot   3  Y  Y  4  M   -40.52373391428  5.4E-06  2.6E-05  4.4E-04
+etot   4  Y  Y  4  M   -40.52373571173  1.8E-06  4.6E-06  4.2E-05
+etot   5  Y  N  4  M   -40.52373553151 -1.8E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.34743762605
+   (E)  Total one-electron terms.....   -79.68299723666
+   (I)  Total two-electron terms.....    25.81182407911
+   (J)    Coulomb....................    32.71194609260
+   (K)    Exchange+Correlation.......    -6.90012201349
+   (L)  Electronic energy............   -53.87117315755  (E+I)
+   (N)  Total energy.................   -40.52373553151  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52373553151 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38461
+ LUMO energy:     0.11636
+ 
+  Orbital energies: 
+  -10.16924   -0.68883   -0.38907   -0.38860   -0.38461    0.11636
+    0.17162    0.17658    0.17672    0.52847    0.52877    0.53424
+    0.86424    0.87439    0.87443
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=    -0.0001     Y=     0.0097     Z=     0.0131  Tot=     0.0163
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -1.923787E-05  -1.099550E-02  -5.790412E-03
+   2    H2     -1.812041E-05   6.821849E-05   1.227817E-04
+   3    H3      3.933927E-05   6.020476E-05   1.202960E-04
+   4    H4      5.459846E-06  -9.262181E-04  -8.692178E-04
+   5    H5     -3.347719E-06   1.181417E-02   6.505912E-03
+ -----------   -------------  -------------  -------------
+    total       4.093120E-06   2.087611E-05   8.936036E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  29 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.076814
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 108.875810
+  H5   C1   H3  : 108.876288       H5   C1   H4  : 110.653721
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.459755920 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.712E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       78    111    111    111    111    522
+  grid # 3      140    222    222    222    222   1028
+  grid # 4      279    231    231    232    224   1197
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52379281978           1.9E-04  2.0E-03
+etot   2  Y  Y  4  M   -40.52384152246  4.9E-05  6.5E-05  5.9E-04
+etot   3  Y  Y  4  M   -40.52384418131  2.7E-06  2.3E-05  3.8E-04
+etot   4  Y  Y  4  M   -40.52384533599  1.2E-06  4.0E-06  4.0E-05
+etot   5  Y  N  4  M   -40.52384564802  3.1E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.45975591991
+   (E)  Total one-electron terms.....   -79.89340296133
+   (I)  Total two-electron terms.....    25.90980139340
+   (J)    Coulomb....................    32.82312020198
+   (K)    Exchange+Correlation.......    -6.91331880858
+   (L)  Electronic energy............   -53.98360156793  (E+I)
+   (N)  Total energy.................   -40.52384564802  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52384564802 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38697
+ LUMO energy:     0.11856
+ 
+  Orbital energies: 
+  -10.16541   -0.69163   -0.39173   -0.38819   -0.38697    0.11856
+    0.17611    0.17676    0.18042    0.52539    0.52960    0.52966
+    0.87360    0.87441    0.88078
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0000     Y=    -0.0125     Z=     0.0004  Tot=     0.0125
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -3.569214E-05   6.900241E-03   7.103114E-03
+   2    H2     -8.431711E-05   7.556377E-04   5.914949E-04
+   3    H3      1.110763E-04   7.495703E-04   5.765119E-04
+   4    H4      5.477293E-06  -8.469752E-04  -7.327411E-04
+   5    H5      3.360315E-06  -7.479164E-03  -7.444537E-03
+ -----------   -------------  -------------  -------------
+    total      -9.534851E-08   7.931022E-05   9.384264E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+  calculation at perturbed geometry  30 of  30 follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.107306
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 110.012072
+  H5   C1   H3  : 110.009800       H5   C1   H4  : 108.384245
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.366119314 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.752E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       78    111    111    111    111    522
+  grid # 3      148    222    222    222    222   1036
+  grid # 4      279    231    231    231    232   1204
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52380810368           1.9E-04  2.1E-03
+etot   2  Y  Y  4  M   -40.52385639507  4.8E-05  6.4E-05  5.9E-04
+etot   3  Y  Y  4  M   -40.52385942430  3.0E-06  2.3E-05  3.8E-04
+etot   4  Y  Y  4  M   -40.52386141251  2.0E-06  4.0E-06  4.0E-05
+etot   5  Y  N  4  M   -40.52386116723 -2.5E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.36611931445
+   (E)  Total one-electron terms.....   -79.71822721216
+   (I)  Total two-electron terms.....    25.82824673048
+   (J)    Coulomb....................    32.73055851954
+   (K)    Exchange+Correlation.......    -6.90231178906
+   (L)  Electronic energy............   -53.88998048168  (E+I)
+   (N)  Total energy.................   -40.52386116723  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52386116723 hartrees   iterations:   5
+  
+ 
+ HOMO energy:    -0.38504
+ LUMO energy:     0.11675
+ 
+  Orbital energies: 
+  -10.16859   -0.68928   -0.38948   -0.38854   -0.38504    0.11675
+    0.17299    0.17641    0.17689    0.52865    0.52871    0.53297
+    0.86702    0.87419    0.87469
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=     0.0000     Y=     0.0130     Z=     0.0006  Tot=     0.0131
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -2.520091E-05  -6.151098E-03  -6.720096E-03
+   2    H2      1.155237E-04  -7.026389E-04  -4.724562E-04
+   3    H3     -9.237874E-05  -7.072979E-04  -4.843522E-04
+   4    H4      4.908452E-06   8.189649E-04   5.998632E-04
+   5    H5     -2.739327E-06   6.803181E-03   7.169107E-03
+ -----------   -------------  -------------  -------------
+    total       1.131323E-07   6.111041E-05   9.206523E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+   numerical derivatives complete;
+   calculation at normal geometry follows...
+
+  bond lengths (angstroms):
+
+  C1   H2  :   1.091810       C1   H3  :   1.091857
+  C1   H4  :   1.091785       C1   H5  :   1.091846
+
+  bond angles
+
+  H3   C1   H2  : 109.485200       H4   C1   H2  : 109.468280
+  H4   C1   H3  : 109.461926       H5   C1   H2  : 109.454846
+  H5   C1   H3  : 109.453935       H5   C1   H4  : 109.503139
+
+  torsional angles
+
+
+  nuclear repulsion energy.......    13.412941151 hartrees
+  end of program nude
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    1.732E-02
+  number of canonical orbitals.....           35
+  end of program onee
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom        C1     H2     H3     H4     H5  total
+  grid # 1       72     72     72     72     72    360
+  grid # 2       77    110    111    111    111    520
+  grid # 3      138    222    222    222    222   1026
+  grid # 4      279    231    231    231    231   1203
+  grid # 5     9370   9370   9370   9370   9370  46850
+   
+  end of program grid
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program scf 
+ number of electrons..........         10
+ number of alpha electrons....          5
+ number of beta electrons.....          5
+ number of orbitals, total....         35
+ number of core orbitals......          5
+ number of open shell orbs....          0
+ number of occupied orbitals..          5
+ number of virtual orbitals...         30
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                 
+       t  p  i  c  r                               RMS    maximum
+       e  d  i  u  i                     energy  density   DIIS  
+       r  t  s  t  d     total energy    change  change    error 
+  
+etot   1  N  N  1  U   -40.52402840111           5.3E-07  4.7E-06
+etot   2  Y  N  4  M   -40.52402903404  6.3E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............    13.41294115134
+   (E)  Total one-electron terms.....   -79.80627387867
+   (I)  Total two-electron terms.....    25.86930369329
+   (J)    Coulomb....................    32.77714913662
+   (K)    Exchange+Correlation.......    -6.90784544333
+   (L)  Electronic energy............   -53.93697018538  (E+I)
+   (N)  Total energy.................   -40.52402903404  (A+L)
+  
+ SCFE: SCF energy: DFT     -40.52402903404 hartrees   iterations:   2
+  
+ 
+ HOMO energy:    -0.38826
+ LUMO energy:     0.11774
+ 
+  Orbital energies: 
+  -10.16696   -0.69042   -0.38838   -0.38835   -0.38826    0.11774
+    0.17655    0.17663    0.17664    0.52908    0.52916    0.52917
+    0.87424    0.87433    0.87434
+ 
+  end of program scf 
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=    -0.0001     Y=     0.0000     Z=     0.0001  Tot=     0.0001
+  
+  end of program ch
+   
+   
+  start of program der1a
+  end of program der1a
+   
+   
+  start of program rwr
+  end of program rwr
+   
+   
+  start of program der1b
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -2.530577E-05  -5.061926E-05   5.675011E-05
+   2    H2      1.407796E-05   7.576345E-06   5.539991E-05
+   3    H3      2.581034E-05   8.437516E-06   3.478545E-05
+   4    H4     -1.004353E-06   1.974346E-05  -7.202774E-05
+   5    H5      4.414139E-07   2.818369E-05  -5.346936E-05
+ -----------   -------------  -------------  -------------
+    total       1.401958E-05   1.332175E-05   2.143836E-05
+   
+  end of program der1b
+   
+   
+  start of program nude 
+   
+  forces (hartrees/bohr) : numerical 
+   
+ atom  label          x              y              z
+ ----  -----   -------------  -------------  -------------
+   1    C1     -2.740265E-05  -4.035061E-05   3.707673E-05
+   2    H2      1.849235E-04   1.665020E-05   1.271233E-04
+   3    H3     -1.492319E-04   1.164316E-05   1.177387E-04
+   4    H4      5.943737E-06   2.003692E-04  -1.473967E-04
+   5    H5      1.296664E-06  -1.700205E-04  -1.551921E-04
+ -----------   -------------  -------------  -------------
+    total       1.552937E-05   1.829149E-05  -2.064999E-05
+   
+   largest asymmetry in numerical hessian:   14   3   4.698E-04
+  end of program nude
+   
+   
+  start of program freq
+   
+  harmonic frequencies in cm**-1, IR intensities in km/mol, and normal modes:
+  
+  frequencies  1350.52  1354.79  1354.91  1574.28  1577.58  3047.10  3165.57
+  intensities    14.07    13.95    13.92     0.00     0.00     0.00    25.19
+    C1   X     0.00280 -0.11431  0.01076 -0.00008 -0.00001 -0.00028 -0.00406
+    C1   Y    -0.00528  0.01062  0.11423 -0.00015 -0.00001 -0.00038  0.00850
+    C1   Z     0.11479  0.00330  0.00502 -0.00006  0.00000  0.00007 -0.08748
+    H2   X     0.29923  0.13600  0.00105 -0.28779  0.00004 -0.40511  0.41789
+    H2   Y     0.02583 -0.05170 -0.55331  0.00099 -0.49806 -0.00027  0.00184
+    H2   Z    -0.33373 -0.31178  0.01419  0.40653  0.00039 -0.28672  0.27875
+    H3   X    -0.30513  0.11766 -0.02491  0.28754  0.00000  0.40878 -0.36769
+    H3   Y     0.02584 -0.05120 -0.55329  0.00112  0.49810 -0.00029  0.00181
+    H3   Z    -0.34928  0.29154 -0.04263  0.40720 -0.00049 -0.28869  0.24151
+    H4   X    -0.01375  0.55379 -0.05198  0.00052 -0.49797 -0.00017 -0.00091
+    H4   Y    -0.29679 -0.02050 -0.14084 -0.28753  0.00003 -0.40390 -0.44596
+    H4   Z    -0.32738 -0.03756 -0.31718 -0.40588 -0.00021  0.28606  0.29945
+    H5   X    -0.01373  0.55360 -0.05229  0.00063  0.49809 -0.00021 -0.00090
+    H5   Y     0.30799 -0.00308 -0.11263  0.28716 -0.00001  0.40896  0.34113
+    H5   Z    -0.35645  0.01850  0.28588 -0.40715  0.00034  0.28854  0.22196
+  
+  frequencies  3166.27  3166.65
+  intensities    25.06    25.08
+    C1   X     0.08342  0.02809
+    C1   Y     0.02836 -0.08301
+    C1   Z    -0.00111 -0.00931
+    H2   X    -0.50932 -0.12906
+    H2   Y     0.00518 -0.01621
+    H2   Z    -0.37216 -0.09717
+    H3   X    -0.51646 -0.21626
+    H3   Y     0.00584 -0.01602
+    H3   Z     0.37590  0.15461
+    H4   X     0.01612  0.00564
+    H4   Y    -0.18110  0.46877
+    H4   Z     0.13186 -0.34526
+    H5   X     0.01633  0.00525
+    H5   Y    -0.16760  0.55184
+    H5   Z    -0.12237  0.39868
+  
+  
+  Thermochemical Properties:
+    pressure:        1.0000 atm
+    rotational symmetry number:    1
+    zero point energy:     28.245 kcal/mol
+
+     temp(K)   Cp (cal/mol K)   S (cal/mol K)   H (kcal/mol)   G (kcal/mol)
+        0.00           7.9489          4.0399         0.0000         0.0000
+      298.15           8.4357         49.4119         2.3914       -12.3408
+  
+  end of program freq
+   
+   
+  start of program ch
+  Moments from quantum mechanical wavefunction:
+  Dipole Moments  (Debye)
+     X=    -0.0001     Y=     0.0000     Z=     0.0001  Tot=     0.0001
+  
+  end of program ch
+   
+ Total cpu seconds     user:     619.600   user+sys:     748.081
+  
+Job CH4_no_sym_ir completed on huygens at Sun May 23 14:48:55 2004

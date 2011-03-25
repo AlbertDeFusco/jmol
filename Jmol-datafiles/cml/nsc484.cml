@@ -1,0 +1,72 @@
+<?xml version='1.0'?>
+<molecule title="NSC484"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.xml-cml.org/schema cmlAll.xsd">
+ <identifier version="0.932Beta" tautomeric="0">
+  <basic>C13H9HgNS2,1H-2H-6H-10(7H-3H-1)14-17-13-15-11-8H-4H-5H-9H-12(11)16-13</basic>
+  <charge/>
+ </identifier>
+ <atomArray>
+  <atom id="a1" elementType="S" x3="-0.022" y3="1.7724" z3="0.0118"/>
+  <atom id="a2" elementType="N" x3="2.2041" y3="0.7889" z3="-0.0147"/>
+  <atom id="a3" elementType="C" x3="7.8814" y3="2.8248" z3="-0.058"/>
+  <atom id="a4" elementType="C" x3="6.8096" y3="1.9517" z3="-0.0525"/>
+  <atom id="a5" elementType="C" x3="9.1733" y3="2.3331" z3="-0.0725"/>
+  <atom id="a6" elementType="C" x3="9.3934" y3="0.9684" z3="-0.0829"/>
+  <atom id="a7" elementType="C" x3="7.0297" y3="0.5871" z3="-0.0615"/>
+  <atom id="a8" elementType="C" x3="8.3216" y3="0.0954" z3="-0.0764"/>
+  <atom id="a9" elementType="C" x3="-0.9546" y3="-0.9877" z3="0.0059"/>
+  <atom id="a10" elementType="C" x3="-0.5686" y3="-2.3159" z3="-0.0049"/>
+  <atom id="a11" elementType="C" x3="0.0021" y3="-0.0041" z3="0.0020"/>
+  <atom id="a12" elementType="C" x3="1.3868" y3="-0.2867" z3="-0.0127"/>
+  <atom id="a13" elementType="C" x3="0.7824" y3="-2.6305" z3="-0.0204"/>
+  <atom id="a14" elementType="C" x3="1.7448" y3="-1.6547" z3="-0.0239"/>
+  <atom id="a15" elementType="C" x3="1.7477" y3="2.0215" z3="-0.0038"/>
+  <atom id="a16" elementType="S" x3="2.6509" y3="3.5344" z3="-0.0043"/>
+  <atom id="a17" elementType="Hg" x3="4.8471" y3="2.6986" z3="-0.0297"/>
+  <atom id="a18" elementType="H" x3="7.7094" y3="3.891" z3="-0.0544"/>
+  <atom id="a19" elementType="H" x3="10.0106" y3="3.0152" z3="-0.0771"/>
+  <atom id="a20" elementType="H" x3="10.4027" y3="0.5843" z3="-0.0949"/>
+  <atom id="a21" elementType="H" x3="6.1924" y3="-0.095" z3="-0.0568"/>
+  <atom id="a22" elementType="H" x3="8.4936" y3="-0.9708" z3="-0.0834"/>
+  <atom id="a23" elementType="H" x3="-2.0025" y3="-0.7265" z3="0.0176"/>
+  <atom id="a24" elementType="H" x3="-1.3114" y3="-3.0999" z3="-0.0024"/>
+  <atom id="a25" elementType="H" x3="1.0826" y3="-3.6679" z3="-0.0285"/>
+  <atom id="a26" elementType="H" x3="2.7881" y3="-1.9336" z3="-0.0358"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a11" id="b1" order="1"/>
+  <bond atomRefs2="a1 a15" id="b2" order="1"/>
+  <bond atomRefs2="a2 a15" id="b3" order="2"/>
+  <bond atomRefs2="a2 a12" id="b4" order="1"/>
+  <bond atomRefs2="a3 a5" id="b5" order="2"/>
+  <bond atomRefs2="a3 a4" id="b6" order="1"/>
+  <bond atomRefs2="a3 a18" id="b7" order="1"/>
+  <bond atomRefs2="a4 a7" id="b8" order="2"/>
+  <bond atomRefs2="a4 a17" id="b9" order="1"/>
+  <bond atomRefs2="a5 a6" id="b10" order="1"/>
+  <bond atomRefs2="a5 a19" id="b11" order="1"/>
+  <bond atomRefs2="a6 a8" id="b12" order="2"/>
+  <bond atomRefs2="a6 a20" id="b13" order="1"/>
+  <bond atomRefs2="a7 a8" id="b14" order="1"/>
+  <bond atomRefs2="a7 a21" id="b15" order="1"/>
+  <bond atomRefs2="a8 a22" id="b16" order="1"/>
+  <bond atomRefs2="a9 a10" id="b17" order="2"/>
+  <bond atomRefs2="a9 a11" id="b18" order="1"/>
+  <bond atomRefs2="a9 a23" id="b19" order="1"/>
+  <bond atomRefs2="a10 a13" id="b20" order="1"/>
+  <bond atomRefs2="a10 a24" id="b21" order="1"/>
+  <bond atomRefs2="a11 a12" id="b22" order="2"/>
+  <bond atomRefs2="a12 a14" id="b23" order="1"/>
+  <bond atomRefs2="a13 a14" id="b24" order="2"/>
+  <bond atomRefs2="a13 a25" id="b25" order="1"/>
+  <bond atomRefs2="a14 a26" id="b26" order="1"/>
+  <bond atomRefs2="a15 a16" id="b27" order="1"/>
+  <bond atomRefs2="a16 a17" id="b28" order="1"/>
+ </bondArray>
+ <list>
+  <list title="NSC">
+   <scalar>484</scalar>
+  </list>
+ </list>
+</molecule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<molecule id="METHANOL" xmlns="http://www.xml-cml.org/schema/cml2/core"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.xml-cml.org/schema/cml2/core cmlAll.xsd">
+  <atomArray>
+    <atom id="a1" elementType="C" x3="-0.748" y3="-0.015" z3="0.024"/>
+    <atom id="a2" elementType="O" x3="0.558" y3="0.420" z3="-0.278"/>
+    <atom id="a3" elementType="H" x3="-1.263" y3="0.202" z3="-0.901"/>
+    <atom id="a4" elementType="H" x3="-0.699" y3="-0.934" z3="0.609"/>
+    <atom id="a5" elementType="H" x3="0.716" y3="1.404" z3="0.137"/>
+    <atom id="a6" elementType="H" x3="-1.263" y3="0.754" z3="0.600"/>
+  </atomArray>
+</molecule>

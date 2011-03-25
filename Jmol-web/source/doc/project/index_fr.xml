@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!--
+  French translation 
+  Translated from default version : index_en.xml
+-->
+<document>
+	<body>
+		<title>Pages Sourceforge du Projet</title>
+		<section title="Page du Projet Jmol">
+			<p><a href="http://sourceforge.net/projects/jmol/">Page SourceForge</a>
+			</p>
+		</section>
+		<section title="Listes de diffusion mail">
+			<section title="La liste de diffusion jmol-users">
+				<p>
+        La liste de diffusion <code>jmol-users@lists.sourceforge.net</code> est
+        pour les discussions générales au sujet de Jmol.
+        Seuls les membres peuvent poster dans cette liste.
+      </p>
+				<p>
+					<a href="http://lists.sourceforge.net/lists/listinfo/jmol-users">Cliquer ici</a>
+        pour s'abonner ou se désabonner à cette liste.
+			</p>
+				<p>
+        Pour un historique des messages qui ont été
+        postés vous pouvez parcourir les
+        <a href="http://sourceforge.net/mailarchive/forum.php?forum_name=jmol-users">archives 
+	de la liste de diffusion <code>jmol-users</code></a>.
+			</p>
+			</section>
+			<section title="La liste de diffusion jmol-developers">
+				<p>
+        La liste de diffusion <code>jmol-developers@lists.sourceforge.net</code>
+        est pour les discussions spécifiques sur le
+        développement logiciel de Jmol.
+      </p>
+				<p>
+        Nous supposons que tous les abonnés à <code>jmol-developers</code>
+        sont aussi abonnés à <code>jmol-users</code>. En
+        conséquence, les messages ne doivent pas être
+        postés à la fois sur les deux.
+      </p>
+				<p>
+					<a href="http://lists.sourceforge.net/lists/listinfo/jmol-developers">Cliquer ici</a>
+        pour s'abonner ou se désabonner à cette liste.
+			</p>
+				<p>
+        Pour un historique des messages qui ont été
+        postés vous pouvez parcourir les
+        <a href="http://sourceforge.net/mailarchive/forum.php?forum_name=jmol-developers">archives 
+	de la liste de diffusion <code>jmol-developers</code></a>.
+			</p>
+			</section>
+		</section>
+		<section title="Base des anomalies">
+			<p><a href="http://sourceforge.net/tracker/?group_id=23629&amp;amp;atid=379133"> Base des anomalies</a>
+			</p>
+		</section>
+		<section title="Demandes de dispositif">
+			<p><a href="http://sourceforge.net/tracker/?group_id=23629&amp;amp;atid=379136">Demandes de dispositif</a>
+			</p>
+		</section>
+	</body>
+</document>

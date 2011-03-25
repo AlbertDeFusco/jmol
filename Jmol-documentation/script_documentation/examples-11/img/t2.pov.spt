@@ -1,0 +1,183 @@
+# Jmol state version 11.3.34  2007-10-18 06:52;
+
+function _setWindowState();
+# height 800;
+# width 800;
+  stateVersion = 1103034;
+  backgroundColor = "[x000000]";
+  axis1Color = "[xff0000]";
+  axis2Color = "[x008000]";
+  axis3Color = "[x0000ff]";
+  ambientPercent = 45;
+  diffusePercent = 84;
+  specular = true;
+  specularPercent = 22;
+  specularPower = 40;
+  specularExponent=6; set antialiasdisplay true;set antialiastranslucent true;
+end function;
+
+function _setFileState();
+
+  allowEmbeddedScripts = false;
+  autoBond = true;
+  appendNew = true;
+  applySymmetryToBonds = false;
+  bondRadiusMilliAngstroms = 150;
+  bondTolerance = 0.45;
+  defaultLattice = {0.0 0.0 0.0};
+  defaultLoadScript = "";
+  loadFormat = "http://www.rcsb.org/pdb/files/%FILE.pdb";
+  forceAutoBond = false;
+  minBondDistance = 0.4;
+  percentVdwAtom = 20;
+  smartAromatic = true;
+  load "data/1crn.pdb";
+
+end function;
+
+function _setVariableState();
+
+   defaultanglelabel = "%VALUE %UNITS";
+   defaultcolorscheme = "Jmol";
+   defaultdistancelabel = "%VALUE %UNITS";
+   defaultdrawarrowscale = 0.5;
+   defaultloadscript = "";
+   defaulttorsionlabel = "%VALUE %UNITS";
+   defaulttranslucent = 0.5;
+  allowembeddedscripts = true;
+  allowrotateselected = false;
+  applysymmetrytobonds = false;
+  autobond = true;
+  autofps = false;
+  axes = window;
+  axesmode = 0;
+  axesscale = 2.0;
+  bondmodeor = false;
+  bondradiusmilliangstroms = 150;
+  bondtolerance = 0.45;
+  cartoonrockets = false;
+  chaincasesensitive = false;
+  disablepopupmenu = false;
+  displaycellparameters = true;
+  dotsselectedonly = false;
+  dotsurface = true;
+  dynamicmeasurements = false;
+  forceautobond = false;
+  greyscalerendering = false;
+  hbondsbackbone = false;
+  hbondssolid = false;
+  helppath = "http://www.stolaf.edu/academics/chemapps/jmol/docs/index.htm";
+  hermitelevel = 0;
+  hidenameinpopup = false;
+  hidenavigationpoint = false;
+  highresolutionflag = false;
+  hoverdelay = 0.5;
+  justifymeasurements = false;
+  loadformat = "http://www.rcsb.org/pdb/files/%FILE.pdb";
+  measureallmodels = false;
+  minbonddistance = 0.4;
+  navigationcentered = false;
+  navigationperiodic = false;
+  navigationspeed = 5.0;
+  percentvdwatom = 20;
+  perspectivedepth = true;
+  pickingspinrate = 10;
+  propertyatomnumberfield = 0;
+  propertycolorscheme = "roygb";
+  propertydatafield = 0;
+  rangeselected = false;
+  ribbonaspectratio = 16;
+  ribbonborder = false;
+  scriptdelay = 0;
+  selecthetero = true;
+  selecthydrogen = true;
+  sheetsmoothing = 1.0;
+  showhiddenselectionhalos = false;
+  showhydrogens = true;
+  showmeasurements = true;
+  showmultiplebonds = true;
+  shownavigationpointalways = false;
+  smartaromatic = true;
+  solventprobe = false;
+  solventproberadius = 1.2;
+  ssbondsbackbone = false;
+  testflag1 = false;
+  testflag2 = false;
+  testflag3 = false;
+  testflag4 = false;
+  tracealpha = true;
+  usenumberlocalization = true;
+  vectorscale = 1.0;
+  vibrationperiod = 0.5;
+  vibrationscale = 0.5;
+  zoomlarge = true;
+  zshade = false;
+
+#user-defined variables; 
+# --none--;
+
+# label defaults;
+  select none;
+  color label none;
+  background label none;
+  labelOffset = 4 4;
+  labelAlignment = left;
+  labelPointer = off;
+  font label 13 SansSerif Plain;
+
+end function;
+
+function _setModelState();
+
+  structure sheet ({0:25})    	# model=1 & (1 - 4);
+  structure none ({26:38})    	# model=1 & (5 - 6);
+  structure helix ({39:141})    	# model=1 & (7 - 19);
+  structure none ({142:159})    	# model=1 & (20 - 22);
+  structure helix ({160:218})    	# model=1 & (23 - 30);
+  structure none ({219:222})    	# model=1 & (31 - 31);
+  structure sheet ({223:252})    	# model=1 & (32 - 35);
+  structure none ({253:281})    	# model=1 & (36 - 40);
+  structure turn ({282:312})    	# model=1 & (41 - 44);
+  structure none ({313:326})    	# model=1 & (45 - 46);
+
+  measures delete;
+  measures = nanometers;
+  font measures 15 SansSerif Plain;
+  select measures ({null});
+
+  isosurface molecular map property temperature translucent 0.5;# ({0:326}) ({null});
+  isosurface fill noMesh noDots notFrontOnly frontlit;
+  color $isosurface1 "roygb" range 3.47 28.98;
+
+  boundBox off;
+
+  unitcell off;
+
+end function;
+
+function _setPerspectiveState();
+  perspectiveModel = 11;
+  cameraDepth = 3.0;
+  center {10.5935 10.2105 6.079};
+  moveto 0.0 {0 0 1 0} 100.0 0.0 0.0 {10.5935 10.2105 6.079} 17.392593 {0.0 0.0 0.0} -28.933256 27.887192 50.0;;
+  slab 100;depth 0;
+  spinX = 0;spinY = 30;spinZ = 0;spinFps = 30;
+end function;
+
+function _setSelectionState();
+  select ({0:326});
+end function
+
+function _setState();
+  initialize;
+  refreshing = false;
+  _setWindowState;
+  _setFileState;
+  _setVariableState;
+  _setModelState;
+  _setPerspectiveState;
+  _setSelectionState;
+  refreshing = true;set antialiasdisplay true; set antialiastranslucent true;
+end function;
+
+_setState;

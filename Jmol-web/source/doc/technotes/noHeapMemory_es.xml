@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+  Translated from default version : noHeapMemory_en.xml (v 1.1)
+-->
+<section title="Sin asignación de memoria de pila durante el ciclo de redibujo">
+  <p>
+    Jmol no asigna memoria de pila (<i>heap memory</i>) durante el ciclo de redibujo.
+    Por razones de eficiencia, es importante que continuemos siguiendo este criterio.
+  </p>
+
+  <p>
+    <i>[Dave leyó un borrador de este memorando y dio permiso
+    para usar su código como ejemplo]</i>
+  </p>
+
+  <p>
+    Revisando el código aportado por Dave para
+    cintas/malla, vi algo que merece discutirse.
+  </p>
+
+  <p>
+    Para ser claro, Dave ha escrito un código excelente. Pero con una pequeña 
+    modificación podemos asegurar una eficiencia óptima. Voy a usar 
+    este código como ejemplo para advertir de cuestiones de asignación 
+    de memoria en Jmol.
+  </p>
+
+  <p>
+    Para dibujar las cintas, Dave necesitaba dos matrices de objectos Point3i que 
+    contuvieran las coordenadas en pantalla de los bordes de sus cintas. Por ello él asigna
+    las matrices y las rellena con nuevos objetos Point3i. Se calcula todo,
+    se dibuja y aparecen en la pantalla unas bonitas cintas.
+  </p>
+
+  <p>
+    Entonces los objetos temporales se descartan. Y ahí reside un pequeño 
+    problema: hay objetos temporales que están siendo asignados y eliminados durante el 
+    ciclo de redibujo.
+  </p>
+
+  <p>
+    ¿Por qué es un problema?
+  </p>
+
+  <p>
+    Bien, los ciclos de redibujo pueden tener lugar bastante rápido, probablemente 30 veces por
+    segundo durante las rotaciones. Por ello, si estamos asignando objetos sobre la pila
+    [usando new SomeObject(...)] podemos terminar asignando muchos de ellos en poco tiempo.
+  </p>
+
+  <p>
+    Realmente, el problema no está en la asignación, sino en la *desasignación*;
+    estamos descartando los objetos inmediatamente. Estos objetos descartados
+    ponen una carga innecesaria sobre el recolector de basura de Java, que se ve 
+    obligado a recorrer la memoria buscando estructuras de datos descartadas.
+  </p>
+
+  <p>
+    Cuando el recolector de basura se ejecuta, puede en ocasiones generar pausas 
+    en la respuesta del sistema ... una mala cosa.
+  </p>
+
+  <p>
+    Por tanto, deberíamos atacar este problema haciendo un esfuerzo para 'reciclar' 
+    los objetos en memoria durante el ciclo de redibujo.
+  </p>
+
+  <p>
+    Podemos conseguir esto asociando los objetos temporales con elementos de
+    las clases Renderer. Podemos solicitar a Renderer elementos para que nos asigne o almacene
+    los objetos temporales, y reutilizar los mismos temporales cada vez 
+    a lo largo del ciclo de redibujo.
+  </p>
+
+  <p>
+    Es interesante señalar que hay otras partes del sistema donde esta pauta
+    no es realmente aplicable. Por ejemplo, durante las operaciones de entrada o salida podemos
+    libremente asignar y descartar casi tanta basura como queramos. Durante estas operaciones
+    necesitamos hacer mucha interpretación de texto. Ésta genera muchas cadenas de caracteres temporales 
+    que tienen vidas muy cortas. Esto está bien porque realmente no leemos archivos con tanta frecuencia
+    y porque los usuarios esperan que ésa sea una operación relativamente lenta.
+  </p>
+
+</section>

@@ -1,0 +1,102 @@
+<!--
+  French translation 
+  Translated from default version : index.en.html (v 1.1)
+-->
+<html>
+  <head>
+    <title>D&#x00E0;monstration applet jmol trace</title>
+    <script src="../../jmol/Jmol.js"></script>
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <form>
+      <table border="1">
+        <tr>
+          <td>
+
+            <h1>1crn.pdb</h1>
+            <script>
+              jmolApplet(400, "load 1crn.pdb.gz; spacefill off; wireframe;" +
+                "backbone 0.6; color backbone structure");
+            </script>
+          </td>
+
+          <td>
+            Ceci montre le squelette d'une macrom&#x00E9;cule
+            prot&#x00E9;ique en cr&#x00E9;ant des liens 'squelette'
+            artificiels entre les carbones alpha. Le rayon du squelette
+            peut &#x00EA;tre pr&#x00E9;cis&#x00E9; en angstroms.<br />
+            <b>
+              &nbsp;&nbsp;squelette
+              <script>
+                jmolRadioGroup([
+                  ["backbone off", "off"],
+                  ["backbone 0.3", "0.3"],
+                  ["backbone 0.6", "0.6", "checked"]
+                  ]);
+              </script>
+            </b>
+            <br />
+
+            Par d&#x00E9;faut, la couleur du squelette est
+            h&#x00E9;rit&#x00E9;e des atomes (comme pour les autres
+            liens). Vous pouvez explicitement changer la couleur du
+            squelette. <br />
+            <b>
+              <script>
+                jmolRadioGroup([
+                  "color backbone none",
+                  "color backbone firebrick",
+                  "color backbone greenyellow",
+                  ["color backbone structure", null, "checked"]
+                  ], "<br />");
+              </script>
+            </b>
+            <br />
+            <hr />
+
+            Ceci montre une trace spline d'un squelette de
+            prot&#x00E9;ine. La courbe hermite spline passe par les
+            points interm&#x00E9;diaires entre les atomes de carbone
+            alpha<br />
+            <b>
+              &nbsp;&nbsp;trace
+              <script>
+                jmolRadioGroup([
+                  ["trace off", "off", "checked"],
+                  ["trace 0.4", "0.4"],
+                  ["trace 0.8", "0.8"],
+                  ["trace structure", "structure"]
+                  ]);
+              </script>
+            </b>
+            <br />
+
+            Avec la couleur par 'structure' vous obtenez des couleurs
+            diff&#x00E9;rents pour HELIX, TURN et SHEET. Couleur par
+            'amino' et couleur par 'shapely' donnent des couleurs
+            diff&#x00E9;rentes aux diff&#x00E9;rents acides
+            amin&#x00E9;s.<br />
+            <b>
+              <script>
+                jmolRadioGroup([
+                  ["color trace none", null, "checked"],
+                  "color trace structure",
+                  "color trace amino",
+                  "color trace shapely"
+                  ], "<br />");
+              </script>
+            </b>
+            <hr />
+            <script>
+              jmolCheckbox("wireframe on", "wireframe off", "<i>show wireframe</i>", "checked");
+            </script>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

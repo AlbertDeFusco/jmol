@@ -1,0 +1,163 @@
+# Jmol state version 11.1.22  2007-03-14 14:14;
+message OK
+# window state;
+# height 500;
+# width 500;
+initialize;
+stateVersion = 1101022;
+refreshing = false;
+backgroundColor = "[x000000]";
+axis1Color = "[xff0000]";
+axis2Color = "[x008000]";
+axis3Color = "[x0000ff]";
+ambientPercent = 45;
+diffusePercent = 84;
+specular = true;
+specularPercent = 22;
+specularPower = 40;
+specularExponent = 6;
+
+# file state;
+
+
+allowEmbeddedScripts = false;
+autoBond = true;
+appendNew = false;
+bondRadiusMilliAngstroms = 150;
+bondTolerance = 0.45;
+defaultLattice = {0.0 0.0 0.0};
+defaultLoadScript = "";
+forceAutoBond = false;
+minBondDistance = 0.4;
+percentVdwAtom = 20;
+
+#load "http://www.rcsb.org/pdb/files/2BY9.pdb";
+load "data/2BY9.pdb";
+
+
+# settings;
+refreshing = false;
+ defaultanglelabel = "%VALUE %UNITS";
+ defaultcolorscheme = "Jmol";
+ defaultdistancelabel = "%VALUE %UNITS";
+ defaultloadscript = "";
+ defaulttorsionlabel = "%VALUE %UNITS";
+ defaulttranslucent = 0.5;
+allowembeddedscripts = true;
+allowrotateselected = false;
+autobond = true;
+axes = window;
+axesmode = 0;
+axesscale = 1.0;
+bondmodeor = false;
+bondradiusmilliangstroms = 150;
+bondtolerance = 0.45;
+cartoonrockets = false;
+chaincasesensitive = false;
+disablepopupmenu = false;
+displaycellparameters = true;
+dotsselectedonly = false;
+dotsurface = true;
+dynamicmeasurements = false;
+forceautobond = false;
+greyscalerendering = false;
+hbondsbackbone = false;
+hbondssolid = false;
+helppath = "http://www.stolaf.edu/academics/chemapps/jmol/docs/index.htm?search=";
+hermitelevel = 0;
+hidenameinpopup = false;
+hidenavigationpoint = false;
+highresolutionflag = false;
+hoverdelay = 0.5;
+justifymeasurements = false;
+measureallmodels = false;
+minbonddistance = 0.4;
+navigationcentered = false;
+navigationperiodic = false;
+navigationspeed = 5.0;
+percentvdwatom = 20;
+perspectivedepth = true;
+#picking = "draw";
+pickingspinrate = 10;
+propertycolorscheme = "roygb";
+rangeselected = false;
+ribbonaspectratio = 16;
+ribbonborder = false;
+scriptdelay = 0;
+selecthetero = true;
+selecthydrogen = true;
+sheetsmoothing = 1.0;
+showhiddenselectionhalos = false;
+showhydrogens = true;
+showmeasurements = true;
+showmultiplebonds = true;
+shownavigationpointalways = false;
+solvent = false;
+solventproberadius = 1.2;
+ssbondsbackbone = false;
+strandcount = 5;
+testflag1 = false;
+testflag2 = false;
+testflag3 = false;
+testflag4 = false;
+tracealpha = true;
+usenumberlocalization = true;
+vectorscale = 1.0;
+vibrationperiod = 0.5;
+vibrationscale = 0.5;
+zoomlarge = true;
+zshade = false;
+
+
+# connections;
+
+# label defaults;
+select none;
+color label none;
+background label none;
+labelOffset = 4 4;
+labelAlignment = left;
+labelPointer = off;
+font label 13 SansSerif Plain;
+
+# model state;
+measures = nanometers;
+font measures 15 SansSerif Plain;
+select measures ({null});
+select ({0:22 42:97 136:157 223:246 326:352 396:484 575:678 728:896 947:1075 1120:1135 1200:1248 1279:1392 1420:1429 1495:1561 1601:1621});
+Cartoon 0.25;
+select ({23:41 98:135 158:222 247:325 353:395 485:574 679:727 897:946 1076:1119 1136:1199 1249:1278 1393:1419 1430:1494 1562:1600 1622:1733});
+Cartoon 1.5;
+boundBox off;
+;
+unitcell off;
+;
+isosurface s1 within 10.0 (atomno=185) sasurface colorscheme rwb color absolute 0 20 map property temperature translucent 0.2;# ({0:2180}) ({1749:1758 1760:2180})
+isosurface s2 within 8.0 (atomno=433) sasurface colorscheme rwb color absolute 0 20 map property temperature translucent 0.2;# ({0:2180}) ({1749:1758 1760:2180})
+draw arrow1 ARROW {18.50816 -5.9783783 6.6065865} {22.577888 2.2955093 17.283516} {36.745804 12.123276 29.579498} {37.168575 15.102219 37.04515};
+color draw opaque [xffa500];
+draw off;
+
+# orientation/center/spin state;
+set refreshing false;
+cameraDepth = 3.0;
+navigationMode = true;
+center {23.699003 21.285 22.801003};
+moveto /* time, axisAngle */ 0.0 { -945 -125 302 139.44} /* zoom, translation */  2757.74 -118.66 825.65  /* center, rotationRadius */ {23.699003 21.285 22.801003} 29.576609 /* navigation center, translation, depth */ {37.168575 15.102219 37.04515} 0.0 0.0 33.107365;;
+slab 0;depth 0;
+spinX = 0;spinY = 30;spinZ = 0;spinFps = 30;
+
+# navigation state;
+navigate 10 center {18.50816 -5.9783783 6.6065865} ;
+navigate 0 translate 0.0 0.0;
+
+# selection state;
+select ({1734:2180});
+hide selected;
+select *;
+
+refreshing = true;
+navigate 10 PATH $arrow1
+moveto /* time, axisAngle */ 5.0 { -980 -146 135 130.08} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {23.699003 21.285 22.801003} 29.576609 /* navigation center, translation, depth */ {37.168575 15.102219 37.04515} 11.6414995 -30.463352 50.0;
+moveto /* time, axisAngle */ 5.0 { -604 140 -785 152.89} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {23.699003 21.285 22.801003} 29.576609 /* navigation center, translation, depth */ {37.168575 15.102219 37.04515} 17.954336 1.3520559 50.0;
+

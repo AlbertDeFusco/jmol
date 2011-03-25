@@ -1,0 +1,14 @@
+Universal Force Field -- Rappe, A. K., et. al.; J. Am. Chem. Soc. (1992) 114(25) p. 10024-10035
+Jmol Minimization Version 12.0.RC1_dev  2010-03-29 10:40
+
+ Initial E =   1486.271 kJ/mol criterion = 0.001000 max steps = 100
+ Step 10   E = 694.396667    dE = -43.741070
+ Step 20   E = 532.227844    dE = -16.108105
+ Step 30   E = 428.072784    dE = -6.870553
+ Step 40   E = 385.777649    dE = -3.525788
+ Step 50   E = 361.036621    dE = -1.871675
+ Step 60   E = 345.294220    dE = -1.281133
+ Step 70   E = 334.357544    dE = -1.055482
+ Step 80   E = 325.646881    dE = -0.786901
+ Step 90   E = 318.654053    dE = -0.743544
+ Step 100  E = 312.502838    dE = -0.681437

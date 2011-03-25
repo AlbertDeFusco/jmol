@@ -1,0 +1,1445 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+  Translated from default version index_en.xml 
+-->
+<document>
+	<body>
+		<title>Biblioteca javascript Jmol.js</title>
+		<header>
+			<p>
+	Jmol.js es una biblioteca javascript que puede usarse para simplificar
+	el desarrollo de páginas web que incluyan la miniaplicación JmolApplet.
+      </p>
+		</header>
+		<section title="¿Qué hace Jmol.js?">
+			<p>
+	La biblioteca Jmol.js proporciona dos tipos de prestaciones que pretenden facilitar
+	la preparación de páginas web que usen miniaplicaciones Jmol:
+			</p>
+			<ul>
+				<li>Proporciona funciones para insertar la
+	miniaplicación Jmol en la página web y para controlar el aspecto
+	html y css de la mniaplicación y de sus controles en la página web. 
+	Aunque prefieras escribir tu propio código css, las instrucciones javascript 
+	básicas que muestran la miniaplicación son muy recomendables. 
+		</li>
+				<li>También genera controles de interfaz de usuario 
+	(botones, botones radio, casillas de verificación, listas desplegables, etc.)
+	 que interaccionan con la mniaplicación Jmol 
+	en la página web. Puedes preparar una página que cargue una molécula de interés y
+	que proporcione tales controles para permitir que el usuario cambie características
+	concretas de cómo se presenta la molécula, su fondo, que la hagan rotar,
+	etc. (Esto es posible gracias a una tecnología llamada LiveConnect
+	que permite que las páginas web interaccionen con las miniaplicaciones mediante javascript.) 
+	La alternativa es dejar que el usuario  
+	manipule la molécula usando el menú emergente de la miniaplicación
+	y los gestos con el ratón, o bien mediante instrucciones en la consola, todo lo cual sólo es
+	realmente apropiado para usuarios familiarizados con Jmol. 
+		</li>
+			</ul>
+			<p>
+	Recomendamos encarecidamente que uses Jmol.js para construir tus 
+	páginas web. Se automatiza la generación de muchas etiquetas HTML, 
+	haciendo así el código más simple, más fácil de entender y
+	menos propenso a errores.
+      </p>
+			<p>
+	La biblioteca Jmol.js debería funcionar correctamente con la mayoría de
+	los navegadores web recientes (de este siglo). Además, en los sistemas
+	Windows (Win32) generalmente funciona bien con la serie de navegadores
+	Netscape 4.x (que pertenece al siglo pasado).
+      </p>
+			<p>
+				<i>Advertencia: en Mac OS X, Internet Explorer </i>no<i> es
+	compatible porque no proporciona la comunicación LiveConnect
+	entre javascript y las miniaplicaciones Java.
+	Por otro lado, algunas versiones de la familia de navegadores Mozilla (que incluye
+	Firefox y Camino) puede requerir su configuración para utilizar Java 1.4.2
+	mediante </i>
+				<a href="http://javaplugin.sourceforge.net">
+	  javaplugin.sourceforge.net
+	</a> (al parecer, las versiones más recientes de estos navegadores 
+	ya incluyen este conector, por lo que funcionarán sin
+	necesidad de esa instalación extra)
+Cada páginaCada página      </p>
+			<p>
+	Hay unas pocas situaciones en las que podrías optar por
+	no utilizar la biblioteca Jmol.js. Entre ellas, puedes querer
+	construir una aplicación avanzada en el servidor web, que
+	genere HTML desde el servidor, tal como PHP, JSP, ASP, CGI, etc.
+	Si éste es el caso, <i>puede</i> ser adecuado que generes el código
+	HTML directamente en el servidor, en cuyo caso no usarás la 
+	biblioteca Jmol.js. Si no estás seguro, utiliza la biblioteca Jmol.js. 
+      </p>
+		</section>
+		<section title="Cómo conseguir Jmol.js">
+			<p>
+	Jmol.js está incluido en el paquete Jmol que se descarga 
+	(<a href="http://sourceforge.net/project/showfiles.php?group_id=23629">página de descargas de Jmol</a>).
+      </p>
+		</section>
+		<section title="Páginas HTML de ejemplo que usan Jmol.js">
+			<p>Visita las páginas de demostración (hay un enlace en el 
+      menú superior derecho) para ver algunas páginas de ejemplo 
+      que usan la miniaplicación Jmol y los distintos tipos de
+      controles que se pueden incorporar en la interfaz de usuario
+      utilizando la biblioteca Jmol.js.
+      </p>
+		</section>
+		<section title="Recomendaciones generales">
+			<ul>
+				<li>
+	  Debes crear un directorio o carpeta en tu servidor web que contenga
+	  Jmol.js, JmolApplet0.jar, los otros JmolApplet(lo_que_sea).jar 
+	  y cualesquiera otros archivos específicos de Jmol.
+	  A los efectos de esta discusión, la llamaremos
+	  <code>CarpetaJmol</code>.
+	  <br/>Si pretendes ejecutar tus páginas web desde un
+	  disco local (disco duro, CD-ROM...), se imponen
+	  ciertas restricciones respecto a dónde puedes situar
+	  <code>CarpetaJmol</code>; por favor, consulta
+	  <a href="http://wiki.jmol.org/index.php/Jmol_Applet_Deployment_Local">esta página</a>.
+	</li>
+				<li>
+	  Cada página web que forme parte del sitio web e incluya 
+	miniaplicaciones o controles Jmol debe hacer referencia 
+	  a <code>CarpetaJmol</code>; para ello, se recomienda que  
+	uses una ruta URL <i>relativa</i> (por ej., una que comience con <code>.</code> 
+	  o <code>..</code>.
+	  En circunstancias especiales, pueden ser aceptables rutas <i>relativas al
+	  servidor</i>, que comiencen con <code>/</code>.
+	  Las rutas <i>absolutas</i> (las que comienzan con <code>http://</code>) deben usarse
+	sólo en situaciones especiales en las que es imposible sustituirlas por 
+	referencias relativas a la página que las invoca
+	(por ej., cuando las páginas se generan sobre la marcha a partir de <i>servlets</i>).	 
+	</li>
+				<li>
+	  Cada página debe contener la siguiente instrucción HTML dentro de la
+	  sección de cabecera <code>head</code>, para que se incluya  
+	  la biblioteca Jmol.js :<br/>
+					<pre><![CDATA[
+  <head>
+    ...
+    <script type="text/javascript" src="CarpetaJmol/Jmol.js"></script>
+    ...
+  </head>
+]]></pre>
+				</li>
+				<li>
+	  La primera llamada a la biblioteca Jmol.js en cada página debe ser
+	  <code>jmolInitialize("CarpetaJmol")</code>.
+	</li>
+				<li>
+	  Aunque ya no es necesario, puede ser conveniente que
+	  cada página que contenga controles de tipo botón, 
+	  casillas de selección, grupos de opciones
+	  o menús (<i>button, checkbox, radio, select</i>)
+	  incorpore etiquetas <code>&lt;form&gt;</code> y 
+	  <code>&lt;/form&gt;</code> que los rodeen.
+	  Para ello, generalmente es seguro abrir tal etiqueta inmediatamente tras la etiqueta
+	  <code>&lt;body&gt;</code> y cerrarla inmediatamente antes de la 
+	  etiqueta <code>&lt;/body&gt;</code>. 
+<pre><![CDATA[
+  <body>
+    <form>
+    ...
+    </form>
+  </body>
+</html>
+]]></pre>
+				</li>
+			</ul>
+		</section>
+		<section title="Instrucciones básicas">
+    (Los parámetros con <span class="optP">subrayado de puntos</span> son opcionales)
+      <section title="jmolInitialize">
+				<p>
+					<code>jmolInitialize(CarpetaJmol)</code>
+				</p>
+				<p>
+	Inicializa la biblioteca JavaScript Jmol.js. La llamada a
+	<code>jmolInitialize()</code> puede estar dentro de 
+	la cabecera (<code>&lt;head&gt;</code>) o del
+	cuerpo (<code>&lt;body&gt;</code>) de la página web,
+	pero debe estar situada antes que ninguna otra llamada de Jmol.js. 
+	El primer parámetro, <code>CarpetaJmol</code>, es indispensable e indica 
+	(entre comillas) la 
+	ruta relativa a la carpeta que contiene 
+	<code>JmolApplet0.jar</code> y los otros archivos de la miniaplicación.
+	</p>
+				<blockquote>
+					<i>Avanzado:</i>
+					<br/>
+					<code>jmolInitialize()</code> puede omitirse si quieres usar
+	  <code>JmolApplet.jar</code> y ese archivo está en la misma 
+	carpeta o directorio que la página HTML. 
+			  </blockquote>
+				<section title="Uso de la miniaplicación firmada o una miniaplicación específica">
+					<p><i>Avanzado:</i>
+					</p>
+					<p>
+						<code>jmolInitialize(CarpetaJmol, usarEspecífica)</code><br/>
+						<code>jmolInitialize(CarpetaJmol, usarSignedApplet)</code>
+					</p>
+					<p>
+		Si el segundo parámetro es un texto (por ej., "miArchivoJar.jar"), 
+		se interpretará como el nombre de archivo <code>jar</code> 
+		de una miniaplicación personalizada, que debe usarse.
+		(Y si es "JmolApplet0.jar", se usará también el resto de archivos jar.)
+		<br/>
+		Si no es un nombre de archivo, se interpretará como un valor lógico (verdadero/falso) para 
+		usar o no la miniaplicación firmada o confiable (<i>SignedApplet</i>), que 
+	    aplica menos restricciones de seguridad en Java que la 
+	    miniaplicación no firmada. Si se omite este parámetro
+		(como en el primer ejemplo de sintaxis de arriba),
+		se asumirá "false" y se usará la miniaplicación no firmada.
+		<br/>
+		Con la miniaplicación firmada, puedes poner los archivos de la miniaplicación, 
+		los de los modelos y los de las páginas donde quieras y ejecutarlos desde un 
+		disco local. También permite a Jmol abrir archivos locales. Los usuarios recibirán 
+		una advertencia de seguridad de Java, pidiéndoles permiso para el uso de 
+		la miniaplicación firmada (considera que esto puede hacer que los usuarios 
+		noveles renuncien a entrar en tus páginas, a no ser que previamente les adviertas 
+		con detalle de que ese aviso aparecerá y que no es peligroso). 
+				</p>
+				</section>
+			</section>
+			<section title="jmolApplet">
+				<p>
+					<code>jmolApplet(tamaño, <span class="optP">guión</span>, <span class="optP">sufijoNombre</span>)</code>
+				</p>
+				<p>
+	Define e inserta en la página una miniaplicación JmolApplet. 
+				</p>
+				<p>
+					<code>tamaño</code> puede ser:
+				</p>
+				<ul>
+				  <li>Para una miniaplicación cuadrada, un solo valor.
+				  </li>
+				  <li>Para una miniaplicación rectangular, una matriz de 
+	    dos elementos: ancho y alto.
+	    Normalmente esto es más fácil de hacer usando la notación de 
+	    corchetes de javascript para matrices de constantes, por ej.:
+	    <code>[400, 200]</code>,
+	    <code>["50%", "100%"]</code> o <code>[0.5, 1.0]</code>.
+				  </li>
+				  <li>Cada dimensión (tamaño, ancho, alto) puede indicarse como: 
+				   <ul>				  				
+					<li>un número entero de píxeles (entre 25 y 2000);
+					</li>
+					<li>un valor de porcentaje, acabado en % y rodeado por comillas 
+	(pero lea las notas a continuación);
+	este valor será interpretado por el navegador como un porcentaje de las
+	dimensiones de la capa que engloba la miniaplicación (ventana, marco o capa <code>DIV</code>);
+	dependiendo de cuál sea esa capa y de sus propiedades, 
+	esto permite tener una miniaplicación que se redimensiona dinámicamente 
+	cuando cambie el tamaño de la ventana del navegador;
+					</li>
+					<li>un número entre cero y 1 que, multiplicado por 100, 
+	se interpretará como porcentaje.
+					</li>
+				   </ul>
+				  </li>
+				</ul>
+				<blockquote>
+					<i>Nota 1:</i> los tamaños en porcentaje, y los números menores de 1, sólo están 
+	disponibles en Jmol.js que acompaña a la versión 11.0.2 o posterior de la serie 11.0 de Jmol, y a la versión 11.1.28 o posterior.
+	<br/>
+					<i>Nota 2:</i> sea cauto al usar tamaños en porcentaje, pues pueden rendir
+	resultados no deseados en navegadores antiguos.
+	<br/>
+					<i>Nota 3:</i> para conseguir una compatibilidad con diversos navegadores
+	al especificar una altura en porcentaje, es preciso que la
+	capa que envuelve la miniaplicación tenga una altura explícita
+	(de no ser así, algunos navegadores generarán una miniaplicación de altura cero).
+	Ésta puede ser un número de píxeles o, si se desea que la altura sea relativa a 
+	la altura de la ventana, debe especificarse un valor CSS de altura de 100% 
+	tanto para <code>html</code> como para <code>body</code>.
+				</blockquote>
+				<p>
+					<code>guión</code> (opcional) es un guión, o conjunto de instrucciones, que se deberá
+	ejecutar. Normalmente, se usa para cargar un modelo molecular y aplicarle algún estilo.
+	</p>
+				<p>
+					<code>sufijoNombre</code> (opcional) sólo es necesario
+	    si quieres controlar específcamente los atributos
+	    <code>name</code> e <code>id</code> que se usen como parte de la
+	    etiqueta <code>applet</code>. El sufijo que indiques se añadirá
+	    al texto "jmolApplet", por lo que si usas "Uno" los atributos generados
+	    serán <code>name='jmolAppletUno' id='jmolAppletUno'</code>.
+	    Si usas una aplicación con base de datos en la que escribes registros en
+	    una tabla, puedes tranquilamente asignar números enteros como sufijos. 
+	    Si no se proporciona un <code>sufijoNombre</code>,
+		las miniaplicaciones tomarán los nombres <code>jmolApplet0</code>, 
+		<code>jmolApplet1</code>, etc., sucesivamente en el orden en el que 
+		se inserten en la página.
+	<br/>
+	Cuando se inserten varias miniaplicaciones en una página, el valor de 
+	<code>sufijoNombre</code>, explícito o implícito, es importante para que las posteriores 
+	instrucciones que establecen acciones, tales como
+	<code>jmolSetTarget</code>, <code>jmolScript</code> o <code>jmolLoadInlineScript</code>, 
+	se apliquen a la miniaplicación adecuada.
+				</p>
+				<blockquote>
+					<i>Avanzado (para pruebas y depuración):</i>
+					<br/>
+	    Si pones "?NOAPPLET" (en mayúsculas) 
+	    al final de la dirección URL en el navegador, 
+	    no se insertará la miniaplicación en la página web, sino que
+	    en su lugar se mostrará un área de texto informativa.
+	    <br/>
+	    Esto puede ser útil para ensayar la acción de los botones u otros controles.
+		Éstos funcionarán pero, en lugar de actuar,
+		se mostrarán en el área de texto las instrucciones que se habrían
+		enviado a la miniaplicación si ésta hubiese estado allí.
+				</blockquote>
+			<p><i>Nota</i>:<br/>
+			LLeva algo de tiempo construir la miniaplicación, por lo cual si pones alguna acción inmediata, como 
+			<code>jmolScript()</code> o <code>jmolLoadInline()</code> justo tras la línea <code>jmolApplet()</code>,
+			probablemente falle porque se ejecutará antes de que la miniaplicación haya terminado de 
+			cargarse. Hay dos alternativas que sí funcionarán:
+			</p>
+			<ul>
+			  <li>Pon las instrucciones dentro de la llamada a <code>jmolApplet()</code> (su segundo argumento, 
+			    <code>guión</code>).
+			  </li>
+			  <li>Haz que el navegador espere hasta que la miniaplicación informe de que está lista. Para ello,
+			  pon esto al final del guión enviado al crear la miniaplicación:
+			  <code>javascript JmolCargado();</code>
+			  y define una función JavaScript llamada <code>JmolCargado()</code> (o cualquier otro nombre que prefieras) 
+			  que ejecutará las instrucciones restantes.
+			  </li>
+			</ul>
+			</section>
+			<section title="jmolButton">
+				<code>jmolButton(guión, <span class="optP">rótulo</span>, <span class="optP">id</span>, <span class="optP">title</span>)</code>
+				<p>
+	  Dibuja un botón con un rótulo de texto. 
+				</p>
+				<p>
+	  Cuando se pulse el botón, se ejecutarán las instrucciones del <code>guión</code>.
+	Si en la página hay varias miniaplicaciones Jmol, las instrucciones se aplicarán
+	a la inmediatamente anterior o a la que haya sido especificada mediante una instrucción 
+	<a href="#jmolSetTarget"><code>jmolSetTarget</code></a> previa.
+				</p>
+				<p>
+					<code>rótulo</code> es el texto del botón; si no se indica,
+	  por defecto toma como valor los primeros 32 caracteres del guión.
+	</p>
+				<p>
+					<code>id</code> (opcional) se usará para los valores de los parámetros de HTML "id" y "name".
+	  Sus valores por defecto son jmolButton0, jmolButton1, etc. 
+	</p>
+				<blockquote>
+					<i>Avanzado:</i>
+					<br/>
+	  Además, el botón quedará incluido en un elemento <code>&lt;span&gt;</code> 
+	  que tendrá
+	  un parámetro HTML id de "span_" seguido del <code>id</code> indicado, 
+	  y un parámetro HTML title de <code>title</code>.
+	  <br/>
+	  Los navegadores mostrarán, pues, <code>title</code> 
+	  en forma de texto flotante o "tooltip"
+	  al detener el puntero del ratón sobre el botón. 
+				</blockquote>
+			</section>
+			<section title="jmolLink">
+				<code>jmolLink(guión, <span class="optP">texto</span>, <span class="optP">id</span>, <span class="optP">title</span>)</code>
+				<p>
+	Cuando el usuario
+	  haga clic en el enlace, se ejecutarán las instrucciones del <code>guión</code>.
+	Si en la página hay varias miniaplicaciones Jmol, las instrucciones se aplicarán
+	a la inmediatamente anterior o a la que haya sido especificada mediante una instrucción 
+	<a href="#jmolSetTarget"><code>jmolSetTarget</code></a> previa.
+	</p>
+				<p>
+					<code>texto</code> se escribirá en la página en forma de hiperenlace. 
+		Si no se indica, por defecto toma como valor los primeros 32 caracteres del <code>guión</code>.
+	</p>
+				<p>
+					<code>id</code> se usará para los valores de los parámetros de HTML "id" y "name".
+	  Toma por defecto los valores jmolLink0, jmolLink1, etc. 
+	</p>
+				<blockquote>
+					<i>Avanzado:</i>
+					<br/>
+	  Además, el texto de enlace se incluirá en un elemento <code>&lt;span&gt;</code> 
+	  que tendrá
+	  un parámetro HTML id de "span_" seguido del <code>id</code> indicado, 
+	  y un parámetro HTML title del <code>title</code> indicado.
+	  <br/>
+	  Los navegadores mostrarán, pues, <code>title</code> 
+	  en forma de texto flotante o <i>tooltip</i>
+	  al detener el puntero del ratón sobre el hiperenlace. 
+				</blockquote>
+			</section>
+			<section title="jmolCheckbox">
+				<code>
+	  jmolCheckbox(guiónAlMarcar, guiónAlQuitarMarca,
+	  etiquetaHtml, <span class="optP">estáMarcado</span>, <span class="optP">id</span>, <span class="optP">title</span>)
+	</code>
+				<p>
+	  Muestra una casilla de selección o "<i>checkbox</i>", seguida 
+	  inmediatamente por lo que indique <code>etiquetaHtml</code>.
+	</p>
+				<p>
+	  Cuando el usuario la marque, se ejecutarán las instrucciones de <code>guiónAlMarcar</code>.<br/>
+	  Cuando el usuario quite la marca, se ejecutarán las instrucciones de <code>guiónAlQuitarMarca</code>.<br/>
+					<br/>
+	Si en la página hay varias miniaplicaciones Jmol, las instrucciones de los <code>guiones</code> se aplicarán
+	a la inmediatamente anterior o a la que haya sido especificada mediante una instrucción 
+	<a href="#jmolSetTarget"><code>jmolSetTarget</code></a> previa.
+	</p>
+				<p>
+	  Debes asignar un valor no falso a <code>estáMarcado</code> si quieres que la casilla
+	  ya esté marcada al cargar la página; por defecto no lo estará. (Por ej., <code>true</code>.)
+	</p>
+				<p>
+					<code>id</code> se usará para los valores de los parámetros de HTML "id" y "name".
+	  Sus valores por defecto son jmolCheckbox0, jmolCheckbox1, etc. 
+	</p>
+				<blockquote>
+					<i>Avanzado:</i>
+					<br/>
+	  Además, la casilla y su etiqueta acompañante quedarán incluidas en 
+	  un elemento <code>&lt;span&gt;</code> 
+	  que tendrá
+	  un parámetro HTML id de "span_" seguido del <code>id</code> indicado, 
+	  y un parámetro HTML title de <code>title</code> (opcional).
+	  <br/>
+	  Los navegadores mostrarán, pues, <code>title</code> 
+	  en forma de texto flotante o "<i>tooltip</i>"
+	  al detener el puntero del ratón sobre la casilla o su texto/etiqueta acompañante. 
+				</blockquote>
+	  <br/>
+	  La etiqueta estará rodeada por etiquetas <code>&lt;label&gt;</code>;
+	  el resultado es que haciendo clic sobre el texto de la etiqueta se consigue lo mismo
+	  que haciendo clic sobre la propia casilla.
+			</section>
+			<section title="jmolRadioGroup">
+				<code>
+	  jmolRadioGroup(grupoOpciones, <span class="optP">separadorHtml</span>, <span class="optP">nombreGrupo</span>,
+	  <span class="optP">id</span>, <span class="optP">title</span>)
+	</code>
+				<p>
+	  Sirve para poner un grupo de opciones mutuamente excluyentes 
+	  (un grupo de "botones radio" o <i>radio buttons</i>).
+	  <code>grupoOpciones</code> se indica habitualmente mediante
+	  la notación de corchetes de javascript [ elementoA, elementoB, ... ].
+	  Cada <code>elemento</code> suele ser a su vez otra matriz que contiene
+	  un guión, una etiqueta y un indicador opcional para especificar si la opción 
+	  está seleccionada (o el botón marcado).
+	  Si un <code>elemento</code> es un texto simple, en lugar de una matriz,
+	  se usará ese texto como guión y como etiqueta.
+	<br/>
+	Si en la página hay varias miniaplicaciones Jmol, las instrucciones de los guiones se aplicarán
+	a la inmediatamente anterior o a la que haya sido especificada mediante una instrucción 
+	<a href="#jmolSetTarget"><code>jmolSetTarget</code></a> previa.
+	</p>
+				<p>
+					<code>separadorHtml</code> sirve para indicar código HTML que se 
+	  insertará tras cada opción o botón radio. Por ejemplo, para poner las 
+	  opciones en líneas separadas, debes poner como parámetro
+	  <code>"&lt;br&gt;"</code>. Si no se indica un <code>separadorHtml</code>, tomará
+	  el valor predeterminado <code>"&amp;nbsp;"</code> (es decir, un espacio).
+	</p>
+				<p>
+					<code>nombreGrupo</code> se usará como el identificador HTML ("name") 
+	  común a todo el grupo de opciones. Toma por defecto los valores 
+	  jmolRadioGroup0, jmolRadioGroup1, etc. 
+	</p>
+				<blockquote>
+					<i>Avanzado:</i>
+					<br/>
+	  El grupo completo de opciones se incluirá en 
+	  un elemento <code>&lt;span&gt;</code> 
+	  que tendrá un parámetro HTML id de <code>id</code> o, si no se
+	  proporciona éste, el valor de <code>nombreGrupo</code>
+					<br/>A su vez, cada opción o botón radio tendrá, junto con su
+	etiqueta, un parámetro HTML id de "span_" seguido del identificador del grupo,
+	de un guión bajo y de un número secuencial (comenzando por cero), y como
+	parámetro HTML title, el <code>title</code> del grupo (opcional).
+	  <br/>
+	  La etiqueta de cada opción estará rodeada por etiquetas <code>&lt;label&gt;</code>;
+	  el resultado es que haciendo clic sobre el texto de la etiqueta se consigue lo mismo
+	  que haciendo clic sobre el propio botón radio.
+				</blockquote>
+			</section>
+			<section title="jmolMenu">
+				<code>jmolMenu(grupoElementosMenú, <span class="optP">alturaMenú</span>, <span class="optP">id</span>, <span class="optP">title</span>)</code>
+				<p>
+	  Sirve para mostrar un menú de elementos asociados a sendos guiones.
+	  <code>grupoElementosMenú</code> se suele indicar mediante la notación de
+	  corchetes de javascript [ elementoA, elementoB, ... ]. 
+	  Cada <code>elemento</code>  suele ser a su vez otra matriz que contiene
+	  un guión, una etiqueta y un indicador opcional para especificar si es la opción 
+	  o elemento seleccionado.
+	  Si un <code>elemento</code> es un texto simple, en lugar de una matriz,
+	  se usará ese texto como guión y como etiqueta.
+	  <br/>
+	Si en la página hay varias miniaplicaciones Jmol, las instrucciones de los guiones se aplicarán
+	a la inmediatamente anterior o a la que haya sido especificada mediante una instrucción 
+	<a href="#jmolSetTarget"><code>jmolSetTarget</code></a> previa.
+	</p>
+				<p>
+					<code>alturaMenú</code> sirve para indicar la altura del menú.
+	  Si no se especifica o vale 1, el menú es del tipo "combo-box", que se despliega
+	  cuando el usario hace clic sobre él.
+	  Si la altura vale 2 o más, entonces se muestra un menú con el número
+	  indicado de líneas.
+	  Si el valor es -1, la altura del menú se
+	  ajustará para que se vean todos sus elementos.
+	</p>
+				<p>
+					<code>id</code> se usará para los valores de los parámetros de HTML "id" y "name".
+	  Toma por defecto los valores jmolMenu0, jmolMenu1, etc. 
+	</p>
+				<blockquote>
+					<i>Avanzado:</i>
+					<br/>
+	  Además, el menú se incluirá en un elemento <code>&lt;span&gt;</code> 
+	  que tendrá
+	  un parámetro HTML id de "span_" seguido del <code>id</code> indicado, 
+	  y un parámetro HTML title del <code>title</code> indicado.
+	  <br/>
+	  Los navegadores mostrarán, pues, <code>title</code> 
+	  en forma de texto flotante o <i>tooltip</i>
+	  al detener el puntero del ratón sobre el menú. 
+				</blockquote>
+				<blockquote>
+					<i>Avanzado:</i>
+					<br/>
+	  Se pueden definir grupos de opciones (en HTML, <code>optgroup</code>) de este modo:
+	<br/>
+	Añade el elemento optgroup como uno más en el <code>grupoElementosMenú</code>.
+	Para él, el primer elemento de la matriz secundaria debe ser "#optgroup" (en lugar de un guión);
+	el segundo elemento, el texto mostrado para el grupo ("label" en sintaxis HTML
+	no puede contener una comilla simple o apóstrofo); 
+	el tercer elemento no se usará.
+	Luego añade un elemento más para señalar el fin del grupo, cuyo
+	primer elemento debe ser "#optgroupEnd" (los elementos segundo y tercero se ignoran).
+	Ejemplo:
+	<pre><![CDATA[
+ jmolMenu([
+ [null, ".... selecciona ....", true],
+ ["color cpk", "patrón CPK"],
+ ["#optgroup", "... Colorear por: ...."],
+ ["color structure", "estructura"],
+ ["color chain", "cadena"],
+ ["color group", "grupo"],
+ ["#optgroupEnd"],
+ ["#optgroup", ".... Otros colores: ...."],
+ ["color formalcharge", "carga eléctrica"],
+ ["color amino", "patrón amino"],
+ ["color shapely", "patrón shapely"],
+ ["#optgroupEnd"]
+ ]);
+]]></pre>
+				</blockquote>
+			</section>
+		</section>
+		<section title="Instrucciones intermedias">
+			<section title="jmolSetAppletColor">
+				<code>
+	  jmolSetAppletColor(colorFondo, <span class="optP">colorTextoBarra</span>, <span class="optP">colorProgreso</span>)
+	</code>
+				<p>
+	Sirve para establecer el color de fondo de la miniaplicación. 
+	<code>colorFondo</code> se indica usando la notación 
+	"#RRGGBB" de HTML (R=rojo, G=verde, B=azul, en valores hexadecimales), o bien uno de los
+	<a href="../jscolors/index.es.html#Colores%20de%20JavaScript">
+	  nombres de colores reconocidos por JavaScript</a>.
+	</p>
+				<p>Esta instrucción debe proporcionarse antes de <code>jmolApplet</code>.
+	</p>
+				<blockquote>
+					<i>Avanzado:</i>
+					<br/>
+				Se pueden indicar también los colores del texto y de la
+	  barra del indicador de progreso (mientras se está cargando la miniaplicación).
+	  (Las versiones modernas de Java ya no usan esto.)
+				</blockquote>
+			</section>
+			<section title="jmolResizeApplet">
+				<code>
+	  jmolResizeApplet(tamaño, <span class="optP">sufijoDiana</span>)
+	</code>
+				<p>
+	Sirve para cambiar de tamaño una miniaplicación ya existente. 
+				</p>
+				<p>
+	<code>tamaño</code>: un valor o una matriz con dos valores; 
+	consulta los detalles de los formatos aceptados en la
+	función <a href="#jmolApplet"><code>jmolApplet</code></a>.
+	<br/><i>Caso especial:</i> si el valor de ancho o el de alto está vacío
+	(por ej., <code>""</code>), esa dimensión no se cambiará.	
+				</p>
+				<p>
+	  Cuando se estén mostrando en la página varias miniaplicaciones JmolApplet,
+	  <code>sufijoDiana</code> permite indicar cuál de ellas se debe redimensionar;
+	su valor por defecto es "0"
+	(es decir, la primera miniaplicación de la página).
+				</p>
+				<blockquote>
+					<i>Nota:</i>
+					<br/>
+				Implementado en Jmol.js a partir de la versión 11.7.42 de Jmol.
+				</blockquote>
+			</section>
+			<section title="jmolHtml">
+				<code>jmolHtml(textoHtml)</code>
+				<p>
+	  Permite pasar cualquier texto, en especial etiquetas HTML,
+	  directamente a la página; a veces esto es más conveniente que 
+	  cerrar y abrir sucesivas etiquetas <code>script</code>. 
+	  El resultado es exactamente el mismo que el de:<br/>
+					<code>&lt;/script&gt;<i>textoHtml</i>&lt;script&gt;</code>
+					<br/>o
+				<code>document.write(<i>textoHtml</i>)</code>
+				</p>
+			</section>
+			<section title="jmolBr">
+				<code>jmolBr()</code>
+				<p>
+	  Inseta un salto de línea en la página. Es lo mismo que 
+	<br/><code>jmolHtml("&lt;br /&gt;")</code>, o
+	<br/><code>&lt;/script&gt;&lt;br /&gt;&lt;script&gt;</code>, o bien
+	<br/><code>document.write("&lt;br /&gt;")</code>.
+				</p>
+			</section>
+			<section title="jmolScript">
+				<code>jmolScript(guión, <span class="optP">sufijoDiana</span>)</code>
+				<p>
+	  Sirve para construir tus propios controles de interfaz de usuario,
+	  o para ejecutar el <code>guión</code> en función de eventos javascript.
+	<br/>
+	  (Esta función <code>jmolScript</code> se usa también internamente para
+	implementar los controles descritos hasta ahora.)
+	</p>
+				<p>
+	  Cuando se estén mostrando en la página varias miniaplicaciones JmolApplet,
+	  <code>sufijoDiana</code> permite indicar sobre cuál actuará el guión.
+	El valor por defecto de <code>sufijoDiana</code> es "0"
+	(es decir, la primera miniaplicación de la página).
+	<br/><i>Caso especial:</i> si se indica "all" como <code>sufijoDiana</code>,
+	el <code>guión</code>se aplicará a todas las miniaplicaciones presentes.
+	</p>
+				<p>
+					<i>Advertencia:</i>
+					<br/>excepto para la primera miniaplicación de la página,
+	debes indicar aquí un <code>sufijoDiana</code>; el uso de 
+	<a href="#jmolSetTarget"><code>jmolSetTarget</code></a> 
+	no afecta a <code>jmolScript</code>, <code>jmolScriptWait</code> 
+	o <code>jmolScriptWaitAsArray</code>.
+				</p>
+			</section>
+			<section title="jmolScriptWait">
+				<code>jmolScriptWait(guión, <span class="optP">sufijoDiana</span>)</code>
+				<p>
+	  Esta función añade dos mejoras a <code>jmolScript</code>:
+	<br/>1) se espera hasta que el guión se ha ejecutado por completo antes de devolver el control (y así se evita
+	que javascript continúe con otras tareas)
+	<br/>2) si se asigna a una variable, devuelve en ella los mensajes de estado, que se pueden usar para detectar errores
+	o diagnosticar problemas.
+				</p>
+				<p>
+	  Cuando se estén mostrando en la página varias miniaplicaciones JmolApplet,
+	  <code>sufijoDiana</code> permite indicar sobre cuál actuará el guión.
+	El valor por defecto de <code>sufijoDiana</code> es "0"
+	(es decir, la primera miniaplicación de la página).
+	</p>
+				<p>
+					<i>Ejemplos:</i>
+				</p>
+				<ul>
+					<li><code>result = jmolScriptWait("load miArchivo.mol")</code>
+	carga el modelo y pone en la variable "result" un texto con los mesajes de estado que, por ejemplo, contiene, entre otras cosas, 
+	"FileNotFoundException" si no se ha encontrado el archivo <code>miArchivo.mol</code>.
+					</li>
+					<li><code>result = jmolScriptWait("show orientation")</code>
+	pone en la variable "result" las instrucciones precisas para restaurar la orientación actual (aunque el texto devuelto
+	puede necesitar ser procesado para que sea válido como instrucción).
+					</li>
+				</ul>
+				<p>Véase también <code>jmolScriptWaitAsArray</code>, a continuación.</p>
+			</section>
+			<section title="jmolScriptWaitAsArray">
+				<code>jmolScriptWaitAsArray(guión, <span class="optP">sufijoDiana</span>)</code>
+				<p>
+	  Esta función añade dos mejoras a <code>jmolScript</code>:
+	<br/>1) se espera hasta que el guión se ha ejecutado por completo antes de devolver el control (y así se evita
+	que javascript continúe con otras tareas)
+	<br/>2) si se asigna a una variable, devuelve en ella una matriz de mensajes de estado, que se puede usar para detectar errores
+	o diagnosticar problemas.
+				</p>
+				<p>
+	  Cuando se estén mostrando en la página varias miniaplicaciones JmolApplet,
+	  <code>sufijoDiana</code> permite indicar sobre cuál actuará el guión.
+	El valor por defecto de <code>sufijoDiana</code> es "0"
+	(es decir, la primera miniaplicación de la página).
+	</p>
+				<p>
+					Véase también la función anterior, <code>jmolScriptWait</code>, 
+	que devuelve una sola cadena de texto en lugar de una matriz.
+	(De hecho, actúa llamando a <code>jmolScriptWaitAsArray</code> 
+	y concatenando sus elementos de matriz con caracteres de salto de línea.)
+				</p>
+			</section>
+			<section title="jmolCommandInput">
+				<code>jmolCommandInput(<span class="optP">rótulo</span>, <span class="optP">tamaño</span>, <span class="optP">id</span>, <span class="optP">title</span>)</code>
+				<p>
+	  Muestra una caja de texto de una línea seguida de un botón con el texto <code>rótulo</code>. 
+	Cuando el usuario pulse el botón, se ejecutará sobre la miniaplicación cualquier guión
+	escrito en la caja de texto.
+	(Se obtiene, pues, una especie de consola de instrucciones.)
+				<br/>
+	Si en la página hay varias miniaplicaciones Jmol, 
+	las instrucciones de la caja de texto se aplicarán a la miniaplicación
+	inmediatamente anterior o a la que haya sido especificada mediante una 
+	instrucción <code>jmolSetTarget</code> previa.
+				</p>
+				<p>
+	Si no se proporciona un <code>rótulo</code>, se usará "Execute". 
+				</p>
+				<p>
+					<code>tamaño</code> es el ancho de la caja de texto (un número de caracteres, por defecto 60).
+	</p>
+				<p>
+					<code>id</code> se usará para los valores de los parámetros de HTML "id" y "name".
+	  Toma por defecto los valores jmolCmd0, jmolCmd1, etc. 
+				</p>
+				<blockquote>
+					<i>Avanzado:</i>
+	  Además, la caja de texto y el botón se incluirán en un elemento <code>&lt;span&gt;</code> 
+	  que tendrá
+	  un parámetro HTML id de "span_" seguido del <code>id</code> indicado, 
+	  y un parámetro HTML title del <code>title</code> indicado.
+	  <br/>
+	  Los navegadores mostrarán, pues, <code>title</code> 
+	  en forma de texto flotante o "<i>tooltip</i>"
+	  al detener el puntero del ratón sobre la caja de texto o sobre el botón. 
+				</blockquote>
+			</section>
+			<section title="jmolSaveOrientation">
+				<code>jmolSaveOrientation(id, <span class="optP">sufijoDiana</span>)</code>
+				<p>
+	Permite guardar la orientación actual del modelo en una variable interna identificada
+	mediante <code>id</code>, de modo que más tarde se pueda recuperar usando
+	<code>jmolRestoreOrientation</code> con el mismo <code>id</code>.
+	</p>
+				<p>
+	  Cuando se estén mostrando en la página varias miniaplicaciones JmolApplet,
+	  <code>sufijoDiana</code> permite indicar sobre cuál se actuará.
+	El valor por defecto de <code>sufijoDiana</code> es "0"
+	(es decir, la primera miniaplicación de la página).
+	</p>
+			</section>
+			<section title="jmolRestoreOrientation">
+				<code>jmolRestoreOrientation(id, <span class="optP">sufijoDiana</span>)</code>
+				<p>
+	Permite devolver el modelo a una orientación guardada previamente
+	mediante <code>jmolSaveOrientation</code> con el mismo <code>id</code>.
+	</p>
+				<p>La reorientación es instantánea. Para obtener una reorientación a lo largo de un tiempo, 
+	usa jmolRestoreOrientationDelayed.
+	</p>
+				<p>
+	  Cuando se estén mostrando en la página varias miniaplicaciones JmolApplet,
+	  <code>sufijoDiana</code> permite indicar sobre cuál se actuará.
+	El valor por defecto de <code>sufijoDiana</code> es "0"
+	(es decir, la primera miniaplicación de la página).
+	</p>
+			</section>
+			<section title="jmolRestoreOrientationDelayed">
+				<code>jmolRestoreOrientationDelayed(id, <span class="optP">demora</span>, <span class="optP">sufijoDiana</span>)</code>
+				<p>
+	Permite devolver el modelo a una orientación guardada previamente
+	mediante <code>jmolSaveOrientation</code> con el mismo <code>id</code>.
+	</p>
+				<p>La reorientación se extiende a lo largo de <code>demora</code> segundos (el valor por defecto es 1 segundo).
+	</p>
+				<p>
+	  Cuando se estén mostrando en la página varias miniaplicaciones JmolApplet,
+	  <code>sufijoDiana</code> permite indicar sobre cuál se actuará.
+	El valor por defecto de <code>sufijoDiana</code> es "0"
+	(es decir, la primera miniaplicación de la página).
+	</p>
+			</section>
+		</section>
+		<section title="Instrucciones avanzadas">
+			<section title="jmolDebugAlert">
+				<code>jmolDebugAlert(<span class="optP">permitirAvisos</span>)</code>
+				<p>
+	  Hace que se usen diálogos de aviso -o alertas-, útiles para 
+	  la depuración. Utilízalo con cautela u obtendrás 
+	  <i>muchos</i> avisos. Para desactivarlo, escribe literalmente: 
+	  <code>jmolDebugAlert(false)</code>
+				</p>
+			</section>
+			<section title="jmolSetLogLevel">
+				<code>jmolSetLogLevel(n)</code>
+				<p>
+	  Ajusta el nivel de mensajes que se mostrarán en la consola.
+	  n varía entre 0 (mñinimo número de mensajes) y 5 (todos los mensajes). 
+	</p>
+			</section>
+			<section title="jmolGetStatus">
+				<code>jmolGetStatus(strStatus, <span class="optP">sufijoDiana</span>)</code>
+				<p>
+	  (...necesita documentación)
+	</p>
+				<p>
+	  Cuando se estén mostrando en la página varias miniaplicaciones JmolApplet,
+	  <code>sufijoDiana</code> permite indicar sobre cuál se actuará (por defecto,
+	toma valor "0",
+	es decir, la primera miniaplicación de la página).
+	</p>
+			</section>
+			<section title="jmolSetTarget">
+				<code>jmolSetTarget(sufijoDiana)</code>
+				<p>
+	Esto indica sobre qué miniaplicación Jmol deben actuar 
+	los siguientes controles.
+	Sólo es necesario si estás mostrando varias miniaplicaciones
+	en la misma página y los controles <code>jmolButton, jmolLink, jmolCheckbox,
+	  jmolRadioGroup,  jmolMenu, jmolRadio</code>
+	no siguen secuencialmente a la llamada <code>jmolApplet</code>
+	a la que deben estar asociados.
+	</p>
+				<p>
+	  Todas las miniaplicaciones JmolApplet generadas por la biblioteca Jmol.js 
+	  reciben un identificador interno, que por defecto es un número 
+	secuencial a partir de cero.
+	Por lo tanto, para referirte a la primera y la segunda
+	miniaplicaciones de la página debes usar 
+	  <code>jmolSetTarget(0)</code> y <code>jmolSetTarget(1)</code>.
+	<br/>
+	  En lugar de mantener la numeración predefinida, puedes proporcionar tus 
+	propios sufijos al llamar a <code>jmolApplet</code>
+	  y usarlos luego en <code>jmolSetTarget</code>.
+	</p>
+			</section>
+			<section title="jmolRadio">
+				<code>
+	  jmolRadio(guión,
+	            <span class="optP">etiquetaHtml</span>, <span class="optP">estáMarcada</span>, <span class="optP">separadorHtml</span>, <span class="optP">nombreGrupo</span>,
+	  <span class="optP">id</span>, <span class="optP">title</span>)
+	</code>
+				<p>
+	  En primer lugar, intenta por todos los medios usar <code>jmolRadioGroup</code>
+	  en lugar de esto.
+	  Si tu organización de contenidos no te lo permite, puedes usar
+	  esta instrucción para asignar opciones (botones radio) individualmente.
+	</p>
+				<p>
+	  Lee la descripción de los parámetros <code>guión</code>, <code>etiquetaHtml</code>, 
+	  <code>estáMarcada</code> y <code>separadorHtml</code> 
+	 en <a href="#jmolRadioGroup"><code>jmolRadioGroup</code></a>.
+	</p>
+				<p>
+	Los botones se asignarán al grupo indicado por <code>nombreGrupo</code>.
+	Dicho de otro modo, los botones ligados (los mutuamente excluyentes en su marcado)
+	serán aquéllos que compartan un mismo valor de <code>nombreGrupo</code>.
+	<br/>
+	Si no quieres usar un <code>nombreGrupo</code>, todos los botones se asignarán al 
+	mismo grupo (con un nombre asignado automáticamente) hasta que llames a
+	<code>jmolStartNewRadioGroup</code> para comenzar un grupo nuevo.
+	</p>
+				<p>
+	Si en la página hay varias miniaplicaciones Jmol, las instrucciones del <code>guión</code> se aplicarán
+	a la inmediatamente anterior o a la que haya sido especificada mediante una instrucción 
+	<code>jmolSetTarget</code> previa.
+	</p>
+				<blockquote>
+					<i>Avanzado:</i>
+					<br/>
+	  El botón radio, junto con su etiqueta, tendrá un parámetro HTML
+	  id de "span_" seguido del <code>id</code> indicado,
+	  y un parámetro HTML title del <code>title</code> indicado.
+	Además, el botón tendrá el <code>id</code> indicado como su propio 
+	parámetro HTML id.
+	  <br/>
+	  La etiqueta estará rodeada por etiquetas <code>&lt;label&gt;</code>;
+	  el resultado es que haciendo clic sobre el texto de la etiqueta se consigue lo mismo
+	  que haciendo clic sobre el propio botón radio.
+				</blockquote>
+			</section>
+			<section title="jmolStartNewRadioGroup">
+				<code>jmolStartNewRadioGroup()</code>
+				<p>
+	  No uses esto salvo que estés trabajando con múltiples grupos
+	  de opciones cuya distribución sea tan complicada que 
+	  no puedas usar <code>jmolRadioGroup</code>.
+	<br/>Lee <code>jmolRadio</code>, justo encima, donde se explica cómo usar esta función.
+	</p>
+			</section>
+			<section title="jmolSetCheckboxGroup">
+				<code>jmolSetCheckboxGroup(chkMaster, chkBoxes)</code>
+				<p>
+	A partir de casillas de selección insertadas previamente (mediante <code>jmolCheckbox</code>), 
+	esta función permite establecer una relación entre una casilla "madre" o "líder" y una o varias
+	casillas "hijas" o "seguidoras", de acuerdo a estas reglas:
+				</p>
+				<ul>
+					<li>Cuando se marque la líder, todas sus seguidoras se marcarán automáticamente.
+	</li>
+					<li>Cuando se quite la marca en la líder, todas sus seguidoras perderán su marca automáticamente.
+	</li>
+					<li>Cuando una de las seguidoras se marque o se quite su marca, se examina el estado de sus 
+	compañeras; si es el mismo en todas, automáticamente la líder se marcará o perderá la marca.
+	</li>
+				</ul>
+				<p>
+					<code>chkMaster</code> es el identificador (ID) asignado a la casilla que hará de líder. 
+	Este identificador puede haber sido asignado cuando se introdujo el <code>jmolCheckbox</code>,
+	o bien puede ser un número. (Si no se especificó un ID, por defecto se asignan identificadores 
+	numéricos secuenciales, comenzando por cero.)
+				</p>
+				<p>
+					<code>chkBoxes</code> es uno o más identificadores o números (separados por comas), indicando 
+	las casillas que harán de seguidoras.
+				</p>
+				<p>
+	Se puede establecer cualquier número de grupos en una página, conteniendo cualquier
+	número de casillas.
+	También es posible anidar unos grupos dentro de otros (es decir, una casilla seguidora en un grupo 
+	puede ser a su vez líder de un grupo interior).
+				</p>
+				<p>
+					<i>Ejemplos:</i>
+				</p>
+				<ul>
+					<li><pre>jmolSetCheckboxGroup(0, 1, 4)</pre>
+	Define la 1ª casilla de la página como líder, la 2ª y la 5ª como seguidoras.</li>
+					<li><pre>jmolSetCheckboxGroup(4, 5, "chkH")</pre>
+	Define la 5ª casilla como líder, la 6ª y la identificada con "chkH" como seguidoras.</li>
+					<li><pre>jmolSetCheckboxGroup("chkH", "chkMetino", "chkMetil")</pre>
+	Define la casilla "chkH" como líder, las identificadas con "chkMetino" y "chkMetil" como seguidoras.</li>
+				</ul>
+			</section>
+			<section title="jmolCheckBrowser">
+				<code>jmolCheckBrowser(acción, URLoMensaje, <span class="optP">ahoraOalClic</span>)</code>
+				<p>
+	  Ejecuta una verificación del navegador web del usuario para comprobar su compatibilidad
+	  con Jmol. Asimismo, permite redirigir al usuario hacia un mensaje 
+	o página web específicos cuando falle la verificación, explícita o automática, del navegador.
+	</p>
+				<p>
+					<code>acción</code> debe ser "popup", "redirect" o "alert".<br/>
+	  "popup" hará que se abra la dirección URL indicada en <code>URLoMensaje</code> 
+	  en una nueva ventana del navegador.<br/>
+	  "redirect" hará que se abra la dirección URL indicada en <code>URLoMensaje</code> 
+	  sustituyendo a la página actual.<br/>
+	  "alert" mostrará un diálogo de aviso, o alerta de javascript, con el 
+	  texto indicado en <code>URLoMensaje</code>.
+	</p>
+				<p>
+					<code>ahoraOalClic</code> debe ser bien "now" u "onClick" (predeterminado). 
+	  Indica cuándo se debe realizar la verificación del navegador.<br/>
+	  "now" indica que se haga inmediatamente.<br/>
+	  "onClick" indica que se haga la primera vez que el usuario haga clic
+	  en un control, por ejemplo en un <code>jmolButton()</code>.
+	</p>
+				<p>
+	  Si no se hace esta llamada y el usuario utiliza un navegador no compatible, 
+	  aparecerá un mensaje de aviso predeterminado 
+	  la primera vez que el usuario haga clic en un control de Jmol. 
+	</p>
+			</section>
+			<section title="jmolSetDocument">
+				<code>jmolSetDocument(doc)</code>
+				<p>De modo predeterminado, Jmol.js escribe las miniaplicaciones 
+	y los controles en la página. 
+	Usando esta función es posible indicar otras dianas:
+				</p>
+				<ul>
+					<li><code>jmolSetDocument(win2.document)</code> 
+	escribirá la miniaplicación y los controles en otra ventana (llamada "win2" en este ejemplo)
+		</li>
+					<li><code>jmolSetDocument(0)</code> o <code>jmolSetDocument(false)</code> 
+	desactiva la escritura de código en la página cuando ésta se está cargando.
+	En su lugar, el código se retiene y puede ser devuelto en una variable JavaScript, como por ejemplo:
+	<br/>
+						<code>var miApplet = jmolApplet(...)</code>
+						<br/>
+						<code>var miControl = jmolRadioGroup(...)</code>
+						<br/>variables que más tarde pueden usarse para escribir una página
+	o para escribir en una capa (div), usando JavaScript.
+		</li>
+				</ul>
+			</section>
+
+			<section title="jmolSetAppletWindow">
+				<code>jmolSetAppletWindow(ventanaDiana)</code>
+				<p>
+	Cada vez que se proporciona una instrucción de Jmol.js 
+	que requiere la interacción con la miniaplicación, debe primero localizarse el 
+	objeto miniaplicación. Para ello, deben examinarse varias ventanas
+	(o "marcos" de documento, si es que se usan). Por defecto, primero se busca
+	la miniaplicación en la ventana actual, luego en los marcos hijos y finalmente
+	en el marco superior y en sus descendientes. Aunque este procedimiento debería
+	de tener éxito, en ciertas circunstancias puede ser preferible indicar 
+	explícitamente qué ventana debe investigarse primero. Esto se hace utilizando
+	la instrucción jmolSetAppletWindow(). El parámetro <code>ventanaDiana</code> 
+	debe de ser un objeto de tipo ventana (o marco).
+				</p>
+			</section>
+			
+			<section title="jmolAppletInline">
+				<code>jmolAppletInline(tamaño, modeloEnLinea, <span class="optP">guión</span>, <span class="optP">sufijoNombre</span>)</code>
+				<p>
+	  Inserta una miniaplicación JmolApplet, pero en lugar de un nombre de
+	  archivo o una dirección URL, le pasa el <i>contenido</i> del modelo
+	  molecular. Probablemente sólo necesites usar esto si estás sacando
+	los datos del modelo molecular de una base de datos.
+	</p>
+				<p>
+					<code>guión</code> y <code>sufijoNombre</code> funcionan como en 
+		<a href="#jmolApplet"><code>jmolApplet</code></a>.
+	</p>
+	   <p>Véase además la <i>nota</i> al final de <a href="#jmolApplet"><code>jmolApplet</code></a> relativa al
+	   uso de instrucciones justo tras la llamada a la miniaplicación.
+	   </p>
+			</section>
+			<section title="jmolLoadInline">
+				<code>jmolLoadInline(modelo, <span class="optP">sufijoDiana</span>)</code>
+				<p>
+	  Se usa en aplicaciones de base de datos en las que el modelo
+	  molecular esté disponible en forma de cadena de texto.
+	  Esta instrucción carga directamente el <code>modelo</code> a la 
+	  miniaplicación. Atención: éste <i>no</i> es el nombre del archivo,
+	  sino el <i>contenido</i> del archivo.
+<br/>
+					<code>model</code> puede también ser una matriz de modelos moleculares (entre corchetes y separados por comas), incluso con formatos de archivo diferentes.
+	</p>
+				<p>
+					<code>sufijoDiana</code> funciona como en 
+		<a href="#jmolScript"><code>jmolScript</code></a>.
+	</p>
+				<p>
+					<i>Advertencia:</i>
+					<br/>
+		excepto para la primera miniaplicación de la página,
+	debes indicar un <code>sufijoDiana</code>; el uso de 
+	<a href="#jmolSetTarget"><code>jmolSetTarget</code></a> 
+	no afecta a <code>jmolLoadInline</code>.
+	</p>
+			</section>
+			<section title="jmolLoadInlineScript">
+				<code>jmolLoadInlineScript(modelo, guión, <span class="optP">sufijoDiana</span>)</code>
+				<p>
+	  Es similar a <code>jmolLoadInline</code>, pero permite además 
+	  ejecutar un guión de instrucciones tras la carga de la molécula.
+	</p>
+				<p>
+					<code>guión</code> y <code>sufijoDiana</code> funcionan como en 
+		<a href="#jmolScript"><code>jmolScript</code></a>.
+	</p>
+				<p>
+					<i>Advertencia:</i>
+					<br/>
+		excepto para la primera miniaplicación de la página,
+	debes indicar un <code>sufijoDiana</code>; el uso de 
+	<a href="#jmolSetTarget"><code>jmolSetTarget</code></a> 
+	no afecta a <code>jmolLoadInlineScript</code>.
+	</p>
+			</section>
+			<section title="jmolSetCallback">
+				<code>jmolSetCallback("nombreLlamada", "nombreFunción")</code>
+				<p>
+	Indica qué función javascript debe llamarse desde Jmol cuando se genere una retrollamada
+	("callback") del tipo indicado --a continuación hay una lista--. 
+				</p>
+				<p>
+	El <code>nombreFunción</code> debe ir entre comillas dobles. En cada caso, se devuelven 
+	varios parámetros que se pasan a la función:
+				</p>
+				<ol>
+					<li>el primer parámetro devuelto es el nombre HTML de la miniaplicación 
+	(habitualmente, "jmolApplet0");</li>
+					<li>el segundo parámetro contiene la información;</li>
+					<li>se devuelven parámetros adicionales sólo en el caso de algunas retrollamadas 
+					(véase a continuación), y contienen información adicional.</li>
+				</ol>
+				<p>
+	Ten en cuenta que todos estos parámetros se devuelven en forma de texto Java, 
+	y en general es más seguro convertirlos a texto JavaScript antes de 
+	usarlos en la función. Esto se puede hacer así:
+				</p>
+				<pre> function nombreFunción(a,b,c,d) {
+	 var aa = " + a;
+	 var bb = " + b;
+	 var cc = " + c;
+	 var dd = " + d;
+	 // aquí van las acciones deseadas, usando aa, bb, cc y dd en lugar de a, b, c y d
+	}</pre>
+				<p>
+	Caso especial: si <code>nombreFunción</code> es <code>alert</code>, sólo se envía al usuario el segundo parámetro,
+	mediante una llamada javascript alert(), y no es precisa una función en la página web. 
+	</p>
+				<p><code>jmolSetCallback</code> debe invocarse antes de <code>jmolApplet</code>.
+	Para definir funciones de retrollamada en cualquier momento tras la carga de la miniaplicación
+	Jmol, utiliza las instrucciones de guiones 
+	<code>set animFrameCallback</code>, <code>set hoverCallback</code>,
+	<code>set loadStructCallback</code>, <code>set messageCallback</code> o
+	<code>set pickCallback</code> [véanse detalles en la
+	<a href="http://www.stolaf.edu/academics/chemapps/jmol/docs/#setcallback">Documentación de guiones interactivos</a>].
+	<br/>Para cancelar la detección de retrollamadas, utiliza <code>set animFrameCallback none</code> etc.
+				</p>
+				<p>Tipos de retrollamada ("callback"), o valores de <code>nombreLlamada</code>:
+				</p>
+				<section title="animFrameCallback">
+					<p>
+						<i>Se invoca:</i> cuando cambia el fotograma ("frame"). (Aplicable a
+	archivos multi-modelo y a varios archivos cargados.)
+	<br/><i>Parámetros devueltos (del 2º al 9º):</i>
+	<ul>
+		<li>El índice del fotograma actual (comenzando por 0)</li>
+		<li>El número del archivo actual (comenzando por 1)</li>
+		<li>El número del modelo actual dentro del archivo actual (comenzando por 1)</li>
+		<li>El primer fotograma del intervalo de animación, expresado como nArchivo <small>x</small> 1000000 + nModelo</li>
+		<li>El último fotograma del intervalo de animación, expresado como nArchivo <small>x</small> 1000000 + nModelo</li>
+		<li>0 (si la animación está detenida) o 1 (si está en marcha)</li>
+		<li>La dirección actual de la animación, bien 1 o -1</li>
+		<li>La dirección actual, bien 1 (avanzando) o -1 (retrocediendo)</li>
+	</ul>
+	<br/><i>Nota:</i> 
+	<!-- esta función se invoca cuatro veces durante la carga de un archivo, 
+	pero sólo tres veces si la carga del archivo falla. -->
+	Obsérvese que el índice de fotograma no es el mismo número que se se usaría
+	en una instrucción "frame" de guiones. El índice 0 es siempre
+	el primer fotograma, el 1 el siguiente, etc. Si se cargan varios archivos, el tercer
+	fotograma del primer archivo tiene índice 2 pero se accede en un guión mediante
+	"frame 1003" o "frame 1.3".
+				</p>
+				</section>
+				<section title="hoverCallback">
+					<p>
+						<i>Se invoca:</i> cuando el usuario detiene el puntero 
+	del ratón sobre un átomo.
+	<br/><i>2º parámetro devuelto:</i> un texto que depende del estado de 
+	la etiqueta de "hover" para el átomo señalado (véase más adelante).
+	<br/><i>3.<sup>er</sup> parámetro devuelto:</i> índice del átomo, comenzando por 0.
+	</p>
+					<p>
+	Si la actuación de la función incluye una instrucción jmolScript que establece 
+	el texto para "hover", la página web puede controlar en continuo qué se muestra cuando
+	el puntero se detiene sobre un átomo. Por ejemplo:
+	<pre>
+	function miFunc(a,mens) {
+	  var mensaje;
+	  var s = "" + mens; // convierte el 2º parámetro en una variable JavaScript de texto
+	  if (s.charAt(0) == 'C') {
+	    mensaje = "Sí, eso es un carbono.";
+	  } else {
+	    mensaje = "No, eso no es un carbono. Los carbonos son grises.";
+	  }
+	  jmolScript('hover "'+mensaje+'"');
+	} </pre>
+	establece el mensaje que se mostrará dependiendo del átomo sobre el
+	que se detenga el puntero. 
+	</p>
+				</section>
+				<section title="loadStructCallback">
+					<p>
+						<i>Se invoca:</i> tras la carga con éxito de un archivo. 
+	<br/><i>2º parámetro devuelto:</i> la dirección URL del archivo cargado.
+	<br/><i>3<sup>er</sup> parámetro devuelto:</i> el nombre del archivo cargado (sin la ruta).
+	<br/><i>4º parámetro devuelto:</i> el título interno del modelo en el archivo cargado.
+	<br/><i>5º parámetro devuelto:</i> mensajes de error que se hayan generado.
+	<br/><i>6º parámetro devuelto:</i> un código numérico: 3 si el archivo se cargó
+	correctamente, 0 si es modelo se borró, -1 si falló la carga.
+	<br/><i>7º parámetro devuelto:</i> un texto con el número de modelo o fotograma
+	anterior al carga de este modelo, en formato archivo.modelo (por ej., 
+	"3.1", o "1.1 - 3.31" si se cargó un grupo de modelos).
+	<br/><i>8º parámetro devuelto:</i> un texto con el número del último modelo o 
+	fotograma tras cargar el modelo actual, en formato archivo.modelo.
+	<br/><i>Nota:</i> Si se cargan varios archivos con una sola instrucción "load", 
+	sólo se devuelven los datos del último.
+				</p>
+				</section>
+				<section title="messageCallback">
+					<p>
+						<i>Se invoca:</i> cuando Jmol genera un mensaje de estado. 
+	<br/><i>2º parámetro devuelto:</i> el mensaje de estado.
+	<br/><i>Nota:</i> Se generan mensajes:
+		<br/>1) por una instrucción "message"
+		<br/>2) por una instrucción "echo" (incluso si no muesta ningún texto)
+		<br/>3) por las instrucciones "history", "show" y "getProperty" 
+		<br/>4) por la instrucción "connect" 
+		<br/>5) por la instrucción "set xxxxCallback", excepto si "xxxx" es 
+		"animFrame", "hover", "loadStruct", "message" o "pick" 
+		<br/>6) por una medición realizada por el usuario tras una instrucción "set picking measure" 
+		<br/>7) cuando el usuario elige el primer átomo tras una instrucción "set picking spin" 
+		<br/>8) cuando cambia el número de átomos seleccioandos
+		<br/>9) debido a errores durante la ejecución de diversas instrucciones, entre ellas "pmesh", "set"
+		<br/>10) cuando termina la ejecución de instrucciones o guiones ("Script completed", a no ser que haya un error de compilador
+		("script compiler ERROR:...") 
+		<br/>11) cuando se produce un error de ejecución en un guión ("script ERROR:..."), siempre que no haya un error de compilador
+		<br/>12) en diversos puntos tras las instrucciones "set debugScript" o "set loglevel 5"
+		<br/>
+		(La distinción entre errores de compilador y errorres de ejecución es sutil.
+		Con un error de compilador, no se ha ejecutado nada del guión; con un 
+		error de ejecución, se ha ejecutado el guión hasta el punto donde se ha producido el error.
+		Durante la compilación, sólo se verifica una parte de la sintaxis de las instrucciones.)
+				</p>
+				</section>
+				<section title="pickCallback">
+					<p>
+						<i>Se invoca:</i> cuando el usuario hace clic sobre un átomo.
+	<br/><i>2º parámetro devuelto:</i> identificador del átomo, número del átomo y coordenadas xyz, con este formato:
+	<br/>C6 #6 -0.30683374 -1.6836332 -0.716934 
+	<br/><i>3.<sup>er</sup> parámetro devuelto:</i> índice del átomo, comenzando por 0.
+				</p>
+				</section>
+				<section title="statusForm, statusText, statusTextarea">
+					<p>
+						<i>Se invoca:</i> cuando se envíe un mensaje a la linea de estado del documento.
+	<br/><i>2º parámetro devuelto:</i> mensaje  de estado
+	<br/><i>Nota:</i> Estas retrollamadas no invocan realmente funciones, sino que permiten 
+	escribir información de estado en cajas de texto (una linea) y áreas de texto (varias llineas) de la página.
+	Antes de <code>jmolApplet</code>, utiliza
+	<pre>
+	jmolSetCallback("statusForm", "un_nombre_de_formulario")
+	jmolSetCallback("statusText", "un_nombre_de_caja_de_texto")</pre>
+	or
+	<pre>
+	jmolSetCallback("statusForm", "un_nombre_de_formulario")
+	jmolSetCallback("statusTextarea", "un_nombre_de_area_de_texto")	</pre>
+	La diferencia es que <code>statusText</code> sustituye el contenido del elemento caja de texto
+	por el mensaje, mientras que <code>statusTextarea</code> añade el mensaje tras
+	el contenido existente.
+	Por tanto, con un guión típico aplicado con éxito, <code>statusText</code> sustituye el texto por 
+	"Jmol script terminated". Si hay un error, la caja de texto quedará en blanco.
+	Por el contrario, <code>statusTextarea</code> añade los mensajes, de modo que aparecerá un
+	informe completo en el área de texto.
+	<br/><i>(Estas funciones no se han probado extensivamente. Pueden ser útiles principalmente 
+	en la eliminación de errores. Puede verse un ejemplo de su uso en
+	http://www.stolaf.edu/academics/chemapps/jmol/docs/examples-11/simple2.htm .)</i>
+					</p>
+				</section>
+				<section title="language">
+					<p>
+						Esta llamada es especial: no se invoca mediante un evento, sino tan
+	sólo intencionadamente, y no devuelve nada. 
+	En su lugar, cambia el idioma de la interfaz en el menú emergente de la miniaplicación y en los
+	mensajes de la consola.
+	Debe llamarse antes que <code>jmolApplet</code>. Se puede conseguir lo mismo una vez cargada
+	la miniaplicación, empleando el lenguaje de guiones (por ej., <code>language = "de"</code>), así como
+	desde el propio menú emergente.
+				</p>
+					<p>
+	El primer parámetro debe ser "language" y el segundo, el código de dos letras (o de 2+2 letras) del idioma deseado
+	(siempre y cuando esa localización esté incluida en Jmol).
+	<br/>
+						<i>Ejemplos</i>:
+				</p>
+					<ul>
+						<li><code>jmolSetCallback("language", "de")</code> (alemán)</li>
+						<li><code>jmolSetCallback("language", "en")</code> (inglés)</li>
+						<li><code>jmolSetCallback("language", "es")</code> (español)</li>
+						<li><code>jmolSetCallback("language", "fr")</code> (francés)</li>
+						<li><code>jmolSetCallback("language", "pt_BR")</code> (portugués de Brasil)</li>
+					</ul>
+				</section>
+			</section>
+			<section title="jmolAppletAddParam">
+				<code>jmolAppletAddParam(códigoApplet, nombre, valor)</code>
+				<p>
+	Añade datos de parámetros a un texto HTML que define una miniaplicación, creado 
+	previamente mediante:
+	<pre>
+	jmolSetDocument(0);
+	var codigoA = jmolApplet(....);
+	codigoA = jmolAppletAddParam(codigoA, nombre, valor);</pre>
+	para escribirlo luego a la página web mediante
+	<pre>document.write(codigoA)</pre>
+				</p>
+			</section>
+			<section title="jmolEvaluate">
+				<code>jmolEvaluate(matemáticaMolecular, sufijoDiana)</code>
+				<p>
+	Permite extraer a JavaScript (p. ej. a una variable) información de una
+	<a href="http://www.stolaf.edu/academics/chemapps/jmol/docs/index.htm#jmolmathjmolvariables">variable</a>
+	definida en el lenguaje de guiones de Jmol, una expresión 
+	<a href="http://www.stolaf.edu/academics/chemapps/jmol/docs/index.htm#jmolmath">matemática de Jmol</a>,
+	o bien alguna información del modelo.
+	Ejemplos:
+	<pre>
+	alert( jmolEvaluate("a") );
+	// Muestra el valor de la variable 'a' si se ha definido en guiones de Jmol.
+	alert( jmolEvaluate("{*}.xyz") );
+	// Muestra las coordenadas del centro geométrico del modelo.
+	alert( jmolEvaluate("{*}.length") );
+	// Muestra el número total de átomos del modelo.
+	alert( jmolEvaluate("{carbon}.bonds.length.min") );
+	// Muestra la longitud de enlace mínima entre átomos de carbono.
+	alert( jmolEvaluate("_atomPicked") );
+	// Muestra el índice del último átomo sobre el que se pulsó.
+	</pre>
+				</p>
+			</section>
+			<section title="jmolGetPropertyAsArray">
+				<code>jmolGetPropertyAsArray(clave, valor, sufijoDiana)</code>
+				<p>
+	Devuelve información de la miniaplicación en forma de una matriz de datos javascript, si 
+	es aplicable, o un texto javascript si no lo es.
+	<!--See the script 
+	documentation for a full discussion of key options and their return 
+	values. -->
+	Un ejemplo:
+	<pre>
+	var atoms = jmolGetPropertyAsArray("atomInfo","all");
+	var atom1 = atoms[0];
+	var x = atom1.x;
+	var info = atom1.info; </pre>
+				</p>
+			</section>
+			<section title="jmolGetPropertyAsString">
+				<code>jmolGetPropertyAsString(clave, valor, sufijoDiana)</code>
+				<p>
+	Devuelve datos similarmente a <code>jmolGetPropertyAsArray</code>, pero siempre 
+	en forma de texto javascript. En el caso de una matriz de datos, el texto se delimita con 
+	tabuladores y saltos de línea, para facilitar su lectura.
+	</p>
+			</section>
+			<section title="jmolGetPropertyAsJSON">
+				<code>jmolGetPropertyAsJSON(clave, valor, sufijoDiana)</code>
+				<p>
+	Devuelve datos similarmente a <code>jmolGetPropertyAsArray</code>, pero siempre 
+	en forma de texto javascript en notación JavaScript Object Notation. 
+	Ese texto puede luego ser rodeado con paréntesis y evaluado
+	para generar una matriz. Por ejemplo:
+	<pre>var info = jmolGetPropertyAsJSON("filename")</pre>
+	establece que la variable <code>info</code> tenga un valor de
+	<pre>{"filename": "file:/C:/data/caffeine.xyz"}</pre>
+	Luego
+	<pre>var Info = eval("(" + info + ")")</pre>
+	produce una matriz javascript nueva <code>Info</code> que contiene el elemento
+	<code>Info.filename</code> con un valor de "file:/C:/data/caffeine.xyz"
+	</p>
+			</section>
+			<section title="jmolGetPropertyAsJavaObject">
+				<code>jmolGetPropertyAsJavaObject(clave, valor, sufijoDiana)</code>
+				<p>
+	Devuelve datos en forma de objeto Java (no javascript). Esta función es sólo
+	para usuarios avanzados y en general no se recomienda su uso, pues proporciona
+	un puntero al propio objeto Java, no una copia de éste. Este puntero puede ser o
+	no válido indefinidamente y puede o no sufrir correctamente la "recogida de
+	basura" por parte de todos los navegadores. No se ha probado extensivamente en 
+	plataformas diversas. El uso principal de esta función es el acceso a métodos
+	públicos de Viewer que no están disponibles en general a través de la interfaz 
+	de la miniaplicación. Por ejemplo:
+	<pre>
+	var viewer = jmolGetPropertyAsJavaObject("jmolViewer")
+	var radius = viewer.getRotationRadius() </pre>
+	Hay una lista con la mayoría de estos métodos públicos en 
+	http://jmol.svn.sourceforge.net/viewvc/jmol/trunk/Jmol/src/org/jmol/api/JmolViewer.java?view=markup
+	</p>
+			</section>
+			<section title="jmolDecodeJSON">
+				<code>jmolDecodeJSON(s)</code>
+				<p>
+	Descodifica un texto en notación JavaScript Object Notation dando un texto javascript 
+	legible por personas y ejecutable como javascript. Por ejemplo:
+	<pre>
+	var info = jmolGetPropertyAsJSON("atominfo", "atomno=1")
+	alert(jmolDecodeJSON(info)) </pre>
+	muestra:
+	<pre>
+	atominfo=new Array()
+	atominfo[0]=new Array()
+	atominfo[0].element="hydrogen"
+	atominfo[0].visible=true
+	atominfo[0].model=1
+	atominfo[0].radius=0.5
+	atominfo[0].visibilityFlags=13
+	atominfo[0].clickabilityFlags=12
+	atominfo[0].bondCount=1
+	atominfo[0].atomno=1
+	atominfo[0].elemno=1
+	atominfo[0].z=0.5733036
+	atominfo[0].y=-1.1272367
+	atominfo[0].x=-3.380413
+	atominfo[0].partialCharge=0
+	atominfo[0].sym="H"
+	atominfo[0].colix=-32767
+	atominfo[0].spacefill=60
+	atominfo[0].color="ffffff"
+	atominfo[0].info="H1 #1"
+	atominfo[0]._ipt=0
+	atominfo[0].formalCharge=0 	</pre>
+				</p>
+			</section>
+			<section title="jmolScriptEcho">
+				<code>jmolScriptEcho(guión, sufijoDiana)</code>
+				<p>
+                Proporciona una lista en orden inverso, separada en líneas, 
+                de todos los textos de tipo 'echo' producidos por el guión,
+                asociado a la miniaplicación JmolApplet indicada.
+				</p>
+			</section>
+			<section title="jmolScriptMessage">
+				<code>jmolScriptMessage(guión, sufijoDiana)</code>
+				<p>
+                Proporciona una lista en orden inverso, separada en líneas, 
+                de todos los mensajes producidos por el guión,
+                asociado a la miniaplicación JmolApplet indicada,
+                terminando con <code>Script completed\n</code>.
+				</p>
+			</section>
+		</section>
+		<section title="Respaldo para hojas de estilo en cascada (CSS)">
+			<section title="jmolSetAppletCssClass">
+				<code>jmolSetAppletCssClass(claseCSS)</code>
+				<p>
+	  Indica la clase CSS que se debe asignar a las 
+	  etiquetas <code>applet</code> generadas por 
+	  <code>jmolApplet</code> y <code>jmolAppletInline</code>.
+	</p>
+			</section>
+			<section title="jmolSetButtonCssClass">
+				<code>jmolSetButtonCssClass(claseCSS)</code>
+				<p>
+	  Indica la clase CSS que se debe asignar a las 
+	  etiquetas <code>input</code> generadas por
+	  <code>jmolButton</code>.
+	</p>
+			</section>
+			<section title="jmolSetCheckboxCssClass">
+				<code>jmolSetCheckboxCssClass(claseCSS)</code>
+				<p>
+	  Indica la clase CSS que se debe asignar a las 
+	  etiquetas <code>input</code> generadas por
+	  <code>jmolCheckbox</code>.
+	</p>
+			</section>
+			<section title="jmolSetRadioCssClass">
+				<code>jmolSetRadioCssClass(claseCSS)</code>
+				<p>
+	  Indica la clase CSS que se debe asignar a las 
+	  etiquetas <code>input</code> generadas por
+	  <code>jmolRadioGroup</code> y <code>jmolRadio</code>.
+	</p>
+			</section>
+			<section title="jmolSetLinkCssClass">
+				<code>jmolSetLinkCssClass(claseCSS)</code>
+				<p>
+	  Indica la clase CSS que se debe asignar a las 
+	  etiquetas <code>a</code> generadas por
+	  <code>jmolLink</code>.
+	</p>
+			</section>
+			<section title="jmolSetMenuCssClass">
+				<code>jmolSetMenuCssClass(claseCSS)</code>
+				<p>
+	  Indica la clase CSS que se debe asignar a las 
+	  etiquetas <code>select</code> generadas por
+	  <code>jmolMenu</code>.
+	</p>
+			</section>
+		</section>
+	</body>
+</document>

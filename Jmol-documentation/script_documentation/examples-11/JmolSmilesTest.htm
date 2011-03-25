@@ -1,0 +1,234 @@
+<html>
+<head>
+<title>JmolSmilesApplet test</title>
+<script type="text/javascript">
+// Bob Hanson 9:45 PM 5/12/2010
+// requires JME.jar and JmolSmilesApplet.jar.
+
+/*
+ 
+// example JavaScript to open this window:
+
+woptions2="menubar=yes,resizable=1,scrollbars,alwaysRaised,width=400,height=450,left=270"
+function newJmeWindow(file) {
+  var data = (file ? "?load=" + escape(jmolEvaluate("load('" + file + "')")) : "")
+  var sm=""+Math.random() // ensures a new popup window, not just replacement
+  sm=sm.substring(2,10)
+  var newwin=open("JmeToJmol.htm" + data,"jmol_"+sm,woptions2)
+}
+
+*/
+
+function JmeToJmol(name,w,h) {
+	name = (name || "JME")
+	w = "" + (w || "350") 
+	h = "" + (h || "375")
+	if (w.indexOf("%") < 0)w += "px"
+	if (h.indexOf("%") < 0)h += "px"
+	var s = '<applet code="JME.class" id="' + name + '" name="' + name + '" archive="JME.jar" width="'+w+'" height="'+h+'">'
+	if (document.location.search.indexOf("load=") >= 0) {
+		var file = unescape(document.location.search.split("load=")[1].split("&")[0])
+		s += '<param name="JME" value="' + file + '"/>'
+	}
+	s+='<param name="options" value="autoez" />'	
+	s+='</applet>'
+	document.write(s)
+}
+
+function getStateJME() {
+	// also saves a variable "jmeString" in Jmol for later reference
+	var jmeString = document.getElementById("JME").jmeFile()
+	var smilesString = document.getElementById("JME").smiles()
+	var smilesString2 = document.getElementById("JME").nonisomericSmiles()
+	return "jmeString = '" + jmeString 
+		+ "';smilesString = '" + smilesString 
+		+ "';smilesStringNonisomeric = '" + smilesString2 
+		+ "';load INLINE '" + jmeString + "'"
+}
+
+function sendToJmol(){
+	try {
+		opener.jmolScript(getStateJME());
+	} catch (e) {
+		newAppletWindow()
+	}
+}
+
+function inputJME() {
+ var s = prompt("Enter a JME string", document.getElementById("JME").jmeFile())
+ if (!s)return
+ document.getElementById("JME").readMolecule(s)
+}
+
+woptions="menubar=yes,resizable=1,scrollbars,alwaysRaised,width=600,height=600,left=50"
+woptions2="menubar=yes,resizable=1,scrollbars,alwaysRaised,width=400,height=450,left=270"
+woptions3="menubar=yes,resizable=1,scrollbars,alwaysRaised,width=6500,height=450,left=270"
+
+function newAppletWindow() {
+ newWindow("JmolPopup.htm?JME", woptions)
+}
+
+function newWindow(file, options) {
+ var sm=""+Math.random()
+ sm=sm.substring(2,10)
+ var newwin=open(file,"jmol_"+sm, options)
+}
+
+function getLink() {
+ var file = document.getElementById("JME").jmeFile()
+ ref = document.location.href.split("?")[0]
+ if (ref.toLowerCase().indexOf("file:") == 0)ref = "http://chemapps.stolaf.edu/jmol/docs/examples-11/JmeToJmol.htm"
+ var model = ref + "?load=" + escape(file).replace(/ /g,"%20")
+ var s = prompt("The link below will go to this page with this molecule loaded. Press OK to load this page. ",model)
+ if (!s)return
+ newWindow(s, woptions2) 
+}
+
+function doTestSmiles(mode) {
+  switch(mode) {
+  case 1:
+    var xfind = document.getElementById("JME").smiles();
+    var xin = document.getElementById("JME").nonisomericSmiles();
+    break;
+  case 2:
+  case 3:
+    var xin = document.getElementById("JME").smiles();
+    var xfind = document.getElementById("JME_search").smiles();
+    if (mode == 3) {
+      prompt("",'print "' + xin.replace(/\\/g,'\\\\') + '".find("smiles","' + xfind.replace(/\\/g,'\\\\') + '")') 
+      return;
+    }
+    break;
+  }
+/*
+  d= document.getElementById("jmolSmiles1")  
+  S = [];
+  for (x in d) {
+    if(x.indexOf("f") == 0)
+    S.push(x)
+  }
+  S = S.sort()
+  alert(d)
+  alert(S.join("\n"))
+  */
+  var ret = document.getElementById("jmolSmiles1").find(xfind, xin, false, false)
+  if (ret < 0)
+    alert(document.getElementById("jmolSmiles1").getLastError())
+  else 
+    alert(ret == 0 ? (mode == 1 ? "please report that the test failed" : "No, these two structures are different.") : mode == 2 ? "Yes!" : "Self-Test OK")
+}
+
+function doCopy() {
+  var a = document.getElementById("JME").jmeFile()
+  document.getElementById("JME_search").readMolecule(a)
+}
+function doSwap() {
+  var a = document.getElementById("JME").jmeFile()
+  var b = document.getElementById("JME_search").jmeFile()
+  document.getElementById("JME").readMolecule(b)
+  document.getElementById("JME_search").readMolecule(a)
+}
+
+function doInvert() {
+  var b = document.getElementById("JME_search").jmeFile() + " "
+  b = b.replace(/ -2 /g, " _ ").replace(/ -1 /g, " -2 ").replace(/ \_ /g," -1 ")
+  document.getElementById("JME_search").readMolecule(b)
+}
+
+</script>
+</head>
+<table width=900>
+
+<tr>
+<td colspan=3 align=center><h3>JmolSmilesTest.jar -- A Universal SMILES String comparator</h3><br>This page uses the new <a href=JmolSmilesApplet.jar>JmolSmilesApplet</a> to compare SMILES strings coming out of JME.
+ <br>Draw two structures, one on the left and one on the right.
+ <br>See if you can find an example that matches when it isn't supposed to or vice-versa!</h3></td></tr>
+<tr>
+<td align=center>
+<h3>A (target model)</h3>
+</td>
+<td></td>
+<td align=center>
+<h3>B (search pattern)</h3>
+</td>
+</tr>
+<tr>
+<td align=center>
+<script type="text/javascript">
+JmeToJmol("JME")
+</script>
+</td>
+<td> <a href="javascript:doTestSmiles(2)"> Do they match? </a>
+</td>
+<td align=center>
+<script type="text/javascript">
+JmeToJmol("JME_search")
+</script>
+</td>
+
+</tr>
+</tr>
+<td align=center>
+<a href="javascript:sendToJmol()">Load into Jmol</a>
+ <a target="_blank" href="JmeShow.htm">JME</a>
+ <a target="_blank" href="JmeShow.htm?SMILES">SMILES</a>
+ <a href="javascript:inputJME()">input JME</a>
+ <a href="javascript:getLink()">save</a>
+ <a href="javascript:doTestSmiles(1)">self-test</a>
+<br/> <a href="javascript:window.close()">close this window</a>
+<a target="_blank" href=http://www.molinspiration.com/jme>http://www.molinspiration.com/jme</a>
+</td>
+<td></td>
+<td align=center>
+ <a href="javascript:doCopy()">copy</a>
+ <a href="javascript:doSwap()">swap</a>
+ <a href="javascript:doInvert()">invert</a>
+ <a href="javascript:doTestSmiles(3)">printCommand</a>
+<br/> <a href="javascript:window.close()">close this window</a>
+<a target="_blank" href=http://www.molinspiration.com/jme>http://www.molinspiration.com/jme</a>
+</td>
+
+</tr>
+<tr>
+<td colspan=3><br><br>Note that the test is set up such that ambiguous stereochemistry on the RIGHT matches defined stereochemistry on the left, but ambiguous stereochemistry on the LEFT does not match defined stereochemistry on the right --- as you would want if the student were drawing on the left and we were checking a key on the right. That is, we test <b>"studentResponse".find("answerKey")</b> [Jmol] or <b>find("answerKey", "studentResponse", false, false)</b> [JmolSmiles], not the other way around. We want to find the correct answer IN the student response.  
+Or if we were searching a database, we would want LEFT to represent "a molecule in the database" and RIGHT to represent "our search". If our search were for a specific stereochemistry, we would want to skip ill-matched database structures; if our search were for a general (unspecified) stereochemistry, we would want it to match any constitutionally correct isomer in the database. That is, we would use <b>"databaseMolecule".find("searchMolecule")</b>, which if you think about it, makes sense. 
+<br><br>
+In general, we want <b>"targetString".find("searchString")</b> in JmolApplet or <b>find("searchString", "targetString", false, false)</b> in JmolSmilesApplet.
+
+</td></tr>
+<tr><td colspan=3 align=center>
+<span style="background-color:blue;font-size:5px">&nbsp;
+<object name='jmolSmiles1' id='jmolSmiles1' 
+  type='application/x-java-applet'
+  classid='java:JmolSmilesApplet'
+  width='10'   
+  height='10'
+ > 
+<param name='name' value='jmolSmilesApplet' /> 
+<param name='archive' value='JmolSmilesApplet.jar' /> 
+<param name='mayscript' value='true' /> 
+<param name='codebase' value='.' /> 
+<param name='code' value='JmolSmilesApplet' />
+</object>&nbsp;
+</span>
+</td></tr>
+<tr>
+<td colspan=3><h3>How it works</h3>
+The idea is really pretty straightforward. The JME applet is used to generate a SMILES string with stereochemistry. The JmolSmilesApplet (the little white dot in the blue square, above) creates two molecular graphs: One from the target SMILES string (from the left panel, the <b>target model</b>), and one from the search SMILES string (from the right panel, the <b>search pattern</b>).
+Notably, though, there are no spacial relationships, just topology. First, the algorithm checks for a constitutional match. This is a standard iterative connectivity search, following the bonding of the structure to see if it matches the topology inherent in the target. 
+<br><br>
+So how then does JmolSmilesApplet
+check stereochemistry -- and why does it do such an amazing job of matching? The stereocenters are checked
+one by one using a very fast and relatively simple strategy. Now, we don't have any 3D information, but we do know the "local winding" that is needed based on the target SMILES string. This involves two aspects: <ol><li>We have to 
+order the atoms in the SEARCH model around the stereocenter based on the winding in the TARGET string, because it is the order <i>in that string</i> that defines the desired stereochemistry. Of course, there are several orders that
+are the same, because in most stereochemical situations, you can twice switch any two pairs of groups and have an equivalent structure.
+</li><li> Rather than checking strings, 
+we temporarily assign 3D coordinates to the atoms connected to the stereocenter. Just simple coordinates, like (1,0,0) and (0,1,0). Then we carry out a quick geometry winding match,
+checking to see how various vectors based on two sets of atoms around the stereocenter line up. This works with both double-bond and chirality-center stereochemistry. It is an extraordinarily fast test. 
+</li></ol>
+And there you have it! A univeral SMILES string comparator! 
+ 
+</td></tr>
+</table>
+</body>
+</html>

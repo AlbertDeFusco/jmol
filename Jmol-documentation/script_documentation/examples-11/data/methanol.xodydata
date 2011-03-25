@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+
+<odyssey_simulation>
+	<description>
+	</description>
+	<structure>
+		<atoms>
+			<atom id="atom.1"
+				element="C" 
+				xyz="   0.000000000   0.000000000   1.000000000"
+				hybrid="4"
+				label="C1" />
+			<atom id="atom.2"
+				element="H" 
+				xyz="  -0.516663114   0.894887195   1.365311010"
+				hybrid="1"
+				label="H4" />
+			<atom id="atom.3"
+				element="H" 
+				xyz="  -0.516663114  -0.894887195   1.365311010"
+				hybrid="1"
+				label="H3" />
+			<atom id="atom.4"
+				element="H" 
+				xyz="   0.000000000   0.000000000  -0.096000000"
+				hybrid="1"
+				label="H1" />
+			<atom id="atom.5"
+				element="C" 
+				xyz="   1.443451609   0.000000000   1.510302314"
+				hybrid="4"
+				label="C2" />
+			<atom id="atom.6"
+				element="H" 
+				xyz="   1.443451485   0.000000215   2.606302314"
+				hybrid="1"
+				label="H6" />
+			<atom id="atom.7"
+				element="H" 
+				xyz="   1.960083444  -0.894886980   1.144946541"
+				hybrid="1"
+				label="H5" />
+			<atom id="atom.8"
+				element="O" 
+				xyz="   2.108096632   1.151268926   1.040273747"
+				hybrid="4"
+				label="O1" />
+			<atom id="atom.9"
+				element="H" 
+				xyz="   2.070703642   1.086596242   0.085190919"
+				hybrid="1"
+				label="H2" />
+		</atoms>
+		<bonds>
+			<bond id="bond.1"
+				a="atom.1" b="atom.5"
+				order="single"
+				label="Bond8" />
+			<bond id="bond.2"
+				a="atom.5" b="atom.8"
+				order="single"
+				label="Bond5" />
+			<bond id="bond.3"
+				a="atom.1" b="atom.2"
+				order="single"
+				label="Bond9" />
+			<bond id="bond.4"
+				a="atom.1" b="atom.3"
+				order="single"
+				label="Bond3" />
+			<bond id="bond.5"
+				a="atom.5" b="atom.6"
+				order="single"
+				label="Bond2" />
+			<bond id="bond.6"
+				a="atom.8" b="atom.9"
+				order="single"
+				label="Bond7" />
+			<bond id="bond.7"
+				a="atom.5" b="atom.7"
+				order="single"
+				label="Bond4" />
+			<bond id="bond.8"
+				a="atom.1" b="atom.4"
+				order="single"
+				label="Bond6" />
+		</bonds>
+		<groups>
+			<group label="group.1">
+				<molecule label="mol.1">
+					<member entity="atom.1" />
+					<member entity="atom.2" />
+					<member entity="atom.3" />
+					<member entity="atom.4" />
+					<member entity="atom.5" />
+					<member entity="atom.6" />
+					<member entity="atom.7" />
+					<member entity="atom.8" />
+					<member entity="atom.9" />
+				</molecule>
+			</group>
+		</groups>
+		<model style="ballspoke" />
+		<view rotation="
+			 0.912414075  0.243655502  0.328835146
+			-0.405662941  0.432001389  0.805488906
+			 0.054204564 -0.868335647  0.493006155" />
+	</structure>
+	<analysis>
+		<setup>
+VAC
+		</setup>
+	</analysis>
+</odyssey_simulation>

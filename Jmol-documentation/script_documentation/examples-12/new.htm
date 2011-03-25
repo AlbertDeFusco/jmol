@@ -1,0 +1,319 @@
+<html>
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script type="text/javascript" src="Jmol.js"></script>
+<script type="text/javascript" src="new.js"></script>
+<script type="text/javascript">
+
+function callback(a, b, c, d, e, f, g, h, i, j){
+alert("a = " + a + " b = " + b + " c = " + c + " d = " + d + " e =" + e + " f = " + f + " g = " + g + " h = " + h + " i = " + i + " j = " + j)
+}
+animcallback=""
+loadstructcallback=""//"callback"
+
+delayms = 100; delayms0 = 1000
+polling = false;
+
+
+testflag = false
+
+//logLevel=0  // 4 is standard ;1 gives fatal errors only; 2 gives all errors;
+              // 3 gives errors and warnings; 4 gives errors, warnings and information; 5 adds debug.
+
+//<![CDATA[
+
+title="ATOMS";
+
+model='load caffeine.xyz'
+
+//'x = "caffeine.xyz|1crn.pdb|1d66.pdb";load @{x.split(\'|\')[prompt(\'Which file would you like to load?\',x,true)]}'//;set minimizationSteps 25;load ketone.jme'
+//load 1crn.pdb;color straightness;cartoons only;draw helix axis;'
+
+ if(TopicScripts[thistopic])
+   loadscript = TopicScripts[thistopic]
+
+docsearch = document.location.search.substring(1)
+if(docsearch.indexOf("model=")>=0)model=unescape(docsearch.split("model=")[1].split("&")[0])
+
+header = 'This page lists all new features in Jmol 12.1 (which, when released, will be 12.2). Features new to Jmol 12.0 (with links there to previous versions) are described in <a href=../examples-11/new.htm>../examples-11/new.htm</a> Documentation for all commands can be found in the <a href=../index.htm?ver=12.2>Interactive Documentation for Jmol 12.2</a>. For the complete change log development summary, see <a href=http://jmol.svn.sourceforge.net/viewvc/jmol/trunk/Jmol/src/org/jmol/viewer/Jmol.properties?view=markup>Jmol.properties</a>. Comments? Suggestions? <a href=mailto:hansonr@stolaf.edu>Bob Hanson</a>'
+
+
+latestVersion = '### Be sure you have the <a href=http://jmol.sourceforge.net/files>Latest version</a>. Very latest may appear as <a href=http://chemapps.stolaf.edu/jmol/docs/examples-12/Jmol-12.zip>Jmol-12.zip</a> prior to release at SourceForge. <br /><br /><a href=../index.htm?ver=12.0>documentation</a>&nbsp;&nbsp;&nbsp;<a href=http://jmol.svn.sourceforge.net/viewvc/jmol/trunk/Jmol-datafiles/>sample model files</a>&nbsp;&nbsp;&nbsp; <a href=https://sourceforge.net/tracker/?func=add&group_id=23629&atid=379136>feature request</a>&nbsp;&nbsp;&nbsp; <a href=https://sourceforge.net/tracker/?func=add&group_id=23629&atid=379133>bug report</a> ###'
+
+function myClickCallback(app, x, y, modifiers, clickCount, Modifiers) {
+	document.title = [app, "x=" + x, "y=" + y, "modifiers=" + modifiers, "clickCount=" +clickCount]
+}
+
+x0 = 0
+y0 = 0
+pageTitle = ""
+
+
+Scripts=new Array(" ",header,latestVersion
+,'### new color() function  and getProperty shapeInfo.isosurface[n].colorKey ###'
+,'# Jmol 12.1.5 adds the capability to check and work with color schemes, including standard Jmol color schemes such as "roygb" or "Jmol", custom color schemes such as "myScheme", the propertyColorScheme value, or -- especially -- the color scheme associated with an isosurface. The capability should make it easy to write a visual color key for any isosurface. The function has several forms that allow getting all the details or getting a specific color associated with a value. In addition, getProperty shapeInfo is expanded to include the color key for each mapped isosurface. This could be of interest for building JavaScript widgets that graphically display an isosurface color key next to or within the applet.'
+,'load 1crn.pdb;color property temperature'
+,'prompt color("roygb").keys'
+,'prompt color("")["colors"]'
+,'prompt color("")["values"]'
+,'prompt color("rwb",0.0,10.0,5.0) # the color for the value 5 in the range 0 to 10'
+,'prompt color("rwb",5) # the fifth color'
+,'load 1crn.pdb;isosurface ID "iso1" vdw map property temperature'
+,'prompt getProperty("shapeInfo.isosurface[1].colorkey")'
+,'prompt "isosurface min/max: " + color("$iso1")["min"] + " " + color("$iso1")["max"]'
+,'prompt "isosurface color for temperature 10.0: " + color("$iso1", 10.0)'
+
+
+
+,'### isosurface display within 2.0 {...} ###'
+,'# Jmol 12.1.4 adds a new option for isosurface that allows you to select parts of the isosurface for viewing AFTER isosurface creation. <b>isosurface display all</b> redisplays all points. The setting does NOT apply to contour lines.'
+,'load 1crn.pdb;isosurface sasurface 0'
+,'isosurface display within 2.0 {aromatic}'
+,'isosurface display within 2.0 {helix}'
+,'isosurface display all'
+
+,'### {*}.find("SMILES", SMILESstring) ###'
+,'# Just a note: In this context we are checking a 3D model to see if it matches the designated SMILES string. The match will be good as long as the SMILES string matches the structure in all respects, including connections and stereochemistry. You can check only connections by prepending "/nostereo/" on to the beginning of the SMILES string.'
+ 
+,'### compare(a,b,"ISOMER") ###'
+,'# Jmol 12.1.3 adds the capability to check both 3D models and SMILES strings for isomeric relationships -- that is, for configurational isomers, enantiomers, diastereomers, identical compounds, or conformational isomers. Conformational testing depends upon a standard deviation match and so is not available with SMILES matching. Order in the comparison is important. When comparing two SMILES strings, always show the DESIRED stereochemistry as the second parameter if you are specifically checking to see if someone has created a structure with exactly that stereochemistry. However, note that Jmol over-expresses chirality centers in some cases -- for example, although the isopropyl group, -CH(CH3)2, will get translated to -C(C)C without stereochemistry indicated, the group -CH(CH2CH3)2 will be translated to -[C@H](CC)CC despite the fact that it is not a "real" stereocenter. THIS IS INTENTIONAL. The SMILES schema is designed to be local. The algorithm should not have to follow two paths to see if somewhere along those paths the groups are different. In addition, while it is possible with drawn 2D structures to ignore stereochemistry, it is not generally possible to do the same when constructing a SMILES string from a 3D structure. Thus, the model atoms (or, less optimally) Jmol SMILES string) should always be the first parameter, not the second, if you are just answering the question, "Does this Jmol structure agree with this SMILES string.'
+,'load files "isomer3.mol" "isomer4.mol";translate {5 0 0} {2.1};center *;frame *;'
+,'prompt compare({1.1}, {2.1}, "ISOMER")'
+,'set picking invertStereo;prompt "Now pick stereocenters and check again."'
+,'load files "isomer3.mol" "isomer5.mol";translate {5 0 0} {2.1};center *;frame *;'
+,'prompt compare({1.1}, {2.1}, "ISOMER")'
+,'load files "isomer3.mol" "isomer6.mol";translate {8 0 0} {2.1};center *;frame *;'
+,'prompt compare({1.1}, {2.1}, "ISOMER")'
+
+,'load isomer1.mol'
+,'prompt compare(all,"C[C@@H](F)I", "ISOMER")'
+,'prompt compare(all,"C[C@H](F)I", "ISOMER")'
+,'prompt compare(all,"C[C@H](I)F", "ISOMER")'
+,'prompt compare("C[C@@H](I)F","C[C@H](I)F", "ISOMER")'
+,'prompt compare("C[C@@H](I)F","C[C@H](F)I", "ISOMER")'
+,'prompt compare("C[C@@H](I)F","CC(F)I", "ISOMER") # CC(F)I does not indicate stereochemistry, so this comparison works.'
+,'prompt compare("CC(I)F","C[C@H](F)I", "ISOMER") # C[C@H](F)I has stereochemistry indicated, so this one does not work'
+
+,'load "cholesterol.mol"'
+,'prompt compare({1.1}, "C1[C@@](C)2[C@@H]3[C@@H]4[C@H]5[C@](C)6[C@H]7[C@H](C)CCCC(C)C.C6C3.C4C=C2C[C@@H](O)C1.C5C7", "ISOMER") # structure vs. Jmol SMILES'
+,'prompt compare({1.1}, "O[C@@H]4C/C3=C/C[C@@H]1[C@H](CC[C@]2([C@H]1CC[C@@H]2[C@H](C)CCCC(C)C)C)[C@@]3(C)CC4", "ISOMER") # structure vs. ChemSpider'
+,'prompt compare("C1[C@@](C)2[C@@H]3[C@@H]4[C@H]5[C@](C)6[C@H]7[C@H](C)CCCC(C)C.C6C3.C4C=C2C[C@@H](O)C1.C5C7", "O[C@@H]4C/C3=C/C[C@@H]1[C@H](CC[C@]2([C@H]1CC[C@@H]2[C@H](C)CCCC(C)C)C)[C@@]3(C)CC4", "ISOMER") # Compare(Jmol, ChemSpider)'
+,'prompt compare("O[C@@H]4C/C3=C/C[C@@H]1[C@H](CC[C@]2([C@H]1CC[C@@H]2[C@H](C)CCCC(C)C)C)[C@@]3(C)CC4", "C1[C@@](C)2[C@@H]3[C@@H]4[C@H]5[C@](C)6[C@H]7[C@H](C)CCCC(C)C.C6C3.C4C=C2C[C@@H](O)C1.C5C7", "ISOMER") # Compare(ChemSpider, Jmol) -- but in some cases this will not work, because Jmol may over-express chirality centers, or the ChemSpider SMILES may be ambiguous in terms of stereochemistry.'
+
+  
+,'### load ... unitcell [ax, ay, az, bx, by, bz, cx, cy, cz] ###'
+,'# Jmol allows setting the unit cell with the LOAD command using values for a, b, c, alpha, beta, and gamma. Jmol 12.1.3 adds to this capability by letting you specify the unit cell vectors directly. The format is rather loose -- the values themselves can be expressed as integers, decimals, points, using brackets or braces, and with or without commas. Array format brackets are recommended. If the b vector is {0 0 0}, then polymer (1D) periodicity is implied; otherwise, if the c vector is {0 0 0}, then slab (2D) periodicity is implied. Note that slab and polymer periodicity can also be indicated using the older notation as well using 0 for b and/or c'
+,'load caffeine.xyz {1 1 1} spacegroup "P-1" unitcell [10 10 10 90 90 90];unitcell # Jmol 12.0 way'
+,'load caffeine.xyz {1 1 1} spacegroup "P-1" unitcell [{8 0 0},{0 8 0},{0 0 8}];unitcell # new way'
+,'load caffeine.xyz {1 1 1} spacegroup "P-1" unitcell [10 0 0 90 90 90];unitcell # Jmol 12.0 way, polymer'
+,'load caffeine.xyz {1 1 1} spacegroup "P-1" unitcell [{8 0 0},{0 0 0},{0 0 0}];unitcell # polymer, new way'
+,'load caffeine.xyz {1 1 1} spacegroup "P-1" unitcell [10 10 0 90 90 90];unitcell # Jmol 12.0 way, slab'
+,'load caffeine.xyz {1 1 1} spacegroup "P-1" unitcell [{8 0 0},{0 8 0},{0 0 0}];unitcell # slab, new way'
+
+,' See textarea below for results:<br> <a href=javascript:dotest(-1)>[appletInfo]</a>'
+ +' <a href=javascript:dotest(-2)>[animationInfo]</a>'
+ +' <a href=javascript:dotest(0)>[fileName]</a>'
+ +' <a href=javascript:dotest(1)>[fileHeader]</a>'
+ +' <a href=javascript:dotest(2)>[fileContents]</a>'
+ +'<br><a href=javascript:dotest(8.1)>[atomList]</a>'
+ +' <a href=javascript:dotest(8)>[atomInfo]</a>'
+ +' <a href=javascript:dotest(7)>[bondInfo]</a>'
+ +' <a href=javascript:dotest(7.5)>[moleculeInfo]</a>'
+ +" <a href=javascript:dotest(10)>[extractModel]</a>"
+ +'<br><a href=javascript:dotest(3)>[orientationInfo]</a>'
+ +' <a href=javascript:dotest(3.1)>[auxiliaryInfo]</a>'
+ +' <a href=javascript:dotest(3.2)>[transformInfo]</a>'
+	 +' <a href=javascript:dotest(3.3)>[centerInfo]</a>'
+ +' <a href=javascript:dotest(3.4)>[boundboxInfo]</a>'
+ +"<br><a href=javascript:dotest(4)>[modelInfo]</a>"
+ +" <a href=javascript:dotest(4.2)>[polymerInfo]</a>"
+ +" <a href=javascript:dotest(4.3)>[chainInfo]</a>"
+ +" <a href=javascript:dotest(4.4)>[shapeInfo]</a>"
+ +" <a href=javascript:dotest(4.5)>[stateInfo]</a>"
+ +" <a href=javascript:dotest(9)>[reload THIS orientation]</a>"
+ +"<br><br>"
+
+
+//," JSON data returned:<br><textarea name=outputJSON id=outputJSON rows=5 cols=50></textarea>"
+," <input  type=checkbox name=idecode id=idecode checked=1>Decoded: <a href=javascript:showoutput()>new window</a><br><textarea name=output id=output rows=5 cols=50 wrap=off></textarea>"
+)
+remarks=""
+//]]>
+
+
+function getCallbackOptions(){
+ var s=""
+ for(var i=0;i<Callbacks.length;i++)if(document.getElementById(Callbacks[i]).checked)s+=Callbacks[i]
+ var waspolling = polling
+ polling = (s!="")
+ if(polling && !waspolling)pollApplet()
+ return "monitoring:"+s
+}
+
+function pollApplet(){
+   whatm=getCallbackOptions()
+   if(!polling){
+	document.title = ""
+	return
+   }
+   document.title = (new Date())
+   var A=jmolGetStatus(whatm)
+   parseMessages(A)
+   if(polling)setTimeout("pollApplet()",delayms)
+}
+
+function setOptions(all_or_none){
+ for(var i=0;i<Callbacks.length;i++)document.getElementById(Callbacks[i]).checked = all_or_none
+ polling = (all_or_none == 1) 
+}
+
+
+
+function fire(i0,n){
+ for(var i=0; i < n; i++) {
+   //alert(Scripts[i0+i]);
+   jmolScript(Scripts[i0+i]);
+ }
+}
+
+
+what="visible"
+whatp="centerInfo"
+whatm=""
+
+function xshowoutput(s){ if(!s) s=document.getElementById("output").value; dowritenew("<pre>"+s+"</pre>") };function oldshowoutput(){
+ dowritenew("<pre>"+document.getElementById("output").value+"</pre>")
+}
+
+function dotest(iwhat){
+ if(iwhat!=3)monitoron=false
+ var s=""
+ var sJSON=""
+ var info=""
+ var sinfo=""
+ var sparam=""
+ var str=""
+ if(iwhat==-1){
+   sinfo="appletInfo"
+ }else if(iwhat==-2){
+   sinfo="animationInfo"
+ }else if(iwhat==0){
+   str="fileName"
+ }else if(iwhat==1){
+   str="fileHeader"
+   info = jmolGetPropertyAsString(sinfo)
+ }else if(iwhat==2){
+   str="fileContents"
+ }else if(iwhat==3){
+   sinfo="orientationInfo"
+ }else if(iwhat==3.1){
+   sinfo="auxiliaryInfo"
+ }else if(iwhat==3.2){
+   sinfo="transformInfo"
+ }else if(iwhat==3.3){
+   sinfo="centerInfo"
+ }else if(iwhat==3.4){
+   sinfo="boundboxInfo"
+ }else if(iwhat==3.5){
+   sinfo="zoomInfo"
+ }else if(iwhat==4){
+   sinfo="modelInfo"
+ }else if(iwhat==4.2){
+   sparam="PROMPT"
+   sinfo="polymerInfo"
+ }else if(iwhat==4.3){
+   sparam="PROMPT"
+   sinfo="chainInfo"
+ }else if(iwhat==4.4){
+   sinfo="shapeInfo"
+ }else if(iwhat==4.5){
+   str="stateInfo"
+ }else if(iwhat==7){
+   sparam="PROMPT"
+   sinfo="bondInfo"
+ }else if(iwhat==7.5){
+   sparam="PROMPT"
+   sinfo="moleculeInfo"
+ }else if(iwhat==8){
+   sparam="PROMPT"
+   sinfo="atomInfo"
+ }else if(iwhat==8.1){
+   sparam="PROMPT"
+   sinfo="atomList"
+ }else if(iwhat==9){
+   info = jmolGetPropertyAsArray("orientationInfo")
+   s="load "+jmolGetPropertyAsString("fileName")+";"+info.moveTo
+   document.getElementById("cmd").value=s
+   jmolScript(s)
+ }else if(iwhat==10){
+   s=prompt("enter an atom expression",what)
+   if(!s)return
+   what=s
+   s = jmolGetPropertyAsString("extractModel",what)
+   var A=jmolGetPropertyAsArray("orientationInfo")
+   showoutput(s);   jmolLoadInlineScript(s,A.moveTo)
+ }
+ var cmd=""
+ if(str!=""){
+   cmd = "jmolGetPropertyAsString(\"" + str + "\")"
+   s=jmolGetPropertyAsString(str)
+ }else if(sinfo!=""){
+   if(sparam == "PROMPT"){
+     s=prompt("enter an atom expression",what)
+     if(!s)return
+     what=s
+     sparam=what
+   }
+   if(document.getElementById("idecode").checked){
+   cmd = "jmolGetPropertyAsArray(\"" + sinfo + "\",\"" + sparam + "\")"
+	s=jmolGetPropertyAsArray(sinfo,sparam)
+	s=_jmolEnumerateObject(s,sinfo)
+   }else{
+   cmd = "jmolGetPropertyAsJSON(\"" + sinfo + "\",\"" + sparam + "\")"
+	s=jmolGetPropertyAsJSON(sinfo,sparam)
+   }
+ }
+ if(s!="")document.getElementById("output").value=cmd + "\n\n" + s
+}
+
+function parseMessages(A){
+ if(!A)return
+ var s=""
+ for(var i=A.length-1;i>=0;i--){
+	s=A[i][3]+"\n"+s
+	showmsg("msg",A[i])
+ }
+ document.getElementById("output").value=s
+}
+
+monitoron=0
+function domonitor(isiter){
+  if(!isiter)monitoron=!monitoron
+  if(!monitoron)return
+  dotest(3)
+  setTimeout("domonitor(1)",delayms)  
+}
+
+
+function showInfo(id, x) {
+ var s = ""
+ var a = document.getElementById(id)
+if (x)
+ for (i in a[x]) {s += i + "\t" + a[x][i] + "\n"}
+else
+ for (i in a) {s += i + "\t" + a[i] + "\n"}
+
+ var s="<pre>"+s.replace(/\</g,"&lt;")+"</pre>"
+ dowritenew(s)
+}
+</script>
+</head>
+<body onload="checkScroll()">
+<script type="text/javascript">
+showpage(0)
+document.write(jmolButton("background red"))
+</script>
+</body>
+</html>

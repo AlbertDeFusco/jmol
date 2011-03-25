@@ -1,0 +1,28 @@
+# a simple loop to create a set of Jvxl files for a set of models
+
+define included not nucleic;  //particular to this model
+
+n = 1
+lastmodel = {*}[{*}].model
+
+message _start
+
+  frame @n
+
+  select model=@n and included
+
+  isosurface ignore (not selected) sasurface translucent yellow
+  f = "iso"+n+".jvxl"
+  write isosurface @f
+
+  select model=@n;
+
+  isosurface ignore (not selected) cavity translucent 0.4 blue;
+  f = "iso"+n+"b.jvxl"
+  write isosurface @f
+
+  n = n + 1
+  if (n <= lastModel);goto _start;endif;
+
+
+

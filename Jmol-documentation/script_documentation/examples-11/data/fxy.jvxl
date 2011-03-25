@@ -1,0 +1,21 @@
+#JVXL VERSION 1.4
+functionXY
+curveAsStringXY
+-2 -5.0 -5.0 -5.0 ANGSTROMS
+11 1.0 0.0 0.0
+11 0.0 1.0 0.0
+11 0.0 0.0 1.0
+1 1.0 -5.0 -5.0 -5.0 //BOGUS H ATOM ADDED FOR JVXL FORMAT
+2 2.0 5.0 5.0 5.0 //BOGUS He ATOM ADDED FOR JVXL FORMAT
+-1 35 90 35 90 Jmol voxel format version 1.4
+# 
+1.4E-45 91 165 -1 0.0 0.0 0.0 0.0 rendering:isosurface isosurface1 fill noMesh noDots notFrontOnly frontlit
+ 0 285 1 9 2 8 3 9 2 10 1 65 1 8 3 7 4 7 4 7 4 8 3 10 1 53 2 7 4 6 5 6 5 6 5 7 4 9 2 52 3 7 4 6 5 5 6 6 5 7 4 8 3 53 2 7 4 6 5 6 5 6 5 7 4 9 2 54 1 8 3 7 4 7 4 7 4 8 3 10 1 65 1 9 2 8 3 9 2 10 1 275
+G^c^<<_/I###<<|_A^cY<^Yjj44@kA5AG_k5Aj4_@5^Ykcc<^_k5A~4 __AAA_A^4_j<cpI###G___###|_A_#Y#/V|c<_|k5AAA_|A_A4_|j<c<^Aj4@_AA__AA__@_5^AkcGG^5k^_4j##Y|_4jA^5kYG<ccpV|cc<
+#-------end of jvxl file data-------
+# cutoff = 1.4E-45; pointsPerAngstrom = 1.0; nSurfaceInts = 91; nBytesData = 364
+# created using Jvxl.java
+# precision: false nColorData -1
+# isosurface functionXY "curveAsStringXY" {-5 -5 -5} {-11 1 0 0} {11 0 1 0} {11 0 0 1}; ;
+# isosurface isosurface1 fill noMesh noDots notFrontOnly frontlit
+# bytes read: 0; approximate voxel-only input/output byte ratio: 47:1

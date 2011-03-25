@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+  Translated from default version : index_en.xml
+-->
+<document>
+	<body>
+		<title>Descarga de Jmol</title>
+		<section title="Descarga de Jmol">
+			<p>La versión oficial más reciente es la versión $VERSION$.</p>
+			<p>Se puede descargar desde SourceForge usando este enlace:
+			<a href="http://sourceforge.net/project/showfiles.php?group_id=23629">página de descargas de Jmol</a>.
+      <br/>(Busca bajo el título <tt>Jmol</tt> el enlace que termina en <tt>binary.zip</tt> o <tt>binary.tar.gz</tt>, 
+	dependiendo del formato que puedas descomprimir en tu ordenador.)
+      </p>
+			<p>
+      Ocasionalmente están disponibles en el mismo lugar algunas versiones preliminares (con número impar como 11.1, 11.3, 11.5).
+	Éstas no se han probado exhaustivamente, por lo que pueden tener fallos aún no resueltos.
+      <br/>(Busca bajo el título <tt>Jmol Prerelease Tests</tt> el enlace que termina en <tt>binary.zip</tt> o <tt>binary.tar.gz</tt>, 
+	dependiendo del formato que puedas descomprimir en tu ordenador.)
+      </p>
+		</section>
+		<section title="Requisitos">
+			<p>
+	La miniaplicación (<i>applet</i>) para el navegador web Jmol puede funcionar en la mayoría de 
+	máquinas virtuales Java de los navegadores, incluidas las implementaciones
+	JVM 1.1 de Microsoft y de Netscape 4.7*. 
+	Si usas Microsoft Internet Explorer en el sistema operativo Windows,
+	deberías actualizar a la máquina virtual Java de Sun (lee los detalles a continuación).
+			</p>
+			<p>
+	La aplicación o programa autónomo Jmol requiere Java 1.4 o superior.
+		      </p>
+			<p>En todos los casos, si es posible se recomienda instalar la última versión
+	de Java disponible en Sun. Puedes instalarla visitando
+	<a href="http://www.java.com/">www.java.com</a> y siguiendo las instrucciones que hay allí.
+			</p>
+		</section>
+		<section title="Instalación y uso de Jmol">
+			<p>Jmol no se instala realmente como otros programas, pero he aquí unas instrucciones 
+	para poderlo usar:
+			</p>
+			<ul>
+				<li>Para usar la aplicación Jmol (programa autónomo que se ejecuta en tu ordenador):
+				<ol>
+						<li>Sólo necesitas extraer el archivo <tt>Jmol.jar</tt> del paquete descargado.
+	Ponlo en la carpeta que prefieras (por ejemplo, en <tt>c:\Archivos de programa\Jmol\</tt>, o incluso en <tt>Mis documentos</tt>; 
+	la ubicación no es importante).
+					</li>
+						<li>Haz doble clic en el icono (o archivo) <tt>Jmol.jar</tt> y se ejecutará. Entonces, usa el menú
+	de la parte superior para abrir archivos de modelos moleculares. 
+					</li>
+						<li>Puedes consultar más detalles en 
+		<a href="http://wiki.jmol.org:81/index.php/Jmol_Application#Installing_Jmol_Application">esta página en la Wiki de Jmol</a>
+	(en inglés).
+					</li>
+					</ol><br/>
+				</li>
+				<li>Para usar la miniaplicación Jmol (que sólo se ejecuta dentro de un navegador de web):
+				<ol>
+						<li>Como usuario, no necesitas instalar ni descargar Jmol para poder ver páginas web que usan la 
+	miniaplicación Jmol. Los archivos necesarios se descargarán a tu ordenador de forma automática al tiempo que se descarga y se 
+	muestra la página web. No se instalará nada en tu ordenador y no hay riesgos de seguridad.
+					</li>
+						<li>Como autor de páginas web, necesitas extraer del paquete descargado y poner en la carpeta de
+	tu página web estos archivos:
+		<tt>Jmol.js</tt> y todos los archivos cuyo nombre empieza por <tt>JmolApplet0</tt> y termina en <tt>.jar</tt>. 
+					</li>
+						<li>Puedes consultar más detalles en 
+		<a href="http://wiki.jmol.org:81/index.php/Jmol_Applet#Installing_Jmol_Applet">esta página en la Wiki de Jmol</a>
+	(en inglés).
+					</li>
+					</ol>
+				</li>
+			</ul>
+		</section>
+		<section title="Acceso por Subversion">
+			<p>(Sólo para programadores)
+			</p>
+			<p>
+        Puedes echar un vistazo al último código fuente o extraer anónimamente
+        el proyecto desde el repositorio
+	<a href="http://subversion.tigris.org/">Subversion</a> (SVN).
+      </p>
+			<p>
+				<a href="http://jmol.svn.sourceforge.net/viewvc/jmol/trunk/Jmol">
+	  Ojear el repositorio SVN
+	</a>
+			</p>
+			<p>
+        Para extraer anónimamente el código fuente utiliza las instrucciones siguientes:
+      </p>
+			<p>
+				<tt>
+	  svn co https://jmol.svn.sourceforge.net/svnroot/jmol/trunk/Jmol
+	</tt>
+			</p>
+			<p>
+	De ese modo se extraerá al subdirectorio (carpeta) <code>Jmol</code>
+	en tu equipo.
+      </p>
+			<p>
+	Puedes actualizar el código fuente desde tu <i>caja de arena</i> Jmol
+	escribiendo:
+	<tt>
+	  svn update
+	</tt>
+			</p>
+		</section>
+	</body>
+</document>

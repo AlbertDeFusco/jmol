@@ -1,0 +1,88 @@
+
+<html>
+<head>
+<script language="javascript" src="Jmol.js"></script>
+<script language="javascript" src="spacegroups.js"></script>
+
+</head>
+<body>
+<table><tr><td valign=top>
+<script language="javascript">
+
+
+ function getSelect() {
+	var s="<select id=sgs onchange=loadSelectedSpaceGroup() onkeyup=\"setTimeout('loadSelectedSpaceGroup()',100)\">"
+	for(i=0;i<SpaceGroups.length;i++)
+		s+="<option value=\""+SpaceGroups[i]+"\">"+SpaceGroups[i].replace(/ /g," -- ").replace(/\_/g," ")+"</option>"
+	s+="</select>"
+	document.write(s)
+ }
+
+ function loadSelectedSpaceGroup() {
+	var d=document.getElementById("sgs")
+	var s=d.options[d.selectedIndex].value
+	var sg=s.split(" ")[3].replace(/\_/g," ").replace(/\"/g,"''")
+	setSpaceGroupText(sg)
+ }
+
+ function domsg(x,msg) {
+	var a = "" + msg
+	if(a.indexOf("completed")>=0)return
+	if(a.indexOf("started")>=0)return
+	document.getElementById("txtmodel").value = a
+	var s = "<a href=javascript:showFileContents()>show file contents</a>"
+	document.getElementById("info").innerHTML = s    
+ }
+
+
+ function setSpaceGroupText(s){
+	if (!s)s=document.getElementById("hm").value
+	s=s.substring(0,2).toUpperCase()+s.substring(2)
+	document.getElementById("hm").value=s
+	jmolSaveOrientation(1);
+	var a=jmolScriptWait('load "" {1 1 1} spacegroup "'+s+'";show spacegroup "'+s+'"')
+	jmolRestoreOrientationDelayed(1,0);
+ }
+
+ function showFileContents(){
+	var data = jmolGetPropertyAsString("filecontents")
+	var s = "<a href=javascript:loadModel(0)>load model (use spacegroup operators)</a>"
+	+ " <a href=javascript:loadModel(1)>load model (use spacegroup name)</a>"
+	+"<br/><a href=javascript:showSpaceGroup()>show space group</a>"
+	document.getElementById("txtmodel").value = data
+	document.getElementById("info").innerHTML = s
+ }
+
+ function showSpaceGroup(){
+	jmolScriptWait("show spacegroup")
+ }
+
+ function loadModel(useNameOnly){
+	var data = document.getElementById("txtmodel").value.replace("\n","|")
+	if (useNameOnly)
+		jmolLoadInlineScript(data,"load \"\" {-1 -1 -1}; show spacegroup")
+	else
+		jmolLoadInlineScript(data,"load \"\" {1 1 1}; show spacegroup")
+	
+ }
+
+ function picking(a,b,c) {
+  alert(a + " "+ b +" " + c)
+ }
+ 
+ jmolSetCallback("pickCallback", "picking")
+ jmolApplet(400,"set messagecallback \"domsg\" ;load \"data/quartz.cif\" {1 1 1};show spacegroup")
+ getSelect()
+</script>
+
+<p>
+<form action=javascript:setSpaceGroupText()>
+H-M or Hall symbol:<br/><input id=hm type=text value="P 32 2'' (0 0 4)" size=40><input type=button value=display onclick=void(setSpaceGroupText())>
+</form>
+</td><td valign=top>
+<textarea id=txtmodel rows=30 cols=60 wrap=physical></textarea>
+<br/><span id=info></span>
+</span>
+</td></tr></table>
+</body>
+</html>

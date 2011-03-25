@@ -1,0 +1,18 @@
+background pink
+delay
+select atomno==1
+delay
+select 2,4,6,8,10
+delay
+zoom 125
+delay
+zoom 50
+delay
+move 0 0 0 200 0 0 0 0 3
+delay
+move 0 0 0 50 0 0 0 0 3
+delay
+background white
+reset
+
+

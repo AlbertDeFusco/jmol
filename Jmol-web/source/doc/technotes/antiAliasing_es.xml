@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+  Translated from default version : antiAliasing_en.xml (v 1.1)
+-->
+<section title="¿Qué ocurre con el suavizado?">
+  <p>
+    <i>El suavizado de bordes </i>(anti-aliasing)<i> está desactivado en Jmol. La mayoría del
+    mecanismo ya está ahí, pero por ahora está desactivado. 
+    Esto se debe a problemas de rendimiento en el hardware antiguo.
+    Planeamos completar su implementación y reactivarlo en una futura versión
+    ... cuando tegamos más tiempo para averiguar cómo manejarlo
+    en equipos antiguos.</i>
+  </p>
+
+  <p>
+    El motor gráfico 3D de Jmol se ha implementado completamente mediante software.
+    No puede usar las llamadas internas de gráficos Sun 2D debido a que no ofrecen 
+    la funcionalidad zBuffer para decidir píxel a píxel si se debe dibujar cada píxel.
+  </p>
+
+  <p>
+    La técnica de suavizado de bordes usada en el motor gráfico de Jmol se denomina
+    suavizado de escena completa (<i>full-scene-anti-aliasing</i>). Se representa la escena 
+    completa en una memoria intermedia que es dos veces más ancha y dos veces más alta.
+    Luego se convierten 4 píxeles en uno, mezclando adecuadamente los valores RBG.
+  </p>
+
+  <p>
+    El resultado final es que requiere más memoria mantener el zBuffer y el
+    pixelBuffer, y muchos más ciclos CPU para representar una escena. 
+    La parte de dibujo lleva 4 veces más tiempo. En conjunto, se necesita probablemente 
+    3 veces más tiempo para representar una escena.
+  </p>
+
+  <p>
+    En los ordenadores más recientes, con más que suficiente potencia de cálculo, probablemente esto 
+    no sea un problema, pero en equipos antiguos sería inaceptable.   
+    Por ello, necesitamos habilitar unas opciones.
+  </p>
+
+</section>

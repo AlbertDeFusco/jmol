@@ -1,0 +1,115 @@
+
+###########################################################################
+#
+#                 Cambridge Crystallographic Data Centre
+#                                CCDC 
+# 
+###########################################################################
+#
+#  This CIF contains data generated directly from an entry in the Cambridge 
+#  Structural Database and will include bibliographic, chemical, crystal, 
+#  experimental, refinement, and atomic coordinate data, as available.
+#     
+#  Copyright  2004  The Cambridge Crystallographic Data Centre
+# 
+#  This CIF is provided on the understanding that it is used for bona fide 
+#  research purposes only.  It may contain copyright material of the CCDC
+#  or of third parties, and may not be copied or further disseminated in 
+#  any form, whether machine-readable or not, except for the purpose of 
+#  generating routine backup copies on your local computer system.
+# 
+#  For further information about the CCDC, data deposition and data 
+#  retrieval see <www.ccdc.cam.ac.uk>. Bona fide researchers may freely 
+#  download  Mercury and enCIFer from this site to visualise CIF-encoded 
+#  structures and to carry out CIF format checking respectively.
+#
+###########################################################################
+
+data_CSD_CIF_RACZIF
+_audit_creation_date 2003-07-18
+_audit_creation_method CSD-ConQuest-V1
+_database_code_CSD RACZIF
+_database_code_depnum_ccdc_archive 'CCDC 214570'
+_chemical_formula_sum 'C7 H6 Ag1 Cl1 O3'
+_chemical_formula_moiety
+;
+C7 H6 Ag1 Cl1 O3
+;
+_journal_coeditor_code "IUCr WN6147"
+_journal_coden_Cambridge 1370
+_journal_volume 59
+_journal_year 2003
+_journal_page_first m263
+_journal_name_full 'Acta Crystallogr.,Sect.E:Struct.Rep.Online '
+loop_
+_publ_author_name
+"Hai-Liang Zhu"
+"A.Usman"
+"Hoong-Kun Fun"
+"Xian-Jiang Wang"
+_chemical_name_systematic
+;
+Aqua-(4-chlorobenzoato-O)-silver(i)
+;
+_cell_volume   1747.569
+_exptl_crystal_colour 'colorless'
+_exptl_crystal_density_diffrn 2.139
+_exptl_crystal_description 'block'
+_diffrn_ambient_temperature 293
+#These two values have been output from a single CSD field.
+_refine_ls_R_factor_gt 0.0548
+_refine_ls_wR_factor_gt 0.0548
+_symmetry_cell_setting monoclinic
+_symmetry_space_group_name_H-M 'C 2/c'
+_symmetry_Int_Tables_number 15
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 1/2+x,1/2+y,z
+3 x,-y,1/2+z
+4 1/2+x,1/2-y,1/2+z
+5 -x,-y,-z
+6 -1/2-x,-1/2-y,-z
+7 -x,y,-1/2-z
+8 -1/2-x,-1/2+y,-1/2-z
+_cell_length_a 35.978(5)
+_cell_length_b 4.0535(6)
+_cell_length_c 12.3204(19)
+_cell_angle_alpha 90
+_cell_angle_beta 103.439(3)
+_cell_angle_gamma 90
+_cell_formula_units_Z 8
+loop_
+_atom_type_symbol
+_atom_type_radius_bond
+C 0.68
+H 0.23
+Ag 1.35
+Cl 0.99
+O 0.68
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ag1 Ag 0.00834(1) 0.27127(15) 0.10458(4)
+Cl1 Cl 0.23476(6) -0.5091(5) 0.1096(2)
+O1 O 0.06162(13) 0.1284(14) 0.0772(4)
+O2 O 0.07161(16) -0.0847(14) 0.2451(4)
+O3 O -0.04703(15) 0.4190(15) 0.1140(4)
+H1 H -0.05910 0.21980 0.12420
+H2 H -0.04410 0.59830 0.17090
+C1 C 0.13266(18) -0.0794(17) 0.0503(5)
+H3 H 0.11700 0.03690 -0.00780
+C2 C 0.1682(2) -0.1888(17) 0.0399(6)
+H4 H 0.17660 -0.14400 -0.02460
+C3 C 0.19080(19) -0.3620(16) 0.1246(6)
+C4 C 0.1795(2) -0.4225(17) 0.2228(6)
+H5 H 0.19540 -0.53660 0.28090
+C5 C 0.14458(19) -0.3118(16) 0.2327(6)
+H6 H 0.13690 -0.35080 0.29850
+C6 C 0.12044(17) -0.1427(15) 0.1467(5)
+C7 C 0.08203(18) -0.0275(15) 0.1578(5)
+#END

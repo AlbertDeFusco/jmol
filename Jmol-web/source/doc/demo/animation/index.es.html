@@ -1,0 +1,104 @@
+<!--
+  Spanish translation 
+  Translated from default version : (...).en.html (v 1.1)
+-->
+<html>
+  <head>
+    <title>Demostración de animaciones con JmolApplet</title>
+    <script src="../../jmol/Jmol.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <form>
+      <table border="1">
+	<tr>
+	  <td>
+	    <h2>Animaciones en Jmol</h2>
+	    <script>
+	      var script="load cyclohexane_movie.xyz.gz; " +
+	      "anim mode palindrome; anim on";
+	      jmolApplet(300, script);
+	    </script>
+	  </td>
+
+	  <td>
+	    
+	    Una animación sencilla del ciclohexano en conformación de silla 
+	    en forma de archivo .xyz multifotograma<br />
+	    
+	    <script>
+	      jmolButton("load cyclohexane_movie.xyz.gz",
+	      "ciclohexano en silla");
+	    </script>
+	    <br />
+	    
+	    Una molécula animada de la base de datos Molecular Movement Database en Yale
+	    <a href="http://www.molmovdb.org">www.molmovdb.org</a>
+	    <br />
+	    <i>Aviso: se trata de un archivo .pdb multimodelo</i><br />
+	    
+	    <script>
+	      var script = "load movie.pdb.gz; cpk off; wireframe;" +
+	      "trace on; color trace honeydew";
+	      jmolButton(script, "macromolécula animada");
+	    </script>
+	    <br />
+	    <hr />
+	    
+	    <script>
+	      jmolLink("anim mode once; frame 1; delay 0.5; anim on", "Reproducir una vez");
+	    </script>
+	    <br />
+	    <script>
+	      jmolLink("anim mode palindrome 2 2 ; anim on",
+	      "Reproducir repetidamente, adelante y atrás, con un retardo de 2 segundos"
+	      );
+	    </script>
+	    <br />
+	    <script>
+	      jmolLink("anim off", "Detener la animación");
+	    </script>
+	    
+	    <br />
+	    <hr />
+	    
+	    Mostrar los fotogramas individuales<br />
+	    
+	    <script>
+	      jmolButton("frame 1","fotograma 1");
+	      jmolButton("frame next","siguiente");
+	      jmolButton("frame prev","anterior");
+	      jmolButton("frame all","todos");
+	    </script>
+	    <br />
+	    
+	    Puede ser útil combinar el giro con las animaciones<br />
+	    <script>
+	      jmolButton("spin on");
+	      jmolButton("spin off");
+	    </script>
+	    <br />
+	    <script>
+	      jmolButton("spacefill 20%");
+	      jmolButton("spacefill on");
+	      jmolButton("spacefill off");
+	    </script>
+	    <br />
+	    <script>
+	      jmolButton("wireframe 0.1");
+	      jmolButton("wireframe on");
+	      jmolButton("wireframe off");
+	    </script>
+	    <br />
+	    
+	  </td>
+	  
+	</tr>
+      </table>
+    </form>
+  </body>
+</html>

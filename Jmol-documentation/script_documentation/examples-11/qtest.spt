@@ -1,0 +1,139 @@
+# Bob Hanson 12:11 AM 5/25/2008
+
+zap
+#set loglevel 5
+set appendnew false
+set pdbSequential true
+set drawpicking true
+set perspectivedepth off
+
+data "mydata"
+ATOM      1  N   GLY A   0       0.000  1.5000  0.0000  1.00 22.43           N  
+ATOM      2  CA  GLY A   0       0.000  0.0000  0.0000  1.00 23.58           CA  
+ATOM      3  C   GLY A   0       1.500  0.0000  0.0000  1.00 25.04           C
+ATOM      4  O   GLY A   0       2.500  -.5000  0.0000  1.00 22.70           O  
+end "mydata"
+
+# set the random rotations:
+
+cant = "{" + random(-1,1) + " " + random(-1,1) + " " + random(-1,1) + "}"
+degCant = random(10,170);
+
+rot = "{" + random(-1,1) + " " + random(-1,1) + " " + random(-1,1) + "}"
+degRot = random(10,170)
+
+
+cant = cant/cant
+rot = rot/rot
+print "cant=" +cant + " " + degCant
+print "rot=" + rot + " " + degRot
+
+# loop through and build structure
+rscant = "rotateSelected internal " + degCant + " {0 0 0} " + cant
+for (var i = 0; i < 24; i = i + 1);
+ # translate and rotate what we have now
+
+ select *;
+ translateSelected {0 0 1}
+ rotateSelected internal {0 0 0} @rot @degRot
+
+ # save the current set
+
+ select *;
+ var a = {selected}
+
+ # add the new coordinates
+
+ sdata = data("mydata")
+ sdata = sdata.replace("  0   ",("  "+(i + 1))[-2][0] + "   ")
+ #print sdata
+ data "append @sdata"
+
+ # set at a canter only the new coordinates
+
+ select not @a
+ script inline @rscant
+
+ # iterate
+
+end for
+
+# save the structure and reload it to create the polymers
+
+select *
+write pdb "tqall.pdb"
+load "tqall.pdb"
+
+# set the view
+
+axes molecular; axes on
+wireframe 0.05
+center visible
+spacefill off
+
+# add the comment at the top
+
+set echo top left
+var e = "cant="+cant + "/" + degCant + "|rot = " + rot + "/" + degRot
+echo @e
+
+# make the quaternion and label by atominDex
+
+quaternion
+select visible
+label %D
+trace off
+
+# display axes
+
+#var y = cant * 10 * sin(degCant/2)
+#draw vCant VECTOR {0 0 0} @y ">cant" color yellow
+
+var y = rot * 10 * sin(degRot/2)
+draw vRot VECTOR {0 0 0} @y ">rot" color red
+print y
+
+# create the ellipse as a pancake ellipsoid
+
+var index1 = {2.1}[1].atomIndex
+var index2 = {2.1}[2].atomIndex
+
+var atom1 = {atomindex = index1}.xyz
+var atom2 = {atomindex = index2}.xyz
+
+perp = cross(atom1,atom2)
+perp = perp/perp * 10
+
+
+minor = cross(perp,rot)
+major = cross(perp,minor)
+major = major/major * 10
+rmdeg = angle(major,{0 0 0},rot)
+minor = minor/minor * 10 * sin(rmdeg)
+
+draw vPerp arrow {0 0 0} @perp ">perp"
+draw vMinor arrow {0 0 0} @minor ">minor"
+draw vMajor arrow {0 0 0} @major ">major"
+
+perp = perp/50
+ellipsoid myellipse axes @major @minor @perp
+
+# go to the model
+
+model
+axes molecular
+
+# draw the rotational vector
+
+var y = rot * 10
+draw axisRot VECTOR {0 0 0} @y ">rot" color red
+
+# Now create and run the script for the frame arrows
+
+write quaternion s "tq.spt"
+script "tq.spt"
+write jpg "qm.jpg"
+quaternion
+write jpg "qq.jpg"
+write state "qtest_last.spt"
+

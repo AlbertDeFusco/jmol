@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+  <!-- Exclude Jmol Fah code -->
+  <Match>
+    <Package name="~org\.jmol\.fah.*"/>
+    <Or>
+      <Bug pattern="DM_EXIT"/>
+      <Bug pattern="EI_EXPOSE_REP2"/>
+      <Bug pattern="NP_BOOLEAN_RETURN_NULL"/>
+    </Or>
+  </Match>
+</FindBugsFilter>

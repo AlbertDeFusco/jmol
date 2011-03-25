@@ -1,0 +1,29 @@
+<section title="Hardware requirements">
+  <section title="What are the minimum hardware requirements?">
+    <p>
+      400 MHz CPU + 128 MB RAM<br />
+      There is no absolute minimum. This is a practical minimum.
+      Performance is a function of
+      molecule size, window size, and image complexity.
+    </p>
+  </section>
+  
+  <section title="What are the recommended hardware requirements?">
+    <p>
+      750 MHz CPU + 256 MB RAM -- Of course, more is better. 
+    </p>
+  </section>
+
+  <section
+   title="Is OpenGL or 3D hardware required to run the JmolApplet?">
+    <p>
+      No special hardware is required to run the JmolApplet.
+    </p>
+    <p>
+      The graphics engine is a z-buffer implemented in Java,
+      and designed for rendering molecules. <i>(In fact, designed
+      just for Jmol.)</i>
+    </p>
+  </section>
+
+</section>

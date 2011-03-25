@@ -1,0 +1,60 @@
+# ~groups.txt  Jmol jmol.sourceforge.net script file
+# Bob Hanson hansonr@stolaf.edu 2:29 PM 04/13/2006
+# intended for files that have all H atoms explicit (not typical PDB files)
+# this script must be loaded AFTER each "load" command -- it does not persist.
+
+define ~methylC carbon and connected(4) and connected(3,hydrogen)
+define ~methylH hydrogen and connected(~methylC)
+define ~CH3 ~methylC or ~methylH
+
+define ~methyleneC carbon and connected(4) and connected(2,hydrogen)
+define ~methyleneH hydrogen and connected(~methyleneC)
+define ~CH2 ~methyleneC or ~methyleneH
+
+define ~methineC carbon and connected(4) and connected(1,hydrogen)
+define ~methineH hydrogen and connected(~methineC)
+define ~CH ~methineC or ~methineH
+
+define ~CR4 carbon and connected(4,carbon)
+
+define ~sp2C carbon and connected(3)
+define ~spC carbon and connected(2)
+define ~sp2O oxygen and connected(1)
+
+define ~carbonylC ~sp2C and connected(~sp2O)
+define ~carbonylO ~sp2O and connected(~carbonylC)
+define ~CO ~carbonylC or ~carbonylO
+
+define ~alkyne ~spC and connected(~spC)
+
+define ~keteneC ~spC and connected(1, ~sp2O)
+define ~keteneO ~sp2O and connected(~keteneC)
+define ~ketene ~keteneC or ~keteneO
+
+define ~hydroxylO oxygen and connected(hydrogen) and connected(carbon and not ~carbonylC)
+define ~hydroxylH hydrogen and connected(~hydroxylO)
+define ~OH ~hydroxylO or ~hydroxylH
+
+define ~exchangableH hydrogen and connected(oxygen or nitrogen)
+
+define ~carboxylicacidC ~carbonylC and connected(carbon) and connected(2,oxygen) and connected(1,oxygen and connected(hydrogen))
+define ~carboxylicacidO oxygen and connected(~carboxylicacidC)
+define ~carboxylicacidOH hydrogen and connected(~carboxylicacidO)
+define ~carboxylicacidH hydrogen and connected(~carboxylicacidO)
+define ~RCO2H ~carboxylicacidC or ~carboxylicacidO or ~carboxylicacidH
+
+define ~esterC ~carbonylC and connected(carbon) and connected(2,oxygen) and not connected(oxygen and connected(hydrogen))
+define ~esterO oxygen and connected(~esterC)
+define ~RCO2R ~esterC or ~esterO
+
+define ~aldehydeC ~carbonylC and connected(1,carbon) and connected(1,hydrogen)
+define ~aldehydeH hydrogen and connected(~carbonylC)
+define ~RCHO ~aldehydeC or ~aldehydeH
+
+define ~ketoneC ~carbonylC and connected(2,carbon)
+define ~ketoneO ~carbonylO and connected(~ketoneC) 
+define ~R2CO ~ketoneC or ~ketoneO
+
+define ~etherO oxygen and connected(2,carbon) and not ~carbonylO
+define ~ROR ~etherO
+

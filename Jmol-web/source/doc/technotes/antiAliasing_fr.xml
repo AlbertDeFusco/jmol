@@ -1,0 +1,50 @@
+<!--
+  French translation 
+  Translated from default version : antiAliasing.xml (v 1.1)
+-->
+<section title="Quelle est cette histoire sur l'anti-aliasing?">
+  <p>
+    <i>L'anti-aliasing n'est pas actuellement activ&#x00E9; dans Jmol.
+    La plus grosse partie du m&#x00E9;canisme est en place, mais est
+    actuellement d&#x00E9;sactiv&#x00E9;. Il est actuellement
+    d&#x00E9;sactiv&#x00E9; &#x00E0; cause de probl&#x00E8;mes de
+    performances sur des mat&#x00E9;riels plus anciens. Nous
+    pr&#x00E9;voyons de compl&#x00E9;ter l'impl&#x00E9;mentation et de
+    le r&#x00E9;activer dans une version future ... quand nous aurons un
+    peu plus de temps pour d&#x00E9;terminer comment ce doit &#x00EA;tre
+    g&#x00E9;r&#x00E9; sur des machines plus anciennes.</i>
+  </p>
+
+  <p>
+    Le moteur Graphics3D Jmol est enti&#x00E8;rement
+    impl&#x00E9;ment&#x00E9; sous forme logicielle. Il ne peut pas utiliser
+    les appels aux graphiques Sun 2D car ils n'offrent pas la fonction
+    de zBuffer qui permet de d&#x00E9;cider pixel par pixel si un pixel
+    doit &#x00EA;tre dessin&#x00E9;.
+  </p>
+
+  <p>
+    La technique d'anti-aliasing utilis&#x00E9;e dans le moteur Graphics3D
+    de Jmol est appel&#x00E9; de l'anti-aliasing-sc&#x00E8;ne-totale. La
+    sc&#x00E8;ne enti&#x00E8;re est dessin&#x00E9;e dans un buffer qui est
+    deux fois plus large et deux fois plus haut. Ainsi, 4 pixels sont
+    convertis en 1 pixel, avec un m&#x00E9;lange appropri&#x00E9; des
+    valeurs RVB.
+  </p>
+
+  <p>
+    Le r&#x00E9;sultat final est qu'elle prend plus de m&#x00E9;moire pour
+    contenir le zBuffer et le pixelBuffer. Et elle prend beaucoup plus de
+    cycles CPU pour dessiner une sc&#x00E8;ne. Le dessin prend 4 fois plus
+    de temps. Globalement, il faut probablement 3 fois plus de temps pour
+    dessiner une sc&#x00E8;ne.
+  </p>
+
+  <p>
+    Sur les machines r&#x00E9;centes avec beaucoup de puissance CPU, ce
+    n'est probablement pas un probl&#x00E8;me. Sur des machines plus
+    anciennes, ce ne serait pas acceptable. En cons&#x00E9;quence, nous
+    devons mettre en place des options.
+  </p>
+
+</section>

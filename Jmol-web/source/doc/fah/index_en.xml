@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE somethingOrAnything [
+<!ENTITY projects SYSTEM "fah-projects.xml" >
+]>
+<document>
+  <body>
+    &projects;
+    <title>Jmol Applet for Folding@home</title>
+    <section>
+
+    <form name="fahForm" action="">
+      <script src="./fah.js" type="text/javascript"></script>
+      <script src="./createProjectList.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        createFahPage(
+          "Select project",
+          "Project",
+          "Project Name",
+          "Credit",
+          "Number of atoms",
+          "Preferred",
+          "Final deadline",
+          "Frames",
+          "Code",
+          "Contributed by",
+          "Project description",
+          "Hide solvent",
+          "<fah_count_files/> files / <fah_count_projects/> projects.",
+          "If you have <b>current.xyz</b> files for the missing projects, please send them at nicove@users.sourceforge.net",
+          "Missing projects",
+          "Support Jmol by joining the Jmol Team #44383 at Folding@Home"
+          );
+      </script>
+    </form></section>
+  </body>
+</document>

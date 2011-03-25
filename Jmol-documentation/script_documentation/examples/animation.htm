@@ -1,0 +1,49 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript">
+
+
+//codebase="."
+//archive="JmolApplet10pre23.jar"
+//alert("animation.htm: Using "+archive)
+
+//showappcode=true
+animcallback="showmsg"
+title="ANIMATION";model="";ref="animation"
+Scripts=new Array(""
+," First load one of the following two models."
+	,"load cyclohexane_movie.xyz"
+	,"load movie2.pdb;cartoons on;trace on;wireframe off;cpk off#uncompressed (1 Mb)"
+	,"load movie.pdb.gz;cartoons on;trace on;wireframe off;cpk off#compressed (270K)"
+," Take a look at some of the frames. <i>frame all</i> and <i>frame 0</i> are synonymous."
+	,"frame 1 ~~ frame 2 ~~ frame 3 ~~ frame next ~~ frame prev ~~ frame all"
+," Now initiate animation in one of the possible modes. Both <i>loop</i> and <i>palindrome</i> accept first-frame and last-frame delays."
+	,"anim mode once;frame 1;anim on #plays once through, then stops"
+	,"anim mode once;frame 5;anim play #should start at frame 5?"
+	,"anim mode once;frame 1;anim fps 1;anim on #somewhat slower"
+	,"anim mode once;frame 1;anim fps 10;anim on #back to speed"
+	,"anim mode loop;anim on #restarts from the beginning each time"
+	,"anim mode palindrome;anim on #goes forward, then reverses"
+	,"anim mode loop 2 4;anim on #2-sec delay on frame 1; 4-sec on last frame"
+	,"anim mode palindrome 0 2;anim on #no delay on frame 1; 4-sec on last frame"
+	,"anim off"
+	,"anim on"
+," "
+	,""
+," "
+	,""
+)
+remarks=""
+
+</script>
+</head>
+<body>
+<script type="text/javascript">showpage()</script>
+</body>
+</html>

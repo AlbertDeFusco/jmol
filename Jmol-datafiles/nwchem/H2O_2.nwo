@@ -1,0 +1,3848 @@
+ argument  1 = H2O_2.nw
+                                         
+                                         
+
+
+              Northwest Computational Chemistry Package (NWChem) 4.6
+              ------------------------------------------------------
+
+
+                    Environmental Molecular Sciences Laboratory
+                       Pacific Northwest National Laboratory
+                                Richland, WA 99352
+
+                                         
+                                         
+
+
+                     COPYRIGHT (C) 1994, 1995, 1996, 1997, 1998,
+                         1999, 2000, 2001, 2002, 2003, 2004
+                        Pacific Northwest National Laboratory,
+                             Battelle Memorial Institute.
+
+                            >>> All Rights Reserved <<<
+
+
+                                    DISCLAIMER
+                                    ----------
+
+            This material was prepared as an account of work sponsored
+            by an agency of the United States Government.  Neither the
+            United States Government nor the United States Department
+            of Energy, nor Battelle, nor any of their employees, MAKES
+            ANY WARRANTY, EXPRESS OR IMPLIED, OR ASSUMES ANY LEGAL
+            LIABILITY OR RESPONSIBILITY FOR THE ACCURACY, COMPLETENESS,
+            OR USEFULNESS OF ANY INFORMATION, APPARATUS, PRODUCT,
+            SOFTWARE, OR PROCESS DISCLOSED, OR REPRESENTS THAT ITS USE
+            WOULD NOT INFRINGE PRIVATELY OWNED RIGHTS.
+
+
+                                    LIMITED USE
+                                    -----------
+
+            This software (including any documentation) is being made
+            available to you for your internal use only, solely for use
+            in performance of work directly for the U.S. Federal
+            Government or work under contracts with the U.S. Department
+            of Energy or other U.S. Federal Government agencies.  This
+            software is a version which has not yet been evaluated and
+            cleared for commercialization.  Adherence to this notice
+            may be necessary for the author, Battelle Memorial
+            Institute, to successfully assert copyright in and
+            commercialize this software. This software is not intended
+            for duplication or distribution to third parties without
+            the permission of the Manager of Software Products at
+            Pacific Northwest National Laboratory, Richland,
+            Washington, 99352.
+
+
+                                  ACKNOWLEDGMENT
+                                  --------------
+
+            This software and its documentation were produced with
+            Government support under Contract Number DE-AC06-76RLO-1830
+            awarded by the United States Department of Energy.  The
+            Government retains a paid-up non-exclusive, irrevocable
+            worldwide license to reproduce, prepare derivative works,
+            perform publicly and display publicly by or for the
+            Government, including the right to distribute to other
+            Government contractors.
+
+
+           Job information
+           ---------------
+
+    hostname      = rkanters-mac.local
+    program       = nwchem
+    date          = Sun Oct 17 20:21:35 2004
+
+    compiled      = Wed Aug  4 04:50:45 PDT 2004
+    source        = /Users/d3j911/nwchem-4.6
+    nwchem branch = 4.6
+    input         = H2O_2.nw
+    prefix        = H2O_freq.
+    data base     = ./H2O_freq.db
+    status        = startup
+    nproc         =    1
+    time left     =     -1s
+
+
+
+           Memory information
+           ------------------
+
+    heap      =   39321593 doubles =    300.0 Mbytes
+    stack     =   13107186 doubles =    100.0 Mbytes
+    global    =   52428803 doubles =    400.0 Mbytes (within heap+stack)
+    total     =   52428779 doubles =    400.0 Mbytes
+    verify    = yes
+    hardfail  = no 
+
+
+           Directory information
+           ---------------------
+
+  0 permanent = .
+  0 scratch   = .
+
+
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+
+ Scaling coordinates for geometry "geometry" by  1.889725989
+ (inverse scale =  0.529177249)
+
+ CS  symmetry detected
+
+          ------
+          auto-z
+          ------
+
+
+                             Geometry "geometry" -> ""
+                             -------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.14142136     0.00000000     0.00000000
+    2 H1                   1.0000    -0.56568542     0.70710678     0.00000000
+    3 H2                   1.0000    -0.56568542    -0.70710678     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H1                 1.007825
+      H2                 1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.8410208052
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+     0.0000000000     0.0000000000     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             Cs        
+ Group number              2
+ Group order               2
+ No. of unique centers     3
+
+      Symmetry unique atoms
+
+     1    2    3
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value
+      ----------- --------  ----- ----- ----- ----- ----- ----------
+    1 Stretch                  1     2                       1.00000
+    2 Stretch                  1     3                       1.00000
+    3 Bend                     2     1     3                90.00000
+
+ ==============================================================================
+                                internuclear distances
+ ------------------------------------------------------------------------------
+       center one      |      center two      | atomic units |  angstroms
+ ------------------------------------------------------------------------------
+    2 H1               |   1 O                |     1.88973  |     1.00000
+    3 H2               |   1 O                |     1.88973  |     1.00000
+ ------------------------------------------------------------------------------
+                         number of included internuclear distances:          2
+ ==============================================================================
+
+
+
+ ==============================================================================
+                                 internuclear angles
+ ------------------------------------------------------------------------------
+        center 1       |       center 2       |       center 3       |  degrees
+ ------------------------------------------------------------------------------
+    2 H1               |   1 O                |   3 H2               |    90.00
+ ------------------------------------------------------------------------------
+                            number of included internuclear angles:          1
+ ==============================================================================
+
+
+
+  library name resolved from: .nwchemrc
+  library file name is: </usr/local/NWChem/usr.local.lib.nwchem/libraries/>
+  
+
+
+ Summary of "ao basis" -> "" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ O                           sto-3g                  3        5   2s1p
+ H*                          sto-3g                   on all atoms 
+
+
+                                                                                                             H2O+ : STO-3G UHF geometry optimization
+                                                                                                             ---------------------------------------
+
+
+
+                           NWChem Geometry Optimization
+                           ----------------------------
+
+
+
+
+                      H2O+ : STO-3G UHF geometry optimization
+
+
+ maximum gradient threshold         (gmax) =   0.000450
+ rms gradient threshold             (grms) =   0.000300
+ maximum cartesian step threshold   (xmax) =   0.001800
+ rms cartesian step threshold       (xrms) =   0.001200
+ fixed trust radius                (trust) =   0.300000
+ maximum step size to saddle      (sadstp) =   0.100000
+ energy precision                  (eprec) =   1.0E-07
+ maximum number of steps          (nptopt) =   20
+ initial hessian option           (inhess) =    0
+ line search option               (linopt) =    1
+ hessian update option            (modupd) =    1
+ saddle point option              (modsad) =    0
+ initial eigen-mode to follow     (moddir) =    0
+ initial variable to follow       (vardir) =    0
+ follow first negative mode     (firstneg) =    T
+ apply conjugacy                    (opcg) =    F
+ source of zmatrix                         =   autoz   
+
+
+          -------------------
+          Energy Minimization
+          -------------------
+
+
+ Names of Z-matrix variables 
+    1              2              3         
+
+ Variables with the same non-blank name are constrained to be equal
+
+
+ Using old Hessian from previous optimization
+
+          --------
+          Step   0
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.14142136     0.00000000     0.00000000
+    2 H1                   1.0000    -0.56568542     0.70710678     0.00000000
+    3 H2                   1.0000    -0.56568542    -0.70710678     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H1                 1.007825
+      H2                 1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.8410208052
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+     0.0000000000     0.0000000000     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             Cs        
+ Group number              2
+ Group order               2
+ No. of unique centers     3
+
+      Symmetry unique atoms
+
+     1    2    3
+
+                      Basis "ao basis" -> "ao basis" (cartesian)
+                      -----
+  O (Oxygen)
+  ----------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  1.30709320E+02  0.154329
+  1 S  2.38088610E+01  0.535328
+  1 S  6.44360830E+00  0.444635
+
+  2 S  5.03315130E+00 -0.099967
+  2 S  1.16959610E+00  0.399513
+  2 S  3.80389000E-01  0.700115
+
+  3 P  5.03315130E+00  0.155916
+  3 P  1.16959610E+00  0.607684
+  3 P  3.80389000E-01  0.391957
+
+  H1 (Hydrogen)
+  -------------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  3.42525091E+00  0.154329
+  1 S  6.23913730E-01  0.535328
+  1 S  1.68855400E-01  0.444635
+
+  H2 (Hydrogen)
+  -------------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  3.42525091E+00  0.154329
+  1 S  6.23913730E-01  0.535328
+  1 S  1.68855400E-01  0.444635
+
+
+
+ Summary of "ao basis" -> "ao basis" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ O                           sto-3g                  3        5   2s1p
+ H1                          sto-3g                  1        1   1s
+ H2                          sto-3g                  1        1   1s
+
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                      H2O+ : STO-3G UHF geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = atomic
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at       0.6s
+
+
+ Starting SCF solution at       0.7s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653754522079
+      One electron energy =   -115.830489513670
+      Two electron energy =     32.335714186378
+ Nuclear repulsion energy =      8.841020805213
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7566
+
+        Time for solution =      0.2s
+
+
+                              NWChem Gradients Module
+                              -----------------------
+
+
+
+                         UHF ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.267248   0.000000   0.000000   -0.005967   0.000000   0.000000
+   2 H1     -1.068990   1.336238   0.000000    0.002984  -0.064647   0.000000
+   3 H2     -1.068990  -1.336238   0.000000    0.002984   0.064647   0.000000
+
+
+@ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+@ ---- ---------------- -------- -------- -------- -------- -------- --------
+@    0     -74.65375452  0.0E+00  0.04782  0.04646  0.00000  0.00000      1.7
+                                                       ok       ok  
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.00000   -0.04782
+    2 Stretch                  1     3                       1.00000   -0.04782
+    3 Bend                     2     1     3                90.00000   -0.04360
+
+ Restricting large step in mode    1 eval= 6.5E-02 step= 6.7E-01 new= 3.0E-01
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                      H2O+ : STO-3G UHF geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at       1.7s
+
+
+ Starting SCF solution at       1.7s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.666243322266
+      One electron energy =   -115.300527953460
+      Two electron energy =     32.204607774254
+ Nuclear repulsion energy =      8.429676856940
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7584
+
+        Time for solution =      0.2s
+
+
+ Line search: 
+     step= 1.00 grad=-2.1E-02 hess= 8.8E-03 energy=    -74.666243 mode=downhill
+ new step= 1.21                   predicted energy=    -74.666619
+
+          --------
+          Step   1
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.11756132     0.00000035     0.00000000
+    2 H1                   1.0000    -0.55375523     0.81393886     0.00000000
+    3 H2                   1.0000    -0.55375559    -0.81393921     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H1                 1.007825
+      H2                 1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.3500116387
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -0.3156224964     0.0000046804     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             Cs        
+ Group number              2
+ Group order               2
+ No. of unique centers     3
+
+      Symmetry unique atoms
+
+     1    2    3
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                      H2O+ : STO-3G UHF geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at       2.6s
+
+
+ Starting SCF solution at       2.6s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.666852984585
+      One electron energy =   -115.198081996445
+      Two electron energy =     32.181217373150
+ Nuclear repulsion energy =      8.350011638709
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7589
+
+        Time for solution =      0.2s
+
+
+                              NWChem Gradients Module
+                              -----------------------
+
+
+
+                         UHF ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.222159   0.000001   0.000000    0.044149   0.000001   0.000000
+   2 H1     -1.046446   1.538121   0.000000   -0.022074   0.004358   0.000000
+   3 H2     -1.046446  -1.538122   0.000000   -0.022075  -0.004358   0.000000
+
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    1     -74.66685298 -1.3E-02  0.01741  0.01666  0.09743  0.20192      3.6
+                                                                    
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.05506    0.01741
+    2 Stretch                  1     3                       1.05507    0.01741
+    3 Bend                     2     1     3               100.97007   -0.01504
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                      H2O+ : STO-3G UHF geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at       3.6s
+
+
+ Starting SCF solution at       3.6s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.669587680829
+      One electron energy =   -115.433359203753
+      Two electron energy =     32.283253712527
+ Nuclear repulsion energy =      8.480517810397
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7578
+
+        Time for solution =      0.2s
+
+
+ Line search: 
+     step= 1.00 grad=-4.5E-03 hess= 1.7E-03 energy=    -74.669588 mode=downhill
+ new step= 1.28                   predicted energy=    -74.669727
+
+          --------
+          Step   2
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.06712139     0.00000235     0.00000000
+    2 H1                   1.0000    -0.52853441     0.84270093     0.00000000
+    3 H2                   1.0000    -0.52853647    -0.84270328     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H1                 1.007825
+      H2                 1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.5185449393
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -0.9828460722     0.0000311218     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             Cs        
+ Group number              2
+ Group order               2
+ No. of unique centers     3
+
+      Symmetry unique atoms
+
+     1    2    3
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                      H2O+ : STO-3G UHF geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at       4.5s
+
+
+ Starting SCF solution at       4.5s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.669738041156
+      One electron energy =   -115.501694936052
+      Two electron energy =     32.313411955621
+ Nuclear repulsion energy =      8.518544939275
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7576
+
+        Time for solution =      0.2s
+
+
+                              NWChem Gradients Module
+                              -----------------------
+
+
+
+                         UHF ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.126841   0.000004   0.000000   -0.000273   0.000006   0.000000
+   2 H1     -0.998785   1.592474   0.000000    0.000138  -0.001199   0.000000
+   3 H2     -0.998789  -1.592478   0.000000    0.000134   0.001194   0.000000
+
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    2     -74.66973804 -2.9E-03  0.00106  0.00093  0.04579  0.09559      5.4
+                                                                    
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.03196   -0.00106
+    2 Stretch                  1     3                       1.03197   -0.00105
+    3 Bend                     2     1     3               109.49149   -0.00060
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                      H2O+ : STO-3G UHF geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at       5.5s
+
+
+ Starting SCF solution at       5.5s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.669743063627
+      One electron energy =   -115.493779844952
+      Two electron energy =     32.312495074139
+ Nuclear repulsion energy =      8.511541707187
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7576
+
+        Time for solution =      0.2s
+
+
+ Line search: 
+     step= 1.00 grad=-8.5E-06 hess= 3.5E-06 energy=    -74.669743 mode=downhill
+ new step= 1.21                   predicted energy=    -74.669743
+
+          --------
+          Step   3
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.06585275    -0.00000251     0.00000000
+    2 H1                   1.0000    -0.52790181     0.84521043     0.00000000
+    3 H2                   1.0000    -0.52790044    -0.84520792     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H1                 1.007825
+      H2                 1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.5100420058
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -0.9996276763    -0.0000332223     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             Cs        
+ Group number              2
+ Group order               2
+ No. of unique centers     3
+
+      Symmetry unique atoms
+
+     1    2    3
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                      H2O+ : STO-3G UHF geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at       6.3s
+
+
+ Starting SCF solution at       6.3s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.669743223879
+      One electron energy =   -115.492057045169
+      Two electron energy =     32.312271815484
+ Nuclear repulsion energy =      8.510042005806
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7576
+
+        Time for solution =      0.2s
+
+
+                              NWChem Gradients Module
+                              -----------------------
+
+
+
+                         UHF ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.124444  -0.000005   0.000000    0.000035  -0.000006   0.000000
+   2 H1     -0.997590   1.597216   0.000000   -0.000019   0.000017   0.000000
+   3 H2     -0.997587  -1.597211   0.000000   -0.000015  -0.000011   0.000000
+
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    3     -74.66974322 -5.2E-06  0.00002  0.00002  0.00244  0.00474      7.2
+                                     ok       ok                    
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.03292    0.00002
+    2 Stretch                  1     3                       1.03292    0.00002
+    3 Bend                     2     1     3               109.82442   -0.00001
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                      H2O+ : STO-3G UHF geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at       7.3s
+
+
+ Starting SCF solution at       7.3s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.669743224959
+      One electron energy =   -115.492295042949
+      Two electron energy =     32.312331034224
+ Nuclear repulsion energy =      8.510220783766
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7576
+
+        Time for solution =      0.1s
+
+
+ Line search: 
+     step= 1.00 grad=-2.9E-09 hess= 1.8E-09 energy=    -74.669743 mode=accept  
+ new step= 1.00                   predicted energy=    -74.669743
+
+          --------
+          Step   4
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.06582212     0.00000144     0.00000000
+    2 H1                   1.0000    -0.52788511     0.84521295     0.00000000
+    3 H2                   1.0000    -0.52788651    -0.84521438     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H1                 1.007825
+      H2                 1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.5102207838
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -1.0000329183     0.0000189828     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             Cs        
+ Group number              2
+ Group order               2
+ No. of unique centers     3
+
+      Symmetry unique atoms
+
+     1    2    3
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                      H2O+ : STO-3G UHF geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+  The SCF is already converged 
+
+         Total SCF energy =    -74.669743224959
+
+                              NWChem Gradients Module
+                              -----------------------
+
+
+
+                         UHF ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.124386   0.000003   0.000000   -0.000008   0.000004   0.000000
+   2 H1     -0.997558   1.597221   0.000000    0.000005  -0.000002   0.000000
+   3 H2     -0.997561  -1.597224   0.000000    0.000003  -0.000002   0.000000
+
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    4     -74.66974322 -1.1E-09  0.00000  0.00000  0.00002  0.00006      8.2
+                                     ok       ok       ok       ok  
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.03289    0.00000
+    2 Stretch                  1     3                       1.03290    0.00000
+    3 Bend                     2     1     3               109.82888    0.00000
+
+
+      ----------------------
+      Optimization converged
+      ----------------------
+
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    4     -74.66974322 -1.1E-09  0.00000  0.00000  0.00002  0.00006      8.2
+                                     ok       ok       ok       ok  
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.03289    0.00000
+    2 Stretch                  1     3                       1.03290    0.00000
+    3 Bend                     2     1     3               109.82888    0.00000
+
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.06582212     0.00000144     0.00000000
+    2 H1                   1.0000    -0.52788511     0.84521295     0.00000000
+    3 H2                   1.0000    -0.52788651    -0.84521438     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H1                 1.007825
+      H2                 1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.5102207838
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -1.0000329183     0.0000189828     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             Cs        
+ Group number              2
+ Group order               2
+ No. of unique centers     3
+
+      Symmetry unique atoms
+
+     1    2    3
+
+
+                Final and change from initial internal coordinates
+                --------------------------------------------------
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value       Change
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.03289    0.03289
+    2 Stretch                  1     3                       1.03290    0.03290
+    3 Bend                     2     1     3               109.82888   19.82888
+
+ ==============================================================================
+                                internuclear distances
+ ------------------------------------------------------------------------------
+       center one      |      center two      | atomic units |  angstroms
+ ------------------------------------------------------------------------------
+    2 H1               |   1 O                |     1.95189  |     1.03289
+    3 H2               |   1 O                |     1.95190  |     1.03290
+ ------------------------------------------------------------------------------
+                         number of included internuclear distances:          2
+ ==============================================================================
+
+
+
+ ==============================================================================
+                                 internuclear angles
+ ------------------------------------------------------------------------------
+        center 1       |       center 2       |       center 3       |  degrees
+ ------------------------------------------------------------------------------
+    2 H1               |   1 O                |   3 H2               |   109.83
+ ------------------------------------------------------------------------------
+                            number of included internuclear angles:          1
+ ==============================================================================
+
+
+
+
+ Task  times  cpu:        2.5s     wall:        7.6s
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+
+
+                   NWChem Nuclear Hessian and Frequency Analysis
+                   ---------------------------------------------
+
+
+
+                              NWChem Analytic Hessian
+                              -----------------------
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                      H2O+ : STO-3G UHF geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       8.2s
+
+
+ Starting SCF solution at       8.2s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.669743225280
+      One electron energy =   -115.492343149529
+      Two electron energy =     32.312379140484
+ Nuclear repulsion energy =      8.510220783766
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7576
+
+        Time for solution =      0.1s
+
+
+  stpr_wrt_fd_from_sq: overwrite of existing file:./H2O_freq.hess
+ stpr_wrt_fd_dipole: overwrite of existing file./H2O_freq.fd_ddipole
+
+ HESSIAN: the one electron contributions are done in       0.0s
+
+
+ HESSIAN: 2-el 1st deriv. term done in                     0.1s
+
+
+ HESSIAN: 2-el 2nd deriv. term done in                     0.2s
+
+  stpr_wrt_fd_from_sq: overwrite of existing file:./H2O_freq.hess
+ stpr_wrt_fd_dipole: overwrite of existing file./H2O_freq.fd_ddipole
+
+ HESSIAN: the two electron contributions are done in       0.3s
+
+                                NWChem CPHF Module
+                                ------------------
+
+
+    scftype = UHF 
+     nalpha =    5
+      nbeta =    4
+  variables =       22
+  num. vecs =        9
+  tolerance =   1.0E-04
+  max. iter =  100
+
+
+
+Iterative solution of linear equations
+  No. of variables       22
+  No. of equations        9
+  Maximum subspace       90
+       Convergence  1.0E-04
+        Start time      8.9
+
+
+   iter   nsub   residual    time
+   ----  ------  --------  ---------
+     1      9    1.24E-01       9.0
+
+  neglecting  7  2.03270264E-18
+  neglecting  8  4.67423369E-19
+  neglecting  9  1.96757119E-19
+
+   iter   nsub   residual    time
+   ----  ------  --------  ---------
+     2     18    7.91E-02       9.1
+
+  neglecting  13  4.69218522E-18
+  neglecting  14  4.50196959E-18
+  neglecting  15  2.75121492E-18
+  neglecting  16  2.31408254E-18
+  neglecting  17  1.15365048E-18
+  neglecting  18  4.23134386E-19
+
+   iter   nsub   residual    time
+   ----  ------  --------  ---------
+     3     27    3.20E-02       9.2
+
+  neglecting  18  1.55513138E-17
+  neglecting  19  1.46305956E-17
+  neglecting  20  9.03457541E-18
+  neglecting  21  6.62615882E-18
+  neglecting  22  5.24380272E-18
+  neglecting  23  3.4643716E-18
+  neglecting  24  2.70718782E-18
+  neglecting  25  2.16097157E-18
+  neglecting  26  7.74971478E-19
+  neglecting  27  4.84712519E-20
+
+   iter   nsub   residual    time
+   ----  ------  --------  ---------
+     4     36    2.05E-03       9.3
+
+  neglecting  23  2.62452051E-17
+  neglecting  24  1.77873586E-17
+  neglecting  25  1.30761953E-17
+  neglecting  26  1.22384918E-17
+  neglecting  27  8.53651627E-18
+  neglecting  28  7.95838648E-18
+  neglecting  29  6.41239294E-18
+  neglecting  30  4.11016948E-18
+  neglecting  31  3.66365773E-18
+  neglecting  32  2.94694059E-18
+  neglecting  33  1.84099372E-18
+  neglecting  34  1.02897887E-18
+  neglecting  35  5.36749E-19
+  neglecting  36  1.64389424E-19
+
+   iter   nsub   residual    time
+   ----  ------  --------  ---------
+     5     45    2.89E-12       9.4
+
+ HESSIAN: the CPHF contributions are done
+  stpr_wrt_fd_from_sq: overwrite of existing file:./H2O_freq.hess
+ stpr_wrt_fd_dipole: overwrite of existing file./H2O_freq.fd_ddipole
+ HESSIAN: the Hessian is done
+
+
+  Vibrational analysis via the FX method 
+
+  See chapter 2 in "Molecular Vibrations" by Wilson, Decius and Cross
+
+  Vib: Default input used 
+
+  Nuclear Hessian passed symmetry test 
+
+
+
+ ---------------------------- Atom information ----------------------------
+     atom    #        X              Y              Z            mass
+ --------------------------------------------------------------------------
+    O        1  1.2438577E-01  2.7118347E-06  0.0000000E+00  1.5994910E+01
+    H        2 -9.9755820E-01  1.5972209E+00  0.0000000E+00  1.0078250E+00
+    H        3 -9.9756085E-01 -1.5972236E+00  0.0000000E+00  1.0078250E+00
+ --------------------------------------------------------------------------
+
+
+
+
+          ----------------------------------------------------
+          MASS-WEIGHTED NUCLEAR HESSIAN (Hartree/Bohr/Bohr/Kamu)
+          ----------------------------------------------------
+
+
+              1           2           3           4           5           6           7           8           9
+   ----- ----- ----- ----- -----
+    1   2.72379E+01
+    2  -4.61355E-04 4.52883E+01
+    3  -9.88154E-14-1.86974E-14-7.45756E-07
+    4  -5.42557E+01 6.33675E+01-2.31391E-14 1.96735E+02
+    5   4.90536E+01-9.02109E+01-1.24246E-14-2.23932E+02 3.80356E+02
+    6   1.77693E-13 5.86026E-14 2.85783E-04-2.12448E-13 3.11755E-13-1.10205E-03
+    7  -5.42547E+01-6.33657E+01-3.17081E-14 1.94096E+01 2.85120E+01 7.25861E-14 1.96731E+02
+    8  -4.90518E+01-9.02089E+01-3.08242E-14-2.85118E+01-2.09736E+01-9.82003E-15 2.23925E+02 3.80348E+02
+    9   2.15951E-13 1.56055E-14-2.80523E-04-3.47397E-13 3.39026E-13-3.64529E-05-5.12912E-13-4.01195E-13 1.15401E-03
+
+
+
+          -------------------------------------------------
+          NORMAL MODE EIGENVECTORS IN CARTESIAN COORDINATES
+          -------------------------------------------------
+                 (Frequencies expressed in cm-1)
+
+                    1           2           3           4           5           6
+ 
+ Frequency         -5.57        0.12        0.12        0.12        1.03        5.68
+ 
+           1     0.00000     0.23336     0.03266     0.00000     0.00000     0.00000
+           2     0.00000    -0.03264     0.23324     0.00000    -0.04677     0.00000
+           3    -0.06003     0.00000     0.00000     0.23563     0.00000    -0.05825
+           4     0.00000     0.23316     0.03414     0.00000     0.58733     0.00000
+           5     0.00000    -0.03278     0.23428     0.00000     0.36579     0.00000
+           6     0.96688     0.00000     0.00000     0.23552     0.00000    -0.04370
+           7     0.00000     0.23356     0.03118     0.00000    -0.58733     0.00000
+           8     0.00000    -0.03278     0.23428     0.00000     0.36579     0.00000
+           9    -0.01369     0.00000     0.00000     0.23573     0.00000     0.96772
+
+                    7           8           9
+ 
+ Frequency       1629.30     3792.30     3921.59
+ 
+           1    -0.06887    -0.04747     0.00001
+           2     0.00000    -0.00001    -0.06975
+           3     0.00000     0.00000     0.00000
+           4     0.54653     0.37661    -0.38886
+           5     0.39971    -0.57985     0.55360
+           6     0.00000     0.00000     0.00000
+           7     0.54654     0.37676     0.38872
+           8    -0.39972     0.58006     0.55338
+           9     0.00000     0.00000     0.00000
+
+
+
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||         Derivative Dipole Moments (debye/angs)
+  Mode   [cm**-1]  ||      [d/dqX]             [d/dqY]           [d/dqZ]
+ ------ ---------- || ------------------ ------------------ -----------------
+    1       -5.566 ||       0.000               0.000             2.442
+    2        0.116 ||       1.121              -0.158             0.000
+    3        0.116 ||       0.157               1.126             0.000
+    4        0.116 ||       0.000               0.000             1.132
+    5        1.026 ||       0.000               1.874             0.000
+    6        5.685 ||       0.000               0.000             2.367
+    7     1629.297 ||       1.891               0.000             0.000
+    8     3792.296 ||       1.089               0.001             0.000
+    9     3921.590 ||       0.000               3.049             0.000
+ ----------------------------------------------------------------------------
+
+
+
+  
+  
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||                 Infra Red Intensities
+  Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]
+ ------ ---------- || -------------- ----------------- ---------- -----------
+    1       -5.566 ||    0.258417           5.962       251.917      16.265
+    2        0.116 ||    0.055532           1.281        54.135       3.495
+    3        0.116 ||    0.055983           1.292        54.575       3.524
+    4        0.116 ||    0.055520           1.281        54.124       3.494
+    5        1.026 ||    0.152257           3.513       148.427       9.583
+    6        5.685 ||    0.242846           5.603       236.738      15.285
+    7     1629.297 ||    0.154995           3.576       151.097       9.755
+    8     3792.296 ||    0.051451           1.187        50.157       3.238
+    9     3921.590 ||    0.402944           9.296       392.810      25.361
+ ----------------------------------------------------------------------------
+
+
+
+
+
+        Vibrational analysis via the FX method 
+  --- with translations and rotations projected out ---
+  --- via the Eckart algorithm                      ---
+ Projected Nuclear Hessian trans-rot subspace norm:2.7727E-32
+                         (should be close to zero!) 
+
+
+>From the projected analysis 
+The Zero-Point Energy (Kcal/mol) =          13.36075088
+
+ center of mass
+ --------------
+ x =  -0.00117663 y =   0.00000226 z =   0.00000000
+
+ moments of inertia (a.u.)
+ ------------------
+           5.142162709519          -0.000012430894           0.000000000000
+          -0.000012430894           2.253269140019           0.000000000000
+           0.000000000000           0.000000000000           7.395431849538
+
+ Rotational Constants
+ --------------------
+ A=  26.716815 cm-1  ( 38.438679 K)
+ B=  11.707171 cm-1  ( 16.843631 K)
+ C=   8.140184 cm-1  ( 11.711647 K)
+
+
+ Temperature                      =   298.15K
+
+ Zero-Point correction to Energy  =   13.350 kcal/mol  (  0.021275 au)
+ Thermal correction to Energy     =   15.129 kcal/mol  (  0.024109 au)
+ Thermal correction to Enthalpy   =   15.721 kcal/mol  (  0.025053 au)
+
+ Total Entropy                    =   46.819 cal/mol-K
+   - Translational                =   34.593 cal/mol-K (mol. weight =  18.0106)
+   - Rotational                   =   12.220 cal/mol-K (symmetry #  =        1)
+   - Vibrational                  =    0.007 cal/mol-K
+
+ Cv (constant volume heat capacity) =    6.006 cal/mol-K
+   - Translational                  =    2.979 cal/mol-K
+   - Rotational                     =    2.979 cal/mol-K
+   - Vibrational                    =    0.047 cal/mol-K
+
+
+
+          -------------------------------------------------
+          NORMAL MODE EIGENVECTORS IN CARTESIAN COORDINATES
+          -------------------------------------------------
+             (Projected Frequencies expressed in cm-1)
+
+                    1           2           3           4           5           6
+ 
+ P.Frequency        0.00        0.00        0.00        0.00        0.00        0.00
+ 
+           1     0.03269    -0.02085     0.00000     0.00000     0.00000     0.23242
+           2     0.08844     0.22310     0.00000     0.00000     0.00000     0.00757
+           3     0.00000     0.00000     0.00000     0.25004     0.00000     0.00000
+           4     0.52094    -0.33267     0.00000     0.00000     0.00000     0.13577
+           5     0.43140     0.00407     0.00000     0.00000     0.00000    -0.06032
+           6     0.00000     0.00000     0.00000     0.00000     0.99611     0.00000
+           7    -0.45555     0.29098     0.00000     0.00000     0.00000     0.32907
+           8     0.43141     0.00407     0.00000     0.00000     0.00000    -0.06032
+           9     0.00000     0.00000     0.99611     0.00000     0.00000     0.00000
+
+                    7           8           9
+ 
+ P.Frequency     1629.30     3792.30     3921.59
+ 
+           1    -0.06887    -0.04747     0.00001
+           2     0.00000    -0.00001    -0.06975
+           3     0.00000     0.00000     0.00000
+           4     0.54654     0.37661    -0.38886
+           5     0.39972    -0.57985     0.55360
+           6     0.00000     0.00000     0.00000
+           7     0.54654     0.37676     0.38872
+           8    -0.39972     0.58006     0.55338
+           9     0.00000     0.00000     0.00000
+
+
+
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||    Projected Derivative Dipole Moments (debye/angs)
+  Mode   [cm**-1]  ||      [d/dqX]             [d/dqY]           [d/dqZ]
+ ------ ---------- || ------------------ ------------------ -----------------
+    1        0.000 ||       0.157               2.170             0.000
+    2        0.000 ||      -0.100              -0.043             0.000
+    3        0.000 ||       0.000               0.000             2.534
+    4        0.000 ||       0.000               0.000            -0.071
+    5        0.000 ||       0.000               0.000             2.534
+    6        0.000 ||       1.116              -0.309             0.000
+    7     1629.297 ||       1.891               0.000             0.000
+    8     3792.296 ||       1.089               0.001             0.000
+    9     3921.590 ||       0.000               3.049             0.000
+ ----------------------------------------------------------------------------
+
+
+
+  
+  
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||           Projected Infra Red Intensities
+  Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]
+ ------ ---------- || -------------- ----------------- ---------- -----------
+    1        0.000 ||    0.205099           4.732       199.941      12.909
+    2        0.000 ||    0.000514           0.012         0.501       0.032
+    3        0.000 ||    0.278282           6.420       271.283      17.515
+    4        0.000 ||    0.000219           0.005         0.213       0.014
+    5        0.000 ||    0.278282           6.420       271.283      17.515
+    6        0.000 ||    0.058159           1.342        56.696       3.660
+    7     1629.297 ||    0.154995           3.576       151.097       9.755
+    8     3792.296 ||    0.051451           1.187        50.157       3.238
+    9     3921.590 ||    0.402944           9.296       392.810      25.361
+ ----------------------------------------------------------------------------
+
+
+
+ vib:animation  F
+
+ Task  times  cpu:        1.2s     wall:        1.2s
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+  library name resolved from: .nwchemrc
+  library file name is: </usr/local/NWChem/usr.local.lib.nwchem/libraries/>
+  
+
+
+ Summary of "ao basis" -> "" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ O                          6-31g**                  6       15   3s2p1d
+ H*                         6-31g**                   on all atoms 
+
+
+                                                                                                            H2O+ : 6-31g** UMP2 geometry optimization
+                                                                                                            -----------------------------------------
+
+
+
+                           NWChem Geometry Optimization
+                           ----------------------------
+
+
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+ maximum gradient threshold         (gmax) =   0.000450
+ rms gradient threshold             (grms) =   0.000300
+ maximum cartesian step threshold   (xmax) =   0.001800
+ rms cartesian step threshold       (xrms) =   0.001200
+ fixed trust radius                (trust) =   0.300000
+ maximum step size to saddle      (sadstp) =   0.100000
+ energy precision                  (eprec) =   1.0E-07
+ maximum number of steps          (nptopt) =   20
+ initial hessian option           (inhess) =    0
+ line search option               (linopt) =    1
+ hessian update option            (modupd) =    1
+ saddle point option              (modsad) =    0
+ initial eigen-mode to follow     (moddir) =    0
+ initial variable to follow       (vardir) =    0
+ follow first negative mode     (firstneg) =    T
+ apply conjugacy                    (opcg) =    F
+ source of zmatrix                         =   autoz   
+
+
+          -------------------
+          Energy Minimization
+          -------------------
+
+
+ Names of Z-matrix variables 
+    1              2              3         
+
+ Variables with the same non-blank name are constrained to be equal
+
+
+ Using old Hessian from previous optimization
+
+          --------
+          Step   0
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.06582212     0.00000144     0.00000000
+    2 H1                   1.0000    -0.52788511     0.84521295     0.00000000
+    3 H2                   1.0000    -0.52788651    -0.84521438     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H1                 1.007825
+      H2                 1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.5102207838
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -1.0000329183     0.0000189828     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             Cs        
+ Group number              2
+ Group order               2
+ No. of unique centers     3
+
+      Symmetry unique atoms
+
+     1    2    3
+
+                      Basis "ao basis" -> "ao basis" (cartesian)
+                      -----
+  O (Oxygen)
+  ----------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  5.48467170E+03  0.001831
+  1 S  8.25234950E+02  0.013950
+  1 S  1.88046960E+02  0.068445
+  1 S  5.29645000E+01  0.232714
+  1 S  1.68975700E+01  0.470193
+  1 S  5.79963530E+00  0.358521
+
+  2 S  1.55396160E+01 -0.110778
+  2 S  3.59993360E+00 -0.148026
+  2 S  1.01376180E+00  1.130767
+
+  3 P  1.55396160E+01  0.070874
+  3 P  3.59993360E+00  0.339753
+  3 P  1.01376180E+00  0.727159
+
+  4 S  2.70005800E-01  1.000000
+
+  5 P  2.70005800E-01  1.000000
+
+  6 D  8.00000000E-01  1.000000
+
+  H1 (Hydrogen)
+  -------------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  1.87311370E+01  0.033495
+  1 S  2.82539370E+00  0.234727
+  1 S  6.40121700E-01  0.813757
+
+  2 S  1.61277800E-01  1.000000
+
+  3 P  1.10000000E+00  1.000000
+
+  H2 (Hydrogen)
+  -------------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  1.87311370E+01  0.033495
+  1 S  2.82539370E+00  0.234727
+  1 S  6.40121700E-01  0.813757
+
+  2 S  1.61277800E-01  1.000000
+
+  3 P  1.10000000E+00  1.000000
+
+
+
+ Summary of "ao basis" -> "ao basis" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ O                          6-31g**                  6       15   3s2p1d
+ H1                         6-31g**                  3        5   2s1p
+ H2                         6-31g**                  3        5   2s1p
+
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =    25
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at       9.6s
+
+
+ !! nbf/nmo/basis-name mismatch 
+           nbf=  25 nbf_file=   7
+           nmo=  25nmo_file=   7
+           basis="ao basis" basis_file="ao basis"
+
+  Either an incorrect movecs file was 
+ specified, or linear dependence has changed,
+  or the basis name was changed. 
+
+  Load of old vectors failed.   Forcing atomic density guess
+
+
+ Starting SCF solution at       9.8s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -75.624186554742
+      One electron energy =   -116.982760539864
+      Two electron energy =     32.848353201356
+ Nuclear repulsion energy =      8.510220783766
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7580
+
+        Time for solution =      3.6s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+  Basis functions       =     25
+  Molecular orbitals    =     25
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =     20
+  Active beta virtual   =     21
+  Use MO symmetry       = T
+  Use skeleton AO sym   = T
+
+  AO/Fock/Back tols     =   1.0E-09  1.0E-09  1.0E-09
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   5:        1276765                          0                     63648.
+
+ Semi-direct pass number   1 of   1  for UHF alpha       at       14.4s
+Node 0 wrote      0.3 Mb in      0.0 s     Agg I/O rate:     0.0 Mb/s
+ Done moints_semi at       14.9s
+ Done maket at       15.0s
+ Done pijab at       15.0s
+ Done wijab at       15.0s
+ Done lai at       15.0s
+ Done nonsep at       16.3s
+ Done multipass loop at       16.3s
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   4:        1275822                          0                     51669.
+
+ Semi-direct pass number   1 of   1  for UHF beta        at       17.1s
+Node 0 wrote      0.2 Mb in      0.0 s     Agg I/O rate:     0.0 Mb/s
+ Done moints_semi at       17.6s
+ Done maket at       17.6s
+ Done pijab at       17.6s
+ Done wijab at       17.6s
+ Done lai at       17.7s
+ Done nonsep at       18.9s
+ Done multipass loop at       18.9s
+
+
+          -------------------------------------------
+          SCF energy                 -75.624186554742
+          Correlation energy          -0.150866545063
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -75.775053099805
+          -------------------------------------------
+
+                                NWChem CPHF Module
+                                ------------------
+
+
+    scftype = UHF 
+     nalpha =    5
+      nbeta =    4
+  variables =      184
+  tolerance =   1.0E-04
+  max. iter =  100
+
+
+            ----- linear solve (tol: 1.0E-04 prod-acc: 3.1E-10) -----
+
+               iter nbas    rnorm     rnorm-scal   ratio     time
+               ---- ---- ----------- ----------- --------- -------
+                  1    1  1.3188E-02  3.1208E-01    0.0000    12.6
+                  2    2  4.4471E-03  1.0524E-01    0.3372    12.8
+                  3    3  1.5640E-03  3.7012E-02    0.3517    13.0
+                  4    4  4.0342E-04  9.5466E-03    0.2579    13.2
+                  5    5  6.7304E-05  1.5927E-03    0.1668    13.4
+                  6    6  1.6895E-05  3.9980E-04    0.2510    13.6
+                  7    7  3.8101E-06  9.0163E-05    0.2255    13.8
+
+ CPHF converged to   9.0E-05 in    7 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X      -1.000033   -1.072418   -1.037603
+ Y       0.000019   -0.000003   -0.000002
+ Z       0.000000    0.000000    0.000000
+
+
+ MP2 alpha    natural orbital occupation numbers
+
+
+              1      
+    1    1.0000
+    2    0.9951
+    3    0.9911
+    4    0.9876
+    5    0.9863
+    6    0.0096
+    7    0.0086
+    8    0.0055
+    9    0.0040
+   10    0.0023
+   11    0.0022
+   12    0.0022
+   13    0.0021
+   14    0.0019
+   15    0.0004
+   16    0.0003
+   17    0.0002
+   18    0.0001
+   19    0.0001
+   20    0.0001
+   21    0.0001
+   22    0.0001
+   23    0.0000
+   24    0.0000
+   25    0.0000
+
+ MP2 beta     natural orbital occupation numbers
+
+
+              1      
+    1    1.0000
+    2    0.9921
+    3    0.9873
+    4    0.9863
+    5    0.0101
+    6    0.0087
+    7    0.0043
+    8    0.0029
+    9    0.0022
+   10    0.0021
+   11    0.0010
+   12    0.0010
+   13    0.0007
+   14    0.0003
+   15    0.0003
+   16    0.0002
+   17    0.0002
+   18    0.0001
+   19    0.0001
+   20    0.0001
+   21    0.0001
+   22    0.0001
+   23    0.0000
+   24    0.0000
+   25    0.0000
+
+  MP2 natural orbitals output to ./H2O_freq.mp2nos
+
+  Using symmetry
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.124386   0.000003   0.000000    0.027651   0.000002   0.000000
+   2 H1     -0.997558   1.597221   0.000000   -0.013825   0.020486   0.000000
+   3 H2     -0.997561  -1.597224   0.000000   -0.013826  -0.020489   0.000000
+
+                 ----------------------------------------
+                 |  Time  |  1-e(secs)   |  2-e(secs)   |
+                 ----------------------------------------
+                 |  CPU   |       0.01   |       0.85   |
+                 ----------------------------------------
+                 |  WALL  |       0.00   |       0.85   |
+                 ----------------------------------------
+ -----------------------
+ Performance information
+ -----------------------
+
+ Timer overhead =  3.00E-06 seconds/call
+
+               Nr. of calls         CPU time (s)                 Wall time (s)  
+             ---------------    -------------------     ------------------------------
+Name         Min   Avg   Max    Min     Avg     Max     Min     Avg     Max   Mx/calls
+mp2: moin     2     2     2   0.97    0.97    0.97     0.98    0.98    0.98    0.49   
+mp2: make     2     2     2   6.00E-2 6.00E-2 6.00E-2  5.29E-2 5.29E-2 5.29E-2 2.65E-2
+mp2: pija     2     2     2   1.00E-2 1.00E-2 1.00E-2  7.42E-3 7.42E-3 7.42E-3 3.71E-3
+mp2: wija     2     2     2   1.00E-2 1.00E-2 1.00E-2  7.95E-3 7.95E-3 7.95E-3 3.98E-3
+mp2: lai      2     2     2   3.00E-2 3.00E-2 3.00E-2  3.77E-2 3.77E-2 3.77E-2 1.88E-2
+mp2: back     2     2     2   5.00E-2 5.00E-2 5.00E-2  4.38E-2 4.38E-2 4.38E-2 2.19E-2
+mp2: nons     2     2     2    2.2     2.2     2.2      2.3     2.3     2.3     1.1   
+mp2: laif     1     1     1   0.24    0.24    0.24     0.24    0.24    0.24    0.24   
+mp2: cphf     1     1     1    1.7     1.7     1.7      1.7     1.7     1.7     1.7   
+mp2: wijf     1     1     1   0.23    0.23    0.23     0.24    0.24    0.24    0.24   
+mp2: sep      1     1     1   0.95    0.95    0.95     0.96    0.96    0.96    0.96   
+mp2: tota     1     1     1    7.3     7.3     7.3      8.6     8.6     8.6     8.6   
+
+ The average no. of pstat calls per process was 1.90E+01
+ with a timing overhead of 5.70E-05s
+
+
+@ Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+@ ---- ---------------- -------- -------- -------- -------- -------- --------
+@    0     -75.77505310  0.0E+00  0.02471  0.02018  0.00000  0.00000     22.2
+                                                       ok       ok  
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       1.03289    0.02471
+    2 Stretch                  1     3                       1.03290    0.02471
+    3 Bend                     2     1     3               109.82888    0.00048
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =    25
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at      22.3s
+
+
+ Starting SCF solution at      22.3s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -75.627061232215
+      One electron energy =   -117.310403917050
+      Two electron energy =     32.966118765959
+ Nuclear repulsion energy =      8.717223918876
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7573
+
+        Time for solution =      2.9s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+  Basis functions       =     25
+  Molecular orbitals    =     25
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =     20
+  Active beta virtual   =     21
+  Use MO symmetry       = T
+  Use skeleton AO sym   = T
+
+  AO/Fock/Back tols     =   1.0E-09  1.0E-09  1.0E-09
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   5:         330422                          0                     33484.
+
+ Semi-direct pass number   1 of   1  for UHF alpha       at       26.1s
+Node 0 wrote      0.3 Mb in      0.0 s     Agg I/O rate:     0.0 Mb/s
+ Done moints_semi at       26.6s
+ Done maket at       26.6s
+ Done multipass loop at       26.6s
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   4:         328917                          0                     28180.
+
+ Semi-direct pass number   1 of   1  for UHF beta        at       27.4s
+Node 0 wrote      0.2 Mb in      0.0 s     Agg I/O rate:    21.8 Mb/s
+ Done moints_semi at       27.9s
+ Done maket at       27.9s
+ Done multipass loop at       27.9s
+
+
+          -------------------------------------------
+          SCF energy                 -75.627061232215
+          Correlation energy          -0.149494394774
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -75.776555626989
+          -------------------------------------------
+
+ -----------------------
+ Performance information
+ -----------------------
+
+ Timer overhead =  3.00E-06 seconds/call
+
+               Nr. of calls         CPU time (s)                 Wall time (s)  
+             ---------------    -------------------     ------------------------------
+Name         Min   Avg   Max    Min     Avg     Max     Min     Avg     Max   Mx/calls
+mp2: moin     2     2     2   0.97    0.97    0.97     0.99    0.99    0.99    0.50   
+mp2: make     2     2     2   4.00E-2 4.00E-2 4.00E-2  4.68E-2 4.68E-2 4.68E-2 2.34E-2
+mp2: tota     1     1     1    1.4     1.4     1.4      2.7     2.7     2.7     2.7   
+
+ The average no. of pstat calls per process was 5.00E+00
+ with a timing overhead of 1.50E-05s
+
+ Line search: 
+     step= 1.00 grad=-2.3E-03 hess= 7.9E-04 energy=    -75.776556 mode=downhill
+ new step= 1.45                   predicted energy=    -75.776716
+
+          --------
+          Step   1
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.05007253    -0.00004333     0.00000000
+    2 H1                   1.0000    -0.52002603     0.81820506     0.00000000
+    3 H2                   1.0000    -0.51999599    -0.81816174     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H1                 1.007825
+      H2                 1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.8139462123
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -1.2083698036    -0.0005731271     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             Cs        
+ Group number              2
+ Group order               2
+ No. of unique centers     3
+
+      Symmetry unique atoms
+
+     1    2    3
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =    25
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at      28.1s
+
+
+ Starting SCF solution at      28.1s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -75.627795303420
+      One electron energy =   -117.462960509992
+      Two electron energy =     33.021218994247
+ Nuclear repulsion energy =      8.813946212325
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7571
+
+        Time for solution =      2.3s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+  Basis functions       =     25
+  Molecular orbitals    =     25
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =     20
+  Active beta virtual   =     21
+  Use MO symmetry       = T
+  Use skeleton AO sym   = T
+
+  AO/Fock/Back tols     =   1.0E-09  1.0E-09  1.0E-09
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   5:        1276765                          0                     63648.
+
+ Semi-direct pass number   1 of   1  for UHF alpha       at       31.3s
+Node 0 wrote      0.3 Mb in      0.0 s     Agg I/O rate:     0.0 Mb/s
+ Done moints_semi at       31.9s
+ Done maket at       31.9s
+ Done pijab at       31.9s
+ Done wijab at       31.9s
+ Done lai at       31.9s
+ Done nonsep at       33.2s
+ Done multipass loop at       33.2s
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   4:        1275822                          0                     51669.
+
+ Semi-direct pass number   1 of   1  for UHF beta        at       34.1s
+Node 0 wrote      0.2 Mb in      0.0 s     Agg I/O rate:     0.0 Mb/s
+ Done moints_semi at       34.6s
+ Done maket at       34.6s
+ Done pijab at       34.6s
+ Done wijab at       34.6s
+ Done lai at       34.6s
+ Done nonsep at       35.9s
+ Done multipass loop at       35.9s
+
+
+          -------------------------------------------
+          SCF energy                 -75.627795303420
+          Correlation energy          -0.148875283196
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -75.776670586616
+          -------------------------------------------
+
+                                NWChem CPHF Module
+                                ------------------
+
+
+    scftype = UHF 
+     nalpha =    5
+      nbeta =    4
+  variables =      184
+  tolerance =   1.0E-04
+  max. iter =  100
+
+
+            ----- linear solve (tol: 1.0E-04 prod-acc: 3.0E-10) -----
+
+               iter nbas    rnorm     rnorm-scal   ratio     time
+               ---- ---- ----------- ----------- --------- -------
+                  1    1  1.2441E-02  3.0396E-01    0.0000    26.8
+                  2    2  3.9077E-03  9.5473E-02    0.3141    27.0
+                  3    3  1.2799E-03  3.1270E-02    0.3275    27.2
+                  4    4  3.1639E-04  7.7301E-03    0.2472    27.4
+                  5    5  4.9983E-05  1.2212E-03    0.1580    27.6
+                  6    6  1.1779E-05  2.8779E-04    0.2357    27.8
+                  7    7  2.5877E-06  6.3222E-05    0.2197    28.0
+
+ CPHF converged to   6.3E-05 in    7 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X      -1.208370   -1.051408   -1.021950
+ Y      -0.000573    0.000078    0.000067
+ Z       0.000000    0.000000    0.000000
+
+
+ MP2 alpha    natural orbital occupation numbers
+
+
+              1      
+    1    1.0000
+    2    0.9952
+    3    0.9913
+    4    0.9881
+    5    0.9870
+    6    0.0090
+    7    0.0080
+    8    0.0053
+    9    0.0039
+   10    0.0023
+   11    0.0022
+   12    0.0021
+   13    0.0021
+   14    0.0019
+   15    0.0003
+   16    0.0003
+   17    0.0002
+   18    0.0002
+   19    0.0001
+   20    0.0001
+   21    0.0001
+   22    0.0001
+   23    0.0000
+   24    0.0000
+   25    0.0000
+
+ MP2 beta     natural orbital occupation numbers
+
+
+              1      
+    1    1.0000
+    2    0.9922
+    3    0.9879
+    4    0.9870
+    5    0.0094
+    6    0.0081
+    7    0.0042
+    8    0.0029
+    9    0.0022
+   10    0.0021
+   11    0.0010
+   12    0.0010
+   13    0.0007
+   14    0.0003
+   15    0.0003
+   16    0.0002
+   17    0.0002
+   18    0.0002
+   19    0.0001
+   20    0.0001
+   21    0.0001
+   22    0.0001
+   23    0.0000
+   24    0.0000
+   25    0.0000
+
+  MP2 natural orbitals output to ./H2O_freq.mp2nos
+
+  Using symmetry
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.094623  -0.000082   0.000000   -0.001867  -0.000086   0.000000
+   2 H1     -0.982707   1.546183   0.000000    0.000903  -0.001504   0.000000
+   3 H2     -0.982650  -1.546101   0.000000    0.000963   0.001590   0.000000
+
+                 ----------------------------------------
+                 |  Time  |  1-e(secs)   |  2-e(secs)   |
+                 ----------------------------------------
+                 |  CPU   |       0.01   |       0.82   |
+                 ----------------------------------------
+                 |  WALL  |       0.00   |       0.87   |
+                 ----------------------------------------
+ -----------------------
+ Performance information
+ -----------------------
+
+ Timer overhead =  3.00E-06 seconds/call
+
+               Nr. of calls         CPU time (s)                 Wall time (s)  
+             ---------------    -------------------     ------------------------------
+Name         Min   Avg   Max    Min     Avg     Max     Min     Avg     Max   Mx/calls
+mp2: moin     2     2     2   0.98    0.98    0.98      1.0     1.0     1.0    0.50   
+mp2: make     2     2     2   5.00E-2 5.00E-2 5.00E-2  5.20E-2 5.20E-2 5.20E-2 2.60E-2
+mp2: pija     2     2     2    0.0     0.0     0.0     7.58E-3 7.58E-3 7.58E-3 3.79E-3
+mp2: wija     2     2     2   2.00E-2 2.00E-2 2.00E-2  8.05E-3 8.05E-3 8.05E-3 4.03E-3
+mp2: lai      2     2     2   3.00E-2 3.00E-2 3.00E-2  3.84E-2 3.84E-2 3.84E-2 1.92E-2
+mp2: back     2     2     2   5.00E-2 5.00E-2 5.00E-2  4.30E-2 4.30E-2 4.30E-2 2.15E-2
+mp2: nons     2     2     2    2.2     2.2     2.2      2.3     2.3     2.3     1.1   
+mp2: laif     1     1     1   0.24    0.24    0.24     0.24    0.24    0.24    0.24   
+mp2: cphf     1     1     1    1.6     1.6     1.6      1.7     1.7     1.7     1.7   
+mp2: wijf     1     1     1   0.24    0.24    0.24     0.24    0.24    0.24    0.24   
+mp2: sep      1     1     1   0.92    0.92    0.92     0.98    0.98    0.98    0.98   
+mp2: tota     1     1     1    7.2     7.2     7.2      8.6     8.6     8.6     8.6   
+
+ The average no. of pstat calls per process was 1.90E+01
+ with a timing overhead of 5.70E-05s
+
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    1     -75.77667059 -1.6E-03  0.00186  0.00147  0.02699  0.05118     39.1
+                                                                    
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       0.99727   -0.00175
+    2 Stretch                  1     3                       0.99714   -0.00186
+    3 Bend                     2     1     3               110.26495   -0.00012
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =    25
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at      39.2s
+
+
+ Starting SCF solution at      39.2s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -75.627672349850
+      One electron energy =   -117.429644115646
+      Two electron energy =     33.009279384301
+ Nuclear repulsion energy =      8.792692381495
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7571
+
+        Time for solution =      2.3s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+  Basis functions       =     25
+  Molecular orbitals    =     25
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =     20
+  Active beta virtual   =     21
+  Use MO symmetry       = T
+  Use skeleton AO sym   = T
+
+  AO/Fock/Back tols     =   1.0E-09  1.0E-09  1.0E-09
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   5:         330422                          0                     33484.
+
+ Semi-direct pass number   1 of   1  for UHF alpha       at       42.5s
+Node 0 wrote      0.3 Mb in      0.0 s     Agg I/O rate:     0.0 Mb/s
+ Done moints_semi at       43.0s
+ Done maket at       43.0s
+ Done multipass loop at       43.0s
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   4:         328917                          0                     28180.
+
+ Semi-direct pass number   1 of   1  for UHF beta        at       43.9s
+Node 0 wrote      0.2 Mb in      0.0 s     Agg I/O rate:     0.0 Mb/s
+ Done moints_semi at       44.3s
+ Done maket at       44.4s
+ Done multipass loop at       44.4s
+
+
+          -------------------------------------------
+          SCF energy                 -75.627672349850
+          Correlation energy          -0.149005473378
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -75.776677823228
+          -------------------------------------------
+
+ -----------------------
+ Performance information
+ -----------------------
+
+ Timer overhead =  4.00E-06 seconds/call
+
+               Nr. of calls         CPU time (s)                 Wall time (s)  
+             ---------------    -------------------     ------------------------------
+Name         Min   Avg   Max    Min     Avg     Max     Min     Avg     Max   Mx/calls
+mp2: moin     2     2     2   0.94    0.94    0.94     0.97    0.97    0.97    0.49   
+mp2: make     2     2     2   5.00E-2 5.00E-2 5.00E-2  4.57E-2 4.57E-2 4.57E-2 2.29E-2
+mp2: tota     1     1     1    1.5     1.5     1.5      2.8     2.8     2.8     2.8   
+
+ The average no. of pstat calls per process was 5.00E+00
+ with a timing overhead of 2.00E-05s
+
+ Line search: 
+     step= 1.00 grad=-1.6E-05 hess= 9.2E-06 energy=    -75.776678 mode=downhill
+ new step= 0.89                   predicted energy=    -75.776678
+
+          --------
+          Step   2
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.05081465     0.00000811     0.00000000
+    2 H1                   1.0000    -0.52037918     0.82001778     0.00000000
+    3 H2                   1.0000    -0.52038497    -0.82002589     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H1                 1.007825
+      H2                 1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.7949989132
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -1.1985529538     0.0001072432     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             Cs        
+ Group number              2
+ Group order               2
+ No. of unique centers     3
+
+      Symmetry unique atoms
+
+     1    2    3
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =    25
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at      44.5s
+
+
+ Starting SCF solution at      44.5s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -75.627686610505
+      One electron energy =   -117.433260403893
+      Two electron energy =     33.010574880212
+ Nuclear repulsion energy =      8.794998913176
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7571
+
+        Time for solution =      1.5s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+  Basis functions       =     25
+  Molecular orbitals    =     25
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =     20
+  Active beta virtual   =     21
+  Use MO symmetry       = T
+  Use skeleton AO sym   = T
+
+  AO/Fock/Back tols     =   1.0E-09  1.0E-09  1.0E-09
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   5:        1276765                          0                     63648.
+
+ Semi-direct pass number   1 of   1  for UHF alpha       at       47.1s
+Node 0 wrote      0.3 Mb in      0.0 s     Agg I/O rate:     0.0 Mb/s
+ Done moints_semi at       47.6s
+ Done maket at       47.6s
+ Done pijab at       47.6s
+ Done wijab at       47.6s
+ Done lai at       47.6s
+ Done nonsep at       48.9s
+ Done multipass loop at       48.9s
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   4:        1275822                          0                     51669.
+
+ Semi-direct pass number   1 of   1  for UHF beta        at       49.8s
+Node 0 wrote      0.2 Mb in      0.0 s     Agg I/O rate:    21.8 Mb/s
+ Done moints_semi at       50.3s
+ Done maket at       50.3s
+ Done pijab at       50.3s
+ Done wijab at       50.3s
+ Done lai at       50.3s
+ Done nonsep at       51.6s
+ Done multipass loop at       51.6s
+
+
+          -------------------------------------------
+          SCF energy                 -75.627686610505
+          Correlation energy          -0.148991317488
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -75.776677927992
+          -------------------------------------------
+
+                                NWChem CPHF Module
+                                ------------------
+
+
+    scftype = UHF 
+     nalpha =    5
+      nbeta =    4
+  variables =      184
+  tolerance =   1.0E-04
+  max. iter =  100
+
+
+            ----- linear solve (tol: 1.0E-04 prod-acc: 3.0E-10) -----
+
+               iter nbas    rnorm     rnorm-scal   ratio     time
+               ---- ---- ----------- ----------- --------- -------
+                  1    1  1.2482E-02  3.0442E-01    0.0000    39.6
+                  2    2  3.9369E-03  9.6014E-02    0.3154    39.8
+                  3    3  1.2948E-03  3.1579E-02    0.3289    40.0
+                  4    4  3.2095E-04  7.8275E-03    0.2479    40.2
+                  5    5  5.0845E-05  1.2400E-03    0.1584    40.4
+                  6    6  1.2030E-05  2.9340E-04    0.2366    40.6
+                  7    7  2.6470E-06  6.4555E-05    0.2200    40.8
+
+ CPHF converged to   6.5E-05 in    7 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X      -1.198553   -1.052529   -1.022795
+ Y       0.000107   -0.000015   -0.000013
+ Z       0.000000    0.000000    0.000000
+
+
+ MP2 alpha    natural orbital occupation numbers
+
+
+              1      
+    1    1.0000
+    2    0.9952
+    3    0.9913
+    4    0.9881
+    5    0.9869
+    6    0.0090
+    7    0.0081
+    8    0.0053
+    9    0.0039
+   10    0.0023
+   11    0.0022
+   12    0.0021
+   13    0.0021
+   14    0.0019
+   15    0.0003
+   16    0.0003
+   17    0.0002
+   18    0.0002
+   19    0.0001
+   20    0.0001
+   21    0.0001
+   22    0.0001
+   23    0.0000
+   24    0.0000
+   25    0.0000
+
+ MP2 beta     natural orbital occupation numbers
+
+
+              1      
+    1    1.0000
+    2    0.9922
+    3    0.9878
+    4    0.9869
+    5    0.0094
+    6    0.0081
+    7    0.0042
+    8    0.0029
+    9    0.0022
+   10    0.0021
+   11    0.0010
+   12    0.0010
+   13    0.0007
+   14    0.0003
+   15    0.0003
+   16    0.0002
+   17    0.0002
+   18    0.0002
+   19    0.0001
+   20    0.0001
+   21    0.0001
+   22    0.0001
+   23    0.0000
+   24    0.0000
+   25    0.0000
+
+  MP2 natural orbitals output to ./H2O_freq.mp2nos
+
+  Using symmetry
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.096026   0.000015   0.000000    0.000040   0.000016   0.000000
+   2 H1     -0.983374   1.549609   0.000000   -0.000015  -0.000025   0.000000
+   3 H2     -0.983385  -1.549624   0.000000   -0.000026   0.000009   0.000000
+
+                 ----------------------------------------
+                 |  Time  |  1-e(secs)   |  2-e(secs)   |
+                 ----------------------------------------
+                 |  CPU   |       0.00   |       0.84   |
+                 ----------------------------------------
+                 |  WALL  |       0.00   |       0.84   |
+                 ----------------------------------------
+ -----------------------
+ Performance information
+ -----------------------
+
+ Timer overhead =  4.00E-06 seconds/call
+
+               Nr. of calls         CPU time (s)                 Wall time (s)  
+             ---------------    -------------------     ------------------------------
+Name         Min   Avg   Max    Min     Avg     Max     Min     Avg     Max   Mx/calls
+mp2: moin     2     2     2   0.97    0.97    0.97     0.99    0.99    0.99    0.49   
+mp2: make     2     2     2   5.00E-2 5.00E-2 5.00E-2  5.09E-2 5.09E-2 5.09E-2 2.55E-2
+mp2: pija     2     2     2   2.00E-2 2.00E-2 2.00E-2  7.57E-3 7.57E-3 7.57E-3 3.78E-3
+mp2: wija     2     2     2    0.0     0.0     0.0     7.73E-3 7.73E-3 7.73E-3 3.86E-3
+mp2: lai      2     2     2   4.00E-2 4.00E-2 4.00E-2  3.83E-2 3.83E-2 3.83E-2 1.92E-2
+mp2: back     2     2     2   4.00E-2 4.00E-2 4.00E-2  4.31E-2 4.31E-2 4.31E-2 2.15E-2
+mp2: nons     2     2     2    2.2     2.2     2.2      2.3     2.3     2.3     1.1   
+mp2: laif     1     1     1   0.25    0.25    0.25     0.25    0.25    0.25    0.25   
+mp2: cphf     1     1     1    1.6     1.6     1.6      1.7     1.7     1.7     1.7   
+mp2: wijf     1     1     1   0.25    0.25    0.25     0.25    0.25    0.25    0.25   
+mp2: sep      1     1     1   0.95    0.95    0.95     0.95    0.95    0.95    0.95   
+mp2: tota     1     1     1    7.2     7.2     7.2      8.6     8.6     8.6     8.6   
+
+ The average no. of pstat calls per process was 1.90E+01
+ with a timing overhead of 7.60E-05s
+
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    2     -75.77667793 -7.3E-06  0.00003  0.00002  0.00174  0.00352     54.8
+                                     ok       ok                    
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       0.99934   -0.00001
+    2 Stretch                  1     3                       0.99936    0.00001
+    3 Bend                     2     1     3               110.28073   -0.00003
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =    25
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at      54.9s
+
+
+ Starting SCF solution at      54.9s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -75.627688120750
+      One electron energy =   -117.433301158679
+      Two electron energy =     33.010625875447
+ Nuclear repulsion energy =      8.794987162481
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7571
+
+        Time for solution =      1.5s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+  Basis functions       =     25
+  Molecular orbitals    =     25
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =     20
+  Active beta virtual   =     21
+  Use MO symmetry       = T
+  Use skeleton AO sym   = T
+
+  AO/Fock/Back tols     =   1.0E-09  1.0E-09  1.0E-09
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   5:         330422                          0                     33484.
+
+ Semi-direct pass number   1 of   1  for UHF alpha       at       57.4s
+Node 0 wrote      0.3 Mb in      0.0 s     Agg I/O rate:    26.0 Mb/s
+ Done moints_semi at       57.9s
+ Done maket at       57.9s
+ Done multipass loop at       57.9s
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   4:         328917                          0                     28180.
+
+ Semi-direct pass number   1 of   1  for UHF beta        at       58.7s
+Node 0 wrote      0.2 Mb in      0.0 s     Agg I/O rate:     0.0 Mb/s
+ Done moints_semi at       59.2s
+ Done maket at       59.2s
+ Done multipass loop at       59.2s
+
+
+          -------------------------------------------
+          SCF energy                 -75.627688120750
+          Correlation energy          -0.148989815745
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -75.776677936495
+          -------------------------------------------
+
+ -----------------------
+ Performance information
+ -----------------------
+
+ Timer overhead =  3.00E-06 seconds/call
+
+               Nr. of calls         CPU time (s)                 Wall time (s)  
+             ---------------    -------------------     ------------------------------
+Name         Min   Avg   Max    Min     Avg     Max     Min     Avg     Max   Mx/calls
+mp2: moin     2     2     2   0.98    0.98    0.98     0.98    0.98    0.98    0.49   
+mp2: make     2     2     2   6.00E-2 6.00E-2 6.00E-2  4.69E-2 4.69E-2 4.69E-2 2.34E-2
+mp2: tota     1     1     1    1.5     1.5     1.5      2.8     2.8     2.8     2.8   
+
+ The average no. of pstat calls per process was 5.00E+00
+ with a timing overhead of 1.50E-05s
+
+ Line search: 
+     step= 1.00 grad=-1.4E-08 hess= 5.8E-09 energy=    -75.776678 mode=accept  
+ new step= 1.00                   predicted energy=    -75.776678
+
+          --------
+          Step   3
+          --------
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.05073808    -0.00000262     0.00000000
+    2 H1                   1.0000    -0.52034463     0.82010045     0.00000000
+    3 H2                   1.0000    -0.52034295    -0.82009783     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H1                 1.007825
+      H2                 1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.7949871625
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -1.1995658141    -0.0000346858     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             Cs        
+ Group number              2
+ Group order               2
+ No. of unique centers     3
+
+      Symmetry unique atoms
+
+     1    2    3
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+
+  ao basis        = "ao basis"
+  functions       =    25
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./H2O_freq.movecs
+  output vectors  = ./H2O_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+  The SCF is already converged 
+
+         Total SCF energy =    -75.627688120750
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                     H2O+ : 6-31g** UMP2 geometry optimization
+
+
+  Basis functions       =     25
+  Molecular orbitals    =     25
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =     20
+  Active beta virtual   =     21
+  Use MO symmetry       = T
+  Use skeleton AO sym   = T
+
+  AO/Fock/Back tols     =   1.0E-09  1.0E-09  1.0E-09
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   5:        1276765                          0                     63648.
+
+ Semi-direct pass number   1 of   1  for UHF alpha       at       60.3s
+Node 0 wrote      0.3 Mb in      0.0 s     Agg I/O rate:    26.0 Mb/s
+ Done moints_semi at       60.8s
+ Done maket at       60.8s
+ Done pijab at       60.8s
+ Done wijab at       60.8s
+ Done lai at       60.8s
+ Done nonsep at       62.1s
+ Done multipass loop at       62.1s
+
+ GA uses MA = T    GA memory limited = F
+
+ Available: 
+  local mem=  5.24E+07
+ global mem=  0.00E+00
+ local disk=  2.47E+08
+   1 passes of   4:        1275822                          0                     51669.
+
+ Semi-direct pass number   1 of   1  for UHF beta        at       63.2s
+Node 0 wrote      0.2 Mb in      0.0 s     Agg I/O rate:     0.0 Mb/s
+ Done moints_semi at       63.7s
+ Done maket at       63.7s
+ Done pijab at       63.7s
+ Done wijab at       63.7s
+ Done lai at       63.8s
+ Done nonsep at       65.0s
+ Done multipass loop at       65.0s
+
+
+          -------------------------------------------
+          SCF energy                 -75.627688120750
+          Correlation energy          -0.148989815745
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -75.776677936495
+          -------------------------------------------
+
+                                NWChem CPHF Module
+                                ------------------
+
+
+    scftype = UHF 
+     nalpha =    5
+      nbeta =    4
+  variables =      184
+  tolerance =   1.0E-04
+  max. iter =  100
+
+
+            ----- linear solve (tol: 1.0E-04 prod-acc: 3.0E-10) -----
+
+               iter nbas    rnorm     rnorm-scal   ratio     time
+               ---- ---- ----------- ----------- --------- -------
+                  1    1  1.2482E-02  3.0442E-01    0.0000    50.2
+                  2    2  3.9368E-03  9.6012E-02    0.3154    50.4
+                  3    3  1.2947E-03  3.1576E-02    0.3289    50.6
+                  4    4  3.2092E-04  7.8269E-03    0.2479    50.8
+                  5    5  5.0836E-05  1.2398E-03    0.1584    51.0
+                  6    6  1.2028E-05  2.9334E-04    0.2366    51.2
+                  7    7  2.6464E-06  6.4542E-05    0.2200    51.4
+
+ CPHF converged to   6.5E-05 in    7 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X      -1.199566   -1.052485   -1.022761
+ Y      -0.000035    0.000005    0.000004
+ Z       0.000000    0.000000    0.000000
+
+
+ MP2 alpha    natural orbital occupation numbers
+
+
+              1      
+    1    1.0000
+    2    0.9952
+    3    0.9913
+    4    0.9881
+    5    0.9869
+    6    0.0090
+    7    0.0081
+    8    0.0053
+    9    0.0039
+   10    0.0023
+   11    0.0022
+   12    0.0021
+   13    0.0021
+   14    0.0019
+   15    0.0003
+   16    0.0003
+   17    0.0002
+   18    0.0002
+   19    0.0001
+   20    0.0001
+   21    0.0001
+   22    0.0001
+   23    0.0000
+   24    0.0000
+   25    0.0000
+
+ MP2 beta     natural orbital occupation numbers
+
+
+              1      
+    1    1.0000
+    2    0.9922
+    3    0.9878
+    4    0.9869
+    5    0.0094
+    6    0.0081
+    7    0.0042
+    8    0.0029
+    9    0.0022
+   10    0.0021
+   11    0.0010
+   12    0.0010
+   13    0.0007
+   14    0.0003
+   15    0.0003
+   16    0.0002
+   17    0.0002
+   18    0.0002
+   19    0.0001
+   20    0.0001
+   21    0.0001
+   22    0.0001
+   23    0.0000
+   24    0.0000
+   25    0.0000
+
+  MP2 natural orbitals output to ./H2O_freq.mp2nos
+
+  Using symmetry
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.095881  -0.000005   0.000000    0.000010  -0.000005   0.000000
+   2 H1     -0.983309   1.549765   0.000000   -0.000007   0.000000   0.000000
+   3 H2     -0.983306  -1.549760   0.000000   -0.000003   0.000005   0.000000
+
+                 ----------------------------------------
+                 |  Time  |  1-e(secs)   |  2-e(secs)   |
+                 ----------------------------------------
+                 |  CPU   |       0.00   |       0.85   |
+                 ----------------------------------------
+                 |  WALL  |       0.00   |       0.85   |
+                 ----------------------------------------
+ -----------------------
+ Performance information
+ -----------------------
+
+ Timer overhead =  2.00E-06 seconds/call
+
+               Nr. of calls         CPU time (s)                 Wall time (s)  
+             ---------------    -------------------     ------------------------------
+Name         Min   Avg   Max    Min     Avg     Max     Min     Avg     Max   Mx/calls
+mp2: moin     2     2     2   0.98    0.98    0.98     0.98    0.98    0.98    0.49   
+mp2: make     2     2     2   7.00E-2 7.00E-2 7.00E-2  5.55E-2 5.55E-2 5.55E-2 2.78E-2
+mp2: pija     2     2     2    0.0     0.0     0.0     7.33E-3 7.33E-3 7.33E-3 3.66E-3
+mp2: wija     2     2     2    0.0     0.0     0.0     7.84E-3 7.84E-3 7.84E-3 3.92E-3
+mp2: lai      2     2     2   4.00E-2 4.00E-2 4.00E-2  3.80E-2 3.80E-2 3.80E-2 1.90E-2
+mp2: back     2     2     2   5.00E-2 5.00E-2 5.00E-2  4.32E-2 4.32E-2 4.32E-2 2.16E-2
+mp2: nons     2     2     2    2.2     2.2     2.2      2.3     2.3     2.3     1.1   
+mp2: laif     1     1     1   0.23    0.23    0.23     0.24    0.24    0.24    0.24   
+mp2: cphf     1     1     1    1.7     1.7     1.7      1.7     1.7     1.7     1.7   
+mp2: wijf     1     1     1   0.24    0.24    0.24     0.24    0.24    0.24    0.24   
+mp2: sep      1     1     1   0.96    0.96    0.96     0.96    0.96    0.96    0.96   
+mp2: tota     1     1     1    7.3     7.3     7.3      8.9     8.9     8.9     8.9   
+
+ The average no. of pstat calls per process was 1.90E+01
+ with a timing overhead of 3.80E-05s
+
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    3     -75.77667794 -8.5E-09  0.00001  0.00000  0.00009  0.00016     68.2
+                                     ok       ok       ok       ok  
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       0.99935    0.00000
+    2 Stretch                  1     3                       0.99934    0.00000
+    3 Bend                     2     1     3               110.29660   -0.00001
+
+
+      ----------------------
+      Optimization converged
+      ----------------------
+
+
+  Step       Energy      Delta E   Gmax     Grms     Xrms     Xmax   Walltime
+  ---- ---------------- -------- -------- -------- -------- -------- --------
+@    3     -75.77667794 -8.5E-09  0.00001  0.00000  0.00009  0.00016     68.2
+                                     ok       ok       ok       ok  
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value     Gradient
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       0.99935    0.00000
+    2 Stretch                  1     3                       0.99934    0.00000
+    3 Bend                     2     1     3               110.29660   -0.00001
+
+
+
+                         Geometry "geometry" -> "geometry"
+                         ---------------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.05073808    -0.00000262     0.00000000
+    2 H1                   1.0000    -0.52034463     0.82010045     0.00000000
+    3 H2                   1.0000    -0.52034295    -0.82009783     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H1                 1.007825
+      H2                 1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.7949871625
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -1.1995658141    -0.0000346858     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             Cs        
+ Group number              2
+ Group order               2
+ No. of unique centers     3
+
+      Symmetry unique atoms
+
+     1    2    3
+
+
+                Final and change from initial internal coordinates
+                --------------------------------------------------
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value       Change
+      ----------- --------  ----- ----- ----- ----- ----- ---------- ----------
+    1 Stretch                  1     2                       0.99935   -0.03354
+    2 Stretch                  1     3                       0.99934   -0.03355
+    3 Bend                     2     1     3               110.29660    0.46772
+
+ ==============================================================================
+                                internuclear distances
+ ------------------------------------------------------------------------------
+       center one      |      center two      | atomic units |  angstroms
+ ------------------------------------------------------------------------------
+    2 H1               |   1 O                |     1.88850  |     0.99935
+    3 H2               |   1 O                |     1.88849  |     0.99934
+ ------------------------------------------------------------------------------
+                         number of included internuclear distances:          2
+ ==============================================================================
+
+
+
+ ==============================================================================
+                                 internuclear angles
+ ------------------------------------------------------------------------------
+        center 1       |       center 2       |       center 3       |  degrees
+ ------------------------------------------------------------------------------
+    2 H1               |   1 O                |   3 H2               |   110.30
+ ------------------------------------------------------------------------------
+                            number of included internuclear angles:          1
+ ==============================================================================
+
+
+
+
+ Task  times  cpu:       48.8s     wall:       58.8s
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+                                                                                                                 H2O+ : 6-31g** UMP2 frequencies
+                                                                                                                 -------------------------------
+
+
+
+                   NWChem Nuclear Hessian and Frequency Analysis
+                   ---------------------------------------------
+
+
+
+                         NWChem Finite-difference Hessian
+                         --------------------------------
+
+
+
+ Saving state for mp2 with suffix hess
+        ./H2O_freq.movecs
+
+  
+ initial hessian
+
+ zero matrix
+
+  
+ atom:   1 xyz: 1(+) wall time:      71.3      date:  Sun Oct 17 20:22:46 2004
+
+ atom:   1 xyz: 1(-) wall time:      81.6      date:  Sun Oct 17 20:22:56 2004
+
+ atom:   1 xyz: 2(+) wall time:      91.9      date:  Sun Oct 17 20:23:06 2004
+
+ atom:   1 xyz: 2(-) wall time:     101.8      date:  Sun Oct 17 20:23:16 2004
+
+ atom:   1 xyz: 3(+) wall time:     111.8      date:  Sun Oct 17 20:23:26 2004
+
+ atom:   1 xyz: 3(-) wall time:     122.4      date:  Sun Oct 17 20:23:37 2004
+
+ atom:   2 xyz: 1(+) wall time:     133.1      date:  Sun Oct 17 20:23:47 2004
+
+ atom:   2 xyz: 1(-) wall time:     143.9      date:  Sun Oct 17 20:23:58 2004
+
+ atom:   2 xyz: 2(+) wall time:     154.7      date:  Sun Oct 17 20:24:09 2004
+
+ atom:   2 xyz: 2(-) wall time:     165.3      date:  Sun Oct 17 20:24:20 2004
+
+ atom:   2 xyz: 3(+) wall time:     176.0      date:  Sun Oct 17 20:24:30 2004
+
+ atom:   2 xyz: 3(-) wall time:     187.1      date:  Sun Oct 17 20:24:41 2004
+
+ atom:   3 xyz: 1(+) wall time:     198.6      date:  Sun Oct 17 20:24:53 2004
+
+ atom:   3 xyz: 1(-) wall time:     209.3      date:  Sun Oct 17 20:25:04 2004
+
+ atom:   3 xyz: 2(+) wall time:     220.1      date:  Sun Oct 17 20:25:14 2004
+
+ atom:   3 xyz: 2(-) wall time:     230.5      date:  Sun Oct 17 20:25:25 2004
+
+ atom:   3 xyz: 3(+) wall time:     241.2      date:  Sun Oct 17 20:25:35 2004
+
+ atom:   3 xyz: 3(-) wall time:     252.7      date:  Sun Oct 17 20:25:47 2004
+
+  
+  finite difference hessian delta =   0.001
+
+              1        2        3        4        5        6        7        8
+    1    0.3595   0.0000   0.0000  -0.1797   0.1634   0.0000  -0.1797  -0.1634
+    2    0.0000   0.5973   0.0000   0.2079  -0.2986   0.0000  -0.2079  -0.2986
+    3    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+    4   -0.1797   0.2079   0.0000   0.1623  -0.1857   0.0000   0.0175  -0.0223
+    5    0.1634  -0.2986   0.0000  -0.1857   0.3185   0.0000   0.0223  -0.0199
+    6    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+    7   -0.1797  -0.2079   0.0000   0.0175   0.0223   0.0000   0.1623   0.1857
+    8   -0.1634  -0.2986   0.0000  -0.0223  -0.0199   0.0000   0.1857   0.3185
+    9    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+
+              9      
+    3    0.0000
+    6    0.0000
+    9    0.0000
+  
+
+  finite difference derivative dipole; delta =   0.001
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.1074     [    0.5160]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =     0.4463     [    2.1435]
+ d_dipole_x/<atom=   2,y> =    -0.0533     [   -0.2558]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,x> =     0.4463     [    2.1435]
+ d_dipole_x/<atom=   3,y> =     0.0532     [    0.2558]
+ d_dipole_x/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =    -0.1902     [   -0.9135]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =    -0.0535     [   -0.2569]
+ d_dipole_y/<atom=   2,y> =     0.5951     [    2.8584]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =     0.0535     [    0.2569]
+ d_dipole_y/<atom=   3,y> =     0.5951     [    2.8584]
+ d_dipole_y/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =    -0.0366     [   -0.1756]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.5183     [    2.4894]
+ d_dipole_z/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,z> =     0.5183     [    2.4894]
+  
+  
+  stpr_wrt_fd_from_sq: overwrite of existing file:./H2O_freq.hess
+ stpr_wrt_fd_dipole: overwrite of existing file./H2O_freq.fd_ddipole
+  triangle hessian written to ./H2O_freq.hess
+  derivative dipole written to ./H2O_freq.fd_ddipole
+
+ Deleting state for mp2 with suffix hess
+        ./H2O_freq.movecs
+
+
+
+  Vibrational analysis via the FX method 
+
+  See chapter 2 in "Molecular Vibrations" by Wilson, Decius and Cross
+
+  Vib: Default input used 
+
+  Nuclear Hessian passed symmetry test 
+
+
+
+ ---------------------------- Atom information ----------------------------
+     atom    #        X              Y              Z            mass
+ --------------------------------------------------------------------------
+    O        1  9.5881067E-02 -4.9551204E-06  0.0000000E+00  1.5994910E+01
+    H        2 -9.8330876E-01  1.5497651E+00  0.0000000E+00  1.0078250E+00
+    H        3 -9.8330559E-01 -1.5497602E+00  0.0000000E+00  1.0078250E+00
+ --------------------------------------------------------------------------
+
+
+
+
+          ----------------------------------------------------
+          MASS-WEIGHTED NUCLEAR HESSIAN (Hartree/Bohr/Bohr/Kamu)
+          ----------------------------------------------------
+
+
+              1           2           3           4           5           6           7           8           9
+   ----- ----- ----- ----- -----
+    1   2.24728E+01
+    2   7.82121E-04 3.73403E+01
+    3   0.00000E+00 0.00000E+00 3.55172E-04
+    4  -4.47638E+01 5.17893E+01 0.00000E+00 1.61003E+02
+    5   4.07040E+01-7.43751E+01 0.00000E+00-1.84240E+02 3.16004E+02
+    6   0.00000E+00 0.00000E+00-2.59080E-03 0.00000E+00 0.00000E+00 3.97105E-03
+    7  -4.47655E+01-5.17924E+01 0.00000E+00 1.73275E+01 2.20794E+01 0.00000E+00 1.61009E+02
+    8  -4.07071E+01-7.43785E+01 0.00000E+00-2.20842E+01-1.97075E+01 0.00000E+00 1.84252E+02 3.16017E+02
+    9   0.00000E+00 0.00000E+00-1.77281E-03 0.00000E+00 0.00000E+00 6.35220E-03 0.00000E+00 0.00000E+00 7.10338E-04
+
+
+
+          -------------------------------------------------
+          NORMAL MODE EIGENVECTORS IN CARTESIAN COORDINATES
+          -------------------------------------------------
+                 (Frequencies expressed in cm-1)
+
+                    1           2           3           4           5           6
+ 
+ Frequency        -10.57       -4.18       -4.09        3.35        9.50       16.19
+ 
+           1     0.00000     0.00000     0.21318    -0.09880     0.01770     0.00000
+           2     0.00000     0.00000     0.07658     0.18814     0.12793     0.00000
+           3    -0.01220     0.23731     0.00000     0.00000     0.00000    -0.07783
+           4     0.00000     0.00000     0.34046     0.07781    -0.52946     0.00000
+           5     0.00000     0.00000     0.16521     0.31112    -0.25307     0.00000
+           6    -0.61896     0.21431     0.00000     0.00000     0.00000     0.75047
+           7     0.00000     0.00000     0.08591    -0.27541     0.56487     0.00000
+           8     0.00000     0.00000     0.16521     0.31113    -0.25310     0.00000
+           9     0.77895     0.22927     0.00000     0.00000     0.00000     0.57698
+
+                    7           8           9
+ 
+ Frequency       1484.83     3460.17     3551.47
+ 
+           1    -0.06910    -0.04713    -0.00002
+           2     0.00000     0.00004    -0.06993
+           3     0.00000     0.00000     0.00000
+           4     0.54837     0.37422    -0.38625
+           5     0.39690    -0.58217     0.55466
+           6     0.00000     0.00000     0.00000
+           7     0.54835     0.37384     0.38663
+           8    -0.39689     0.58160     0.55525
+           9     0.00000     0.00000     0.00000
+
+
+
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||         Derivative Dipole Moments (debye/angs)
+  Mode   [cm**-1]  ||      [d/dqX]             [d/dqY]           [d/dqZ]
+ ------ ---------- || ------------------ ------------------ -----------------
+    1      -10.568 ||       0.000               0.000             0.400
+    2       -4.183 ||       0.000               0.000             1.063
+    3       -4.091 ||       1.024               0.809             0.000
+    4        3.353 ||      -0.475               1.516             0.000
+    5        9.496 ||       0.085              -1.283             0.000
+    6       16.195 ||       0.000               0.000             3.318
+    7     1484.828 ||       2.112               0.000             0.000
+    8     3460.165 ||       1.877              -0.002             0.000
+    9     3551.471 ||       0.001               3.435             0.000
+ ----------------------------------------------------------------------------
+
+
+
+  
+  
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||                 Infra Red Intensities
+  Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]
+ ------ ---------- || -------------- ----------------- ---------- -----------
+    1      -10.568 ||    0.006950           0.160         6.775       0.380
+    2       -4.183 ||    0.048941           1.129        47.710       2.677
+    3       -4.091 ||    0.073822           1.703        71.966       4.038
+    4        3.353 ||    0.109387           2.524       106.636       5.983
+    5        9.496 ||    0.071620           1.652        69.818       3.917
+    6       16.195 ||    0.477252          11.011       465.249      26.104
+    7     1484.828 ||    0.193366           4.461       188.503      10.576
+    8     3460.165 ||    0.152678           3.522       148.838       8.351
+    9     3551.471 ||    0.511436          11.799       498.573      27.974
+ ----------------------------------------------------------------------------
+
+
+
+
+
+        Vibrational analysis via the FX method 
+  --- with translations and rotations projected out ---
+  --- via the Eckart algorithm                      ---
+ Projected Nuclear Hessian trans-rot subspace norm:3.3930E-32
+                         (should be close to zero!) 
+
+
+>From the projected analysis 
+The Zero-Point Energy (Kcal/mol) =          12.14995567
+
+ center of mass
+ --------------
+ x =  -0.02489618 y =  -0.00000412 z =   0.00000000
+
+ moments of inertia (a.u.)
+ ------------------
+           4.841116199835           0.000019318304           0.000000000000
+           0.000019318304           2.084798656427           0.000000000000
+           0.000000000000           0.000000000000           6.925914856262
+
+ Rotational Constants
+ --------------------
+ A=  28.875774 cm-1  ( 41.544870 K)
+ B=  12.435185 cm-1  ( 17.891058 K)
+ C=   8.692018 cm-1  ( 12.505595 K)
+
+
+ Temperature                      =   298.15K
+
+ Zero-Point correction to Energy  =   12.141 kcal/mol  (  0.019347 au)
+ Thermal correction to Energy     =   13.920 kcal/mol  (  0.022184 au)
+ Thermal correction to Enthalpy   =   14.513 kcal/mol  (  0.023127 au)
+
+ Total Entropy                    =   46.623 cal/mol-K
+   - Translational                =   34.593 cal/mol-K (mol. weight =  18.0106)
+   - Rotational                   =   12.018 cal/mol-K (symmetry #  =        1)
+   - Vibrational                  =    0.013 cal/mol-K
+
+ Cv (constant volume heat capacity) =    6.038 cal/mol-K
+   - Translational                  =    2.979 cal/mol-K
+   - Rotational                     =    2.979 cal/mol-K
+   - Vibrational                    =    0.079 cal/mol-K
+
+
+
+          -------------------------------------------------
+          NORMAL MODE EIGENVECTORS IN CARTESIAN COORDINATES
+          -------------------------------------------------
+             (Projected Frequencies expressed in cm-1)
+
+                    1           2           3           4           5           6
+ 
+ P.Frequency        0.00        0.00        0.00        0.00        0.00        0.00
+ 
+           1     0.03301     0.00000     0.00000     0.00000    -0.02102     0.23236
+           2     0.08894     0.00000     0.00000     0.00000     0.22285     0.00752
+           3     0.00000     0.25004     0.00000     0.00000     0.00000     0.00000
+           4     0.52205     0.00000     0.00000     0.00000    -0.33416     0.13455
+           5     0.42948     0.00000     0.00000     0.00000     0.00480    -0.06059
+           6     0.00000     0.00000     0.00000     0.99611     0.00000     0.00000
+           7    -0.45602     0.00000     0.00000     0.00000     0.29212     0.33017
+           8     0.42948     0.00000     0.00000     0.00000     0.00480    -0.06059
+           9     0.00000     0.00000     0.99611     0.00000     0.00000     0.00000
+
+                    7           8           9
+ 
+ P.Frequency     1484.82     3460.16     3551.49
+ 
+           1    -0.06910    -0.04713    -0.00002
+           2     0.00000     0.00004    -0.06993
+           3     0.00000     0.00000     0.00000
+           4     0.54836     0.37422    -0.38625
+           5     0.39689    -0.58217     0.55465
+           6     0.00000     0.00000     0.00000
+           7     0.54836     0.37383     0.38664
+           8    -0.39690     0.58160     0.55525
+           9     0.00000     0.00000     0.00000
+
+
+
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||    Projected Derivative Dipole Moments (debye/angs)
+  Mode   [cm**-1]  ||      [d/dqX]             [d/dqY]           [d/dqZ]
+ ------ ---------- || ------------------ ------------------ -----------------
+    1        0.000 ||       0.159               2.123             0.000
+    2        0.000 ||       0.000               0.000            -0.044
+    3        0.000 ||       0.000               0.000             2.480
+    4        0.000 ||       0.000               0.000             2.480
+    5        0.000 ||      -0.101              -0.015             0.000
+    6        0.000 ||       1.116              -0.303             0.000
+    7     1484.824 ||       2.112               0.000             0.000
+    8     3460.160 ||       1.877              -0.002             0.000
+    9     3551.489 ||       0.001               3.435             0.000
+ ----------------------------------------------------------------------------
+
+
+
+  
+  
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||           Projected Infra Red Intensities
+  Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]
+ ------ ---------- || -------------- ----------------- ---------- -----------
+    1        0.000 ||    0.196414           4.531       191.474      10.743
+    2        0.000 ||    0.000084           0.002         0.081       0.005
+    3        0.000 ||    0.266529           6.149       259.826      14.578
+    4        0.000 ||    0.266530           6.149       259.827      14.578
+    5        0.000 ||    0.000452           0.010         0.441       0.025
+    6        0.000 ||    0.057967           1.337        56.509       3.171
+    7     1484.824 ||    0.193367           4.461       188.504      10.576
+    8     3460.160 ||    0.152676           3.522       148.837       8.351
+    9     3551.489 ||    0.511432          11.799       498.569      27.973
+ ----------------------------------------------------------------------------
+
+
+
+ vib:animation  F
+
+ Task  times  cpu:      163.6s     wall:      196.1s
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+ Summary of allocated global arrays
+-----------------------------------
+  No active global arrays
+
+
+
+                         GA Statistics for process    0
+                         ------------------------------
+
+       create   destroy   get      put      acc     scatter   gather  read&inc
+calls: 2.19e+04 2.19e+04 1.09e+06 2.32e+05 2.54e+05 4888        0        0     
+number of processes/call 1.00e+00 1.00e+00 1.00e+00 1.00e+00 0.00e+00
+bytes total:             1.18e+08 6.07e+07 3.55e+07 2.80e+06 0.00e+00 0.00e+00
+bytes remote:            0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+Max memory consumed for GA by this process: 315056 bytes
+
+MA_summarize_allocated_blocks: starting scan ...
+MA_summarize_allocated_blocks: scan completed: 0 heap blocks, 0 stack blocks
+MA usage statistics:
+
+	allocation statistics:
+					      heap	     stack
+					      ----	     -----
+	current number of blocks	         0	         0
+	maximum number of blocks	        61	        51
+	current total bytes		         0	         0
+	maximum total bytes		   1066044	  38460628
+	maximum total K-bytes		      1067	     38461
+	maximum total M-bytes		         2	        39
+
+
+
+                                  ACKNOWLEDGEMENT
+                                  ---------------
+
+            Please use the following acknowledgement where appropriate 
+            for results obtained with NWChem:
+
+            High Performance Computational Chemistry Group, "NWChem, A
+            Computational Chemistry Package for Parallel Computers, 
+            Version 4.6" (2004), Pacific Northwest National Laboratory,
+            Richland, Washington 99352-0999, USA.
+
+
+                                     CITATION
+                                     --------
+
+            Please use the following citation when publishing results
+            obtained with NWChem:
+
+            T. P. Straatsma, E. Apra, T. L. Windus, E. J. Bylaska, W. de Jong,
+            S. Hirata, M. Valiev, M. T. Hackler, L. Pollack, R. J. Harrison,
+            M. Dupuis, D. M. A. Smith, J. Nieplocha, V. Tipparaju,
+            M. Krishnan, A. A. Auer, E. Brown, G. Cisneros, G. I. Fann,
+            H. Fruchtl, J. Garza, K. Hirao, R. Kendall, J. A. Nichols,
+            K. Tsemekhman, K. Wolinski, J. Anchell, D. Bernholdt, P. Borowski,
+            T. Clark, D. Clerc, H. Dachsel, M. Deegan, K. Dyall, D. Elwood,
+            E. Glendening, M. Gutowski, A. Hess, J. Jaffe, B. Johnson, J. Ju,
+            R. Kobayashi, R. Kutteh, Z. Lin, R. Littlefield, X. Long, B. Meng,
+            T. Nakajima, S. Niu, M. Rosing, G. Sandrone, M. Stave, H. Taylor,
+            G. Thomas, J. van Lenthe, A. Wong, and Z. Zhang,
+            "NWChem, A Computational Chemistry Package for Parallel Computers, 
+            Version 4.6" (2004),
+                      Pacific Northwest National Laboratory,
+                      Richland, Washington 99352-0999, USA.
+
+
+
+ Total times  cpu:      216.4s     wall:      264.4s

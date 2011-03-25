@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>jmol applet nanotech demo</title>
+    <script src="../../jmol/Jmol.js"></script>
+    <script src="./nanotech.js"></script>
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <form>
+      <table border="1">
+	<tr>
+	  <td>
+	    <h2>nanotechnology</h2>
+	    <script>
+	      jmolApplet(400, "load fineMotion970116.pdb.gz; cpk off");
+	    </script>
+	  </td>
+
+	  <td>
+	    These images are advanced nano-technology designs taken from
+	    <a href="http://www.imm.org">http://www.imm.org</a><br />
+	    
+	    <script>
+	      createControls(
+	        "wireframe bonds",
+	        "silicon",
+	        "phosphorus",
+	        "oxygen",
+	        "carbon",
+	        "nitrogen",
+	        "sulfur",
+	        "hydrogen");
+	    </script>
+	    <hr />
+	    <i>
+	      <script>
+		jmolCheckbox("set spin x 10; set spin y 10; spin on", "spin off", "spin it!");
+	      </script>
+	    </i>
+	  </td>
+	</tr>
+      </table>
+    </form>
+  </body>
+</html>

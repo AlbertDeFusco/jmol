@@ -1,0 +1,909 @@
+<html>
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script type="text/javascript" src="Jmol.js"></script>
+<script type="text/javascript" src="new.js"></script>
+<script type="text/javascript">
+
+function callback(a, b, c, d, e, f, g, h, i, j){
+alert("a = " + a + " b = " + b + " c = " + c + " d = " + d + " e =" + e + " f = " + f + " g = " + g + " h = " + h + " i = " + i + " j = " + j)
+}
+messagecallback="showmsg"
+animcallback=""
+loadstructcallback=""
+
+delayms = 100; delayms0 = 1000
+polling = false;
+
+
+
+
+//logLevel=0  // 4 is standard ;1 gives fatal errors only; 2 gives all errors;
+              // 3 gives errors and warnings; 4 gives errors, warnings and information; 5 adds debug.
+
+//<![CDATA[
+//model = "http://www.rcsb.org/pdb/files/1blu.pdb"
+title="ATOMS";
+model=';load quartz.cif {1 1 1}; zoom 150;wireframe on; spacefill off; ellipsoids on;'
+//model="tp.pdb;zoom 800;"
+docsearch = document.location.search.substring(1)
+if(docsearch.indexOf("model=")>=0)model=unescape(docsearch.split("model=")[1].split("&")[0])
+
+latestVersion = '### Be sure you have the <a href=http://jmol.sourceforge.net/files>Latest version</a>. Very latest may appear here: <a href=http://www.stolaf.edu/academics/chemapps/jmol/docs/examples-11/Jmol-11_5.zip>Jmol-11_5.zip</a>###'
+
+/*
+
+TODO:
+
+#version=11.5.43
+
+
+# new feature: quaterion % point4f --- "thetaDirected" -- 
+#   point4f is {x, y, z, w} (w ignored), where {x y z} is a
+#   preferred direction. 
+#   Returns a point4f angle-Axis equivalent with x, y, z the normal for the quaternion
+#   rotation and w = theta for the rotation, where the normal and theta are chosen
+#   to be directed with a positive dot product between the input {x y z}
+#   vector and the output {x y z}.
+#
+# thus, because the negative angle switches the normal:  
+#
+#   print quaternion({1 0 0}, -20) % 1 ==> {-1 0 0}; %1 ==> 20
+#
+# but % {1 0 0 0} forces the angle associated with {1 0 0} to be reported 
+#
+#   print quaternion({1 0 0}, -20) % {1 0 0 0} ==> {1 0 0 20}
+#
+
+# new feature: extended quaternion math
+#
+#   q = quaternion({x y z}, angleDegrees)
+#   q = quaternion(q0, q1, q2,q3)
+#   q = {qx, qy, qz, qw}
+#
+# returning component values: 
+#
+#   q.x, q.y, q.z, q.w
+#
+# note that the Point4f equivalent stores w LAST, even though it is "q0" 
+# because the Java Quat4f() and Point4f() both do that as well. We're just
+# being consistent with other Java use.
+#
+# Modulus operator for extended information retrieval:
+#
+#   (q%0) -- q0 (w)
+#   (q%1) -- q1 (x)
+#   (q%2) -- q2 (y)
+#   (q%3) -- q3 (z)
+#   (q%-1) -- the vector {q1, q2, q3}
+#   (q%-2) -- theta
+#   (q%-3) -- equivalent rotational frame X-axis 
+#   (q%-4) -- equivalent rotational frame Y-axis 
+#   (q%-5) -- equivalent rotational frame Z-axis 
+#   (q%{x y z})  -- rotational transform of a point or vector based on a quaternion
+#
+# thus, for example, (q%{1 0 0}) is the same as (q%-3)
+#
+#   (!q) -- quaternion inverse
+#
+# 
+# Quaternion right division (difference "dq"):
+#
+#   q2 / q1 = q2 * (!q1)
+#
+# Quaternion left division (relative difference n):
+#
+#   q2 \ q1 = (!q1) * q2
+#
+# Examples:
+#
+#   q = quaternion({1 1 1},120)
+#   print "" + (q%{1 0 0}) + " " + (q%{0 1 0}) + " " + (q%{0 0 1})    
+#
+#   {0 1.0 0} {0 0 1.0} {1.0 0 0}
+#
+
+#version=11.5.42
+
+# new feature: "quaternion derivative" --> "quaternion difference", which is more
+# appropriate, we think, with "absolute" and "relative" qualifiers:
+# 
+#   quaternion absolute difference # in the molecular frame
+#   quaternion relative difference # in the (local) frame of first quaternion:
+#
+#   dq_absolute = q2 * q1_inverse
+#   dq_relative = q1_inverse * q2
+#
+# absolute involves un-doing q1's rotation (making it the reference frame), then applying q2.
+# relative involves applying q2 (maintaining the original reference frame), then undoing q1.
+# 
+# new feature: quaternion [w|x|y|z|a|r] [difference][2] [draw]
+# new feature: draw quaternion [w|x|y|z|a|r] [difference][2]
+# new feature: write quaternion [w|x|y|z|a|r] [difference][2] [draw]
+#   and with that: write("quaternion" [,"w"|"x"|"y"|"z"|"a"|"r"][,"difference"|"difference2"][,"draw"])
+#
+# new feature: set quaternionFrame "N" -- for solid state NMR PISEMA 15N chemical shift frame
+#  using alpha = 0 and beta = 17 degrees.
+#
+
+version=11.5.40
+
+# new feature: quaternion difference2 (2nd derivative) and quaternion r difference[2]
+*/
+
+Scripts=new Array(" "
+,'This page lists all new features introduced in Jmol 11.6.' 
++' Other pages describe features <a href=new.htm>currently in development</a>,'
++' between <a href=new4.htm>Jmol 11.4 and Jmol 11.2</a> and'
++' between <a href=new2.htm>Jmol 11.2 and Jmol 11.0</a>.'
++' Documentation for all commands can be found in the <a href=../index.htm?ver=11.6>Interactive Documentation for Jmol 11.6</a>.'
++' Documentation is also available for both <a target=_blank href=../index.htm?ver=11.2>Jmol 11.2</a> and <a target=_blank href=../index.htm?ver=11.4>Jmol 11.4</a>.'
++' For the complete change log development summary, see <a href=http://jmol.svn.sourceforge.net/viewvc/jmol/trunk/Jmol/src/org/jmol/viewer/Jmol.properties?view=markup>Jmol.properties</a>.'
++' Comments? Suggestions? <a href=mailto:hansonr@stolaf.edu>Bob Hanson</a>'
+
+,latestVersion
+
+,'### signed applet/application file open dialog using "?" ###'
+,'# With Jmol 11.6.RC15 one can allow the user to browse local files (with preview) or load remote URLs from a file open dialog box. Simply include "?" alone or at the beginning of a file name in the load, script, or write command. You can test this out using <a href=simple.htm>simple.htm</a>.'
+
+,'### signed applet load/save file/state/image dialogs ###'
+,'# Jmol 11.6.RC15 allows the signed applet to save files, provided the user has interacted with the file dialog and approved the operation. See <a href=simple.htm>simple.htm</a>.'
+
+
+,'### PDB support for mol2 format ###'
+,'# Jmol 11.6.RC15 reads PDB information (residue name and number, partial charges) from mol2 files that have been created by VMD and other software. This allows cartoons to be created for these mol2 models. Note that mol2 files do not distinguish chains and do not identify exact atom element symbol. Jmol will assign chains starting with A, changing chains only when residue numbers reset to lower numbers in the file. Jmol will make its best estimate of the proper atom element symbol. However, there may be instances involving hetero residues for which element symbol is misassigned. Thus, mol2 should not be considered to be a substituted for pdb format.' 
+,'load 1crn.mol2;cartoons only; color structure'
+,'load asp.mol2;isosurface molecular map mep translucent'
+
+,'### signed applet can write files ###'
+,'# Jmol 11.6.RC14 allows writing to local files from the signed applet using the WRITE command. See <a href=simple.htm>simple.htm</a> for an example. Simply enter "write t.jpg" in the execution box and press "execute". User action is required to accept the file writing.'
+
+,'### set bondPicking; set atomPicking ###'
+,'# Jmol 11.6.RC12 adds options to turn on or off atom or bond picking.'
+,'set bondpicking TRUE; #now pick a bond'
+,'set atompicking FALSE; # now try to pick an atom'
+,'set atompicking true; set bondpicking false # the default'
+
+
+,'### hide/display/delete/color $objectID ###'
+,'# Jmol 11.6.RC7 allows object IDs in hide, display, delete, and color commands. Wildcards are allowed at the beginning or end only. The actions act solely on the indicated objects, without respect to whatever other objects might be hidden or displayed. This is in contrast to the actions of hide and display for atoms, which follow the rules of select and restrict in hiding or displaying (selecting or restricting) ONLY the specified atoms.'
+,'load C6H6.smol;draw pointgroup;moveto /* time, axisAngle */ 1.0 { -973 -69 -221 55.21} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {0.0 0.0 0.0} 3.657167 /* navigation center, translation, depth */ {0.0 0.0 0.0} 0.0 0.0 50.0;'
+,'hide $pgvp_*'
+,'display $*ring'
+,'color $*ring yellow'
+,'display $*'
+
+,'### draw ramachandran ###'
+,'# Jmol 11.6.RC7 displays planes along with the dihedral angle arrows.' 
+,'load 1crn.pdb;restrict none;select helix;backbone on;calculate hbonds;center within(structure,12)'
+,'draw ramachandran;moveto  1.0 { 333 729 -598 138.06}   185.41 0.0 0.0   {10.5935 10.2105 6.079} 17.392593  {0.0 0.0 0.0} -23.626974 -26.568176 50.0;'
+
+,'### set echo IMAGE, background IMAGE ###'
+,'# With Jmol 11.6.RC2/RC5, you can add images to Jmol using the <b>set echo</b> command. In this case, the ECHO command itself is not required. The "background" color for an echo image is the color that will be OMITTED. By default Jmol takes the color of the first pixel of the image as the color to make transparent. To force Jmol to display all colors, set the background for the echo to be a color not present in the image. As with text echos, image echos scale if <b>set fontscaling true</b> is invoked prior to creating the image echo.'
+,'load caffeine.xyz;spacefill off;set fontScaling true;'
+,'set echo astar @{{oxygen}[1]};set echo astar center;set echo astar IMAGE "star2.gif"'
+,'set echo mybackground [0 0];set echo depth 0;background echo red;set echo mybackground image "blueshade.png" # no stretching here'
+,'load caffeine.xyz;background IMAGE "bund-sightseeing-tunnel.jpg";moveto /* time, axisAngle */ 3.0 { -601 213 -770 139.93} /* zoom, translation */  5.0 8.0 4.29  /* center, rotationRadius */ {-0.23140144 0.61279976 0.071704745} 5.580881 /* navigation center, translation, depth */ {0.0 0.0 0.0} 7.8828473 4.1763 50.0; moveto /* time, axisAngle */ 5.0 { -667 112 -737 124.83} /* zoom, translation */  249.9 0.0 0.0  /* center, rotationRadius */ {-0.23140144 0.61279976 0.071704745} 5.580881 /* navigation center, translation, depth */ {0.0 0.0 0.0} -4.426762 -1.8827733 50.0;set echo me [0 0];delay 2;set echo me image "bob1.png";delay 2;set echo me image "bob2.png";delay 0.3;set echo me image "bob1.png";delay 2;set echo me off;'
+,'background IMAGE none'
+
+,'### set dotDensity ###'
+,'# Jmol 11.6.RC3 allows setting of dot density factors 0 - 6. These factors determine at what screen pixel-per-micron level Jmol automatically doubles or halves the dot density. Setting this value to 6 forces Jmol to always use the highest density of dots.'
+,'load 1crn.pdb;dots on'
+,'set dotDensity 6 # now adjust the zoom'
+,'set dotDensity 5 # now adjust the zoom'
+,'set dotDensity 4 # now adjust the zoom'
+,'set dotDensity 3 # now adjust the zoom'
+,'set dotDensity 2 # now adjust the zoom'
+,'set dotDensity 1 # now adjust the zoom'
+,'set dotDensity 0 # now adjust the zoom'
+
+,'### ONLY keyword for rendering ###'
+,'# Jmol 11.6.RC1 introduces the "ONLY" keyword for backbone, cartoons, dots, geosurface, halos, meshribbons, ribbons, rockets, spacefill, stars, strands, trace, and wireframe. The default "ON" rendering is produced.'
+,'load 1crn.pdb'
+,'cartoons only'
+,'rockets only'
+,'backbone only'
+,'wireframe only;'
+,'spacefill only;spacefill 0.3'
+
+,'### calculate/draw/write pointGroup ###'
+,'# As an outgrowth of the BCCE conference, Jmol 11.5.52 can determine the point group (C4v, D3d, S4, etc.) of a symmetrical or nearly symmetrical molecule. "Calculate" does the calculation and simply echos the point group name; "draw" produces the lines and planes; "show" produces a tabular listing of symmetry elements; "write pointgroup draw" delivers the draw script commands either to the console or (in the case of the Jmol application) to a file. There is a certain amount of tolerance built into the system so that slightly nonsymmetrical molecules will be considered symmetrical. Future versions of Jmol may allow these tolerances to be adjustable. The calculation is dynamic -- if the structure is modified, then any current point group calculation is nullified. Drawing symmetry elements automatically sets perspectiveDepth false so that the positions of the drawn lines and curves are not distorted by the perspective calculation. There is a limitation of 100 atoms that for now is not negotiable. If a structure has more than 100 atoms, you should first select fewer atoms (for example, using <b>select not hydrogen</b>). With "draw" you can also specify specific axes or planes using keywords Cs, Ci, Cn, Sn, C2, C3, S4, etc., optionally followed by an index number, and you can also set the scale.' 
+,'load d4d.xyz;calculate pointgroup;'
+,'draw pointgroup'
+,'load ih.xyz;calculate pointgroup;'
+,'draw pointgroup'
+,'show pointgroup'
+,'write pointgroup'
+,'write pointgroup draw'
+,'load c2h.xyz;draw pointgroup;rotate x -80;'
+,'load d3h.xyz;draw pointgroup;rotate x -80;'
+,'load c6.xyz;select not hydrogen;draw pointgroup;rotate x -80;'
+,'load c5v.xyz;draw pointgroup;rotate x -80;'
+,'load c6v.xyz;draw pointgroup;rotate x -80;'
+,'load ih.xyz;draw pointgroup;zoomto 1 50;'
+,'load d3h.xyz;draw pointgroup scale 0.5;rotate x -80;'
+,'load d3h.xyz;draw pointgroup Cs;rotate x -80;'
+,'load d3h.xyz;draw pointgroup Cn scale 0.6;rotate x -80;'
+,'load d3h.xyz;draw pointgroup C3 scale 0.6;rotate x -80;'
+,'load d3h.xyz;draw pointgroup C2 scale 0.6;rotate x -80;'
+,'load d3h.xyz;draw pointgroup C2 1 scale 0.6;rotate x -80;'
+,'load d3h.xyz;draw pointgroup C2 2 scale 0.6;rotate x -80;'
+,'load d3h.xyz;draw pointgroup C2 3 scale 0.6;rotate x -80;'
+
+
+
+,'### dipole/draw/ellipsoid/isosurface/pmesh ID xxx and new $"xxx" syntax ###'
+,'# Jmol 11.5.49 adds the explicit ID keyword for dipole, draw, ellipsoid, isosurface, and pmesh. This keyword now allows for variable definition of IDs for these objects, streamlining programmed scripting and allowing for a broader range of ID names. Draw object names can be referenced using dollar sign and quotes -- $"..." -- which then allows for variable definitions of object references, such as $@x or $@{"pt"+i}.'
+,'load caffeine.xyz'
+,'draw ID x {0 0 0} {1 1 1}'
+,'color $"x" white'
+,'id="x";color $@id yellow'
+,'i = 3; draw ID @{"pt"+i} {0 0 0}'
+,'color $pt3 blue'
+,'color $@{"pt"+i} yellow'
+
+,'### draw {point} PLANE [plane definition] ###'
+,'# Jmol 11.5.49 adds the option to draw a line or arrow from any point to the nearest point in a plane defined in any one of several ways.'
+,'load caffeine.xyz;'
+,'draw {atomno=3} PLANE x=5'
+,'draw {atomno=3} PLANE xz'
+,'draw {atomno=3} PLANE z=3'
+,'draw {atomno=3} PLANE {0 1 0 0}'
+,'wireframe;spacefill off;moveto /* time, axisAngle */ 1.0 { -416 -590 692 67.63} /* zoom, translation */  222.91 11.43 -63.14  /* center, rotationRadius */ {-0.23140144 0.61279976 0.071704745} 5.580881 /* navigation center, translation, depth */ {0.0 0.0 0.0} 20.637098 -59.3377 50.0; draw p0 {h14} {h15} {h1}; draw p1 {c10} PLANE {h14} {h15} {h1};print "The distance of this line is " + (0.0 + ($p1[2] - $p1[1]))%2 + " Angstroms"'
+
+,'### draw arc; draw arrow arc ###'
+,'# Jmol 11.5.47 adds curved circular arcs and arrows for the draw command. Arc definition involves designating a line (two points) about which the arc is to appear and a starting reference point. Three additional parameters, in the form of {theta, nDegress, fractionalOffset} designate a starting angle, a number of degrees of arc, and a distance from the first atom listed in a direction toward the second atom. The direction of the angle depends upon your perspective preference. Seen looking down the axis with the second atom in front of the first atom (the standard mathematical perspective), the angle measures positive in an anticlockwise sense. Seen looking down the axis with the first atom in front of the second (common in organic chemistry), a positive rotation involves a clockwise rotation.' 
+,'load caffeine.xyz;moveto /* time, axisAngle */ 1.0 { -868 109 485 114.55} /* zoom, translation */  222.91 0.0 0.0  /* center, rotationRadius */ {-0.23140144 0.61279976 0.071704745} 5.580881 /* navigation center, translation, depth */ {0.0 0.0 0.0} 10.685359 -5.0345592 50.0;'
+,'draw arrow arc {c10} {n4} {h15} {0 -60 0} "    -60" # listing the NEAR atom first: negative is anticlockwise'
+,'draw arrow arc {n4} {c10} {h14} {-60 60 0.5} "60" # listing the REAR atom first: positive is anticlockwise'
+,'draw arrow arc scale 0.5 {n4} {c10} {h14} {-60 60 0.5} "60" # scaling can be used to change the radius of the arc'
+
+,'### ramachandran r; draw RAMACHANDRAN; write RAMACHANDRAN DRAW ###'
+,'# Jmol 11.5.43 adds a new way of visualizing Ramachandran plots in 3D -- Ramachandran relative, or <b>ramachandran r</b>. The z-axis (initially toward the viewer) is calculated to be psi[i] + phi[i+1] - psi[i-1] - phi[i] and represents the projection of the "absolute difference of the relative quaternion difference using the C-alpha frame -- (q[i] \\ q[i+1])  / (q[i-1] \\ q[i]) -- which can also be viewed using <b>quaternion r difference2</b>. Due to the unique nature of protein amino acid orientations, in general this number corresponds to the extent to which the amino acid residue is in an unstructured environment, with values close to 0 (near the XY plane) being more likely to be in the core of a helix or sheet, with values far from zero either not really being part of a helix or sheet (if so marked) or perhaps the last residue in a helix or sheet. Jmol 11.5.46 adds to that the capability of quickly drawing PHI and PSI angles for proteins.'
+,'load 1crn.pdb;'
+,'ramachandran r;moveto /* time, axisAngle */ 1.0 { -975 186 124 81.15} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {0.0 0.0 0.0} 260.0 /* navigation center, translation, depth */ {0.0 0.0 0.0} 0.0 0.0 50.0;'
+,'frame 1.1;display backbone and (10,11);center 10,11;select 11;draw ramachandran;moveto /* time, axisAngle */ 1.0 { 752 235 -615 65.36} /* zoom, translation */  799.56 27.71 9.71  /* center, rotationRadius */ {8.933176 3.785294 7.8621764} 21.560703 /* navigation center, translation, depth */ {0.0 0.0 0.0} -133.3468 -145.45145 50.0; # generate arrows.'
+,'frame 1.1;select 4;write ramachandran draw # get a listing of the arrows.'
+
+,'### measure involving atoms and points ###'
+,'# Jmol 11.5.38 adds the capability to measure between drawn objects (such as points, lines, arrows, curves, and planes) and atoms. For now the measurements are only provisionally displayed -- when the user finishes the measurement, the measurement disappears. Jmol 11.5.46 adds the capability to save such measurements. The feature is enabled using <b>set drawPicking TRUE</b>.'
+,'load caffeine.xyz;'
+,'draw pt1 {0 0 0};draw line1 {2 2 2} {2 3 4};set drawPicking TRUE;javascript "alert(\'Now double-click an atom or drawn point and measure distances or angles involving other atoms and drawn points.\')"'
+,'measure {atomno=3} {0 0 0} {atomno=5}'
+
+,'### isosurface functionXY for mapping###'
+,'# Jmol 11.5.46 adds functionXY as a mapping source.That is, you can take any object such as a surface, a sphere, a plane, another function -- anything -- and map it with color based on a function f(x,y). See <a href=isosurface.htm>isosurface.htm</a>.'
+
+,'### within("branch", {a}, {b}); rotate branch {...} {...} ###'
+,'# Jmol 11.5.46 adds "branch" to the options of within() <b>as a math function</b>. The selected atoms are those connected directly or indirectly to {b} but not {a}. Typically one would choose two atoms, a and b, where b is bonded to a. This allows easy specification of chains that might later be rotated selectively. Since this version of the <b>within</b> function is Jmol math-only, it must be encapsulated in "@{}" if used in a select command. The function is used in <a href=helix.htm>helix.htm</a>. In addition, you can easily rotate around a bond using the <b>rotate branch</b> command option.'
+,'load ala_5_180_0.pdb'
+,'select @{within("branch",{[ala]4.N}, {[ala]4.CA})};selectionHalos on;'
+,'select @{within("branch",{[ala]4.CA}, {[ala]4.N})};selectionHalos on;'
+,'rotateSelected {[ala]4.CA} {[ala]4.N} -10;'
+,'rotate branch {[ala]3.CA} {[ala]3.N} -10;'
+
+,'### show info; show residues; show sequence; show chains; show groups; show atoms; show rotation; show translation; show orientation moveto ###'
+,'# In connection with developing <a href=jmol.proteinExplorer.org>Jmol Protein Explorer</a>, several Chime-related commands were introduced in Jmol 11.5.39 and 11.5.45.'
++' In addition to those listed below, <b>set messageStyleChime</b> gives a slightly different message output format, including a more descriptive message upon atom picking:   '
++' <b> Atom: xxx Group: xxx Chain: xxx Model: xxx Coordinates: x y z</b>'
+,'load 1crn.pdb;show info'
+,'select 1-5;show residues'
+,'show sequence'
+,'show groups # note that groups are listed only once, in the order N--C.'
+,'show atoms'
+,'show selected'
+,'load 1bna.pdb;rotate x 30;select *;show chains'
+,'show rotation # as a quaternion'
+,'show translation # as an x y pair'
+,'show orientation moveto # just the moveto part; no comments'
+,'set pdbGetHeader true # no overt effect, but it saves the file header (otherwise Jmol attempts to re-read the file in order to recover the PDB header when requested.'
+
+,'### rotate quaternion and rotate axisAngle ###'
+,'# Jmol 11.5.45 allows easy rotation using axisAngles or quaternions that might have been calculated.'
+,'rotate quaternion {0 1 0 1} # x y z w # 90-degree anticlockwise rotation around y'
+,'rotate axisAngle {1 0 0 45} # x y z theta # 45-degree rotation about x'
+,'q = {0 0 1 1};rotate quaternion @{q/2} # 45-degree rotation about z'
+
+,'### draw lines, vectors, and arrows from point to plane ###'
+,'# With Jmol 11.5.45/11.5.48, one can easily draw lines, vectors, and arrows from a point to the nearest point on a specified plane. Simply provide a point definition and a plane definition in the draw command. (Planes can be defined in {a b c d} notation, where <b>ax + by + cZ = 0</b> or using the keyword PLANE followed by any definition of a plane, including "xy", "yz", "x=3", etc.'
+
+,'### axisAngle() and quaternion() extended quaternion definitions ###'
+,'# Jmol 11.5.45 allows more variety in the way quaternions are defined.'
+,'print axisAngle(0 1 0 30) # 30-degree rotation about y -- quaternion equivalent'
+,'print axisAngle(0 1 0 30) %-1 # vector part'
+,'print axisAngle(0 1 0 30) %-2 # angle'
+,'print axisAngle(0 1 0 30) %4 # normalized vector part'
+,'print axisAngle("{0 1 0 30}") % {0 0 1} # 30-rotation of the point {0 0 1} about the y axis'
+,'print quaternion("{0 1 0 1}") # using {x y z w} notation, a 90-degree rotation about y -- normalized to form a unit quaternion'
+,'print quaternion(0,1,0,1) # using q0,q1,q2,q3 notation, a 180-degree rotation about (x=0,y=z) -- normalized to form a unit quaternion'
+
+,'### Jmol math equivalence testing ###'
+,'# Jmol 11.5.45 allows testing of points and decimal values for equivalence by checking distances and differences, respectively, for being less than 0.000001. While not strictly equivalent, this change should result in better performance of scripts that test for {x y z} == {a b c} or x == y.'
+,'print {1 2 3} == {1 2 3.1}'
+,'print {1 2 3} == {1 2 3.000001}'
+,'print 1.000003 == 1.000001'
+,'print 1.0000003 == 1.0000001'
+
+,'### _applet boolean ###'
+,'# Jmol 11.5.43 allows simpler testing of whether Jmol is running as an application or an applet'
+,'print _applet'
+,'if (_applet); echo "I am an applet";else; echo "I am an application";endif'
+
+,'### sqrt() and integer division ###'
+,'# Jmol 11.5.43 adds the sqrt() function and integer division'
+,'print sqrt(2)'
+,'print 33 \\ 4'
+,'print 32.8 \\ 4'
+
+,'### select command extended ###'
+,'# Jmol 11.5.43 extends the <b>select</b> command to allow the same capabilities as the select() function, allowing for much expanded (and more efficient) search strategies. The variable _x is defined implicitly.'
+,'load 1crn.pdb;select atomno=1 or atomno=100; spacefill; '
+,'select {*} (distance({atomno=1}) < distance({atomno=100}));color white;'
+
+,'### calculate/color straightness; label %T ###'
+,'# Using a new quaternion calculation, Jmol 11.5.43 can calculate a "straightness" parameter (-1 to 1), and apply that as a color. The calculation allows for identification of "incipient" secondary structure as well as standard regions of helix and sheet.'
+,'load 1crn.pdb; spacefill off;wireframe off;trace on;cartoons on;color cartoons translucent'
+,'calculate straightness; color straightness;'
+,'load 1d66.pdb;spacefill off;wireframe off;cartoons on;select nucleic and *.n1;label %n; select *'
+,'calculate straightness; color straightness;moveto /* time, axisAngle */ 1.0 { -97 -995 -26 111.58} /* zoom, translation */  574.72 0.0 0.0  /* center, rotationRadius */ {20.874 41.3605 28.1455} 46.245033 /* navigation center, translation, depth */ {0.0 0.0 0.0} 166.10684 287.7699 50.0;'
+,''
+
+,'### set pickLabel ###'
+,'# Jmol 11.5.42 allows customized reports of atom clicking.'
+,'load caffeine.xyz; set picklabel "atom: %a x=%x y=%y z=%z" # now pick an atom.'
+,'set picklabel "" # back to the default'
+
+,'### LOAD/SCRIPT equivalence ###'
+,'# Jmol 11.5.41 makes it easier to load scripts into systems such as <a href=Jmol.proteinExplorer.org>Jmol Protein Explorer</a>. If a Jmol state file is read in a LOAD context ("# Jmol" at the beginning of a line), then its file type is identified as SPT, and it is processed via the SCRIPT command instead of the LOAD command.'
+
+,'### XYZ reader enhancements ###'
+,'# Jmol 11.5.41 adds the capability to read all of the following XYZ formats:<table>\
+<tr><td><code> sym x y z </code></td></tr>\
+<tr><td><code> sym x y z vx vy vz</code></td></tr>\
+<tr><td><code> sym x y z c</code></td></tr>\
+<tr><td><code> sym x y z c vx vy vz</code></td></tr>\
+</table> where "sym" is an atom symbol with optional isotope (2H, 13C, 15N, etc.), x y z are coordinates, vx vy vz are vibrational vectors, and "c" is the charge -- either partial (decimal) or formal (integer)'
+
+,'### select() ###'
+,'# Jmol 11.5.40 introduces the select() function, which allow full math calculation of atom parameters as part of the atom selection process.'
++' Previous versions only allowed simple comparisons -- "select atomno > 10 and atomno <= 30". With this more capable and efficient method, you can now do much more interesting comparisons. '
++' In the case of select(), the first of three parameters is a dummy variable. The second is an atom expression to be searched. The third is a math expression that will be evaluated as TRUE or FALSE.'
+,'load quartz.cif;wireframe;spacefill 0;ellipsoids 99;print select(x;{*};x.adpmax - x.adpmin > 0.1).label("%a has max-min > 0.1"); #checking to see how much of a difference there is in the ellipsoid axis lengths'
+
+
+,'### quaternion 2nd derivative ###'
+,'# Jmol 11.5.40 adds <b>quaterion derivative2</b> for setting the second derivative of the quaternion.'
+
+
+,'### draw Vector [x y] {dx dy dz} ###'
+,'# The combination of a screen coordinate and a direction for a vector allows setting a "frame" separate from the model and having it rotate with the model.'
+,'load 1crn.pdb;spacefill off;wireframe off;cartoons on;'
+,'axes on;axes position [50 50]; axes scale 1.5;'
+,'x = getProperty("polymerInfo", "models", 1,"polymers", 1, "structures", 1, "axisUnitVector");draw v1 200 vector [50 50] @x color white # The white arrow on the axes is aligned with the first alpha helix'
+,'x = getProperty("polymerInfo", "models", 1,"polymers", 1, "structures", 2, "axisUnitVector");draw v2 200 vector [50 50] @x color red # The red arrow is aligned with the second alpha helix'
+
+,'### axes position [x y] or [x y %] ###'
+,'# Jmol 11.5.40 introduces a new option for positioning axes anywhere on the screen as a small revolving axis set. The <b>axes position</b> command should come after <b>axes on</b>.'
+,'load caffeine.xyz;rotate x 10; axes on;axes position [50 50]; axes scale 1.5;spin on'
+,'axes position [30 80 %];spin off'
+
+,'### [x y] and [x y %] designations in draw and echo commands ###'
+,'# Jmol 11.5.40 introduces the capability of drawing to X,Y screen coordinates. These are designated with square brackets. An optional percent sign sets the position relative to 100% width and height. The designation is carried to <b>set echo</b> commands as well. In this version, if the [x y] bracket immediately follows a { }, it must be preceded by a comma.'
+,'load caffeine.xyz; set echo myecho [20 300];echo a carbonyl oxygen.;draw 80 [80 290] {_O}[2]'
+
+
+
+
+,'### <font color=red>Jmol_S</font> frank ###'
+,'# The signed applet now bears a new red frank that cannot be removed using <b>frank off</b>. In addition, the applet menu identifies it as being signed.<img src=signed.gif/>'
+
+,'### THREADED option ###'
+,'# When Jmol detects that it is running as a signed applet, it switches to a dual-threaded method of processing commands. This is necessary because'
+ +' tests showed while preparing <a href=Jmol.ProteinExplorer.org>Jmol Protein Explorer</a> that the signed applet cannot access files and javascript from the same thread. (Jmol looks for the lower-case "javascript" word to make this distinction.)'
+ +'  Prior to applet loading, issuing <b>jmolSetCallback("useCommandThread", "false")</b> allows turning off of this threaded option (primarily for debugging purposes, Jmol 11.5.39). In connection with this, one can designate that the processors should split a script into two parts by adding \/\*SPLIT\*\/ '
+ +' within the string -- for example, between a LOAD command and a JAVASCRIPT command used to post-process the file in JavaScript.' 
+
+
+
+
+,'### _signedApplet ###'
+,'# Since Jmol 11.3 it has been possible to determine if a script is running in an applet using <b>x = getproperty("appletInfo","htmlName")</b>;'
+,' Jmol 11.5.39 also allows for discovering whether the applet is signed using the <b>_signedApplet</b> variable.'
+,'if(_signedApplet);javascript alert("This applet is signed.");else;javascript alert("This applet is not signed");endif'
+
+,'### reading of COMPND and HEADER records from PDB files ###'
+,'# Jmol 11.5.39 places the COMPND and HEADER (classification) PDB records into auxiliaryInfo.'
+,'load 1bna.pdb;font echo 10;set echo top left; echo @{getproperty("auxiliaryinfo","COMPND") + "|" + getproperty("auxiliaryinfo","CLASSIFICATION")}'
+
+
+,'### jmolSetCallback("evalCallback", "someFunction") ###'
+,'# Jmol 11.5.39 adds an eval callback, allowing Javascript evaluations to be routed through specific methods. This callback cannot be set with <b>set evalCallback</b>, and overrides the setting of _jmol.noEval.'
+
+,'### draw VECTOR ###'
+,'# Jmol 11.5.38 adds <b>draw VECTOR</b>, which takes a starting coordinate and a difference -- {dx dy dz}. These vectors are scalable'
+,'load caffeine.xyz;draw v1x VECTOR scale 2.0 {atomno=3} {1 0 0};draw v1y VECTOR scale 2.0 {atomno=3} {0 1 0};draw v1z VECTOR scale 2.0 {atomno=3} {0 0 1}'
+
+
+
+,'### draw with mixed types ###'
+,'# Before Jmol 11.5.38, if combinations of points and atoms were drawn, then they were processed in an unexpected order '
++' -- first {x,y,z}, then $xxx, then {atomExpression}, then finally @{{atoms}.split()}). Jmol 11.5.38 changes this behavior to process points in the order given by the user.'
+
+,'### draw title with ">" ###'
+,'# By default labels for drawn objects are drawn near the first point of the set; starting with Jmol 11.5.38, if a draw text title has ">" as the first character, then the text is drawn near the last of these points. (For greater control, use <b>echo</b>.)'
+
+,'### additional quaternion support ###'
+,'# Quaternions can be used to represent the "frame" of an amino acid or nucleic acid. <a href=new4.htm>Jmol 11.4</a> introduced the quaternion command, which allows visualization of frames based on the C-alpha carbon of peptides and the lead carbon of nucleic acid base pairs. (frame "c")'
++'Jmol 11.5.38 adds an additional frame option positioned on the peptide plane ("p"). The command to switch is <b>set quaternionFrame</b> "c" or "p". Also new for the application is <b>write quaternion s</b>, which writes the set of frames to a file in the form of DRAW commands that, when run as a script, draws the frames on the molecule.' 
+
+,'### set pdbSequential ###'
+,'# Jmol 11.5.38 adds a setting that, prior to file loading, instructs Jmol to ignore distance in considering the connection of groups in chains. This setting is useful in certain situations where nonstandard distances are involved and the desire is to continue chain construction through these points.'
+
+
+,'### CIF reading of B factors for thermal ellipsoids ###'
+,'# Jmol 11.5.38 reads B factors as well as U factors in CIF files.'
+
+
+,'### wildcard selection of draw/pmesh/isosurface objects ###'
+,'# Jmol 11.5.38 allows selection of multiple objects using the * wildcard with <b>on</b>, <b>off</b>, and <b>delete</b>'
+,'load caffeine.xyz;draw pt1 {0 0 0} {1 1 1};draw pt2 {1 1 1} {2 4 0};draw plane1 {atomno=3} {atomno=2} {atomno=6};draw plane2 {atomno=3} {atomno=2} {atomno=16}'
+,'draw pt* off;'
+,'draw pt* on;'
+,'draw plane* delete'
+
+,'### cross(a,b), sin(x), cos(x) ###'
+,'# Jmol 11.5.38 adds cross product of vectors along with sin(x) and cos(x).'
+
+
+,'### random(a) random(a,b) ###'
+,'# Jmol 11.5.38 adds the random() function.'
+,'print "" + random(1) + " " + random(1) + " " + random(1)'
+,'print random(3,5)'
+,'load caffeine.xyz;draw pt1 @{point(random(4),random(4),random(4))}'
+,'load caffeine.xyz;isosurface plane @{plane(random(1),random(1),random(1),random(1))} translucent'
+
+
+,'### draw VECTOR ###'
+,'# Jmol 11.5.38 adds the VECTOR option to draw. This is like ARROW, except the parameters are an origin and a vector instead of two points. The vector scales differently from an arrow as well, expanding or contracting in length from the origin rather than from the center.'
+,'load caffeine.xyz;moveto 1.0 { -940 -275 -203 74.74}  100.0 0.0 0.0  {-0.23140144 0.61279976 0.071704745} 5.580881 {0.0 0.0 0.0} -0.14081247 2.3565063 50.0;'
+,'draw va VECTOR {atomno=5} {1 0 0} color red;draw vb VECTOR {atomno=5} {0 1 0} color green;draw vc VECTOR {atomno=5} {0 0 1} color blue;'
+,'draw va scale 2.0;draw vb scale 2.0;draw vc scale 2.0'
+
+,'### draw mixed points BEHAVIOR CHANGE ###'
+,'# Jmol 11.5.38 changes the way multiple types of points are ordered in a draw command. Prior to this, all {x y z} coordinates were processed first, then $xxx coordinates, then {atom expressions}. This was OK for simple lines and planes, but not intuitive, nor particularly useful in more complex situations. Now DRAW simply uses the points in the order presented in the command.'
+
+,'### biomolecules ###'
+,'#Jmol 11.5.34 reads the REMARK 350 header records of PDB file, allowing the building of the "biomolecule" associated with the data set. In some cases this is a subset of the data; in others it is a base set of atoms along with a set of duplicates that are rotated and translated in space. In large cases, it is important to load only a subset of atoms, so we use the FILTER option to the load command for dual purpose. Note that there is also a new <b>Biomolecules</b> submenu on the popup menu under the first main menu item (introduced in Jmol 11.5.36). <br><img src=img/biomoleculemenu.jpg><br>'
+,'load 1d01.pdb'
+,'load 1d01.pdb FILTER "BIOMOLECULE 1"'
+,'load 1d01.pdb FILTER "BIOMOLECULE 2"'
+,'load 1sva.pdb FILTER "*.CA" # this one takes some time to download.'
+,'load 1sva.pdb FILTER "*.CA;BIOMOLECULE 1" # the file is now cached; this time is for processing.'
+,'color group; ellipsoid virus axes {1 0 0} {0 1 0} {0 0 1} scale 200 color white;zoomto 3 67 # a sphere at the center of the virus.'
+,'SPIN ON'
+,'spin off' 
+,'# this next example illustrates loading only a subset of the available BIOMT transformations. (In this case there are 60 total.)'
+,'load 1sva.pdb FILTER "BIOMOLECULE 1;#1,#2,#3,#4,#5";color chain ## 1/12 of the simian virus capsid. On some systems this may cause a memory error.'
+
+,'### load FILTER ###'
+,'#Jmol 11.5.33 introduces the FILTER option to the load command. This option passes information to specific file readers (currently PDB and CIF). Atom names, group names, and chain IDs are all selectable, and in each category one can either select "all like this" or "none like this". Filtering at the file loading stage saves memory, because the atoms are never loaded in the first place.'
+,'load 1blu.pdb'
+,'load 1blu.pdb FILTER "![HOH]"'
+,'load 1jgq.pdb'
+,'load 1jgq.pdb FILTER "*.P,*.CA";cartoons on'
+,'load 1mng.cif'
+,'load 1mng.cif FILTER "*:A";restrict *;cartoons on'
+,'load 1a3n.pdb'
+,'load 1a3n.pdb FILTER "[HEM]"'
+,'load 1a3n.pdb FILTER "[HEM],[HIS]"'
+
+,'### ELLIPSOID command ###'
+,'#Jmol 11.5.33 (with bug fixes in 11.5.37) adds the capability to draw thermal ellipsoids (anisotropic displacement parameters). A number of rendering options are possible. The default is <b>set ellipsoidBall ON</b>. '
+,'load quartz.cif {1 1 1};spacefill off;wireframe on;'
+,'select *;ellipsoids on;zoomto 3 300 # default is 50%'
+,'ellipsoids 100'
+,'select oxygen; ellipsoids off'
+,'select *; color ellipsoids temperature'
+,'select *; ellipsoids on'
+	,"*NOUL"
+,'# try various combinations of the options'
+,'set ellipsoidBall on ~~ set ellipsoidBall off'
+,'set ellipsoidFill on ~~ set ellipsoidFill off'
+,'set ellipsoidArcs on ~~ set ellipsoidArcs off'
+,'set ellipsoidAxes on ~~ set ellipsoidAxisDiameter 0.001'
+,'set ellipsoidAxisDiameter 0.05 ~~ set ellipsoidAxisDiameter 0.1'
+,'set ellipsoidAxes off ~~ '
+	,"*UL"
+,'set wireframeRotation on # now manipulate the model -- it switches to wireframe axes and arcs for quicker processing'
+,'set wireframeRotation off' 
+	,"*NOUL"
+,'set ellipsoidDots on ~~ set ellipsoidDotCount 500'
+,'set ellipsoidDotCount 200 ~~ set ellipsoidDotCount 100'
+,'set ellipsoidDots off'
+	,"*UL"
+
+,'#I especially like this next option -- filled planes and spacefill set at the minimum ADP level. Check it out.'
+,'set ellipsoidDots off; set ellipsoidBall off; set ellipsoidFill on; ellipsoids 100; spacefill ADPMIN 100;'
+
+
+,'### draw CYLINDER ###'
+,'#Jmol 11.5.26 allows for drawing circles that rotate with the model. Just produce a short cylinder.'
+,'load caffeine.xyz'
+,'draw width 3.0 CYLINDER {oxygen}[1] @{{oxygen}[1].xyz + {0.01 0.01 0.01}} mesh nofill'
+,'moveto  1.0 { 627 186 -756 154.48}  100.0 0.0 0.0  /* center, rotationRadius */ {-0.23140144 0.61279976 0.071704745} 5.580881 /* navigation center, translation, depth */ {0.0 0.0 0.0} -2.7796414 -4.6965857 50.0;spin on'
+,'spin off'
+,'### draw CIRCLE ###'
+,'#Jmol 11.5.25 adds the capability to draw static circles in the plane of the window either as a ring or a solid plane. These circles do not rotate around -- they are always in the plane of the window. Size can be automatic based on encompassing the atoms selected or it can set as a number of angstroms (which then scales with zoom) or as a number of pixels (which does not scale with zoom). Jmol 11.5.38 adds options for FILL (solid), and MESH NOFILL (a ring)'
+,'load caffeine.xyz'
+,'draw CIRCLE {*}'
+,'draw CIRCLE {*} mesh nofill'
+,'center {*};draw CIRCLE {*} fill;spin on;delay 5;spin off'
+,'draw CIRCLE {*} fill translucent white'
+,'draw DIAMETER 1.0 CIRCLE {atomno=3} color yellow mesh nofill # 1.0 angstroms'
+,'draw DIAMETER 70 CIRCLE {_O}[2] color red mesh nofill # 70 pixels'
+
+,'### isosurface MAXSET n and isosurface DOWNSAMPLE n ###'
+,'#Jmol 11.5.24 adds two new options for isosurface: MAXSET and DOWNSAMPLE. The MAXSET parameter, followed by an integer, sets the maximum number of vertices that are in a connected-triangle set. The DOWNSAMPLE option allows reducing the grid resolution in order to not run out of memory when working with unnecessarily high resolution CUBE files.'
+
+,'### minimization CONSTRAINT and FIX ###'
+,'#Jmol 11.5.24 adds constraints (torsions, angles, and distances) and fixed points for a minimization.'
+,'load caffeine.xyz;select connected(2) or connected(3) or oxygen and connected(1);connect aromatic modify;calculate aromatic'
+,'select C13 or _H and connected(C13);color yellow;minimize fix {not selected}'
+,'minimize'
+,'minimize fix {none}'
+,'set minimizationRefresh false;minimize constraint {c7} {N2} {C13} {H16} 0;minimize steps 100'
+,'set minimizationRefresh false;minimize constraint {c7} {N2} {C13} {H16} 30;minimize steps 100'
+,'set minimizationRefresh false;minimize constraint {c7} {N2} {C13} {H16} 60;minimize steps 100'
+,'set minimizationRefresh false;minimize constraint {c7} {N2} {C13} {H16} 90;minimize steps 100'
+,'set minimizationRefresh true'
+
+
+,'### getProperty minimizationInfo / show minimization ###'
+,'#Jmol 11.5.23 adds <b>getProperty minimizationInfo</b>, x=getproperty("minimizationInfo"), and <b>show minimization</b>. These are active anytime after a minimization calculation (either just the energy or an optimization) until <b>minimization clear</b> is executed.'
+
+,'load caffeine.xyz;select connected(2) or connected(3) or oxygen and connected(1);connect aromatic modify;calculate aromatic'
+,'minimize'
+,'show minimization'
+,'minimize energy # no stepping; shows more'
+,'show minimization'
+
+,'### save/restore coordinates ###'
+,'#Jmol 11.5.23 adds <b>save/restore coord</b>. This allows resetting coordinates to their values prior to a minimization. (Minimization always saves the coordinates prior to iterating.) Or, after minimization you can save the coordinates under a name, load the file again, and restore the coordinates to the minimized set.'
+
+,'load caffeine.xyz;rotate x -80'
+,'minimize'
+,'restore coordinates'
+,'save coordinates "c1"'
+,'select atomno<10;translateSelected {3 2 4}'
+,'restore coordinates "c1"'
+
+/* not working
+
+,'### more callbacks ###'
+,'#Jmol 11.5.23 adds several more callbacks, including <b>echoCallback</b>, <b>measureCallback</b>, <b>minimizationCallback</b>, and <b>scriptCallback</b>. Of these, only minimizationCallback is really new; the others are currently sent to messageCallback, but if defined will instead go to their own callback function. This page, for example, sends scriptCallback to function noCallback(){} -- just an empty function. This gets rid of the "Script completed" messages and "script terminated" messages that are usually sent to the message queue.'
+,'set scriptCallback "alert"'
+,'set scriptCallback "noCallback" # a function defined here as nothing'
+,'set scriptCallback "" # now defaults to message queue'
+
+*/
+
+
+
+,'### minimize ###'
+,'#Jmol 11.5.21 introduces a preliminary MINIMIZE command utilizing the UFF force field.'
+,'load h2o-crude.xyz;measure {atomno=1} {atomno=2} {atomno=3}'
+,'minimizationSteps = 30;minimize'
+,'load caffeine.xyz;select connected(2) or connected(3) or oxygen and connected(1);connect aromatic modify;calculate aromatic'
+,'set measurementunits pm;measure {_O}[1] {_O}[2]; color measure red'
+,'minimizationSteps = 80; minimizationRefresh = true; minimizationCriterion = 0.001; minimize'
+,'load thyroxine.cml;rotate x 90;rotate y 30'
+,'minimizationSteps = 300;minimize'
+,'load caffeine.xyz;select _H and connected(C10);color yellow'
+,'# this <a target=_blank href=data/minrot.spt>next script</a> rotates a methyl group of caffeine'
+,'script minrot.spt'
+,'print load("minrot.spt")'
+
+
+,'### atom deletion ###'
+,'#Jmol 11.5.17 introduces selective atom deletion using the delete command. Note that atoms deleted in this way still consume memory; they just are not accessible.'
+,'load caffeine.xyz'
+,'delete oxygen'
+
+,'### zap selected models ###'
+,'#Jmol 11.5.16 introduces selective model deletion using an extension of the ZAP command. After execution, all atoms are selected, and all frames are displayed. Memory dedicated to the zapped model is recovered, and file.model numbers are not changed. Specifying even a single atom of a model zaps the entire model.'
+,'load files "caffeine.xyz" "1crn.pdb";frame 0'
+,'zoomto 1 {1.1} 0 '
+,'zap 1.1'
+,'zoomto 1 {2.1} 0'
+,'zap atomno=1'
+
+,'### customizable Van der Waals radii sets ###'
+,'Jmol 11.5.12 introduces three predefined Van der Waals radii sets. These include the standard Jmol set, the set used in <a href=http://openrasmol.org>>OpenRasmol-2.7.2.1.1</a>, and the set used in <a href=http://openbabel.org>OpenBabel</a>. For a detailed list of these radii, see <a href=../misc/vdw_comparison.xls>vdw_comparison.xls</a>. In addition, the option exists to define one\'s own set, "user". To set the user variety, first set one of the other sets as a basis, then add a DATA statement to include the specific elements you want to give a new radii to.' 
+
+,'load caffeine.xyz'
+,'set defaultVDW Jmol;spacefill on'
+,'set defaultVDW babel;spacefill on'
+,'set defaultVDW rasmol;spacefill on'
+
+/*
+,'data "element_vdw" 6 1.7 end "element_vdw"'
+,'data "element_vdw" 6 1.7; 7 1.8 end "element_vdw"; # separate using semicolons or new lines'
+*/
+
+/*#
+# For full state compatibility, these commands should be given prior to
+# model loading, as they affect all calculations involving Van der Waals 
+# radii -- except default zoom.
+#
+# Now select the user set:
+#
+#  set defaultVDW user
+#  spacefill on
+#
+# To delete all user entries:
+#
+#  reset VDW 
+#
+# If user vdw radii are currently set, then this resets the defaults to Jmol.
+#
+# new feature: show vdw  shows a listing of the currently set VDW radii
+#
+# new feature: integration of star, halo, and spacefill code so all behave the same.
+# 
+# stars     1.0      # set to a specific angstrom radius
+# spacefill 100%     # percent of CURRENT vdw set
+# stars     100%Jmol # percent of Jmol standard
+# stars     50%Babel # percent of Babel standard
+# spacefill 5%Rasmol # percent of Rasmol standard
+# spacefill 30%User  # percent of User-defined values (or CURRENT if not defined)
+# spacefill +1.2     # angstroms added to current vdw scheme
+# halos     50%Jmol  # -- halos also have an added bit to make sure they are visible 
+# spacefill 250      # RasMol 250 units/Angstrom units still
+# spacefill -20      # neg numbers same as percentages: 20% here, using current vdw set
+# stars     @{x+0.1} # math OK
+# spacefill @x%      # make sure x comes out integer, otherwise % is ignored
+#
+# note that dots do not have a %Jmol option:
+#
+# dots   30     # syntax already assumes percent for dots using an integer
+#
+#
+
+# -----------------------------------------------------------------------------
+
+*/
+
+
+,'### customizable Van der Waals radii ###'
+,'#Jmol 11.5.11 allows setting of specific atomic Van der Waals radii. Setting the Van der Waals radius for an atom This does NOT change the default rendering of Jmol, and it does not persist beyond a ZAP or new LOAD command. (It is really for specific atoms, not specific elements.) The DATA command can also be used to set the Van der Waals radii of several atoms at once.'
+,'load caffeine.xyz;dots on'
+,'{carbon}.vanderwaals = 1.7;dots on'
+,'set propertyAtomNumberField 1;set propertyDataField 2; data "property_vdw 1 2" 11 3.0;9 4.0 end "property_vdw 1 2";select atomno=8;dots on;'
+
+
+,'### DATA "property_X i j" ###'
+,'load caffeine.xyz'
+,'#Jmol 11.5.11 allows you to override default propertyAtomNumberField (i) and propertyDataField (j) values. Basically, the data command now lets you specify these positions in the command itself. Note that the numbers must be within the quotes, and that the "end" label must also include these two numbers.'
+,'data "property_x 1 2" 3 1.2 end "property_x 1 2"; label %{property_x}'
+
+
+,'### set delayMaximumMs ###'
+,'#Jmol 11.5.4 allows setting of the maximum delay in milliseconds. This allows faster debugging of code that involves the <i>delay</i> command.'
+
+
+,'### set fontScaling TRUE/FALSE ###'
+,'# Jmol 11.5.4 introduces automatically scalable fonts. When a label or 3D echo is created, if fontScaling is set to TRUE, then that font will scale up or down with the zoom level.' 
+
+,'### set font scaleReference ###'
+,'# Jmol 11.5.4 introduces the capability to set a scalable font to a given size at a given scale reference in Angstroms per pixel.'
+
+/*
+
+# new feature: set fontScaling TRUE/FALSE
+# new feature: font [type] [size] [face] [weight] [scaleReference (Angstroms per pixel)]
+#  atom labels and 3D echos then scale properly.
+#  note that the current zoom affects the label size.
+
+
+
+
+*/
+
+
+,' <a href=javascript:dotest(-1)>[appletInfo]</a>'
+ +' <a href=javascript:dotest(-2)>[animationInfo]</a>'
+ +' <a href=javascript:dotest(0)>[fileName]</a>'
+ +' <a href=javascript:dotest(1)>[fileHeader]</a>'
+ +' <a href=javascript:dotest(2)>[fileContents]</a>'
+ +'<br><a href=javascript:dotest(8.1)>[atomList]</a>'
+ +' <a href=javascript:dotest(8)>[atomInfo]</a>'
+ +' <a href=javascript:dotest(7)>[bondInfo]</a>'
+ +' <a href=javascript:dotest(7.5)>[moleculeInfo]</a>'
+ +" <a href=javascript:dotest(10)>[extractModel]</a>"
+ +'<br><a href=javascript:dotest(3)>[orientationInfo]</a>'
+ +' <a href=javascript:dotest(3.1)>[auxiliaryInfo]</a>'
+ +' <a href=javascript:dotest(3.2)>[transformInfo]</a>'
+ +' <a href=javascript:dotest(3.3)>[centerInfo]</a>'
+ +' <a href=javascript:dotest(3.4)>[boundboxInfo]</a>'
+ +"<br><a href=javascript:dotest(4)>[modelInfo]</a>"
+ +" <a href=javascript:dotest(4.2)>[polymerInfo]</a>"
+ +" <a href=javascript:dotest(4.3)>[chainInfo]</a>"
+ +" <a href=javascript:dotest(4.4)>[shapeInfo]</a>"
+ +" <a href=javascript:dotest(4.5)>[stateInfo]</a>"
+ +" <a href=javascript:dotest(9)>[reload THIS orientation]</a>"
+ +"<br><br>"
+
+
+//," JSON data returned:<br><textarea name=outputJSON id=outputJSON rows=5 cols=50></textarea>"
+," <input  type=checkbox name=idecode id=idecode checked=1>Decoded: <a href=javascript:showoutput()>new window</a><br><textarea name=output id=output rows=5 cols=50 wrap=off></textarea>"
+)
+remarks=""
+//]]>
+
+
+function getCallbackOptions(){
+ var s=""
+ for(var i=0;i<Callbacks.length;i++)if(document.getElementById(Callbacks[i]).checked)s+=Callbacks[i]
+ var waspolling = polling
+ polling = (s!="")
+ if(polling && !waspolling)pollApplet()
+ return "monitoring:"+s
+}
+
+function pollApplet(){
+   whatm=getCallbackOptions()
+   if(!polling){
+	document.title = ""
+	return
+   }
+   document.title = (new Date())
+   var A=jmolGetStatus(whatm)
+   parseMessages(A)
+   if(polling)setTimeout("pollApplet()",delayms)
+}
+
+function setOptions(all_or_none){
+ for(var i=0;i<Callbacks.length;i++)document.getElementById(Callbacks[i]).checked = all_or_none
+ polling = (all_or_none == 1) 
+}
+
+
+function test1() {
+ jmolSetAtomCoordRelative(Math.floor(Math.random()*6),Math.random()/5-0.1,Math.random()/5-0.1,Math.random()/5-0.1)
+ jmolScriptWait("refresh")
+}
+
+function test2() {
+ jmolScript("data \"coord\"3;1 2 3 4;2 3 4 5;5 6 7 8;end \"coord\";")
+}
+	
+
+	function fire(i0,n){
+ for(var i=0; i < n; i++) {
+   //alert(Scripts[i0+i]);
+   jmolScript(Scripts[i0+i]);
+ }
+}
+
+
+what="visible"
+whatp="centerInfo"
+whatm=""
+
+function xshowoutput(s){ if(!s) s=document.getElementById("output").value; dowritenew("<pre>"+s+"</pre>") };function oldshowoutput(){
+ dowritenew("<pre>"+document.getElementById("output").value+"</pre>")
+}
+
+function dotest(iwhat){
+ if(iwhat!=3)monitoron=false
+ var s=""
+ var sJSON=""
+ var info=""
+ var sinfo=""
+ var sparam=""
+ var str=""
+ if(iwhat==-1){
+   sinfo="appletInfo"
+ }else if(iwhat==-2){
+   sinfo="animationInfo"
+ }else if(iwhat==0){
+   str="fileName"
+ }else if(iwhat==1){
+   str="fileHeader"
+   info = jmolGetPropertyAsString(sinfo)
+ }else if(iwhat==2){
+   str="fileContents"
+ }else if(iwhat==3){
+   sinfo="orientationInfo"
+ }else if(iwhat==3.1){
+   sinfo="auxiliaryInfo"
+ }else if(iwhat==3.2){
+   sinfo="transformInfo"
+ }else if(iwhat==3.3){
+   sinfo="centerInfo"
+ }else if(iwhat==3.4){
+   sinfo="boundboxInfo"
+ }else if(iwhat==3.5){
+   sinfo="zoomInfo"
+ }else if(iwhat==4){
+   sinfo="modelInfo"
+ }else if(iwhat==4.2){
+   sparam="PROMPT"
+   sinfo="polymerInfo"
+ }else if(iwhat==4.3){
+   sparam="PROMPT"
+   sinfo="chainInfo"
+ }else if(iwhat==4.4){
+   sinfo="shapeInfo"
+ }else if(iwhat==4.5){
+   sparam="visible"
+   sinfo="stateInfo"
+ }else if(iwhat==7){
+   sparam="PROMPT"
+   sinfo="bondInfo"
+ }else if(iwhat==7.5){
+   sparam="PROMPT"
+   sinfo="moleculeInfo"
+ }else if(iwhat==8){
+   sparam="PROMPT"
+   sinfo="atomInfo"
+ }else if(iwhat==8.1){
+   sparam="PROMPT"
+   sinfo="atomList"
+ }else if(iwhat==9){
+   info = jmolGetPropertyAsArray("orientationInfo")
+   s="load "+jmolGetPropertyAsString("fileName")+";"+info.moveTo
+   document.getElementById("cmd").value=s
+   jmolScript(s)
+ }else if(iwhat==10){
+   s=prompt("enter an atom expression",what)
+   if(!s)return
+   what=s
+   s = jmolGetPropertyAsString("extractModel",what)
+   var A=jmolGetPropertyAsArray("orientationInfo")
+   showoutput(s);   jmolLoadInlineScript(s,A.moveTo)
+ }
+ if(str!=""){
+   s=jmolGetPropertyAsString(str)
+ }else if(sinfo!=""){
+   if(sparam == "PROMPT"){
+     s=prompt("enter an atom expression",what)
+     if(!s)return
+     what=s
+     sparam=what
+   }
+   if(document.getElementById("idecode").checked){
+	s=jmolGetPropertyAsArray(sinfo,sparam)
+	s=_jmolEnumerateObject(s,sinfo)
+   }else{
+	s=jmolGetPropertyAsJSON(sinfo,sparam)
+   }
+ }
+ if(s!="")document.getElementById("output").value=s
+}
+
+function parseMessages(A){
+ if(!A)return
+ var s=""
+ for(var i=A.length-1;i>=0;i--){
+	s=A[i][3]+"\n"+s
+	showmsg("msg",A[i])
+ }
+ document.getElementById("output").value=s
+}
+
+monitoron=0
+function domonitor(isiter){
+  if(!isiter)monitoron=!monitoron
+  if(!monitoron)return
+  dotest(3)
+  setTimeout("domonitor(1)",delayms)  
+}
+
+</script>
+</head>
+<body>
+<script type="text/javascript">showpage(0)</script></body>
+</html>

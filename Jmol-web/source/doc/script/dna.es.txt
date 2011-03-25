@@ -1,0 +1,23 @@
+load model/1D68.pdb.gz;
+set frank off
+set echo top center; font echo 30; color echo white
+echo "ADN"
+spacefill off; wireframe;
+move 0 180 0 0 0 0 0 0 2
+select backbone; wireframe .5;
+move 0 180 0 0 0 0 0 0 2
+select *; wireframe; select sidechain; wireframe .3;
+move 0 180 0 0 0 0 0 0 2
+select *; wireframe;
+move 0 180 0 0 0 0 0 0 2
+set hermiteLevel -4; set ribbonAspectRatio 8;
+ribbons on;
+move 0 180 0 0 0 0 0 0 2
+ribbons off; wireframe off; cartoons on;
+move 0 180 0 0 0 0 0 0 2
+hbonds .3; color hbonds white;
+move 0 180 0 400 0 0 0 0 2
+delay .5
+moveTo 1 999 -37 -6 100 150;
+delay .5
+moveTo 1 -950 174 -260 78.8 23 -52 56;

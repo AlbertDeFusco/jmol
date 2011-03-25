@@ -1,0 +1,391 @@
+********************************************************************************
+*                       GENERAL UTILITY LATTICE PROGRAM                        *
+*                                 Julian Gale                                  *
+*                      Nanochemistry Research Institute                        *
+*             Curtin University of Technology, Western Australia               *
+********************************************************************************
+* Version = 3.0.1 * Last modified = 22nd March 2006                            *
+********************************************************************************
+*  fit          - perform fitting run                                          *
+*  optimise     - perform optimisation run after fitting                       *
+*  conp         - constant pressure calculation                                *
+*  simultaneous - relax shell positions and radii during fitting               *
+********************************************************************************
+
+  Job Started  at 10:20.46 22nd March      2006                               
+
+  Number of CPUs =     1
+
+
+  Total number of configurations input =   1
+
+********************************************************************************
+*  Input for Configuration =   1                                               *
+********************************************************************************
+
+  Formula = Si3O6                                                       
+
+  Number of irreducible atoms/shells =       3
+
+
+  Total number atoms/shells =      15
+
+  Dimensionality = 3               :  Bulk   
+
+
+  Symmetry :
+
+  Crystal family                   :  Hexagonal   
+  Crystal class  (Groth - 1921)    :  Trigonal Trapezohedral               
+
+  Space group (noncentrosymmetric) :  P 31 2 1        
+
+  Patterson group                  :  P -3 m 1 
+
+  Cartesian lattice vectors (Angstroms) :
+
+        4.914730    0.000000    0.000000
+       -2.457365    4.256281    0.000000
+        0.000000    0.000000    5.406570
+
+  Cell parameters (Angstroms/Degrees):
+
+  a =       4.9147    alpha =  90.0000
+  b =       4.9147    beta  =  90.0000
+  c =       5.4066    gamma = 120.0000
+
+  Initial cell volume =         113.097184 Angs**3
+
+  Temperature of configuration = 0.0000     K 
+
+  Pressure of configuration =         0.000 GPa 
+
+  Fractional coordinates of asymmetric unit :
+
+--------------------------------------------------------------------------------
+   No.  Atomic       x           y          z         Charge      Occupancy
+        Label      (Frac)      (Frac)     (Frac)        (e)         (Frac)  
+--------------------------------------------------------------------------------
+      1 Si    c    0.468200 *  0.000000    0.333333      4.0000    1.000000    
+      2 O     c    0.413100 *  0.266100 *  0.213100 *    0.8690    1.000000    
+      3 O     s    0.431813 *  0.264902 *  0.204106 *   -2.8690    1.000000    
+--------------------------------------------------------------------------------
+
+
+  Constraints : 
+
+--------------------------------------------------------------------------------
+  Constraint no.      Unconstrained     Constrained    Coefficient    Offset
+                         Variable         Variable
+--------------------------------------------------------------------------------
+           1              Strain 1        Strain 2       1.00000      0.0000
+--------------------------------------------------------------------------------
+
+
+********************************************************************************
+*  General input information                                                   *
+********************************************************************************
+
+  Species output for all configurations : 
+
+--------------------------------------------------------------------------------
+  Species    Type    Atomic    Atomic    Charge       Radii (Angs)     Library
+                     Number     Mass       (e)     Cova   Ionic  VDW   Symbol
+--------------------------------------------------------------------------------
+    Si       Core       14      28.09     4.0000   1.200  0.000  2.100          
+    O        Core        8      16.00     0.8690   0.730  0.000  1.360          
+    O        Shell       8      16.00    -2.8690   0.730  0.000  1.360          
+--------------------------------------------------------------------------------
+
+
+  Lattice summation method               =    Ewald
+  Accuracy factor for lattice sums       =    8.000
+
+
+  Time limit = Infinity
+
+  General interatomic potentials :
+
+--------------------------------------------------------------------------------
+Atom  Types   Potential         A         B         C         D     Cutoffs(Ang)
+  1     2                                                            Min    Max 
+--------------------------------------------------------------------------------
+Si   c O    s General  0  6 0.128E+04 0.321     10.7     0.000      0.000  8.000
+O    s O    s Buckingham    0.228E+05 0.149     27.9     .000       0.000  8.000
+O    c O    s Spring (c-s)   74.9     0.000     .000     .000       0.000  0.600
+--------------------------------------------------------------------------------
+
+  Potentials with energy / gradient boundary corrections : 
+
+--------------------------------------------------------------------------------
+    Potential       Atom1   Atom2    Type of correction
+--------------------------------------------------------------------------------
+    General  0  6   Si    c O     s  Gradient
+--------------------------------------------------------------------------------
+
+  General Three-body potentials :
+
+  Harmonic form:
+
+--------------------------------------------------------------------------------
+Atom    Atom    Atom           Force Constants            Theta     Cutoffs  
+  1       2       3     (eVrad**-2/eVrad**-3/eVrad**-4)   (deg)  1-2  1-3  2-3
+--------------------------------------------------------------------------------
+Si    c O     s O     s  2.097        0.0000    0.0000   109.470 0.00 0.00 0.00
+                                                                 1.80 1.80 3.20
+--------------------------------------------------------------------------------
+
+
+  Number of variables   =    4
+  Number of observables =    9
+
+--------------------------------------------------------------------------------
+   Observable no.  Type           Observable    Weight       Reference  Confign 
+--------------------------------------------------------------------------------
+          1        Derivative        0.000000        1.0000    a           1
+          2        Derivative        0.000000        1.0000    c           1
+          3        Derivative        0.000000        1.0000    1 x         1
+          4        Derivative        0.000000        1.0000    2 x         1
+          5        Derivative        0.000000        1.0000    2 y         1
+          6        Derivative        0.000000        1.0000    2 z         1
+          7        Derivative        0.000000        1.0000    3 x         1
+          8        Derivative        0.000000        1.0000    3 y         1
+          9        Derivative        0.000000        1.0000    3 z         1
+--------------------------------------------------------------------------------
+
+  Variables :
+
+--------------------------------------------------------------------------------
+     Parameter No.       Parameter Value          Parameter Type  Species
+--------------------------------------------------------------------------------
+             1               1283.037674          General A      
+             2                  0.431813          Shell position    1   3 x
+             3                  0.264902          Shell position    1   3 y
+             4                  0.204106          Shell position    1   3 z
+--------------------------------------------------------------------------------
+
+  Symmetry constraints used for fitting
+  Simultaneous optimisation will be performed during fitting
+  First derivatives of residuals to be used in fitting
+
+  Maximum no. of cycles   =       2000
+  Maximum step size       =  1000.0000
+  Tolerance on parameters =  0.0000100
+  Tolerance on function   =  0.0000100
+  Tolerance on gradient   =  0.0001000
+  Differencing interval   =  0.0001000
+
+  Start of fitting :
+
+  Cycle:      0  Sum sqs:      44.629882  Gnorm:   9302.030360  CPU:    0.040
+  ** Hessian calculated **
+  Cycle:      1  Sum sqs:      44.391496  Gnorm:   1868.537915  CPU:    0.100
+  Cycle:      2  Sum sqs:      44.303605  Gnorm:   1348.735099  CPU:    0.150
+  Cycle:      3  Sum sqs:      44.286562  Gnorm:    167.667643  CPU:    0.200
+  Cycle:      4  Sum sqs:      44.285218  Gnorm:      0.038733  CPU:    0.260
+
+
+  **** Fit completed successfully ****
+
+
+  Final sum of squares =      44.285218
+
+  Final gradient norm  =       0.038733
+
+  Final values of parameters :
+
+--------------------------------------------------------------------------------
+     Parameter No.       Parameter Value          Parameter Type  Species
+--------------------------------------------------------------------------------
+             1               1282.826190          General A      
+             2                  0.431781          Shell position    1   3 x
+             3                  0.264881          Shell position    1   3 y
+             4                  0.204116          Shell position    1   3 z
+--------------------------------------------------------------------------------
+
+
+  Final values of residuals :
+
+--------------------------------------------------------------------------------
+   Observable no.  Type            Observable   Calculated    Residual  Error(%)
+--------------------------------------------------------------------------------
+          1        Derivative         0.00000      1.99040      3.96170
+          2        Derivative         0.00000      1.18981      1.41565
+          3        Derivative         0.00000     -4.92853     24.29037
+          4        Derivative         0.00000      2.49896      6.24480
+          5        Derivative         0.00000     -1.10779      1.22720
+          6        Derivative         0.00000     -0.53267      0.28373
+          7        Derivative         0.00000      1.25483      1.57459
+          8        Derivative         0.00000     -2.20546      4.86407
+          9        Derivative         0.00000      0.65046      0.42309
+--------------------------------------------------------------------------------
+
+  General interatomic potentials :
+
+--------------------------------------------------------------------------------
+Atom  Types   Potential         A         B         C         D     Cutoffs(Ang)
+  1     2                                                            Min    Max 
+--------------------------------------------------------------------------------
+Si   c O    s General  0  6 0.128E+04 0.321     10.7     0.000      0.000  8.000
+O    s O    s Buckingham    0.228E+05 0.149     27.9     .000       0.000  8.000
+O    c O    s Spring (c-s)   74.9     0.000     .000     .000       0.000  0.600
+--------------------------------------------------------------------------------
+
+  Potentials with energy / gradient boundary corrections : 
+
+--------------------------------------------------------------------------------
+    Potential       Atom1   Atom2    Type of correction
+--------------------------------------------------------------------------------
+    General  0  6   Si    c O     s  Gradient
+--------------------------------------------------------------------------------
+
+  General Three-body potentials :
+
+  Harmonic form:
+
+--------------------------------------------------------------------------------
+Atom    Atom    Atom           Force Constants            Theta     Cutoffs  
+  1       2       3     (eVrad**-2/eVrad**-3/eVrad**-4)   (deg)  1-2  1-3  2-3
+--------------------------------------------------------------------------------
+Si    c O     s O     s  2.097        0.0000    0.0000   109.470 0.00 0.00 0.00
+                                                                 1.80 1.80 3.20
+--------------------------------------------------------------------------------
+
+
+
+  Total time to end of fitting =       0.2600 seconds
+
+********************************************************************************
+*  Output for configuration   1                                                *
+********************************************************************************
+
+
+  Components of energy : 
+
+--------------------------------------------------------------------------------
+  Interatomic potentials     =         104.23892695 eV
+  Three-body potentials      =           0.05944598 eV
+  Monopole - monopole (real) =        -111.25274305 eV
+  Monopole - monopole (recip)=        -379.17554699 eV
+  Monopole - monopole (total)=        -490.42829004 eV
+--------------------------------------------------------------------------------
+  Total lattice energy       =        -386.12991712 eV
+--------------------------------------------------------------------------------
+  Total lattice energy       =          -37255.6345 kJ/(mole unit cells)
+--------------------------------------------------------------------------------
+
+
+  Number of variables =      9
+
+  Maximum number of calculations  =          1000
+  Maximum Hessian update interval =            10
+  Maximum step size               =   1.000000000
+  Maximum parameter tolerance     =   0.000010000
+  Maximum function  tolerance     =   0.000010000
+  Maximum gradient  tolerance     =   0.001000000
+  Maximum gradient  component     =   0.010000000
+
+  Symmetry constrained optimisation
+
+  Symmetry used for second derivatives
+
+  Cell parameters to be optimised using strains
+
+  Newton-Raphson optimiser to be used
+
+  BFGS hessian update to be used
+
+  Start of bulk optimisation :
+
+  Cycle:      0 Energy:      -386.129917  Gnorm:      0.739413  CPU:    0.270
+  ** Hessian calculated **
+  Cycle:      1 Energy:      -386.166776  Gnorm:      0.343009  CPU:    0.290
+  Cycle:      2 Energy:      -386.169878  Gnorm:      0.065123  CPU:    0.300
+  Cycle:      3 Energy:      -386.169952  Gnorm:      0.012729  CPU:    0.320
+
+
+  **** Optimisation achieved ****
+
+
+  Final energy =    -386.16995371 eV
+  Final Gnorm  =       0.00045290
+
+  Components of energy : 
+
+--------------------------------------------------------------------------------
+  Interatomic potentials     =         106.68131836 eV
+  Three-body potentials      =           0.04823898 eV
+  Monopole - monopole (real) =        -108.39521045 eV
+  Monopole - monopole (recip)=        -384.50430060 eV
+  Monopole - monopole (total)=        -492.89951105 eV
+--------------------------------------------------------------------------------
+  Total lattice energy       =        -386.16995371 eV
+--------------------------------------------------------------------------------
+  Total lattice energy       =          -37259.4974 kJ/(mole unit cells)
+--------------------------------------------------------------------------------
+
+  Final asymmetric unit coordinates :
+
+--------------------------------------------------------------------------------
+   No.  Atomic        x           y           z         Radius
+        Label       (Frac)      (Frac)      (Frac)       (Angs) 
+--------------------------------------------------------------------------------
+     1  Si    c     0.464197    0.000000    0.333333    0.000000
+     2  O     c     0.408410    0.277857    0.224227    0.000000
+     3  O     s     0.428298    0.275377    0.212460    0.000000
+--------------------------------------------------------------------------------
+
+  Final cell parameters and derivatives :
+
+--------------------------------------------------------------------------------
+       a            4.837879 Angstrom     dE/de1(xx)    -0.000209 eV/strain
+       b            4.837879 Angstrom     dE/de2(yy)     0.000000 eV/strain
+       c            5.347047 Angstrom     dE/de3(zz)    -0.001636 eV/strain
+       alpha       90.000000 Degrees      dE/de4(yz)     0.000000 eV/strain
+       beta        90.000000 Degrees      dE/de5(xz)     0.000000 eV/strain
+       gamma      120.000000 Degrees      dE/de6(xy)     0.000000 eV/strain
+--------------------------------------------------------------------------------
+
+  Primitive cell volume =           108.381371 Angs**3
+
+  Density of cell =      2.762007 g/cm**3
+
+  Non-primitive cell volume =           108.381371 Angs**3
+
+
+  Final internal derivatives :
+
+--------------------------------------------------------------------------------
+   No.  Atomic          x             y             z           Radius
+        Label          (eV)          (eV)          (eV)        (eV/Angs)
+--------------------------------------------------------------------------------
+      1 Si    c       0.000765      0.000000      0.000000      0.000000
+      2 O     c       0.001477     -0.002014      0.001188      0.000000
+      3 O     s       0.000200      0.000686     -0.002269      0.000000
+--------------------------------------------------------------------------------
+
+
+  Time to end of optimisation =       0.3300 seconds
+
+
+  Peak dynamic memory used =       0.48 MB 
+
+
+  Timing analysis for Gulp :
+
+--------------------------------------------------------------------------------
+  Task / Subroutine                                          Time (Seconds)
+--------------------------------------------------------------------------------
+  Calculation of reciprocal space energy using symmetry           0.0200
+  Calculation of real space energy using symmetry                 0.2500
+  Calculation of three-body energy and derivatives                0.0600
+--------------------------------------------------------------------------------
+  Total CPU time                                                  0.3300
+--------------------------------------------------------------------------------
+
+
+  Dump file written as example2.res                  
+
+
+  Job Finished at 10:20.46 22nd March      2006                               
+

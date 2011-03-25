@@ -1,0 +1,212 @@
+
+###########################################################################
+#
+#                 Cambridge Crystallographic Data Centre
+#                                CCDC 
+# 
+###########################################################################
+#
+#  This CIF contains data generated directly from an entry in the Cambridge 
+#  Structural Database and will include bibliographic, chemical, crystal, 
+#  experimental, refinement, and atomic coordinate data, as available.
+#     
+#  Copyright  2004  The Cambridge Crystallographic Data Centre
+# 
+#  This CIF is provided on the understanding that it is used for bona fide 
+#  research purposes only.  It may contain copyright material of the CCDC
+#  or of third parties, and may not be copied or further disseminated in 
+#  any form, whether machine-readable or not, except for the purpose of 
+#  generating routine backup copies on your local computer system.
+# 
+#  For further information about the CCDC, data deposition and data 
+#  retrieval see <www.ccdc.cam.ac.uk>. Bona fide researchers may freely 
+#  download  Mercury and enCIFer from this site to visualise CIF-encoded 
+#  structures and to carry out CIF format checking respectively.
+#
+###########################################################################
+
+data_CSD_CIF_TIHVOV
+_audit_creation_date 2002-01-10
+_audit_creation_method CSD-ConQuest-V1
+_database_code_CSD TIHVOV
+_database_code_depnum_ccdc_archive 'CCDC 159440'
+_chemical_formula_sum 'C37 H68 Ag2 Cl2 P2 S4 W1'
+_chemical_formula_moiety
+;
+C36 H66 Ag2 P2 S4 W1,C1 H2 Cl2
+;
+_journal_coden_Cambridge 1220
+_journal_volume 7
+_journal_year 2001
+_journal_page_first 3998
+_journal_name_full 'Chem.-Eur.J. '
+loop_
+_publ_author_name
+"Chi-Ming Che"
+"Bao-Hui Xia"
+"Jie-Sheng Huang"
+"Chi-Keung Chan"
+"Zhong-Yuan Zhou"
+"Kung-Kai Cheung"
+_chemical_name_systematic
+;
+tetrakis(\m~2~-Sulfido)-bis(tricyclohexylphosphine)-di-silver-tungsten dichlor
+omethane solvate
+;
+_cell_volume   2371.596
+_exptl_crystal_colour 'pale yellow'
+_exptl_crystal_density_diffrn 1.643
+_exptl_crystal_description 'prism'
+_exptl_crystal_preparation 'diethyl ether/dichloromethane'
+_diffrn_ambient_temperature 301.2
+#These two values have been output from a single CSD field.
+_refine_ls_R_factor_gt 0.0425
+_refine_ls_wR_factor_gt 0.0425
+_symmetry_cell_setting triclinic
+_symmetry_space_group_name_H-M 'P -1'
+_symmetry_Int_Tables_number 2
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 -x,-y,-z
+_cell_length_a 10.968(2)
+_cell_length_b 13.056(2)
+_cell_length_c 17.919(3)
+_cell_angle_alpha 99.76(2)
+_cell_angle_beta 106.65(2)
+_cell_angle_gamma 98.31(2)
+_cell_formula_units_Z 2
+loop_
+_atom_type_symbol
+_atom_type_radius_bond
+C 0.68
+H 0.23
+Ag 1.19
+Cl 0.99
+P 1.05
+S 1.02
+W 1.27
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+W1 W 0.35058(2) -0.01670(2) 0.22455(1)
+Ag1 Ag 0.30823(5) 0.10665(4) 0.10291(3)
+Ag2 Ag 0.38862(6) -0.15238(4) 0.33778(3)
+Cl1 Cl 0.1761(5) -0.8431(5) 0.6806(3)
+Cl2 Cl 0.1103(6) -0.6421(6) 0.6687(4)
+S1 S 0.2895(2) -0.0872(1) 0.09586(9)
+S2 S 0.3737(2) 0.1586(1) 0.24956(10)
+S3 S 0.5385(2) -0.0577(2) 0.2789(1)
+S4 S 0.1978(2) -0.0844(1) 0.2707(1)
+P1 P 0.2795(1) 0.1692(1) -0.01648(8)
+P2 P 0.4367(2) -0.2719(1) 0.4230(1)
+C1 C 0.1722(5) 0.2668(4) -0.0306(3)
+C2 C 0.1056(6) 0.2722(5) -0.1166(4)
+C3 C 0.0282(6) 0.3605(6) -0.1213(4)
+C4 C -0.0705(6) 0.3467(6) -0.0804(5)
+C5 C -0.0098(7) 0.3366(6) 0.0056(5)
+C6 C 0.0680(6) 0.2512(5) 0.0109(4)
+C7 C 0.4383(6) 0.2362(5) -0.0180(4)
+C8 C 0.5132(6) 0.3166(6) 0.0599(4)
+C9 C 0.6480(7) 0.3654(7) 0.0608(5)
+C10 C 0.6426(7) 0.4148(6) -0.0095(5)
+C11 C 0.5721(8) 0.3363(6) -0.0868(5)
+C12 C 0.4358(6) 0.2859(5) -0.0902(4)
+C13 C 0.2157(5) 0.0584(5) -0.1042(3)
+C14 C 0.0872(6) -0.0054(5) -0.1065(4)
+C15 C 0.0348(7) -0.1010(6) -0.1768(4)
+C16 C 0.1297(8) -0.1724(6) -0.1766(5)
+C17 C 0.2590(9) -0.1102(6) -0.1766(5)
+C18 C 0.3123(7) -0.0146(6) -0.1074(4)
+C19 C 0.348(1) -0.2735(8) 0.4952(6)
+C20 C 0.3417(9) -0.3660(8) 0.5347(5)
+C21 C 0.269(2) -0.360(1) 0.590(1)
+C22 C 0.206(2) -0.282(2) 0.606(1)
+C23 C 0.209(1) -0.190(1) 0.5665(7)
+C24 C 0.296(2) -0.192(1) 0.5148(10)
+C25 C 0.6137(8) -0.2422(6) 0.4773(5)
+C26 C 0.6641(9) -0.3173(7) 0.5302(5)
+C27 C 0.813(1) -0.290(1) 0.5616(7)
+C28 C 0.866(1) -0.177(1) 0.6000(7)
+C29 C 0.816(1) -0.1045(10) 0.5465(6)
+C30 C 0.665(1) -0.1275(8) 0.5168(6)
+C31 C 0.4020(7) -0.4079(5) 0.3625(4)
+C32 C 0.4875(8) -0.4204(7) 0.3111(5)
+C33 C 0.456(1) -0.5301(7) 0.2545(5)
+C34 C 0.316(1) -0.5597(7) 0.2043(5)
+C35 C 0.227(1) -0.5516(8) 0.2523(6)
+C36 C 0.2595(8) -0.4416(7) 0.3094(5)
+C37 C 0.054(1) -0.778(1) 0.6567(9)
+H1 H 0.22590 0.33480 -0.00470
+H2 H 0.17000 0.28500 -0.14170
+H3 H 0.04810 0.20620 -0.14380
+H4 H 0.08610 0.42700 -0.09660
+H5 H -0.01420 0.35920 -0.17580
+H6 H -0.11070 0.40650 -0.07970
+H7 H -0.13420 0.28430 -0.10890
+H8 H 0.04570 0.40240 0.03560
+H9 H -0.07740 0.32070 0.02770
+H10 H 0.01110 0.18430 -0.01420
+H11 H 0.10940 0.25260 0.06550
+H12 H 0.48780 0.18260 -0.02110
+H13 H 0.46630 0.37150 0.06610
+H14 H 0.52110 0.28200 0.10300
+H15 H 0.68870 0.41850 0.10860
+H16 H 0.69750 0.31150 0.05940
+H17 H 0.59880 0.47220 -0.00590
+H18 H 0.72880 0.44060 -0.00850
+H19 H 0.56570 0.37160 -0.12950
+H20 H 0.62000 0.28200 -0.09240
+H21 H 0.39780 0.23220 -0.13780
+H22 H 0.38490 0.33900 -0.09050
+H23 H 0.20070 0.08720 -0.15050
+H24 H 0.09930 -0.02970 -0.05830
+H25 H 0.02550 0.03920 -0.11070
+H26 H -0.04310 -0.14010 -0.17380
+H27 H 0.01670 -0.07670 -0.22510
+H28 H 0.14370 -0.20100 -0.13020
+H29 H 0.09570 -0.22860 -0.22290
+H30 H 0.32000 -0.15540 -0.17260
+H31 H 0.24600 -0.08690 -0.22520
+H32 H 0.38830 0.02490 -0.11230
+H33 H 0.33410 -0.03870 -0.05910
+H34 H 0.26990 -0.30760 0.45380
+H35 H 0.30260 -0.42880 0.49420
+H36 H 0.42800 -0.36980 0.56310
+H37 H 0.20390 -0.42330 0.57170
+H38 H 0.32830 -0.36090 0.63990
+H39 H 0.11700 -0.31480 0.59260
+H40 H 0.24050 -0.25350 0.66200
+H41 H 0.12350 -0.19060 0.53420
+H42 H 0.24030 -0.12590 0.60680
+H43 H 0.36670 -0.13370 0.54080
+H44 H 0.24580 -0.17950 0.46550
+H45 H 0.65210 -0.25330 0.43610
+H46 H 0.63140 -0.30990 0.57410
+H47 H 0.63550 -0.38840 0.49990
+H48 H 0.84260 -0.33140 0.59960
+H49 H 0.84520 -0.30790 0.51800
+H50 H 0.84230 -0.16120 0.64690
+H51 H 0.95830 -0.16430 0.61390
+H52 H 0.84810 -0.03290 0.57550
+H53 H 0.84660 -0.11530 0.50170
+H54 H 0.63580 -0.08540 0.47960
+H55 H 0.63460 -0.11050 0.56100
+H56 H 0.41770 -0.45460 0.39790
+H57 H 0.47900 -0.36850 0.27960
+H58 H 0.57490 -0.40830 0.34500
+H59 H 0.50820 -0.52890 0.22060
+H60 H 0.47430 -0.58170 0.28540
+H61 H 0.30080 -0.51360 0.16840
+H62 H 0.29880 -0.63080 0.17480
+H63 H 0.14070 -0.56320 0.21720
+H64 H 0.23400 -0.60430 0.28290
+H65 H 0.20630 -0.44340 0.34290
+H66 H 0.24050 -0.39030 0.27830
+H67 H 0.00320 -0.80660 0.60260
+H68 H 0.00220 -0.78730 0.69020
+#END

@@ -1,0 +1,224 @@
+load model/jmol.mol.gz;
+set frank off;
+spacefill off; wireframe off;
+set echo top center; font echo 22 serif; color echo white
+echo "The future ..."
+delay 1.5
+set echo middle center; font echo 22 serif; color echo white
+echo "of molecular visualization"
+delay 1.5
+set echo bottom center; font echo 22 serif; color echo white
+echo "... has arrived ..."
+delay 3
+#
+set echo off;
+set echo middle center; font echo 60 serif bold; color echo yellow
+echo "Jmol"
+delay 1.5
+set echo off;
+color atoms gold; color bonds yellow
+zoom 10;
+wireframe .25; spacefill .3;
+moveto 1 0 0 0 0 120;
+delay 1.5;
+moveTo 1 5 345 939 79.5 24 51 57
+
+script script/smallMolecules.en.txt
+set echo off;
+restrict none;
+set echo off;
+set echo top center; font echo 22; color echo cyan
+echo "This is *not* a movie ..."
+delay 1.2;
+set echo middle center; font echo 30; color echo tomato
+echo "... this is reality ..."
+delay 1.2;
+set echo bottom center; font echo 22; color echo lime
+echo "virtual reality for molecules"
+delay 1.5;
+#
+set echo off;
+set echo middle center; font echo 60 serif bold; color echo yellow
+echo "Jmol"
+delay 2
+#
+set echo off;
+restrict none;
+set echo off;
+set echo top center; font echo 18; color echo blueviolet
+echo "RasMol/Chime script compatibility"
+delay 1.2;
+set echo middle center; font echo 20; color echo springgreen
+echo "Button/menu control"
+delay 1.2;
+set echo bottom center; font echo 22; color echo lavenderblush
+echo "for building tutorials"
+delay 1.5;
+#
+set echo off;
+set echo middle center; font echo 60 serif bold; color echo yellow
+echo "Jmol"
+delay 2
+#
+
+set echo off;
+
+script script/proteins.en.txt
+restrict none;
+set echo off;
+set echo top center; font echo 22; color echo dodgerblue
+echo "Web browser applet ..."
+delay 1.2;
+set echo middle center; font echo 22; color echo violet
+echo "*no* client installation"
+delay 1.2;
+set echo bottom center; font echo 22; color echo orange
+echo "... easy to deploy"
+delay 1.2;
+#
+set echo off;
+set echo middle center; font echo 60 serif bold; color echo yellow
+echo "Jmol"
+delay 2
+#
+
+script script/dna.en.txt
+set echo off;
+
+set echo top left; font echo 24; color echo khaki
+echo "Primary school"
+delay 1;
+
+set echo middle right; font echo 24; color echo coral
+echo "Secondary school"
+delay 1;
+
+set echo bottom center; font echo 24; color echo gold
+echo "College"
+delay 1;
+
+set echo top center; font echo 24; color echo mediumSpringGreen
+echo "University"
+delay 1;
+
+set echo middle left; font echo 24; color echo peru
+echo "Professional school"
+delay 1;
+
+set echo bottom center; font echo 24; color echo paleTurquoise
+echo "Graduate school"
+delay 1;
+
+set echo top right; font echo 24; color echo chocolate
+echo "Inorganic chemistry"
+delay 1;
+
+set echo middle center; font echo 24; color echo cadetBlue
+echo "Organic chemistry"
+delay 1;
+
+set echo bottom left; font echo 24; color echo aquamarine
+echo "Physical chemistry"
+delay 1;
+
+set echo top left; font echo 24; color echo honeydew
+echo "Biology"
+delay 1;
+
+set echo middle left; font echo 24; color echo lightSalmon
+echo "Biochemistry"
+delay 1;
+
+set echo bottom right; font echo 24; color echo mediumSeaGreen
+echo "Molecular biology"
+delay 1;
+
+set echo top center; font echo 24; color echo mistyRose
+echo "Microbiology"
+delay 1;
+
+set echo middle right; font echo 24; color cornsilk
+echo "Pharmacology"
+delay 1;
+
+set echo bottom center; font echo 24; color echo powderBlue
+echo "Materials science"
+delay 1;
+
+set echo top right; font echo 24; color echo lightGoldenrodYellow
+echo "Metallurgy"
+delay 1;
+
+set echo middle left; font echo 24; color echo tomato
+echo "Soil science"
+delay 1;
+
+set echo bottom right; font echo 24; color echo thistle
+echo "Crystallography"
+delay 1;
+
+set echo top left; font echo 24; color echo lavender
+echo "Research institutions";
+delay 1;
+
+set echo middle center; font echo 20; color echo lemonChiffon
+echo "Government organizations";
+delay 1;
+
+set echo bottom center; font echo 18; color echo lightCyan
+echo "Web-based chemical databases";
+delay 1;
+
+set echo off;
+delay .5
+
+set echo top center; font echo 20; color echo orchid
+echo "If you are on the web ..."
+delay 1.2;
+set echo middle center; font echo 20; color echo peachpuff
+echo "and you have molecules ..."
+delay 1.2;
+set echo bottom center; font echo 20; color echo lightSkyBlue
+echo "then you need ...";
+delay 1.5;
+
+set echo off;
+set echo middle center; font echo 60 serif bold; color echo yellow
+echo "Jmol"
+delay 2
+#
+
+script script/macromolecules.en.txt
+
+set echo off
+set echo top center; font echo 20; color echo pink
+echo "Open Source, *free* software"
+delay 1.2;
+set echo middle center; font echo 20; color echo violet
+echo "... guaranteed to be fun ..."
+delay 1.2;
+set echo bottom center; font echo 20; color echo orange
+echo "... or your money back"
+delay 1.2;
+#
+set echo off;
+set echo middle center; font echo 60 serif bold; color echo yellow
+echo "Jmol"
+delay 2
+#
+
+load model/jmol.mol.gz;
+set frank off
+
+color atoms gold; color bonds yellow
+wireframe .25; spacefill .3;
+moveTo 0 -245 -957 157 176.4 16 -55 -56;
+moveTo 1 337 -276 900 81.7 35 -28 -16;
+moveTo 1 -661 120 -741 50.3 64 14 -17;
+moveTo 1 0 0 1000 39.0 102 16 20;
+moveTo 1 0 0 0 0 120;
+delay 3;
+moveTo 1 0 0 0 0;
+move 0 0 360 0 0 0 0 0 2;
+delay 4;
+loop;

@@ -1,0 +1,95 @@
+<!--
+  Dutch translation 
+  Translated from default version : floatingPoint_en.xml (v 1.1)
+-->
+<section title="Drijvende komma representaties">
+  <p>
+    Iemand duidde ons op de volgende situatie die wel eens interessant zou kunnen zijn.
+  </p>
+
+  <p>
+    Bij de weergave van kristalcel-parameters:
+    <pre>
+      > worden de a, b, c, enz. waarden weergegeven met een 'extra' decimaal
+      > plaatst de 10pre8 applet a=10.436999 terwijl de
+      > CRYST1 record van het pdb bestand een waarde van 10.437 geeft. Dit betekent
+      > dat er zich een afrondingsfout bij het berekenen van de celco&#x00F6;rdinaten voordoet.
+    </pre>
+    Eigenlijk is deze situatie vrij subtiel. Het was niet echt een afrondingsprobleem,
+    omdat er geen berekeningen werden uitgevoerd op de nummers.
+  </p>
+
+  <p>
+    Maar toch zou dit een probleem kunnen vormen. De <i>bron</i> van dit probleem belangt
+    iedereen aan die werken met drijvende komma nummers.
+  </p>
+
+  <p>
+    We zijn het gewoon om in paren van 10 te werken ... 10 vingers. Maar van tijd tot tijd komen
+    we langs rationele nummers die we niet kunnen weergeven in paren van 10. De beste voorbeelden
+    hiervan vormen de breuken 1/3 en 2/3. We schrijven ze als 0.33 of 0.67, of breiden ze uit met
+    een aantal extra cijfers (0.33333, 0.66667) indien we een hogere accuraatheid verwachten in de
+    berekening.
+  </p>
+
+  <p>
+    We zijn op ditzelfde probleem gestoten in de computerwereld. Mensen hebben lang geworsteld om
+    manieren te vindne om dit in rekening te brengen, sinds het begin van de opkomst van de
+    digitale computer.
+  </p>
+
+  <p>
+    De meeste computers gebruiken een drijvende komma representatie, gedefinieerd door de
+    IEEE standaarden organisatie, omstreeks 1985:
+    <code>
+      IEEE Std 754-1985
+      IEEE Standard for Binary Floating-Point Arithmetic
+    </code>
+    Dit is een 'base 2' (binaire - paren van 2) representatie van drijvende komma nummers,
+    geen 'base 10' (paren van 10) representatie. Dit betekent dat er een verschillende set
+    van rationele nummers bestaat die niet precies kan worden weergegeven.
+  </p>
+
+  <p>
+    In dit geval werden er geen berekeningen uitgevoerd op het cijfer 10.437 ... het werd meteen
+    uit het bestand gelezen. Maar het nummer 10.437 kan echter niet correct worden weergegeven
+    in binair formaat ... dus eindigen we met 10.436999 (ik heb dit niet gecontroleerd, maar
+    ik veronderstel dat het juist is).
+  </p>
+
+
+  <p>
+    Andere punten:
+    <ul>
+      <li>
+         COBOL ondersteunde decimale en vaste-punt nummers om deze situatie op te vangen om te
+         kunnen omgaan met dollars en dollarcenten in een professionele omgeving
+      </li>
+      <li>
+         een van de representaties bij IBM mainframes was base 16. (in plaats van base 2)
+         Terwijl dit deze situatie niet behandelde, zorgde dit wel voor een aanzienlijke
+         prestatieverbetering (tijdens de 'normalisatie' procedure)
+      </li>
+      <li>
+         Mensen die hoge prestaties willen volgen de IEEE standaarden niet.
+      </li>
+      <li>
+         De eerste Java Virtual Machine specificatie *vereiste* IEEE representatie
+         (en operationeel gedrag) voor drijvende komma nummers. Dit (zou) overdraagbaarheid
+         naar andere platformen garanderen ... dezelfde berekening zou hetzelfde antwoord
+         geven op verschillende systemen. Deze vereiste is ondertussen wat afgezwakt ...
+         om hogere prestatie berekeningen toe te laten ... en omdat men moest toegeven dat het
+         een onoplosbaar probleem was.
+      </li>
+      <li>
+         Ik denk dat de meeste mensen ermee instemmen dat de IEEE standaarden problemen hebben,
+         maar mensen moeten die nu eenmaal volgen
+      </li>
+      <li>
+         Systemen voor symbolische/pure mathematica (Mathematica, MATLAB, Macsyma) ondersteunen
+         rationele nummers (fractionele representatie van integers ... 1/3, 2/3) om te proberen
+         dit type van problemen voor <i>rationle</i> nummers te vermijden.
+      </li>
+    </ul>
+  </p>
+</section>

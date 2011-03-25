@@ -1,0 +1,23 @@
+.command {
+	font-family: "Courier New", Courier, mono;
+	font-size: 1.1em;
+	font-weight:bold;
+	color:#990099;
+}
+.code {
+	font-family: "Courier New", Courier, mono;
+	font-size: 1.1em;
+}
+
+.parmt {
+	font-size: 1.05em;
+	font-style: italic;
+	border: 1px solid #00CC00;
+	padding:0 4px;
+}
+
+.noBold { font-weight:normal; }
+.smallType {font-size: 0.8em}
+.comment { color: #CC6600; font-size: 0.85em; }
+img { margin-bottom:4px; margin-left:4px; }
+h3 { clear:both; }

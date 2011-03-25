@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<!--
+  French translation 
+  Translated from default version : index_en.xml (v 1.1)
+-->
+<document>
+  <body>
+    <title>Libraire JavaScript Jmol.js</title>
+    
+    <header>
+      <p>
+        Jmol.js est une librairie JavaScript qui peut &#x00EA;tre
+        utilis&#x00E9;e pour simplifier le d&#x00E9;veloppement de pages
+        web qui incluent la JmolApplet.
+      </p>
+    </header>
+
+    <section title="Pourquoi utiliser Jmol.js?">
+      <p>
+        Nous recommandons fortement d'utiliser Jmol.js pour construire
+        vos pages web. Il automatise la g&#x00E9;n&#x00E9;ration de
+        beaucoup de s&#x00E9;quences de tag HTML, rendant le code plus
+        simple, plus facile &#x00E0; comprendre et moins sujet aux
+        erreurs.
+      </p>
+      <p>
+        La librairie Jmol.js devrait bien fonctionner avec la plupart
+        des navigateurs web de ce si&#x00E8;cle. De plus, sur les
+        plateformes Win32, elle fonctionne g&#x00E9;n&#x00E9;ralement bien
+        avec la s&#x00E9;rie de navigateurs Netscape 4.* (du si&#x00E8;cle
+        pr&#x00E9;c&#x00E9;dent).
+      </p>
+      <p>
+        <i>Il faut noter que sur Max OS X, Internet </i>n'est pas<i>
+        support&#x00E9; car il ne permet pas les communications
+        LiveConnect entre JavaScript et les applets Java. Il faut aussi
+        noter que la famille de navigateurs Mozilla (y compris FireFox et
+        Camino) doivent &#x00EA;tre configur&#x00E9;s pour utiliser
+        Java 1.4.2 en utilisant</i>
+        <a href="http://javaplugin.sourceforge.net">
+          javaplugin.sourceforge.net
+        </a>
+      </p>
+      <p>
+        Il y a quelques cas o&#x00F9; vous pouvez choisir de ne pas
+        utiliser la librairie Jmol.js. Par exemple, vous pouvez &#x00EA;tre
+        en train de construire une application web avanc&#x00E9;e qui
+        utilise de la g&#x00E9;n&#x00E9;ration HTML c&#x00F4;t&#x00E9;
+        serveur, tel que PHP, JSP, ASP, CGI, etc.
+        Dans ce cas, il <i>peut</i> &#x00EA;tre appropri&#x00E9; de
+        g&#x00E9;n&#x00E9;rer le code HTML directement sur votre serveur
+        plut&#x00F4;t que d'utiliser la librairie Jmol.js. Si vous
+        n'&#x00EA;tes pas sur, utilisez la librairie Jmol.js.
+      </p>
+    </section>
+
+    <section title="Exempl de page HTML utilisant Jmol.js">
+      <p>
+        <a href="." onClick='window.open("../demo/jssample0/", "jssample",
+          "width=250,height=350,screenX=10,screenY=10,left=10,top=10");
+          return false;'>
+          Cliquer ici
+        </a>
+        pour ouvrir une nouvelle fen&#x00EA;tre du navigateur qui montre
+        la page exemple g&#x00E9;n&#x00E9;r&#x00E9;e par le code source
+        html suivant
+<pre><![CDATA[
+<html>
+  <head>
+    <title>Simple example</title>
+    <script src="../jmol/Jmol.js"></script>
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../jmol"); // REQUIRED
+      jmolApplet(200, "load caffeine.xyz");
+    </script>
+  </body>
+</html>
+]]></pre>
+      </p>
+      <p>
+        <a href="." onClick='window.open("../demo/jssample1/", "jssample",
+	        "width=250,height=350,screenX=10,screenY=10,left=10,top=10");
+          return false;'>
+          Cliquer ici
+        </a>
+        pour voir un exemple l&#x00E9;g&#x00E8;rement plus compliqu&#x00E9;
+        qui d&#x00E9;montre les diff&#x00E9;rents types de contr&#x00F4;les
+        pour l'interface utilisateur qui peuvent &#x00EA;tre
+        g&#x00E9;n&#x00E9;r&#x00E9;s en utilisant la librairie Jmol.js.
+<pre><![CDATA[
+<html>
+  <head>
+    <title>UI Controls example</title>
+    <script src="../jmol/Jmol.js"></script> <!-- REQUIRED -->
+  </head>
+  <body>
+    <form> <!-- form tags must enclose button/checkbox/radio/menu controls -->
+      <script>
+        jmolInitialize("../jmol"); // REQUIRED
+        jmolSetAppletColor("skyblue"); // if you don't want black
+
+	// 200x200 + file from another directory
+	jmolApplet(200, "load ../jssample0/caffeine.xyz");
+	jmolBr();
+	// a radio group
+	jmolHtml("atoms ");
+	jmolRadioGroup([
+          ["spacefill off",  "off"],
+	  ["spacefill 20%",  "20%", "checked"],
+	  ["spacefill 100%", "100%"]
+	]);
+	jmolBr();
+	// a button
+	jmolButton("reset", "Reset to original orientation");
+	jmolBr();
+	// a checkbox
+	jmolCheckbox("spin on", "spin off", "spin");
+	jmolBr();
+	// a link
+	jmolLink("move 360 0 0 0 0 0 0 0 2", "Rotate once about the x axis");
+	jmolBr();
+	// a menu
+	jmolMenu([
+	"background white",
+	["background skyblue", null, "selected"],
+	"background yellow",
+	"background salmon",
+	"background palegreen",
+	"background black"
+	]);
+      </script>
+    </form>
+  </body>
+</html>
+]]></pre>
+      </p>
+    </section>
+
+    <section title="Recommendations G&#x00E9;n&#x00E9;rales">
+      <ul>
+        <li>
+          Il y a un r&#x00E9;pertoire sur votre serveur web qui contient
+          Jmol.js, JmolApplet.jar et tout autre fichiers sp&#x00E9;cifique
+          Jmol. Pour les besoins de cette discussion nous appellerons ce
+          r&#x00E9;pertoire <code>../your-jmol-directory</code>.
+        </li>
+        <li>
+          Chaque page web de votre site devrait faire
+          r&#x00E9;f&#x00E9;rence &#x00E0;
+          <code>../your-jmol-directory</code> en utilisant une url
+          relative. Les chemins relatifs vers les r&#x00E9;pertoires qui
+          commencent par . ou .. devraient <i>toujours</i> &#x00EA;tre
+          utilis&#x00E9;s.
+          Les chemins relatifs de serveur qui commencent par /
+          <i>pourraient</i> &#x00EA;tre acceptables dans des
+          circonstances particuli&#x00E8;res.
+          Les URLs absolues qui commencent par http:// sont
+          <b>diaboliques</b> et ne devraient jamais &#x00EA;tre
+          utilis&#x00E9;es.
+        </li>
+        <li>
+          Chaque page doit contenir la commande HTML suivante dans la
+          section <code>head</code> pour inclure la librairie
+          Jmol.js:<br />
+<pre><![CDATA[
+  <head>
+    ...
+    <script src="../your-jmol-directory/Jmol.js"></script>
+    ...
+  </head>
+]]></pre>
+        </li>
+        <li>
+          Chaque page doit contenir un appel &#x00E0;
+          <code>jmolInitialize(codebaseDirectory)</code>
+          comme premier appel &#x00E0; la librairie Jmol.js.
+        </li>
+
+        <li>
+          Chaque page qui contient des contr&#x00F4;les de type boutons/
+          cases &#x00E0; cocher/s&#x00E9;lecteurs/menu doit contenir les
+          tags <code>&lt;form&gt;/&lt;/form&gt;</code>.
+          Il est g&#x00E9;n&#x00E9;ralement s&#x00FB;r d'ouvrir ce tag
+          imm&#x00E9;diatement apr&#x00E8;s le tag <code>body</code> et
+          de le fermer juste avant le tag <code>/body</code>.
+<pre><![CDATA[
+  <body>
+    <form>
+    ...
+    </form>
+  </body>
+</html>
+]]></pre>
+        </li>
+      </ul>
+    </section>
+
+    <section title="Commandes Basiques du Langage de Script">
+      <section title="jmolInitialize">
+        <code>jmolInitialize(codebaseDirectory)</code>
+        Initialise la librairie JavaScript Jmol.js. L'appel &#x00E0;
+        <code>jmolInitialize()</code> doit &#x00EA;tre &#x00E0;
+        l'int&#x00E9;rieur du <code>&lt;body&gt;</code> de la page HTML.
+        Le param&#x00E8;tre obligatoire <code>codebaseDirectory</code>
+        pr&#x00E9;cise le chemin relatif vers le r&#x00E9;pertoire
+        contenant les fichiers de l'applet Jmol.
+      </section>
+
+      <section title="jmolApplet">
+        <code>jmolApplet(size, {script}, {nameSuffix})</code>
+        Alloue une JmolApplet.
+        <code>size</code> devrait g&#x00E9;n&#x00E9;ralement &#x00EA;tre
+        un nombre entier de pixels dans la plage de valeurs 100 - 800.
+        <code>script</code> est un script qui sera lanc&#x00E9;
+        apr&#x00E8;s le chargement du mod&#x00E8;le mol&#x00E9;culaire.
+        <p><i>
+          Avanc&#x00E9;: <code>nameSuffix</code> ne devrait &#x00EA;tre
+          sp&#x00E9;cifi&#x00E9; que si vous voulez expliciement
+          contr&#x00F4;ler les attributs <code>name</code> et
+          <code>id</code> utilis&#x00E9;s dans le tag <code>applet</code>.
+          Le suffixe que vous fournissez sera ajout&#x00E9; &#x00E0; la
+          cha&#x00EE;ne de caract&#x00E8;res "jmolApplet", donc si vous
+          pr&#x00E9;cisez "Foo" les attributs g&#x00E9;n&#x00E9;r&#x00E9;s
+          seront <code>name='jmolAppletFoo' id='jmolAppletFoo'</code>.
+          Dans les applications de base de donn&#x00E9;es ou vous
+          &#x00E9;crivez des enregistrements dans une table, vous
+          &#x00EA;tes libre de fournir un entier comme suffixe.
+        </i></p>
+        <p><i>
+          Avanc&#x00E9;: les instances de JmolApplet devraient
+          g&#x00E9;n&#x00E9;ralement &#x00EA;tre carr&#x00E9;es. Si votre
+          application n&#x00E9;cessite une JmolApplet rectangulaire, alors
+          le param&#x00E8;tre <code>size</code> peut &#x00EA;tre
+          sp&#x00E9;cifi&#x00E9; sous la forme d'un tableau contenant
+          deux &#x00E9;l&#x00E9;ments ... largeur et hauteur
+          sp&#x00E9;cifi&#x00E9; en nombre de pixels. Il est habituellement
+          plus facile de sp&#x00E9;cifier en utilisant la notation crochets
+          JavaScript pour les tableaux de constantes ... comme dans
+          <code>[400, 200]</code>. La taille doit &#x00EA;tre fixe; les
+          pourcentages ne sont pas autoris&#x00E9;s. Autrement, beaucoup
+          de navigateurs meurent quand la fen&#x00EA;tre du navigateur
+          est redimensionn&#x00E9;e.
+        </i></p>
+      </section>
+
+      <section title="jmolButton">
+        <code>jmolButton(script, {label}, {id})</code>
+        <p>
+          Dessine un bouton avec un texte. Si <code>label</code> n'est pas
+          pr&#x00E9;cis&#x00E9;, sa valeur par d&#x00E9;faut est
+          constitu&#x00E9;e des 32 premiers caract&#x00E8;res du script.
+          <code>script</code> est ex&#x00E9;cut&#x00E9; quand le bouton
+          est press&#x00E9;.
+        </p>
+        <p>
+          <code>id</code> fixera &#x00E0; la fois l'id HTML et le nom
+          HTML. Par d&#x00E9;faut, jmolButton0, jmolButton1, etc.
+        </p>
+      </section>
+      <section title="jmolCheckbox">
+        <code>
+          jmolCheckbox(scriptWhenChecked, scriptWhenUnchecked,
+          labelHtml, {isChecked}, {id})
+        </code>
+        <p>
+          Affiche une case &#x00E0; cocher.
+          <code>scriptWhenChecked</code> est ex&#x00E9;cut&#x00E9;
+          quand la case est coch&#x00E9;e par l'utiilisateur.
+          <code>scriptWhenUnchecked</code> est ex&#x00E9;cut&#x00E9;
+          quand la case est d&#x00E9;coch&#x00E9;e par l'utilisateur.
+          <code>labelHTML</code> est plac&#x00E9; juste apr&#x00E8;s la
+          case &#x00E0; cocher.
+          <code>isChecked</code> devrait &#x00EA;tre mise &#x00E0; une
+          valeur non-fausse si vous voulez l'&#x00E9;tat par d&#x00E9;faut.
+        </p>
+        <p>
+          <code>id</code> fixera &#x00E0; la fois l'id HTML et le nom
+          HTML. Par d&#x00E9;faut, jmolCheckbox0, jmolCheckbox1, etc.
+        </p>
+      </section>
+      <section title="jmolRadioGroup">
+        <code>
+          jmolRadioGroup(arrayOfRadioButtons, {separatorHtml}, {groupName})
+        </code>
+        <p>
+          Utilis&#x00E9; pour mettre en place un groupe de case &#x00E0;
+          cocher mutuellement exclusives.
+          <code>arreyOfRadioButtons</code> est g&#x00E9;n&#x00E9;ralement
+          sp&#x00E9;cifi&#x00E9; en utilisant la notation JavaScript des
+          crochets [ entr&#x00E9;eA, entr&#x00E9;eB, ... ].
+          Chaque <code>entr&#x00E9;e</code> est g&#x00E9;n&#x00E9;ralement
+          un autre tableau qui contient un script, un texte, et un flag
+          optionnel isChecked. Si une <code>entr&#x00E9;e</code> est une
+          cha&#x00EE;ne de carct&#x00E8;res  au lieu d'un tableau, alors
+          la cha&#x00EE;ne est utilis&#x00E9; &#x00E0; la fois pour le
+          script et le texte.
+        </p>
+        <p>
+          <code>separatorHtml</code> est utilis&#x00E9; pour
+          sp&#x00E9;cifier du code HTML qui devrait &#x00EA;tre
+          plac&#x00E9; apr&#x00E8; chaque bouton radio. Par exemple, pour
+          mettre les boutons radio sur des lignes s&#x00E9;par&#x00E9;es
+          vous devriez passer <code>&lt;br&gt;</code> comme
+          param&#x00E8;tre. Si <code>separatorHtml</code> n'est pas
+          sp&#x00E9;cifi&#x00E9;, sa valeur par d&#x00E9;faut est
+          <code>"&amp;nbsp;"</code>
+        </p>
+        <p>
+          <code>groupName</code> sera utilis&#x00E9; comme le nom commun
+          HTML pour tous les boutons radio du groupe. Sa valeur par
+          d&#x00E9;faut est jmolRadioGrou0, jmolRadioGroup1, etc.
+        </p>
+      </section>
+      <section title="jmolLink">
+        <code>jmolLink(script, text, {id})</code>
+        <p>
+          <code>text</code> est &#x00E9;crit comme un lien.
+          <code>script</code> est ex&#x00E9;cut&#x00E9; quand l'utilisateur
+          clique sur le lien.
+        </p>
+        <p>
+          <code>id</code> sera utilis&#x00E9; &#x00E0; la fois pour l'id
+          HTML et le nom HTML. Sa valeur par d&#x00E9;faut est jmolLink0,
+          jmolLink1, etc.
+        </p>
+      </section>
+      <section title="jmolMenu">
+        <code>jmolMenu(arrayOfMenuItems, {menuHeight}, {id})</code>
+        <p>
+          Utilis&#x00E9; pour afficher des &#x00E9;l&#x00E9;ments de menu
+          avec les scripts associ&#x00E9;s.
+          <code>arrayOfMenuItems</code> est g&#x00E9;n&#x00E9;ralement
+          sp&#x00E9;cifi&#x00E9; en utilisant la notation crochets de
+          JavaScript [ itemA, itmB, ... ]. Chaque <code>item</code> est
+          g&#x00E9;n&#x00E9;ralement un autre tableau qui contient un
+          script, un texte et un flag optionnel isChecked. Si un
+          <code>item</code> est une simple cha&#x00EE;ne de
+          caract&#x00E8;res au lieu d'un tableau, alors cette
+          cha&#x00EE;ne est utilis&#x00E9;e &#x00E0; la fois pour le
+          script et le texte.
+        </p>
+        <p>
+          <code>menuHeight</code> est utilis&#x00E9; pour sp&#x00E9;cifier
+          la hauteur du menu. Si elle est non sp&#x00E9;cifi&#x00E9; ou
+          &#x00E9;gale &#x00E0; 1, le menu est une liste d&#x00E9;roulante
+          qui s'ouvre quand l'utilisateur clique dessus. Si elle est
+          sup&#x00E9;rieur ou &#x00E9;gale &#x00E0; 2, alors un menu est
+          affich&#x00E9; avec le nombre de lignes sp&#x00E9;cifi&#x00E9;es.
+          Si la valeur du param&#x00E8;tre <code>menuHeight</code> est -1
+          alors la hauteur du menu sera automatiquement calcul&#x00E9;e
+          pour &#x00EA;tre de la m&#x00EA;me longueur que le nombre
+          d'&#x00E9;l&#x00E9;ments, enlevant tout scrolling.
+        </p>
+        <p>
+          <code>id</code> sera utilis&#x00E9; &#x00E0; la fois pour l'id
+          HTML et le nom HTML. Sa valeur par d&#x00E9;faut est jmolMenu0,
+          jmolMenu1, etc.
+        </p>
+      </section>
+    </section>
+    
+    <section title="Commandes Interm&#x00E9;daires du Langage de Script">
+      <section title="jmolSetAppletColor">
+        <code>
+          jmolSetColor(bgcolor,
+          {boxfgcolor}, {progresscolor}, {boxbgcolor})
+        </code>
+        Utilis&#x00E9; pour sp&#x00E9;cifier la couleur de fond de
+        l'applet. <code>bgcolor</code> est sp&#x00E9;cifi&#x00E9; en
+        utilisation la notation HTML "#RRVVBB" ou comme l'un des
+        <a href="http://www.webcolors.freeserve.co.uk/names140.htm"
+          target="colors140">
+          140 noms de couleur JavaScript
+        </a>.
+        <p><i>
+          Avanc&#x00E9;: La couleur du texte et la couleur de la barre
+          d'avancement peuvent &#x00E9;ventuellement &#x00EA;tre
+          choisies.
+        </i></p>
+      </section>
+
+      <section title="jmolHtml">
+        <code>jmolHtml(html)</code>
+        <p>
+          Vous permet de passer du texte arbitraire, contenant
+          &#x00E9;ventuellement des tahs html, directement &#x00E0;
+          la page ... quelque fois c'est plus pratique de fermer et
+          r&#x00E9;ouvrir les tags <code>script</code>. Le
+          r&#x00E9;sultat est identique:<br />
+          <code>&lt;/script&gt;<i>html</i>&lt;script&gt;</code>
+        </p>
+      </section>
+
+      <section title="jmolBr">
+        <code>jmolBr()</code>
+        <p>
+          La m&#x00EA;me chose que <code>jmolHtml("&lt;br /&gt;")</code> qui
+          est identique &#x00E0;
+          <code>&lt;/script&gt;&lt;br /&gt;&lt;script&gt;</code>
+        </p>
+      </section>
+      
+      <section title="jmolAppletInline">
+        <code>
+          jmolAppletInline(size, inlineModel, {script}, {nameSuffix})
+        </code>
+        <p>
+          Cr&#x00E9;e une instance de JmolApplet, mais passe le
+          <i>contenu</i> du mod&#x00E8;le mol&#x00E9;culaire plut&#x00F4;t
+          qu'un nom de fichier ou une URL. Si vous ne
+          r&#x00E9;cup&#x00E9;rer pas vos mod&#x00E8;les
+          mol&#x00E9;culaires depuis une base de donn&#x00E9;es vous ne
+          voulez probablement pas utiliser ceci.
+        </p>
+      </section>
+
+      <section title="jmolLoadInline">
+        <code>jmolLoadInline(model, {targetSuffix})</code>
+        <p>
+          Utilis&#x00E9; dans des applications de bases de donn&#x00E9;es
+          o&#x00F9; le mod&#x00E8;le mol&#x00E9;culaire est disponible sous
+          la forme d'une cha&#x00EE;ne de caract&#x00E8;res. Ceci charge
+          directement <code>model</code> dans l'applet. Il faut noter que
+          ce n'est <i>pas</i> le nom de fichier ... c'est le
+          <i>contenu</i> du fichier.
+        </p>
+      </section>
+
+      <section title="jmolScript">
+        <code>jmolScript(script, {targetSuffix})</code>
+        <p>
+          Utilisez ceci si vous voulez construire vos propres
+          contr&#x00F4;les IHM ou ex&#x00E9;cuter <code>script</code>
+          sur des &#x00E9;v&#x00E8;nements JavaScript. Les contr&#x00F4;les
+          IHM ci-dessus sont essentiellement impl&#x00E9;ment&#x00E9;s en
+          utilisant cette fonction <code>jmolScript</code>.
+          Quand plus d'une JmolApplet est affich&#x00E9;e,
+          <code>targetsuffix</code> est utilis&#x00E9; pour une identifier
+          une instance en particulier.
+        </p>
+      </section>
+
+    </section>
+
+    <section title="Langage de Script Avanc&#x00E9; de l'Applet">
+      <section title="jmolDebugAlert">
+        <code>jmolDebugAlert({enableAlerts})</code>
+        <p>
+          Affiche des bo&#x00F4;tes d'alerte pour le debug. Utiliser avec
+          pr&#x00E9;caution ou vous aurez <i>beaucoup</i> d'alertes.
+          Passer explicitement le param&#x00E8;tre <code>false</code>
+          pour les d&#x00E9;sactiver.
+        </p>
+      </section>
+
+      <section title="jmolSetTarget">
+        <code>jmolSetTarget(targetSuffix)</code>
+        <p>
+          N'utiliser pas ceci &#x00E0; moins d'afficher plusieurs applets
+          en m&#x00EA;me temps <i>et</i> que vos contr&#x00F4;les IHM de
+          jmol.js ne suivent pas s&#x00E9;quentiellement leurs invocations
+          associ&#x00E9;es <code>jmolApplet</code>.
+        </p>
+        <p>
+          Si vous avez compris la phrase pr&#x00E9;c&#x00E9;dente, alors
+          vous pouvez probablement deviner ce que fait
+          <code>jmolSetTarget</code>.
+        </p>
+        <p>
+          Toutes les JmolApplets g&#x00E9;n&#x00E9;r&#x00E9;es par la
+          librairies Jmol.js commencent avec le nom/id
+          <code>jmolApplet</code>. Par d&#x00E9;faut, ils sont
+          num&#x00E9;rot&#x00E9;s s&#x00E9;quentiellement en
+          commen&#x00E7;ant &#x00E0; 0. Si vous avez besoin/envie de
+          fournir votre propre suffixe alors fa&#x00F4;tes la avec vos
+          appels &#x00E0; <code>jmolApplet</code>.
+        </p>
+      </section>
+
+      <section title="jmolRadio">
+        <code>
+          jmolRadio(script, {labelHtml}, {isChecked}, {separatorHtml})
+        </code>
+        <p>
+          D'abord, essayez tr&#x00E8;s fort d'utiliser
+          <code>jmolRadioGroup</code>. Si votre mis en forme ne vous
+          permet pas de le faire, alors utilisez ceci pour allouer des
+          radio boutons individuels. Les boutons radio seront
+          associ&#x00E9;s au m&#x00EA;me groupe jusqu'&#x00E0; ce que vous
+          appeliez <code>jmolStartNewRadioGroup</code>.
+        </p>
+      </section>
+      <section title="jmolStartNewRadioGroup">
+        <code>jmolStartNewRadioGroup()</code>
+        <p>
+          N'utilisez pas ceci &#x00E0; moins de travailler avec plusieurs
+          groupes radio dont la mise en forme est si compliqu&#x00E9;e que
+          vous ne pouvez pas utiliser <code>jmolRadioGroup</code>.
+        </p>
+      </section>
+
+      <section title="jmolCheckBrowser">
+        <code>jmolCheckBrowser(action, urlOrMessage, nowOrOnClick)</code>
+        <p>
+          V&#x00E9;rifie le navigateur web des utilisateurs pour leur
+          conformit&#x00E9; et leur compatibilit&#x00E9; avec Jmol.
+        </p>
+        <p>
+          <code>action</code> est une cha&#x00F4;ne de caract&#x00E8;res
+          parmi "popup", "redirect" ou "alert".
+          "popup" affichera une autre fen&#x00EA;tre du navigateur avec
+          l'URL sp&#x00E9;cifi&#x00E9;e dans <code>urlOrMessage</code>.
+          "redirect" redirigera la page existante sur l'URL
+          sp&#x00E9;cifi&#x00E9;e dans <code>urlOrMessage</code>.
+          "alert" affichera un message d'alerte JavaScript avec le texte
+          sp&#x00E9;cifi&#x00E9; dans <code>urlOrMessage</code>.
+          <code>action</code> is a string which is one of
+        </p>
+        <p>
+          <ocde>nowOrOnClick</ocde> est une cha&#x00F4;ne parmi "now" ou
+          "onClick". Elle indique quand la v&#x00E9;rification du
+          navigateur s'effectuera.
+          "now" indique que la v&#x00E9;rification s'effectuera
+          imm&#x00E9;diatement.
+          "onClick" indique que la v&#x00E9;rification s'effectuera la
+          premi&#x00E8;re fois qu'un contr&#x00F4;le tel que
+          <code>jmolButton()</code> est press&#x00E9;.
+          La valeur par d&#x00E9;faut de <code>nowOrOnClick</code> est
+          "onClick";
+        </p>
+        <p>
+          Si cet appel n'est pas fait alors un message d'alerte par
+          d&#x00E9;faut est affich&#x00E9; quand un utilisateur avec un
+          navigateur non conforme clique sur un contr&#x00F4;le jmol.
+        </p>
+      </section>
+
+    </section>
+    
+    <section title="Support du Cascading Style Sheet">
+      <section title="jmolSetAppletCssClass">
+        <code>jmolSetAppletCssClass(appletCssClass)</code>
+        <p>
+          Pr&#x00E9;cise la classe CSS qui doit &#x00EA;tre utilis&#x00E9;e
+          dans les tags <code>applet</code> g&#x00E9;n&#x00E9;r&#x00E9;s
+          par <code>jmolApplet</code> et <code>jmolAppletInline</code>.
+        </p>
+      </section>
+      <section title="jmolSetButtonCssClass">
+        <code>jmolSetButtonCssClass(buttonCssClass)</code>
+        <p>
+          Pr&#x00E9;cise la classe CSS qui doit &#x00EA;tre utilis&#x00E9;e
+          dans les tags <code>input</code> g&#x00E9;n&#x00E9;r&#x00E9;s
+          par <code>jmolButton</code>.
+        </p>
+      </section>
+      <section title="jmolSetCheckboxCssClass">
+        <code>jmolSetCheckboxCssClass(checkboxCssClass)</code>
+        <p>
+          Pr&#x00E9;cise la classe CSS qui doit &#x00EA;tre utilis&#x00E9;e
+          dans les tags <code>input</code> g&#x00E9;n&#x00E9;r&#x00E9;s
+          par <code>jmolCheckBox</code>.
+        </p>
+      </section>
+      <section title="jmolSetRadioCssClass">
+        <code>jmolSetRadioCssClass(radioCssClass)</code>
+        <p>
+          Pr&#x00E9;cise la classe CSS qui doit &#x00EA;tre utilis&#x00E9;e
+          dans les tags <code>input</code> g&#x00E9;n&#x00E9;r&#x00E9;s
+          par <code>jmolRadioGroup</code> et <code>jmolRadio</code>.
+        </p>
+      </section>
+      <section title="jmolSetLinkCssClass">
+        <code>jmolSetLinkCssClass(linkCssClass)</code>
+        <p>
+          Pr&#x00E9;cise la classe CSS qui doit &#x00EA;tre utilis&#x00E9;e
+          dans les tags <code>a</code> g&#x00E9;n&#x00E9;r&#x00E9;s
+          par <code>jmolLink</code>.
+        </p>
+      </section>
+      <section title="jmolSetMenuCssClass">
+        <code>jmolSetMenuCssClass(menuCssClass)</code>
+        <p>
+          Pr&#x00E9;cise la classe CSS qui doit &#x00EA;tre utilis&#x00E9;e
+          dans les tags <code>select</code> g&#x00E9;n&#x00E9;r&#x00E9;s
+          par <code>jmolMenu</code>.
+        </p>
+      </section>
+    </section>
+
+  </body>
+</document>

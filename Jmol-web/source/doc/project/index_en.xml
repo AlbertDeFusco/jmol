@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<document>
+	<body>
+		<title>Pages of Jmol Project at SourceForge</title>
+		<section title="Jmol project page">
+			<p><a href="http://sourceforge.net/projects/jmol/">Main page at SourceForge</a>
+			</p>
+		</section>
+		<section title="Mailing lists">
+			<section title="The jmol-users mailing list">
+				<p>
+	The <code>jmol-users@lists.sourceforge.net</code> mailing list is for general
+	discussion of Jmol issues. Only list members may post to the list.
+      </p>
+				<p>
+					<a href="http://lists.sourceforge.net/lists/listinfo/jmol-users">Click here</a>
+	to subscribe or unsubscribe to this list.
+			</p>
+				<p>
+	For a history of messages that have been posted you may
+	browse the 
+	<a href="http://sourceforge.net/mailarchive/forum.php?forum_name=jmol-users"><code>jmol-users</code>
+	mailing list archives</a> at SourceForge or one of its mirrors: 
+	<a href="http://www.mail-archive.com/jmol-users@lists.sourceforge.net/index.html">The Mail Archive</a>.
+				</p>
+			</section>
+			<section title="The jmol-developers mailing list">
+				<p>
+	The <code>jmol-developers@lists.sourceforge.net</code> mailing list is for specific
+	discussion of Jmol software development issues.
+      </p>
+				<p>
+	We assume that all subscribers to <code>jmol-developers</code> are also
+	subscribers to <code>jmol-users</code>. Therefore, messages should not
+	be posted to both lists.
+      </p>
+				<p>
+					<a href="http://lists.sourceforge.net/lists/listinfo/jmol-developers">Click here</a>
+	to subscribe or unsubscribe to this list.
+			</p>
+				<p>
+	For a history of messages that have been posted you may
+	browse the 
+	<a href="http://sourceforge.net/mailarchive/forum.php?forum_name=jmol-developers"><code>jmol-developers</code>
+	  mailing list archives</a> at SourceForge or one of its mirrors: 
+	<a href="http://www.mail-archive.com/jmol-developers@lists.sourceforge.net/index.html">The Mail Archive</a>.
+				</p>
+			</section>
+		</section>
+		<section title="Bug Database">
+			<p><a href="http://sourceforge.net/tracker/?group_id=23629&amp;amp;atid=379133">Bug database and reporting of bugs</a>
+			</p>
+		</section>
+		<section title="Feature Requests">
+			<p><a href="http://sourceforge.net/tracker/?group_id=23629&amp;amp;atid=379136">Feature requests</a>
+			</p>
+		</section>
+	</body>
+</document>

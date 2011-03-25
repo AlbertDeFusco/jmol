@@ -1,0 +1,788 @@
+Jmol 11.3.41 math operation results for mixed operand types
+
+/*       **** Jmol Embedded Script ****
+
+if (_version < 1103041);quit;endif
+
+load =1crn
+
+ilist=array(true,3,4.5,"test1",{1 0 0},{0 0 1 0}, ({0 1 2 3}))
+jlist=array(false,5,8.5,"test2",{0 1 0},{0 1 0 0}, ({3 4 5}))
+function checkop(op)
+ for (var i = 1; i <= 7; i = i + 1)
+
+  if(op == "NOT")
+    var t1 = ilist[i];
+    if (t1.type == "string");t1 = "\"" + t1 + "\"";endif
+    var val = (not ilist[i]);
+    if (val.type == "string");val = "\"" + val + "\"";endif
+    print "NOT " + ilist[i].type + " = " + val.type + "  -- NOT " + t1 + " = " + val;
+    continue;
+  endif
+
+  for (var j = 1; j <= 7; j = j + 1)
+   if (op == "+")
+     val = (ilist[i]+jlist[j]);
+   else if(op == "-")
+     val = (ilist[i]-jlist[j]);
+   else if(op == "*")
+     val = (ilist[i]*jlist[j]);
+   else if(op == "/")
+     val = (ilist[i]/jlist[j]);
+   else if(op == "%")
+     val = (ilist[i]%jlist[j]);
+   else if(op == "AND")
+     val = (ilist[i] and jlist[j]);
+   else if(op == "OR")
+     val = (ilist[i] or jlist[j]);
+   endif
+   var t1 = ilist[i];
+   if (t1.type == "string");t1 = "\"" + t1 + "\"";endif
+   var t = jlist[j];
+   if (t.type == "string");t = "\"" + t + "\"";endif
+   var s = "" + t1 + " " + op + " " + t;
+   if (val.type == "array");val = "\n" + val;endif
+   if (val.type == "string");val = "\"" + val + "\"";endif
+   print "" + ilist[i].type + " " +op+" " + jlist[j].type + " = " + val.type + "  -- " + s + " = " + val;
+  end for
+
+  if (op == "+")
+    val = (ilist[i]+jlist);
+  else if(op == "-")
+    val = (ilist[i]-jlist);
+  else if(op == "*")
+    val = (ilist[i]*jlist);
+  else if(op == "/")
+    val = (ilist[i]/jlist);
+  else if(op == "%")
+    val = (ilist[i]%jlist);
+  else if(op == "AND")
+    val = (ilist[i] and jlist);
+  else if(op == "OR")
+    val = (ilist[i] or jlist);
+  endif
+  var t = ilist[i];
+  if (t.type == "string");t = "\"" + t + "\"";endif
+  var s = "" + t + " " + op + " \"" + jlist.join(",") + "\".split(,)";
+  if (val.type == "array");val = "\n" + val;endif
+  if (val.type == "string");val = "\"" + val + "\"";endif
+  print "" + ilist[i].type + " " +op+" " + jlist.type + " = " + val.type + "  -- " + s + " = " + val;
+
+ end for
+
+ if(op == "NOT")
+  var val = (not ilist);
+  print "NOT " + ilist.type + " = " + val.type + "  -- NOT \"" + ilist.join(",") + "\".split(,) = " + val;
+ else 
+  for (var j = 1; j <= 7; j = j + 1)
+   if (op == "+")
+     val = (ilist+jlist[j]);
+   else if(op == "-")
+     val = (ilist-jlist[j]);
+   else if(op == "*")
+     val = (ilist*jlist[j]);
+   else if(op == "/")
+     val = (ilist/jlist[j]);
+   else if(op == "%")
+     val = (ilist%jlist[j]);
+   else if(op == "AND")
+     val = (ilist and jlist[j]);
+   else if(op == "OR")
+     val = (ilist or jlist[j]);
+   endif
+   var t = jlist[j];
+   if (t.type == "string");t = "\"" + t + "\"";endif
+   var s = "\"" + ilist.join(",") + "\".split(,) " + op + " " + t;
+   if (val.type == "array");val = "\n" + val;endif
+   if (val.type == "string");val = "\"" + val + "\"";endif
+   print "" + ilist.type + " " +op+" " + jlist[j].type + " = " + val.type + "  -- " + s + " = " + val;
+  end for
+ endif
+
+end function
+
+print ""
+checkop("+")
+print ""
+checkop("-")
+print ""
+checkop("*")
+print ""
+checkop("/")
+print ""
+checkop("%")
+print ""
+checkop("AND")
+print ""
+checkop("OR")
+print ""
+checkop("NOT")
+print ""
+
+*/  
+
+RESULTS:
+
+Loading http://www.rcsb.org/pdb/files/1crn.pdb
+
+
+boolean + boolean = decimal  -- true + false = 1.0
+boolean + integer = decimal  -- true + 5 = 6.0
+boolean + decimal = decimal  -- true + 8.5 = 9.5
+boolean + string = decimal  -- true + "test2" = NaN
+boolean + point = decimal  -- true + {0.0 1.0 0.0} = 2.0
+boolean + plane = decimal  -- true + {0.0 1.0 0.0 0.0} = 1.0
+boolean + bitset = decimal  -- true + ({3:5}) = 4.0
+boolean + array = array  -- true + "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 
+
+true
+false
+5
+8.5
+test2
+{0.0 1.0 0.0}
+{0.0 1.0 0.0 0.0}
+({3:5})
+
+integer + boolean = integer  -- 3 + false = 3
+integer + integer = integer  -- 3 + 5 = 8
+integer + decimal = decimal  -- 3 + 8.5 = 11.5
+integer + string = integer  -- 3 + "test2" = 3
+integer + point = integer  -- 3 + {0.0 1.0 0.0} = 4
+integer + plane = integer  -- 3 + {0.0 1.0 0.0 0.0} = 3
+integer + bitset = integer  -- 3 + ({3:5}) = 6
+integer + array = array  -- 3 + "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 
+
+3
+false
+5
+8.5
+test2
+{0.0 1.0 0.0}
+{0.0 1.0 0.0 0.0}
+({3:5})
+
+decimal + boolean = decimal  -- 4.5 + false = 4.5
+decimal + integer = decimal  -- 4.5 + 5 = 9.5
+decimal + decimal = decimal  -- 4.5 + 8.5 = 13.0
+decimal + string = decimal  -- 4.5 + "test2" = NaN
+decimal + point = decimal  -- 4.5 + {0.0 1.0 0.0} = 5.5
+decimal + plane = decimal  -- 4.5 + {0.0 1.0 0.0 0.0} = 4.5
+decimal + bitset = decimal  -- 4.5 + ({3:5}) = 7.5
+decimal + array = array  -- 4.5 + "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 
+
+4.5
+false
+5
+8.5
+test2
+{0.0 1.0 0.0}
+{0.0 1.0 0.0 0.0}
+({3:5})
+
+string + boolean = string  -- "test1" + false = "test1false"
+string + integer = string  -- "test1" + 5 = "test15"
+string + decimal = string  -- "test1" + 8.5 = "test18.5"
+string + string = string  -- "test1" + "test2" = "test1test2"
+string + point = string  -- "test1" + {0.0 1.0 0.0} = "test1{0.0 1.0 0.0}"
+string + plane = string  -- "test1" + {0.0 1.0 0.0 0.0} = "test1{0.0 1.0 0.0 0.0}"
+string + bitset = string  -- "test1" + ({3:5}) = "test1({3:5})"
+string + array = array  -- "test1" + "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 
+
+test1
+false
+5
+8.5
+test2
+{0.0 1.0 0.0}
+{0.0 1.0 0.0 0.0}
+({3:5})
+
+point + boolean = point  -- {1.0 0.0 0.0} + false = {1.0 0.0 0.0}
+point + integer = point  -- {1.0 0.0 0.0} + 5 = {6.0 5.0 5.0}
+point + decimal = point  -- {1.0 0.0 0.0} + 8.5 = {9.5 8.5 8.5}
+point + string = point  -- {1.0 0.0 0.0} + "test2" = {NaN NaN NaN}
+point + point = point  -- {1.0 0.0 0.0} + {0.0 1.0 0.0} = {1.0 1.0 0.0}
+point + plane = point  -- {1.0 0.0 0.0} + {0.0 1.0 0.0 0.0} = {1.0 0.0 0.0}
+point + bitset = point  -- {1.0 0.0 0.0} + ({3:5}) = {4.0 3.0 3.0}
+point + array = array  -- {1.0 0.0 0.0} + "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 
+
+{1.0 0.0 0.0}
+false
+5
+8.5
+test2
+{0.0 1.0 0.0}
+{0.0 1.0 0.0 0.0}
+({3:5})
+
+plane + boolean = decimal  -- {0.0 0.0 1.0 0.0} + false = 0.0
+plane + integer = decimal  -- {0.0 0.0 1.0 0.0} + 5 = 5.0
+plane + decimal = decimal  -- {0.0 0.0 1.0 0.0} + 8.5 = 8.5
+plane + string = decimal  -- {0.0 0.0 1.0 0.0} + "test2" = NaN
+plane + point = decimal  -- {0.0 0.0 1.0 0.0} + {0.0 1.0 0.0} = 1.0
+plane + plane = decimal  -- {0.0 0.0 1.0 0.0} + {0.0 1.0 0.0 0.0} = 0.0
+plane + bitset = decimal  -- {0.0 0.0 1.0 0.0} + ({3:5}) = 3.0
+plane + array = array  -- {0.0 0.0 1.0 0.0} + "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 
+
+{0.0 0.0 1.0 0.0}
+false
+5
+8.5
+test2
+{0.0 1.0 0.0}
+{0.0 1.0 0.0 0.0}
+({3:5})
+
+bitset + boolean = decimal  -- ({0:3}) + false = 4.0
+bitset + integer = decimal  -- ({0:3}) + 5 = 9.0
+bitset + decimal = decimal  -- ({0:3}) + 8.5 = 12.5
+bitset + string = decimal  -- ({0:3}) + "test2" = NaN
+bitset + point = decimal  -- ({0:3}) + {0.0 1.0 0.0} = 5.0
+bitset + plane = decimal  -- ({0:3}) + {0.0 1.0 0.0 0.0} = 4.0
+bitset + bitset = decimal  -- ({0:3}) + ({3:5}) = 7.0
+bitset + array = array  -- ({0:3}) + "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 
+
+({0:3})
+false
+5
+8.5
+test2
+{0.0 1.0 0.0}
+{0.0 1.0 0.0 0.0}
+({3:5})
+
+array + boolean = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) + false = 
+
+true
+3
+4.5
+test1
+{1.0 0.0 0.0}
+{0.0 0.0 1.0 0.0}
+({0:3})
+false
+
+array + integer = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) + 5 = 
+
+true
+3
+4.5
+test1
+{1.0 0.0 0.0}
+{0.0 0.0 1.0 0.0}
+({0:3})
+5
+
+array + decimal = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) + 8.5 = 
+
+true
+3
+4.5
+test1
+{1.0 0.0 0.0}
+{0.0 0.0 1.0 0.0}
+({0:3})
+8.5
+
+array + string = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) + "test2" = 
+
+true
+3
+4.5
+test1
+{1.0 0.0 0.0}
+{0.0 0.0 1.0 0.0}
+({0:3})
+test2
+
+array + point = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) + {0.0 1.0 0.0} = 
+
+true
+3
+4.5
+test1
+{1.0 0.0 0.0}
+{0.0 0.0 1.0 0.0}
+({0:3})
+{0.0 1.0 0.0}
+
+array + plane = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) + {0.0 1.0 0.0 0.0} = 
+
+true
+3
+4.5
+test1
+{1.0 0.0 0.0}
+{0.0 0.0 1.0 0.0}
+({0:3})
+{0.0 1.0 0.0 0.0}
+
+array + bitset = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) + ({3:5}) = 
+
+true
+3
+4.5
+test1
+{1.0 0.0 0.0}
+{0.0 0.0 1.0 0.0}
+({0:3})
+({3:5})
+
+
+boolean - boolean = decimal  -- true - false = 1.0
+boolean - integer = decimal  -- true - 5 = -4.0
+boolean - decimal = decimal  -- true - 8.5 = -7.5
+boolean - string = decimal  -- true - "test2" = NaN
+boolean - point = decimal  -- true - {0.0 1.0 0.0} = 0.0
+boolean - plane = decimal  -- true - {0.0 1.0 0.0 0.0} = 1.0
+boolean - bitset = decimal  -- true - ({3:5}) = -2.0
+boolean - array = decimal  -- true - "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = -6.0
+integer - boolean = integer  -- 3 - false = 3
+integer - integer = integer  -- 3 - 5 = -2
+integer - decimal = decimal  -- 3 - 8.5 = -5.5
+integer - string = integer  -- 3 - "test2" = 3
+integer - point = integer  -- 3 - {0.0 1.0 0.0} = 2
+integer - plane = integer  -- 3 - {0.0 1.0 0.0 0.0} = 3
+integer - bitset = integer  -- 3 - ({3:5}) = 0
+integer - array = integer  -- 3 - "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = -4
+decimal - boolean = decimal  -- 4.5 - false = 4.5
+decimal - integer = decimal  -- 4.5 - 5 = -0.5
+decimal - decimal = decimal  -- 4.5 - 8.5 = -4.0
+decimal - string = decimal  -- 4.5 - "test2" = NaN
+decimal - point = decimal  -- 4.5 - {0.0 1.0 0.0} = 3.5
+decimal - plane = decimal  -- 4.5 - {0.0 1.0 0.0 0.0} = 4.5
+decimal - bitset = decimal  -- 4.5 - ({3:5}) = 1.5
+decimal - array = decimal  -- 4.5 - "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = -2.5
+string - boolean = decimal  -- "test1" - false = NaN
+string - integer = integer  -- "test1" - 5 = -5
+string - decimal = decimal  -- "test1" - 8.5 = NaN
+string - string = decimal  -- "test1" - "test2" = NaN
+string - point = decimal  -- "test1" - {0.0 1.0 0.0} = NaN
+string - plane = decimal  -- "test1" - {0.0 1.0 0.0 0.0} = NaN
+string - bitset = decimal  -- "test1" - ({3:5}) = NaN
+string - array = decimal  -- "test1" - "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = NaN
+point - boolean = point  -- {1.0 0.0 0.0} - false = {1.0 0.0 0.0}
+point - integer = point  -- {1.0 0.0 0.0} - 5 = {-4.0 -5.0 -5.0}
+point - decimal = point  -- {1.0 0.0 0.0} - 8.5 = {-7.5 -8.5 -8.5}
+point - string = point  -- {1.0 0.0 0.0} - "test2" = {NaN NaN NaN}
+point - point = point  -- {1.0 0.0 0.0} - {0.0 1.0 0.0} = {1.0 -1.0 0.0}
+point - plane = point  -- {1.0 0.0 0.0} - {0.0 1.0 0.0 0.0} = {1.0 0.0 0.0}
+point - bitset = point  -- {1.0 0.0 0.0} - ({3:5}) = {-2.0 -3.0 -3.0}
+point - array = point  -- {1.0 0.0 0.0} - "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = {-6.0 -7.0 -7.0}
+plane - boolean = decimal  -- {0.0 0.0 1.0 0.0} - false = 0.0
+plane - integer = decimal  -- {0.0 0.0 1.0 0.0} - 5 = -5.0
+plane - decimal = decimal  -- {0.0 0.0 1.0 0.0} - 8.5 = -8.5
+plane - string = decimal  -- {0.0 0.0 1.0 0.0} - "test2" = NaN
+plane - point = decimal  -- {0.0 0.0 1.0 0.0} - {0.0 1.0 0.0} = -1.0
+plane - plane = decimal  -- {0.0 0.0 1.0 0.0} - {0.0 1.0 0.0 0.0} = 0.0
+plane - bitset = decimal  -- {0.0 0.0 1.0 0.0} - ({3:5}) = -3.0
+plane - array = decimal  -- {0.0 0.0 1.0 0.0} - "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = -7.0
+bitset - boolean = decimal  -- ({0:3}) - false = 4.0
+bitset - integer = decimal  -- ({0:3}) - 5 = -1.0
+bitset - decimal = decimal  -- ({0:3}) - 8.5 = -4.5
+bitset - string = decimal  -- ({0:3}) - "test2" = NaN
+bitset - point = decimal  -- ({0:3}) - {0.0 1.0 0.0} = 3.0
+bitset - plane = decimal  -- ({0:3}) - {0.0 1.0 0.0 0.0} = 4.0
+bitset - bitset = decimal  -- ({0:3}) - ({3:5}) = 1.0
+bitset - array = decimal  -- ({0:3}) - "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = -3.0
+array - boolean = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) - false = 7.0
+array - integer = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) - 5 = 2.0
+array - decimal = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) - 8.5 = -1.5
+array - string = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) - "test2" = NaN
+array - point = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) - {0.0 1.0 0.0} = 6.0
+array - plane = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) - {0.0 1.0 0.0 0.0} = 7.0
+array - bitset = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) - ({3:5}) = 4.0
+
+boolean * boolean = decimal  -- true * false = 0.0
+boolean * integer = decimal  -- true * 5 = 5.0
+boolean * decimal = decimal  -- true * 8.5 = 8.5
+boolean * string = decimal  -- true * "test2" = NaN
+boolean * point = decimal  -- true * {0.0 1.0 0.0} = 1.0
+boolean * plane = decimal  -- true * {0.0 1.0 0.0 0.0} = 0.0
+boolean * bitset = decimal  -- true * ({3:5}) = 3.0
+boolean * array = decimal  -- true * "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 7.0
+integer * boolean = integer  -- 3 * false = 0
+integer * integer = integer  -- 3 * 5 = 15
+integer * decimal = decimal  -- 3 * 8.5 = 25.5
+integer * string = integer  -- 3 * "test2" = 0
+integer * point = integer  -- 3 * {0.0 1.0 0.0} = 3
+integer * plane = integer  -- 3 * {0.0 1.0 0.0 0.0} = 0
+integer * bitset = integer  -- 3 * ({3:5}) = 9
+integer * array = integer  -- 3 * "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 21
+decimal * boolean = decimal  -- 4.5 * false = 0.0
+decimal * integer = decimal  -- 4.5 * 5 = 22.5
+decimal * decimal = decimal  -- 4.5 * 8.5 = 38.25
+decimal * string = decimal  -- 4.5 * "test2" = NaN
+decimal * point = decimal  -- 4.5 * {0.0 1.0 0.0} = 4.5
+decimal * plane = decimal  -- 4.5 * {0.0 1.0 0.0 0.0} = 0.0
+decimal * bitset = decimal  -- 4.5 * ({3:5}) = 13.5
+decimal * array = decimal  -- 4.5 * "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 31.5
+string * boolean = decimal  -- "test1" * false = NaN
+string * integer = decimal  -- "test1" * 5 = NaN
+string * decimal = decimal  -- "test1" * 8.5 = NaN
+string * string = decimal  -- "test1" * "test2" = NaN
+string * point = decimal  -- "test1" * {0.0 1.0 0.0} = NaN
+string * plane = decimal  -- "test1" * {0.0 1.0 0.0 0.0} = NaN
+string * bitset = decimal  -- "test1" * ({3:5}) = NaN
+string * array = decimal  -- "test1" * "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = NaN
+point * boolean = point  -- {1.0 0.0 0.0} * false = {0.0 0.0 0.0}
+point * integer = point  -- {1.0 0.0 0.0} * 5 = {5.0 0.0 0.0}
+point * decimal = point  -- {1.0 0.0 0.0} * 8.5 = {8.5 0.0 0.0}
+point * string = point  -- {1.0 0.0 0.0} * "test2" = {NaN NaN NaN}
+point * point = decimal  -- {1.0 0.0 0.0} * {0.0 1.0 0.0} = 0.0
+point * plane = point  -- {1.0 0.0 0.0} * {0.0 1.0 0.0 0.0} = {0.0 0.0 0.0}
+point * bitset = point  -- {1.0 0.0 0.0} * ({3:5}) = {3.0 0.0 0.0}
+point * array = point  -- {1.0 0.0 0.0} * "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = {7.0 0.0 0.0}
+plane * boolean = decimal  -- {0.0 0.0 1.0 0.0} * false = 0.0
+plane * integer = decimal  -- {0.0 0.0 1.0 0.0} * 5 = 0.0
+plane * decimal = decimal  -- {0.0 0.0 1.0 0.0} * 8.5 = 0.0
+plane * string = decimal  -- {0.0 0.0 1.0 0.0} * "test2" = NaN
+plane * point = decimal  -- {0.0 0.0 1.0 0.0} * {0.0 1.0 0.0} = 0.0
+plane * plane = decimal  -- {0.0 0.0 1.0 0.0} * {0.0 1.0 0.0 0.0} = 0.0
+plane * bitset = decimal  -- {0.0 0.0 1.0 0.0} * ({3:5}) = 0.0
+plane * array = decimal  -- {0.0 0.0 1.0 0.0} * "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 0.0
+bitset * boolean = decimal  -- ({0:3}) * false = 0.0
+bitset * integer = decimal  -- ({0:3}) * 5 = 20.0
+bitset * decimal = decimal  -- ({0:3}) * 8.5 = 34.0
+bitset * string = decimal  -- ({0:3}) * "test2" = NaN
+bitset * point = decimal  -- ({0:3}) * {0.0 1.0 0.0} = 4.0
+bitset * plane = decimal  -- ({0:3}) * {0.0 1.0 0.0 0.0} = 0.0
+bitset * bitset = decimal  -- ({0:3}) * ({3:5}) = 12.0
+bitset * array = decimal  -- ({0:3}) * "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 28.0
+array * boolean = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) * false = 0.0
+array * integer = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) * 5 = 35.0
+array * decimal = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) * 8.5 = 59.5
+array * string = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) * "test2" = NaN
+array * point = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) * {0.0 1.0 0.0} = 7.0
+array * plane = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) * {0.0 1.0 0.0 0.0} = 0.0
+array * bitset = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) * ({3:5}) = 21.0
+
+boolean / boolean = decimal  -- true / false = Infinity
+boolean / integer = decimal  -- true / 5 = 0.2
+boolean / decimal = decimal  -- true / 8.5 = 0.11764706
+boolean / string = decimal  -- true / "test2" = NaN
+boolean / point = decimal  -- true / {0.0 1.0 0.0} = 1.0
+boolean / plane = decimal  -- true / {0.0 1.0 0.0 0.0} = Infinity
+boolean / bitset = decimal  -- true / ({3:5}) = 0.33333334
+boolean / array = decimal  -- true / "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 0.14285715
+integer / boolean = decimal  -- 3 / false = Infinity
+integer / integer = integer  -- 3 / 5 = 0
+integer / decimal = decimal  -- 3 / 8.5 = 0.3529412
+integer / string = decimal  -- 3 / "test2" = NaN
+integer / point = decimal  -- 3 / {0.0 1.0 0.0} = 3.0
+integer / plane = decimal  -- 3 / {0.0 1.0 0.0 0.0} = Infinity
+integer / bitset = decimal  -- 3 / ({3:5}) = 1.0
+integer / array = decimal  -- 3 / "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 0.42857143
+decimal / boolean = decimal  -- 4.5 / false = Infinity
+decimal / integer = decimal  -- 4.5 / 5 = 0.9
+decimal / decimal = decimal  -- 4.5 / 8.5 = 0.5294118
+decimal / string = decimal  -- 4.5 / "test2" = NaN
+decimal / point = decimal  -- 4.5 / {0.0 1.0 0.0} = 4.5
+decimal / plane = decimal  -- 4.5 / {0.0 1.0 0.0 0.0} = Infinity
+decimal / bitset = decimal  -- 4.5 / ({3:5}) = 1.5
+decimal / array = decimal  -- 4.5 / "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 0.64285713
+string / boolean = decimal  -- "test1" / false = Infinity
+string / integer = decimal  -- "test1" / 5 = NaN
+string / decimal = decimal  -- "test1" / 8.5 = NaN
+string / string = decimal  -- "test1" / "test2" = NaN
+string / point = decimal  -- "test1" / {0.0 1.0 0.0} = NaN
+string / plane = decimal  -- "test1" / {0.0 1.0 0.0 0.0} = Infinity
+string / bitset = decimal  -- "test1" / ({3:5}) = NaN
+string / array = decimal  -- "test1" / "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = NaN
+point / boolean = point  -- {1.0 0.0 0.0} / false = {NaN NaN NaN}
+point / integer = point  -- {1.0 0.0 0.0} / 5 = {0.2 0.0 0.0}
+point / decimal = point  -- {1.0 0.0 0.0} / 8.5 = {0.11764706 0.0 0.0}
+point / string = point  -- {1.0 0.0 0.0} / "test2" = {NaN NaN NaN}
+point / point = point  -- {1.0 0.0 0.0} / {0.0 1.0 0.0} = {1.0 0.0 0.0}
+point / plane = point  -- {1.0 0.0 0.0} / {0.0 1.0 0.0 0.0} = {NaN NaN NaN}
+point / bitset = point  -- {1.0 0.0 0.0} / ({3:5}) = {0.33333334 0.0 0.0}
+point / array = point  -- {1.0 0.0 0.0} / "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = {0.14285715 0.0 0.0}
+plane / boolean = decimal  -- {0.0 0.0 1.0 0.0} / false = 0.0
+plane / integer = decimal  -- {0.0 0.0 1.0 0.0} / 5 = 0.0
+plane / decimal = decimal  -- {0.0 0.0 1.0 0.0} / 8.5 = 0.0
+plane / string = decimal  -- {0.0 0.0 1.0 0.0} / "test2" = NaN
+plane / point = decimal  -- {0.0 0.0 1.0 0.0} / {0.0 1.0 0.0} = 0.0
+plane / plane = decimal  -- {0.0 0.0 1.0 0.0} / {0.0 1.0 0.0 0.0} = 0.0
+plane / bitset = decimal  -- {0.0 0.0 1.0 0.0} / ({3:5}) = 0.0
+plane / array = decimal  -- {0.0 0.0 1.0 0.0} / "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 0.0
+bitset / boolean = decimal  -- ({0:3}) / false = Infinity
+bitset / integer = decimal  -- ({0:3}) / 5 = 0.8
+bitset / decimal = decimal  -- ({0:3}) / 8.5 = 0.47058824
+bitset / string = decimal  -- ({0:3}) / "test2" = NaN
+bitset / point = decimal  -- ({0:3}) / {0.0 1.0 0.0} = 4.0
+bitset / plane = decimal  -- ({0:3}) / {0.0 1.0 0.0 0.0} = Infinity
+bitset / bitset = decimal  -- ({0:3}) / ({3:5}) = 1.3333334
+bitset / array = decimal  -- ({0:3}) / "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 0.5714286
+array / boolean = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) / false = Infinity
+array / integer = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) / 5 = 1.4
+array / decimal = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) / 8.5 = 0.8235294
+array / string = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) / "test2" = NaN
+array / point = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) / {0.0 1.0 0.0} = 7.0
+array / plane = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) / {0.0 1.0 0.0 0.0} = Infinity
+array / bitset = decimal  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) / ({3:5}) = 2.3333333
+
+boolean % boolean = integer  -- true % false = 0
+boolean % integer = integer  -- true % 5 = 1
+boolean % decimal = integer  -- true % 8.5 = 1
+boolean % string = integer  -- true % "test2" = 0
+boolean % point = integer  -- true % {0.0 1.0 0.0} = 0
+boolean % plane = integer  -- true % {0.0 1.0 0.0 0.0} = 0
+boolean % bitset = integer  -- true % ({3:5}) = 1
+boolean % array = integer  -- true % "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 1
+integer % boolean = integer  -- 3 % false = 0
+integer % integer = integer  -- 3 % 5 = 3
+integer % decimal = integer  -- 3 % 8.5 = 3
+integer % string = integer  -- 3 % "test2" = 0
+integer % point = integer  -- 3 % {0.0 1.0 0.0} = 0
+integer % plane = integer  -- 3 % {0.0 1.0 0.0 0.0} = 0
+integer % bitset = integer  -- 3 % ({3:5}) = 0
+integer % array = integer  -- 3 % "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 3
+decimal % boolean = integer  -- 4.5 % false = 5
+decimal % integer = string  -- 4.5 % 5 = "4.50000"
+decimal % decimal = string  -- 4.5 % 8.5 = "4.50000000"
+decimal % string = integer  -- 4.5 % "test2" = 5
+decimal % point = string  -- 4.5 % {0.0 1.0 0.0} = "4.5"
+decimal % plane = integer  -- 4.5 % {0.0 1.0 0.0 0.0} = 5
+decimal % bitset = string  -- 4.5 % ({3:5}) = "4.500"
+decimal % array = string  -- 4.5 % "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = "4.5000000"
+string % boolean = string  -- "test1" % false = "test1"
+string % integer = string  -- "test1" % 5 = "test1"
+string % decimal = string  -- "test1" % 8.5 = "test1   "
+string % string = string  -- "test1" % "test2" = "test1"
+string % point = string  -- "test1" % {0.0 1.0 0.0} = "t"
+string % plane = string  -- "test1" % {0.0 1.0 0.0 0.0} = "test1"
+string % bitset = string  -- "test1" % ({3:5}) = "tes"
+string % array = string  -- "test1" % "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = "test1  "
+point % boolean = point  -- {1.0 0.0 0.0} % false = {1.0 0.0 0.0}
+point % integer = point  -- {1.0 0.0 0.0} % 5 = {1.0 0.0 0.0}
+point % decimal = point  -- {1.0 0.0 0.0} % 8.5 = {1.0 0.0 0.0}
+point % string = point  -- {1.0 0.0 0.0} % "test2" = {1.0 0.0 0.0}
+point % point = point  -- {1.0 0.0 0.0} % {0.0 1.0 0.0} = {1.0 0.0 0.0}
+point % plane = point  -- {1.0 0.0 0.0} % {0.0 1.0 0.0 0.0} = {1.0 0.0 0.0}
+point % bitset = point  -- {1.0 0.0 0.0} % ({3:5}) = {1.0 0.0 0.0}
+point % array = point  -- {1.0 0.0 0.0} % "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = {1.0 0.0 0.0}
+plane % boolean = decimal  -- {0.0 0.0 1.0 0.0} % false = 0.0
+plane % integer = decimal  -- {0.0 0.0 1.0 0.0} % 5 = 0.0
+plane % decimal = decimal  -- {0.0 0.0 1.0 0.0} % 8.5 = 0.0
+plane % string = decimal  -- {0.0 0.0 1.0 0.0} % "test2" = NaN
+plane % point = decimal  -- {0.0 0.0 1.0 0.0} % {0.0 1.0 0.0} = 0.0
+plane % plane = decimal  -- {0.0 0.0 1.0 0.0} % {0.0 1.0 0.0 0.0} = 0.0
+plane % bitset = decimal  -- {0.0 0.0 1.0 0.0} % ({3:5}) = 0.0
+plane % array = decimal  -- {0.0 0.0 1.0 0.0} % "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = 0.0
+bitset % boolean = bitset  -- ({0:3}) % false = ({0:3})
+bitset % integer = bitset  -- ({0:3}) % 5 = ({0:3})
+bitset % decimal = bitset  -- ({0:3}) % 8.5 = ({0:3})
+bitset % string = bitset  -- ({0:3}) % "test2" = ({0:3})
+bitset % point = bitset  -- ({0:3}) % {0.0 1.0 0.0} = ({0})
+bitset % plane = bitset  -- ({0:3}) % {0.0 1.0 0.0 0.0} = ({0:3})
+bitset % bitset = bitset  -- ({0:3}) % ({3:5}) = ({0:2})
+bitset % array = bitset  -- ({0:3}) % "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = ({0:3})
+array % boolean = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) % false = 
+
+true
+3
+4.5
+test1
+{1.0 0.0 0.0}
+{0.0 0.0 1.0 0.0}
+({0:3})
+
+array % integer = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) % 5 = 
+
+true 
+3    
+4.5  
+test1
+{1.0 
+{0.0 
+({0:3
+
+array % decimal = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) % 8.5 = 
+
+true    
+3       
+4.5     
+test1   
+{1.0 0.0
+{0.0 0.0
+({0:3}) 
+
+array % string = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) % "test2" = 
+
+true
+3
+4.5
+test1
+{1.0 0.0 0.0}
+{0.0 0.0 1.0 0.0}
+({0:3})
+
+array % point = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) % {0.0 1.0 0.0} = 
+
+t
+3
+4
+t
+{
+{
+(
+
+array % plane = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) % {0.0 1.0 0.0 0.0} = 
+
+true
+3
+4.5
+test1
+{1.0 0.0 0.0}
+{0.0 0.0 1.0 0.0}
+({0:3})
+
+array % bitset = array  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) % ({3:5}) = 
+
+tru
+3  
+4.5
+tes
+{1.
+{0.
+({0
+
+
+boolean AND boolean = boolean  -- true AND false = false
+boolean AND integer = boolean  -- true AND 5 = true
+boolean AND decimal = boolean  -- true AND 8.5 = true
+boolean AND string = boolean  -- true AND "test2" = true
+boolean AND point = boolean  -- true AND {0.0 1.0 0.0} = true
+boolean AND plane = boolean  -- true AND {0.0 1.0 0.0 0.0} = false
+boolean AND bitset = boolean  -- true AND ({3:5}) = true
+boolean AND array = boolean  -- true AND "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+integer AND boolean = boolean  -- 3 AND false = false
+integer AND integer = boolean  -- 3 AND 5 = true
+integer AND decimal = boolean  -- 3 AND 8.5 = true
+integer AND string = boolean  -- 3 AND "test2" = true
+integer AND point = boolean  -- 3 AND {0.0 1.0 0.0} = true
+integer AND plane = boolean  -- 3 AND {0.0 1.0 0.0 0.0} = false
+integer AND bitset = boolean  -- 3 AND ({3:5}) = true
+integer AND array = boolean  -- 3 AND "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+decimal AND boolean = boolean  -- 4.5 AND false = false
+decimal AND integer = boolean  -- 4.5 AND 5 = true
+decimal AND decimal = boolean  -- 4.5 AND 8.5 = true
+decimal AND string = boolean  -- 4.5 AND "test2" = true
+decimal AND point = boolean  -- 4.5 AND {0.0 1.0 0.0} = true
+decimal AND plane = boolean  -- 4.5 AND {0.0 1.0 0.0 0.0} = false
+decimal AND bitset = boolean  -- 4.5 AND ({3:5}) = true
+decimal AND array = boolean  -- 4.5 AND "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+string AND boolean = boolean  -- "test1" AND false = false
+string AND integer = boolean  -- "test1" AND 5 = true
+string AND decimal = boolean  -- "test1" AND 8.5 = true
+string AND string = boolean  -- "test1" AND "test2" = true
+string AND point = boolean  -- "test1" AND {0.0 1.0 0.0} = true
+string AND plane = boolean  -- "test1" AND {0.0 1.0 0.0 0.0} = false
+string AND bitset = boolean  -- "test1" AND ({3:5}) = true
+string AND array = boolean  -- "test1" AND "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+point AND boolean = boolean  -- {1.0 0.0 0.0} AND false = false
+point AND integer = boolean  -- {1.0 0.0 0.0} AND 5 = true
+point AND decimal = boolean  -- {1.0 0.0 0.0} AND 8.5 = true
+point AND string = boolean  -- {1.0 0.0 0.0} AND "test2" = true
+point AND point = boolean  -- {1.0 0.0 0.0} AND {0.0 1.0 0.0} = true
+point AND plane = boolean  -- {1.0 0.0 0.0} AND {0.0 1.0 0.0 0.0} = false
+point AND bitset = boolean  -- {1.0 0.0 0.0} AND ({3:5}) = true
+point AND array = boolean  -- {1.0 0.0 0.0} AND "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+plane AND boolean = boolean  -- {0.0 0.0 1.0 0.0} AND false = false
+plane AND integer = boolean  -- {0.0 0.0 1.0 0.0} AND 5 = false
+plane AND decimal = boolean  -- {0.0 0.0 1.0 0.0} AND 8.5 = false
+plane AND string = boolean  -- {0.0 0.0 1.0 0.0} AND "test2" = false
+plane AND point = boolean  -- {0.0 0.0 1.0 0.0} AND {0.0 1.0 0.0} = false
+plane AND plane = boolean  -- {0.0 0.0 1.0 0.0} AND {0.0 1.0 0.0 0.0} = false
+plane AND bitset = boolean  -- {0.0 0.0 1.0 0.0} AND ({3:5}) = false
+plane AND array = boolean  -- {0.0 0.0 1.0 0.0} AND "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = false
+bitset AND boolean = boolean  -- ({0:3}) AND false = false
+bitset AND integer = boolean  -- ({0:3}) AND 5 = true
+bitset AND decimal = boolean  -- ({0:3}) AND 8.5 = true
+bitset AND string = boolean  -- ({0:3}) AND "test2" = true
+bitset AND point = boolean  -- ({0:3}) AND {0.0 1.0 0.0} = true
+bitset AND plane = boolean  -- ({0:3}) AND {0.0 1.0 0.0 0.0} = false
+bitset AND bitset = bitset  -- ({0:3}) AND ({3:5}) = ({3})
+bitset AND array = boolean  -- ({0:3}) AND "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+array AND boolean = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) AND false = false
+array AND integer = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) AND 5 = true
+array AND decimal = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) AND 8.5 = true
+array AND string = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) AND "test2" = true
+array AND point = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) AND {0.0 1.0 0.0} = true
+array AND plane = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) AND {0.0 1.0 0.0 0.0} = false
+array AND bitset = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) AND ({3:5}) = true
+
+boolean OR boolean = boolean  -- true OR false = true
+boolean OR integer = boolean  -- true OR 5 = true
+boolean OR decimal = boolean  -- true OR 8.5 = true
+boolean OR string = boolean  -- true OR "test2" = true
+boolean OR point = boolean  -- true OR {0.0 1.0 0.0} = true
+boolean OR plane = boolean  -- true OR {0.0 1.0 0.0 0.0} = true
+boolean OR bitset = boolean  -- true OR ({3:5}) = true
+boolean OR array = boolean  -- true OR "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+integer OR boolean = boolean  -- 3 OR false = true
+integer OR integer = boolean  -- 3 OR 5 = true
+integer OR decimal = boolean  -- 3 OR 8.5 = true
+integer OR string = boolean  -- 3 OR "test2" = true
+integer OR point = boolean  -- 3 OR {0.0 1.0 0.0} = true
+integer OR plane = boolean  -- 3 OR {0.0 1.0 0.0 0.0} = true
+integer OR bitset = boolean  -- 3 OR ({3:5}) = true
+integer OR array = boolean  -- 3 OR "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+decimal OR boolean = boolean  -- 4.5 OR false = true
+decimal OR integer = boolean  -- 4.5 OR 5 = true
+decimal OR decimal = boolean  -- 4.5 OR 8.5 = true
+decimal OR string = boolean  -- 4.5 OR "test2" = true
+decimal OR point = boolean  -- 4.5 OR {0.0 1.0 0.0} = true
+decimal OR plane = boolean  -- 4.5 OR {0.0 1.0 0.0 0.0} = true
+decimal OR bitset = boolean  -- 4.5 OR ({3:5}) = true
+decimal OR array = boolean  -- 4.5 OR "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+string OR boolean = boolean  -- "test1" OR false = true
+string OR integer = boolean  -- "test1" OR 5 = true
+string OR decimal = boolean  -- "test1" OR 8.5 = true
+string OR string = boolean  -- "test1" OR "test2" = true
+string OR point = boolean  -- "test1" OR {0.0 1.0 0.0} = true
+string OR plane = boolean  -- "test1" OR {0.0 1.0 0.0 0.0} = true
+string OR bitset = boolean  -- "test1" OR ({3:5}) = true
+string OR array = boolean  -- "test1" OR "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+point OR boolean = boolean  -- {1.0 0.0 0.0} OR false = true
+point OR integer = boolean  -- {1.0 0.0 0.0} OR 5 = true
+point OR decimal = boolean  -- {1.0 0.0 0.0} OR 8.5 = true
+point OR string = boolean  -- {1.0 0.0 0.0} OR "test2" = true
+point OR point = boolean  -- {1.0 0.0 0.0} OR {0.0 1.0 0.0} = true
+point OR plane = boolean  -- {1.0 0.0 0.0} OR {0.0 1.0 0.0 0.0} = true
+point OR bitset = boolean  -- {1.0 0.0 0.0} OR ({3:5}) = true
+point OR array = boolean  -- {1.0 0.0 0.0} OR "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+plane OR boolean = boolean  -- {0.0 0.0 1.0 0.0} OR false = false
+plane OR integer = boolean  -- {0.0 0.0 1.0 0.0} OR 5 = true
+plane OR decimal = boolean  -- {0.0 0.0 1.0 0.0} OR 8.5 = true
+plane OR string = boolean  -- {0.0 0.0 1.0 0.0} OR "test2" = true
+plane OR point = boolean  -- {0.0 0.0 1.0 0.0} OR {0.0 1.0 0.0} = true
+plane OR plane = boolean  -- {0.0 0.0 1.0 0.0} OR {0.0 1.0 0.0 0.0} = false
+plane OR bitset = boolean  -- {0.0 0.0 1.0 0.0} OR ({3:5}) = true
+plane OR array = boolean  -- {0.0 0.0 1.0 0.0} OR "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+bitset OR boolean = boolean  -- ({0:3}) OR false = true
+bitset OR integer = boolean  -- ({0:3}) OR 5 = true
+bitset OR decimal = boolean  -- ({0:3}) OR 8.5 = true
+bitset OR string = boolean  -- ({0:3}) OR "test2" = true
+bitset OR point = boolean  -- ({0:3}) OR {0.0 1.0 0.0} = true
+bitset OR plane = boolean  -- ({0:3}) OR {0.0 1.0 0.0 0.0} = true
+bitset OR bitset = bitset  -- ({0:3}) OR ({3:5}) = ({0:5})
+bitset OR array = boolean  -- ({0:3}) OR "false,5,8.5,test2,{0.0 1.0 0.0},{0.0 1.0 0.0 0.0},({3:5})".split(,) = true
+array OR boolean = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) OR false = true
+array OR integer = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) OR 5 = true
+array OR decimal = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) OR 8.5 = true
+array OR string = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) OR "test2" = true
+array OR point = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) OR {0.0 1.0 0.0} = true
+array OR plane = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) OR {0.0 1.0 0.0 0.0} = true
+array OR bitset = boolean  -- "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) OR ({3:5}) = true
+
+NOT boolean = boolean  -- NOT true = false
+NOT integer = boolean  -- NOT 3 = false
+NOT decimal = boolean  -- NOT 4.5 = false
+NOT string = boolean  -- NOT "test1" = false
+NOT point = boolean  -- NOT {1.0 0.0 0.0} = false
+NOT plane = boolean  -- NOT {0.0 0.0 1.0 0.0} = true
+NOT bitset = bitset  -- NOT ({0:3}) = ({4:326})
+NOT array = boolean  -- NOT "true,3,4.5,test1,{1.0 0.0 0.0},{0.0 0.0 1.0 0.0},({0:3})".split(,) = false
+

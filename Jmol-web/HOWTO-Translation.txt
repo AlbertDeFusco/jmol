@@ -1,0 +1,77 @@
+    How to translate the Jmol website in an other language
+    ------------------------------------------------------
+
+Remark : this document presents a step by step procedure for translating
+the Jmol website to an other language (noted [xxxx] in the rest of the document).
+
+1. Find the code for the target language: [xx]
+Note : Text in brackets (i.e. []) should be replaced with appropriate 
+       information. To obtain more information about codes to use for 
+       language names and country names, see "The Java Tutorial"'s 
+       Internationalization Trail at java.sun.com
+For example, for a French translation, the code should be replaced by : fr
+
+2. If you are interested, please begin with the translation of Jmol itself
+(see /src/org/openscience/jmol/Properties/Jmol.properties
+ and /src/org/openscience/jmol/ui/JmolPopupWords.properties) and the Jmol doc
+(see /doc/source/*.xml).
+The files can be found in the Jmol source tree.
+
+3. Add the following line in the file /source/doc/.htaccess :
+AddLanguage [xx] .[xx]
+
+4. Add a flag icon for the new language : /source/doc/images/flags/[xx].png
+(See /source/docs/images/flags/README.txt for more informations)
+
+5. Add a line in the file /source/doc/language.xml file for the new language.
+Use the other languages as an example.
+
+6. In the /build.xml file, add the new language in the all.languages property.
+
+7. Copy the file /source/doc/project_en.xml to /source/doc/project_[xx].xml
+and translate it into the new language. Add the following 4 lines in the translated
+file to remember from which version this file was translated (for an example, you
+can look at /source/doc/project_fr.xml) :
+<!--
+  [Xxxx] translation 
+  Translated from default version : project_en.xml (v [CVS version of project_en.xml])
+-->
+
+8. For each index_en.xml file in the /source/doc directory and its subdirectories
+copy it to index_[xx].xml and translate it into the new language. Add the following
+4 lines in the translated file to remember from which version this file was translated
+(for an example, you can look at index_fr.xml) :
+<!--
+  [Xxxx] translation 
+  Translated from default version : index_en.xml (v [CVS version of index_en.xml])
+-->
+
+Note: some index_en.xml files (for example in the technotes subdirectory) relies on
+several other xml files (antiAliasing_en.xml, ...). Copy each one to the appropriate
+name (antiAliasing_[xx].xml) and translate. Also add the 4 lines to remember from
+which version this file was translated.
+
+9. For each index.en.html file in the /source/doc directory and its subdirectories
+copy it to index.[xx].html and translate it into the new language. Also add the 4
+lines to remember from which version this file was translated.
+
+
+--> FINALLY <--
+
+That's it, the Jmol website should now be ready to be accessible in a new language.
+Build it on your PC (I hope you already built it during the translation process
+to check your translation ;).
+If you want to test each web page separately, just open them in your favorite
+browser from your local drive. Note: most of the links won't work, you'll need to
+install a web server to make them work. Sorry, but you'll have to find yourself
+how to install and configure a web server on your system.
+
+
+--> KEEPING THE TRANSLATION UP TO DATE <--
+
+The Jmol documentation will evolve, and the translations will need to be updated.
+The comments (see the steps above) you put in the translated files will help to
+update the translation. Using CVS, compare the current version of the English with
+the version used in the previous translation (you have it in your comment :) ).
+You will then have the modifications, translate them and don't forget to update
+the comment with the version ;)

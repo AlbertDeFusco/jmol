@@ -1,0 +1,49 @@
+<project default="deploy" basedir=".">
+
+  <!--
+    To use this script, the scp task must be available.
+    The scp task requires the jsch jar in the class path.
+  -->
+  
+  <property name="from.dir" value="../../../build/html/fah" />
+  <property name="web.host"  value="web.sourceforge.net" />
+
+  <!-- Copying files to website -->
+  <target name="deploy" >
+  	
+    <!-- Ask user for confirmation -->
+    <input
+      message="Do you really want to copy files to the website (y/n) ?"
+      validargs="y,n"
+      addproperty="do.scp"
+    />
+    <condition property="do.abort">
+      <equals arg1="n" arg2="${do.scp}"/>
+    </condition>
+    <fail if="do.abort">Build aborted by user.</fail>
+    
+    <!-- Ask user for username and password -->
+    <input
+      message="Please enter username:"
+      addproperty="ssh.user"
+    />
+    <input
+      message="Please enter password:"
+      addproperty="ssh.password"
+    />
+    
+    <!-- Do the copy using scp -->
+    <echo message="Copying all files to Jmol website"/>
+    <scp
+      todir="${ssh.user},jmol:${ssh.password}@${web.host}:/home/groups/j/jm/jmol/htdocs/fah"
+      trust="yes" failonerror="false">
+      <fileset dir="${from.dir}">
+        <modified>
+          <param name="cache.cachefile" value="../../../cache.properties" />
+        </modified>
+      </fileset>
+    </scp>
+    
+  </target>
+  
+</project>

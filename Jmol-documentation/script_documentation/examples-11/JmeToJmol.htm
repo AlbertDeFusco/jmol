@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>JmeToJmol.htm</title>
+<script type="text/javascript">
+// JmolJME.js -- popup JME widget for Jmol 12.0
+// Bob Hanson 9:12 PM 4/10/2010
+
+// URL line allows for load=...jme data...
+
+// just pop up this file from the window containing the Jmol applet,
+// and it will send a drawn structure back to the applet in JME format.
+
+/*
+ 
+// example JavaScript to open this window:
+
+woptions2="menubar=yes,resizable=1,scrollbars,alwaysRaised,width=400,height=450,left=270"
+function newJmeWindow(file) {
+  var data = (file ? "?load=" + escape(jmolEvaluate("load('" + file + "')")) : "")
+  var sm=""+Math.random() // ensures a new popup window, not just replacement
+  sm=sm.substring(2,10)
+  var newwin=open("JmeToJmol.htm" + data,"jmol_"+sm,woptions2)
+}
+
+*/
+
+function JmeToJmol(w,h) {
+	w = "" + (w || "350") 
+	h = "" + (h || "375")
+	if (w.indexOf("%") < 0)w += "px"
+	if (h.indexOf("%") < 0)h += "px"
+	var s = '<applet code="JME.class" id="JME" name="JME" archive="JME.jar" width="'+w+'" height="'+h+'">'
+	if (document.location.search.indexOf("load=") >= 0) {
+		var file = unescape(document.location.search.split("load=")[1].split("&")[0])
+		s += '<param name="jme" value="' + file + '">'
+	}
+	s+='</applet>'
+	document.write(s)
+}
+
+function getStateJME() {
+	// also saves a variable "jmeString" in Jmol for later reference
+	var jmeString = document.getElementById("JME").jmeFile()
+	var smilesString = document.getElementById("JME").smiles()
+	var smilesString2 = document.getElementById("JME").nonisomericSmiles()
+	return "jmeString = '" + jmeString 
+		+ "';smilesString = '" + smilesString 
+		+ "';smilesStringNonisomeric = '" + smilesString2 
+		+ "';load INLINE '" + jmeString + "'"
+}
+
+function sendToJmol(){
+	try {
+		opener.jmolScript(getStateJME());
+	} catch (e) {
+		newAppletWindow()
+	}
+}
+
+function inputJME() {
+ var s = prompt("Enter a JME string", document.getElementById("JME").jmeFile())
+ if (!s)return
+ document.getElementById("JME").readMolecule(s)
+}
+
+woptions="menubar=yes,resizable=1,scrollbars,alwaysRaised,width=600,height=600,left=50"
+woptions2="menubar=yes,resizable=1,scrollbars,alwaysRaised,width=400,height=450,left=270"
+woptions3="menubar=yes,resizable=1,scrollbars,alwaysRaised,width=6500,height=450,left=270"
+
+function newAppletWindow() {
+ newWindow("JmolPopup.htm?JME&DRAG", woptions)
+}
+
+function newWindow(file, options) {
+ var sm=""+Math.random()
+ sm=sm.substring(2,10)
+ var newwin=open(file,"jmol_"+sm, options)
+}
+
+function doTestSmiles() {
+  var file = "JmolSmiles.htm?find=" 
+	+ escape(document.getElementById("JME").nonisomericSmiles()) 
+	+ "&in=" + escape(document.getElementById("JME").smiles()) 
+  newWindow(file,woptions3)
+}
+
+function getLink() {
+ var file = document.getElementById("JME").jmeFile()
+ ref = document.location.href.split("?")[0]
+ if (ref.toLowerCase().indexOf("file:") == 0)ref = "http://chemapps.stolaf.edu/jmol/docs/examples-11/JmeToJmol.htm"
+ var model = ref + "?load=" + escape(file).replace(/ /g,"%20")
+ var s = prompt("The link below will go to this page with this molecule loaded. Press OK to load this page. ",model)
+ if (!s)return
+ newWindow(s, woptions2) 
+}
+
+</script>
+</head>
+<table><tr><td align=center>
+<script type="text/javascript">
+JmeToJmol()
+</script>
+</td></tr>
+</tr><td align=center>
+<a href="javascript:sendToJmol()">Load into Jmol</a>
+ <a target="_blank" href="JmeShow.htm">JME</a>
+ <a target="_blank" href="JmeShow.htm?SMILES">SMILES</a>
+ <a href="javascript:inputJME()">input JME</a>
+ <a href="javascript:getLink()">save</a>
+ <a href="javascript:doTestSmiles()">test</a>
+<br/> <a href="javascript:window.close()">close this window</a>
+<a target="_blank" href=http://www.molinspiration.com/jme>http://www.molinspiration.com/jme</a>
+</td></tr>
+</table>
+</body>
+</html>

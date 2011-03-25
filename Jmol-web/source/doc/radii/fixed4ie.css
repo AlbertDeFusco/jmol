@@ -1,0 +1,33 @@
+/*
+Solution for fixed positioning
+Original file from http://tagsoup.com/-dev/null-/css/fixed/ by Eric Bednarz
+Modified for this page
+*/
+
+body 
+  { 
+  overflow: hidden; 
+  padding: 40px 0 0 0;	/* my choice */
+  font-size: 100%; 
+  }
+
+
+div#content
+  {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: auto;
+  margin: 0 0 0 500px;	/* my choice */
+  padding: 6px;	/* my choice */
+  }
+
+
+div#sidebar
+  {
+  top: 0;
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 40px 0 0 0;	/* my choice */
+  }

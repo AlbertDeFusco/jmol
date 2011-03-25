@@ -1,0 +1,118 @@
+<html><head>
+
+<script>
+
+
+//http://www.javaview.de/demo/PaParmSurface.html
+
+function sin(x){return Math.sin(x)}
+function asin(x){return Math.asin(x)}
+function cos(x){return Math.cos(x)}
+function acos(x){return Math.acos(x)}
+function tan(x){return Math.tan(x)}
+function atan(x){return Math.atan(x)}
+function log(x){return Math.log(x)}
+function sqrt(x){return Math.sqrt(x)}
+
+
+
+var orientation = "set antialiasDisplay true; moveto /* time, axisAngle */ 1.0 { 995 -24 100 113.11} /* zoom, translation */  345.59 0.0 0.0  /* center, rotationRadius */ {0.0 0.0 0.0} 10.0 /* navigation center, translation, depth */ {0.0 0.0 0.0} 0.0 0.0 50.0;"
+
+
+
+function createXYZ() {
+	X = new Array()
+	Y = new Array()
+	Z = new Array()
+
+	for (var i = 0; i < nu; i++) {
+	  X[i] = new Array()
+	  Y[i] = new Array()
+	  Z[i] = new Array()
+	}
+
+	for (var iu = 0; iu < nu; iu++)for (var iv = 0; iv < nv; iv++) {
+		u = umin + iu * ustep 
+		v = vmin + iv * vstep
+		X[iu][iv] = eval(fx)
+		Y[iu][iv] = eval(fy)
+		Z[iu][iv] = eval(fz)
+	}
+}
+
+function createPMesh() {
+	var S=new Array()
+	var i = 0;
+	S[i++] = "zap;set echo top left;echo rendering...;refresh;pmesh test1 \"inline\" \"" + (nu * nv)
+	for (var iu = 0; iu < nu; iu++)for (var iv = 0; iv < nv; iv++) {
+		S[i++]=" " + X[iu][iv]+" "+Y[iu][iv]+" "+Z[iu][iv]
+	}
+	S[i++] = (nu-1)*(nv-1)
+	var pt = 0;
+	for (var iu = 1; iu < nu; iu++)for (var iv = 1; iv < nv; iv++,pt++) {
+		S[i++]= "5 " + pt + " " + (pt + 1) + " " + (pt + nv + 1) + " " + (pt + nv) + " " + pt
+	}
+	S[i++] = "\";echo \"\";" + orientation
+	return S.join(" ")
+
+}
+
+cmd=""
+
+function getCmd() {
+	createXYZ();	
+	return createPMesh();
+}
+
+function getJmol() {
+	jmolScript("zap;set echo top left;echo calculating...;")
+	eval(document.getElementById("info").value)
+	var cmd = getCmd()
+	jmolScript(cmd)
+
+}
+
+</script>
+
+<script language=javascript src="Jmol.js"></script>
+
+</head><body>
+VERY quick and dirty math visualizationg using Jmol and the pmesh command 
+--- VERY CRUDE -- I wrote this page in about 30 minutes! 
+(not closing the surface, for example)
+<br/>
+
+This is 10,000 points (100x100)
+<br/>
+
+ -- Bob Hanson
+<br/>
+
+Based on <a href=http://www.javaview.de/demo/PaParmSurface.html>http://www.javaview.de/demo/PaParmSurface.html</a>
+<br/>
+<br/>
+<table><tr><td>
+<script>
+jmolApplet(400)
+</script>
+</td><td><textarea id=info rows=20 cols=80>
+fx = "2./(1.+Math.pow(u*sin(v),2))*sqrt(1.+u*u)*sin(v)*cos(u-atan(u))"
+fy = "2./(1.+Math.pow(u*sin(v),2))*sqrt(1.+u*u)*sin(v)*sin(u-atan(u))"
+fz = "log(tan(v/2.))+2./(1.+Math.pow(u*sin(v),2))*cos(v)"
+
+umin = -4.5
+umax = 4.5
+vmin = 0.05
+vmax = 3.09159
+
+nu = 100
+nv = 100
+ustep = (umax-umin)/nu
+vstep = (vmax-vmin)/nv
+
+
+</textarea>
+<br /><input type=button value="Graph" onclick=getJmol()>
+
+</td></tr></table>
+</body></html>

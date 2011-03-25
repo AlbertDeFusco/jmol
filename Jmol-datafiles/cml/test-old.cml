@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cml title="bg2386sup1_I" id="bg2386sup1_I" xmlns="http://www.xml-cml.org/schema">
+  <molecule>
+    <crystal z="2">
+      <scalar dictRef="iucr:_cell_length_a" dataType="xsd:double" errorValue="5.0E-4">5.7611</scalar>
+      <scalar dictRef="iucr:_cell_length_b" dataType="xsd:double" errorValue="7.0E-4">7.8329</scalar>
+      <scalar dictRef="iucr:_cell_length_c" dataType="xsd:double" errorValue="0.0010">11.2016</scalar>
+      <scalar dictRef="iucr:_cell_angle_alpha" dataType="xsd:double" errorValue="0.0070">83.852</scalar>
+      <scalar dictRef="iucr:_cell_angle_beta" dataType="xsd:double" errorValue="0.0070">75.373</scalar>
+      <scalar dictRef="iucr:_cell_angle_gamma" dataType="xsd:double" errorValue="0.0070">76.353</scalar>
+      <symmetry spaceGroup="P -1">
+        <transform3>1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0</transform3>
+        <transform3>-1.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 1.0</transform3>
+      </symmetry>
+    </crystal> 
+    <atomArray>
+      <atom id="a1" z3="7.714022952084072" y3="2.1025787710326456" x3="0.908221000113333" zFract="0.6487" yFract="0.24404" xFract="0.16691" elementType="Cl" x2="-3.897114317029975" y2="2.249999999999999">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.02702</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">Cl1</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a2" formalCharge="0" z3="2.0976123477957955" y3="4.22068158783533" x3="9.745568829986103" zFract="-0.06509" yFract="0.26359" xFract="1.79101" elementType="S" x2="1.2990381056766562" y2="-5.250000000000001">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.02625</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">S1</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a3" z3="4.0291721850471856" y3="3.266437741381039" x3="6.4662113910171835" zFract="0.18778" yFract="0.23473" xFract="1.18834" elementType="N" x2="1.2990381056766573" y2="-2.250000000000001">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.0215</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">N1</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a4" formalCharge="0" z3="3.164318662441924" y3="3.8616158730396513" x3="7.365399697701794" zFract="0.08531" yFract="0.28547" xFract="1.35359" elementType="N" x2="2.598076211353315" y2="-3.0000000000000018">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.022</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">N2</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a5" z3="2.8682062189926705" y3="4.653018186325631" x3="7.193506453476881" zFract="0.055" yFract="0.392" xFract="1.322" elementType="H" x2="3.8971143170299736" y2="-2.2500000000000027">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.033</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uiso</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">H2</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a6" z3="3.6719157847423616" y3="2.2427302883751987" x3="8.905365099667371" zFract="0.11273" yFract="0.03361" xFract="1.6366" elementType="N" x2="3.8971143170299714" y2="-5.2500000000000036">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.0256</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">N3</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a7" z3="3.629794450656939" y3="1.9293930109258854" x3="9.723748889835996" zFract="0.0942" yFract="-0.03" xFract="1.787" elementType="H" x2="3.8971143170299682" y2="-6.7500000000000036">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.037</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uiso</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">H3A</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a8" z3="4.1012512032984105" y3="1.866314690063854" x3="8.319872441275454" zFract="0.1674" yFract="0.0020" xFract="1.529" elementType="H" x2="5.19615242270663" y2="-4.500000000000005">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.037</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uiso</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">H3B</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a9" z3="4.022400328013613" y3="3.80512890914243" x3="5.299361524236864" zFract="0.20735" yFract="0.33723" xFract="0.9739" elementType="C" x2="1.2990381056766576" y2="-0.7500000000000007">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.0206</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">C1</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a10" z3="3.415785626880994" y3="4.513242574302068" x3="5.119251793820763" zFract="0.1503" yFract="0.4333" xFract="0.9408" elementType="H" x2="2.598076211353316" y2="-1.5543122344752192E-15">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.025</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uiso</scalar>
+        <scalar dictRef="iucr:_atom_site_calc_flag" dataType="xsd:string">calc</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">H1</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">R</scalar>
+      </atom>
+      <atom id="a11" z3="3.0474771165661365" y3="3.3717101542455565" x3="8.62132498100512" zFract="0.0523" yFract="0.18669" xFract="1.5844" elementType="C" x2="2.5980762113533147" y2="-4.500000000000002">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.02</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">C2</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a12" z3="4.927174757136978" y3="3.3532253980044504" x3="4.23938039175782" zFract="0.3155" yFract="0.30948" xFract="0.7791" elementType="C" x2="0.0" y2="0.0">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.0194</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">C11</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a13" z3="6.015104018676658" y3="2.5145905176341765" x3="4.495125326185515" zFract="0.41513" yFract="0.19449" xFract="0.8261" elementType="C" x2="0.0" y2="1.5">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.0258</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">C12</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a14" z3="6.172327736091685" y3="2.2068307559573057" x3="5.3798939716736704" zFract="0.4129" yFract="0.1297" xFract="0.9887" elementType="H" x2="1.2990381056766584" y2="2.249999999999999">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.031</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uiso</scalar>
+        <scalar dictRef="iucr:_atom_site_calc_flag" dataType="xsd:string">calc</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">H12</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">R</scalar>
+      </atom>
+      <atom id="a15" z3="6.8666656057318765" y3="2.1274483148068715" x3="3.475954555583231" zFract="0.51702" yFract="0.17389" xFract="0.6388" elementType="C" x2="-1.2990381056766582" y2="2.2500000000000004">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.0275</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">C13</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a16" z3="7.60806290269484" y3="1.5627174108611945" x3="3.6571525623160452" zFract="0.5847" yFract="0.0962" xFract="0.6721" elementType="H" x2="-1.2990381056766582" y2="3.7500000000000004">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.033</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uiso</scalar>
+        <scalar dictRef="iucr:_atom_site_calc_flag" dataType="xsd:string">calc</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">H13</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">R</scalar>
+      </atom>
+      <atom id="a17" z3="6.623004532728347" y3="2.575725376613966" x3="2.183082291327477" zFract="0.51905" yFract="0.26838" xFract="0.4012" elementType="C" x2="-2.5980762113533165" y2="1.5">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.0209</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">C14</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a18" z3="5.5539482514385305" y3="3.4097878261431767" x3="1.9001304489819415" zFract="0.42174" yFract="0.38356" xFract="0.3492" elementType="C" x2="-2.598076211353316" y2="-2.220446049250313E-16">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.0221</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">C15</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a19" z3="5.396029876721223" y3="3.7061866936923775" x3="1.011552836385289" zFract="0.4241" yFract="0.447" xFract="0.1859" elementType="H" x2="-3.897114317029974" y2="-0.7500000000000004">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.027</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uiso</scalar>
+        <scalar dictRef="iucr:_atom_site_calc_flag" dataType="xsd:string">calc</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">H15</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">R</scalar>
+      </atom>
+      <atom id="a20" z3="4.717316253780096" y3="3.8062811471158127" x3="2.935081226176573" zFract="0.32075" yFract="0.40491" xFract="0.5394" elementType="C" x2="-1.2990381056766584" y2="-0.7500000000000001">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.0216</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uani</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">C16</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">.</scalar>
+      </atom>
+      <atom id="a21" z3="3.9931043558040957" y3="4.393475772562563" x3="2.753339081285402" zFract="0.2544" yFract="0.4855" xFract="0.506" elementType="H" x2="-1.2990381056766587" y2="-2.25">
+        <scalar dictRef="iucr:_atom_site_u_iso_or_equiv" dataType="xsd:double">0.026</scalar>
+        <scalar dictRef="iucr:_atom_site_adp_type" dataType="xsd:string">Uiso</scalar>
+        <scalar dictRef="iucr:_atom_site_calc_flag" dataType="xsd:string">calc</scalar>
+        <scalar dictRef="iucr:_atom_site_label" dataType="xsd:string">H16</scalar>
+        <scalar dictRef="iucr:_atom_site_refinement_flags" dataType="xsd:string">R</scalar>
+      </atom>
+    </atomArray>
+    <bondArray>
+      <bond id="a1_a17" atomRefs2="a1 a17" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a17 a1" n:elementTypes2="C Cl" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.7434047761729876</length>
+      </bond>
+      <bond id="a2_a11" atomRefs2="a2 a11" userCyclic="ACYCLIC" order="D">
+        <length atomRefs2="a11 a2" n:elementTypes2="C S" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.6990938190618503</length>
+      </bond>
+      <bond id="a3_a4" atomRefs2="a3 a4" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a3 a4" n:elementTypes2="N N" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.382298171468697</length>
+      </bond>
+      <bond id="a3_a9" atomRefs2="a3 a9" userCyclic="ACYCLIC" order="D">
+        <bondStereo atomRefs4="a4 a3 a9 a12">T</bondStereo>
+        <length atomRefs2="a9 a3" n:elementTypes2="C N" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.2852130733372829</length>
+      </bond>
+      <bond id="a4_a5" atomRefs2="a4 a5" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a5 a4" n:elementTypes2="H N" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">0.8622919969766928</length>
+      </bond>
+      <bond id="a4_a11" atomRefs2="a4 a11" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a11 a4" n:elementTypes2="C N" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.353147396771816</length>
+      </bond>
+      <bond id="a6_a7" atomRefs2="a6 a7" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a7 a6" n:elementTypes2="H N" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">0.8773291766693088</length>
+      </bond>
+      <bond id="a6_a8" atomRefs2="a6 a8" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a8 a6" n:elementTypes2="H N" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">0.8178137057482099</length>
+      </bond>
+      <bond id="a6_a11" atomRefs2="a6 a11" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a11 a6" n:elementTypes2="C N" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.3210594145851329</length>
+      </bond>
+      <bond id="a9_a10" atomRefs2="a9 a10" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a10 a9" n:elementTypes2="H C" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">0.9496556604404531</length>
+      </bond>
+      <bond id="a9_a12" atomRefs2="a9 a12" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a9 a12" n:elementTypes2="C C" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.4650575252139086</length>
+      </bond>
+      <bond id="a12_a13" atomRefs2="a12 a13" userCyclic="CYCLIC" order="D">
+        <length atomRefs2="a12 a13" n:elementTypes2="C C" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.3972487295300584</length>
+      </bond>
+      <bond id="a12_a20" atomRefs2="a12 a20" userCyclic="CYCLIC" order="S">
+        <length atomRefs2="a12 a20" n:elementTypes2="C C" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.396601738710784</length>
+      </bond>
+      <bond id="a13_a14" atomRefs2="a13 a14" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a14 a13" n:elementTypes2="H C" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">0.9498688984613352</length>
+      </bond>
+      <bond id="a13_a15" atomRefs2="a13 a15" userCyclic="CYCLIC" order="S">
+        <length atomRefs2="a13 a15" n:elementTypes2="C C" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.383381827771362</length>
+      </bond>
+      <bond id="a15_a16" atomRefs2="a15 a16" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a16 a15" n:elementTypes2="H C" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">0.9494333380807919</length>
+      </bond>
+      <bond id="a15_a17" atomRefs2="a15 a17" userCyclic="CYCLIC" order="D">
+        <length atomRefs2="a15 a17" n:elementTypes2="C C" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.3899070955720148</length>
+      </bond>
+      <bond id="a17_a18" atomRefs2="a17 a18" userCyclic="CYCLIC" order="S">
+        <length atomRefs2="a17 a18" n:elementTypes2="C C" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.3851365446650414</length>
+      </bond>
+      <bond id="a18_a19" atomRefs2="a18 a19" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a19 a18" n:elementTypes2="H C" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">0.9499266684148683</length>
+      </bond>
+      <bond id="a18_a20" atomRefs2="a18 a20" userCyclic="CYCLIC" order="D">
+        <length atomRefs2="a18 a20" n:elementTypes2="C C" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">1.3886263587796484</length>
+      </bond>
+      <bond id="a20_a21" atomRefs2="a20 a21" userCyclic="ACYCLIC" order="S">
+        <length atomRefs2="a21 a20" n:elementTypes2="H C" xmlns:n="http://wwmm.ch.cam.ac.uk/ned24/">0.9499003150611084</length>
+      </bond>
+    </bondArray>
+    <formula formalCharge="0" concise="C 8 H 8 Cl 1 N 3 S 1">
+      <atomArray elementType="C H Cl N S" count="8.0 8.0 1.0 3.0 1.0"/>
+    </formula>
+    <identifier convention="daylight:smiles">Cc1ccc(/C=Cl\N(S)CN)cc1</identifier>
+    <identifier convention="iupac:inchi">InChI=1/C8H8ClN3S/c9-7-3-1-6(2-4-7)5-11-12-8(10)13/h1-5H,(H3,10,12,13)/b11-5+</identifier>
+  </molecule>
+</cml>

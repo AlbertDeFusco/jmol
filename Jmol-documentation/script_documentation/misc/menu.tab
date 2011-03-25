@@ -1,0 +1,820 @@
+M0	.popupMenu.modelSetMenu	Collection of 20 mod...	-	enabled:true
+S1	.popupMenu.modelSetMenu.
+I1	.popupMenu.modelSetMenu.	atoms: 382	-	enabled:true
+I1	.popupMenu.modelSetMenu.	bonds: 382	-	enabled:true
+S1	.popupMenu.modelSetMenu.
+I1	.popupMenu.modelSetMenu.	groups: 340	-	enabled:true
+I1	.popupMenu.modelSetMenu.	chains: 20	-	enabled:true
+I1	.popupMenu.modelSetMenu.	polymers: 10	-	enabled:true
+M1	.popupMenu.modelSetMenu.biomolecules	Biomolecules	-	enabled:false
+M0	.popupMenu.SIGNEDloadMenu	Load	-	enabled:true
+I1	.popupMenu.SIGNEDloadMenu.loadPdb	File from PDB	load ?=1crn	enabled:true
+I1	.popupMenu.SIGNEDloadMenu.loadFileOrURL	File or URL	load ?	enabled:false
+I1	.popupMenu.SIGNEDloadMenu.loadFileUnitCell	Load full unit cell	load ? {1 1 1}	enabled:true
+S1	.popupMenu.SIGNEDloadMenu.
+I1	.popupMenu.SIGNEDloadMenu.loadScript	Script	script ?.spt	enabled:true
+M0	.popupMenu.SIGNEDwriteMenu	Save	-	enabled:true
+I1	.popupMenu.SIGNEDwriteMenu.writeFileTextVARIABLE	File trajectory	write file "?trajectory"	enabled:true
+I1	.popupMenu.SIGNEDwriteMenu.writeState	Script with state	write state "?merge.spt"	enabled:true
+I1	.popupMenu.SIGNEDwriteMenu.writeHistory	Script with history	write history "?merge.his"	enabled:true
+S1	.popupMenu.SIGNEDwriteMenu.
+I1	.popupMenu.SIGNEDwriteMenu.writeJpg	JPG Image	write image "?merge.jpg"	enabled:true
+I1	.popupMenu.SIGNEDwriteMenu.writePng	PNG Image	write image "?merge.png"	enabled:true
+I1	.popupMenu.SIGNEDwriteMenu.writePovray	POV-Ray Image	write POVRAY ?merge.pov	enabled:true
+S1	.popupMenu.SIGNEDwriteMenu.
+I1	.popupMenu.SIGNEDwriteMenu.writeIsosurface	JVXL Isosurface	write isosurface "?merge.jvxl"	enabled:true
+I1	.popupMenu.SIGNEDwriteMenu.writeVrml	VRML 3D Model	write VRML ?merge.vrml	enabled:true
+I1	.popupMenu.SIGNEDwriteMenu.writeMaya	Maya 3D Model	write MAYA ?merge.maya	enabled:true
+M0	.popupMenu.FRAMESbyModelComputedMenu	All 20 models	-	enabled:true
+I1	.popupMenu.FRAMESbyModelComputedMenu.	All	frame 0 ##	enabled:true;checked:true
+I1	.popupMenu.FRAMESbyModelComputedMenu.	1.1: 1	model 1.1 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	1.2: 2	model 1.2 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	1.3: 3	model 1.3 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	1.4: 4	model 1.4 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	1.5: 5	model 1.5 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	1.6: 6	model 1.6 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	1.7: 7	model 1.7 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	1.8: 8	model 1.8 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	1.9: 9	model 1.9 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	1.10: 10	model 1.10 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	2.1: 1	model 2.1 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	2.2	model 2.2 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	2.3	model 2.3 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	2.4	model 2.4 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	2.5	model 2.5 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	2.6	model 2.6 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	2.7	model 2.7 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	2.8	model 2.8 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	2.9	model 2.9 ##	enabled:true;checked:false
+I1	.popupMenu.FRAMESbyModelComputedMenu.	2.10	model 2.10 ##	enabled:true;checked:false
+M0	.popupMenu.configurationComputedMenu	Configurations	-	enabled:false
+S0	.popupMenu.configurationComputedMenu.
+M0	.popupMenu.selectMenuText	Select (382)	-	enabled:true
+I1	.popupMenu.selectMenuText.hideNotSelectedCheckbox	Display Selected Only	hideNotSelected:set hideNotSelected true | set hideNotSelected false; hide(none)	enabled:true;checked:false
+I1	.popupMenu.selectMenuText.showSelectionsCheckbox	Selection Halos	showSelections:set showSelections T/F	enabled:true;checked:false
+S1	.popupMenu.selectMenuText.
+I1	.popupMenu.selectMenuText.selectAll	All	select thisModel and ( all)	enabled:true
+I1	.popupMenu.selectMenuText.selectNone	None	select thisModel and ( none)	enabled:true
+I1	.popupMenu.selectMenuText.invertSelection	Invert Selection	select thisModel and ( not selected)	enabled:true
+S1	.popupMenu.selectMenuText.
+M1	.popupMenu.selectMenuText.elementsComputedMenu	Element	-	enabled:true
+I2	.popupMenu.selectMenuText.elementsComputedMenu.	H - hydrogen	select thisModel and ( hydrogen)	enabled:true
+I2	.popupMenu.selectMenuText.elementsComputedMenu.	C - carbon	select thisModel and ( carbon)	enabled:true
+I2	.popupMenu.selectMenuText.elementsComputedMenu.	N - nitrogen	select thisModel and ( nitrogen)	enabled:true
+I2	.popupMenu.selectMenuText.elementsComputedMenu.	O - oxygen	select thisModel and ( oxygen)	enabled:true
+I2	.popupMenu.selectMenuText.elementsComputedMenu.	Mg - magnesium	select thisModel and ( magnesium)	enabled:true
+I2	.popupMenu.selectMenuText.elementsComputedMenu.	P - phosphorus	select thisModel and ( phosphorus)	enabled:true
+M1	.popupMenu.selectMenuText.SYMMETRYComputedMenu	Symmetry	-	enabled:false
+S1	.popupMenu.selectMenuText.SYMMETRYComputedMenu.
+M1	.popupMenu.selectMenuText.PDBproteinMenu	Protein	-	enabled:true
+M2	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu	By Residue Name	-	enabled:true
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.ALA	ALA	ALA	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.ARG  (2)	ARG  (2)	select thisModel and ( ARG)	enabled:true
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.ASN	ASN	ASN	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.ASP	ASP	ASP	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.CYS	CYS	CYS	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.GLN  (2)	GLN  (2)	select thisModel and ( GLN)	enabled:true
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.GLU	GLU	GLU	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.GLY  (2)	GLY  (2)	select thisModel and ( GLY)	enabled:true
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.HIS	HIS	HIS	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.ILE	ILE	ILE	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.LEU	LEU	LEU	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.LYS  (2)	LYS  (2)	select thisModel and ( LYS)	enabled:true
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.MET	MET	MET	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.PHE	PHE	PHE	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.PRO	PRO	PRO	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.SER  (2)	SER  (2)	select thisModel and ( SER)	enabled:true
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.THR  (2)	THR  (2)	select thisModel and ( THR)	enabled:true
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.TRP	TRP	TRP	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.TYR	TYR	TYR	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.VAL	VAL	VAL	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.ASX	ASX	ASX	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.GLX	GLX	GLX	enabled:false
+I3	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.UNK	UNK	UNK	enabled:false
+S2	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.
+I2	.popupMenu.selectMenuText.PDBproteinMenu.allProtein	All	select thisModel and ( protein)	enabled:true
+I2	.popupMenu.selectMenuText.PDBproteinMenu.proteinBackbone	Backbone	select thisModel and ( protein and backbone)	enabled:true
+I2	.popupMenu.selectMenuText.PDBproteinMenu.proteinSideChains	Side Chains	select thisModel and ( protein and not backbone)	enabled:true
+S2	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.
+I2	.popupMenu.selectMenuText.PDBproteinMenu.polar	Polar Residues	select thisModel and ( protein and polar)	enabled:true
+I2	.popupMenu.selectMenuText.PDBproteinMenu.nonpolar	Nonpolar Residues	select thisModel and ( protein and not polar)	enabled:true
+S2	.popupMenu.selectMenuText.PDBproteinMenu.PDBaaResiduesComputedMenu.
+I2	.popupMenu.selectMenuText.PDBproteinMenu.positiveCharge	Basic Residues (+)	select thisModel and ( protein and basic)	enabled:true
+I2	.popupMenu.selectMenuText.PDBproteinMenu.negativeCharge	Acidic Residues (-)	select thisModel and ( protein and acidic)	enabled:true
+I2	.popupMenu.selectMenuText.PDBproteinMenu.noCharge	Uncharged Residues	select thisModel and ( protein and not (acidic,basic))	enabled:true
+M1	.popupMenu.selectMenuText.PDBnucleicMenu	Nucleic	-	enabled:true
+M2	.popupMenu.selectMenuText.PDBnucleicMenu.PDBnucleicResiduesComputedMenu	By Residue Name	-	enabled:true
+I3	.popupMenu.selectMenuText.PDBnucleicMenu.PDBnucleicResiduesComputedMenu.GTP  (2)	GTP  (2)	select thisModel and ( [GTP])	enabled:true
+S2	.popupMenu.selectMenuText.PDBnucleicMenu.PDBnucleicResiduesComputedMenu.
+I2	.popupMenu.selectMenuText.PDBnucleicMenu.allNucleic	All	select thisModel and ( nucleic)	enabled:true
+I2	.popupMenu.selectMenuText.PDBnucleicMenu.nucleicBackbone	Backbone	select thisModel and ( nucleic and backbone)	enabled:true
+I2	.popupMenu.selectMenuText.PDBnucleicMenu.nucleicBases	Bases	select thisModel and ( nucleic and not backbone)	enabled:true
+S2	.popupMenu.selectMenuText.PDBnucleicMenu.PDBnucleicResiduesComputedMenu.
+I2	.popupMenu.selectMenuText.PDBnucleicMenu.DNA	DNA	select thisModel and ( dna)	enabled:true
+I2	.popupMenu.selectMenuText.PDBnucleicMenu.RNA	RNA	select thisModel and ( rna)	enabled:true
+S2	.popupMenu.selectMenuText.PDBnucleicMenu.PDBnucleicResiduesComputedMenu.
+I2	.popupMenu.selectMenuText.PDBnucleicMenu.atPairs	AT pairs	select thisModel and ( a,t)	enabled:true
+I2	.popupMenu.selectMenuText.PDBnucleicMenu.auPairs	AU pairs	select thisModel and ( a,u)	enabled:true
+I2	.popupMenu.selectMenuText.PDBnucleicMenu.gcPairs	GC pairs	select thisModel and ( g,c)	enabled:true
+M1	.popupMenu.selectMenuText.PDBheteroMenu	Hetero	-	enabled:true
+M2	.popupMenu.selectMenuText.PDBheteroMenu.PDBheteroComputedMenu	By HETATM	-	enabled:true
+S2	.popupMenu.selectMenuText.PDBheteroMenu.PDBheteroComputedMenu.
+I2	.popupMenu.selectMenuText.PDBheteroMenu.allHetero	All PDB "HETATM"	select thisModel and ( hetero)	enabled:true
+I2	.popupMenu.selectMenuText.PDBheteroMenu.Solvent	All Solvent	select thisModel and ( solvent)	enabled:true
+I2	.popupMenu.selectMenuText.PDBheteroMenu.Water	All Water	select thisModel and ( water)	enabled:true
+S2	.popupMenu.selectMenuText.PDBheteroMenu.PDBheteroComputedMenu.
+I2	.popupMenu.selectMenuText.PDBheteroMenu.Ligand	Ligand (hetero and not solvent)	select thisModel and ( ligand)	enabled:true
+I2	.popupMenu.selectMenuText.PDBheteroMenu.exceptWater	Nonaqueous HETATM (hetero and not water)	select thisModel and ( hetero and not water)	enabled:true
+I2	.popupMenu.selectMenuText.PDBheteroMenu.nonWaterSolvent	Nonaqueous Solvent (solvent and not water)	select thisModel and ( solvent and not water)	enabled:true
+M1	.popupMenu.selectMenuText.PDBcarboMenu	Carbohydrate	-	enabled:false
+M2	.popupMenu.selectMenuText.PDBcarboMenu.PDBcarboResiduesComputedMenu	By Residue Name	-	enabled:false
+S2	.popupMenu.selectMenuText.PDBcarboMenu.PDBcarboResiduesComputedMenu.
+I2	.popupMenu.selectMenuText.PDBcarboMenu.allCarbo	All	select thisModel and ( carbohydrate)	enabled:true
+I1	.popupMenu.selectMenuText.PDBnoneOfTheAbove	None of the above	select thisModel and ( not(hetero,protein,nucleic,carbohydrate))	enabled:true
+M0	.popupMenu.viewMenu	View	-	enabled:true
+I1	.popupMenu.viewMenu.front	Front	if not(showBoundBox);if not(showUnitcell);boundbox on;moveto 2.0 front;delay 1;boundbox off;else;moveto 2.0 front;delay 1;endif;endif;	enabled:true
+I1	.popupMenu.viewMenu.left	Left	if not(showBoundBox);if not(showUnitcell);boundbox on;moveto 1.0 front;moveto 2.0 left;delay 1;boundbox off;else;moveto 1.0 front;moveto 2.0 left;delay 1;endif;endif;	enabled:true
+I1	.popupMenu.viewMenu.right	Right	if not(showBoundBox);if not(showUnitcell);boundbox on;moveto 1.0 front;moveto 2.0 right;delay 1;boundbox off;else;moveto 1.0 front;moveto 2.0 right;delay 1;endif;endif;	enabled:true
+I1	.popupMenu.viewMenu.top	Top	if not(showBoundBox);if not(showUnitcell);boundbox on;moveto 1.0 front;moveto 2.0 top;delay 1;boundbox off;else;moveto 1.0 front;moveto 2.0 top;delay 1;endif;endif;	enabled:true
+I1	.popupMenu.viewMenu.bottom	Bottom	if not(showBoundBox);if not(showUnitcell);boundbox on;moveto 1.0 front;moveto 2.0 bottom;delay 1;boundbox off;else;moveto 1.0 front;moveto 2.0 bottom;delay 1;endif;endif;	enabled:true
+I1	.popupMenu.viewMenu.back	Back	if not(showBoundBox);if not(showUnitcell);boundbox on;moveto 1.0 front;moveto 2.0 back;delay 1;boundbox off;else;moveto 1.0 front;moveto 2.0 back;delay 1;endif;endif;	enabled:true
+M0	.popupMenu.renderMenu	Style	-	enabled:true
+I1	.popupMenu.renderMenu.perspectiveDepthCheckbox	Perspective Depth	perspectiveDepth:set perspectiveDepth T/F	enabled:true;checked:false
+I1	.popupMenu.renderMenu.showBoundBoxCheckbox	Boundbox	showBoundBox:set showBoundBox T/F	enabled:true;checked:false
+I1	.popupMenu.renderMenu.showUNITCELLCheckbox	Unit cell	showUNITCELL:set showUNITCELL T/F	enabled:false;checked:false
+I1	.popupMenu.renderMenu.showAxesCheckbox	Axes	showAxes:set showAxes true | set showAxes false;set axesMolecular	enabled:true;checked:false
+M1	.popupMenu.renderMenu.stereoMenu	Stereographic	-	enabled:true
+I2	.popupMenu.renderMenu.stereoMenu.stereoNone	None	stereo off	enabled:true
+I2	.popupMenu.renderMenu.stereoMenu.stereoRedCyan	Red+Cyan glasses	stereo redcyan 3	enabled:true
+I2	.popupMenu.renderMenu.stereoMenu.stereoRedBlue	Red+Blue glasses	stereo redblue 3	enabled:true
+I2	.popupMenu.renderMenu.stereoMenu.stereoRedGreen	Red+Green glasses	stereo redgreen 3	enabled:true
+I2	.popupMenu.renderMenu.stereoMenu.stereoCrossEyed	Cross-eyed viewing	stereo -5	enabled:true
+I2	.popupMenu.renderMenu.stereoMenu.stereoWallEyed	Wall-eyed viewing	stereo 5	enabled:true
+S1	.popupMenu.renderMenu.stereoMenu.
+M1	.popupMenu.renderMenu.renderSchemeMenu	Scheme	-	enabled:true
+I2	.popupMenu.renderMenu.renderSchemeMenu.renderCpkSpacefill	CPK Spacefill	restrict not selected;select not selected;spacefill 100%;color cpk	enabled:true
+I2	.popupMenu.renderMenu.renderSchemeMenu.renderBallAndStick	Ball and Stick	restrict not selected;select not selected;spacefill 20%;wireframe 0.15;color cpk	enabled:true
+I2	.popupMenu.renderMenu.renderSchemeMenu.renderSticks	Sticks	restrict not selected;select not selected;wireframe 0.3;color cpk	enabled:true
+I2	.popupMenu.renderMenu.renderSchemeMenu.renderWireframe	Wireframe	restrict not selected;select not selected;wireframe on;color cpk	enabled:true
+I2	.popupMenu.renderMenu.renderSchemeMenu.PDBrenderCartoonsOnly	Cartoon	restrict not selected;select not selected;cartoons on;color structure	enabled:true
+I2	.popupMenu.renderMenu.renderSchemeMenu.PDBrenderTraceOnly	Trace	restrict not selected;select not selected;trace on;color structure	enabled:true
+S1	.popupMenu.renderMenu.renderSchemeMenu.
+M1	.popupMenu.renderMenu.atomMenu	Atoms	-	enabled:true
+I2	.popupMenu.renderMenu.atomMenu.showHydrogensCheckbox	Show Hydrogens	showHydrogens:set showHydrogens T/F	enabled:true;checked:false
+S2	.popupMenu.renderMenu.atomMenu.
+I2	.popupMenu.renderMenu.atomMenu.atomNone	Off	cpk off	enabled:true
+S2	.popupMenu.renderMenu.atomMenu.
+I2	.popupMenu.renderMenu.atomMenu.atom15	15% van der Waals	cpk 15%	enabled:true
+I2	.popupMenu.renderMenu.atomMenu.atom20	20% van der Waals	cpk 20%	enabled:true
+I2	.popupMenu.renderMenu.atomMenu.atom25	25% van der Waals	cpk 25%	enabled:true
+I2	.popupMenu.renderMenu.atomMenu.atom50	50% van der Waals	cpk 50%	enabled:true
+I2	.popupMenu.renderMenu.atomMenu.atom75	75% van der Waals	cpk 75%	enabled:true
+I2	.popupMenu.renderMenu.atomMenu.atom100	100% van der Waals	cpk on	enabled:true
+M1	.popupMenu.renderMenu.labelMenu	Labels	-	enabled:true
+I2	.popupMenu.renderMenu.labelMenu.labelNone	None	label off	enabled:true
+S2	.popupMenu.renderMenu.labelMenu.
+I2	.popupMenu.renderMenu.labelMenu.labelSymbol	With Element Symbol	label %e	enabled:true
+I2	.popupMenu.renderMenu.labelMenu.labelName	With Atom Name	label %a	enabled:true
+I2	.popupMenu.renderMenu.labelMenu.labelNumber	With Atom Number	label %i	enabled:true
+S2	.popupMenu.renderMenu.labelMenu.
+M2	.popupMenu.renderMenu.labelMenu.labelPositionMenu	Position Label on Atom	-	enabled:true
+I3	.popupMenu.renderMenu.labelMenu.labelPositionMenu.labelCentered	Centered	set labeloffset 0 0	enabled:true
+I3	.popupMenu.renderMenu.labelMenu.labelPositionMenu.labelUpperRight	Upper Right	set labeloffset 4 4	enabled:true
+I3	.popupMenu.renderMenu.labelMenu.labelPositionMenu.labelLowerRight	Lower Right	set labeloffset 4 -4	enabled:true
+I3	.popupMenu.renderMenu.labelMenu.labelPositionMenu.labelUpperLeft	Upper Left	set labeloffset -4 4	enabled:true
+I3	.popupMenu.renderMenu.labelMenu.labelPositionMenu.labelLowerLeft	Lower Left	set labeloffset -4 -4	enabled:true
+M1	.popupMenu.renderMenu.bondMenu	Bonds	-	enabled:true
+I2	.popupMenu.renderMenu.bondMenu.bondNone	Off	wireframe off	enabled:true
+I2	.popupMenu.renderMenu.bondMenu.bondWireframe	On	wireframe on	enabled:true
+S2	.popupMenu.renderMenu.bondMenu.
+I2	.popupMenu.renderMenu.bondMenu.bond100	0.10 Å	wireframe .1	enabled:true
+I2	.popupMenu.renderMenu.bondMenu.bond150	0.15 Å	wireframe .15	enabled:true
+I2	.popupMenu.renderMenu.bondMenu.bond200	0.20 Å	wireframe .2	enabled:true
+I2	.popupMenu.renderMenu.bondMenu.bond250	0.25 Å	wireframe .25	enabled:true
+I2	.popupMenu.renderMenu.bondMenu.bond300	0.30 Å	wireframe .3	enabled:true
+M1	.popupMenu.renderMenu.hbondMenu	Hydrogen Bonds	-	enabled:true
+I2	.popupMenu.renderMenu.hbondMenu.PDBhbondCalc	Calculate	hbonds calculate	enabled:true
+I2	.popupMenu.renderMenu.hbondMenu.hbondNone	Off	hbonds off	enabled:true
+I2	.popupMenu.renderMenu.hbondMenu.hbondWireframe	On	hbonds on	enabled:true
+S2	.popupMenu.renderMenu.hbondMenu.
+I2	.popupMenu.renderMenu.hbondMenu.PDBhbondSidechain	Set H-Bonds Side Chain	set hbonds sidechain	enabled:true
+I2	.popupMenu.renderMenu.hbondMenu.PDBhbondBackbone	Set H-Bonds Backbone	set hbonds backbone	enabled:true
+S2	.popupMenu.renderMenu.hbondMenu.
+I2	.popupMenu.renderMenu.hbondMenu.hbond100	0.10 Å	hbonds .1	enabled:true
+I2	.popupMenu.renderMenu.hbondMenu.hbond150	0.15 Å	hbonds .15	enabled:true
+I2	.popupMenu.renderMenu.hbondMenu.hbond200	0.20 Å	hbonds .2	enabled:true
+I2	.popupMenu.renderMenu.hbondMenu.hbond250	0.25 Å	hbonds .25	enabled:true
+I2	.popupMenu.renderMenu.hbondMenu.hbond300	0.30 Å	hbonds .3	enabled:true
+M1	.popupMenu.renderMenu.ssbondMenu	Disulfide Bonds	-	enabled:true
+I2	.popupMenu.renderMenu.ssbondMenu.ssbondNone	Off	ssbonds off	enabled:true
+I2	.popupMenu.renderMenu.ssbondMenu.ssbondWireframe	On	ssbonds on	enabled:true
+S2	.popupMenu.renderMenu.ssbondMenu.
+I2	.popupMenu.renderMenu.ssbondMenu.PDBssbondSidechain	Set SS-Bonds Side Chain	set ssbonds sidechain	enabled:true
+I2	.popupMenu.renderMenu.ssbondMenu.PDBssbondBackbone	Set SS-Bonds Backbone	set ssbonds backbone	enabled:true
+S2	.popupMenu.renderMenu.ssbondMenu.
+I2	.popupMenu.renderMenu.ssbondMenu.ssbond100	0.10 Å	ssbonds .1	enabled:true
+I2	.popupMenu.renderMenu.ssbondMenu.ssbond150	0.15 Å	ssbonds .15	enabled:true
+I2	.popupMenu.renderMenu.ssbondMenu.ssbond200	0.20 Å	ssbonds .2	enabled:true
+I2	.popupMenu.renderMenu.ssbondMenu.ssbond250	0.25 Å	ssbonds .25	enabled:true
+I2	.popupMenu.renderMenu.ssbondMenu.ssbond300	0.30 Å	ssbonds .3	enabled:true
+S1	.popupMenu.renderMenu.ssbondMenu.
+M1	.popupMenu.renderMenu.PDBstructureMenu	Structures	-	enabled:true
+I2	.popupMenu.renderMenu.PDBstructureMenu.structureNone	Off	backbone off;cartoons off;ribbons off;rockets off;strands off;trace off;	enabled:true
+S2	.popupMenu.renderMenu.PDBstructureMenu.
+I2	.popupMenu.renderMenu.PDBstructureMenu.backbone	Backbone	restrict not selected;select not selected;backbone 0.3	enabled:true
+I2	.popupMenu.renderMenu.PDBstructureMenu.cartoon	Cartoon	restrict not selected;select not selected;set cartoonRockets false;cartoons on	enabled:true
+I2	.popupMenu.renderMenu.PDBstructureMenu.cartoonRockets	Cartoon Rockets	restrict not selected;select not selected;set cartoonRockets;cartoons on	enabled:true
+I2	.popupMenu.renderMenu.PDBstructureMenu.ribbons	Ribbons	restrict not selected;select not selected;ribbons on	enabled:true
+I2	.popupMenu.renderMenu.PDBstructureMenu.rockets	Rockets	restrict not selected;select not selected;rockets on	enabled:true
+I2	.popupMenu.renderMenu.PDBstructureMenu.strands	Strands	restrict not selected;select not selected;strands on	enabled:true
+I2	.popupMenu.renderMenu.PDBstructureMenu.trace	Trace	restrict not selected;select not selected;trace 0.3	enabled:true
+M1	.popupMenu.renderMenu.[set_axes]Menu	Axes	-	enabled:true
+I2	.popupMenu.renderMenu.[set_axes]Menu.off#axes	Hide	set axes off#axes	enabled:true
+I2	.popupMenu.renderMenu.[set_axes]Menu.dotted	Dotted	set axes dotted	enabled:true
+S2	.popupMenu.renderMenu.[set_axes]Menu.
+M2	.popupMenu.renderMenu.[set_axes]Menu.byPixelMenu	Pixel Width	-	enabled:true
+I3	.popupMenu.renderMenu.[set_axes]Menu.byPixelMenu.1p	1 px	set axes on	enabled:true
+I3	.popupMenu.renderMenu.[set_axes]Menu.byPixelMenu.3p	3 px	set axes 3	enabled:true
+I3	.popupMenu.renderMenu.[set_axes]Menu.byPixelMenu.5p	5 px	set axes 5	enabled:true
+I3	.popupMenu.renderMenu.[set_axes]Menu.byPixelMenu.10p	10 px	set axes 10	enabled:true
+M2	.popupMenu.renderMenu.[set_axes]Menu.byAngstromMenu	Angstrom Width	-	enabled:true
+I3	.popupMenu.renderMenu.[set_axes]Menu.byAngstromMenu.10a	0.10 Å	set axes 0.1	enabled:true
+I3	.popupMenu.renderMenu.[set_axes]Menu.byAngstromMenu.20a	0.20 Å	set axes 0.20	enabled:true
+I3	.popupMenu.renderMenu.[set_axes]Menu.byAngstromMenu.25a	0.25 Å	set axes 0.25	enabled:true
+I3	.popupMenu.renderMenu.[set_axes]Menu.byAngstromMenu.50a	0.50 Å	set axes 0.50	enabled:true
+I3	.popupMenu.renderMenu.[set_axes]Menu.byAngstromMenu.100a	1.0 Å	set axes 1.0	enabled:true
+M1	.popupMenu.renderMenu.[set_boundbox]Menu	Boundbox	-	enabled:true
+I2	.popupMenu.renderMenu.[set_boundbox]Menu.off#axes	Hide	set boundbox off#axes	enabled:true
+I2	.popupMenu.renderMenu.[set_boundbox]Menu.dotted	Dotted	set boundbox dotted	enabled:true
+S2	.popupMenu.renderMenu.[set_boundbox]Menu.
+M2	.popupMenu.renderMenu.[set_boundbox]Menu.byPixelMenu	Pixel Width	-	enabled:true
+I3	.popupMenu.renderMenu.[set_boundbox]Menu.byPixelMenu.1p	1 px	set boundbox on	enabled:true
+I3	.popupMenu.renderMenu.[set_boundbox]Menu.byPixelMenu.3p	3 px	set boundbox 3	enabled:true
+I3	.popupMenu.renderMenu.[set_boundbox]Menu.byPixelMenu.5p	5 px	set boundbox 5	enabled:true
+I3	.popupMenu.renderMenu.[set_boundbox]Menu.byPixelMenu.10p	10 px	set boundbox 10	enabled:true
+M2	.popupMenu.renderMenu.[set_boundbox]Menu.byAngstromMenu	Angstrom Width	-	enabled:true
+I3	.popupMenu.renderMenu.[set_boundbox]Menu.byAngstromMenu.10a	0.10 Å	set boundbox 0.1	enabled:true
+I3	.popupMenu.renderMenu.[set_boundbox]Menu.byAngstromMenu.20a	0.20 Å	set boundbox 0.20	enabled:true
+I3	.popupMenu.renderMenu.[set_boundbox]Menu.byAngstromMenu.25a	0.25 Å	set boundbox 0.25	enabled:true
+I3	.popupMenu.renderMenu.[set_boundbox]Menu.byAngstromMenu.50a	0.50 Å	set boundbox 0.50	enabled:true
+I3	.popupMenu.renderMenu.[set_boundbox]Menu.byAngstromMenu.100a	1.0 Å	set boundbox 1.0	enabled:true
+M1	.popupMenu.renderMenu.[set_UNITCELL]Menu	Unit cell	-	enabled:false
+I2	.popupMenu.renderMenu.[set_UNITCELL]Menu.off#axes	Hide	set UNITCELL off#axes	enabled:true
+I2	.popupMenu.renderMenu.[set_UNITCELL]Menu.dotted	Dotted	set UNITCELL dotted	enabled:true
+S2	.popupMenu.renderMenu.[set_UNITCELL]Menu.
+M2	.popupMenu.renderMenu.[set_UNITCELL]Menu.byPixelMenu	Pixel Width	-	enabled:true
+I3	.popupMenu.renderMenu.[set_UNITCELL]Menu.byPixelMenu.1p	1 px	set UNITCELL on	enabled:true
+I3	.popupMenu.renderMenu.[set_UNITCELL]Menu.byPixelMenu.3p	3 px	set UNITCELL 3	enabled:true
+I3	.popupMenu.renderMenu.[set_UNITCELL]Menu.byPixelMenu.5p	5 px	set UNITCELL 5	enabled:true
+I3	.popupMenu.renderMenu.[set_UNITCELL]Menu.byPixelMenu.10p	10 px	set UNITCELL 10	enabled:true
+M2	.popupMenu.renderMenu.[set_UNITCELL]Menu.byAngstromMenu	Angstrom Width	-	enabled:true
+I3	.popupMenu.renderMenu.[set_UNITCELL]Menu.byAngstromMenu.10a	0.10 Å	set UNITCELL 0.1	enabled:true
+I3	.popupMenu.renderMenu.[set_UNITCELL]Menu.byAngstromMenu.20a	0.20 Å	set UNITCELL 0.20	enabled:true
+I3	.popupMenu.renderMenu.[set_UNITCELL]Menu.byAngstromMenu.25a	0.25 Å	set UNITCELL 0.25	enabled:true
+I3	.popupMenu.renderMenu.[set_UNITCELL]Menu.byAngstromMenu.50a	0.50 Å	set UNITCELL 0.50	enabled:true
+I3	.popupMenu.renderMenu.[set_UNITCELL]Menu.byAngstromMenu.100a	1.0 Å	set UNITCELL 1.0	enabled:true
+M0	.popupMenu.colorMenu	Color	-	enabled:true
+I1	.popupMenu.colorMenu.colorrasmolCheckbox	RasMol Colors	colorrasmol:set colorrasmol T/F	enabled:true;checked:false
+S1	.popupMenu.colorMenu.
+M1	.popupMenu.colorMenu.[color_atoms]Menu	Atoms	-	enabled:true
+M2	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu	By Scheme	-	enabled:true
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.cpk	Element (CPK)	color atoms cpk	enabled:true
+S3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.formalcharge	Formal Charge	color atoms formalcharge	enabled:true
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.partialcharge#CHARGE	Partial Charge	color atoms partialcharge#CHARGE	enabled:true
+S3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.altloc#PDB	Alternative Location	color atoms altloc#PDB	enabled:true
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.amino#PDB	Amino Acid	color atoms amino#PDB	enabled:true
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.chain#PDB	Chain	color atoms chain#PDB	enabled:true
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.group#PDB	Group	color atoms group#PDB	enabled:true
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.molecule	Molecule	color atoms molecule	enabled:true
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.monomer#PDB	Monomer	color atoms monomer#PDB	enabled:true
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.shapely#PDB	Shapely	color atoms shapely#PDB	enabled:true
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.structure#PDB	Secondary Structure	color atoms structure#PDB	enabled:true
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.relativeTemperature#BFACTORS	Temperature (Relative)	color atoms relativeTemperature#BFACTORS	enabled:false
+I3	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.fixedTemperature#BFACTORS	Temperature (Fixed)	color atoms fixedTemperature#BFACTORS	enabled:false
+S2	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.
+I2	.popupMenu.colorMenu.[color_atoms]Menu.black	Black	color atoms black	enabled:true
+I2	.popupMenu.colorMenu.[color_atoms]Menu.white	White	color atoms white	enabled:true
+I2	.popupMenu.colorMenu.[color_atoms]Menu.red	Red	color atoms red	enabled:true
+I2	.popupMenu.colorMenu.[color_atoms]Menu.orange	Orange	color atoms orange	enabled:true
+I2	.popupMenu.colorMenu.[color_atoms]Menu.yellow	Yellow	color atoms yellow	enabled:true
+I2	.popupMenu.colorMenu.[color_atoms]Menu.green	Green	color atoms green	enabled:true
+I2	.popupMenu.colorMenu.[color_atoms]Menu.cyan	Cyan	color atoms cyan	enabled:true
+I2	.popupMenu.colorMenu.[color_atoms]Menu.blue	Blue	color atoms blue	enabled:true
+I2	.popupMenu.colorMenu.[color_atoms]Menu.indigo	Indigo	color atoms indigo	enabled:true
+I2	.popupMenu.colorMenu.[color_atoms]Menu.violet	Violet	color atoms violet	enabled:true
+S2	.popupMenu.colorMenu.[color_atoms]Menu.schemeMenu.
+I2	.popupMenu.colorMenu.[color_atoms]Menu.opaque	Make Opaque	color atoms opaque	enabled:true
+I2	.popupMenu.colorMenu.[color_atoms]Menu.translucent	Make Translucent	color atoms translucent	enabled:true
+M1	.popupMenu.colorMenu.[color_bonds]Menu	Bonds	-	enabled:true
+I2	.popupMenu.colorMenu.[color_bonds]Menu.none	Inherit	color bonds none	enabled:true
+S2	.popupMenu.colorMenu.[color_bonds]Menu.
+I2	.popupMenu.colorMenu.[color_bonds]Menu.black	Black	color bonds black	enabled:true
+I2	.popupMenu.colorMenu.[color_bonds]Menu.white	White	color bonds white	enabled:true
+I2	.popupMenu.colorMenu.[color_bonds]Menu.red	Red	color bonds red	enabled:true
+I2	.popupMenu.colorMenu.[color_bonds]Menu.orange	Orange	color bonds orange	enabled:true
+I2	.popupMenu.colorMenu.[color_bonds]Menu.yellow	Yellow	color bonds yellow	enabled:true
+I2	.popupMenu.colorMenu.[color_bonds]Menu.green	Green	color bonds green	enabled:true
+I2	.popupMenu.colorMenu.[color_bonds]Menu.cyan	Cyan	color bonds cyan	enabled:true
+I2	.popupMenu.colorMenu.[color_bonds]Menu.blue	Blue	color bonds blue	enabled:true
+I2	.popupMenu.colorMenu.[color_bonds]Menu.indigo	Indigo	color bonds indigo	enabled:true
+I2	.popupMenu.colorMenu.[color_bonds]Menu.violet	Violet	color bonds violet	enabled:true
+S2	.popupMenu.colorMenu.[color_bonds]Menu.
+I2	.popupMenu.colorMenu.[color_bonds]Menu.opaque	Make Opaque	color bonds opaque	enabled:true
+I2	.popupMenu.colorMenu.[color_bonds]Menu.translucent	Make Translucent	color bonds translucent	enabled:true
+M1	.popupMenu.colorMenu.[color_hbonds]Menu	Hydrogen Bonds	-	enabled:true
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.none	Inherit	color hbonds none	enabled:true
+S2	.popupMenu.colorMenu.[color_hbonds]Menu.
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.black	Black	color hbonds black	enabled:true
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.white	White	color hbonds white	enabled:true
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.red	Red	color hbonds red	enabled:true
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.orange	Orange	color hbonds orange	enabled:true
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.yellow	Yellow	color hbonds yellow	enabled:true
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.green	Green	color hbonds green	enabled:true
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.cyan	Cyan	color hbonds cyan	enabled:true
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.blue	Blue	color hbonds blue	enabled:true
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.indigo	Indigo	color hbonds indigo	enabled:true
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.violet	Violet	color hbonds violet	enabled:true
+S2	.popupMenu.colorMenu.[color_hbonds]Menu.
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.opaque	Make Opaque	color hbonds opaque	enabled:true
+I2	.popupMenu.colorMenu.[color_hbonds]Menu.translucent	Make Translucent	color hbonds translucent	enabled:true
+M1	.popupMenu.colorMenu.[color_ssbonds]Menu	Disulfide Bonds	-	enabled:true
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.none	Inherit	color ssbonds none	enabled:true
+S2	.popupMenu.colorMenu.[color_ssbonds]Menu.
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.black	Black	color ssbonds black	enabled:true
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.white	White	color ssbonds white	enabled:true
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.red	Red	color ssbonds red	enabled:true
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.orange	Orange	color ssbonds orange	enabled:true
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.yellow	Yellow	color ssbonds yellow	enabled:true
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.green	Green	color ssbonds green	enabled:true
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.cyan	Cyan	color ssbonds cyan	enabled:true
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.blue	Blue	color ssbonds blue	enabled:true
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.indigo	Indigo	color ssbonds indigo	enabled:true
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.violet	Violet	color ssbonds violet	enabled:true
+S2	.popupMenu.colorMenu.[color_ssbonds]Menu.
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.opaque	Make Opaque	color ssbonds opaque	enabled:true
+I2	.popupMenu.colorMenu.[color_ssbonds]Menu.translucent	Make Translucent	color ssbonds translucent	enabled:true
+M1	.popupMenu.colorMenu.colorPDBStructuresMenu	Structures	-	enabled:true
+M2	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu	Backbone	-	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.none	Inherit	color backbone none	enabled:true
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.
+M3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu	By Scheme	-	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.cpk	Element (CPK)	color backbone cpk	enabled:true
+S4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.formalcharge	Formal Charge	color backbone formalcharge	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.partialcharge#CHARGE	Partial Charge	color backbone partialcharge#CHARGE	enabled:true
+S4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.altloc#PDB	Alternative Location	color backbone altloc#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.amino#PDB	Amino Acid	color backbone amino#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.chain#PDB	Chain	color backbone chain#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.group#PDB	Group	color backbone group#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.molecule	Molecule	color backbone molecule	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.monomer#PDB	Monomer	color backbone monomer#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.shapely#PDB	Shapely	color backbone shapely#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.structure#PDB	Secondary Structure	color backbone structure#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.relativeTemperature#BFACTORS	Temperature (Relative)	color backbone relativeTemperature#BFACTORS	enabled:false
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.fixedTemperature#BFACTORS	Temperature (Fixed)	color backbone fixedTemperature#BFACTORS	enabled:false
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.black	Black	color backbone black	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.white	White	color backbone white	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.red	Red	color backbone red	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.orange	Orange	color backbone orange	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.yellow	Yellow	color backbone yellow	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.green	Green	color backbone green	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.cyan	Cyan	color backbone cyan	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.blue	Blue	color backbone blue	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.indigo	Indigo	color backbone indigo	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.violet	Violet	color backbone violet	enabled:true
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.schemeMenu.
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.opaque	Make Opaque	color backbone opaque	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_backbone]Menu.translucent	Make Translucent	color backbone translucent	enabled:true
+M2	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu	Cartoon	-	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.none	Inherit	color cartoon none	enabled:true
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.
+M3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu	By Scheme	-	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.cpk	Element (CPK)	color cartoon cpk	enabled:true
+S4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.formalcharge	Formal Charge	color cartoon formalcharge	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.partialcharge#CHARGE	Partial Charge	color cartoon partialcharge#CHARGE	enabled:true
+S4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.altloc#PDB	Alternative Location	color cartoon altloc#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.amino#PDB	Amino Acid	color cartoon amino#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.chain#PDB	Chain	color cartoon chain#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.group#PDB	Group	color cartoon group#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.molecule	Molecule	color cartoon molecule	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.monomer#PDB	Monomer	color cartoon monomer#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.shapely#PDB	Shapely	color cartoon shapely#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.structure#PDB	Secondary Structure	color cartoon structure#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.relativeTemperature#BFACTORS	Temperature (Relative)	color cartoon relativeTemperature#BFACTORS	enabled:false
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.fixedTemperature#BFACTORS	Temperature (Fixed)	color cartoon fixedTemperature#BFACTORS	enabled:false
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.black	Black	color cartoon black	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.white	White	color cartoon white	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.red	Red	color cartoon red	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.orange	Orange	color cartoon orange	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.yellow	Yellow	color cartoon yellow	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.green	Green	color cartoon green	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.cyan	Cyan	color cartoon cyan	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.blue	Blue	color cartoon blue	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.indigo	Indigo	color cartoon indigo	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.violet	Violet	color cartoon violet	enabled:true
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.schemeMenu.
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.opaque	Make Opaque	color cartoon opaque	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_cartoon]sMenu.translucent	Make Translucent	color cartoon translucent	enabled:true
+M2	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu	Ribbons	-	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.none	Inherit	color ribbon none	enabled:true
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.
+M3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu	By Scheme	-	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.cpk	Element (CPK)	color ribbon cpk	enabled:true
+S4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.formalcharge	Formal Charge	color ribbon formalcharge	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.partialcharge#CHARGE	Partial Charge	color ribbon partialcharge#CHARGE	enabled:true
+S4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.altloc#PDB	Alternative Location	color ribbon altloc#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.amino#PDB	Amino Acid	color ribbon amino#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.chain#PDB	Chain	color ribbon chain#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.group#PDB	Group	color ribbon group#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.molecule	Molecule	color ribbon molecule	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.monomer#PDB	Monomer	color ribbon monomer#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.shapely#PDB	Shapely	color ribbon shapely#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.structure#PDB	Secondary Structure	color ribbon structure#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.relativeTemperature#BFACTORS	Temperature (Relative)	color ribbon relativeTemperature#BFACTORS	enabled:false
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.fixedTemperature#BFACTORS	Temperature (Fixed)	color ribbon fixedTemperature#BFACTORS	enabled:false
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.black	Black	color ribbon black	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.white	White	color ribbon white	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.red	Red	color ribbon red	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.orange	Orange	color ribbon orange	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.yellow	Yellow	color ribbon yellow	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.green	Green	color ribbon green	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.cyan	Cyan	color ribbon cyan	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.blue	Blue	color ribbon blue	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.indigo	Indigo	color ribbon indigo	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.violet	Violet	color ribbon violet	enabled:true
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.schemeMenu.
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.opaque	Make Opaque	color ribbon opaque	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_ribbon]sMenu.translucent	Make Translucent	color ribbon translucent	enabled:true
+M2	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu	Rockets	-	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.none	Inherit	color rockets none	enabled:true
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.
+M3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu	By Scheme	-	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.cpk	Element (CPK)	color rockets cpk	enabled:true
+S4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.formalcharge	Formal Charge	color rockets formalcharge	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.partialcharge#CHARGE	Partial Charge	color rockets partialcharge#CHARGE	enabled:true
+S4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.altloc#PDB	Alternative Location	color rockets altloc#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.amino#PDB	Amino Acid	color rockets amino#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.chain#PDB	Chain	color rockets chain#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.group#PDB	Group	color rockets group#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.molecule	Molecule	color rockets molecule	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.monomer#PDB	Monomer	color rockets monomer#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.shapely#PDB	Shapely	color rockets shapely#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.structure#PDB	Secondary Structure	color rockets structure#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.relativeTemperature#BFACTORS	Temperature (Relative)	color rockets relativeTemperature#BFACTORS	enabled:false
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.fixedTemperature#BFACTORS	Temperature (Fixed)	color rockets fixedTemperature#BFACTORS	enabled:false
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.black	Black	color rockets black	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.white	White	color rockets white	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.red	Red	color rockets red	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.orange	Orange	color rockets orange	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.yellow	Yellow	color rockets yellow	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.green	Green	color rockets green	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.cyan	Cyan	color rockets cyan	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.blue	Blue	color rockets blue	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.indigo	Indigo	color rockets indigo	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.violet	Violet	color rockets violet	enabled:true
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.schemeMenu.
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.opaque	Make Opaque	color rockets opaque	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_rockets]Menu.translucent	Make Translucent	color rockets translucent	enabled:true
+M2	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu	Strands	-	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.none	Inherit	color strands none	enabled:true
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.
+M3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu	By Scheme	-	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.cpk	Element (CPK)	color strands cpk	enabled:true
+S4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.formalcharge	Formal Charge	color strands formalcharge	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.partialcharge#CHARGE	Partial Charge	color strands partialcharge#CHARGE	enabled:true
+S4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.altloc#PDB	Alternative Location	color strands altloc#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.amino#PDB	Amino Acid	color strands amino#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.chain#PDB	Chain	color strands chain#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.group#PDB	Group	color strands group#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.molecule	Molecule	color strands molecule	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.monomer#PDB	Monomer	color strands monomer#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.shapely#PDB	Shapely	color strands shapely#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.structure#PDB	Secondary Structure	color strands structure#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.relativeTemperature#BFACTORS	Temperature (Relative)	color strands relativeTemperature#BFACTORS	enabled:false
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.fixedTemperature#BFACTORS	Temperature (Fixed)	color strands fixedTemperature#BFACTORS	enabled:false
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.black	Black	color strands black	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.white	White	color strands white	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.red	Red	color strands red	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.orange	Orange	color strands orange	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.yellow	Yellow	color strands yellow	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.green	Green	color strands green	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.cyan	Cyan	color strands cyan	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.blue	Blue	color strands blue	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.indigo	Indigo	color strands indigo	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.violet	Violet	color strands violet	enabled:true
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.schemeMenu.
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.opaque	Make Opaque	color strands opaque	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_strands]Menu.translucent	Make Translucent	color strands translucent	enabled:true
+M2	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu	Trace	-	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.none	Inherit	color trace none	enabled:true
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.
+M3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu	By Scheme	-	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.cpk	Element (CPK)	color trace cpk	enabled:true
+S4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.formalcharge	Formal Charge	color trace formalcharge	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.partialcharge#CHARGE	Partial Charge	color trace partialcharge#CHARGE	enabled:true
+S4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.altloc#PDB	Alternative Location	color trace altloc#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.amino#PDB	Amino Acid	color trace amino#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.chain#PDB	Chain	color trace chain#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.group#PDB	Group	color trace group#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.molecule	Molecule	color trace molecule	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.monomer#PDB	Monomer	color trace monomer#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.shapely#PDB	Shapely	color trace shapely#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.structure#PDB	Secondary Structure	color trace structure#PDB	enabled:true
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.relativeTemperature#BFACTORS	Temperature (Relative)	color trace relativeTemperature#BFACTORS	enabled:false
+I4	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.fixedTemperature#BFACTORS	Temperature (Fixed)	color trace fixedTemperature#BFACTORS	enabled:false
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.black	Black	color trace black	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.white	White	color trace white	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.red	Red	color trace red	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.orange	Orange	color trace orange	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.yellow	Yellow	color trace yellow	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.green	Green	color trace green	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.cyan	Cyan	color trace cyan	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.blue	Blue	color trace blue	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.indigo	Indigo	color trace indigo	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.violet	Violet	color trace violet	enabled:true
+S3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.schemeMenu.
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.opaque	Make Opaque	color trace opaque	enabled:true
+I3	.popupMenu.colorMenu.colorPDBStructuresMenu.[color_trace]Menu.translucent	Make Translucent	color trace translucent	enabled:true
+M1	.popupMenu.colorMenu.[color_isosurface]Menu	Surfaces	-	enabled:true
+I2	.popupMenu.colorMenu.[color_isosurface]Menu.black	Black	color isosurface black	enabled:true
+I2	.popupMenu.colorMenu.[color_isosurface]Menu.white	White	color isosurface white	enabled:true
+I2	.popupMenu.colorMenu.[color_isosurface]Menu.red	Red	color isosurface red	enabled:true
+I2	.popupMenu.colorMenu.[color_isosurface]Menu.orange	Orange	color isosurface orange	enabled:true
+I2	.popupMenu.colorMenu.[color_isosurface]Menu.yellow	Yellow	color isosurface yellow	enabled:true
+I2	.popupMenu.colorMenu.[color_isosurface]Menu.green	Green	color isosurface green	enabled:true
+I2	.popupMenu.colorMenu.[color_isosurface]Menu.cyan	Cyan	color isosurface cyan	enabled:true
+I2	.popupMenu.colorMenu.[color_isosurface]Menu.blue	Blue	color isosurface blue	enabled:true
+I2	.popupMenu.colorMenu.[color_isosurface]Menu.indigo	Indigo	color isosurface indigo	enabled:true
+I2	.popupMenu.colorMenu.[color_isosurface]Menu.violet	Violet	color isosurface violet	enabled:true
+S2	.popupMenu.colorMenu.[color_isosurface]Menu.
+I2	.popupMenu.colorMenu.[color_isosurface]Menu.opaque	Make Opaque	color isosurface opaque	enabled:true
+I2	.popupMenu.colorMenu.[color_isosurface]Menu.translucent	Make Translucent	color isosurface translucent	enabled:true
+S1	.popupMenu.colorMenu.[color_isosurface]Menu.
+M1	.popupMenu.colorMenu.[color_labels]Menu	Labels	-	enabled:true
+I2	.popupMenu.colorMenu.[color_labels]Menu.none	Inherit	color labels none	enabled:true
+S2	.popupMenu.colorMenu.[color_labels]Menu.
+I2	.popupMenu.colorMenu.[color_labels]Menu.black	Black	color labels black	enabled:true
+I2	.popupMenu.colorMenu.[color_labels]Menu.white	White	color labels white	enabled:true
+I2	.popupMenu.colorMenu.[color_labels]Menu.red	Red	color labels red	enabled:true
+I2	.popupMenu.colorMenu.[color_labels]Menu.orange	Orange	color labels orange	enabled:true
+I2	.popupMenu.colorMenu.[color_labels]Menu.yellow	Yellow	color labels yellow	enabled:true
+I2	.popupMenu.colorMenu.[color_labels]Menu.green	Green	color labels green	enabled:true
+I2	.popupMenu.colorMenu.[color_labels]Menu.cyan	Cyan	color labels cyan	enabled:true
+I2	.popupMenu.colorMenu.[color_labels]Menu.blue	Blue	color labels blue	enabled:true
+I2	.popupMenu.colorMenu.[color_labels]Menu.indigo	Indigo	color labels indigo	enabled:true
+I2	.popupMenu.colorMenu.[color_labels]Menu.violet	Violet	color labels violet	enabled:true
+S2	.popupMenu.colorMenu.[color_labels]Menu.
+I2	.popupMenu.colorMenu.[color_labels]Menu.opaque	Make Opaque	color labels opaque	enabled:true
+I2	.popupMenu.colorMenu.[color_labels]Menu.translucent	Make Translucent	color labels translucent	enabled:true
+M1	.popupMenu.colorMenu.[color_vectors]Menu	Vectors	-	enabled:true
+I2	.popupMenu.colorMenu.[color_vectors]Menu.none	Inherit	color vectors none	enabled:true
+S2	.popupMenu.colorMenu.[color_vectors]Menu.
+I2	.popupMenu.colorMenu.[color_vectors]Menu.black	Black	color vectors black	enabled:true
+I2	.popupMenu.colorMenu.[color_vectors]Menu.white	White	color vectors white	enabled:true
+I2	.popupMenu.colorMenu.[color_vectors]Menu.red	Red	color vectors red	enabled:true
+I2	.popupMenu.colorMenu.[color_vectors]Menu.orange	Orange	color vectors orange	enabled:true
+I2	.popupMenu.colorMenu.[color_vectors]Menu.yellow	Yellow	color vectors yellow	enabled:true
+I2	.popupMenu.colorMenu.[color_vectors]Menu.green	Green	color vectors green	enabled:true
+I2	.popupMenu.colorMenu.[color_vectors]Menu.cyan	Cyan	color vectors cyan	enabled:true
+I2	.popupMenu.colorMenu.[color_vectors]Menu.blue	Blue	color vectors blue	enabled:true
+I2	.popupMenu.colorMenu.[color_vectors]Menu.indigo	Indigo	color vectors indigo	enabled:true
+I2	.popupMenu.colorMenu.[color_vectors]Menu.violet	Violet	color vectors violet	enabled:true
+S2	.popupMenu.colorMenu.[color_vectors]Menu.
+I2	.popupMenu.colorMenu.[color_vectors]Menu.opaque	Make Opaque	color vectors opaque	enabled:true
+I2	.popupMenu.colorMenu.[color_vectors]Menu.translucent	Make Translucent	color vectors translucent	enabled:true
+S1	.popupMenu.colorMenu.[color_vectors]Menu.
+M1	.popupMenu.colorMenu.[color_axes]Menu	Axes	-	enabled:true
+I2	.popupMenu.colorMenu.[color_axes]Menu.gray	Gray	color axes gray	enabled:true
+I2	.popupMenu.colorMenu.[color_axes]Menu.salmon	Salmon	color axes salmon	enabled:true
+I2	.popupMenu.colorMenu.[color_axes]Menu.maroon	Maroon	color axes maroon	enabled:true
+I2	.popupMenu.colorMenu.[color_axes]Menu.olive	Olive	color axes olive	enabled:true
+I2	.popupMenu.colorMenu.[color_axes]Menu.slateblue	Slate Blue	color axes slateblue	enabled:true
+I2	.popupMenu.colorMenu.[color_axes]Menu.gold	Gold	color axes gold	enabled:true
+I2	.popupMenu.colorMenu.[color_axes]Menu.orchid	Orchid	color axes orchid	enabled:true
+M1	.popupMenu.colorMenu.[color_boundbox]Menu	Boundbox	-	enabled:true
+I2	.popupMenu.colorMenu.[color_boundbox]Menu.gray	Gray	color boundbox gray	enabled:true
+I2	.popupMenu.colorMenu.[color_boundbox]Menu.salmon	Salmon	color boundbox salmon	enabled:true
+I2	.popupMenu.colorMenu.[color_boundbox]Menu.maroon	Maroon	color boundbox maroon	enabled:true
+I2	.popupMenu.colorMenu.[color_boundbox]Menu.olive	Olive	color boundbox olive	enabled:true
+I2	.popupMenu.colorMenu.[color_boundbox]Menu.slateblue	Slate Blue	color boundbox slateblue	enabled:true
+I2	.popupMenu.colorMenu.[color_boundbox]Menu.gold	Gold	color boundbox gold	enabled:true
+I2	.popupMenu.colorMenu.[color_boundbox]Menu.orchid	Orchid	color boundbox orchid	enabled:true
+M1	.popupMenu.colorMenu.[color_UNITCELL]Menu	Unit cell	-	enabled:false
+I2	.popupMenu.colorMenu.[color_UNITCELL]Menu.gray	Gray	color UNITCELL gray	enabled:true
+I2	.popupMenu.colorMenu.[color_UNITCELL]Menu.salmon	Salmon	color UNITCELL salmon	enabled:true
+I2	.popupMenu.colorMenu.[color_UNITCELL]Menu.maroon	Maroon	color UNITCELL maroon	enabled:true
+I2	.popupMenu.colorMenu.[color_UNITCELL]Menu.olive	Olive	color UNITCELL olive	enabled:true
+I2	.popupMenu.colorMenu.[color_UNITCELL]Menu.slateblue	Slate Blue	color UNITCELL slateblue	enabled:true
+I2	.popupMenu.colorMenu.[color_UNITCELL]Menu.gold	Gold	color UNITCELL gold	enabled:true
+I2	.popupMenu.colorMenu.[color_UNITCELL]Menu.orchid	Orchid	color UNITCELL orchid	enabled:true
+M1	.popupMenu.colorMenu.[color_background]Menu	Background	-	enabled:true
+I2	.popupMenu.colorMenu.[color_background]Menu.black	Black	color background black	enabled:true
+I2	.popupMenu.colorMenu.[color_background]Menu.white	White	color background white	enabled:true
+I2	.popupMenu.colorMenu.[color_background]Menu.red	Red	color background red	enabled:true
+I2	.popupMenu.colorMenu.[color_background]Menu.orange	Orange	color background orange	enabled:true
+I2	.popupMenu.colorMenu.[color_background]Menu.yellow	Yellow	color background yellow	enabled:true
+I2	.popupMenu.colorMenu.[color_background]Menu.green	Green	color background green	enabled:true
+I2	.popupMenu.colorMenu.[color_background]Menu.cyan	Cyan	color background cyan	enabled:true
+I2	.popupMenu.colorMenu.[color_background]Menu.blue	Blue	color background blue	enabled:true
+I2	.popupMenu.colorMenu.[color_background]Menu.indigo	Indigo	color background indigo	enabled:true
+I2	.popupMenu.colorMenu.[color_background]Menu.violet	Violet	color background violet	enabled:true
+S0	.popupMenu.colorMenu.
+M0	.popupMenu.surfaceMenu	Surfaces	-	enabled:true
+I1	.popupMenu.surfaceMenu.surfDots	Dot Surface	dots on	enabled:true
+I1	.popupMenu.surfaceMenu.surfVDW	van der Waals Surface	isosurface delete resolution 0 solvent 0 translucent	enabled:true
+I1	.popupMenu.surfaceMenu.surfSolventAccessible14	Solvent-Accessible Surface (VDW + 1.4 Angstrom)	isosurface delete resolution 0 sasurface 1.4 translucent	enabled:true
+I1	.popupMenu.surfaceMenu.surfSolvent14	Solvent Surface (1.4-Angstrom probe)	isosurface delete resolution 0 solvent 1.4 translucent	enabled:true
+I1	.popupMenu.surfaceMenu.surfMolecular	Molecular Surface	isosurface delete resolution 0 molecular translucent	enabled:true
+I1	.popupMenu.surfaceMenu.CHARGEsurfMEP	Molecular Electrostatic Potential	isosurface delete resolution 0 molecular map MEP translucent	enabled:true
+M1	.popupMenu.surfaceMenu.surfMoComputedMenu	Molecular Orbitals	-	enabled:false
+S1	.popupMenu.surfaceMenu.surfMoComputedMenu.
+I1	.popupMenu.surfaceMenu.surfOpaque	Make Opaque	mo opaque;isosurface opaque	enabled:true
+I1	.popupMenu.surfaceMenu.surfTranslucent	Make Translucent	mo translucent;isosurface translucent	enabled:true
+I1	.popupMenu.surfaceMenu.surfOff	Off	mo delete;isosurface delete;select *;dots off	enabled:true
+M0	.popupMenu.SYMMETRYUNITCELLMenu	Symmetry	-	enabled:false
+I1	.popupMenu.SYMMETRYUNITCELLMenu.UNITCELLone	Reload {1 1 1}	save orientation;load "" {1 1 1} ;restore orientation;center	enabled:false
+I1	.popupMenu.SYMMETRYUNITCELLMenu.UNITCELLnine	Reload {444 666 1}	save orientation;load "" {444 666 1} ;restore orientation;center	enabled:false
+I1	.popupMenu.SYMMETRYUNITCELLMenu.UNITCELLnineRestricted	Reload {444 666 1};display 555	save orientation;load "" {444 666 1} ;restore orientation; unitcell on; display cell=555;center visible;zoom 200	enabled:false
+I1	.popupMenu.SYMMETRYUNITCELLMenu.UNITCELLninePoly	Reload + Polyhedra	save orientation;load "" {444 666 1} ;restore orientation; unitcell on; display cell=555; polyhedra 4,6 (displayed);center (visible);zoom 200	enabled:false
+S0	.popupMenu.SYMMETRYUNITCELLMenu.
+M0	.popupMenu.zoomMenu	Zoom	-	enabled:true
+I1	.popupMenu.zoomMenu.zoom50	50%	zoom 50	enabled:true
+I1	.popupMenu.zoomMenu.zoom100	100%	zoom 100	enabled:true
+I1	.popupMenu.zoomMenu.zoom150	150%	zoom 150	enabled:true
+I1	.popupMenu.zoomMenu.zoom200	200%	zoom 200	enabled:true
+I1	.popupMenu.zoomMenu.zoom400	400%	zoom 400	enabled:true
+I1	.popupMenu.zoomMenu.zoom800	800%	zoom 800	enabled:true
+S1	.popupMenu.zoomMenu.
+I1	.popupMenu.zoomMenu.zoomIn	Zoom In	move 0 0 0 40 0 0 0 0 1	enabled:true
+I1	.popupMenu.zoomMenu.zoomOut	Zoom Out	move 0 0 0 -40 0 0 0 0 1	enabled:true
+M0	.popupMenu.spinMenu	Spin	-	enabled:true
+I1	.popupMenu.spinMenu.spinOn	On	spin on	enabled:true
+I1	.popupMenu.spinMenu.spinOff	Off	spin off	enabled:true
+S1	.popupMenu.spinMenu.
+M1	.popupMenu.spinMenu.[set_spin_X]Menu	Set X Rate	-	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_X]Menu.s0	0	set spin X 0	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_X]Menu.s5	5	set spin X 5	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_X]Menu.s10	10	set spin X 10	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_X]Menu.s20	20	set spin X 20	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_X]Menu.s30	30	set spin X 30	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_X]Menu.s40	40	set spin X 40	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_X]Menu.s50	50	set spin X 50	enabled:true
+M1	.popupMenu.spinMenu.[set_spin_Y]Menu	Set Y Rate	-	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Y]Menu.s0	0	set spin Y 0	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Y]Menu.s5	5	set spin Y 5	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Y]Menu.s10	10	set spin Y 10	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Y]Menu.s20	20	set spin Y 20	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Y]Menu.s30	30	set spin Y 30	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Y]Menu.s40	40	set spin Y 40	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Y]Menu.s50	50	set spin Y 50	enabled:true
+M1	.popupMenu.spinMenu.[set_spin_Z]Menu	Set Z Rate	-	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Z]Menu.s0	0	set spin Z 0	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Z]Menu.s5	5	set spin Z 5	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Z]Menu.s10	10	set spin Z 10	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Z]Menu.s20	20	set spin Z 20	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Z]Menu.s30	30	set spin Z 30	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Z]Menu.s40	40	set spin Z 40	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_Z]Menu.s50	50	set spin Z 50	enabled:true
+S1	.popupMenu.spinMenu.[set_spin_Z]Menu.
+M1	.popupMenu.spinMenu.[set_spin_FPS]Menu	Set FPS	-	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_FPS]Menu.s0	0	set spin FPS 0	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_FPS]Menu.s5	5	set spin FPS 5	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_FPS]Menu.s10	10	set spin FPS 10	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_FPS]Menu.s20	20	set spin FPS 20	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_FPS]Menu.s30	30	set spin FPS 30	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_FPS]Menu.s40	40	set spin FPS 40	enabled:true
+I2	.popupMenu.spinMenu.[set_spin_FPS]Menu.s50	50	set spin FPS 50	enabled:true
+M0	.popupMenu.VIBRATIONMenu	Vibration	-	enabled:false
+I1	.popupMenu.VIBRATIONMenu.vibrationOff	Off	vibration off	enabled:true
+I1	.popupMenu.VIBRATIONMenu.vibrationOn	On	vibration on	enabled:true
+M1	.popupMenu.VIBRATIONMenu.VIBRATIONvectorMenu	Vectors	-	enabled:false
+I2	.popupMenu.VIBRATIONMenu.VIBRATIONvectorMenu.vectorOff	Off	vectors off	enabled:true
+I2	.popupMenu.VIBRATIONMenu.VIBRATIONvectorMenu.vectorOn	On	vectors on	enabled:true
+I2	.popupMenu.VIBRATIONMenu.VIBRATIONvectorMenu.vector3	3 pixels	vectors 3	enabled:true
+I2	.popupMenu.VIBRATIONMenu.VIBRATIONvectorMenu.vector005	0.05 Å	vectors 0.05	enabled:true
+I2	.popupMenu.VIBRATIONMenu.VIBRATIONvectorMenu.vector01	0.10 Å	vectors 0.1	enabled:true
+S2	.popupMenu.VIBRATIONMenu.VIBRATIONvectorMenu.
+I2	.popupMenu.VIBRATIONMenu.VIBRATIONvectorMenu.vectorScale02	Scale 0.2	vector scale 0.2	enabled:true
+I2	.popupMenu.VIBRATIONMenu.VIBRATIONvectorMenu.vectorScale05	Scale 0.5	vector scale 0.5	enabled:true
+I2	.popupMenu.VIBRATIONMenu.VIBRATIONvectorMenu.vectorScale1	Scale 1	vector scale 1	enabled:true
+I2	.popupMenu.VIBRATIONMenu.VIBRATIONvectorMenu.vectorScale2	Scale 2	vector scale 2	enabled:true
+I2	.popupMenu.VIBRATIONMenu.VIBRATIONvectorMenu.vectorScale5	Scale 5	vector scale 5	enabled:true
+M0	.popupMenu.FRAMESanimateMenu	Animation	-	enabled:true
+M1	.popupMenu.FRAMESanimateMenu.animModeMenu	Animation Mode	-	enabled:true
+I2	.popupMenu.FRAMESanimateMenu.animModeMenu.onceThrough	Play Once	anim mode once#	enabled:true
+I2	.popupMenu.FRAMESanimateMenu.animModeMenu.palindrome	Palindrome	anim mode palindrome#	enabled:true
+I2	.popupMenu.FRAMESanimateMenu.animModeMenu.loop	Loop	anim mode loop#	enabled:true
+S1	.popupMenu.FRAMESanimateMenu.animModeMenu.
+I1	.popupMenu.FRAMESanimateMenu.play	Play	anim play#	enabled:true
+I1	.popupMenu.FRAMESanimateMenu.pause	Pause	anim pause#	enabled:true
+I1	.popupMenu.FRAMESanimateMenu.resume	Resume	anim resume#	enabled:true
+I1	.popupMenu.FRAMESanimateMenu.stop	Stop	anim off#	enabled:true
+S1	.popupMenu.FRAMESanimateMenu.animModeMenu.
+I1	.popupMenu.FRAMESanimateMenu.nextframe	Next Frame	frame next#	enabled:true
+I1	.popupMenu.FRAMESanimateMenu.prevframe	Previous Frame	frame prev#	enabled:true
+I1	.popupMenu.FRAMESanimateMenu.rewind	Rewind	anim rewind#	enabled:true
+S1	.popupMenu.FRAMESanimateMenu.animModeMenu.
+I1	.popupMenu.FRAMESanimateMenu.playrev	Reverse	anim playrev#	enabled:true
+I1	.popupMenu.FRAMESanimateMenu.restart	Restart	anim on#	enabled:true
+S1	.popupMenu.FRAMESanimateMenu.animModeMenu.
+M1	.popupMenu.FRAMESanimateMenu.FRAMESanimFpsMenu	Set FPS	-	enabled:true
+I2	.popupMenu.FRAMESanimateMenu.FRAMESanimFpsMenu.animfps5	5	anim fps 5#	enabled:true
+I2	.popupMenu.FRAMESanimateMenu.FRAMESanimFpsMenu.animfps10	10	anim fps 10#	enabled:true
+I2	.popupMenu.FRAMESanimateMenu.FRAMESanimFpsMenu.animfps20	20	anim fps 20#	enabled:true
+I2	.popupMenu.FRAMESanimateMenu.FRAMESanimFpsMenu.animfps30	30	anim fps 30#	enabled:true
+I2	.popupMenu.FRAMESanimateMenu.FRAMESanimFpsMenu.animfps50	50	anim fps 50#	enabled:true
+S0	.popupMenu.FRAMESanimateMenu.
+M0	.popupMenu.measureMenu	Measurements	-	enabled:true
+I1	.popupMenu.measureMenu.showMeasurementsCheckbox	Show Measurements	showMeasurements:set showMeasurements T/F	enabled:true;checked:false
+S1	.popupMenu.measureMenu.
+I1	.popupMenu.measureMenu.measureOff	Double-Click begins and ends all measurements	set pickingstyle MEASURE OFF; set picking OFF	enabled:true
+I1	.popupMenu.measureMenu.measureDistance	Click for distance measurement	set pickingstyle MEASURE; set picking MEASURE DISTANCE	enabled:true
+I1	.popupMenu.measureMenu.measureAngle	Click for angle measurement	set pickingstyle MEASURE; set picking MEASURE ANGLE	enabled:true
+I1	.popupMenu.measureMenu.measureTorsion	Click for torsion (dihedral) measurement	set pickingstyle MEASURE; set picking MEASURE TORSION	enabled:true
+S1	.popupMenu.measureMenu.
+I1	.popupMenu.measureMenu.measureDelete	Delete measurements	measure delete	enabled:true
+I1	.popupMenu.measureMenu.JVM12measureList	List measurements	console on;show measurements	enabled:true
+S1	.popupMenu.measureMenu.
+I1	.popupMenu.measureMenu.distanceNanometers	Distance units nanometers	select *; set measure nanometers	enabled:true
+I1	.popupMenu.measureMenu.distanceAngstroms	Distance units Angstroms	select *; set measure angstroms	enabled:true
+I1	.popupMenu.measureMenu.distancePicometers	Distance units picometers	select *; set measure picometers	enabled:true
+M0	.popupMenu.pickingMenu	Set picking	-	enabled:true
+I1	.popupMenu.pickingMenu.pickOff	Off	set picking off	enabled:true
+I1	.popupMenu.pickingMenu.pickCenter	Center	set picking center	enabled:true
+I1	.popupMenu.pickingMenu.pickIdent	Identity	set picking ident	enabled:true
+I1	.popupMenu.pickingMenu.pickLabel	Label	set picking label	enabled:true
+I1	.popupMenu.pickingMenu.pickAtom	Select atom	set picking atom	enabled:true
+I1	.popupMenu.pickingMenu.pickMolecule	Select molecule	set picking molecule	enabled:true
+I1	.popupMenu.pickingMenu.pickElement	Select element	set picking element	enabled:true
+I1	.popupMenu.pickingMenu.PDBpickChain	Select chain	set picking chain	enabled:true
+I1	.popupMenu.pickingMenu.PDBpickGroup	Select group	set picking group	enabled:true
+I1	.popupMenu.pickingMenu.SYMMETRYpickSite	Select site	set picking site	enabled:false
+I1	.popupMenu.pickingMenu.pickSpin	Spin	set picking spin	enabled:true
+S0	.popupMenu.pickingMenu.
+I0	.popupMenu.JVM12showConsole	Console	console	enabled:true
+M0	.popupMenu.JVM12showMenu	Show	-	enabled:true
+I1	.popupMenu.JVM12showMenu.showHistory	History	console on;show history	enabled:true
+I1	.popupMenu.JVM12showMenu.showFile	File Contents	console on;show file	enabled:true
+I1	.popupMenu.JVM12showMenu.showFileHeader	File Header	console on;getProperty FileHeader	enabled:true
+S1	.popupMenu.JVM12showMenu.
+I1	.popupMenu.JVM12showMenu.showOrient	Orientation	console on;show orientation	enabled:true
+I1	.popupMenu.JVM12showMenu.showMeasure	Measurements	console on;show measure	enabled:true
+S1	.popupMenu.JVM12showMenu.
+I1	.popupMenu.JVM12showMenu.showSpacegroup	Space group	console on;show spacegroup	enabled:true
+I1	.popupMenu.JVM12showMenu.showState	Current state	console on;show state	enabled:true
+I1	.popupMenu.JVM12showMenu.SYMMETRYshowSymmetry	Symmetry	console on;show symmetry	enabled:false
+I1	.popupMenu.JVM12showMenu.UNITCELLshow	Unit cell	console on;show unitcell	enabled:false
+S1	.popupMenu.JVM12showMenu.
+I1	.popupMenu.JVM12showMenu.showIsosurface	Isosurface JVXL data	console on;show isosurface	enabled:true
+I1	.popupMenu.JVM12showMenu.showMo	Molecular orbital JVXL data	console on;show mo	enabled:true
+S1	.popupMenu.JVM12showMenu.
+I1	.popupMenu.JVM12showMenu.extractMOL	Extract MOL data	console on;getproperty extractModel "visible" 	enabled:true
+S0	.popupMenu.JVM12showMenu.
+M0	.popupMenu.languageComputedMenu	Language	-	enabled:true
+I1	.popupMenu.languageComputedMenu.ca	Catalan (ca)	language = "ca" ##Catalan	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.cs	Czech (cs)	language = "cs" ##Czech	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.nl	Dutch (nl)	language = "nl" ##Dutch	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.en_GB	British English (en_GB)	language = "en_GB" ##British English	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.en_US	American English (en_US)	language = "en_US" ##American English	enabled:true;checked:true
+I1	.popupMenu.languageComputedMenu.et	Estonian (et)	language = "et" ##Estonian	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.fr	French (fr)	language = "fr" ##French	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.de	German (de)	language = "de" ##German	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.hu	Hungarian (hu)	language = "hu" ##Hungarian	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.it	Italian (it)	language = "it" ##Italian	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.ko	Korean (ko)	language = "ko" ##Korean	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.pt_BR	Brazilian Portuguese (pt_BR)	language = "pt_BR" ##Brazilian Portuguese	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.pt	Portuguese (pt)	language = "pt" ##Portuguese	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.es	Spanish (es)	language = "es" ##Spanish	enabled:true;checked:false
+I1	.popupMenu.languageComputedMenu.tr	Turkish (tr)	language = "tr" ##Turkish	enabled:true;checked:false
+M0	.popupMenu.aboutComputedMenu	About Jmol	-	enabled:true
+S1	.popupMenu.aboutComputedMenu.
+I1	.popupMenu.aboutComputedMenu.	Jmol 11.7.4_dev	-	enabled:true
+I1	.popupMenu.aboutComputedMenu.	2008-10-07 12:22	-	enabled:true
+I1	.popupMenu.aboutComputedMenu.	Windows XP	-	enabled:true
+I1	.popupMenu.aboutComputedMenu.	Sun Microsystems Inc.	-	enabled:true
+I1	.popupMenu.aboutComputedMenu.	1.6.0_10-rc	-	enabled:true
+S1	.popupMenu.aboutComputedMenu.
+I1	.popupMenu.aboutComputedMenu.	Java memory usage	-	enabled:true
+I1	.popupMenu.aboutComputedMenu.	13 MB total	-	enabled:true
+I1	.popupMenu.aboutComputedMenu.	5 MB free	-	enabled:true
+I1	.popupMenu.aboutComputedMenu.	64 MB maximum	-	enabled:true
+I1	.popupMenu.aboutComputedMenu.	1 processor	-	enabled:true

@@ -1,0 +1,2735 @@
+/home/piero/bin/CRY06/Pcrystal
+/scr/piero/CRY_data/tmp_p32178
+Galena from American Mineralogist 10 (1925) 281-304
+CRYSTAL
+0 0 0
+225
+5.85225729
+2
+282   0  0  0
+16   .5 .5 .5
+OPTGEOM
+NUMGRALL
+FULLOPTG
+END
+END
+282 5
+INPUT
+14 6 8 8 8 8
+1.30009997 -1.41434395 0
+3.18720007 -13.28021622 0
+9.54880047 -54.13752747 0
+23.68409920 -138.12661743 0
+81.04219818 -376.41168213 0
+260.18218994 -54.85811996 -1
+1.05130005 45.00151825 0
+1.21360004 -142.81721497 0
+1.59290004 280.33993530 0
+2.27550006 -305.93109131 0
+3.41589999 275.88833618 0
+5.04549980 -126.19586945 0
+8.10179996 58.64039612 -1
+29.92939949 6.27654600 -2
+0.34459999 0.19562900 0
+1.01220000 -60.52689743 0
+1.21469998 201.29090881 0
+1.65750003 -254.73730469 0
+2.40109992 231.82109070 0
+3.46830010 -120.33583069 0
+4.71899986 43.35644531 -1
+14.24479961 5.93558693 -1
+0.88599998 -1.35663700 0
+2.42969990 49.74739456 0
+3.09030008 -160.28633118 0
+4.45060015 325.69772339 0
+6.85960007 -339.07305908 0
+10.51179981 199.77455139 0
+8.92780018 40.33429718 -1
+30.41259956 7.63998222 -2
+0.74299997 37.60541153 0
+0.93489999 -24.43016624 0
+0.93709999 -38.51657867 0
+1.35049999 60.97928619 0
+2.45320010 -10.03380680 0
+3.99049997 52.05616760 0
+8.44530010 39.91782379 -1
+19.77610016 5.47486877 -2
+0 3 3 10.0 1.0
+  1.7723  2.3500
+  1.1108  1.1085
+  0.4368  0.978
+0 0 3 2.0 1.0
+  0.7297  2.0000
+  0.7638  1.0000
+  0.1527  1.0000
+0 0 1 0.0 1.0
+  0.1394  1.0000
+0 2 3 2.0 1.0
+ 0.9205  1.5000
+  0.9047  1.0000
+  0.1219  1.0000
+0 2 1 0.0 1.0
+  0.1136  1.0000
+16 6
+0 0 6 2.0 1.0
+ 21917.1000000  0.0018690
+   3301.4900000 0.0142300
+    754.1460000 0.0696960
+    212.7110000 0.2384870
+     67.9896000 0.4833070
+     23.0515000 0.3380740
+0 1 6 8.0 1.0
+ 423.7350000 -0.0023767 0.0040610
+    100.7100000 -0.0316930 0.0306810
+     32.1599000 -0.1133170 0.1304520
+     11.8079000 0.0560900  0.3272050
+      4.6311000 0.5922550  0.4528510
+      1.8702500 0.4550060  0.2560420
+0 1 3 6.0 1.0
+ 2.6158400 -0.2503740 -0.0145110
+   0.9221670 0.0669570 0.3102630
+     0.3412870 1.0545100 0.7544830
+0 1 1 0.0 1.0
+  0.1171839   1.0000000 1.0000000
+0 1 1 0.0 1.0
+  0.9934622 1.0000000 1.00
+0 3 1 0.0 1.00
+   0.6681061 0.6500000 1.0000000
+99 0
+END
+DFT
+CORRELAT
+PBE
+EXCHANGE
+PBE
+XLGRID
+END
+TOLINTEG
+7 7 7 7 15
+SCFDIR
+SHRINK
+8 8 
+FMIXING
+80
+LEVSHIFT
+36 1
+MAXCYCLE
+1000
+END
+
+Fri Feb  5 12:47:58 GMT 2010
+directory scratch (integrals and temporary files) /home/piero/bin/CRY06_tmp
+ PROCESS            0  OF            2  WORKING
+
+         
+ *******************************************************************************
+ *                                                                             *
+ *                                CRYSTAL06                                    *
+ *                              Release : 1.0                                  *
+ *                      V1.0.2 - parallel executable                           *
+ *                                                                             *
+ *                                                                             *
+ *                                                                             *
+ *                              MAIN AUTHORS                                   *
+ *                                                                             *
+ *    R. DOVESI(1,10), V.R. SAUNDERS(2), C. ROETTI(1,10), R. ORLANDO (1,3),    *
+ *  C.M. ZICOVICH-WILSON(1,4), F. PASCALE(5), B. CIVALLERI(1,10), K. DOLL(6),  *
+ *       N.M. HARRISON(2,7), I. J. BUSH(2), Ph. D'ARCO(8), M. LLUNELL(9)       *
+ *                                                                             *
+ * (1) THEORETICAL CHEMISTRY GROUP - UNIVERSITA' DI TORINO - TORINO (ITALY)    *
+ *      http://www.crystal.unito.it                                            *
+ * (2) COMPUTATIONAL SCIENCE & ENGINEERING DEPARTMENT - CCLRC DARESBURY (UK)   *
+ *     http://www.cse.clrc.ac.uk/cmg/CRYSTAL/                                  *
+ * (3) UNIVERSITA' DEL PIEMONTE ORIENTALE - ALESSANDRIA (ITALY)                *
+ * (4) UNIVERSIDAD AUTONOMA DEL ESTADO DE MORELOS - CUERNAVACA (MEXICO)        *
+ * (5) UNIVERSITE' HENRI POINCARE' - NANCY (FRANCE)                            *
+ * (6) MPI FUER FESTKOERPERFORSCHUNG - STUTTGART (GERMANY)                     *
+ * (7) IMPERIAL COLLEGE - LONDON (UK)                                          *
+ * (8) UNIVERSITE' PIERRE ET MARIE CURIE - PARIS (FRANCE)                      *
+ * (9) UNIVERSIDAD DE BARCELONA - BARCELONA (SPAIN)                            *
+ *(10) NIS - NANOSTRUCTURED INTERFACES AND SURFACES - TORINO (ITALY)           *
+ *     http://www.crystal.unito.it                                             *
+ *******************************************************************************
+ EEEEEEEEEE STARTING  DATE 05 02 2010 TIME 12:47:59.8
+ Galena from American Mineralogist 10 (1925) 281-304                             
+
+ CRYSTAL CALCULATION
+ (INPUT ACCORDING TO THE INTERNATIONAL TABLES FOR X-RAY CRYSTALLOGRAPHY)
+ CRYSTAL FAMILY                       :  CUBIC       
+ CRYSTAL CLASS  (GROTH - 1921)        :  CUBIC HEXAKISOCTAHEDRAL              
+
+ SPACE GROUP (CENTROSYMMETRIC)        :  F M 3 M         
+
+ LATTICE PARAMETERS  (ANGSTROMS AND DEGREES) - CONVENTIONAL CELL
+        A           B           C        ALPHA        BETA       GAMMA
+     5.85226     5.85226     5.85226    90.00000    90.00000    90.00000
+
+
+ NUMBER OF IRREDUCIBLE ATOMS IN THE CONVENTIONAL CELL:    2
+
+ INPUT COORDINATES
+
+ ATOM AT. N.              COORDINATES
+   1 282     0.000000000000E+00  0.000000000000E+00  0.000000000000E+00
+   2  16     5.000000000000E-01  5.000000000000E-01  5.000000000000E-01
+
+ *******************************************************************************
+
+ << INFORMATION >>: FROM NOW ON, ALL COORDINATES REFER TO THE PRIMITIVE CELL
+
+ *******************************************************************************
+
+ LATTICE PARAMETERS  (ANGSTROMS AND DEGREES) - PRIMITIVE CELL
+       A          B          C         ALPHA     BETA     GAMMA        VOLUME
+    4.13817    4.13817    4.13817    60.00000  60.00000  60.00000     50.108366
+
+ COORDINATES OF THE EQUIVALENT ATOMS (FRACTIONARY UNITS)
+
+ N. ATOM EQUIV AT. N.          X                  Y                  Z
+
+   1   1   1  282 PB    0.00000000000E+00  0.00000000000E+00  0.00000000000E+00
+
+   2   2   1   16 S    -5.00000000000E-01 -5.00000000000E-01 -5.00000000000E-01
+
+ NUMBER OF SYMMETRY OPERATORS         :   48
+ *******************************************************************************
+ * GEOMETRY EDITING - INPUT COORDINATES ARE GIVEN IN ANGSTROM          
+ *******************************************************************************
+
+ GEOMETRY NOW FULLY CONSISTENT WITH THE GROUP
+ INFORMATION **** NUMGRALL ****  NUMERICAL GRADIENT BOTH FOR CELL AND ATOMS OPTIMIZATION
+ INFORMATION **** FULLOPTG **** full optimization, atoms and cell
+ *******************************************************************************
+ COMBINED CELL/ATOM OPTIMIZATION CONTROL
+
+ MAXIMUM GRADIENT COMPONENT   0.00045 MAXIMUM DISPLACEMENT COMPONENT     0.00030
+ R.M.S. OF GRADIENT COMPONENT 0.00180 R.M.S. OF DISPLACEMENT COMPONENTS  0.00120
+ THRESHOLD ON ENERGY CHANGE 0.100E-06 EXTRAPOLATING POLYNOMIAL ORDER           2
+ MAXIMUM ALLOWED NUMBER OF STEPS  100 SORTING OF ENERGY POINTS:               NO
+ NUM ATOCELL GRADIENT                 HESSIAN UPDATING                      BFGS
+ STEP SIZE NUMERICAL GRADIENT 0.00100
+ INITIAL HESSIAN MATRIX: SCHLEGEL MODEL 2
+ *******************************************************************************
+
+
+ GCALCO - MAX INDICES DIRECT LATTICE VECTOR  14  14  14
+ NO.OF VECTORS CREATED 6999 STARS  105 RMAX    82.75920 BOHR
+
+ GEOMETRY FOR WAVE FUNCTION - DIMENSIONALITY OF THE SYSTEM    3
+ (NON PERIODIC DIRECTION: LATTICE PARAMETER FORMALLY SET TO 500)
+ *******************************************************************************
+ LATTICE PARAMETERS (ANGSTROMS AND DEGREES) - BOHR = 0.5291772083 ANGSTROM
+ PRIMITIVE CELL - CENTRING CODE 5/0 VOLUME=    50.108366 - DENSITY 7.952 g/cm^3
+         A              B              C           ALPHA      BETA       GAMMA 
+     4.13817082     4.13817082     4.13817082    60.000000  60.000000  60.000000
+ *******************************************************************************
+ ATOMS IN THE ASYMMETRIC UNIT    2 - ATOMS IN THE UNIT CELL:    2
+     ATOM              X/A                 Y/B                 Z/C    
+ *******************************************************************************
+   1 T 282 PB    0.000000000000E+00  0.000000000000E+00  0.000000000000E+00
+   2 T  16 S    -5.000000000000E-01 -5.000000000000E-01 -5.000000000000E-01
+
+ TRANSFORMATION MATRIX PRIMITIVE-CRYSTALLOGRAPHIC CELL
+ -1.0000  1.0000  1.0000  1.0000 -1.0000  1.0000  1.0000  1.0000 -1.0000
+
+ *******************************************************************************
+ CRYSTALLOGRAPHIC CELL (VOLUME=        200.43346476)
+         A              B              C           ALPHA      BETA       GAMMA 
+     5.85225729     5.85225729     5.85225729    90.000000  90.000000  90.000000
+
+ COORDINATES IN THE CRYSTALLOGRAPHIC CELL
+     ATOM              X/A                 Y/B                 Z/C    
+ *******************************************************************************
+   1 T 282 PB    0.000000000000E+00  0.000000000000E+00  0.000000000000E+00
+   2 T  16 S    -5.000000000000E-01 -5.000000000000E-01 -5.000000000000E-01
+
+ T = ATOM BELONGING TO THE ASYMMETRIC UNIT
+
+ ****  48 SYMMOPS - TRANSLATORS IN FRACTIONARY UNITS
+  V INV                   ROTATION MATRICES                       TRANSLATOR
+  1  1  1.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00    0.00  0.00  0.00
+  2  2  0.00  1.00  0.00  1.00  0.00  0.00 -1.00 -1.00 -1.00    0.00  0.00  0.00
+  3  3 -1.00 -1.00 -1.00  0.00  0.00  1.00  0.00  1.00  0.00    0.00  0.00  0.00
+  4  4  0.00  0.00  1.00 -1.00 -1.00 -1.00  1.00  0.00  0.00    0.00  0.00  0.00
+  5  6  0.00  0.00  1.00  1.00  0.00  0.00  0.00  1.00  0.00    0.00  0.00  0.00
+  6  5  0.00  1.00  0.00  0.00  0.00  1.00  1.00  0.00  0.00    0.00  0.00  0.00
+  7  8  1.00  0.00  0.00  0.00  0.00  1.00 -1.00 -1.00 -1.00    0.00  0.00  0.00
+  8  7  1.00  0.00  0.00 -1.00 -1.00 -1.00  0.00  1.00  0.00    0.00  0.00  0.00
+  9 10 -1.00 -1.00 -1.00  0.00  1.00  0.00  1.00  0.00  0.00    0.00  0.00  0.00
+ 10  9  0.00  0.00  1.00  0.00  1.00  0.00 -1.00 -1.00 -1.00    0.00  0.00  0.00
+ 11 12  0.00  1.00  0.00 -1.00 -1.00 -1.00  0.00  0.00  1.00    0.00  0.00  0.00
+ 12 11 -1.00 -1.00 -1.00  1.00  0.00  0.00  0.00  0.00  1.00    0.00  0.00  0.00
+ 13 13  0.00 -1.00  0.00 -1.00  0.00  0.00  0.00  0.00 -1.00    0.00  0.00  0.00
+ 14 14 -1.00  0.00  0.00  0.00 -1.00  0.00  1.00  1.00  1.00    0.00  0.00  0.00
+ 15 16  0.00  0.00 -1.00  1.00  1.00  1.00  0.00 -1.00  0.00    0.00  0.00  0.00
+ 16 15  1.00  1.00  1.00  0.00  0.00 -1.00 -1.00  0.00  0.00    0.00  0.00  0.00
+ 17 17 -1.00  0.00  0.00  0.00  0.00 -1.00  0.00 -1.00  0.00    0.00  0.00  0.00
+ 18 18  0.00  0.00 -1.00  0.00 -1.00  0.00 -1.00  0.00  0.00    0.00  0.00  0.00
+ 19 21  0.00  0.00 -1.00 -1.00  0.00  0.00  1.00  1.00  1.00    0.00  0.00  0.00
+ 20 22  1.00  1.00  1.00 -1.00  0.00  0.00  0.00 -1.00  0.00    0.00  0.00  0.00
+ 21 19  0.00 -1.00  0.00  1.00  1.00  1.00 -1.00  0.00  0.00    0.00  0.00  0.00
+ 22 20  0.00 -1.00  0.00  0.00  0.00 -1.00  1.00  1.00  1.00    0.00  0.00  0.00
+ 23 23  1.00  1.00  1.00  0.00 -1.00  0.00  0.00  0.00 -1.00    0.00  0.00  0.00
+ 24 24 -1.00  0.00  0.00  1.00  1.00  1.00  0.00  0.00 -1.00    0.00  0.00  0.00
+ 25 25 -1.00  0.00  0.00  0.00 -1.00  0.00  0.00  0.00 -1.00    0.00  0.00  0.00
+ 26 26  0.00 -1.00  0.00 -1.00  0.00  0.00  1.00  1.00  1.00    0.00  0.00  0.00
+ 27 27  1.00  1.00  1.00  0.00  0.00 -1.00  0.00 -1.00  0.00    0.00  0.00  0.00
+ 28 28  0.00  0.00 -1.00  1.00  1.00  1.00 -1.00  0.00  0.00    0.00  0.00  0.00
+ 29 30  0.00  0.00 -1.00 -1.00  0.00  0.00  0.00 -1.00  0.00    0.00  0.00  0.00
+ 30 29  0.00 -1.00  0.00  0.00  0.00 -1.00 -1.00  0.00  0.00    0.00  0.00  0.00
+ 31 32 -1.00  0.00  0.00  0.00  0.00 -1.00  1.00  1.00  1.00    0.00  0.00  0.00
+ 32 31 -1.00  0.00  0.00  1.00  1.00  1.00  0.00 -1.00  0.00    0.00  0.00  0.00
+ 33 34  1.00  1.00  1.00  0.00 -1.00  0.00 -1.00  0.00  0.00    0.00  0.00  0.00
+ 34 33  0.00  0.00 -1.00  0.00 -1.00  0.00  1.00  1.00  1.00    0.00  0.00  0.00
+ 35 36  0.00 -1.00  0.00  1.00  1.00  1.00  0.00  0.00 -1.00    0.00  0.00  0.00
+ 36 35  1.00  1.00  1.00 -1.00  0.00  0.00  0.00  0.00 -1.00    0.00  0.00  0.00
+ 37 37  0.00  1.00  0.00  1.00  0.00  0.00  0.00  0.00  1.00    0.00  0.00  0.00
+ 38 38  1.00  0.00  0.00  0.00  1.00  0.00 -1.00 -1.00 -1.00    0.00  0.00  0.00
+ 39 40  0.00  0.00  1.00 -1.00 -1.00 -1.00  0.00  1.00  0.00    0.00  0.00  0.00
+ 40 39 -1.00 -1.00 -1.00  0.00  0.00  1.00  1.00  0.00  0.00    0.00  0.00  0.00
+ 41 41  1.00  0.00  0.00  0.00  0.00  1.00  0.00  1.00  0.00    0.00  0.00  0.00
+ 42 42  0.00  0.00  1.00  0.00  1.00  0.00  1.00  0.00  0.00    0.00  0.00  0.00
+ 43 45  0.00  0.00  1.00  1.00  0.00  0.00 -1.00 -1.00 -1.00    0.00  0.00  0.00
+ 44 46 -1.00 -1.00 -1.00  1.00  0.00  0.00  0.00  1.00  0.00    0.00  0.00  0.00
+ 45 43  0.00  1.00  0.00 -1.00 -1.00 -1.00  1.00  0.00  0.00    0.00  0.00  0.00
+ 46 44  0.00  1.00  0.00  0.00  0.00  1.00 -1.00 -1.00 -1.00    0.00  0.00  0.00
+ 47 47 -1.00 -1.00 -1.00  0.00  1.00  0.00  0.00  0.00  1.00    0.00  0.00  0.00
+ 48 48  1.00  0.00  0.00 -1.00 -1.00 -1.00  0.00  0.00  1.00    0.00  0.00  0.00
+
+ DIRECT LATTICE VECTORS CARTESIAN COMPONENTS (ANGSTROM)
+          X                    Y                    Z
+   0.000000000000E+00   0.292612864500E+01   0.292612864500E+01
+   0.292612864500E+01   0.000000000000E+00   0.292612864500E+01
+   0.292612864500E+01   0.292612864500E+01   0.000000000000E+00
+
+
+ CARTESIAN COORDINATES - PRIMITIVE CELL
+ *******************************************************************************
+ *      ATOM          X(ANGSTROM)         Y(ANGSTROM)         Z(ANGSTROM)
+ *******************************************************************************
+   1   282 PB    0.000000000000E+00  0.000000000000E+00  0.000000000000E+00
+   2    16 S     2.926128645000E+00  2.926128645000E+00  2.926128645000E+00
+
+ *******************************************************************************
+ *** PSEUDOPOTENTIAL INFORMATION ***
+ *******************************************************************************
+
+ ATOMIC NUMBER  82, NUCLEAR CHARGE 14.000, GIVEN IN INPUT       PSEUDOPOTENTIAL
+   TYPE       EXPONENT      COEFF.    N      EXPONENT      COEFF.    N
+  W0 TMS     1.3001000   -1.4143439   0     3.1872001  -13.2802162   0
+             9.5488005  -54.1375275   0    23.6840992 -138.1266174   0
+            81.0421982 -376.4116821   0   260.1821899  -54.8581200  -1
+  P0 TMS     1.0513001   45.0015182   0     1.2136000 -142.8172150   0
+             1.5929000  280.3399353   0     2.2755001 -305.9310913   0
+             3.4159000  275.8883362   0     5.0454998 -126.1958695   0
+             8.1018000   58.6403961  -1    29.9293995    6.2765460  -2
+  P1 TMS     0.3446000    0.1956290   0     1.0122000  -60.5268974   0
+             1.2147000  201.2909088   0     1.6575000 -254.7373047   0
+             2.4010999  231.8210907   0     3.4683001 -120.3358307   0
+             4.7189999   43.3564453  -1    14.2447996    5.9355869  -1
+  P2 TMS     0.8860000   -1.3566370   0     2.4296999   49.7473946   0
+             3.0903001 -160.2863312   0     4.4506001  325.6977234   0
+             6.8596001 -339.0730591   0    10.5117998  199.7745514   0
+             8.9278002   40.3342972  -1    30.4125996    7.6399822  -2
+  P3 TMS     0.7430000   37.6054115   0     0.9349000  -24.4301662   0
+             0.9371000  -38.5165787   0     1.3505000   60.9792862   0
+             2.4532001  -10.0338068   0     3.9905000   52.0561676   0
+             8.4453001   39.9178238  -1    19.7761002    5.4748688  -2
+
+ *******************************************************************************
+ LOCAL ATOMIC FUNCTIONS BASIS SET
+ *******************************************************************************
+   ATOM  X(AU)  Y(AU)  Z(AU)    NO. TYPE  EXPONENT  S COEF   P COEF   D/F/G COEF
+ *******************************************************************************
+   1 PB  0.000  0.000  0.000
+                             1-   5 D  
+                                         1.772E+00 0.000E+00 0.000E+00 2.350E+00
+                                         1.111E+00 0.000E+00 0.000E+00 1.109E+00
+                                         4.368E-01 0.000E+00 0.000E+00 9.780E-01
+                                  6 S  
+                                         7.297E-01 2.000E+00 0.000E+00 0.000E+00
+                                         7.638E-01 1.000E+00 0.000E+00 0.000E+00
+                                         1.527E-01 1.000E+00 0.000E+00 0.000E+00
+                                  7 S  
+                                         1.394E-01 1.000E+00 0.000E+00 0.000E+00
+                             8-  10 P  
+                                         9.205E-01 0.000E+00 1.500E+00 0.000E+00
+                                         9.047E-01 0.000E+00 1.000E+00 0.000E+00
+                                         1.219E-01 0.000E+00 1.000E+00 0.000E+00
+                            11-  13 P  
+                                         1.136E-01 0.000E+00 1.000E+00 0.000E+00
+   2 S   5.530  5.530  5.530
+                                 14 S  
+                                         2.192E+04 1.869E-03 0.000E+00 0.000E+00
+                                         3.301E+03 1.423E-02 0.000E+00 0.000E+00
+                                         7.541E+02 6.970E-02 0.000E+00 0.000E+00
+                                         2.127E+02 2.385E-01 0.000E+00 0.000E+00
+                                         6.799E+01 4.833E-01 0.000E+00 0.000E+00
+                                         2.305E+01 3.381E-01 0.000E+00 0.000E+00
+                            15-  18 SP 
+                                         4.237E+02-2.377E-03 4.061E-03 0.000E+00
+                                         1.007E+02-3.169E-02 3.068E-02 0.000E+00
+                                         3.216E+01-1.133E-01 1.305E-01 0.000E+00
+                                         1.181E+01 5.609E-02 3.272E-01 0.000E+00
+                                         4.631E+00 5.923E-01 4.529E-01 0.000E+00
+                                         1.870E+00 4.550E-01 2.560E-01 0.000E+00
+                            19-  22 SP 
+                                         2.616E+00-2.504E-01-1.451E-02 0.000E+00
+                                         9.222E-01 6.696E-02 3.103E-01 0.000E+00
+                                         3.413E-01 1.055E+00 7.545E-01 0.000E+00
+                            23-  26 SP 
+                                         1.172E-01 1.000E+00 1.000E+00 0.000E+00
+                            27-  30 SP 
+                                         9.935E-01 1.000E+00 1.000E+00 0.000E+00
+                            31-  35 D  
+                                         6.681E-01 0.000E+00 0.000E+00 6.500E-01
+ INFORMATION **** TOLINTEG **** COULOMB AND EXCHANGE SERIES TOLERANCES MODIFIED
+ INFORMATION **** READM2 **** FULL DIRECT SCF (MONO AND BIEL INT) SELECTED
+ INFORMATION **** MAXCYCLE **** MAX NUMBER OF SCF CYCLES SET TO      1000
+ *******************************************************************************
+ N. OF ATOMS PER CELL        2  COULOMB OVERLAP TOL         (T1) 10** -7
+ NUMBER OF SHELLS           11  COULOMB PENETRATION TOL     (T2) 10** -7
+ NUMBER OF AO               35  EXCHANGE OVERLAP TOL        (T3) 10** 20
+ N. OF ELECTRONS PER CELL   30  EXCHANGE PSEUDO OVP (F(G))  (T4) 10** 20
+ CORE ELECTRONS PER CELL    10  EXCHANGE PSEUDO OVP (P(G))  (T5) 10** 20
+ N. OF SYMMETRY OPERATORS   48  POLE ORDER IN MONO ZONE                4
+ *******************************************************************************
+ TYPE OF CALCULATION :  RESTRICTED CLOSED SHELL
+ KOHN-SHAM HAMILTONIAN
+
+ (EXCHANGE)[CORRELATION] FUNCTIONAL:(PERDEW-BURKE-ERNZERHOF)[PERDEW-BURKE-ERNZERHOF]
+
+ CORE  PSEUDO POTENTIAL         TOL. ON PSEUDO              (TP) 10**- 6
+ EIGENVALUE LEVEL SHIFTING OF  3.600 HARTREE
+ LOCKING - FERMI ENERGY ALTERED BY LEVEL SHIFTER
+
+ CAPPA: IS1=  8 IS2=  8 IS3=  8K POINTS MONKHORST NET   29 SYMMOPS K SPACE 48 SYMMOPS G SPACE 48
+
+
+ CAPPA1: ISJ1=  8 ISJ2=  8 ISJ3=  8K POINTS GILAT NET   29 SYMMOPS K SPACE 48 SYMMOPS G SPACE 48
+
+ *******************************************************************************
+ MAX NUMBER OF SCF CYCLES    1000  CONVERGENCE ON DELTAP        10**-16
+ WEIGHT OF F(I) IN F(I+1)      80% CONVERGENCE ON ENERGY        10**- 7
+ EIGENVALUE LEVEL SHIFTING OF  3.600 HARTREE
+ LOCKING - FERMI ENERGY ALTERED BY LEVEL SHIFTER
+ SHRINK. FACT.(MONKH.)    8  8  8  NUMBER OF K POINTS IN THE IBZ     29
+ SHRINKING FACTOR(GILAT NET)    8  NUMBER OF K POINTS(GILAT NET)     29
+ *******************************************************************************
+ *** K POINTS COORDINATES (OBLIQUE COORDINATES IN UNITS OF IS =  8)
+   1-R(  0  0  0)   2-C(  1  0  0)   3-C(  2  0  0)   4-C(  3  0  0)
+   5-R(  4  0  0)   6-C(  1  1  0)   7-C(  2  1  0)   8-C(  3  1  0)
+   9-C(  4  1  0)  10-C(  5  1  0)  11-C(  6  1  0)  12-C(  7  1  0)
+  13-C(  2  2  0)  14-C(  3  2  0)  15-C(  4  2  0)  16-C(  5  2  0)
+  17-C(  6  2  0)  18-C(  3  3  0)  19-C(  4  3  0)  20-C(  5  3  0)
+  21-R(  4  4  0)  22-C(  3  2  1)  23-C(  4  2  1)  24-C(  5  2  1)
+  25-C(  4  3  1)  26-C(  5  3  1)  27-C(  6  3  1)  28-C(  5  4  1)
+  29-C(  6  4  2)
+
+ DIRECT LATTICE VECTORS COMPON. (A.U.)     RECIP. LATTICE VECTORS COMPON. (A.U.) 
+        X            Y            Z              X            Y            Z
+    0.0000000    5.5295818    5.5295818     -0.5681429    0.5681429    0.5681429
+    5.5295818    0.0000000    5.5295818      0.5681429   -0.5681429    0.5681429
+    5.5295818    5.5295818    0.0000000      0.5681429    0.5681429   -0.5681429
+
+ DISK SPACE FOR EIGENVECTORS (FTN 10)      67375 REALS
+
+ SYMMETRY ADAPTION OF THE BLOCH FUNCTIONS ENABLED
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT gordsh1     TELAPSE        0.25 TCPU        0.02
+
+ DIMENSIONS  P(G)=   22025 F(G)=   11396 P(G),F(G) (IRR)    1517
+ MAX G-VECTOR INDEX FOR 1- AND 2-ELECTRON INTEGRALS 219
+
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT INPUT       TELAPSE        0.25 TCPU        0.02
+
+ NEIGHBORS OF THE NON-EQUIVALENT ATOMS
+
+ N = NUMBER OF NEIGHBORS AT DISTANCE R
+    ATOM  N     R/ANG      R/AU   NEIGHBORS (ATOM LABELS AND CELL INDICES)
+   1 PB   6     2.9261     5.5296   2 S   -1 0 0   2 S    0-1 0   2 S    0 0-1
+                                    2 S   -1-1 0   2 S   -1 0-1   2 S    0-1-1
+   1 PB  12     4.1382     7.8200   1 PB  -1 0 0   1 PB   1 0 0   1 PB  -1 0 1
+                                    1 PB   1 0-1   1 PB  -1 1 0   1 PB   1-1 0
+                                    1 PB   0-1 0   1 PB   0 1 0   1 PB   0-1 1
+                                    1 PB   0 1-1   1 PB   0 0-1   1 PB   0 0 1
+   1 PB   8     5.0682     9.5775   2 S    0 0 0   2 S   -1-1 1   2 S   -1 1-1
+                                    2 S    1-1-1   2 S   -2 0 0   2 S    0-2 0
+                                    2 S    0 0-2   2 S   -1-1-1
+   1 PB   6     5.8523    11.0592   1 PB  -1-1 1   1 PB   1 1-1   1 PB  -1 1-1
+                                    1 PB   1-1 1   1 PB  -1 1 1   1 PB   1-1-1
+   1 PB  24     6.5430    12.3645   2 S    1 0-1   2 S   -1 0 1   2 S    1-1 0
+                                    2 S   -1 1 0   2 S    0 1-1   2 S    0-1 1
+                                    2 S   -2 0 1   2 S   -2 1 0   2 S    1 0-2
+                                    2 S    1-2 0   2 S    0-2 1   2 S    0 1-2
+                                    2 S   -2-1 1   2 S   -2 1-1   2 S   -1-2 1
+                                    2 S   -1 1-2   2 S    1-1-2   2 S    1-2-1
+                                    2 S   -2-1 0   2 S   -2 0-1   2 S   -1-2 0
+                                    2 S   -1 0-2   2 S    0-2-1   2 S    0-1-2
+   1 PB  24     7.1675    13.5447   1 PB  -2 0 1   1 PB   2 0-1   1 PB  -2 1 0
+                                    1 PB   2-1 0   1 PB  -2 1 1   1 PB   2-1-1
+                                    1 PB  -1-1 0   1 PB   1 1 0   1 PB  -1-1 2
+                                    1 PB   1 1-2   1 PB  -1 0-1   1 PB   1 0 1
+                                    1 PB  -1 0 2   1 PB   1 0-2   1 PB  -1 2-1
+                                    1 PB   1-2 1   1 PB  -1 2 0   1 PB   1-2 0
+                                    1 PB   0-2 1   1 PB   0 2-1   1 PB   0-1-1
+                                    1 PB   0 1 1   1 PB   0-1 2   1 PB   0 1-2
+
+   2 S    6     2.9261     5.5296   1 PB   1 0 0   1 PB   0 1 0   1 PB   0 0 1
+                                    1 PB   1 1 0   1 PB   1 0 1   1 PB   0 1 1
+   2 S   12     4.1382     7.8200   2 S   -1 0 0   2 S    1 0 0   2 S   -1 0 1
+                                    2 S    1 0-1   2 S   -1 1 0   2 S    1-1 0
+                                    2 S    0-1 0   2 S    0 1 0   2 S    0-1 1
+                                    2 S    0 1-1   2 S    0 0-1   2 S    0 0 1
+   2 S    8     5.0682     9.5775   1 PB   0 0 0   1 PB   1 1-1   1 PB   1-1 1
+                                    1 PB  -1 1 1   1 PB   2 0 0   1 PB   0 2 0
+                                    1 PB   0 0 2   1 PB   1 1 1
+   2 S    6     5.8523    11.0592   2 S   -1-1 1   2 S    1 1-1   2 S   -1 1-1
+                                    2 S    1-1 1   2 S   -1 1 1   2 S    1-1-1
+   2 S   24     6.5430    12.3645   1 PB  -1 0 1   1 PB   1 0-1   1 PB  -1 1 0
+                                    1 PB   1-1 0   1 PB   0-1 1   1 PB   0 1-1
+                                    1 PB   2 0-1   1 PB   2-1 0   1 PB  -1 0 2
+                                    1 PB  -1 2 0   1 PB   0 2-1   1 PB   0-1 2
+                                    1 PB   2 1-1   1 PB   2-1 1   1 PB   1 2-1
+                                    1 PB   1-1 2   1 PB  -1 1 2   1 PB  -1 2 1
+                                    1 PB   2 1 0   1 PB   2 0 1   1 PB   1 2 0
+                                    1 PB   1 0 2   1 PB   0 2 1   1 PB   0 1 2
+   2 S   24     7.1675    13.5447   2 S   -2 0 1   2 S    2 0-1   2 S   -2 1 0
+                                    2 S    2-1 0   2 S   -2 1 1   2 S    2-1-1
+                                    2 S   -1-1 0   2 S    1 1 0   2 S   -1-1 2
+                                    2 S    1 1-2   2 S   -1 0-1   2 S    1 0 1
+                                    2 S   -1 0 2   2 S    1 0-2   2 S   -1 2-1
+                                    2 S    1-2 1   2 S   -1 2 0   2 S    1-2 0
+                                    2 S    0-2 1   2 S    0 2-1   2 S    0-1-1
+                                    2 S    0 1 1   2 S    0-1 2   2 S    0 1-2
+
+
+ SYMMETRY ALLOWED ELASTIC DISTORTION 1
+  0.5773503  0.0000000  0.0000000
+  0.0000000  0.5773503  0.0000000
+  0.0000000  0.0000000  0.5773503
+
+ THERE ARE NO SYMMETRY ALLOWED DIRECTIONS
+ WARNING **** INT_SCREEN **** CELL PARAMETERS OPTIMIZATION ONLY
+crystal executable from directory /home/piero/bin/CRY06
+test cases input: extensions .d12 , .d3
+CRY2K6_GRA graphical scripts /home/piero/bin/CRY06/crgra2006/maps06, doss06, band06
+CRY2K6_UTILS miscellanea utilities /home/piero/bin/CRY06/utils06/runcry06 runprop06 spacg
+ PROCESS            1  OF            2  WORKING
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SYMM        TELAPSE        0.27 TCPU        0.04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT INT_SCREEN  TELAPSE        0.27 TCPU        0.04
+ *******************************************************************************
+ CELL OPTIMIZATION - POINT    1
+ INFORMATION **** EXCBUF **** EXCH. BIPO BUFFER: WORDS USED =         0
+
+ DFT PARAMETERS
+
+     ATOM       ELECTRONS   NET CHARGE   R(ANGSTROM)
+   1 282  PB     14.0000      0.0000     1.75000000
+   2  16  S      16.0000      0.0000     1.04000000
+
+ SIZE OF GRID=       1550
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MAKEGRID    TELAPSE        1.62 TCPU        1.38
+ BECKE WEIGHT FUNCTION
+ RADSAFE =     2.00
+ TOLERANCES - DENSITY:10**- 6; POTENTIAL:10**- 9; GRID WGT:10**-14
+
+ RADIAL INTEGRATION  - INTERVALS (POINTS,UPPER LIMIT):            1( 75,  4.0*R)
+
+ ANGULAR INTEGRATION - INTERVALS (ACCURACY LEVEL [N. POINTS] UPPER LIMIT):
+  1(  4[  86]   0.2)  2(  8[ 194]   0.5)  3( 12[ 350]   0.9)  4( 16[ 974]   3.5)
+  5( 12[ 350]9999.0)
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT INT_CALC    TELAPSE        1.71 TCPU        1.47
+
+ *******************************************************************************
+ Galena from American Mineralogist 10 (1925) 281-304                             
+ CRYSTAL - SCF - TYPE OF CALCULATION :  RESTRICTED CLOSED SHELL
+ *******************************************************************************
+
+ CAPPA: IS1=  8 IS2=  8 IS3=  8K POINTS MONKHORST NET   29 SYMMOPS K SPACE 48 SYMMOPS G SPACE 48
+
+
+ CAPPA1: ISJ1=  8 ISJ2=  8 ISJ3=  8K POINTS GILAT NET   29 SYMMOPS K SPACE 48 SYMMOPS G SPACE 48
+
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SDIK        TELAPSE        1.73 TCPU        1.49
+
+ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+         ATOMIC WAVEFUNCTION(S)
+
+
+ NUCLEAR CHARGE 14.0  SYMMETRY SPECIES            S    P    D
+ N. ELECTRONS   14.0  NUMBER OF PRIMITIVE GTOS    4    4    3
+                      NUMBER OF CONTRACTED GTOS   2    2    1
+                      NUMBER OF CLOSED SHELLS     1    0    1
+                      OPEN SHELL OCCUPATION       0    2    0
+
+  ZNUC SCFIT  TOTAL HF ENERGY   KINETIC ENERGY   VIRIAL THEOREM ACCURACY
+  14.0   6   -5.839941934E+01  4.570203229E+01 -2.277829812E+00  1.6E-07
+
+ NUCLEAR CHARGE 16.0  SYMMETRY SPECIES            S    P
+ N. ELECTRONS   16.0  NUMBER OF PRIMITIVE GTOS   17   11
+                      NUMBER OF CONTRACTED GTOS   5    4
+                      NUMBER OF CLOSED SHELLS     3    1
+                      OPEN SHELL OCCUPATION       0    4
+
+  ZNUC SCFIT  TOTAL HF ENERGY   KINETIC ENERGY   VIRIAL THEOREM ACCURACY
+  16.0  10   -3.974718757E+02  3.971265614E+02 -2.000869532E+00  3.9E-06
+
+ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  14.0000000  16.0000000
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE        1.82 TCPU        1.58
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE        4.07 TCPU        3.81
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE       11.76 TCPU       11.42
+ NUMERICALLY INTEGRATED DENSITY     30.0000335624
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE       12.44 TCPU       11.99
+ CYC   0 ETOT(AU) -4.585905527510E+02 DETOT -4.59E+02 tst  0.00E+00 PX  1.00E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE       12.47 TCPU       12.02
+ POSSIBLY CONDUCTING STATE - EFERMI(AU) -1.1655991E-01 (RES. CHARGE  9.98E-10;IT. 12)
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE       12.48 TCPU       12.03
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.5581441  17.4418559
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE       12.52 TCPU       12.07
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE       15.16 TCPU       14.70
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE       22.83 TCPU       22.32
+ NUMERICALLY INTEGRATED DENSITY     30.0000342894
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE       24.94 TCPU       24.41
+ CYC   1 ETOT(AU) -4.585591815156E+02 DETOT  3.14E-02 tst  0.00E+00 PX  1.00E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE       24.96 TCPU       24.42
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.7028833E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE       24.97 TCPU       24.43
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.5844293  17.4155707
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE       25.01 TCPU       24.46
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE       27.65 TCPU       27.08
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE       35.31 TCPU       34.67
+ NUMERICALLY INTEGRATED DENSITY     30.0000345304
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE       37.35 TCPU       36.67
+ CYC   2 ETOT(AU) -4.585682274119E+02 DETOT -9.05E-03 tst  8.86E-04 PX  2.07E-02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE       37.36 TCPU       36.69
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6918068E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE       37.37 TCPU       36.69
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.6165831  17.3834169
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE       37.41 TCPU       36.73
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE       40.05 TCPU       39.34
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE       47.72 TCPU       46.93
+ NUMERICALLY INTEGRATED DENSITY     30.0000348919
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE       49.75 TCPU       48.93
+ CYC   3 ETOT(AU) -4.585796065472E+02 DETOT -1.14E-02 tst  2.56E-03 PX  3.47E-02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE       49.77 TCPU       48.95
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6832717E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE       49.78 TCPU       48.96
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.6568415  17.3431585
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE       49.82 TCPU       48.99
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE       52.46 TCPU       51.60
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE       60.17 TCPU       59.28
+ NUMERICALLY INTEGRATED DENSITY     30.0000353406
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE       62.20 TCPU       61.30
+ CYC   4 ETOT(AU) -4.585911382174E+02 DETOT -1.15E-02 tst  4.65E-03 PX  4.34E-02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE       62.22 TCPU       61.31
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6767391E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE       62.23 TCPU       61.32
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.7013839  17.2986161
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE       62.28 TCPU       61.36
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE       64.95 TCPU       64.00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE       72.61 TCPU       71.61
+ NUMERICALLY INTEGRATED DENSITY     30.0000358245
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE       74.65 TCPU       73.63
+ CYC   5 ETOT(AU) -4.586010923771E+02 DETOT -9.95E-03 tst  6.48E-03 PX  4.71E-02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE       74.67 TCPU       73.64
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6706362E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE       74.68 TCPU       73.66
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.7473584  17.2526416
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE       74.72 TCPU       73.69
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE       77.38 TCPU       76.32
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE       85.09 TCPU       83.93
+ NUMERICALLY INTEGRATED DENSITY     30.0000363020
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE       87.12 TCPU       85.94
+ CYC   6 ETOT(AU) -4.586088335495E+02 DETOT -7.74E-03 tst  7.56E-03 PX  4.70E-02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE       87.13 TCPU       85.95
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6674260E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE       87.14 TCPU       85.96
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.7927156  17.2072844
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE       87.18 TCPU       86.00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE       89.82 TCPU       88.61
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE       97.49 TCPU       96.19
+ NUMERICALLY INTEGRATED DENSITY     30.0000367426
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE       99.55 TCPU       98.21
+ CYC   7 ETOT(AU) -4.586143988092E+02 DETOT -5.57E-03 tst  7.85E-03 PX  4.43E-02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE       99.57 TCPU       98.22
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6663416E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE       99.58 TCPU       98.23
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.8359111  17.1640889
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE       99.61 TCPU       98.26
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      102.28 TCPU      100.89
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      109.93 TCPU      108.52
+ NUMERICALLY INTEGRATED DENSITY     30.0000371265
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      111.96 TCPU      110.54
+ CYC   8 ETOT(AU) -4.586181478264E+02 DETOT -3.75E-03 tst  7.54E-03 PX  3.98E-02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      111.97 TCPU      110.56
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6667233E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      111.98 TCPU      110.57
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.8759724  17.1240276
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      112.03 TCPU      110.60
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      114.73 TCPU      113.24
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      122.37 TCPU      120.88
+ NUMERICALLY INTEGRATED DENSITY     30.0000374437
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      124.40 TCPU      122.91
+ CYC   9 ETOT(AU) -4.586205385305E+02 DETOT -2.39E-03 tst  6.86E-03 PX  3.44E-02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      124.42 TCPU      122.92
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6669148E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      124.43 TCPU      122.94
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.9122758  17.0877242
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      124.47 TCPU      122.97
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      127.12 TCPU      125.62
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      134.79 TCPU      133.29
+ NUMERICALLY INTEGRATED DENSITY     30.0000376923
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      136.83 TCPU      135.34
+ CYC  10 ETOT(AU) -4.586219966322E+02 DETOT -1.46E-03 tst  6.04E-03 PX  2.88E-02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      136.85 TCPU      135.35
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6671060E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      136.86 TCPU      135.36
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.9444792  17.0555208
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      136.90 TCPU      135.40
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      139.54 TCPU      138.04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      147.25 TCPU      145.76
+ NUMERICALLY INTEGRATED DENSITY     30.0000378755
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      149.30 TCPU      147.80
+ CYC  11 ETOT(AU) -4.586228612529E+02 DETOT -8.65E-04 tst  5.21E-03 PX  2.32E-02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      149.31 TCPU      147.81
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6675639E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      149.32 TCPU      147.83
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.9725419  17.0274581
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      149.36 TCPU      147.86
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      152.00 TCPU      150.51
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      159.66 TCPU      158.16
+ NUMERICALLY INTEGRATED DENSITY     30.0000380001
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      161.71 TCPU      160.19
+ CYC  12 ETOT(AU) -4.586233749271E+02 DETOT -5.14E-04 tst  4.44E-03 PX  1.79E-02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      161.72 TCPU      160.21
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6681739E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      161.73 TCPU      160.22
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  12.9965920  17.0034080
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      161.77 TCPU      160.25
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      164.42 TCPU      162.88
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      172.08 TCPU      170.45
+ NUMERICALLY INTEGRATED DENSITY     30.0000380752
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      174.11 TCPU      172.46
+ CYC  13 ETOT(AU) -4.586236952068E+02 DETOT -3.20E-04 tst  3.77E-03 PX  1.34E-02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      174.13 TCPU      172.48
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6688523E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      174.14 TCPU      172.49
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0168938  16.9831062
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      174.18 TCPU      172.52
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      176.87 TCPU      175.13
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      184.54 TCPU      182.74
+ NUMERICALLY INTEGRATED DENSITY     30.0000381102
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      186.56 TCPU      184.76
+ CYC  14 ETOT(AU) -4.586239152787E+02 DETOT -2.20E-04 tst  3.20E-03 PX  9.46E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      186.57 TCPU      184.78
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6695408E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      186.59 TCPU      184.79
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0337900  16.9662100
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      186.62 TCPU      184.82
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      189.26 TCPU      187.46
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      196.93 TCPU      195.10
+ NUMERICALLY INTEGRATED DENSITY     30.0000381144
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      198.98 TCPU      197.13
+ CYC  15 ETOT(AU) -4.586240848607E+02 DETOT -1.70E-04 tst  2.73E-03 PX  6.19E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      198.99 TCPU      197.14
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6702005E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      199.00 TCPU      197.16
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0476835  16.9523165
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      199.04 TCPU      197.19
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      201.71 TCPU      199.82
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      209.43 TCPU      207.43
+ NUMERICALLY INTEGRATED DENSITY     30.0000380961
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      211.47 TCPU      209.44
+ CYC  16 ETOT(AU) -4.586242271377E+02 DETOT -1.42E-04 tst  2.35E-03 PX  3.53E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      211.48 TCPU      209.46
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6708078E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      211.49 TCPU      209.47
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0589844  16.9410156
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      211.53 TCPU      209.51
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      214.18 TCPU      212.15
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      221.83 TCPU      219.81
+ NUMERICALLY INTEGRATED DENSITY     30.0000380625
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      223.86 TCPU      221.83
+ CYC  17 ETOT(AU) -4.586243512547E+02 DETOT -1.24E-04 tst  2.05E-03 PX  3.41E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      223.88 TCPU      221.85
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6713499E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      223.89 TCPU      221.86
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0680888  16.9319112
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      223.92 TCPU      221.89
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      226.58 TCPU      224.54
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      234.26 TCPU      232.13
+ NUMERICALLY INTEGRATED DENSITY     30.0000380197
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      236.33 TCPU      234.12
+ CYC  18 ETOT(AU) -4.586244598452E+02 DETOT -1.09E-04 tst  1.81E-03 PX  3.82E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      236.34 TCPU      234.13
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6718225E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      236.35 TCPU      234.15
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0753762  16.9246238
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      236.39 TCPU      234.18
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      239.04 TCPU      236.83
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      246.70 TCPU      244.48
+ NUMERICALLY INTEGRATED DENSITY     30.0000379724
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      248.75 TCPU      246.53
+ CYC  19 ETOT(AU) -4.586245534302E+02 DETOT -9.36E-05 tst  1.62E-03 PX  3.93E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      248.77 TCPU      246.54
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6722267E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      248.78 TCPU      246.55
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0811860  16.9188140
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      248.81 TCPU      246.59
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      251.46 TCPU      249.23
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      259.12 TCPU      256.88
+ NUMERICALLY INTEGRATED DENSITY     30.0000379241
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      261.16 TCPU      258.86
+ CYC  20 ETOT(AU) -4.586246324649E+02 DETOT -7.90E-05 tst  1.47E-03 PX  3.84E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      261.18 TCPU      258.88
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6725673E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      261.19 TCPU      258.89
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0858127  16.9141873
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      261.22 TCPU      258.92
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      263.87 TCPU      261.54
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      271.59 TCPU      269.18
+ NUMERICALLY INTEGRATED DENSITY     30.0000378774
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      273.62 TCPU      271.21
+ CYC  21 ETOT(AU) -4.586246979866E+02 DETOT -6.55E-05 tst  1.35E-03 PX  3.58E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      273.63 TCPU      271.23
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6728514E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      273.64 TCPU      271.24
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0895140  16.9104860
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      273.68 TCPU      271.27
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      276.32 TCPU      273.91
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      284.00 TCPU      281.57
+ NUMERICALLY INTEGRATED DENSITY     30.0000378339
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      286.05 TCPU      283.61
+ CYC  22 ETOT(AU) -4.586247515792E+02 DETOT -5.36E-05 tst  1.26E-03 PX  3.25E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      286.06 TCPU      283.62
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6730866E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      286.07 TCPU      283.63
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0924982  16.9075018
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      286.11 TCPU      283.67
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      288.75 TCPU      286.30
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      296.46 TCPU      293.95
+ NUMERICALLY INTEGRATED DENSITY     30.0000377946
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      298.50 TCPU      295.98
+ CYC  23 ETOT(AU) -4.586247951571E+02 DETOT -4.36E-05 tst  1.18E-03 PX  2.86E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      298.51 TCPU      295.99
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6732810E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      298.52 TCPU      296.00
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0949344  16.9050656
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      298.56 TCPU      296.03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      301.20 TCPU      298.67
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      308.88 TCPU      306.34
+ NUMERICALLY INTEGRATED DENSITY     30.0000377601
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      310.92 TCPU      308.37
+ CYC  24 ETOT(AU) -4.586248306469E+02 DETOT -3.55E-05 tst  1.12E-03 PX  2.72E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      310.93 TCPU      308.38
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6734422E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      310.94 TCPU      308.39
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0969557  16.9030443
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      310.98 TCPU      308.43
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      313.62 TCPU      311.07
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      321.29 TCPU      318.70
+ NUMERICALLY INTEGRATED DENSITY     30.0000377303
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      323.34 TCPU      320.72
+ CYC  25 ETOT(AU) -4.586248598164E+02 DETOT -2.92E-05 tst  1.06E-03 PX  2.62E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      323.35 TCPU      320.74
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6735768E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      323.36 TCPU      320.75
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.0986686  16.9013314
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      323.40 TCPU      320.78
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      326.09 TCPU      323.44
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      333.78 TCPU      331.03
+ NUMERICALLY INTEGRATED DENSITY     30.0000377052
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      335.81 TCPU      333.05
+ CYC  26 ETOT(AU) -4.586248841563E+02 DETOT -2.43E-05 tst  1.01E-03 PX  2.47E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      335.82 TCPU      333.06
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6736909E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      335.83 TCPU      333.07
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1001542  16.8998458
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      335.87 TCPU      333.11
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      338.53 TCPU      335.73
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      346.18 TCPU      343.32
+ NUMERICALLY INTEGRATED DENSITY     30.0000376843
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      348.21 TCPU      345.34
+ CYC  27 ETOT(AU) -4.586249048334E+02 DETOT -2.07E-05 tst  9.73E-04 PX  2.30E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      348.23 TCPU      345.35
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6737892E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      348.24 TCPU      345.36
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1014667  16.8985333
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      348.28 TCPU      345.40
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      350.91 TCPU      348.01
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      358.64 TCPU      355.65
+ NUMERICALLY INTEGRATED DENSITY     30.0000376673
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      360.68 TCPU      357.69
+ CYC  28 ETOT(AU) -4.586249227298E+02 DETOT -1.79E-05 tst  9.35E-04 PX  2.12E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      360.69 TCPU      357.71
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6738759E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      360.71 TCPU      357.72
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1026504  16.8973496
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      360.74 TCPU      357.75
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      363.40 TCPU      360.38
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      371.07 TCPU      367.97
+ NUMERICALLY INTEGRATED DENSITY     30.0000376535
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      373.10 TCPU      369.99
+ CYC  29 ETOT(AU) -4.586249384828E+02 DETOT -1.58E-05 tst  8.99E-04 PX  1.94E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      373.11 TCPU      370.00
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6739539E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      373.12 TCPU      370.01
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1037386  16.8962614
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      373.16 TCPU      370.05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      375.79 TCPU      372.66
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      383.44 TCPU      380.30
+ NUMERICALLY INTEGRATED DENSITY     30.0000376424
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      385.53 TCPU      382.34
+ CYC  30 ETOT(AU) -4.586249525466E+02 DETOT -1.41E-05 tst  8.65E-04 PX  1.76E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      385.55 TCPU      382.36
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6740256E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      385.56 TCPU      382.36
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1047464  16.8952536
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      385.59 TCPU      382.40
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      388.25 TCPU      385.02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      395.91 TCPU      392.61
+ NUMERICALLY INTEGRATED DENSITY     30.0000376337
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      397.94 TCPU      394.62
+ CYC  31 ETOT(AU) -4.586249652411E+02 DETOT -1.27E-05 tst  8.32E-04 PX  1.61E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      397.96 TCPU      394.64
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6740925E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      397.97 TCPU      394.65
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1056882  16.8943118
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      398.00 TCPU      394.68
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      400.64 TCPU      397.30
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      408.31 TCPU      404.90
+ NUMERICALLY INTEGRATED DENSITY     30.0000376268
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      410.34 TCPU      406.91
+ CYC  32 ETOT(AU) -4.586249767902E+02 DETOT -1.15E-05 tst  8.01E-04 PX  1.47E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      410.36 TCPU      406.93
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6741559E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      410.37 TCPU      406.94
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1065747  16.8934253
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      410.40 TCPU      406.98
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      413.04 TCPU      409.59
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      420.77 TCPU      417.20
+ NUMERICALLY INTEGRATED DENSITY     30.0000376213
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      422.82 TCPU      419.23
+ CYC  33 ETOT(AU) -4.586249873571E+02 DETOT -1.06E-05 tst  7.70E-04 PX  1.34E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      422.83 TCPU      419.25
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6742164E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      422.84 TCPU      419.25
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1074104  16.8925896
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      422.88 TCPU      419.29
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      425.53 TCPU      421.91
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      433.20 TCPU      429.49
+ NUMERICALLY INTEGRATED DENSITY     30.0000376170
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      435.23 TCPU      431.50
+ CYC  34 ETOT(AU) -4.586249970660E+02 DETOT -9.71E-06 tst  7.40E-04 PX  1.23E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      435.24 TCPU      431.51
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6742744E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      435.25 TCPU      431.52
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1081981  16.8918019
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      435.29 TCPU      431.56
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      437.95 TCPU      434.19
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      445.67 TCPU      441.76
+ NUMERICALLY INTEGRATED DENSITY     30.0000376135
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      447.70 TCPU      443.77
+ CYC  35 ETOT(AU) -4.586250060102E+02 DETOT -8.94E-06 tst  7.11E-04 PX  1.14E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      447.72 TCPU      443.78
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6743304E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      447.73 TCPU      443.79
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1089364  16.8910636
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      447.77 TCPU      443.83
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      450.42 TCPU      446.44
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      458.08 TCPU      454.04
+ NUMERICALLY INTEGRATED DENSITY     30.0000376107
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      460.11 TCPU      456.07
+ CYC  36 ETOT(AU) -4.586250142735E+02 DETOT -8.26E-06 tst  6.83E-04 PX  1.05E-03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      460.12 TCPU      456.08
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6743842E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      460.14 TCPU      456.09
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1096312  16.8903688
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      460.17 TCPU      456.13
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      462.82 TCPU      458.76
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      470.49 TCPU      466.42
+ NUMERICALLY INTEGRATED DENSITY     30.0000376084
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      472.53 TCPU      468.45
+ CYC  37 ETOT(AU) -4.586250219219E+02 DETOT -7.65E-06 tst  6.60E-04 PX  9.81E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      472.54 TCPU      468.47
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6744360E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      472.55 TCPU      468.48
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1102832  16.8897168
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      472.59 TCPU      468.51
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      475.29 TCPU      471.14
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      482.95 TCPU      478.73
+ NUMERICALLY INTEGRATED DENSITY     30.0000376064
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      485.00 TCPU      480.75
+ CYC  38 ETOT(AU) -4.586250290128E+02 DETOT -7.09E-06 tst  6.44E-04 PX  9.19E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      485.01 TCPU      480.76
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6744857E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      485.02 TCPU      480.77
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1108936  16.8891064
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      485.06 TCPU      480.81
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      487.71 TCPU      483.43
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      495.36 TCPU      491.01
+ NUMERICALLY INTEGRATED DENSITY     30.0000376047
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      497.39 TCPU      493.00
+ CYC  39 ETOT(AU) -4.586250356010E+02 DETOT -6.59E-06 tst  6.29E-04 PX  8.61E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      497.40 TCPU      493.01
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6745333E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      497.41 TCPU      493.02
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1114617  16.8885383
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      497.45 TCPU      493.06
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      500.09 TCPU      495.68
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      507.82 TCPU      503.32
+ NUMERICALLY INTEGRATED DENSITY     30.0000376032
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      509.86 TCPU      505.33
+ CYC  40 ETOT(AU) -4.586250417318E+02 DETOT -6.13E-06 tst  6.14E-04 PX  8.10E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      509.87 TCPU      505.35
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6745787E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      509.88 TCPU      505.36
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1119875  16.8880125
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      509.92 TCPU      505.40
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      512.56 TCPU      508.00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      520.25 TCPU      515.60
+ NUMERICALLY INTEGRATED DENSITY     30.0000376018
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      522.30 TCPU      517.62
+ CYC  41 ETOT(AU) -4.586250474463E+02 DETOT -5.71E-06 tst  5.99E-04 PX  7.65E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      522.31 TCPU      517.64
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6746218E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      522.32 TCPU      517.64
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1124761  16.8875239
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      522.37 TCPU      517.68
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      525.02 TCPU      520.31
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      532.67 TCPU      527.87
+ NUMERICALLY INTEGRATED DENSITY     30.0000376006
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      534.76 TCPU      529.92
+ CYC  42 ETOT(AU) -4.586250527810E+02 DETOT -5.33E-06 tst  5.85E-04 PX  7.23E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      534.77 TCPU      529.93
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6746627E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      534.78 TCPU      529.94
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1129293  16.8870707
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      534.82 TCPU      529.97
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      537.48 TCPU      532.60
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      545.16 TCPU      540.20
+ NUMERICALLY INTEGRATED DENSITY     30.0000375994
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      547.21 TCPU      542.22
+ CYC  43 ETOT(AU) -4.586250577693E+02 DETOT -4.99E-06 tst  5.71E-04 PX  6.85E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      547.22 TCPU      542.24
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6747014E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      547.23 TCPU      542.25
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1133480  16.8866520
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      547.27 TCPU      542.28
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      549.91 TCPU      544.89
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      557.58 TCPU      552.48
+ NUMERICALLY INTEGRATED DENSITY     30.0000375983
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      559.63 TCPU      554.49
+ CYC  44 ETOT(AU) -4.586250624407E+02 DETOT -4.67E-06 tst  5.57E-04 PX  6.50E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      559.64 TCPU      554.50
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6747379E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      559.65 TCPU      554.51
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1137358  16.8862642
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      559.69 TCPU      554.55
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      562.34 TCPU      557.17
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      570.04 TCPU      564.83
+ NUMERICALLY INTEGRATED DENSITY     30.0000375974
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      572.09 TCPU      566.87
+ CYC  45 ETOT(AU) -4.586250668223E+02 DETOT -4.38E-06 tst  5.43E-04 PX  6.17E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      572.10 TCPU      566.88
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6747723E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      572.11 TCPU      566.89
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1140941  16.8859059
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      572.15 TCPU      566.93
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      574.79 TCPU      569.56
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      582.46 TCPU      577.24
+ NUMERICALLY INTEGRATED DENSITY     30.0000375964
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      584.53 TCPU      579.28
+ CYC  46 ETOT(AU) -4.586250709364E+02 DETOT -4.11E-06 tst  5.30E-04 PX  5.86E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      584.54 TCPU      579.29
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6748046E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      584.55 TCPU      579.30
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1144265  16.8855735
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      584.59 TCPU      579.34
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      587.24 TCPU      581.96
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      594.97 TCPU      589.58
+ NUMERICALLY INTEGRATED DENSITY     30.0000375956
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      596.99 TCPU      591.59
+ CYC  47 ETOT(AU) -4.586250748053E+02 DETOT -3.87E-06 tst  5.18E-04 PX  5.55E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      597.01 TCPU      591.60
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6748350E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      597.02 TCPU      591.61
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1147333  16.8852667
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      597.05 TCPU      591.64
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      599.71 TCPU      594.27
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      607.38 TCPU      601.87
+ NUMERICALLY INTEGRATED DENSITY     30.0000375949
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      609.42 TCPU      603.90
+ CYC  48 ETOT(AU) -4.586250784481E+02 DETOT -3.64E-06 tst  5.06E-04 PX  5.27E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      609.43 TCPU      603.91
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6748635E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      609.44 TCPU      603.93
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1150189  16.8849811
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      609.48 TCPU      603.96
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      612.14 TCPU      606.59
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      619.81 TCPU      614.19
+ NUMERICALLY INTEGRATED DENSITY     30.0000375942
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      621.85 TCPU      616.20
+ CYC  49 ETOT(AU) -4.586250818823E+02 DETOT -3.43E-06 tst  4.94E-04 PX  5.00E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      621.86 TCPU      616.21
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6748902E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      621.87 TCPU      616.23
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1152836  16.8847164
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      621.91 TCPU      616.26
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      624.59 TCPU      618.92
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      632.28 TCPU      626.54
+ NUMERICALLY INTEGRATED DENSITY     30.0000375935
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      634.30 TCPU      628.54
+ CYC  50 ETOT(AU) -4.586250851236E+02 DETOT -3.24E-06 tst  4.82E-04 PX  4.75E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      634.31 TCPU      628.56
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6749153E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      634.32 TCPU      628.56
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1155298  16.8844702
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      634.36 TCPU      628.60
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      637.02 TCPU      631.23
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      644.70 TCPU      638.84
+ NUMERICALLY INTEGRATED DENSITY     30.0000375930
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      646.74 TCPU      640.86
+ CYC  51 ETOT(AU) -4.586250881862E+02 DETOT -3.06E-06 tst  4.71E-04 PX  4.49E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      646.75 TCPU      640.87
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6749389E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      646.76 TCPU      640.88
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1157590  16.8842410
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      646.80 TCPU      640.92
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      649.46 TCPU      643.55
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      657.17 TCPU      651.13
+ NUMERICALLY INTEGRATED DENSITY     30.0000375925
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      659.21 TCPU      653.14
+ CYC  52 ETOT(AU) -4.586250910825E+02 DETOT -2.90E-06 tst  4.60E-04 PX  4.27E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      659.22 TCPU      653.16
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6749611E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      659.23 TCPU      653.16
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1159734  16.8840266
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      659.27 TCPU      653.20
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      661.90 TCPU      655.81
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      669.57 TCPU      663.42
+ NUMERICALLY INTEGRATED DENSITY     30.0000375921
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      671.62 TCPU      665.42
+ CYC  53 ETOT(AU) -4.586250938253E+02 DETOT -2.74E-06 tst  4.49E-04 PX  4.04E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      671.63 TCPU      665.43
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6749820E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      671.64 TCPU      665.45
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1161748  16.8838252
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      671.68 TCPU      665.48
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      674.33 TCPU      668.11
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      682.00 TCPU      675.71
+ NUMERICALLY INTEGRATED DENSITY     30.0000375918
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      684.05 TCPU      677.71
+ CYC  54 ETOT(AU) -4.586250964260E+02 DETOT -2.60E-06 tst  4.39E-04 PX  3.82E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      684.06 TCPU      677.73
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6750016E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      684.07 TCPU      677.74
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1163622  16.8836378
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      684.11 TCPU      677.77
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      686.80 TCPU      680.39
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      694.46 TCPU      687.97
+ NUMERICALLY INTEGRATED DENSITY     30.0000375915
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      696.49 TCPU      689.96
+ CYC  55 ETOT(AU) -4.586250988931E+02 DETOT -2.47E-06 tst  4.28E-04 PX  3.64E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      696.51 TCPU      689.98
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6750202E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      696.52 TCPU      689.99
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1165386  16.8834614
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      696.55 TCPU      690.02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      699.22 TCPU      692.66
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      706.89 TCPU      700.24
+ NUMERICALLY INTEGRATED DENSITY     30.0000375912
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      708.94 TCPU      702.28
+ CYC  56 ETOT(AU) -4.586251012366E+02 DETOT -2.34E-06 tst  4.19E-04 PX  3.45E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      708.96 TCPU      702.29
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6750377E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      708.97 TCPU      702.30
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1167030  16.8832970
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      709.00 TCPU      702.34
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      711.66 TCPU      704.96
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      719.38 TCPU      712.54
+ NUMERICALLY INTEGRATED DENSITY     30.0000375911
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      721.42 TCPU      714.54
+ CYC  57 ETOT(AU) -4.586251034639E+02 DETOT -2.23E-06 tst  4.09E-04 PX  3.28E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      721.43 TCPU      714.56
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6750542E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      721.44 TCPU      714.56
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1168590  16.8831410
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      721.48 TCPU      714.60
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      724.17 TCPU      717.21
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      731.84 TCPU      724.80
+ NUMERICALLY INTEGRATED DENSITY     30.0000375909
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      733.88 TCPU      726.83
+ CYC  58 ETOT(AU) -4.586251055830E+02 DETOT -2.12E-06 tst  3.99E-04 PX  3.10E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      733.89 TCPU      726.85
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6750699E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      733.90 TCPU      726.86
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1170049  16.8829951
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      733.94 TCPU      726.89
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      736.58 TCPU      729.53
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      744.25 TCPU      737.20
+ NUMERICALLY INTEGRATED DENSITY     30.0000375908
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      746.34 TCPU      739.25
+ CYC  59 ETOT(AU) -4.586251076012E+02 DETOT -2.02E-06 tst  3.90E-04 PX  2.96E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      746.36 TCPU      739.26
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6750847E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      746.37 TCPU      739.27
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1171413  16.8828587
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      746.40 TCPU      739.31
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      749.05 TCPU      741.93
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      756.70 TCPU      749.58
+ NUMERICALLY INTEGRATED DENSITY     30.0000375908
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      758.77 TCPU      751.66
+ CYC  60 ETOT(AU) -4.586251095246E+02 DETOT -1.92E-06 tst  3.81E-04 PX  2.81E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      758.79 TCPU      751.67
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6750988E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      758.80 TCPU      751.68
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1172713  16.8827287
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      758.84 TCPU      751.71
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      761.48 TCPU      754.36
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      769.15 TCPU      762.02
+ NUMERICALLY INTEGRATED DENSITY     30.0000375908
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      771.17 TCPU      764.02
+ CYC  61 ETOT(AU) -4.586251113592E+02 DETOT -1.83E-06 tst  3.73E-04 PX  2.66E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      771.18 TCPU      764.04
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6751121E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      771.19 TCPU      764.05
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1173943  16.8826057
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      771.23 TCPU      764.08
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      773.88 TCPU      766.70
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      781.58 TCPU      774.28
+ NUMERICALLY INTEGRATED DENSITY     30.0000375908
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      783.60 TCPU      776.30
+ CYC  62 ETOT(AU) -4.586251131104E+02 DETOT -1.75E-06 tst  3.64E-04 PX  2.53E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      783.62 TCPU      776.32
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6751248E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      783.63 TCPU      776.32
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1175106  16.8824894
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      783.67 TCPU      776.36
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      786.33 TCPU      778.98
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      793.98 TCPU      786.57
+ NUMERICALLY INTEGRATED DENSITY     30.0000375908
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      796.02 TCPU      788.59
+ CYC  63 ETOT(AU) -4.586251147829E+02 DETOT -1.67E-06 tst  3.56E-04 PX  2.38E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      796.04 TCPU      788.60
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6751369E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      796.05 TCPU      788.61
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1176209  16.8823791
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      796.08 TCPU      788.65
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      798.72 TCPU      791.25
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      806.43 TCPU      798.90
+ NUMERICALLY INTEGRATED DENSITY     30.0000375908
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      808.47 TCPU      800.91
+ CYC  64 ETOT(AU) -4.586251163816E+02 DETOT -1.60E-06 tst  3.48E-04 PX  2.29E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      808.48 TCPU      800.92
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6751484E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      808.49 TCPU      800.93
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1177265  16.8822735
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      808.53 TCPU      800.97
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      811.16 TCPU      803.59
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      818.83 TCPU      811.25
+ NUMERICALLY INTEGRATED DENSITY     30.0000375909
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      820.87 TCPU      813.28
+ CYC  65 ETOT(AU) -4.586251179104E+02 DETOT -1.53E-06 tst  3.40E-04 PX  2.17E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      820.88 TCPU      813.30
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6751593E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      820.89 TCPU      813.31
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1178265  16.8821735
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      820.93 TCPU      813.34
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      823.55 TCPU      815.96
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      831.24 TCPU      823.64
+ NUMERICALLY INTEGRATED DENSITY     30.0000375910
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      833.27 TCPU      825.66
+ CYC  66 ETOT(AU) -4.586251193745E+02 DETOT -1.46E-06 tst  3.32E-04 PX  2.07E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      833.29 TCPU      825.67
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6751697E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      833.30 TCPU      825.68
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1179211  16.8820789
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      833.33 TCPU      825.72
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      836.03 TCPU      828.34
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      843.70 TCPU      835.93
+ NUMERICALLY INTEGRATED DENSITY     30.0000375911
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      845.74 TCPU      837.94
+ CYC  67 ETOT(AU) -4.586251207759E+02 DETOT -1.40E-06 tst  3.24E-04 PX  1.99E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      845.76 TCPU      837.95
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6751797E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      845.77 TCPU      837.96
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1180115  16.8819885
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      845.80 TCPU      837.99
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      848.45 TCPU      840.61
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      856.12 TCPU      848.21
+ NUMERICALLY INTEGRATED DENSITY     30.0000375912
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      858.16 TCPU      850.24
+ CYC  68 ETOT(AU) -4.586251221198E+02 DETOT -1.34E-06 tst  3.17E-04 PX  1.88E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      858.17 TCPU      850.25
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6751891E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      858.18 TCPU      850.26
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1180971  16.8819029
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      858.22 TCPU      850.29
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      860.85 TCPU      852.92
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      868.58 TCPU      860.59
+ NUMERICALLY INTEGRATED DENSITY     30.0000375913
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      870.62 TCPU      862.61
+ CYC  69 ETOT(AU) -4.586251234080E+02 DETOT -1.29E-06 tst  3.10E-04 PX  1.80E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      870.63 TCPU      862.63
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6751982E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      870.64 TCPU      862.63
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1181784  16.8818216
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      870.68 TCPU      862.67
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      873.33 TCPU      865.30
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      881.01 TCPU      872.90
+ NUMERICALLY INTEGRATED DENSITY     30.0000375915
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      883.07 TCPU      874.93
+ CYC  70 ETOT(AU) -4.586251246438E+02 DETOT -1.24E-06 tst  3.03E-04 PX  1.73E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      883.08 TCPU      874.95
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752069E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      883.09 TCPU      874.96
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1182564  16.8817436
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      883.13 TCPU      874.99
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      885.77 TCPU      877.61
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      893.43 TCPU      885.19
+ NUMERICALLY INTEGRATED DENSITY     30.0000375916
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      895.53 TCPU      887.21
+ CYC  71 ETOT(AU) -4.586251258304E+02 DETOT -1.19E-06 tst  2.96E-04 PX  1.64E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      895.54 TCPU      887.23
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752152E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      895.55 TCPU      887.24
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1183312  16.8816688
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      895.59 TCPU      887.27
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      898.23 TCPU      889.90
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      905.91 TCPU      897.50
+ NUMERICALLY INTEGRATED DENSITY     30.0000375918
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      907.94 TCPU      899.51
+ CYC  72 ETOT(AU) -4.586251269699E+02 DETOT -1.14E-06 tst  2.89E-04 PX  1.57E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      907.95 TCPU      899.52
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752232E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      907.96 TCPU      899.53
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1184013  16.8815987
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      908.00 TCPU      899.57
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      910.66 TCPU      902.18
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      918.32 TCPU      909.78
+ NUMERICALLY INTEGRATED DENSITY     30.0000375919
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      920.34 TCPU      911.77
+ CYC  73 ETOT(AU) -4.586251280648E+02 DETOT -1.09E-06 tst  2.83E-04 PX  1.51E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      920.36 TCPU      911.78
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752308E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      920.37 TCPU      911.79
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1184690  16.8815310
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      920.40 TCPU      911.83
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      923.05 TCPU      914.46
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      930.75 TCPU      922.05
+ NUMERICALLY INTEGRATED DENSITY     30.0000375921
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      932.79 TCPU      924.07
+ CYC  74 ETOT(AU) -4.586251291177E+02 DETOT -1.05E-06 tst  2.76E-04 PX  1.44E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      932.80 TCPU      924.08
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752381E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      932.81 TCPU      924.09
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1185330  16.8814670
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      932.85 TCPU      924.13
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      935.51 TCPU      926.76
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      943.18 TCPU      934.36
+ NUMERICALLY INTEGRATED DENSITY     30.0000375923
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      945.22 TCPU      936.39
+ CYC  75 ETOT(AU) -4.586251301304E+02 DETOT -1.01E-06 tst  2.70E-04 PX  1.37E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      945.23 TCPU      936.40
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752451E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      945.24 TCPU      936.41
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1185943  16.8814057
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      945.28 TCPU      936.45
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      947.93 TCPU      939.09
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      955.65 TCPU      946.68
+ NUMERICALLY INTEGRATED DENSITY     30.0000375925
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      957.68 TCPU      948.70
+ CYC  76 ETOT(AU) -4.586251311050E+02 DETOT -9.75E-07 tst  2.64E-04 PX  1.33E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      957.69 TCPU      948.71
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752518E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      957.70 TCPU      948.72
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1186537  16.8813463
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      957.74 TCPU      948.76
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      960.40 TCPU      951.38
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      968.06 TCPU      959.02
+ NUMERICALLY INTEGRATED DENSITY     30.0000375926
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      970.11 TCPU      961.04
+ CYC  77 ETOT(AU) -4.586251320431E+02 DETOT -9.38E-07 tst  2.58E-04 PX  1.26E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      970.12 TCPU      961.05
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752583E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      970.13 TCPU      961.06
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1187102  16.8812898
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      970.17 TCPU      961.10
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      972.82 TCPU      963.70
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      980.49 TCPU      971.27
+ NUMERICALLY INTEGRATED DENSITY     30.0000375928
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      982.52 TCPU      973.28
+ CYC  78 ETOT(AU) -4.586251329468E+02 DETOT -9.04E-07 tst  2.52E-04 PX  1.21E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      982.53 TCPU      973.30
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752645E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      982.54 TCPU      973.30
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1187639  16.8812361
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      982.58 TCPU      973.34
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      985.27 TCPU      975.99
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE      992.93 TCPU      983.58
+ NUMERICALLY INTEGRATED DENSITY     30.0000375930
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE      994.95 TCPU      985.60
+ CYC  79 ETOT(AU) -4.586251338175E+02 DETOT -8.71E-07 tst  2.47E-04 PX  1.17E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE      994.97 TCPU      985.61
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752704E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE      994.98 TCPU      985.63
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1188158  16.8811842
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE      995.01 TCPU      985.66
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE      997.66 TCPU      988.31
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1005.33 TCPU      995.96
+ NUMERICALLY INTEGRATED DENSITY     30.0000375932
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1007.34 TCPU      997.97
+ CYC  80 ETOT(AU) -4.586251346570E+02 DETOT -8.40E-07 tst  2.41E-04 PX  1.11E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1007.36 TCPU      997.98
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752762E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1007.37 TCPU      997.99
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1188660  16.8811340
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1007.41 TCPU      998.03
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1010.04 TCPU     1000.65
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1017.77 TCPU     1008.37
+ NUMERICALLY INTEGRATED DENSITY     30.0000375934
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1019.81 TCPU     1010.41
+ CYC  81 ETOT(AU) -4.586251354665E+02 DETOT -8.09E-07 tst  2.36E-04 PX  1.07E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1019.82 TCPU     1010.42
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752817E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1019.83 TCPU     1010.43
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1189137  16.8810863
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1019.87 TCPU     1010.46
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1022.52 TCPU     1013.10
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1030.18 TCPU     1020.75
+ NUMERICALLY INTEGRATED DENSITY     30.0000375936
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1032.23 TCPU     1022.77
+ CYC  82 ETOT(AU) -4.586251362471E+02 DETOT -7.81E-07 tst  2.30E-04 PX  1.04E-04
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1032.24 TCPU     1022.78
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752870E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1032.25 TCPU     1022.79
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1189596  16.8810404
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1032.29 TCPU     1022.83
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1034.94 TCPU     1025.46
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1042.62 TCPU     1033.06
+ NUMERICALLY INTEGRATED DENSITY     30.0000375938
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1044.71 TCPU     1035.08
+ CYC  83 ETOT(AU) -4.586251370008E+02 DETOT -7.54E-07 tst  2.25E-04 PX  9.85E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1044.73 TCPU     1035.09
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752921E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1044.74 TCPU     1035.10
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1190039  16.8809961
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1044.78 TCPU     1035.14
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1047.41 TCPU     1037.75
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1055.09 TCPU     1045.34
+ NUMERICALLY INTEGRATED DENSITY     30.0000375940
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1057.13 TCPU     1047.37
+ CYC  84 ETOT(AU) -4.586251377284E+02 DETOT -7.28E-07 tst  2.20E-04 PX  9.51E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1057.14 TCPU     1047.38
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6752970E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1057.15 TCPU     1047.39
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1190458  16.8809542
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1057.19 TCPU     1047.43
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1059.84 TCPU     1050.05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1067.51 TCPU     1057.61
+ NUMERICALLY INTEGRATED DENSITY     30.0000375942
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1069.53 TCPU     1059.63
+ CYC  85 ETOT(AU) -4.586251384307E+02 DETOT -7.02E-07 tst  2.15E-04 PX  9.23E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1069.54 TCPU     1059.65
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753018E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1069.55 TCPU     1059.66
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1190865  16.8809135
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1069.59 TCPU     1059.69
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1072.23 TCPU     1062.34
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1079.94 TCPU     1070.04
+ NUMERICALLY INTEGRATED DENSITY     30.0000375944
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1081.98 TCPU     1072.05
+ CYC  86 ETOT(AU) -4.586251391097E+02 DETOT -6.79E-07 tst  2.10E-04 PX  8.80E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1081.99 TCPU     1072.07
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753064E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1082.00 TCPU     1072.08
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1191258  16.8808742
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1082.04 TCPU     1072.12
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1084.68 TCPU     1074.76
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1092.34 TCPU     1082.41
+ NUMERICALLY INTEGRATED DENSITY     30.0000375946
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1094.36 TCPU     1084.40
+ CYC  87 ETOT(AU) -4.586251397654E+02 DETOT -6.56E-07 tst  2.06E-04 PX  8.50E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1094.37 TCPU     1084.41
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753108E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1094.38 TCPU     1084.42
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1191633  16.8808367
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1094.42 TCPU     1084.46
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1097.07 TCPU     1087.09
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1104.80 TCPU     1094.73
+ NUMERICALLY INTEGRATED DENSITY     30.0000375948
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1106.82 TCPU     1096.75
+ CYC  88 ETOT(AU) -4.586251403997E+02 DETOT -6.34E-07 tst  2.01E-04 PX  8.26E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1106.83 TCPU     1096.76
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753151E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1106.84 TCPU     1096.77
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1191999  16.8808001
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1106.88 TCPU     1096.81
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1109.50 TCPU     1099.43
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1117.17 TCPU     1107.10
+ NUMERICALLY INTEGRATED DENSITY     30.0000375950
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1119.20 TCPU     1109.13
+ CYC  89 ETOT(AU) -4.586251410124E+02 DETOT -6.13E-07 tst  1.96E-04 PX  7.90E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1119.21 TCPU     1109.15
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753193E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1119.22 TCPU     1109.16
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1192349  16.8807651
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1119.26 TCPU     1109.19
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1121.91 TCPU     1111.83
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1129.57 TCPU     1119.48
+ NUMERICALLY INTEGRATED DENSITY     30.0000375952
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1131.63 TCPU     1121.52
+ CYC  90 ETOT(AU) -4.586251416052E+02 DETOT -5.93E-07 tst  1.92E-04 PX  7.63E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1131.64 TCPU     1121.53
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753233E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1131.65 TCPU     1121.54
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1192693  16.8807307
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1131.69 TCPU     1121.58
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1134.33 TCPU     1124.19
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1142.07 TCPU     1131.84
+ NUMERICALLY INTEGRATED DENSITY     30.0000375954
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1144.11 TCPU     1133.86
+ CYC  91 ETOT(AU) -4.586251421784E+02 DETOT -5.73E-07 tst  1.88E-04 PX  7.31E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1144.13 TCPU     1133.87
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753272E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1144.14 TCPU     1133.89
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1193021  16.8806979
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1144.17 TCPU     1133.92
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1146.84 TCPU     1136.54
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1154.51 TCPU     1144.12
+ NUMERICALLY INTEGRATED DENSITY     30.0000375956
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1156.56 TCPU     1146.16
+ CYC  92 ETOT(AU) -4.586251427335E+02 DETOT -5.55E-07 tst  1.84E-04 PX  7.11E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1156.57 TCPU     1146.17
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753309E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1156.58 TCPU     1146.18
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1193334  16.8806666
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1156.62 TCPU     1146.22
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1159.28 TCPU     1148.85
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1166.99 TCPU     1156.46
+ NUMERICALLY INTEGRATED DENSITY     30.0000375958
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1169.02 TCPU     1158.44
+ CYC  93 ETOT(AU) -4.586251432704E+02 DETOT -5.37E-07 tst  1.79E-04 PX  6.87E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1169.03 TCPU     1158.46
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753345E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1169.04 TCPU     1158.46
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1193643  16.8806357
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1169.08 TCPU     1158.50
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1171.72 TCPU     1161.14
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1179.39 TCPU     1168.80
+ NUMERICALLY INTEGRATED DENSITY     30.0000375960
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1181.44 TCPU     1170.83
+ CYC  94 ETOT(AU) -4.586251437902E+02 DETOT -5.20E-07 tst  1.75E-04 PX  6.63E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1181.45 TCPU     1170.84
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753381E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1181.46 TCPU     1170.85
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1193934  16.8806066
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1181.50 TCPU     1170.89
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1184.15 TCPU     1173.53
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1191.83 TCPU     1181.13
+ NUMERICALLY INTEGRATED DENSITY     30.0000375962
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1193.87 TCPU     1183.15
+ CYC  95 ETOT(AU) -4.586251442937E+02 DETOT -5.03E-07 tst  1.71E-04 PX  6.48E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1193.89 TCPU     1183.17
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753415E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1193.90 TCPU     1183.17
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1194225  16.8805775
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1193.93 TCPU     1183.21
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1196.64 TCPU     1185.83
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1204.30 TCPU     1193.41
+ NUMERICALLY INTEGRATED DENSITY     30.0000375964
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1206.33 TCPU     1195.44
+ CYC  96 ETOT(AU) -4.586251447814E+02 DETOT -4.88E-07 tst  1.68E-04 PX  6.12E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1206.34 TCPU     1195.46
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753448E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1206.35 TCPU     1195.47
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1194498  16.8805502
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1206.39 TCPU     1195.50
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1209.02 TCPU     1198.13
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1216.69 TCPU     1205.80
+ NUMERICALLY INTEGRATED DENSITY     30.0000375965
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1218.73 TCPU     1207.84
+ CYC  97 ETOT(AU) -4.586251452540E+02 DETOT -4.73E-07 tst  1.64E-04 PX  6.01E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1218.74 TCPU     1207.85
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753480E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1218.75 TCPU     1207.86
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1194766  16.8805234
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1218.79 TCPU     1207.90
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1221.42 TCPU     1210.52
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1229.12 TCPU     1218.18
+ NUMERICALLY INTEGRATED DENSITY     30.0000375967
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1231.15 TCPU     1220.20
+ CYC  98 ETOT(AU) -4.586251457116E+02 DETOT -4.58E-07 tst  1.60E-04 PX  5.80E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1231.16 TCPU     1220.21
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753511E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1231.17 TCPU     1220.22
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1195026  16.8804974
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1231.21 TCPU     1220.26
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1233.85 TCPU     1222.89
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1241.53 TCPU     1230.56
+ NUMERICALLY INTEGRATED DENSITY     30.0000375969
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1243.57 TCPU     1232.60
+ CYC  99 ETOT(AU) -4.586251461554E+02 DETOT -4.44E-07 tst  1.57E-04 PX  5.64E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1243.58 TCPU     1232.62
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753541E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1243.59 TCPU     1232.63
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1195278  16.8804722
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1243.63 TCPU     1232.66
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1246.28 TCPU     1235.31
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1253.94 TCPU     1242.97
+ NUMERICALLY INTEGRATED DENSITY     30.0000375971
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1256.04 TCPU     1245.00
+ CYC 100 ETOT(AU) -4.586251465856E+02 DETOT -4.30E-07 tst  1.53E-04 PX  5.45E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1256.05 TCPU     1245.01
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753570E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1256.06 TCPU     1245.02
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1195525  16.8804475
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1256.10 TCPU     1245.06
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1258.74 TCPU     1247.71
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1266.43 TCPU     1255.29
+ NUMERICALLY INTEGRATED DENSITY     30.0000375973
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1268.47 TCPU     1257.32
+ CYC 101 ETOT(AU) -4.586251470024E+02 DETOT -4.17E-07 tst  1.50E-04 PX  5.31E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1268.48 TCPU     1257.33
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753599E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1268.49 TCPU     1257.34
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1195763  16.8804237
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1268.53 TCPU     1257.38
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1271.18 TCPU     1260.02
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1278.84 TCPU     1267.67
+ NUMERICALLY INTEGRATED DENSITY     30.0000375974
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1280.87 TCPU     1269.69
+ CYC 102 ETOT(AU) -4.586251474070E+02 DETOT -4.05E-07 tst  1.46E-04 PX  5.12E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1280.88 TCPU     1269.70
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753627E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1280.89 TCPU     1269.72
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1195991  16.8804009
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1280.93 TCPU     1269.75
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1283.58 TCPU     1272.39
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1291.29 TCPU     1280.00
+ NUMERICALLY INTEGRATED DENSITY     30.0000375976
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1293.33 TCPU     1282.00
+ CYC 103 ETOT(AU) -4.586251477992E+02 DETOT -3.92E-07 tst  1.43E-04 PX  5.01E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1293.35 TCPU     1282.02
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753653E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1293.36 TCPU     1282.02
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1196218  16.8803782
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1293.39 TCPU     1282.06
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1296.04 TCPU     1284.70
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1303.69 TCPU     1292.35
+ NUMERICALLY INTEGRATED DENSITY     30.0000375978
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1305.73 TCPU     1294.38
+ CYC 104 ETOT(AU) -4.586251481796E+02 DETOT -3.80E-07 tst  1.40E-04 PX  4.78E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1305.75 TCPU     1294.40
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753680E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1305.76 TCPU     1294.40
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1196434  16.8803566
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1305.79 TCPU     1294.44
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1308.45 TCPU     1297.07
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1316.15 TCPU     1304.69
+ NUMERICALLY INTEGRATED DENSITY     30.0000375980
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1318.19 TCPU     1306.68
+ CYC 105 ETOT(AU) -4.586251485490E+02 DETOT -3.69E-07 tst  1.37E-04 PX  4.74E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1318.20 TCPU     1306.69
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753705E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1318.21 TCPU     1306.71
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1196647  16.8803353
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1318.25 TCPU     1306.74
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1320.91 TCPU     1309.38
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1328.58 TCPU     1316.97
+ NUMERICALLY INTEGRATED DENSITY     30.0000375981
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1330.62 TCPU     1319.00
+ CYC 106 ETOT(AU) -4.586251489074E+02 DETOT -3.58E-07 tst  1.34E-04 PX  4.53E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1330.64 TCPU     1319.02
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753730E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1330.65 TCPU     1319.03
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1196853  16.8803147
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1330.69 TCPU     1319.06
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1333.33 TCPU     1321.67
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1340.99 TCPU     1329.24
+ NUMERICALLY INTEGRATED DENSITY     30.0000375983
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1343.02 TCPU     1331.24
+ CYC 107 ETOT(AU) -4.586251492553E+02 DETOT -3.48E-07 tst  1.31E-04 PX  4.40E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1343.04 TCPU     1331.26
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753754E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1343.05 TCPU     1331.27
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1197054  16.8802946
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1343.08 TCPU     1331.30
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1345.79 TCPU     1333.96
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1353.45 TCPU     1341.59
+ NUMERICALLY INTEGRATED DENSITY     30.0000375985
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1355.49 TCPU     1343.61
+ CYC 108 ETOT(AU) -4.586251495931E+02 DETOT -3.38E-07 tst  1.28E-04 PX  4.29E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1355.50 TCPU     1343.62
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753778E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1355.51 TCPU     1343.63
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1197246  16.8802754
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1355.55 TCPU     1343.67
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1358.20 TCPU     1346.29
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1365.87 TCPU     1353.87
+ NUMERICALLY INTEGRATED DENSITY     30.0000375986
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1367.90 TCPU     1355.88
+ CYC 109 ETOT(AU) -4.586251499210E+02 DETOT -3.28E-07 tst  1.25E-04 PX  4.20E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1367.92 TCPU     1355.90
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753801E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1367.93 TCPU     1355.91
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1197436  16.8802564
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1367.97 TCPU     1355.94
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1370.61 TCPU     1358.55
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1378.33 TCPU     1366.13
+ NUMERICALLY INTEGRATED DENSITY     30.0000375988
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1380.36 TCPU     1368.16
+ CYC 110 ETOT(AU) -4.586251502392E+02 DETOT -3.18E-07 tst  1.22E-04 PX  4.07E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1380.37 TCPU     1368.17
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753823E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1380.38 TCPU     1368.18
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1197620  16.8802380
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1380.42 TCPU     1368.22
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1383.05 TCPU     1370.85
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1390.73 TCPU     1378.50
+ NUMERICALLY INTEGRATED DENSITY     30.0000375990
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1392.75 TCPU     1380.52
+ CYC 111 ETOT(AU) -4.586251505485E+02 DETOT -3.09E-07 tst  1.19E-04 PX  4.00E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1392.76 TCPU     1380.53
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753845E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1392.77 TCPU     1380.54
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1197802  16.8802198
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1392.81 TCPU     1380.57
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1395.46 TCPU     1383.21
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1403.12 TCPU     1390.80
+ NUMERICALLY INTEGRATED DENSITY     30.0000375991
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1405.24 TCPU     1392.90
+ CYC 112 ETOT(AU) -4.586251508488E+02 DETOT -3.00E-07 tst  1.17E-04 PX  3.83E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1405.25 TCPU     1392.91
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753866E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1405.26 TCPU     1392.92
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1197977  16.8802023
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1405.30 TCPU     1392.95
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1407.93 TCPU     1395.58
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1415.61 TCPU     1403.26
+ NUMERICALLY INTEGRATED DENSITY     30.0000375993
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1417.64 TCPU     1405.26
+ CYC 113 ETOT(AU) -4.586251511405E+02 DETOT -2.92E-07 tst  1.14E-04 PX  3.78E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1417.66 TCPU     1405.27
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753887E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1417.67 TCPU     1405.28
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1198152  16.8801848
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1417.70 TCPU     1405.32
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1420.38 TCPU     1407.96
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1428.03 TCPU     1415.52
+ NUMERICALLY INTEGRATED DENSITY     30.0000375994
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1430.08 TCPU     1417.54
+ CYC 114 ETOT(AU) -4.586251514238E+02 DETOT -2.83E-07 tst  1.12E-04 PX  3.55E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1430.09 TCPU     1417.55
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753907E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1430.10 TCPU     1417.56
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1198321  16.8801679
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1430.14 TCPU     1417.60
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1432.78 TCPU     1420.20
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1440.50 TCPU     1427.79
+ NUMERICALLY INTEGRATED DENSITY     30.0000375996
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1442.54 TCPU     1429.80
+ CYC 115 ETOT(AU) -4.586251516991E+02 DETOT -2.75E-07 tst  1.09E-04 PX  3.45E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1442.55 TCPU     1429.81
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753927E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1442.56 TCPU     1429.82
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1198484  16.8801516
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1442.60 TCPU     1429.86
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1445.24 TCPU     1432.47
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1452.92 TCPU     1440.07
+ NUMERICALLY INTEGRATED DENSITY     30.0000375997
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1454.98 TCPU     1442.11
+ CYC 116 ETOT(AU) -4.586251519667E+02 DETOT -2.68E-07 tst  1.07E-04 PX  3.38E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1454.99 TCPU     1442.13
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753946E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1455.00 TCPU     1442.13
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1198646  16.8801354
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1455.04 TCPU     1442.17
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1457.69 TCPU     1444.80
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1465.41 TCPU     1452.45
+ NUMERICALLY INTEGRATED DENSITY     30.0000375999
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1467.45 TCPU     1454.47
+ CYC 117 ETOT(AU) -4.586251522268E+02 DETOT -2.60E-07 tst  1.04E-04 PX  3.43E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1467.46 TCPU     1454.49
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753965E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1467.47 TCPU     1454.49
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1198802  16.8801198
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1467.51 TCPU     1454.53
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1470.19 TCPU     1457.18
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1477.83 TCPU     1464.73
+ NUMERICALLY INTEGRATED DENSITY     30.0000376000
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1479.89 TCPU     1466.77
+ CYC 118 ETOT(AU) -4.586251524797E+02 DETOT -2.53E-07 tst  1.02E-04 PX  3.36E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1479.90 TCPU     1466.78
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6753984E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1479.91 TCPU     1466.80
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1198952  16.8801048
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1479.95 TCPU     1466.83
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1482.59 TCPU     1469.45
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1490.25 TCPU     1477.02
+ NUMERICALLY INTEGRATED DENSITY     30.0000376002
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1492.28 TCPU     1479.03
+ CYC 119 ETOT(AU) -4.586251527257E+02 DETOT -2.46E-07 tst  9.97E-05 PX  3.26E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1492.30 TCPU     1479.04
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754002E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1492.31 TCPU     1479.06
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1199098  16.8800902
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1492.34 TCPU     1479.09
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1495.02 TCPU     1481.71
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1502.69 TCPU     1489.37
+ NUMERICALLY INTEGRATED DENSITY     30.0000376003
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1504.72 TCPU     1491.39
+ CYC 120 ETOT(AU) -4.586251529648E+02 DETOT -2.39E-07 tst  9.75E-05 PX  3.20E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1504.73 TCPU     1491.41
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754019E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1504.74 TCPU     1491.42
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1199244  16.8800756
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1504.78 TCPU     1491.45
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1507.41 TCPU     1494.08
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1515.08 TCPU     1501.73
+ NUMERICALLY INTEGRATED DENSITY     30.0000376004
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1517.12 TCPU     1503.77
+ CYC 121 ETOT(AU) -4.586251531972E+02 DETOT -2.32E-07 tst  9.53E-05 PX  3.11E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1517.14 TCPU     1503.78
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754037E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1517.15 TCPU     1503.79
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1199384  16.8800616
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1517.18 TCPU     1503.83
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1519.83 TCPU     1506.47
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1527.53 TCPU     1514.11
+ NUMERICALLY INTEGRATED DENSITY     30.0000376006
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1529.57 TCPU     1516.13
+ CYC 122 ETOT(AU) -4.586251534233E+02 DETOT -2.26E-07 tst  9.32E-05 PX  3.04E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1529.59 TCPU     1516.14
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754053E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1529.60 TCPU     1516.15
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1199520  16.8800480
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1529.63 TCPU     1516.19
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1532.28 TCPU     1518.79
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1539.93 TCPU     1526.38
+ NUMERICALLY INTEGRATED DENSITY     30.0000376007
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1541.97 TCPU     1528.41
+ CYC 123 ETOT(AU) -4.586251536431E+02 DETOT -2.20E-07 tst  9.11E-05 PX  2.95E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1541.99 TCPU     1528.42
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754070E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1542.00 TCPU     1528.43
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1199655  16.8800345
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1542.03 TCPU     1528.47
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1544.65 TCPU     1531.07
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1552.33 TCPU     1538.73
+ NUMERICALLY INTEGRATED DENSITY     30.0000376008
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1554.37 TCPU     1540.75
+ CYC 124 ETOT(AU) -4.586251538568E+02 DETOT -2.14E-07 tst  8.91E-05 PX  2.94E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1554.39 TCPU     1540.76
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754086E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1554.40 TCPU     1540.77
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1199785  16.8800215
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1554.43 TCPU     1540.81
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1557.15 TCPU     1543.44
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1564.81 TCPU     1551.02
+ NUMERICALLY INTEGRATED DENSITY     30.0000376010
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1566.85 TCPU     1553.03
+ CYC 125 ETOT(AU) -4.586251540648E+02 DETOT -2.08E-07 tst  8.71E-05 PX  2.84E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1566.86 TCPU     1553.05
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754102E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1566.87 TCPU     1553.05
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1199914  16.8800086
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1566.91 TCPU     1553.09
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1569.57 TCPU     1555.72
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1577.24 TCPU     1563.31
+ NUMERICALLY INTEGRATED DENSITY     30.0000376011
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1579.30 TCPU     1565.36
+ CYC 126 ETOT(AU) -4.586251542670E+02 DETOT -2.02E-07 tst  8.51E-05 PX  2.72E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1579.32 TCPU     1565.37
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754117E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1579.33 TCPU     1565.38
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1200043  16.8799957
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1579.36 TCPU     1565.42
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1582.01 TCPU     1568.05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1589.74 TCPU     1575.69
+ NUMERICALLY INTEGRATED DENSITY     30.0000376012
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1591.77 TCPU     1577.68
+ CYC 127 ETOT(AU) -4.586251544637E+02 DETOT -1.97E-07 tst  8.32E-05 PX  2.73E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1591.79 TCPU     1577.70
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754132E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1591.80 TCPU     1577.71
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1200169  16.8799831
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1591.83 TCPU     1577.74
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1594.48 TCPU     1580.37
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1602.16 TCPU     1587.95
+ NUMERICALLY INTEGRATED DENSITY     30.0000376013
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1604.19 TCPU     1589.93
+ CYC 128 ETOT(AU) -4.586251546553E+02 DETOT -1.92E-07 tst  8.14E-05 PX  2.59E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1604.20 TCPU     1589.95
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754147E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1604.21 TCPU     1589.96
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1200289  16.8799711
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1604.25 TCPU     1589.99
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1606.91 TCPU     1592.62
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1614.60 TCPU     1600.25
+ NUMERICALLY INTEGRATED DENSITY     30.0000376015
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1616.64 TCPU     1602.26
+ CYC 129 ETOT(AU) -4.586251548416E+02 DETOT -1.86E-07 tst  7.96E-05 PX  2.59E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1616.65 TCPU     1602.28
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754161E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1616.66 TCPU     1602.29
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1200410  16.8799590
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1616.70 TCPU     1602.32
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1619.35 TCPU     1604.97
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1627.04 TCPU     1612.62
+ NUMERICALLY INTEGRATED DENSITY     30.0000376016
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1629.10 TCPU     1614.65
+ CYC 130 ETOT(AU) -4.586251550231E+02 DETOT -1.81E-07 tst  7.78E-05 PX  2.52E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1629.11 TCPU     1614.66
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754175E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1629.12 TCPU     1614.68
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1200526  16.8799474
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1629.16 TCPU     1614.71
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1631.80 TCPU     1617.33
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1639.47 TCPU     1624.91
+ NUMERICALLY INTEGRATED DENSITY     30.0000376017
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1641.51 TCPU     1626.94
+ CYC 131 ETOT(AU) -4.586251551994E+02 DETOT -1.76E-07 tst  7.61E-05 PX  2.50E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1641.53 TCPU     1626.95
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754189E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1641.54 TCPU     1626.97
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1200645  16.8799355
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1641.57 TCPU     1627.00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1644.22 TCPU     1629.63
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1651.93 TCPU     1637.23
+ NUMERICALLY INTEGRATED DENSITY     30.0000376018
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1653.96 TCPU     1639.23
+ CYC 132 ETOT(AU) -4.586251553712E+02 DETOT -1.72E-07 tst  7.44E-05 PX  2.40E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1653.98 TCPU     1639.25
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754203E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1653.99 TCPU     1639.26
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1200755  16.8799245
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1654.02 TCPU     1639.29
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1656.66 TCPU     1641.90
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1664.32 TCPU     1649.55
+ NUMERICALLY INTEGRATED DENSITY     30.0000376019
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1666.37 TCPU     1651.60
+ CYC 133 ETOT(AU) -4.586251555384E+02 DETOT -1.67E-07 tst  7.27E-05 PX  2.41E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1666.38 TCPU     1651.61
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754216E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1666.39 TCPU     1651.62
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1200869  16.8799131
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1666.43 TCPU     1651.66
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1669.08 TCPU     1654.27
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1676.79 TCPU     1661.90
+ NUMERICALLY INTEGRATED DENSITY     30.0000376020
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1678.85 TCPU     1663.94
+ CYC 134 ETOT(AU) -4.586251557012E+02 DETOT -1.63E-07 tst  7.11E-05 PX  2.31E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1678.86 TCPU     1663.95
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754229E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1678.88 TCPU     1663.96
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1200974  16.8799026
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1678.91 TCPU     1664.00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1681.55 TCPU     1666.61
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1689.24 TCPU     1674.20
+ NUMERICALLY INTEGRATED DENSITY     30.0000376021
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1691.29 TCPU     1676.24
+ CYC 135 ETOT(AU) -4.586251558596E+02 DETOT -1.58E-07 tst  6.95E-05 PX  2.29E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1691.30 TCPU     1676.25
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754242E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1691.31 TCPU     1676.26
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1201080  16.8798920
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1691.35 TCPU     1676.30
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1694.00 TCPU     1678.91
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1701.66 TCPU     1686.48
+ NUMERICALLY INTEGRATED DENSITY     30.0000376022
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1703.72 TCPU     1688.49
+ CYC 136 ETOT(AU) -4.586251560140E+02 DETOT -1.54E-07 tst  6.80E-05 PX  2.24E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1703.73 TCPU     1688.50
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754255E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1703.74 TCPU     1688.51
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1201187  16.8798813
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1703.78 TCPU     1688.55
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1706.46 TCPU     1691.18
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1714.12 TCPU     1698.83
+ NUMERICALLY INTEGRATED DENSITY     30.0000376024
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1716.16 TCPU     1700.86
+ CYC 137 ETOT(AU) -4.586251561642E+02 DETOT -1.50E-07 tst  6.65E-05 PX  2.24E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1716.18 TCPU     1700.87
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754267E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1716.19 TCPU     1700.88
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1201288  16.8798712
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1716.23 TCPU     1700.92
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1718.85 TCPU     1703.54
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1726.50 TCPU     1711.19
+ NUMERICALLY INTEGRATED DENSITY     30.0000376025
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1728.56 TCPU     1713.20
+ CYC 138 ETOT(AU) -4.586251563105E+02 DETOT -1.46E-07 tst  6.50E-05 PX  2.16E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1728.58 TCPU     1713.21
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754279E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1728.59 TCPU     1713.22
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1201391  16.8798609
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1728.62 TCPU     1713.26
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1731.26 TCPU     1715.90
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1738.97 TCPU     1723.56
+ NUMERICALLY INTEGRATED DENSITY     30.0000376026
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1740.99 TCPU     1725.58
+ CYC 139 ETOT(AU) -4.586251564528E+02 DETOT -1.42E-07 tst  6.35E-05 PX  2.11E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1741.01 TCPU     1725.59
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754291E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1741.02 TCPU     1725.60
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1201490  16.8798510
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1741.05 TCPU     1725.64
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1743.68 TCPU     1728.27
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1751.36 TCPU     1735.95
+ NUMERICALLY INTEGRATED DENSITY     30.0000376027
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1753.39 TCPU     1737.95
+ CYC 140 ETOT(AU) -4.586251565915E+02 DETOT -1.39E-07 tst  6.21E-05 PX  2.08E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1753.41 TCPU     1737.96
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754303E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1753.42 TCPU     1737.97
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1201590  16.8798410
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1753.45 TCPU     1738.01
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1756.11 TCPU     1740.66
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1763.76 TCPU     1748.31
+ NUMERICALLY INTEGRATED DENSITY     30.0000376028
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1765.87 TCPU     1750.37
+ CYC 141 ETOT(AU) -4.586251567265E+02 DETOT -1.35E-07 tst  6.07E-05 PX  2.00E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1765.89 TCPU     1750.39
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754314E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1765.90 TCPU     1750.40
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1201686  16.8798314
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1765.93 TCPU     1750.43
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1768.57 TCPU     1753.05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1776.23 TCPU     1760.71
+ NUMERICALLY INTEGRATED DENSITY     30.0000376029
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1778.29 TCPU     1762.74
+ CYC 142 ETOT(AU) -4.586251568580E+02 DETOT -1.31E-07 tst  5.94E-05 PX  2.04E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1778.30 TCPU     1762.75
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754326E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1778.31 TCPU     1762.77
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1201780  16.8798220
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1778.35 TCPU     1762.80
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1781.00 TCPU     1765.44
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1788.69 TCPU     1773.04
+ NUMERICALLY INTEGRATED DENSITY     30.0000376030
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1790.74 TCPU     1775.06
+ CYC 143 ETOT(AU) -4.586251569860E+02 DETOT -1.28E-07 tst  5.81E-05 PX  1.91E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1790.75 TCPU     1775.07
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754337E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1790.76 TCPU     1775.08
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1201874  16.8798126
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1790.80 TCPU     1775.12
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1793.44 TCPU     1777.73
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1801.17 TCPU     1785.38
+ NUMERICALLY INTEGRATED DENSITY     30.0000376031
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1803.20 TCPU     1787.38
+ CYC 144 ETOT(AU) -4.586251571107E+02 DETOT -1.25E-07 tst  5.68E-05 PX  1.87E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1803.21 TCPU     1787.40
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754348E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1803.22 TCPU     1787.41
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1201966  16.8798034
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1803.26 TCPU     1787.44
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1805.90 TCPU     1790.05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1813.56 TCPU     1797.64
+ NUMERICALLY INTEGRATED DENSITY     30.0000376032
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1815.61 TCPU     1799.66
+ CYC 145 ETOT(AU) -4.586251572320E+02 DETOT -1.21E-07 tst  5.55E-05 PX  1.92E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1815.62 TCPU     1799.68
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754359E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1815.63 TCPU     1799.69
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1202057  16.8797943
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1815.67 TCPU     1799.72
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1818.29 TCPU     1802.33
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1826.01 TCPU     1810.00
+ NUMERICALLY INTEGRATED DENSITY     30.0000376033
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1828.05 TCPU     1812.04
+ CYC 146 ETOT(AU) -4.586251573503E+02 DETOT -1.18E-07 tst  5.43E-05 PX  1.80E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1828.07 TCPU     1812.06
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754369E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1828.08 TCPU     1812.07
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1202145  16.8797855
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1828.11 TCPU     1812.10
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1830.75 TCPU     1814.73
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1838.43 TCPU     1822.41
+ NUMERICALLY INTEGRATED DENSITY     30.0000376034
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1840.47 TCPU     1824.45
+ CYC 147 ETOT(AU) -4.586251574655E+02 DETOT -1.15E-07 tst  5.31E-05 PX  1.78E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1840.49 TCPU     1824.46
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754380E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1840.50 TCPU     1824.47
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1202233  16.8797767
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1840.53 TCPU     1824.51
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1843.18 TCPU     1827.15
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1850.84 TCPU     1834.81
+ NUMERICALLY INTEGRATED DENSITY     30.0000376035
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1852.87 TCPU     1836.84
+ CYC 148 ETOT(AU) -4.586251575777E+02 DETOT -1.12E-07 tst  5.19E-05 PX  1.75E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1852.88 TCPU     1836.85
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754390E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1852.89 TCPU     1836.86
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1202318  16.8797682
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1852.93 TCPU     1836.90
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1855.63 TCPU     1839.59
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1863.30 TCPU     1847.24
+ NUMERICALLY INTEGRATED DENSITY     30.0000376035
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1865.33 TCPU     1849.28
+ CYC 149 ETOT(AU) -4.586251576871E+02 DETOT -1.09E-07 tst  5.07E-05 PX  1.81E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1865.34 TCPU     1849.29
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754400E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1865.35 TCPU     1849.30
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1202403  16.8797597
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1865.39 TCPU     1849.34
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1868.04 TCPU     1851.98
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1875.71 TCPU     1859.57
+ NUMERICALLY INTEGRATED DENSITY     30.0000376036
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1877.77 TCPU     1861.59
+ CYC 150 ETOT(AU) -4.586251577936E+02 DETOT -1.07E-07 tst  4.96E-05 PX  1.71E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1877.78 TCPU     1861.60
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754410E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1877.79 TCPU     1861.61
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1202483  16.8797517
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1877.83 TCPU     1861.65
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1880.47 TCPU     1864.28
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1888.18 TCPU     1871.98
+ NUMERICALLY INTEGRATED DENSITY     30.0000376037
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1890.22 TCPU     1874.02
+ CYC 151 ETOT(AU) -4.586251578974E+02 DETOT -1.04E-07 tst  4.85E-05 PX  1.75E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1890.24 TCPU     1874.03
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754420E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1890.25 TCPU     1874.04
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1202565  16.8797435
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1890.28 TCPU     1874.08
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1892.93 TCPU     1876.72
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1900.59 TCPU     1884.38
+ NUMERICALLY INTEGRATED DENSITY     30.0000376038
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1902.62 TCPU     1886.37
+ CYC 152 ETOT(AU) -4.586251579985E+02 DETOT -1.01E-07 tst  4.74E-05 PX  1.64E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1902.63 TCPU     1886.38
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754430E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1902.64 TCPU     1886.39
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1202644  16.8797356
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1902.68 TCPU     1886.43
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1905.32 TCPU     1889.07
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1912.99 TCPU     1896.73
+ NUMERICALLY INTEGRATED DENSITY     30.0000376039
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1915.06 TCPU     1898.72
+ CYC 153 ETOT(AU) -4.586251580971E+02 DETOT -9.86E-08 tst  4.64E-05 PX  1.71E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT FDIK        TELAPSE     1915.08 TCPU     1898.73
+ INSULATING STATE - TOP OF VALENCE BANDS (A.U.) -3.6754439E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT PDIG        TELAPSE     1915.09 TCPU     1898.74
+ CHARGE NORMALIZATION FACTOR   1.00000000
+ TOTAL ATOMIC CHARGES:
+  13.1202719  16.8797281
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MOQGAD      TELAPSE     1915.12 TCPU     1898.78
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT SHELLX      TELAPSE     1917.78 TCPU     1901.41
+ +++ ENERGIES IN A.U. +++
+ ::: EXT EL-POLE                                  -7.9373099865700E+02
+ ::: EXT EL-SPHEROPOLE                             6.8747991602045E+00
+ ::: BIELET ZONE E-E                               9.2056185713685E+02
+ ::: TOTAL E-E                                     1.3370565764005E+02
+ ::: TOTAL E-N + N-E                              -8.8454949321663E+02
+ ::: TOTAL N-N                                    -1.1576635052302E+02
+ ::: KINETIC ENERGY                                4.4155877965988E+02
+ ::: PSEUDO TOTAL   ENERGY                        -4.2505140643972E+02
+ ::: VIRIAL COEFFICIENT                            1.0190482104699E+00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT MONMO3      TELAPSE     1925.43 TCPU     1909.05
+ NUMERICALLY INTEGRATED DENSITY     30.0000376040
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT NUMDFT      TELAPSE     1927.47 TCPU     1911.06
+ CYC 154 ETOT(AU) -4.586251581931E+02 DETOT -9.60E-08 tst  4.53E-05 PX  1.71E-05
+
+ == SCF ENDED - CONVERGENCE ON ENERGY      E(AU) -4.5862515819313E+02 CYCLES 154
+
+
+ ENERGY EXPRESSION=HARTREE+FOCK EXCH*0.00000+(PBE   EXCH)*1.00000+PBE   CORR
+
+
+ TOTAL ENERGY(DFT)(AU)(154) -4.5862515819313E+02 DE-9.6E-08 tester 4.5E-05
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT EDFT        TELAPSE     1927.47 TCPU     1911.06
+ INFORMATION **** optc001 **** GEOMETRY OUTPUT FILE
+ CLASSICAL MODEL (SCHLEGEL) USED AS INITIAL HESSIAN MATRIX
+ REFERENCE GEOMETRY DEFINED
+
+ MAX GRADIENT      0.002663  THRESHOLD              0.000450 CONVERGED NO
+ RMS GRADIENT      0.002663  THRESHOLD              0.000300 CONVERGED NO
+
+ GRADIENT NORM     0.002663  GRADIENT THRESHOLD     0.500000
+
+ PREDICTED ENERGY CHANGE     0.189E-03
+
+ INITIAL DISPLACEMENTS
+  0.011725
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT OPTI        TELAPSE     2073.13 TCPU     2051.10
+
+ OPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPT
+
+ STARTING GEOMETRY OPTIMIZATION - INFORMATION ON SCF MOVED TO SCFOUT.LOG
+ GEOMETRY OPTIMIZATION INFORMATION STORED IN OPTINFO.DAT
+
+ OPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPT
+ *******************************************************************************
+ CELL OPTIMIZATION - POINT    2
+ *******************************************************************************
+ LATTICE PARAMETERS (ANGSTROMS AND DEGREES) - BOHR = 0.5291772083 ANGSTROM
+ PRIMITIVE CELL - CENTRING CODE 5/0 VOLUME=    51.132866 - DENSITY 7.792 g/cm^3
+         A              B              C           ALPHA      BETA       GAMMA 
+     4.16618334     4.16618334     4.16618334    60.000000  60.000000  60.000000
+ *******************************************************************************
+ ATOMS IN THE ASYMMETRIC UNIT    2 - ATOMS IN THE UNIT CELL:    2
+     ATOM              X/A                 Y/B                 Z/C    
+ *******************************************************************************
+   1 T 282 PB    0.000000000000E+00  0.000000000000E+00  0.000000000000E+00
+   2 T  16 S    -5.000000000000E-01 -5.000000000000E-01 -5.000000000000E-01
+
+ TRANSFORMATION MATRIX PRIMITIVE-CRYSTALLOGRAPHIC CELL
+ -1.0000  1.0000  1.0000  1.0000 -1.0000  1.0000  1.0000  1.0000 -1.0000
+
+ *******************************************************************************
+ CRYSTALLOGRAPHIC CELL (VOLUME=        204.53146345)
+         A              B              C           ALPHA      BETA       GAMMA 
+     5.89187298     5.89187298     5.89187298    90.000000  90.000000  90.000000
+
+ COORDINATES IN THE CRYSTALLOGRAPHIC CELL
+     ATOM              X/A                 Y/B                 Z/C    
+ *******************************************************************************
+   1 T 282 PB    0.000000000000E+00  0.000000000000E+00  0.000000000000E+00
+   2 T  16 S    -5.000000000000E-01 -5.000000000000E-01 -5.000000000000E-01
+
+ T = ATOM BELONGING TO THE ASYMMETRIC UNIT
+
+ TOTAL ENERGY(DFT)(AU)( 15) -4.5862503162758E+02     DE (AU)    1.266E-04
+
+ SYMMETRY ALLOWED FORCES  (COORDINATE, FORCE)
+
+    1 -2.4590576E-02
+
+ GRADIENT NORM     0.024591  GRADIENT THRESHOLD     0.500000
+
+ PREDICTED ENERGY CHANGE    -0.130E-03
+
+ MAX GRADIENT      0.024591  THRESHOLD              0.000450 CONVERGED NO
+ RMS GRADIENT      0.024591  THRESHOLD              0.000300 CONVERGED NO
+ MAX DISPLAC.      0.010579  THRESHOLD              0.001800 CONVERGED NO
+ RMS DISPLAC.      0.010579  THRESHOLD              0.001200 CONVERGED NO
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT OPTI        TELAPSE     2393.29 TCPU     2363.88
+ *******************************************************************************
+ CELL OPTIMIZATION - POINT    3
+ *******************************************************************************
+ LATTICE PARAMETERS (ANGSTROMS AND DEGREES) - BOHR = 0.5291772083 ANGSTROM
+ PRIMITIVE CELL - CENTRING CODE 5/0 VOLUME=    50.201643 - DENSITY 7.937 g/cm^3
+         A              B              C           ALPHA      BETA       GAMMA 
+     4.14073696     4.14073696     4.14073696    60.000000  60.000000  60.000000
+ *******************************************************************************
+ ATOMS IN THE ASYMMETRIC UNIT    2 - ATOMS IN THE UNIT CELL:    2
+     ATOM              X/A                 Y/B                 Z/C    
+ *******************************************************************************
+   1 T 282 PB    0.000000000000E+00  0.000000000000E+00  0.000000000000E+00
+   2 T  16 S    -5.000000000000E-01 -5.000000000000E-01 -5.000000000000E-01
+
+ TRANSFORMATION MATRIX PRIMITIVE-CRYSTALLOGRAPHIC CELL
+ -1.0000  1.0000  1.0000  1.0000 -1.0000  1.0000  1.0000  1.0000 -1.0000
+
+ *******************************************************************************
+ CRYSTALLOGRAPHIC CELL (VOLUME=        200.80657212)
+         A              B              C           ALPHA      BETA       GAMMA 
+     5.85588637     5.85588637     5.85588637    90.000000  90.000000  90.000000
+
+ COORDINATES IN THE CRYSTALLOGRAPHIC CELL
+     ATOM              X/A                 Y/B                 Z/C    
+ *******************************************************************************
+   1 T 282 PB    0.000000000000E+00  0.000000000000E+00  0.000000000000E+00
+   2 T  16 S    -5.000000000000E-01 -5.000000000000E-01 -5.000000000000E-01
+
+ T = ATOM BELONGING TO THE ASYMMETRIC UNIT
+
+ TOTAL ENERGY(DFT)(AU)( 15) -4.5862516256285E+02     DE (AU)   -1.309E-04
+
+ SYMMETRY ALLOWED FORCES  (COORDINATE, FORCE)
+
+    1  9.4591684E-05
+
+ GRADIENT NORM     0.000095  GRADIENT THRESHOLD     0.500000
+
+ PREDICTED ENERGY CHANGE    -0.192E-08
+
+ MAX GRADIENT      0.000095  THRESHOLD              0.000450 CONVERGED YES
+ RMS GRADIENT      0.000095  THRESHOLD              0.000300 CONVERGED YES
+ MAX DISPLAC.      0.000041  THRESHOLD              0.001800 CONVERGED YES
+ RMS DISPLAC.      0.000041  THRESHOLD              0.001200 CONVERGED YES
+
+ CONVERGENCE TESTS SATISFIED AFTER   3 ENERGY AND GRADIENT CALCULATIONS
+
+ ******************************************************************
+ * OPT END - CONVERGED * E(AU):  -4.586251625628E+02  POINTS    3 *
+ ******************************************************************
+
+ EIGENVECTORS IN FORTRAN UNIT  8
+
+ NEIGHBORS OF THE NON-EQUIVALENT ATOMS
+
+ N = NUMBER OF NEIGHBORS AT DISTANCE R
+    ATOM  N     R/ANG      R/AU   NEIGHBORS (ATOM LABELS AND CELL INDICES)
+   1 PB   6     2.9279     5.5330   2 S   -1 0 0   2 S    0-1 0   2 S    0 0-1
+                                    2 S   -1-1 0   2 S   -1 0-1   2 S    0-1-1
+   1 PB  12     4.1407     7.8249   1 PB  -1 0 0   1 PB   1 0 0   1 PB  -1 0 1
+                                    1 PB   1 0-1   1 PB  -1 1 0   1 PB   1-1 0
+                                    1 PB   0-1 0   1 PB   0 1 0   1 PB   0-1 1
+                                    1 PB   0 1-1   1 PB   0 0-1   1 PB   0 0 1
+   1 PB   8     5.0713     9.5835   2 S    0 0 0   2 S   -1-1 1   2 S   -1 1-1
+                                    2 S    1-1-1   2 S   -2 0 0   2 S    0-2 0
+                                    2 S    0 0-2   2 S   -1-1-1
+   1 PB   6     5.8559    11.0660   1 PB  -1-1 1   1 PB   1 1-1   1 PB  -1 1-1
+                                    1 PB   1-1 1   1 PB  -1 1 1   1 PB   1-1-1
+   1 PB  24     6.5471    12.3722   2 S    1 0-1   2 S   -1 0 1   2 S    1-1 0
+                                    2 S   -1 1 0   2 S    0 1-1   2 S    0-1 1
+                                    2 S   -2 0 1   2 S   -2 1 0   2 S    1 0-2
+                                    2 S    1-2 0   2 S    0-2 1   2 S    0 1-2
+                                    2 S   -2-1 1   2 S   -2 1-1   2 S   -1-2 1
+                                    2 S   -1 1-2   2 S    1-1-2   2 S    1-2-1
+                                    2 S   -2-1 0   2 S   -2 0-1   2 S   -1-2 0
+                                    2 S   -1 0-2   2 S    0-2-1   2 S    0-1-2
+   1 PB  24     7.1720    13.5531   1 PB  -2 0 1   1 PB   2 0-1   1 PB  -2 1 0
+                                    1 PB   2-1 0   1 PB  -2 1 1   1 PB   2-1-1
+                                    1 PB  -1-1 0   1 PB   1 1 0   1 PB  -1-1 2
+                                    1 PB   1 1-2   1 PB  -1 0-1   1 PB   1 0 1
+                                    1 PB  -1 0 2   1 PB   1 0-2   1 PB  -1 2-1
+                                    1 PB   1-2 1   1 PB  -1 2 0   1 PB   1-2 0
+                                    1 PB   0-2 1   1 PB   0 2-1   1 PB   0-1-1
+                                    1 PB   0 1 1   1 PB   0-1 2   1 PB   0 1-2
+
+   2 S    6     2.9279     5.5330   1 PB   1 0 0   1 PB   0 1 0   1 PB   0 0 1
+                                    1 PB   1 1 0   1 PB   1 0 1   1 PB   0 1 1
+   2 S   12     4.1407     7.8249   2 S   -1 0 0   2 S    1 0 0   2 S   -1 0 1
+                                    2 S    1 0-1   2 S   -1 1 0   2 S    1-1 0
+                                    2 S    0-1 0   2 S    0 1 0   2 S    0-1 1
+                                    2 S    0 1-1   2 S    0 0-1   2 S    0 0 1
+   2 S    8     5.0713     9.5835   1 PB   0 0 0   1 PB   1 1-1   1 PB   1-1 1
+                                    1 PB  -1 1 1   1 PB   2 0 0   1 PB   0 2 0
+                                    1 PB   0 0 2   1 PB   1 1 1
+   2 S    6     5.8559    11.0660   2 S   -1-1 1   2 S    1 1-1   2 S   -1 1-1
+                                    2 S    1-1 1   2 S   -1 1 1   2 S    1-1-1
+   2 S   24     6.5471    12.3722   1 PB  -1 0 1   1 PB   1 0-1   1 PB  -1 1 0
+                                    1 PB   1-1 0   1 PB   0-1 1   1 PB   0 1-1
+                                    1 PB   2 0-1   1 PB   2-1 0   1 PB  -1 0 2
+                                    1 PB  -1 2 0   1 PB   0 2-1   1 PB   0-1 2
+                                    1 PB   2 1-1   1 PB   2-1 1   1 PB   1 2-1
+                                    1 PB   1-1 2   1 PB  -1 1 2   1 PB  -1 2 1
+                                    1 PB   2 1 0   1 PB   2 0 1   1 PB   1 2 0
+                                    1 PB   1 0 2   1 PB   0 2 1   1 PB   0 1 2
+   2 S   24     7.1720    13.5531   2 S   -2 0 1   2 S    2 0-1   2 S   -2 1 0
+                                    2 S    2-1 0   2 S   -2 1 1   2 S    2-1-1
+                                    2 S   -1-1 0   2 S    1 1 0   2 S   -1-1 2
+                                    2 S    1 1-2   2 S   -1 0-1   2 S    1 0 1
+                                    2 S   -1 0 2   2 S    1 0-2   2 S   -1 2-1
+                                    2 S    1-2 1   2 S   -1 2 0   2 S    1-2 0
+                                    2 S    0-2 1   2 S    0 2-1   2 S    0-1-1
+                                    2 S    0 1 1   2 S    0-1 2   2 S    0 1-2
+
+
+ FINAL OPTIMIZED GEOMETRY - DIMENSIONALITY OF THE SYSTEM      3
+ (NON PERIODIC DIRECTION: LATTICE PARAMETER FORMALLY SET TO 500)
+ *******************************************************************************
+ LATTICE PARAMETERS (ANGSTROMS AND DEGREES) - BOHR = 0.5291772083 ANGSTROM
+ PRIMITIVE CELL - CENTRING CODE 5/0 VOLUME=    50.201643 - DENSITY 7.937 g/cm^3
+         A              B              C           ALPHA      BETA       GAMMA 
+     4.14073696     4.14073696     4.14073696    60.000000  60.000000  60.000000
+ *******************************************************************************
+ ATOMS IN THE ASYMMETRIC UNIT    2 - ATOMS IN THE UNIT CELL:    2
+     ATOM              X/A                 Y/B                 Z/C    
+ *******************************************************************************
+   1 T 282 PB    0.000000000000E+00  0.000000000000E+00  0.000000000000E+00
+   2 T  16 S    -5.000000000000E-01 -5.000000000000E-01 -5.000000000000E-01
+
+ TRANSFORMATION MATRIX PRIMITIVE-CRYSTALLOGRAPHIC CELL
+ -1.0000  1.0000  1.0000  1.0000 -1.0000  1.0000  1.0000  1.0000 -1.0000
+
+ *******************************************************************************
+ CRYSTALLOGRAPHIC CELL (VOLUME=        200.80657212)
+         A              B              C           ALPHA      BETA       GAMMA 
+     5.85588637     5.85588637     5.85588637    90.000000  90.000000  90.000000
+
+ COORDINATES IN THE CRYSTALLOGRAPHIC CELL
+     ATOM              X/A                 Y/B                 Z/C    
+ *******************************************************************************
+   1 T 282 PB    0.000000000000E+00  0.000000000000E+00  0.000000000000E+00
+   2 T  16 S    -5.000000000000E-01 -5.000000000000E-01 -5.000000000000E-01
+
+ T = ATOM BELONGING TO THE ASYMMETRIC UNIT
+ INFORMATION **** fort.34 **** GEOMETRY OUTPUT FILE
+
+ DIRECT LATTICE VECTORS CARTESIAN COMPONENTS (ANGSTROM)
+          X                    Y                    Z
+   0.000000000000E+00   0.292794318466E+01   0.292794318466E+01
+   0.292794318466E+01   0.000000000000E+00   0.292794318466E+01
+   0.292794318466E+01   0.292794318466E+01   0.000000000000E+00
+
+
+ CARTESIAN COORDINATES - PRIMITIVE CELL
+ *******************************************************************************
+ *      ATOM          X(ANGSTROM)         Y(ANGSTROM)         Z(ANGSTROM)
+ *******************************************************************************
+   1   282 PB    0.000000000000E+00  0.000000000000E+00  0.000000000000E+00
+   2    16 S     2.927943184657E+00  2.927943184657E+00  2.927943184657E+00
+
+ ****  48 SYMMOPS - TRANSLATORS IN FRACTIONARY UNITS
+  V INV                   ROTATION MATRICES                       TRANSLATOR
+  1  1  1.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00    0.00  0.00  0.00
+  2  2  0.00  1.00  0.00  1.00  0.00  0.00 -1.00 -1.00 -1.00    0.00  0.00  0.00
+  3  3 -1.00 -1.00 -1.00  0.00  0.00  1.00  0.00  1.00  0.00    0.00  0.00  0.00
+  4  4  0.00  0.00  1.00 -1.00 -1.00 -1.00  1.00  0.00  0.00    0.00  0.00  0.00
+  5  6  0.00  0.00  1.00  1.00  0.00  0.00  0.00  1.00  0.00    0.00  0.00  0.00
+  6  5  0.00  1.00  0.00  0.00  0.00  1.00  1.00  0.00  0.00    0.00  0.00  0.00
+  7  8  1.00  0.00  0.00  0.00  0.00  1.00 -1.00 -1.00 -1.00    0.00  0.00  0.00
+  8  7  1.00  0.00  0.00 -1.00 -1.00 -1.00  0.00  1.00  0.00    0.00  0.00  0.00
+  9 10 -1.00 -1.00 -1.00  0.00  1.00  0.00  1.00  0.00  0.00    0.00  0.00  0.00
+ 10  9  0.00  0.00  1.00  0.00  1.00  0.00 -1.00 -1.00 -1.00    0.00  0.00  0.00
+ 11 12  0.00  1.00  0.00 -1.00 -1.00 -1.00  0.00  0.00  1.00    0.00  0.00  0.00
+ 12 11 -1.00 -1.00 -1.00  1.00  0.00  0.00  0.00  0.00  1.00    0.00  0.00  0.00
+ 13 13  0.00 -1.00  0.00 -1.00  0.00  0.00  0.00  0.00 -1.00    0.00  0.00  0.00
+ 14 14 -1.00  0.00  0.00  0.00 -1.00  0.00  1.00  1.00  1.00    0.00  0.00  0.00
+ 15 16  0.00  0.00 -1.00  1.00  1.00  1.00  0.00 -1.00  0.00    0.00  0.00  0.00
+ 16 15  1.00  1.00  1.00  0.00  0.00 -1.00 -1.00  0.00  0.00    0.00  0.00  0.00
+ 17 17 -1.00  0.00  0.00  0.00  0.00 -1.00  0.00 -1.00  0.00    0.00  0.00  0.00
+ 18 18  0.00  0.00 -1.00  0.00 -1.00  0.00 -1.00  0.00  0.00    0.00  0.00  0.00
+ 19 21  0.00  0.00 -1.00 -1.00  0.00  0.00  1.00  1.00  1.00    0.00  0.00  0.00
+ 20 22  1.00  1.00  1.00 -1.00  0.00  0.00  0.00 -1.00  0.00    0.00  0.00  0.00
+ 21 19  0.00 -1.00  0.00  1.00  1.00  1.00 -1.00  0.00  0.00    0.00  0.00  0.00
+ 22 20  0.00 -1.00  0.00  0.00  0.00 -1.00  1.00  1.00  1.00    0.00  0.00  0.00
+ 23 23  1.00  1.00  1.00  0.00 -1.00  0.00  0.00  0.00 -1.00    0.00  0.00  0.00
+ 24 24 -1.00  0.00  0.00  1.00  1.00  1.00  0.00  0.00 -1.00    0.00  0.00  0.00
+ 25 25 -1.00  0.00  0.00  0.00 -1.00  0.00  0.00  0.00 -1.00    0.00  0.00  0.00
+ 26 26  0.00 -1.00  0.00 -1.00  0.00  0.00  1.00  1.00  1.00    0.00  0.00  0.00
+ 27 27  1.00  1.00  1.00  0.00  0.00 -1.00  0.00 -1.00  0.00    0.00  0.00  0.00
+ 28 28  0.00  0.00 -1.00  1.00  1.00  1.00 -1.00  0.00  0.00    0.00  0.00  0.00
+ 29 30  0.00  0.00 -1.00 -1.00  0.00  0.00  0.00 -1.00  0.00    0.00  0.00  0.00
+ 30 29  0.00 -1.00  0.00  0.00  0.00 -1.00 -1.00  0.00  0.00    0.00  0.00  0.00
+ 31 32 -1.00  0.00  0.00  0.00  0.00 -1.00  1.00  1.00  1.00    0.00  0.00  0.00
+ 32 31 -1.00  0.00  0.00  1.00  1.00  1.00  0.00 -1.00  0.00    0.00  0.00  0.00
+ 33 34  1.00  1.00  1.00  0.00 -1.00  0.00 -1.00  0.00  0.00    0.00  0.00  0.00
+ 34 33  0.00  0.00 -1.00  0.00 -1.00  0.00  1.00  1.00  1.00    0.00  0.00  0.00
+ 35 36  0.00 -1.00  0.00  1.00  1.00  1.00  0.00  0.00 -1.00    0.00  0.00  0.00
+ 36 35  1.00  1.00  1.00 -1.00  0.00  0.00  0.00  0.00 -1.00    0.00  0.00  0.00
+ 37 37  0.00  1.00  0.00  1.00  0.00  0.00  0.00  0.00  1.00    0.00  0.00  0.00
+ 38 38  1.00  0.00  0.00  0.00  1.00  0.00 -1.00 -1.00 -1.00    0.00  0.00  0.00
+ 39 40  0.00  0.00  1.00 -1.00 -1.00 -1.00  0.00  1.00  0.00    0.00  0.00  0.00
+ 40 39 -1.00 -1.00 -1.00  0.00  0.00  1.00  1.00  0.00  0.00    0.00  0.00  0.00
+ 41 41  1.00  0.00  0.00  0.00  0.00  1.00  0.00  1.00  0.00    0.00  0.00  0.00
+ 42 42  0.00  0.00  1.00  0.00  1.00  0.00  1.00  0.00  0.00    0.00  0.00  0.00
+ 43 45  0.00  0.00  1.00  1.00  0.00  0.00 -1.00 -1.00 -1.00    0.00  0.00  0.00
+ 44 46 -1.00 -1.00 -1.00  1.00  0.00  0.00  0.00  1.00  0.00    0.00  0.00  0.00
+ 45 43  0.00  1.00  0.00 -1.00 -1.00 -1.00  1.00  0.00  0.00    0.00  0.00  0.00
+ 46 44  0.00  1.00  0.00  0.00  0.00  1.00 -1.00 -1.00 -1.00    0.00  0.00  0.00
+ 47 47 -1.00 -1.00 -1.00  0.00  1.00  0.00  0.00  0.00  1.00    0.00  0.00  0.00
+ 48 48  1.00  0.00  0.00 -1.00 -1.00 -1.00  0.00  0.00  1.00    0.00  0.00  0.00
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT END         TELAPSE     2715.32 TCPU     2678.89
+ EEEEEEEEEE TERMINATION  DATE 05 02 2010 TIME 13:33:14.9
+NODE    0 CPU TIME =      2678.887
+NODE    1 CPU TIME =      2648.077
+    TOTAL CPU TIME =      5326.965
+Fri Feb  5 13:33:14 GMT 2010

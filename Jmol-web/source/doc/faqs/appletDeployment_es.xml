@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+  Translated from default version (...)_en.xml (v 1.1)
+-->
+<section title="Despliegue de JmolApplet">
+  <section
+   title="Para la miniaplicación, ¿qué hay que instalar en los equipos cliente de web?">
+    <p>
+      No se necesita instalar software específico de Jmol
+      en los equipos cliente.
+    </p>
+    <p>
+      Los equipos cliente sólo necesitan un navegador web
+      que admita Java, y una versión reciente de Java instalada y habilitada
+      en el navegador (se recomienda la máquina virtual de Java,
+      o <i>Java Virtual Machine</i>, de Sun). 
+      Cuando un cliente visita una página web que contiene el JmolApplet, éste
+      se descarga automáticamente desde el servidor web y se ejecuta.
+    </p>
+    <p>
+      JmolApplet se ejecuta como una miniaplicación <b>no confiable</b>, por lo que
+      no se requiere ninguna confirmación por parte del usuario para cargarla y 
+      comenzar su ejecución. Hay también una versión <b>confiable</b> de la
+      miniaplicación (JmolAppletSigned), para los autores que prefieran 
+      aprovechar sus ventajas
+   	  (puedes conocer éstas en la sección
+   	  <a href="technotes/#Browser Enhancement Technologies">Notas técnicas, Tecnologías de mejora del navegador</a>).
+    </p>
+  </section>
+
+  <section title="Biblioteca javascript Jmol.js">
+    <p>
+      Se recomienda encarecidamente que 
+      utilices la <a href="../jslibrary/">biblioteca javascript Jmol.js</a>
+      para colocar las miniaplicaciones en tus páginas web. 
+    </p>
+  </section>
+  
+  <section
+   title="¿Se puede instalar JmolApplet permanentemente en forma local,
+   como se hace con los conectores?">
+    <p>No.</p>
+    <p>
+      Las miniaplicaciones se almacenan en la caché local del navegador. En siguientes
+      usos de la miniaplicación, ésta se tomará de la caché
+      (tras confirmar que no han cambiado la fecha, hora y tamaño
+      en el servidor web). Al menos, esa es la teoría ...
+      y funciona correctamente en los navegadores que he probado :-)
+    </p>
+  </section>
+  
+  <section title="¿Qué tipos MIME debo instalar en el servidor?">
+    <p>
+      Ninguno. El servidor web no requiere configuración especial. 
+    </p>
+    <p>
+      Las miniaplicaciones no quedan asociadas a tipos MIME, como ocurre con
+      los conectores. Mientras que el <i>conector</i> Chime requiere la configuración
+      del servidor web, la <i>miniaplicación</i> JmolApplet no.
+    </p>
+    <p>
+      Revisa la nota técnica en
+      <a href="../technotes/#Browser Enhancement Technologies">
+	tecnologías de mejora del navegador
+      </a>
+    </p>
+  </section>
+
+  <section title="¿Qué etiqueta html debo usar: APPLET, OBJECT o EMBED?">
+    <p>
+      Se recomienda encarecidamente que utilices la 
+      <a href="../jslibrary/">biblioteca javascript Jmol.js</a>,
+      pues insertará automáticamente la mejor solución según el 
+      navegador del usuario.
+    </p>
+    <p>
+      Si insistes en hacerlo tú mismo,
+      <code>EMBED</code> no sirve para las miniaplicaciones; <code>APPLET</code> es 
+      preferible a <code>OBJECT</code>.
+    </p>
+    <p>
+      <i>
+	¡No te dejes confundir por la documentación de desarrollador de Sun Java Plug-in!
+      </i>
+    </p>
+    <p>
+      Lamentablemente, la documentación de desarrollador de Sun Java Plug-in
+      no explica bien la situación actual del mundo. Ese documento se escribió
+      hace varios años y necesita una buena limpieza. En muchos sitios 
+      aún parece recomendar el uso de la etiqueta <code>OBJECT</code>.
+      Así es como se hacían las cosas hasta cerca de 2002.
+      Desde entonces, el Sun Java Plug-in ha tenido compatibilidad para la etiqueta <code>APPLET</code>
+      en Microsoft Internet Explorer y esta cuestión ha desaparecido.
+      Sin embargo, Sun necesita mantener el documento para aplicaciones corporativas en intranet
+      que se desarrollaron usando la etiqueta <code>OBJECT</code>. 
+    </p>
+    <p>
+      El capítulo 12 de la guía para desarrolladores Sun Java Plug-in dice:<br/>
+      Con Internet Explorer se recomienda utilizar la etiqueta 
+      APPLET para desarrollos en internet.<br/>
+      ...<br/>
+      Con Netscape se recomienda la utilización de la etiqueta 
+      APPLET para desarrollos en internet.
+    </p>
+  </section>
+
+  <a name="loadInline" />
+  <section title="Tengo problemas con loadInline">
+    <p>
+      <i>Probablemente debas usar la 
+      <a href="../jslibrary/">biblioteca javascript Jmol.js</a></i>
+    </p>
+    <p>
+      Asegúrate de establecer una distinción clara entre la etiqueta
+      <i>param</i> loadInline y el <i>método</i> loadLine.
+    </p>
+  </section>
+
+  <section title="El parámetro loadInline no funciona">
+    <p>
+      <i>Probablemente debas usar la 
+      <a href="../jslibrary/">biblioteca javascript Jmol.js</a></i>
+    </p>
+    <p>
+      Lamentablemente, el mecanismo para la etiqueta param loadInline es bastante
+      feo ... la especificación HTML nos causa algunos problemas.
+    </p>
+    <p>
+      La especificación HTML requiere que los caracteres de salto de línea se eliminen
+      (y los caracteres de retorno de carro se conviertan en espacios) <i>antes</i>
+      de que la cadena del parámetro se transfiera a la miniaplicación. Por lo tanto, el navegador
+      elimina los saltos de línea antes de enviarlos a la miniaplicación.
+    </p>
+    <p>
+      Jmol tiene una sintaxis especial para rodear este problema. 
+      Debes poner una barra vertical al comienzo de cada línea, así:
+      <code>
+<pre>
+	...
+	&lt;param name="loadInline" value="
+|pon aquí los
+|datos de tu 
+|modelo molecular 
+" /&gt;
+</pre>
+      </code>
+      La miniaplicación JmolApplet reemplazará las barras verticales con un carácter de salto de línea.
+      (Los espacios antes de la primera barra vertical se eliminan.)
+    </p>
+    <p>
+      Si tienes un texto con el modelo molecular y quieres convertirlo,
+      puedes usar una expresión regular para realizar la sustitución.
+      Cada sistema operativo usa convenios diferentes para el fin de línea,
+      por lo que tu código debería verificar tres secuencias diferentes de fin de línea:
+      <code>retorno de carro</code>, <code>salto de línea</code> y
+      <code>retorno de carro + salto de línea</code>.
+    </p>
+    <p>
+      En Perl:
+      <code>
+	miModeloMolecular ~= s/\r|\n|\r\n/|/g;
+      </code>
+    </p>
+    <p>
+      En JavaScript:
+      <code>
+	miModeloMolecular.replace(/\r|\n|\r\n/g, "|");
+      </code>
+    </p>
+  </section>
+  
+</section>    
+

@@ -1,0 +1,105 @@
+function checkDSSP(nnnn) {
+  set logfile "checkDSSP.log"
+  if (nnnn) {
+	try {
+		load @{nnnn + ".pdb"} 1
+	} catch (e) {		
+		load @{"=" + nnnn + ".pdb"} as @{nnnn + ".pdb"}
+	}
+  }
+  select 1.1
+  Var confNote = ""
+  if ({1.1 and configuration=2}.length > 0) {
+	configuration 1
+	select 1.1
+	print "Setting configuration 1"
+	confNote = "NOTE: First configuration only."
+  }
+  Var fname = "http://www.pdb.org/pdb/rest/das/pdbchainfeatures/features?segment=" + _modelTitle
+  Var restData = load(fname)
+  Var restError = (restData.find("<FEATURE") > 0 ? "" : "server error")
+  var x = restData.lines
+  Var span = ""
+  Var note = ""
+  Var pt = 0
+  Var line = ""
+  Var sRef = ""
+  for (var i = 1; i <= x.length; i++) {
+	line = x[i]
+	if (line.find("<FEATURE ")) {
+		pt = line.find("structure_dssp_")
+		if (pt > 0) {
+			span = (line[pt + 15][0]).split('"')[1]
+		} else {
+			span = ""
+		}
+		continue
+	}
+	pt = line.find("<NOTE>")
+	if (span && pt) {
+		note = line[pt + 6][pt + 6]
+		if(note != " " && note != "S") {
+			sRef += "\n" + note + " : " + span
+		}
+	}
+
+  }
+  sRef = sRef.trim()
+  Var sJmol = script("show DSSP").split("SUMMARY:")[2]
+  sJmol = sJmol.trim()
+  if (sJmol == sRef) {
+	log _modelTitle + " OK -- " + fname + " and Jmol agree."
+        print "OK"
+  } else {
+        print "dumping mismatch to log file..."
+	Var r = sRef.lines
+	var s = sJmol.lines
+	var len = (r.length < s.length ? s.length : r.length)
+	if (sRef.length == 0) {
+		log _modelTitle + " PROBLEM -- " + fname + " " + restError + ". " + confNote
+	} else {
+		log _modelTitle + " PROBLEM -- " + fname + " and Jmol do not agree. " + confNote
+	}
+	log "first difference:\n"
+
+	for (var i = 1; i <= len; i++) {
+		if (r[i] != s[i]) {
+			log _modelTitle + " REF: " + r[i] + "\tJmol: " + s[i]
+			break
+		}
+	}
+	log script("show dssp")
+	log "sRef: \n" + sRef
+
+//	log "ftp://ftp.cmbi.ru.nl//pub/molbio/data/dssp/" + (_modelTitle%-9999) + ".dssp"
+//	log load("ftp://ftp.cmbi.ru.nl//pub/molbio/data/dssp/" + (_modelTitle%-9999) + ".dssp")
+
+//	log "http://www.pdb.org/pdb/rest/das/pdbchainfeatures/features?segment=" + _modelTitle
+//	log restData
+        print "check log file"
+  }
+ 
+}
+
+function checkDsspListFile(sfile, iFirst, iLast) {
+  cd ""
+  cd dssp
+  set logfile "checkDSSP.log"
+
+  Var x = load(sfile).lines
+  if (!iFirst) { iFirst = 1 }
+  if (!iLast) { iLast = x.length }
+
+  for (Var i = iFirst; i <= iLast; i++) {
+	Var s = x[i]
+	if (s[4] == " ") {
+		continue
+	}
+	log "#" + i + " : " + s
+	print "#" + i + " : " + s
+	checkDssp(s[1][4])
+ }
+ print "DONE"   
+}
+
+print "checkDssp and checkDsspListFile(sfile, iFirst, iLast) are loaded"

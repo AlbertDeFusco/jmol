@@ -1,0 +1,35 @@
+if (btnsetup)
+	set hoverdelay 0.1
+	set echo btnCartoonbg 70% 0%
+	set echo btnCartoonbg center
+	echo "                         "
+	color echo background translucent 0.8 yellow
+	set echo btnCartoonbg script "script btnCartoon.spt"
+	set echo btnCartoon 70% 0%
+	set echo btnCartoon center
+	color echo background translucent 1.0 yellow
+	cartoonOn = true
+endif
+
+set echo btnCartoon
+cartoonOn = !cartoonOn
+
+
+if (!cartoonOn)
+	select all
+	cartoons off
+	select nucleic;
+	spacefill;
+	select protein;
+	wireframe 0.2;
+	ssbonds 0.25;
+	echo cartoons
+	color echo green
+else
+	restrict none;select all
+	cartoons on
+	echo spacefill
+	color echo red
+endif
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+  Translated from default version : index_en.xml (v 1.4)
+-->
+<!DOCTYPE somethingOrAnything [
+<!ENTITY aboutJmol             SYSTEM "aboutJmol_es.xml" >
+<!ENTITY usingJmol             SYSTEM "usingJmol_es.xml" >
+<!ENTITY appletRequirements    SYSTEM "appletRequirements_es.xml" >
+<!ENTITY hardwareRequirements  SYSTEM "hardwareRequirements_es.xml" >
+<!ENTITY appRequirements       SYSTEM "appRequirements_es.xml" >
+<!ENTITY performance           SYSTEM "performance_es.xml" >
+<!ENTITY graphics              SYSTEM "graphics_es.xml" >
+<!ENTITY appletDeployment      SYSTEM "appletDeployment_es.xml" >
+<!ENTITY scripting             SYSTEM "scripting_es.xml" >
+]>
+<document>
+  <body>
+    <title>Preguntas frecuentes sobre Jmol</title>
+
+    &aboutJmol;
+
+    &usingJmol;
+
+    &hardwareRequirements;
+
+    &appRequirements;
+
+    &performance;
+
+    &graphics;
+
+    &appletDeployment;
+
+    &scripting;
+
+  </body>
+</document>

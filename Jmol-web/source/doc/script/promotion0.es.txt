@@ -1,0 +1,5 @@
+set echo a 50% 50%
+set echo a center
+echo Jmol ha terminado de cargar | Ahora cargando contenido...
+refresh
+script script/promotion1.es.txt

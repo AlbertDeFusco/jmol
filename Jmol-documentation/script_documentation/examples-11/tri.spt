@@ -1,0 +1,47 @@
+background black
+reset
+zap
+
+a = {0 0 0}
+b = point(3 + random(2),3 + random(1), 0)
+c = point(-3 - random(1),2 + random(1), 0)
+
+scale = random(1) + 2
+a *= scale
+b *= scale
+c *= scale
+
+draw ab @a @b
+draw bc @b @c
+draw ac @c @a
+
+set echo top left;
+
+center @{(a + b + c)/3}
+
+n = 10000
+pt = a
+ipt = 1
+for (i = 0; i < n ; i++) {
+x = random(3)%0
+if (x = 0) {
+  continue
+} else if (x = 1) {
+  p2 = a
+} else if (x = 2) {
+  p2 = b
+} else if (x = 3) {
+  p2 = c
+}
+  pt = (pt + p2) / 2
+  draw ID @{"X"+i} width 0.02 @pt
+
+  if (i % 100 == 0){
+	echo @i
+	refresh
+  }
+}
+
+
+echo @{n + " points"}
+spin on

@@ -1,0 +1,1508 @@
+set debugscript
+defaultdirectory="http://chemapps.stolaf.edu/jmol/docs/examples-11/data"
+load cyclohexane_movie.xyz;pts = {C5}.split();print pts;draw @{pts.xyz.sub({1 0 0})} "X"
+#defaultdirectory="c:/jmol-dev/workspace/jmol-documentation/script_documentation/examples-11/data"
+message 2
+#set showscript  # for slow operation
+
+
+#file:///C:/jmol-dev/workspace/Jmol-documentation/script_documentation/examples-11/new.htm?LISTONLY
+
+message ok
+ 
+set showScript on
+#script testscript.spt
+set showScript off
+#set showScript 1000
+script testscript.spt
+#set showScript off
+script testscript.spt CHECK
+#set showScript on
+script testscript.spt LINE 3
+script testscript.spt COMMAND 3
+#set showScript off
+#set showScript on
+script testscript2.spt
+set showScript off
+ 
+load "files" "caffeine.xyz" "cyclohexane_movie.xyz"
+frame all
+display 1.1
+display 2.1,2.7
+select 2.1,2.10;color yellow
+select C1*/2.0;color green # all C-1 carbons in all models in the cyclohexane movie
+frame range 2.1 2.10;display *
+animation play
+animation rewind
+load caffeine.xyz;connect (_C) (_O) double modify;select none;selectionHalos on
+select connected(double)
+select connected(double, carbon)
+select connected(0,single)
+select connected(2,3,single)
+load caffeine.xyz
+connect 1.405 1.425 (_C) (_N) red
+connect (_C) (_H) radius 0.05
+connect 1.5 2.5 (_H) (_O) hbond radius 0.1 translucent yellow create
+load 1crn.pdb;cartoon on;isosurface sasurface
+slab plane x=10;slab on;moveto /* time, axisAngle */ 1.0 { 28 -880 474 56.2} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {9.268828 9.787275 6.9670877} 17.6;
+slab off
+load quartz.cif {2 2 2};moveto /* time, axisAngle */ 1.0 { -997 -20 -72 30.0} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {2.5324771 4.257381 5.4054003} 10.7;slab on;
+isosurface p1 hkl {1/2 1/2 1/2};isosurface p2 hkl {1/4 1/4 1/4};
+isosurface;isosurface off
+depth plane $p1;
+slab plane $p2;
+select not clickable;color translucent yellow;
+slab off
+depth plane none;slab hkl {1/3 1/3 1/3};slab on
+slab plane none;depth hkl {1/2 1/2 1/2};slab on
+#load quartz-slab.cif
+load 1crn.pdb;select *;cartoon on;color group;
+set navigationMode; # Automatically loads perspective model 11, which included navigation. Now use the arrow keys
+navigate 3 depth 50;
+navigate 3 center (1-5);
+navigate 2 trace (1-5);
+set navigationMode off; set perspectiveModel 10
+show set
+
+
+
+#new0.htm
+
+ 
+show defaultDirectory
+set debugscript true;show debugscript;set debugscript false
+myvariable = true;show myvariable
+set dataSeparator "~~~";data "model test"|2|test|C 0 0 1|N 0 1 0|~~~2|test2|Al 0 0 3|Fe 0 4 0|end "model test";moveto 1.0 { -32 -999 23 82.0} 100.0 0.0 0.0 {0.0 2.0 1.5} 4.6;frame 0;labels on
+frame 1001
+frame 2.1
+frame 0
+save state A
+show state A
+zap
+restore state A
+console; show state
+save state A
+save state B
+console; show state A
+console; show state B
+zap;set echo top left;echo now go load some other model,|then come back here and|click on "restore state A"
+restore state A
+restore state B
+load caffeine.xyz;select _O;set labelOffset 20 10;labels on
+set labelpointer on;
+background labels yellow
+set labelpointer background;
+background labels none
+load 1myg.cif;color chain
+subset *:B;select *;cartoons on;subset all
+subset *:A
+subset *:B
+restrict none;select *;cartoons on;
+restrict none;select *;trace on;
+subset *:A   ;refresh;# now click on or off chain A.
+subset all
+load 1crn.pdb;restrict none;select *;cartoons on;color structure;moveto 1.0 { -777 -626 -64 44.0} {10.5935 10.2105 6.079}  17.4;
+set traceAlpha off
+set sheetSmoothing 0
+set sheetSmoothing 1
+set traceAlpha
+load 1crn.pdb;restrict none;select *;cartoons on;color structure;moveto 1.0 { 140 -957 -255 50.6} 277.4 {10.5935 10.2105 6.079}  17.4;
+set hermitelevel 1
+set hermitelevel 2
+set hermitelevel 3
+set hermitelevel 4 ;refresh;# rotate the model to see how this looks.
+set hermitelevel 5
+set hermitelevel 6
+set hermitelevel 7
+set hermitelevel 8
+set hermitelevel -4 ;refresh;# now rotate -- the smoothness stays
+load 1crn.pdb;restrict none;select *;cartoons on;color structure;moveto 1.0 { -777 -626 -64 44.0} {10.5935 10.2105 6.079}  17.4;
+set highResolution
+set highResolution off
+load 1mbo.cif;restrict none;select *;cartoons on;color structure;select HEM;wireframe 0.1;color cpk;set hermitelevel 4;moveto 1.0 { 422 126 898 117.4} 192.2 {15.027501 19.463001 6.660001}  35.7;
+set hermitelevel 0
+set hermitelevel 4
+load 1crn.pdb;restrict none;select *;cartoons on;color structure;set hermiteLevel -4
+set ribbonAspectRatio 8
+set ribbonAspectRatio 16
+set traceAlpha ;refresh;#default
+set traceAlpha off
+set ribbonAspectRatio 0
+cartoons off;ribbons on;
+set ribbonAspectRatio 8
+set ribbonAspectRatio 16
+load caffeine.xyz;selectionhalos on;select *;labels on;background labels yellow;set labeloffset 15 5;set labelfront;labels off;select none
+select *;labels off;select C13;labels on
+select *;labels off;select C*;labels on
+select *;labels off;select C?;labels on
+load 1crn.pdb;selectionhalos on;select none
+select AL*
+select [AS*]
+load caffeine.xyz
+selectionhalos on;select none
+select C3
+draw line1 (C3) (C6)
+draw plane1 plane perp (C3) (C6)
+draw plane2 250 plane (N2) (N4) (N8); color $plane2 translucent red
+frame 0
+load 1JGQ.pdb;restrict none;select *;cartoons on
+moveto 1.0 { 126 -986 109 76.4} 3048.5 {-9.250999 93.968506 300.17548}  133.8;
+moveto 1.0 { 126 -986 109 76.4} 30480 {-9.250999 93.968506 300.17548}  133.8;
+moveto 1.0 { 126 -986 109 76.4} 10000 {-9.250999 93.968506 300.17548}  133.8;
+load caffeine.xyz
+set echo myecho {1/1 1/1 1/1};echo (1 1 1)
+# note: Starting with Jmol 11.1 you MUST use braces around the atom expression in the set echo command.
+set echo myecho {atomno=10 or atomno=8};echo x
+
+load 1mbo.cif;restrict not protein and not solvent;select protein;cartoon on
+select (HEM);color yellow; zoomTo (selected) *3
+moveto 1.0 { 497 381 780 146.4} 700.0 {15.948377 28.639738 0.4097555}  35.7;
+zoomTo /2
+set picking center
+set windowCentered false  ;refresh;# try this, too
+if (showBoundBox); set showBoundBox off;set showUnitCell;else;set showUnitCell off;set showBoundBox;endif;
+load 1cdr.pdb ;refresh;# carbohydrate
+load 114d.cif; ;refresh;# DNA
+load quartz.cif {1 1 1} ;refresh;#symmetry
+load 04369a.cif {1 1 1};display molecule=1 or molecule=3;color altloc ;refresh;#configuration
+load 1crn.pdb;restrict none;select *;cartoons on;select 5-;color yellow;moveto 1.0 -119 993 -3 64.3;
+select 10-;color red
+select 15-;color white
+load benzene.c3xml;mo 1 ;moveto 1.0 212 -928 -306 128.7;
+load benzene.c3xml;isosurface molecular color absolute -0.01 0.01 map MEP;moveto 1.0 212 -928 -306 128.7;
+load ethanol.c3xml;isosurface molecular map MEP translucent
+load quartz.cif {444 666 1} ;refresh;# 27 cells
+load quartz.cif {555 555 1} ;refresh;# just one cell
+load quartz.cif {555 555 0} ;refresh;# just one cell; ;refresh;# without normalizing
+load 1mbo.cif;display HEM;center (displayed);moveto 1.0 -772 -621 -135 158.1 309;select none;set labelpointer on
+display within(group, within(3.0, hem));select displayed and *.ca;label %n %r;color labels yellow
+select within(group, within(4.0, hem)) and not displayed and *.ca;label %n %r;color labels red;display within(group, within(4.0, hem));
+display within(group, within(3.0, hem));
+load quartz.cif {444 676 1};display cell=555 or cell=565;polyhedra 4 collapsed yellow;center displayed;moveto 1.0 -200 863 -464 45.0 252;spin y 10
+load 2ptn.cif;delay 2;slab 35;slab on;refresh;select not clickable;spacefill off;color translucent grey;slab off;delay 2;moveto 3.0 -976 76 204 77.4 100; ;refresh;# cool, eh?
+load 2ptn.cif;slab 35;slab on;refresh;restrict clickable;slab off;center visible;moveto 1.0 -976 76 204 77.4 213;isosurface "2ptn-molecular_slice1.jvxl";moveto 3.0 -308 401 863 108.1 213;
+load 2ptn.cif;isosurface plane {1 0 10} {0 1 10} {1 1 10} solvent
+load 2ptn.cif;isosurface "2ptn-molecular_slice2.jvxl";moveto 1.0 -976 76 204 77.4 100;isosurface "2ptn-molecular_slice3.jvxl"
+load nacl.cif {2 2 2};axes 0.2;boundbox on;moveto 1.0 -402 -582 -706 127;delay 1;restrict none;
+select *;isosurface delete hkl {1 1 1} resolution 4 solvent 0;
+select *;isosurface delete hkl {1/2 1/2 1/2} resolution 4 solvent 0;
+select *;isosurface delete hkl {1 1 0} resolution 4 solvent 0;
+select *;isosurface delete hkl {1 0 1} resolution 4 solvent 0;
+select *;isosurface delete hkl {1 0 0} resolution 4 solvent 0;
+load maleic.cif 7 {2 1 1};moveto 1.0 -995 89 43 71.8;selectionHalos on;select none;
+select symop=1
+select symop=2
+select symop=3
+select symop=1555
+select symop=1655
+select symop=2555
+select symop=2655
+select symop=3555
+select symop=3655
+select symop=4555
+select symop=4655
+select symop>1555
+select symop!=2555
+select not symop=2555
+load 2ptn.cif;moveto 1.0 245 959 140 66.2;
+isosurface sasurface
+isosurface delete;slab 60;restrict none;select *;set echo top left;echo "standby...";refresh;isosurface solvent colorscheme "sets"; echo;delay 2;slab 60; slab on;
+slab off;
+zap;delay 2;set echo myecho 50% 50%;set echo myecho center;echo You sure couldn't|do this|before in Jmol,|could you?;delay 2;draw plane1 {-5 -5 -5} {-5 0 -2} {0 -4 -1};delay 2;rotate on
+console on ;refresh;# now add your data and press Load
+console on;show history
+set history 10 ;refresh;# set the history to only 10 lines, not the default 100
+history off; ;refresh;# turn history recording off, perhaps at the beginning of a script file
+history on; ;refresh;# turn history recording back on
+load caffeine.xyz;selectionHalos
+select _C
+save selection X
+save orientation X
+load caffeine.xyz;restore orientation X 1;restore selection X;selectionHalos
+load caffeine.xyz;select _N
+selectionHalos on
+color selectionHalos red
+color halos blue
+select *
+color selectionHalos yellow
+color halos none
+color selectionHalos none
+load CH3F.smol;isosurface delete resolution 6 mep
+load C6H6.smol;isosurface delete resolution 6 mep
+load CH3F.smol;isosurface delete resolution 6 solvent map mep
+load C6H6.smol;isosurface delete solvent map mep
+load C6H6.smol;isosurface delete resolution 3 solvent map mep
+load C6H6.smol;isosurface delete resolution 6 solvent map mep
+console on;show isosurface
+load C6H6-mep.jvxl;isosurface ""
+console on;getProperty fileContents
+console on;show orientation
+load caffeine.xyz
+color _C RasMol
+color _C Jmol
+set echo top left;echo testing 1
+set echo echo1 50 50;echo test 2
+set echo all;font echo 30;color echo green;background echo white
+load caffeine.xyz;set labelfront;select none; ;refresh;# the way to select NO labels
+font label 20 serif bold
+color label yellow
+background label blue
+set labeloffset 30 30
+select atomno=3;label "%0.2x %0.2y %0.2z"
+select atomno=5;label "this is atom 5"
+set echo none
+font echo 15 sansserif italic;color echo white;background echo blue
+set echo echo1 40 40;set echo echo1 center;echo this is|a test of echo defaults
+set echo echo2 100 100;echo another|label |here
+load caffeine.xyz;polyhedra 4 bonds translucent red
+load 1AL4.pdb; restrict none; conformation 1; cartoons 0.5;color cartoons group;
+select *;connect; calculate structure;restrict none; conformation 1;cartoons 0.5; color cartoons yellow;
+restrict none;conformation 2;cartoons 0.5;wireframe;select not protein;color yellow
+restrict none;conformation 1;cartoons 0.5;wireframe;select not protein;color yellow
+load caffeineDT.xyz;select none;set display selected;
+select _D;label %e %i
+select _C;color yellow
+load caffeineDT.xyz;select none;set display selected;
+select deuterium;label %e %i
+select tritium
+select substructure("[C][C][N][C][2H]")
+select substructure("[3H][C][2H]")
+select substructure("[C][C][N][C][H]")
+select substructure("[N][C][1H]")
+select hydrogen; color green
+select deuterium; color cpk
+color deuterium yellow
+load caffeineDT.xyz;
+load 1cdr.pdb;select carbohydrate;color group; select not carbohydrate; spacefill off; wireframe off;set cartoonRockets;cartoons on;
+frame next
+frame previous
+set forceAutobond false;load 1AL4.pdb;restrict none;select not *%B;wireframe on;spacefill 0.1;cartoons 0.5;color cartoons group
+save orientation;set forceAutobond true;load 1AL4.pdb;restore orientation;restrict none;select * and not *%B;wireframe on;spacefill 0.1;cartoons 0.5;color cartoons group
+load caffeine.xyz;save orientation 0;save bonds originalBonds
+moveto 1.0 -867 -310 -391 108.3;save orientation view1
+moveto 1.0 -5 259 966 170.4 40 28 -35;save orientation view2
+restore orientation 0
+restore orientation view1 2.0
+restore orientation view2 2.0
+restore orientation 0 2.0
+connect (carbon) (hydrogen) delete;save bonds noCH
+restore bonds originalBonds
+wireframe 0.1;save bonds lineBonds
+restore bonds originalBonds
+restore bonds lineBonds
+load caffeine.xyz;set pickingStyle MEASURE ON;set echo top left
+set picking MEASURE DISTANCE;echo now click on any two atoms 
+set picking MEASURE ANGLE;echo now click on any three atoms
+set picking MEASURE TORSION;echo now click on any four atoms
+set pickingStyle MEASURE OFF
+console on; show measurements
+load 1mbo.cif; set echo top left;echo lots of water molecules here
+isosurface delete ignore(none) sasurface; echo no good -- includes the water molecules
+isosurface delete select(not solvent) ignore(none) sasurface; echo still a problem
+isosurface delete sasurface;echo much better
+isosurface delete select(1-10) ignore(none) sasurface;echo a fragment with the same problem
+isosurface delete select(1-10) sasurface;echo a better fragment
+load cyclohexane_movie.xyz; set backgroundModel 1;moveto 2.0 774 -616 146 112.3;animation on;
+set backgroundModel 0
+load 1crn.pdb
+color surfacedistance ;refresh;# sort of like "color temperature"
+select surfacedistance=0;color white ;refresh;# surface atoms
+select within(group,surfacedistance=0);color white ;refresh;# surface residues
+select not within(group, surfacedistance=0);color red   ;refresh;# interior groups
+load 1crn.pdb
+calculate surfacedistance WITHIN {*};select surfacedistance=0;color yellow ;refresh;# custom solvent-accessible surface.
+load caffeine.xyz
+select nitrogen
+color halos red
+halos 20% ;refresh;# default is 20% of Van der Waals radius
+halos 0.5
+select oxygen
+color halos blue
+select *;halos on ;refresh;# resets to the default size
+halos off
+select atomno<10
+selectionHalos ON
+color selectionHalos yellow ;refresh;# only affect the uncolored ones
+color selectionHalos none ;refresh;# back to atom-based colors
+select nitrogen;color halos violet;select * ;refresh;# overriding
+color halos none ;refresh;# back to the ORIGINAL atom colors
+color selectionHalos gold ;refresh;# the original settings
+selectionHalos OFF
+load 1crn.pdb
+color halos group; halos on
+color halos amino;
+halos off
+background white;stereo red cyan
+stereo red
+stereo redgreen
+stereo red green
+stereo red lime
+stereo [xFF0000]
+stereo [xFF0000] [xFFFF00]
+background black;stereo off
+load "quartz.cif" {1 1 1};select silicon;labels "%0.2X %0.2Y %0.2Z|%U";set labelalignment CENTER;set labeloffset 0 35
+set echo myecho 30% 10%;echo this is quartz
+set echo myecho 0% 0%
+set echo myecho 100% 0%
+set echo myecho 100% 100%
+set echo myecho 0% 100%
+set echo myecho 50% 100%; set echo myecho CENTER
+set echo myecho 200% 50%
+echo "this|is quartz"
+set echo myecho 0 0;echo quartz
+set echo myecho 240 100%;echo quartz
+echo a|quartz|crystal;
+set echo myecho right
+set echo myecho center
+set echo myecho left
+color echo yellow
+set echo myecho2 50 50;echo from AMS
+color echo white
+font echo 18 serif italic
+set echo myecho2 250 250
+set echo myecho off
+set echo myecho2 off
+set echo top center
+echo top|center
+set echo top 200 0
+help
+help echo
+load "team0104a.ccdc.cif" {1 1 1};moveto 0  -689 -707 -161 145.1 60;
+select symop = 1;color white
+translateSelected {0 -1/1 0}
+translateSelected {0 1/1 0}
+load "caffeine.xyz" {1 1 2} spacegroup "P 4" unitcell {10 10 10 90 90 90}
+load "1crn.pdb"
+load "1crn.pdb" {1 1 1}
+load "1crn.pdb" {1 2 1};select symop=1;color red
+load "1crn.pdb" {1 2 1} spacegroup "P 21:a"
+load "1crn.pdb" {1 2 1} spacegroup "P 21:b" ;refresh;# the real one ?
+load "1crn.pdb" {1 2 1} spacegroup "P 21:c"
+load "quartz.cif" {1 1 2};moveto 0.0 -999 38 -2 73.7;
+load "quartz.cif" {1 1 2} unitcell {6.00 6.00 6.00 90 90 120};moveto 0.0 -999 38 -2 73.7;
+load "quartz.cif" {1 1 2} spacegroup "P 32 2''" unitcell {6.00 6.00 6.00 90 90 120};moveto 0.0 -999 38 -2 73.7;
+load "quartz.cif" {1 1 2} spacegroup "P 32 2'' (0 0 4)" unitcell {6.00 6.00 6.00 90 90 120};moveto 0.0 -999 38 -2 73.7;
+load 1crn.pdb;spacefill on;select *.CA;labels "%r";color labels group;
+set labelGroup
+set labelFront
+set labelAtom;
+background red;data "model example"|2|testing|C 1 1 1|O 2 2 2|end "model example";show data
+background black;
+load "quartz.cif" {1 1 1}
+set display selected
+select symop=1
+select symop<3
+select not symmetry
+select specialposition
+set display normal;select *;label "%o"
+show symmetry
+load "team0104a.ccdc.cif" {1 1 1}
+show spacegroup
+show spacegroup "Pmmn"
+show spacegroup "P 32 2'' (0 0 4)"
+load "team0104a.ccdc.cif" {1 1 1} spacegroup "ignoreOperators"
+load "team0104a.ccdc.cif" {1 1 1} spacegroup "Pmmm";rotate y 90; show spacegroup
+load "team0104a.ccdc.cif" {1 1 1} spacegroup "P21/m";rotate y 90; show spacegroup
+load "team0104a.ccdc.cif" {1 1 1} spacegroup "P21/c";rotate y 90; show spacegroup;centerAt absolute {1/2 1/2 1/2};set scale3d 6.0;
+load "team0104a.ccdc.cif" {1 1 1} spacegroup "-x,y+1/2,-z+1/2";rotate y 90;;centerAt absolute {1/2 1/2 1/2};set scale3d 6.0;
+load "team0104a.ccdc.cif" {1 1 1} spacegroup "-x,-y,-z";rotate y 90;centerAt absolute {1/2 1/2 1/2};set scale3d 6.0;
+load "team0104a.ccdc.cif" {1 1 1} spacegroup "-x+1/2,y,z+1/2";rotate y 90;centerAt absolute {1/2 1/2 1/2};set scale3d 6.0;
+load caffeine.xyz;set dotSurface ON; set dotsSelectedOnly FALSE; dots +1.2
+select oxygen;dots off
+select *;dots off;
+select oxygen;set dotSurface OFF;dots 1.0
+dots off; select hydrogen;set dotSurface ON; set dotsSelectedOnly;dots 150%
+load 1crn.pdb;restrict none;select *;set cartoonRockets;cartoons ON;
+rockets on;trace off;cartoons off;
+rockets off;trace off;cartoons on;
+rockets off;trace on;cartoons off;
+load 1qys.pdb;restrict none;select *;cartoons on;
+hbonds calculate
+set hovercallback "alert" ;refresh;# Now hover over an atom.
+set hovercallback "none"; set messageCallback "alert"
+set pickcallback "alert"; set messagecallback "none" ;refresh;# Now click on an atom.
+set pickcallback "alert"; set messagecallback "none"; set picking distance ;refresh;# Now click on pairs of atoms.
+set pickcallback "none"; set messagecallback "alert"; set picking distance ;refresh;# Now click on pairs of atoms.
+set pickcallback "none"; set messagecallback "showmsg" ;refresh;# the default function for this page
+load 1bkx.pdb;restrict none;select *;cartoons on;color group; set picking center;
+set cartoonRockets on
+set cartoonRockets off
+rockets off;cartoons on;set picking center
+rockets on;cartoons off;set picking center
+load "quartz.cif" {3 3 3}; restrict cell=666;unitcell 666;zoom 300
+select within(site,atomno=1) ;refresh;# 105 atoms selected.
+select within(site,atomno=1 and visible) ;refresh;# nothing selected, because atomno=1 is not visible
+select within(site,atomno=1) and visible;color green
+select site=2 and visible;color yellow
+frame next
+frame previous
+load "maleic.cif" {2 1 1};unitcell 655;center visible;zoom 400;select none;set display selected
+select none;set picking ELEMENT ;refresh;# now start picking atoms
+select none;set picking SITE ;refresh;# now start picking atoms
+select none;set picking ON ;refresh;# normal picking
+set display normal ;refresh;# normal display
+load caffeine.xyz;color red;message This script is running;delay 5;color green;message this script is done;
+load Water!Liquid.xodydata;connect 2.5 (oxygen) (hydrogen) hbond create;
+load ZnSO4!Solution.odydata;select water;spacefill off;wireframe 0.06;color white;
+load caffeine.xyz
+set scriptQueue ON
+moveto 3 1 0 0 30 
+moveto 3 0 1 0 50
+moveto 3 0 0 1 80
+set scriptQueue OFF
+moveto 3 1 0 0 30 
+moveto 3 0 1 0 50
+moveto 3 0 0 1 80
+set scriptQueue ON
+set scriptQueue OFF
+load 1p84.cif;select not solvent;color yellow;spacefill +1.2;select solvent;spacefill 1.2;color red;spin y -10
+load caffeine.xyz
+spacefill 100%
+spacefill +1.2
+spacefill 1.2
+spacefill 25%
+spacefill off
+load caffeine.xyz
+dots 100%
+dots +1.2
+dots 1.2
+dots 25%
+dots off
+load 1crn.pdb;geosurface 100%
+geosurface +1.2
+geosurface off
+set display selected; load 1crn.pdb;color white;select within("CIII",*.ca);
+set display normal;load 114d.cif;spacefill off;color white;select within("TTAG",*);cartoon on; wireframe off;color red;select selected and *.P;set labelFront;label %n;color labels yellow;moveto 1.0 -301 744 597 142.2;
+load "water-G03W.out";frame 2;center visible;moveto 1.0 -571 -817 -75 120.5;set axesmolecular;axes on
+mo 4
+mo cutoff 0.02
+mo cutoff 0.08
+mo color yellow purple
+mo color red blue
+mo resolution 3
+mo resolution 6
+mo resolution 10
+mo color red blue
+mo translucent
+mo next
+mo plane "xy"
+mo plane "xz"
+mo plane "yz"
+mo plane {1 1 1 0}
+mo noplane
+mo prev
+load methanol.spartan;getProperty "auxiliaryinfo"
+frame 1;mo cutoff 0.008 ; mo translucent
+mo 12
+mo next
+mo prev
+frame 2;vibration scale 0.1; vibration on
+frame next
+frame prev
+load ethene.spartan
+load "acetic%20acid.spartan"
+load cscl.mol2
+load zinc.mol2 ;refresh;# several models
+model next
+set axesMolecular; axes on
+set axesUnitcell; axes on
+set axesWindow; axes on
+axes 5;set axes scale 1.5;
+axes dotted;set axes scale 1.0;
+axes off
+boundbox on
+boundbox off
+unitcell on
+unitcell off
+frank on
+frank off
+load caffeine.xyz
+measure all 1.0 1.3 (carbon) (hydrogen)
+color measures green; ;refresh;# same as before
+color measures red;measure all 1.0 1.3 (carbon) (oxygen) ;refresh;# only new, since others are already colored
+color measures blue;measure all 1.0 1.4 (carbon) (nitrogen) ;refresh;# again, only new
+color measures none; ;refresh;# resets all measure colors
+color measures yellow; ;refresh;# sets all measure colors (because now all are color "none")
+measures off ;refresh;# clears all measurements
+load caffeine.xyz
+load caffeine.xyz
+load xxxx.pdb;
+restrict none;select *; cartoon;
+set rangeSelected false; ;refresh;#standard default
+select protein;cartoon;color temperature
+restrict none;select *;cartoon; color grey;
+set rangeSelected true;
+select protein and *:A;cartoon;color temperature
+load 5hvp.cif;restrict *%1,*%2;color altloc;label %A  ;refresh;# alternate Location "%A"
+load "quartz.cif" {1 1 1};label %.2X %.2Y %.2Z ;refresh;# fractional coordinates "%X" "%Y" "%Z"
+load "AgFUPMOS.cif" {1 1 1};color molecule;label %N ;refresh;# molecule number "%N"
+load "AgFUPMOS.cif" {1 1 1};color molecule;select fluorine;label %S ;refresh;# crystallographic site "%S"
+load 1JGQ.pdb;color insertion;restrict none;select *;cartoon on
+
+
+
+#isosurface.htm
+
+ 
+load 2ptn.cif;slab 35;slab on;refresh;restrict clickable;slab off;center visible;moveto 1.0 -976 76 204 77.4 213;isosurface "2ptn-molecular_slice1.jvxl";moveto 3.0 -308 401 863 108.1 213;
+load 2ptn.cif;isosurface plane {1 0 10} {0 1 10} {1 1 10} ignore(solvent) molecular
+load 2ptn.cif;isosurface "2ptn-molecular_slice2.jvxl";moveto 1.0 -976 76 204 77.4 100;isosurface "2ptn-molecular_slice3.jvxl"
+load nacl.cif {2 2 2};unitcell off;axes 0.2;boundbox on;moveto 1.0 489 872 9 24.9;
+select *;isosurface delete hkl {1 1 1} resolution 4 solvent 0;moveto 1.0 268 -953 -141 88.0;delay 3;restrict none;
+select *;isosurface delete hkl {1/2 1/2 1/2} resolution 4 solvent 0;
+select *;isosurface delete hkl {1 1 0} resolution 4 solvent 0;
+select *;isosurface delete hkl {1 0 1} resolution 4 solvent 0;
+select *;isosurface delete hkl {1 0 0} resolution 4 solvent 0;
+load maleic.cif 7 {2 1 1};moveto 1.0 -995 89 43 71.8;selectionHalos on;select none;
+select symop=1
+select symop=2
+select symop=3
+select symop=1555
+select symop=1655
+select symop=2555
+select symop=2655
+select symop=3555
+select symop=3655
+select symop=4555
+select symop=4655
+select symop>1555
+select symop!=2555
+select not symop=2555
+load 2ptn.cif;moveto 1.0 245 959 140 66.2;
+isosurface ignore(solvent) sasurface
+isosurface ignore(solvent) molecular colorscheme "sets" 
+load CH3F.smol;isosurface delete resolution 6 mep
+load C6H6.smol;isosurface delete resolution 6 mep
+load CH3F.smol;isosurface delete resolution 6 solvent map mep
+load C6H6.smol;isosurface delete solvent map mep
+load C6H6.smol;isosurface delete resolution 3 solvent map mep
+load C6H6.smol;isosurface delete resolution 6 solvent map mep
+console on;show isosurface
+load C6H6-mep.jvxl;isosurface ""
+load d_orbitals.jvxl;select hydrogen; spacefill off;set axesMolecular;axes on;moveto 1.0 52 -992 -114 36.0
+isosurface delete phase atomicOrbital 2 1 1;
+isosurface delete phase atomicOrbital 2 1 0;
+isosurface delete  sign yellow violet phase atomicOrbital 2 1 -1
+isosurface delete phase atomicOrbital 3 2 1 
+isosurface delete phase atomicOrbital 3 2 -1 
+isosurface delete phase atomicOrbital 3 2 -2 
+isosurface delete phase atomicOrbital 3 2 2 
+isosurface delete phase atomicOrbital 3 2 0 
+isosurface delete phase atomicOrbital 4 3 2 
+load d_orbitals.jvxl; restrict none; set axesMolecular; axes on; moveto 1.0 -909 -267 -320 80 70;set echo top left;echo " a 4f orbital"; refresh; isosurface atomicOrbital 4 3 2
+load d_orbitals.jvxl; restrict none; set axesMolecular; axes on; moveto 1.0 -909 -267 -320 80 70;set echo top left;echo " a phased 4f orbital"; refresh; isosurface phase atomicOrbital 4 3 2 
+load ch3cl.mol;moveto 1.0 -507 -831 -230 56.6;isosurface center (atomno=1) phase atomicOrbital 2 1 1 
+isosurface delete center (atomno=1) phase atomicOrbital 2 1 1 3.0 
+isosurface delete center (atomno=1) phase atomicOrbital 2 1 1 1.0 
+isosurface delete center (atomno=1) sign yellow orange resolution 5 atomicOrbital 2 1 1 6.0
+isosurface delete center (atomno=1) sign yellow orange resolution 10 atomicOrbital 2 1 1 6.0
+isosurface delete center (atomno=1) sign yellow orange resolution 20 atomicOrbital 2 1 1 6.0
+isosurface delete center {1 1 0} phase atomicOrbital 2 1 1 
+isosurface delete center {1 1 0} anisotropy {0.5 1 1} phase atomicOrbital 2 1 1 
+isosurface delete center {1 1 0} anisotropy {1 0.5 0.5} phase atomicOrbital 2 1 1 
+isosurface delete center {1 1 0} eccentricity {1 1 1 0.5} phase atomicOrbital 2 1 1 
+isosurface delete center {1 1 0} eccentricity {1 1 1 -0.5} phase atomicOrbital 2 1 1 
+isosurface delete center {1 1 0} scale 1.0 eccentricity {1 1 1 1} phase atomicOrbital 2 1 1 
+isosurface delete center {1 1 0} scale 0.5 eccentricity {1 1 1 1} phase atomicOrbital 4 1 0 
+load dxy.cube;restrict none;set axesmolecular;axes on;isosurface "dxy.cube" map "dxy-phase.cube";show isosurface
+load dxy.cube;restrict none;set axesmolecular;axes on;isosurface "dxy.cube" map sign "dxy-phase.cube";show isosurface
+load dxy.cube;restrict none;set axesmolecular;axes on;isosurface "dxy.cube" map sign [x00A0A0] [xA0A000] "dxy-phase.cube";show isosurface
+load d_orbitals.jvxl;select hydrogen; spacefill off;set axesMolecular;axes on;moveto 1.0 52 -992 -114 36.0;
+isosurface delete dxy phase "xy" "" 1;show isosurface
+isosurface delete dyz phase "yz" "" 2;show isosurface
+isosurface delete dxz sign yellow blue phase "xz" "" 3;show isosurface
+isosurface delete dz2 phase "z2" "" 5;show isosurface
+load benzene-homo.cub.gz;isosurface delete sign red purple "" ;show isosurface
+load ch2o_homo.mo;moveto 1.0 940 -340 -34 67.0;
+isosurface delete mo 1 translucent
+isosurface delete phase mo 1 translucent
+isosurface delete color yellow purple phase mo 1 translucent
+select atomno=2;isosurface delete phase mo 1 translucent
+select *;isosurface delete phase mo 1 translucent
+load C6H6.smol;moveto 1.0 -998 -58 20 61.0;
+isosurface delete cutoff 0.008 phase mo 1 translucent
+isosurface delete cutoff 0.008 phase mo 16 translucent
+isosurface delete cutoff 0.008 phase mo 20 translucent
+isosurface mo1pos cutoff +0.008 color green mo 20 opaque
+isosurface mo1neg cutoff -0.008 color red mo 20 translucent
+isosurface delete  cutoff 0.008 resolution 4 phase mo 20 translucent
+isosurface delete  cutoff 0.008 resolution 4 phase mo 21 translucent
+isosurface delete  cutoff 0.008 resolution 4 phase mo 22 translucent
+isosurface delete cutoff 0.008 resolution 4 phase mo 33 translucent
+isosurface delete cutoff 0.008 resolution 4 phase mo 66 translucent
+load H2-OPT.LOG;frame 2;center visible;moveto 1.0 -118 983 -141 86.9 86
+frame 1
+frame 2
+isosurface delete phase mo 1 translucent
+isosurface delete phase mo 2 translucent
+isosurface delete phase mo 3 translucent
+isosurface delete phase mo 4 translucent
+load "water-G03W.out"; getproperty "auxiliaryinfo";frame 2;center visible;moveto 1.0 -571 -817 -75 120.5;
+isosurface delete cutoff 0.08 phase mo 4 translucent
+isosurface delete cutoff 0.08 phase mo 5 translucent
+isosurface delete cutoff 0.08 phase mo 6 translucent
+load water-AM1.sparchive;moveto 1.0 -567 -732 -379 132.8;
+isosurface delete phase mo 1 translucent
+isosurface delete phase mo 2 translucent
+isosurface delete phase mo 3 translucent
+isosurface delete phase mo 4 translucent
+isosurface delete phase mo 5 translucent
+isosurface delete phase mo 6 translucent
+load gamess-RHF-3-21G.log; frame 2; isosurface phase mo 8
+load gamess-UHF-3-21G.log; frame 2; isosurface phase mo 8 ;refresh;#alpha
+load gamess-UHF-3-21G.log; frame 2; isosurface phase mo 30 ;refresh;#beta
+load XeF4.smo; moveto 1.0 922 52 385 55.3;
+isosurface delete cutoff 0.008 resolution 5 phase mo 68 translucent
+load water19.mo; moveto 1.0 922 52 385 55.3;
+isosurface delete cutoff 0.008 resolution 10 phase mo 17 translucent
+load water35.mo; moveto 1.0 922 52 385 55.3;
+isosurface delete cutoff 0.008 resolution 10 phase mo 20 translucent
+load job656_density.mo;wireframe 0.07;spacefill 10%
+isosurface delete phase mo 9
+isosurface delete phase mo 10
+isosurface delete phase mo 11
+isosurface delete phase mo 12
+load ch3cl.mol;spacefill off;wireframe 0.05;isosurface center (atomno=5) lobe {0 -1 0 1};moveto 1.0 -507 -831 -230 56.6
+isosurface delete center (atomno=5) color red lobe {0 1 0 1};
+isosurface delete center (atomno=5) color red lobe {0 1 0 0.7};
+isosurface delete center {1 0 0} color green lobe {0 1 0 0.7}
+isosurface center {1 0 0} color yellow lobe {0 0 -1 0.7}
+isosurface delete center (atomno=5) scale 0.7 lobe {0 -1 0 0.7}
+isosurface delete center (atomno=5) lobe {1 -1 0 0.7}
+isosurface delete center (atomno=5) scale 1.0 lobe {1 1 0 0.7}
+isosurface center (atomno=5) lobe {-1 -1 0 -0.7}
+load water.xyz;moveto 1.0 91 357 -930 75.5 75;
+isosurface delete lcaoCartoon "lpa" (atomno=3)
+isosurface lcaoCartoon "lpb" (atomno=3)
+isosurface delete lcaoCartoon "px" (atomno=3)
+isosurface delete lcaoCartoon "py" (atomno=3)
+isosurface delete lcaoCartoon "pz" (atomno=3)
+isosurface delete lcaoCartoon "-pz" (atomno=3)
+color $lcao1_pza red;color $lcao1_pzb blue;
+isosurface delete mypx lcaoCartoon "px" (atomno=3)
+color $mypxa translucent red;color $mypxb blue;
+isosurface mypxb mesh nofill
+isosurface delete lcaoCartoon "pz" (atomno=3)
+isosurface horb center (atomno=2) lcaoCartoon "pz" (atomno=3)
+isosurface horba delete;isosurface horbb delete;isosurface horb center (atomno=2) scale 2.0 lcaoCartoon "pz" (atomno=3)
+isosurface horba delete;isosurface horbb delete;isosurface horb center (atomno=2) scale 0.5 color red blue lcaoCartoon "pz" (atomno=3)
+isosurface delete lcaoCartoon "pza" (atomno=3)
+isosurface delete lcaoCartoon "pzb" (atomno=3)
+load caffeine.xyz;moveto 1.0 -480 868 129 146.9;set axesMolecular;axes on
+isosurface delete color red lcaoCartoon "pz" (atomno=11)
+isosurface color yellow lcaoCartoon "px" (atomno=11)
+isosurface color blue lcaoCartoon "pya" (atomno=11)
+isosurface delete lcaoCartoon "pz" (atomno=11);isosurface lcaoCartoon "pz" (atomno=5)
+isosurface delete lcaoCartoon "pz" (atomno=11);isosurface lcaoCartoon "-pz" (atomno=5)
+isosurface delete lcaoCartoon "-pz" (atomno=11);isosurface lcaoCartoon "pz" (atomno=5)
+moveto 1.0 -707 -427 -564 90.0;
+isosurface delete lcaoCartoon "pza" (atomno=21)
+isosurface delete lcaoCartoon "pzb" (atomno=21)
+isosurface color red lcaoCartoon "sp2" (atomno=21)
+isosurface delete lcaoCartoon "pz" (atomno=21)
+isosurface delete lcaoCartoon "sp2a" (atomno=21)
+isosurface delete lcaoCartoon "sp2b" (atomno=21)
+isosurface delete lcaoCartoon "sp2a" (atomno=11)
+isosurface lcaoCartoon "sp2b" (atomno=11)
+isosurface delete lcaoCartoon "sp2c" (atomno=11)
+isosurface delete lcaoCartoon "sp3a" (atomno=11)
+isosurface lcaoCartoon "sp3b" (atomno=11)
+isosurface lcaoCartoon "sp3c" (atomno=11)
+load caffeine.xyz;spacefill off;moveto 1.0 -882 -290 -371 77.5 93;isosurface delete lcaoCartoon "pz" (atomno=21);isosurface lcaoCartoon "pz" (atomno=20);isosurface lcaoCartoon "pz" (atomno=8);isosurface lcaoCartoon "pz" (atomno=3);isosurface lcaoCartoon "pz" (atomno=7);isosurface lcaoCartoon "pz" (atomno=2);isosurface lcaoCartoon "pz" (atomno=4);isosurface lcaoCartoon "pz" (atomno=5);isosurface lcaoCartoon "pz" (atomno=6);isosurface lcaoCartoon "pz" (atomno=9);isosurface lcaoCartoon "pz" (atomno=11);
+load d_orbitals.jvxl;moveto 1.0 -507 -831 -230 56.6;set axesMolecular;axes on;set axes scale 1.1
+isosurface delete center {2 2 2} sphere 1.0
+isosurface delete center {2 2 2} sphere 2.0
+isosurface delete ellipsoid {1 0 0 0.7}
+isosurface delete center {0 0 2} ellipsoid {0 1 0 0.5}
+isosurface delete ellipsoid {1 0 0 .5};
+isosurface delete ellipsoid {0 1 0 .5};
+isosurface delete color orange ellipsoid {0 0 1 .5};
+isosurface delete color white ellipsoid {1 0 0 .5};
+isosurface delete color red ellipsoid {1 1 1 .5}
+isosurface delete resolution 2 color yellow ellipsoid {0.577 0.577 0.577 1.5}  mesh nofill
+isosurface delete color green ellipsoid {0.577 -0.577 0.577 .5}
+isosurface delete scale 1.0 color red ellipsoid {1 1 1 .5}
+isosurface delete scale 0.7 color red ellipsoid {1 1 1 .5}
+load plane.jvxl;moveto 1.0 905 -411 -107 51.8 50;set axesMolecular; axes on; isosurface delete myiso "";moveto 4.0 647 144 749 11.4 114;restrict none
+isosurface delete myiso plane {0 0 1 0} color absolute  0.1 1 map "ch3cl-esp.cub.gz";show isosurface;
+isosurface delete myiso plane {0 0 1 1.8} color absolute  0.1 1 map "ch3cl-esp.cub.gz";show isosurface;
+isosurface delete myiso plane {0 0 1 1.5} color absolute  0.1 1 map "ch3cl-esp.cub.gz" dots nofill ;moveto 0.0 -923 -321 -213 67.7;show isosurface;
+isosurface delete myiso plane {0.3 -0.4 0.1 0} color absolute  0.1 1 map "ch3cl-esp.cub.gz";moveto 0.0 -923 -321 -213 67.7;show isosurface;
+load contour.jvxl;isosurface delete myiso plane {0 0 1 1.8} color absolute  0.1 1 contour 10 map "ch3cl-esp.cub.gz";set perspectivedepth off;moveto 0 -934 -197 -297 73.
+load contour.jvxl;isosurface delete myiso plane {0 0 1 1.8} color absolute  0.1 1 contour 1 map "ch3cl-esp.cub.gz";set perspectivedepth off;moveto 0 -934 -197 -297 73. ;refresh;# no Marching Squares
+load contour.jvxl;isosurface delete myiso plane {0 0 1 1.8} color absolute  0.1 1 contour -1 map "ch3cl-esp.cub.gz";set perspectivedepth off;moveto 0 -934 -197 -297 73.; ;refresh;# single contour
+load contour.jvxl;isosurface delete myiso plane {0 0 1 1.8} color absolute  0.1 1 contour -2 map "ch3cl-esp.cub.gz";set perspectivedepth off;moveto 0 -934 -197 -297 73.; ;refresh;# single contour
+load contour.jvxl;isosurface delete myiso plane {0 0 1 1.8} color absolute  0.1 1 contour -3 map "ch3cl-esp.cub.gz";set perspectivedepth off;moveto 0 -934 -197 -297 73.; ;refresh;# single contour
+load contour.jvxl;isosurface delete myiso contour 10 "";moveto 0 -934 -197 -297 73.
+load contour.jvxl;isosurface delete myiso contour 1 "";moveto 0 -934 -197 -297 73.
+load contour.jvxl;isosurface delete myiso contour -1 "";moveto 0 -934 -197 -297 73.
+load d_orbitals.jvxl;restrict none;set axesmolecular;axes on;moveto 1.0 318 -943 -96 51.4;
+isosurface delete plane {0 1 0 0} contour 10 orbital 2 1 0 1.0
+isosurface delete plane {0 1 0 0} contour 11 orbital 2 1 0 1.0
+isosurface delete plane {0 1 0 0} contour 21 orbital 3 1 0 2.0
+load ch2o_homo.mo;wireframe 0.05;spacefill 0;moveto 1.0 940 -340 -34 67.0;
+isosurface delete plane {0 1 0 0} color absolute -0.2 0.2 colorscheme "roygb" contour 21 mo 1
+isosurface delete plane {0 1 0 0} color absolute -0.2 0.2 colorscheme "roygb" reverseColor contour 21 mo 1
+isosurface delete plane {0 1 0 0} color absolute -0.2 0.2 contour 31 colorscheme "rwb" mo 1
+isosurface delete plane {0 1 0 0} color absolute 0.008 0.2 colorscheme "high" contour 21 mo 1
+isosurface plane {0 1 0 0} color absolute -0.2 -0.008 colorscheme "low" contour 21 mo 1
+load d_orbitals.jvxl; restrict none; set axesMolecular; axes on; moveto 1.0 -909 -267 -320 80 70;set echo top left;echo " JVXL equivalent"; refresh; isosurface "functionxy.jvxl"
+load ch3cl.mol; moveto 1.0 -982 -66 -176 75.9 70;isosurface delete "contourf.jvxl"
+isosurface delete contour 1 "contourf.jvxl"
+isosurface delete contour 20 reverseColor "contourf.jvxl"
+isosurface delete contour 20 reverseColor color absolute 0.01 0.8 "contourf.jvxl"
+isosurface delete contour 20 reverseColor color absolute 0.001 0.5 "contourf.jvxl"
+load gibbs.jvxl;restrict none; set axesMolecular; axes on;moveto 1.0 -680 -528 -509 105.2 41 -37 33;draw plane1 {.4 0 0} {0 .5 0} {0 0 2};isosurface "";
+load ch3cl.mol;isosurface resolution 4 solvent;moveto 1.0 -507 -831 -230 56.6;show isosurface
+load ch3cl.mol;isosurface resolution 4 solvent map "ch3cl-esp.cub.gz";moveto 1.0 -507 -831 -230 56.6;show isosurface
+load ch3cl.mol;isosurface "ch3cl-solvent.jvxl";moveto 1.0 -507 -831 -230 56.6;
+isosurface delete resolution 4 solvent color absolute -0.01  0.01 map "ch3cl-esp.cub.gz";moveto 1.0 -507 -831 -230 56.6;
+load ch3cl.mol;set radius 3.0; isosurface delete resolution 6 solvent map "ch3cl-esp.cub.gz" ;moveto 1.0 -507 -831 -230 56.6;
+load ch3cl.mol;set radius 1.2; isosurface delete resolution 6 solvent map "ch3cl-esp.cub.gz";moveto 1.0 -507 -831 -230 56.6;
+load caffeine.xyz;script groups.scr;select ~CH3 or ~CH; isosurface delete resolution 3 solvent translucent;
+load 1crn.pdb;select 1-3;isosurface ~pdb color yellow solvent;moveto 2.0 968 237 84 158.3;
+load 1crn.pdb;select 4-10;isosurface color yellow resolution 1 solvent
+load C6H6.smol;isosurface ~benzene solvent mesh nofill
+load C6H6.smol;isosurface ~benzene resolution 4 solvent mesh nofill
+load caffeine.xyz;isosurface ~caffeine solvent mesh nofill 
+load caffeine.xyz;isosurface ~caffeine resolution 1 solvent mesh nofill
+load 1crn.pdb;select 4-10;isosurface ~pdb color white resolution 1 solvent translucent
+load 1crn.pdb;isosurface ~pdb solvent
+load 1crn.pdb;isosurface ~pdb resolution 0.5 solvent mesh nofill
+load 1crn.pdb;isosurface "1crn.jvxl"
+load 1crn.pdb;select 1-3;isosurface ~pdb color yellow addHydrogens solvent;moveto 2.0 968 237 84 158.3;
+load 1crn.pdb;isosurface delete select (1-4) solvent select (5-8) map solvent
+load C6H6.smol;zoom 70;isosurface ~benzene sasurface translucent
+load caffeine.xyz;zoom 70;isosurface ~caffeine color red  sasurface translucent 
+load caffeine.xyz;zoom 70;isosurface ~caffeine color yellow sasurface mesh nofill translucent
+load caffeine.xyz;moveto 1.0 -824 -413 -387 85.6 70;isosurface ~caffeine resolution 1 color yellow sasurface mesh nofill translucent
+load ch3cl.cub;moveto 1.0 -935 -354 -21 67.2;
+isosurface pos05 cutoff 0.05 "ch3cl.cub" 1;show isosurface
+isosurface pos05 cutoff 0.05 "ch3cl.cub" 2;show isosurface
+load ch3cl.jvxl;moveto 1.0 -935 -354 -21 67.2;
+isosurface pos05 cutoff 0.05 "ch3cl.jvxl" 1;show isosurface
+isosurface pos05 cutoff 0.05 "ch3cl.jvxl" 2;show isosurface
+load ethene.jvxl;moveto 1.0 -935 -354 -21 67.2;
+isosurface pos "" 1;show isosurface
+isosurface neg "" 2;show isosurface
+load ch3cl.cub;moveto 1.0 -935 -354 -21 67.2;
+isosurface delete myiso "ch3cl-density.cub.gz"; show isosurface
+isosurface delete myiso "ch3cl-density.cub.gz" color absolute 0.0 0.2 map "ch3cl-esp.cub.gz"; show isosurface
+load ch3cl_map.jvxl;moveto 1.0 -935 -354 -21 67.2;
+isosurface myiso ""
+spacefill 20%;wireframe 0.15;slab off;set specular 22; set specpower 40; set specpower -6;set diffuse 84; set ambient 45; ;refresh;# jmol defaults
+load ch3cl-solvent.jvxl;isosurface "";moveto 1.0 -507 -831 -230 56.6;
+isosurface mesh nodots nofill
+isosurface nomesh dots nofill
+isosurface nomesh nodots fill
+color isosurface red translucent
+color isosurface orange opaque
+slab 70; slab on
+slab off
+load plane2.jvxl;isosurface delete myiso "";moveto 0.0 647 144 749 11.4 114;restrict none;
+set testflag3; moveto 4.0 -292 184 939 67.9 1090 81 -90;
+set testflag3 off;
+load contour.jvxl;isosurface delete myiso plane {0 0 1 1.8} color absolute  0.1 1 map "ch3cl-esp.cub.gz";moveto 0 -853 -521 13 167.5 194;show isosurface;
+load contour.jvxl;moveto 0 -853 -521 13 167.5 194;set axesMolecular; isosurface delete myiso "" 1
+load contour.jvxl;isosurface delete myiso plane {0 0 1 1.5} color absolute  0.1 1 map "ch3cl-esp.cub.gz";moveto 0 -853 -521 13 167.5 194;show isosurface;
+load contour.jvxl;moveto 0 -853 -521 13 167.5 194;set axesMolecular; isosurface delete myiso "" 2
+load contour.jvxl;isosurface delete myiso plane {0 0 1 1.5} dots nofill color absolute  0.1 1 map "ch3cl-esp.cub.gz";moveto 0 -853 -521 13 167.5 194;show isosurface;
+load contour.jvxl;moveto 0 -853 -521 13 167.5 194;set axesMolecular; isosurface delete myiso dots nofill "" 2
+isosurface dots nofill
+isosurface nodots fill
+show isosurface ;refresh;# goes to the message queue
+load planes.jvxl;moveto 1.0 905 -411 -107 51.8 50;set axesMolecular; axes on
+isosurface myiso1 "planes.jvxl" 1
+isosurface myiso2 "planes.jvxl" 2
+isosurface myiso3 "planes.jvxl" 3
+load files "ch3cl.mol" "ch3cl.mol";moveto 1.0 -507 -831 -230 56.6;
+frame 1001;isosurface orb1 center (atomno=1) phase atomicOrbital 2 1 1
+frame 2001;isosurface orb2 center (atomno=2) phase atomicOrbital 2 1 1
+isosurface orb3 center (atomno=5) FIXED phase atomicOrbital 2 1 1
+frame 1001
+frame 2001
+frame 0
+frame 2001;isosurface orb1 modelbased ;refresh;# now orb1 is attached to the second model, not the first
+frame 1001
+frame 2001
+frame 1001;isosurface orb1 modelbased ;refresh;# now orb1 is attached to the first model, not the second
+frame 2001
+frame 1001
+isosurface orb1 nofill ;refresh;# NOFILL turns off the orbital but does not delete it
+isosurface orb2 nofill
+isosurface orb3 delete ;refresh;# DELETE also hides it, but you cannot get it back.
+isosurface orb1 fill
+isosurface orb2 fill
+isosurface orb3 fill ;refresh;# if you deleted it, it is gone for good
+load caffeine.xyz;moveto 1.0 905 -411 -107 51.8 50
+isosurface delete myiso "plane.jvxl"
+isosurface delete myiso "plane1.jvxl"
+isosurface delete myiso "plane2.jvxl"
+spacefill 20%;wireframe 0.15;slab off;set specular 22; set specpower 40; set specpower -6;set diffuse 84; set ambient 45;set testflag1 off; set testflag2 off; set testflag3 off; set testflag4 off;isosurface nodots; ;refresh;# jmol defaults
+set testflag4; set testflag2 off;load ch3cl_map.jvxl;spacefill off;wireframe off;set specular 80; set specpower 80;moveto 0.0 -226 634 -740 71.3 580;set testflag3;depth 50;slab 100;slab on;isosurface delete myiso gridpoints "" 
+set testflag4; set testflag2;load ch3cl_map.jvxl;spacefill off;wireframe off;set specular 80; set specpower 80;moveto 0.0 -226 634 -740 71.3 580;set testflag3;depth 50;slab 100;slab on;isosurface delete myiso gridpoints "" 
+set testflag4;load ch3cl_map.jvxl;spacefill off;wireframe off;set specular 80; set specpower 80;moveto 0.0 -226 634 -740 71.3 580;set testflag3;depth 50;slab 100;slab on;isosurface delete myiso gridpoints "" 
+load ch3cl_map.jvxl;spacefill off;wireframe off;set specular 80; set specpower 80;moveto 0.0 -830 547 -110 150.7 145;set testflag3;depth 0;slab 50;slab on;isosurface delete myiso gridpoints "" 
+load ch3cl_map.jvxl;spacefill off;wireframe off;set specular 80; set specpower 80; set testflag3;depth 0;slab 70;depth 50;slab on;isosurface delete myiso gridpoints "" ; moveto 1.0 992 -2 -125 159.1 652 -24 -74;;
+load ch3cl_map.jvxl;spacefill off;wireframe off;set specular 80; set specpower 80; set testflag3;depth 0;slab 70;depth 50;slab on;isosurface delete myiso gridpoints  ""; moveto 1.0 992 -11 -127 159.2;
+set testflag1 ON;  ;refresh;# turn off 2-sided triangles (requires reloading)
+set testflag2 ON;  ;refresh;# no associative grouping of vertex normals (requires reloading)
+set testflag3 ON;  ;refresh;# shrink triangles by 10% for visualization
+set testflag4 ON;  ;refresh;# show vertex normals
+isosurface dots;   ;refresh;# show grid points (if "gridpoint" option was used)
+set testflag1 OFF; ;refresh;# default 2-sided triangles (requires reloading)
+set testflag2 OFF; ;refresh;# associate normals with common grid point (requires reloading)
+set testflag3 OFF; ;refresh;# connect triangles
+set testflag4 OFF; ;refresh;# hide vertex normals
+isosurface nodots; ;refresh;# hide grid points
+isosurface delete myiso gridpoints "" ;refresh;# for testing only... see the "critical" grid points -- MUST be accompanied by "delete"
+spacefill 20%;wireframe 0.15;slab off;set specular 22; set specpower 40; set specpower -6;set diffuse 84; set ambient 45;set testflag1 off; set testflag2 off; set testflag3 off; set testflag4 off;isosurface nodots; ;refresh;# jmol defaults
+
+
+#mo.htm
+
+ 
+load "water-G03W.out";frame 2;center visible;moveto 1.0 -571 -817 -75 120.5;set axesmolecular;axes on
+mo 4
+mo cutoff 0.02
+mo cutoff 0.08
+mo color yellow purple
+mo color red blue
+mo resolution 3
+mo resolution 6
+mo resolution 10
+mo color red blue
+mo translucent
+mo next
+mo plane "xy"
+mo plane "xz"
+mo plane "yz"
+mo plane {1 1 1 0}
+mo noplane
+mo prev
+load C6H6.smol;moveto 1.0 -998 -58 20 61.0;
+isosurface mo1pos cutoff +0.008 color green mo 20 opaque
+isosurface mo1neg cutoff -0.008 color red mo 20 translucent
+load ch2o_homo.mo;moveto 1.0 940 -340 -34 67.0;
+mo cutoff 0.008
+mo 1
+mo translucent
+mo color yellow purple;
+mo color [xFF00FF] [xFFFF00];
+mo color blue red;
+mo color red blue;
+load C6H6.smol;moveto 1.0 -821 -377 -430 69.2
+mo cutoff 0.008;
+mo resolution 4
+mo 17
+mo 21
+mo 22
+mo 23
+mo translucent;
+mo nofill
+mo mesh
+mo nomesh
+mo dots
+mo nodots
+mo fill
+mo opaque
+mo translucent
+mo off
+mo on
+load methanol.spartan
+frame 1;mo cutoff 0.008 ; mo translucent
+mo 12
+mo next
+mo prev
+load ethene.spartan; mo cutoff 0.008;moveto 1.0 -988 -152 -30 71.9;mo resolution 6
+mo 8
+mo next
+mo prev
+load "acetic%20acid.spartan"
+mo cutoff 0.008
+mo 16
+mo next
+mo prev
+load water-AM1.sparchive;moveto 1.0 -567 -732 -379 132.8;
+mo 1
+mo next
+mo prev
+load H2-OPT.LOG;frame 2;center visible;moveto 1.0 -118 983 -141 86.9 86
+frame 2
+mo translucent
+mo 1
+mo next
+mo prev
+load gamess-UHF-3-21G.log; frame 2; moveto 1.0 931 -365 24 35.5;
+mo color red
+mo 8
+mo next
+mo prev
+mo color red blue
+load XeF4.smo; moveto 1.0 964 -138 225 122.9;
+mo resolution 5
+mo 35
+mo next
+mo prev
+load ethene.spartan;moveto 1.0 -988 -152 -30 71.9
+isosurface homo cutoff 0.008 mo 8 on
+isosurface lumo cutoff 0.008 mo 9 off
+isosurface lumo on; isosurface homo off;
+isosurface lumo off; isosurface homo on;
+isosurface lumo on; isosurface homo on;
+load ethene.spartan;moveto 1.0 -988 -152 -30 71.9;set axesmolecular;axes on
+isosurface homo1 color absolute -0.008 0.008 plane "yz" mo 8
+isosurface homo2 color absolute -0.008 0.008 plane "xz" mo 8
+load files "ethene.spartan" "ethene.spartan";moveto 1.0 -988 -152 -30 50.9;set axesmolecular;axes on
+frame 1001;isosurface homo1 color absolute -0.008 0.008 plane "yz" mo 8
+frame 2001;isosurface homo2 color absolute -0.008 0.008 plane "xz" mo 8
+frame 1001;
+frame 2001;
+frame 0;
+load water35.mo;moveto 1.0 -997 -68 -24 76.2;mo translucent;mo 5;
+mo TITLEFORMAT ""
+mo TITLEFORMAT "energy: %E %U"
+mo TITLEFORMAT "%F|Model %M  MO %I/%N|Energy = %E %U|?Symmetry = %S|?Occupancy = %O"
+
+#lcao.htm
+
+ 
+load caffeine.xyz;moveto 1.0 930 274 -244 107.0;
+select (carbon and connected(nitrogen));lcaocartoon create "pz"
+select (carbon and connected(nitrogen));lcaocartoon scale 1.5 create "pz"
+select (carbon and connected(nitrogen));lcaocartoon scale 1.0 create "pz"
+select (carbon and connected(nitrogen));lcaocartoon color green create "pz"
+select (carbon and connected(nitrogen));lcaocartoon color red blue create "pz"
+select (carbon and connected(nitrogen));lcaocartoon color yellow purple create "pz"
+select (nitrogen);lcaoCartoons delete create "-pz"
+select (atomno=10);lcaoCartoon delete create "sp3a"
+select (atomno=10);lcaoCartoon delete create "sp3b"
+select (atomno=10);lcaoCartoon delete create "sp3c"
+select (atomno=10);lcaoCartoon delete create "sp3d"
+select (atomno=10);lcaoCartoon color red create "sp3a" color green create "sp3b" color white create "sp3c" color blue create "sp3d"
+load caffeine.xyz;moveto 1.0 930 274 -244 107.0;
+select (carbon and connected(nitrogen));lcaocartoon create "pz"
+color $lcao_5_pza red
+color $lcao_5_pzb translucent white
+load cyclohexane_movie.xyz;select atomno=5;lcaocartoon "sp3a" ;refresh;#35 atoms
+animation on
+frame 0
+display */1 or */3
+frame 1
+load C6H6.smol;frame 3;moveto 1.0 -992 -120 38 55.3;
+select (carbon and */3);lcaocartoon "pz"
+vibration on ;refresh;# It's not that fancy. Don't do this!
+vibration off
+
+#measure.htm
+
+ 
+load caffeine.xyz;set picking DISTANCE
+measure RANGE 1.0 1.5 ALL (carbon) (oxygen)
+set measurements angstroms
+set measurements nm
+set measurements pm
+set measurementNumbers OFF ;refresh;#same as "set measurements" but clearer in intent
+set measurementNumbers ON
+set measurements off ;refresh;#still works, but will not be emphasized
+set measurements ON
+measure RANGE 1.5 6.5 ALL (oxygen) (oxygen)
+measure 2 4 5 6
+measurements DELETE
+measure ALLCONNECTED (oxygen) (carbon)
+measures OFF ;refresh;#proposed change here -- for discussion -- does not delete
+measures ON  ;refresh;#turns all currently-defined measures on
+measure RANGE 1.5 6.5 ALL (oxygen) (oxygen)
+measurements OFF ALL (oxygen) (oxygen)
+measurements ON ALL (oxygen) (oxygen)
+set showMeasurements OFF
+load caffeine.xyz;set picking DISTANCE
+measure RANGE 1.0 1.5 ALL (carbon) (oxygen)
+set showMeasurements ON
+load "quartz.cif" {1 1 1}
+measures off;measure all 110.4 110.6 (oxygen) (silicon) (oxygen)
+measures off
+measures off;measure all 108.7 108.9 (oxygen) (silicon) (oxygen)
+draw line1 250 (atomno=2 or atomno=8) (atomno=9 or atomno=4)
+rotate $line1 180 60;
+measures off
+load caffeine.xyz;set picking DISTANCE
+measure RANGE 1.0 1.5 ALL (carbon) (oxygen)
+show measurements ;refresh;#via messageCallback (see the textarea below the applet)
+load cyclohexane_movie.xyz; frame 1; moveto 1.0 -681 416 602 82.7;
+select (atomno=10,atomno=8); color yellow;
+measure ALL (atomno=8) (atomno=2) (atomno=1) (atomno=10)
+frame next
+frame prev
+frame play
+frame playrev
+measure DELETE ALL (atomno=8) (atomno=2) (atomno=1) (atomno=10)
+set measureAllModels ON
+load cyclohexane_movie.xyz; frame 1; moveto 1.0 -681 416 602 82.7;
+measure (atomno=3 and visible) (atomno=5 and visible)
+show measurements
+frame 1
+frame next
+frame prev
+measure DELETE (atomno=3 and visible) (atomno=5 and visible)
+show measurements
+set measureAllModels OFF
+frame 6; measure (atomno=3 and */6) (atomno=4 and */6)
+frame 8; measure (atomno=3 and visible) (atomno=6 and visible)
+frame 1
+frame 6
+frame 8
+frame play
+frame playrev
+measures off
+show measurements
+
+#spartan.htm
+
+ 
+load C6H6.smol;rotate x -60
+frame 2;
+vectors .08;
+vector scale 2
+vector scale 10
+vibration on;
+vibration off;
+frame next
+frame prev
+frame play
+frame playrev
+animation off
+load SF6.smol
+frame 2;
+vectors 0.1;
+vector scale 2
+vector scale 10
+vibration on;
+vibration off;
+animation off
+frame next
+frame prev
+frame play
+frame playrev
+animation on
+animation off
+
+#pmesh.htm
+
+ 
+load water_pmesh.xyz;
+load caffeine.xyz;set picking DISTANCE
+load caffeine2.xyz;set picking DISTANCE
+pmesh test1 "inline" "1 {2. 0. 0.} 0";color $test1 white;pmesh test1 dots
+pmesh test2 "inline" "2 {4. 0. 0.} {2. 0. 0.} 1 {3 0 1 0}";color $test2 orange
+pmesh test2 "inline" "2 4. 0. 0. 2. 0. 0. 1 3 0 1 0";color $test2 orange
+pmesh test3 "inline" "3 {-0.49, -2.8, -1.2} {-2.2, 0.80, 1.09} {1.89, 2.12, 0.42} 1 {4 0 1 2 0}";color $test3 yellow
+pmesh test4 "inline" "4 {0., 0., 0.} {0., 2., 0.} {2., 2., 0.} {2., 0., 0.} 1 {5 0 1 2 3 0}";color $test4 translucent red
+load caffeine2.xyz;draw triangle1 150 (atomno=1) (atomno=14) (atomno=15);draw line2 200 $triangle1 (atomno=10);color $line2 translucent green
+draw line1 150 (atomno=1) (atomno=2);color $line1 yellow
+draw line1 300 (oxygen) (nitrogen);spin $line1 30
+draw triangle1 400
+draw line1 100;draw triangle1 100
+color $triangle1 red;color $line1 blue
+draw triangle2 200 $triangle1 (atomno=9) (atomno=11);color $triangle2 green
+draw square1 {1 1 1} {1 0 1} {0 0 1} {0 1 1};refresh;moveto 1.0 -946 -305 108 58.3;color $square1 yellow
+load cyclohexane_movie.xyz
+draw line1 250 (atomno=2) (atomno=5);draw line2 200 (atomno=4 or atomno=3) (atomno=1 or atomno=6);
+animation on
+spin  $line1 30
+spin  $line2 30
+spin off
+animation off
+load cyclohexane_movie.xyz
+draw line1 FIXED {0 0 0} {2 2 2}
+frame 1
+frame next
+frame play
+
+#altloc.htm
+
+ 
+set defaultLoadScript ";color altloc;restrict none;configuration 0;cartoon on;select not *%;wireframe 0.15;spacefill 0.15"
+load 5hvp.cif; ;refresh;# two inhibitor alignments
+load 1hje.cif; ;refresh;# two tail configurations
+load 3ovo.cif; ;refresh;# just a tiny difference
+load 1mng.cif; ;refresh;# dimeric iron complex -- almost no difference
+select *;color structure
+select *;color altloc
+set defaultLoadScript "";load 1VWH.cif;
+load 1VWH.cif;;color altloc;restrict none;configuration 0;cartoon on;select not *%;wireframe 0.15;spacefill 0.15
+load 1VIF.cif;color altloc; ;refresh;# two ligand configurations
+load 1VIF.cif;;color altloc;restrict none;configuration 0;cartoon on;select not *%;wireframe 0.15;spacefill 0.15
+restrict none;configuration 0;wireframe 0.15 ;refresh;#shows all, like model 0, with wireframe
+restrict none;configuration 1;wireframe 0.15
+restrict none;configuration 2;wireframe 0.15
+restrict none;configuration 0;cartoon on;
+restrict none;configuration 0;cartoon on;
+restrict none;configuration 0;cartoon on; ;refresh;#toggles configurations because only one alternate location can be shown in secondary structure
+restrict none;configuration 1;cartoon on;
+restrict none;configuration 2;cartoon on;
+cartoon off;wireframe 0.15
+cartoon on;wireframe 0
+load 1hje.pdb;
+color altloc
+color amino
+restrict none;select *;wireframe 0.15;
+select *%A or *%B; spacefill 0;label %A;
+restrict none;configuration 0;wireframe 0.15
+restrict none;configuration 1;wireframe 0.15
+restrict none;configuration 2;wireframe 0.15
+select *;labels off
+load 5hvp.cif;
+color altloc
+select *%;color yellow
+select *% and within(4.0, *%1 or *%2);color red
+load 1VWH.cif;color altloc;restrict none;select *;cartoon on
+configuration 1
+configuration 2
+select 59-64 and (*%,*%A) or 65-70 and (*%,*%B);configuration
+load "1vwh" "1VWH.cif" "1VWH.cif";color altloc;restrict none;select *;cartoon on
+model 1001;configuration 1
+model 2001;configuration 2
+model 0
+load 1JGQ.pdb;select *;cartoon on;color insertion
+select 186^?;spacefill on
+select 186^*;spacefill on;color white
+select *^?;spacefill on;color yellow
+select *^A;spacefill on;color blue
+load 1ADE.cif;color altloc;
+load 1B2K.cif;color altloc;
+load 1BLC.cif;color altloc;
+load 1CRC.cif;color altloc;
+load 1ECN.cif;color altloc;
+load 1HF4.cif;color altloc;
+load 1LDN.cif;color altloc;
+load 1LIN.cif;color altloc;
+load 1MYG.cif;color altloc;
+load 1PHA.cif;color altloc;
+load 1PHB.cif;color altloc;
+load 1VWP.cif;color altloc;
+load 1XIS.cif;color altloc;
+load 1XY1.cif;color altloc;
+load 1XY2.cif;color altloc;
+load 2LHB.cif;color altloc;
+load 2TBV.cif;color altloc;
+load 4DFR.cif;color altloc;
+load 5BIR.cif;color altloc;
+load 1zir.cif;color altloc;
+
+#dipole.htm
+
+ 
+load water.xyz;moveto 1.0 727 -680 95 37.4
+dipole (atomno=1) (atomno=3)
+dipole (atomno=2) (atomno=3)
+set dipoleScale 2.0
+set dipoleScale -2.0
+set dipoleScale -1.0
+set dipoleScale 1.0
+load CH3F.smol;moveto 1.0 223 973 -64 51.1 96 -13 -9;
+dipole calculate molecular offset 2.0
+dipole calculate bonds
+dipole bonds delete
+dipole bonds
+load CH3F.smol;moveto 1.0 223 973 -64 51.1 96 -13 -9; dipole molecular offset 2.0; dipole calculate bonds
+set axesMolecular; axes on; dipole molecular offset 0.0
+axes off; dipole molecular offset 2.0
+dipole bonds offsetSide 0.2
+dipole bonds offsetSide 0.6
+dipole bonds width 0.1
+dipole bonds noCross
+load CH3F.smol;moveto 1.0 223 973 -64 51.1 96 -13 -9; dipole molecular offset 2.0; dipole bonds
+dipole dipole2 width 0.15 offsetSide 0.3
+dipole (atomno=1) (atomno=2) width 0.1 offsetSide 0.5
+dipole (atomno=2) (atomno=1) width 0.05 offsetSide 0.5
+dipole
+dipole;dipole offsetSide 0 width 0.1; wireframe 0; spacefill 0;
+load CH3F.smol;moveto 1.0 223 973 -64 51.1 96 -13 -9; dipole molecular offset 2.0; dipole bonds
+color atoms blue
+color bonds green
+dipole bonds;color dipoles translucent yellow
+color dipoles opaque white
+dipole molecular; color dipole translucent red
+dipole bond; color dipoles none
+color bonds none
+color atoms none
+load CH3F.smol;moveto 1.0 223 973 -64 51.1 96 -13 -9; dipole molecular offset 2.0; dipole bonds
+set dipoleScale 0.5
+set dipoleScale 1.0
+set dipoleScale -1.0
+load water.xyz;moveto 1.0 145 984 100 51.3 75 7 -9; set axesMolecular;axes on;
+dipole mydipole1 (atomno=1) (atomno=2) offsetSide 0
+color $mydipole1 red
+dipole mydipole1 {0 0 0} (atomno=2)
+dipole arrow1 {0 0 0} (atomno=3) noCross;color $arrow1 white
+dipole arrow1 0.5 {0 0 0} (atomno=3) noCross;color $arrow1 white
+dipole arrow1 1.0 {0 0 0} (atomno=3) noCross;color $arrow1 white
+dipole arrow1 1.3 {0 0 0} (atomno=3) noCross;color $arrow1 white
+dipole arrow2 {0 0 0} {1 -1 1} noCross; color $arrow2 yellow
+
+
+#draw.htm
+
+ 
+load water.xyz;rotate y 20
+draw line1 250 (atomno=1) (atomno=2);color $line1 yellow
+draw line2 300 $line1 (atomno=3);color $line2 white
+draw plane1 300 PLANE (atomno=1) (atomno=2) (atomno=3);color $plane1 green
+load water.xyz;moveto 1.0 130 991 -44 121.7
+draw arrow1 arrow {0 0 -.5} {.2 0 -1} (atomno=2) offset {-.5 -0.3 -.5}
+draw curve1 curve {0 0 .8} {-1 1.8 .8} {.5 1.3 .8}
+set picking DRAW
+show DRAW
+set picking ON
+load water.xyz;rotate y 20
+draw line1 250 (atomno=1) (atomno=2);color $line1 yellow
+draw line2 300 $line1 (atomno=3);color $line2 white
+spin  $line1 30
+spin  $line2 30
+spin off;rotate  $line1 10;
+spin off;rotate  $line2 10;
+rotate  $line2 10;
+load caffeine.xyz;set picking SPIN 10; ;refresh;#now pick two atoms
+set picking spin 30
+draw line1 300 (oxygen) (nitrogen);
+spin  $line1 30
+draw line2 300 (atomno=9) (atomno=11);
+draw line2 {-2. 0. 0.} {0. 2. 0.};
+spin  $line2 30
+spin off
+load caffeine.xyz;set axes 3;select atomno=4;dots on ;refresh;#several new rotate options
+rotate
+rotate -x
+rotate y 10 (atomno=4)
+set axesMolecular;set axes on
+rotate y 10 molecular (atomno=4)
+rotate z 10 molecular (atomno=4)
+rotate 20 (atomno=8) (atomno=4)
+draw line1 300 (oxygen) (nitrogen)
+rotate 10 $line1
+set axesMolecular;set axes on
+draw line1 {0 0 0} {3 3 0}
+rotate 30 {0 0 0} {3 3 0}
+rotate 20 molecular ;refresh;# defaults to y axis
+load caffeine2.xyz;draw triangle1 150 (atomno=1) (atomno=14) (atomno=15);
+draw line1 200 PERP $triangle1
+draw line2 PERP 400 (atomno=1) (atomno=14) (atomno=15);
+draw plane2 PLANE 400 (atomno=1) (atomno=14) (atomno=15);
+draw plane2 2.0 PERP PLANE $line2;color $plane2 blue
+draw plane4 2.0 PERP PLANE $line1;color $plane4 blue
+draw plane3 2.0 PERP PLANE ROTATE45 $line1;color $plane3 red
+draw plane2 2.0 PLANE CROSSED $line1 $line2;color $plane2 blue
+draw plane2 2.0 PERP PLANE $line1 REVERSE $line2;color $plane2 blue
+draw triangle1 400
+draw triangle1;color draw red;draw line2 ;color draw blue
+spin $line2 180 60
+spin off
+load cyclohexane_movie.xyz;draw line1 250 (atomno=2) (atomno=5);draw line2 200 (atomno=4 or atomno=3) (atomno=1 or atomno=6);
+animation on
+animation off;spin  $line1 30
+animation off;spin  $line2 30
+spin off
+animation off
+frame next
+frame prev
+frame play
+frame playrev
+
+
+#poly.htm
+
+ 
+load NaCl.mol; select *
+polyhedra 6 3.0 (chlorine) to (sodium) collapsed edges;
+connect 3.0 (*)
+polyhedra 6 (chlorine) collapsed edges; color polyhedra yellow
+select *; wireframe off; spacefill off;
+select connected(6); spacefill 0.5;
+load quartz.mol
+draw line1 150 (atomno=2) (atomno=17)
+spin internal $line1 30
+spin off
+polyhedra 4 (silicon) to (oxygen) collapsed edges
+polyhedra 4;color polyhedra red
+polyhedra edges;
+load P4O10.mol;polyhedra 4 collapsed edges
+draw line2 150 (atomno=2 or atomno=11 or atomno=3) (atomno=13)
+spin internal $line2
+spin off
+load ZNQUKROD.mol;
+select zinc;polyhedra bonds flat edges;
+select zinc;polyhedra bonds collapsed edges;
+select carbon;polyhedra bonds faceCenterOffset 0.4 collapsed edges;
+draw line2 150 (atomno=40) (atomno=35)
+spin internal $line2
+spin off
+load TCBEWREA.mol
+select not nitrogen;polyhedra bonds faceCenterOffset 0.0 collapsed edges
+select not nitrogen;polyhedra bonds faceCenterOffset 0.25 collapsed edges
+select not nitrogen;polyhedra bonds faceCenterOffset 0.5 collapsed edges
+select not nitrogen;polyhedra bonds faceCenterOffset 0.9 collapsed edges
+select not nitrogen;polyhedra bonds 	faceCenterOffset 1.2 collapsed edges
+load "y1237.cif" {3 3 3}
+restrict cell={2 2 2};
+set unitcell {1 1 1};axes off;color unitcell white;center visible;moveto 1.0 -971 195 138 78.9 225;
+connect (copper) (copper) delete;
+connect (yttrium) (*) delete;
+polyhedra bonds  (copper and (connected(4) or connected(5)) and visible)
+select *;wireframe 0;
+polyhedra bonds (copper and (connected(4) or connected(5)) and visible) distanceFactor 2.0
+load "y1237.cif" {2 2 2};restrict cell={1.5 1.5 1.5};set unitcell {1/2 1/2 1/2};axes off;color unitcell white;center visible;moveto 1.0 -971 195 138 78.9 175;
+connect (copper) (copper) delete;connect (yttrium) (*) delete;
+polyhedra bonds  (copper and (connected(4) or connected(5)) and visible)
+select *;wireframe 0;
+
+#sym.htm
+
+ 
+load quartz.cif;set showUnitCell on
+load "quartz.cif" {2 2 2};set showUnitCell on
+load calcite.cif;set showUnitCell on
+load maleic.cif;set showUnitCell on
+load "maleic.cif" {1,1,1};set showUnitCell on
+load "calcite.cif" {3 2 1};set showUnitCell on;moveto 1.0 { -1000 6 -2 47.0} 100.0 0.0 0.0 {5.0491986 4.3727345 7.7310104}
+set perspectiveDepth off
+select symmetry;color green ;refresh;# select only those atoms generated by symmetry operations
+select not symmetry;color yellow ;refresh;# select only the original atoms prior to symmetry operations
+frame 1
+frame next
+frame prev
+load "maleic.cif" 3 {2,2,2};set showUnitCell on
+show symmetry ;refresh;#list the space group and symmetry operators
+load "maleic.cif" 6 {1,1,1};set showUnitCell on
+load "team0104a.ccdc.cif" {1 1 1};set showunitcell
+set axesUnitCell;set axes 0.2
+load "kuds0105a.ccdc.cif" {1 1 1};set showunitcell
+load "nank0104a.ccdc.cif" {1 1 1};set showunitcell;connect 2.7 (chlorine) (hydrogen) hbond create
+load "sebi0105c.ccdc.cif" {1 1 1};set showunitcell;connect 2.7 (chlorine) (hydrogen) hbond create
+set showUnitCell off
+set perspectiveDepth on
+
+
+# operation.txt
+
+if (_version < 1103041);quit;endif
+
+load =1crn
+
+###TESTBLOCKSTART###
+
+function checkop(op)
+ ilist=array(true,3,4.5,"test1",{1 0 0},{0 0 1 0}, ({0 1 2 3}))
+ jlist=array(false,5,8.5,"test2",{0 1 0},{0 1 0 0}, ({3 4 5}))
+ for (var i = 1; i <= 7; i = i + 1)
+
+  if(op == "NOT")
+    var t1 = ilist[i];
+    if (t1.type == "string");t1 = "\"" + t1 + "\"";endif
+    var val = (not ilist[i]);
+    if (val.type == "string");val = "\"" + val + "\"";endif
+    print "NOT " + ilist[i].type + " = " + val.type + "  -- NOT " + t1 + " = " + val;
+    continue;
+  endif
+
+  for (var j = 1; j <= 7; j = j + 1)
+   if (op == "+")
+     val = (ilist[i]+jlist[j]);
+   else if(op == "-")
+     val = (ilist[i]-jlist[j]);
+   else if(op == "*")
+     val = (ilist[i]*jlist[j]);
+   else if(op == "/")
+     val = (ilist[i]/jlist[j]);
+   else if(op == "%")
+     val = (ilist[i]%jlist[j]);
+   else if(op == "AND")
+     val = (ilist[i] and jlist[j]);
+   else if(op == "OR")
+     val = (ilist[i] or jlist[j]);
+   endif
+   var t1 = ilist[i];
+   if (t1.type == "string");t1 = "\"" + t1 + "\"";endif
+   var t = jlist[j];
+   if (t.type == "string");t = "\"" + t + "\"";endif
+   var s = "" + t1 + " " + op + " " + t;
+   if (val.type == "array");val = "\n" + val;endif
+   if (val.type == "string");val = "\"" + val + "\"";endif
+   print "" + ilist[i].type + " " +op+" " + jlist[j].type + " = " + val.type + "  -- " + s + " = " + val;
+  end for
+
+  if (op == "+")
+    val = (ilist[i]+jlist);
+  else if(op == "-")
+    val = (ilist[i]-jlist);
+  else if(op == "*")
+    val = (ilist[i]*jlist);
+  else if(op == "/")
+    val = (ilist[i]/jlist);
+  else if(op == "%")
+    val = (ilist[i]%jlist);
+  else if(op == "AND")
+    val = (ilist[i] and jlist);
+  else if(op == "OR")
+    val = (ilist[i] or jlist);
+  endif
+  var t = ilist[i];
+  if (t.type == "string");t = "\"" + t + "\"";endif
+  var s = "" + t + " " + op + " \"" + jlist.join(",") + "\".split(,)";
+  if (val.type == "array");val = "\n" + val;endif
+  if (val.type == "string");val = "\"" + val + "\"";endif
+  print "" + ilist[i].type + " " +op+" " + jlist.type + " = " + val.type + "  -- " + s + " = " + val;
+
+ end for
+
+ if(op == "NOT")
+  var val = (not ilist);
+  print "NOT " + ilist.type + " = " + val.type + "  -- NOT \"" + ilist.join(",") + "\".split(,) = " + val;
+ else 
+  for (var j = 1; j <= 7; j = j + 1)
+   if (op == "+")
+     val = (ilist+jlist[j]);
+   else if(op == "-")
+     val = (ilist-jlist[j]);
+   else if(op == "*")
+     val = (ilist*jlist[j]);
+   else if(op == "/")
+     val = (ilist/jlist[j]);
+   else if(op == "%")
+     val = (ilist%jlist[j]);
+   else if(op == "AND")
+     val = (ilist and jlist[j]);
+   else if(op == "OR")
+     val = (ilist or jlist[j]);
+   endif
+   var t = jlist[j];
+   if (t.type == "string");t = "\"" + t + "\"";endif
+   var s = "\"" + ilist.join(",") + "\".split(,) " + op + " " + t;
+   if (val.type == "array");val = "\n" + val;endif
+   if (val.type == "string");val = "\"" + val + "\"";endif
+   print "" + ilist.type + " " +op+" " + jlist[j].type + " = " + val.type + "  -- " + s + " = " + val;
+  end for
+ endif
+
+end function
+
+print ""
+checkop("+")
+print ""
+checkop("-")
+print ""
+checkop("*")
+print ""
+checkop("/")
+print ""
+checkop("%")
+print ""
+checkop("AND")
+print ""
+checkop("OR")
+print ""
+checkop("NOT")
+print ""
+
+###TESTBLOCKEND###
+

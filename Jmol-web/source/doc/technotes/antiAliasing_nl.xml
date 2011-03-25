@@ -1,0 +1,42 @@
+<!--
+  Dutch translation 
+  Translated from default version : antiAliasing_en.xml (v 1.1)
+-->
+<section title="Wat met anti-aliasing?">
+  <p>
+    <i>Anti-aliasing is momenteel niet beschikbaar in Jmol.
+    De meeste mechanismen zijn aanwezig, maar het is momenteel uitgeschakeld.
+    Het werd uitgeschakeld, omdat er prestatieproblemen zijn bij oudere hardware.
+    We zijn van plan om de implementatie te vervolledigen en alles terug te
+    activeren bij een volgende uitgave van de software...
+    als we de tijd hebben om uit te vinden hoe het kan ingeschakeld worden voor oudere machines.</i>
+  </p>
+
+  <p>
+    De Jmol Graphics3D engine is geheel in software ingewerkt.
+    Het kan de onderliggende 'Sun 2D graphics calls' niet gebruiken omdat deze
+    geen zBuffer biedt, zodat de software niet kan op een pixel-bij-pixel
+    basis kan beslissen of er al dan niet een pixel moet worden getekend.
+  </p>
+
+  <p>
+    De anti-aliasing techniek die wordt gebruikt in de Jmol Graphics3D engine
+    heet de 'full-scene-anti-aliasing'. De complete scene wordt getekend in een
+    buffer die tweemaal zo breed en tweemaal zo hoog is. Daarna worden 4 pixels
+    omgezet in 1 pixel, met toepasselijke vermenging van RGB (Rood/Groen/Blauw) waarden.
+  </p>
+
+  <p>
+    Het eindresultaat houdt in dat er meer geheugen vereist is om alles in de zBuffer
+    en pixelBuffer te bewaren. Het neem ook nog eens veel meer klokcycli in beslag om een
+    scene te tekenen. Het tekengedeelte neemt 4 keer zoveel tijd in beslag. In het geheel
+    neemt het ongeveer 3 keer zoveel tijd in beslag om een gehele scene te tekenen. (renderen)
+  </p>
+
+  <p>
+    Bij recente computers met veel CPU kracht vormt dit geen probleem.
+    Bij oudere computers zou dit onaanvaardbaar traag verlopen.
+    Daarom worden er opties ingebouwd.
+  </p>
+
+</section>

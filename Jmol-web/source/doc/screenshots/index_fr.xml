@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  French translation 
+  Translated from default version : index_en.xml (5853)
+-->
+<document>
+	<body>
+		<title>Copies d'écran</title>
+		<header>
+			<p><i>Cliquer sur les images pour les voir en taille normale.</i></p>
+		</header>
+		<section title="Petites molécules">
+			<screenshots>
+				<screenshot image="aceticacid.jpg">
+          Acide acétique utilisant les couleurs CPK et des atoms remplis.
+        </screenshot>
+				<screenshot image="measurements-1.png">
+          Un rendu avec ombre de la caféine, avec quelques mesures affichées (distance, angle, dihèdre).
+        </screenshot>
+				<screenshot image="screenshot5.jpg">
+          Affichage de la boîte englobante et des axes du système de coordonnées.
+          Il faut noter la transparence du halo jaune autour des atomes sélectionnés.
+        </screenshot>
+				<screenshot image="Picture_2.png">
+          Le potentiel électrostatique de l'<i>allene</i> mappé sur une surface translucide.
+          <i>(contribution de Nick Greeves)</i>
+				</screenshot>
+				<screenshot image="water_pmesh.png">
+          Deux plans translucides (pMesh) illustrant les plans de symétrie pour une molécule d'eau.
+          <i>(contribution de Bob Hanson)</i>
+				</screenshot>
+			</screenshots>
+		</section>
+		<section title="Macromolécules">
+			<screenshots>
+				<screenshot image="bbdots.jpg">
+          A few residues with backbone in blue and vdw dots surface. 
+        </screenshot>
+				<screenshot image="hemes.jpg">
+          Hemoglobin with backbone trace colored by chain and spacefilled hemes.
+        </screenshot>
+				<screenshot image="2hvy.jpg">
+          Crystal structure of an H/ACA box RNP from Pyrococcus furiosus (PDB CODE: 2HVY)<br/><b>
+						<font color="#afafff">Cbf5p</font>   
+          <font color="#aaffbb">Gar1</font>   
+          <font color="pink">Nop10</font>   
+          <font color="#e6de67">L7AE</font>   
+          <font color="#ffaaff">RNA</font></b><br/>
+          A nucleotide of the RNA helix is flipped out into the active site formed by the protein complex.<br/>
+					<i>(contribution Wayne Decatur)</i>
+				</screenshot>
+				<screenshot image="screenshot_streptavidin.png">
+          Biotin (cpk color, spacefilled) inside its binding pocket in a
+          streptavidin subunit (cyan translucent surface) and capped by a portion of
+          the neighbour streptavidin subunit (yellow translucent surface).<br/>
+					<i>(contribution de Angel Herráez)</i>
+				</screenshot>
+				<screenshot image="screenshot_zincfinger.png">
+          A fragment of transcription factor TFIIIA forming three consecutive zinc
+          finger motifs (cartoons), bound to a stretch of DNA (spacefilled).
+          <i>(contribution de Angel Herráez)</i>
+				</screenshot>
+				<screenshot image="screenshot_hemoglobin.png">
+          Highlighting two salt bridges in hemoglobin tetramer (hemo group as sticks
+          at bottom-right).
+          <i>(contribution de Angel Herráez)</i>
+				</screenshot>
+				<screenshot image="Thermus_ribosome_1jgo_and_1giy.jpg">
+          Eubacterial 70S Ribosome from Thermus thermophilus (PDB CODES: 1jgo and 1giy)<br/>
+          On the right is the small subunit and on  the left is the large subunit.<br/>
+          In between the subunits: <b>
+						<font color="yellow">mRNA</font>
+						<font color="pink">A-site tRNA</font>
+						<font color="purple">P-site tRNA</font>
+						<font color="cyan">E-site tRNA</font></b>
+					<i>(contribution de Wayne Decatur)</i>
+				</screenshot>
+			</screenshots>
+		</section>
+		<section title="Crystallographie">
+			<screenshots>
+				<screenshot image="crystal-1.png">
+          Affichage d'une structure de crystal de quartz, remplissant 2x2x2 cellules unitaires.
+          La boîte englobante de la cellule unitaire est dessinée et les données de la cellule unitaire sont montrés en haut à gauche.
+          <i>(contribution de Bob Hanson)</i>
+				</screenshot>
+				<screenshot image="zeolite-rho.jpg">
+          Réseau de <i>tétrahèdres de silicate d'aluminium</i> et le volume disponible pour absorbtion.
+          <i>(contribution de Alan Hewat)</i>
+				</screenshot>
+			</screenshots>
+		</section>
+		<section title="Orbitales">
+			<screenshots>
+				<screenshot image="Picture_3.png">
+          The 4f-orbitals
+          <i>(contribution de Nick Greeves)</i>
+				</screenshot>
+				<screenshot image="Picture_4.png">
+          Cartoon p-orbitals of benzene together with the corresponding translucent molecular orbital.
+          <i>(contribution de Nick Greeves)</i>
+				</screenshot>
+			</screenshots>
+		</section>
+		<section title="Réactions, vibrations, etc.">
+			<screenshots>
+				<screenshot image="sn2-distance-anim.gif">
+          Animation d'une réaction S<sub>N</sub>2 avec
+          la distance mesurée entre les atomes de chlore et de carbone.
+        </screenshot>
+				<screenshot image="vibrate.jpg">
+          Animation de la vibration du benzène avec les vecteurs affichés sous la forme de flèches jaunes
+          et une liste de fréquences de vibration.
+        </screenshot>
+				<screenshot image="screenshot_pertable.png">
+          Table périodique des éléments affichant les rayons atomiques, de van der Waals et ioniques
+          pour tous les éléments avec leur couleur unique.
+          <i>(contribution de Angel Herráez)</i>
+				</screenshot>
+			</screenshots>
+		</section>
+	</body>
+</document>

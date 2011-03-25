@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!--
+  French translation 
+  Translated from default version : index_en.xml (v 1.1)
+-->
+<document>
+	<body>
+		<title>Documentation Jmol</title>
+		<header>
+		</header>
+		<section title="Le Guide de Jmol">
+			<p>
+        Le <a href="JmolUserGuide_fr/">Guide Jmol</a>
+        décrit l'application Jmol.
+      </p>
+		</section>
+		<section title="Le Guide de l'Applet Jmol">
+			<p>
+        Le <a href="JmolAppletGuide_fr.html">Guide de l'Applet Jmol</a>
+        décrit l'applet Jmol.
+      </p>
+		</section>
+		<section title="Langage de Script de Jmol">
+			<section title="Langage de Script Jmol">
+				<p>
+	This <a href="../scripting/">document</a>
+	explains how to write scripts to interact with Jmol applet and application. 
+	<i>Please, note that these methods do not use the Jmol.js library, which is the 
+	currently recommended method to start scripting Jmol.</i>
+				</p>
+			</section>
+			<section title="Documentation Interactive en Ligne du Langage de Script">
+				<p>
+        Cette <a href="http://www.stolaf.edu/academics/chemapps/jmol/docs">documentation interactive en ligne</a>
+	décrit le langage de script
+        Jmol/RasMol/Chime. Elle fournit d'excellentes démonstrations et
+        exemples.
+      </p>
+			</section>
+			<section title="Surface Documentation">
+				<p>
+	This <a href="surface/">documentation</a>
+	describes and compares the different options available in Jmol (v.11) scripts
+	for generating surfaces, either based on the molecule or geometric. 
+	It also provides a testing and demonstration page.
+		      </p>
+			</section>
+			<section title="Documentation Librairie JavaScript">
+				<p>
+	Jmol.js est une librairie JavaScript qui peut être utilisée pour simplifier le développement de pages web qui incluent la JmolApplet. 
+	<a href="../jslibrary/">Description et documentation</a>.
+				</p>
+			</section>
+		</section>
+		<section title="Couleurs Jmol">
+			<p>
+			This <a href="../jscolors/">document</a> specifies
+	which colors Jmol uses for elements, chains, chain direction,
+	charge, hydrogen bonds, isosurfaces, positional variability, residues, nucleotides, and
+	secondary structure. Also, it describes standard color names in JavaScript and 
+	the Netscape 8-bit color palette.
+			</p>
+		</section>
+		<section title="Atomic and Ionic Radii Used by Jmol">
+			<p>
+			This <a href="../radii/">document</a> demonstrates, 
+	using a 3D periodic table, which radii Jmol uses for elements. 
+	Includes atomic, van der Waals and ionic radii.
+			</p>
+		</section>
+		<section title="Le Guide des Développeurs Jmol">
+			<p>
+        Le <a href="JmolDevelopersGuide_fr.html">Guide des Développeurs Jmol</a>
+        décrit les procédure de développement de Jmol.
+      </p>
+		</section>
+		<section title="Notes Techniques Jmol">
+			<p>
+			This <a href="../technotes/">document</a> gives technical information 
+	about how Jmol is built, particularly with respect to graphics rendering.
+			</p>
+		</section>
+		<section title="Littérature Jmol">
+			<p>
+	 Un liste à jour de la littérature décrivant Jmol peut être trouvé à
+			<a href="http://wiki.jmol.org/index.php/Literature">Jmol Wiki</a>
+			</p>
+		</section>
+	</body>
+</document>

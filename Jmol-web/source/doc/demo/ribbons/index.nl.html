@@ -1,0 +1,80 @@
+<!--
+  Dutch translation 
+  Translated from default version : index.en.html (v 1.1)
+-->
+<html>
+  <head>
+    <title>Jmol applet ribbons demo</title>
+    <script src="../../jmol/Jmol.js"></script>
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <form>
+      <table border="1">
+	<tr>
+	  <td>
+	    
+	    <h2>Ribbons</h2>
+	    <script>jmolApplet(400);</script>
+	  </td>
+	  
+	  <td>
+	    <script>
+	      function modelRadio(model) {
+	        var script = "load " + model + ".gz; cpk off; wireframe; ribbons";
+		jmolRadio(script, model, false, "&nbsp ");
+	      }
+
+	      modelRadio("1CRN.pdb");
+	      modelRadio("1D68.pdb");
+	      modelRadio("1D66.pdb");
+	    </script>
+	    <p />
+
+	    Ribbons bieden een representatie van de proteïne backbone,
+	    door gebruik te maken van een ribbon die vloeiend de middelpunten
+	    van aangrenzende alfa-koolstof atomen (of fosforatomen in nucleotide-kettingen) opspoort.
+	    De ribbon staat loodrecht tegenover de peptide plane. <br />
+	    <p />
+	    
+	    Kleur de ribbons zoals je wil<br />
+	    <script>
+	      jmolRadioGroup([
+	        ["color ribbons none", null, "checked"],
+		"color ribbons structure",
+	        "color ribbons amino",
+		"color ribbons skyblue",
+		"color ribbons yellow"
+		], "<br />");
+	    </script>
+	    <br />
+
+	    <script>
+	      jmolCheckbox("wireframe on", "wireframe off", "wireframe aan/uit", "checked");
+	    </script>
+	    <br />
+	    
+	    spacefill
+	    &nbsp;&nbsp;
+	    <script>
+	      jmolRadioGroup([
+	        ["spacefill off", "off ", "checked"],
+		["spacefill 20%", "20% "],
+		["spacefill 25%", "25% "],
+		["spacefill on",  "100%"]
+		]);
+	    </script>
+	    <br />
+	    	
+	    Vergroot en kijk dichterbij<br />
+	    <script>jmolButton("zoom 300"); jmolButton("zoom 100");</script>
+	    <br />
+	  </td>
+	</tr>
+      </table>
+    </form>
+  </body>
+</html>

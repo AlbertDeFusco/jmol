@@ -1,0 +1,20 @@
+theimg = "../img/demo_atomicorbitals.jpg";
+isosurface phase atomicOrbital 3 2 1; set axesScale 0.5;axes on; moveto 1.0 { 462 -868 -180 47.18} 141;
+write image 250 250 @theimg;
+
+theimg = "../img/demo_mo.jpg";
+load ch2o_homo.mo;wireframe 0.05;spacefill off;moveto 1.0 940 -340 -34 67.0; mo 1;
+write image 250 250 @theimg;
+
+theimg = "../img/demo_mohomo.jpg";
+load C6H6.smol;moveto 1.0 -821 -377 -430 69.2; mo cutoff 0.008; mo resolution 8; mo homo -1;;
+write image 250 250 @theimg;
+
+theimg = "../img/demo_isomo.jpg";
+load ch2o_homo.mo;wireframe 0.05;spacefill off;moveto 1.0 940 -340 -34 67.0; isosurface color yellow purple mo 1 translucent;
+write image 250 250 @theimg;
+
+theimg = "../img/demo_moslice.jpg";
+load ch2o_homo.mo;wireframe 0.05;spacefill off;moveto 1.0 940 -340 -34 67.0; isosurface plane xz mo 1;
+write image 250 250 @theimg;
+

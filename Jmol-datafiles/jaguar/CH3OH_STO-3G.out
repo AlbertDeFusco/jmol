@@ -1,0 +1,378 @@
+Job CH3OH_STO-3G started on chem-alpha at Tue Aug 21 07:31:00 2007
+jobid: chem-alpha-0-46669af2
+
+  +--------------------------------------------------------------------+
+  |  Jaguar version 7.0, release 109                                   |
+  |                                                                    |
+  |  Copyright (c) 2007 Schrodinger,  LLC.                             |
+  |  All Rights Reserved.                                              |
+  |                                                                    |
+  |  Use of this program should be acknowledged in publications as:    |
+  |  Jaguar, version 7.0, Schrodinger, LLC, New York, NY, 2007.        |
+  +--------------------------------------------------------------------+
+   
+  start of program pre
+  Job name: CH3OH_STO-3G
+  Executables used: /software/schrodinger/jaguar-v70109/bin/Linux-x86
+  Temporary files : /var/tmp/hatuey/CH3OH_STO-3G
+  Maestro file (input):  CH3OH_STO-3G.mae
+  Maestro file (output): CH3OH_STO-3G.01.mae
+  
+  
+  Dynamic memory assumed available (MB):     256
+  
+  basis set:             sto-3g          
+  net molecular charge:    0
+  multiplicity:            1
+  
+  number of basis functions....           14
+  
+  Basis set name for each atom
+  
+  Atom     Basis 
+  C1       sto-3g          
+  H2       sto-3g          
+  H3       sto-3g          
+  H4       sto-3g          
+  O5       sto-3g          
+  H6       sto-3g          
+  
+  Gaussian Functions - Shell information
+  
+             s    j
+             h    c  i       n
+             e    o  s       f
+             l    n  h       s
+  atom       l    t  l  l    h          z              coef            rcoef
+--------    ---  --- -- --  ---     ----------      ----------       ---------
+ C1          1    3  0  1    0      71.6168373       0.1543290       2.7078144
+ C1          2   -1  0  1    0      13.0450963       0.5353281       2.6188802
+ C1          3   -1  0  1    0       3.5305122       0.4446345       0.8161906
+ C1          4    2  2  1    1       2.9412494      -0.2956454      -0.4732386
+ C1          5   -4  2  1    1       0.6834831       1.1815287       0.6329949
+ C1          6    2 -1  2    2       2.9412494       0.2213487       1.2152952
+ C1          7   -6 -1  2    2       0.6834831       0.8627064       0.7642102
+ C1          8    1  1  1    1       0.2222899       1.0000000       0.2307278
+ C1          9    1 -1  2    2       0.2222899       1.0000000       0.2175654
+ H2          1    2  0  1    5       3.4252509       0.2405014       0.4315658
+ H2          2   -1  0  1    5       0.6239137       0.8342385       0.4173916
+ H2          3    1  0  1    5       0.1688554       1.0000000       0.1877355
+ H3          1    2  0  1    6       3.4252509       0.2405014       0.4315658
+ H3          2   -1  0  1    6       0.6239137       0.8342385       0.4173916
+ H3          3    1  0  1    6       0.1688554       1.0000000       0.1877355
+ H4          1    2  0  1    7       3.4252509       0.2405014       0.4315658
+ H4          2   -1  0  1    7       0.6239137       0.8342385       0.4173916
+ H4          3    1  0  1    7       0.1688554       1.0000000       0.1877355
+ O5          1    3  0  1    8     130.7093214       0.1543290       4.2519433
+ O5          2   -1  0  1    8      23.8088660       0.5353281       4.1122944
+ O5          3   -1  0  1    8       6.4436083       0.4446345       1.2816226
+ O5          4    3  3  1    9       5.0331513      -0.0999672      -0.2394130
+ O5          5   -4  3  1    9       1.1695961       0.3995128       0.3202342
+ O5          6   -4  3  1    9       0.3803890       0.7001155       0.2416856
+ O5          7    3 -1  2   10       5.0331513       0.1559163       1.6754502
+ O5          8   -7 -1  2   10       1.1695961       0.6076837       1.0535680
+ O5          9   -7 -1  2   10       0.3803890       0.3919574       0.1669029
+ H6          1    2  0  1   13       3.4252509       0.2405014       0.4315658
+ H6          2   -1  0  1   13       0.6239137       0.8342385       0.4173916
+ H6          3    1  0  1   13       0.1688554       1.0000000       0.1877355
+  
+  
+  Gaussian Functions - Normalized coefficients
+  
+             s
+             h    t
+             e    y
+             l    p    f
+  atom       l    e    n          z          rcoef        rmfac     rcoef*rmfac
+--------    ---  ---  ---     ---------    ----------   ----------  -----------
+ C1          1    S    1      71.616837     2.707814     1.000000     2.707814
+ C1          2    S    1      13.045096     2.618880     1.000000     2.618880
+ C1          3    S    1       3.530512     0.816191     1.000000     0.816191
+ C1          4    S    2       2.941249    -0.473239     1.000000    -0.473239
+ C1          5    S    2       0.683483     0.632995     1.000000     0.632995
+ C1          6    X    3       2.941249     1.215295     1.000000     1.215295
+                  Y    4                                 1.000000     1.215295
+                  Z    5                                 1.000000     1.215295
+ C1          7    X    3       0.683483     0.764210     1.000000     0.764210
+                  Y    4                                 1.000000     0.764210
+                  Z    5                                 1.000000     0.764210
+ C1          8    S    2       0.222290     0.230728     1.000000     0.230728
+ C1          9    X    3       0.222290     0.217565     1.000000     0.217565
+                  Y    4                                 1.000000     0.217565
+                  Z    5                                 1.000000     0.217565
+ H2          1    S    6       3.425251     0.431566     1.000000     0.431566
+ H2          2    S    6       0.623914     0.417392     1.000000     0.417392
+ H2          3    S    6       0.168855     0.187735     1.000000     0.187735
+ H3          1    S    7       3.425251     0.431566     1.000000     0.431566
+ H3          2    S    7       0.623914     0.417392     1.000000     0.417392
+ H3          3    S    7       0.168855     0.187735     1.000000     0.187735
+ H4          1    S    8       3.425251     0.431566     1.000000     0.431566
+ H4          2    S    8       0.623914     0.417392     1.000000     0.417392
+ H4          3    S    8       0.168855     0.187735     1.000000     0.187735
+ O5          1    S    9     130.709321     4.251943     1.000000     4.251943
+ O5          2    S    9      23.808866     4.112294     1.000000     4.112294
+ O5          3    S    9       6.443608     1.281623     1.000000     1.281623
+ O5          4    S   10       5.033151    -0.239413     1.000000    -0.239413
+ O5          5    S   10       1.169596     0.320234     1.000000     0.320234
+ O5          6    S   10       0.380389     0.241686     1.000000     0.241686
+ O5          7    X   11       5.033151     1.675450     1.000000     1.675450
+                  Y   12                                 1.000000     1.675450
+                  Z   13                                 1.000000     1.675450
+ O5          8    X   11       1.169596     1.053568     1.000000     1.053568
+                  Y   12                                 1.000000     1.053568
+                  Z   13                                 1.000000     1.053568
+ O5          9    X   11       0.380389     0.166903     1.000000     0.166903
+                  Y   12                                 1.000000     0.166903
+                  Z   13                                 1.000000     0.166903
+ H6          1    S   14       3.425251     0.431566     1.000000     0.431566
+ H6          2    S   14       0.623914     0.417392     1.000000     0.417392
+ H6          3    S   14       0.168855     0.187735     1.000000     0.187735
+  
+  Effective Core Potential 
+  
+  Atom      Electrons represented by ECP
+ C1                     0
+ H2                     0
+ H3                     0
+ H4                     0
+ O5                     0
+ H6                     0
+  
+  no dealiasing set available for atom            1
+  switch to all-analytic calculation
+  
+ Input geometry:
+                                   angstroms
+  atom               x                 y                 z
+  C1           -1.3114490000      1.0186960000      0.0408900000 
+  H2           -0.5461820000      1.5867900000      0.6087340000 
+  H3           -1.4621680000      1.5089600000     -0.9453920000 
+  H4           -2.2635010000      1.0289560000      0.6147550000 
+  O5           -0.8690250000     -0.2960370000     -0.1363680000 
+  H6           -1.5839790000     -0.7586910000     -0.6459290000 
+   
+  principal moments of inertia:
+        amu*angstrom^2:        4.13651       19.85562       20.65967
+                g*cm^2: 6.86884276E-40 3.29710330E-39 3.43061777E-39
+   
+  rotational constants:
+               cm^(-1):     4.07532232     0.84901035     0.81596815
+                   GHz:   122.17508966    25.45268993    24.46210965
+   
+  Molecular weight:      32.03 amu
+   
+  Stoichiometry: CH4O
+  Molecular Point Group: C1      
+  Point Group used: C1
+  
+  nuclear repulsion energy.......      40.341913054 hartrees
+  Plot box parameters (in Angstoms):
+   x min,max:          -4.180501    1.419499
+   y min,max:          -2.675691    3.724309
+   z min,max:          -2.862392    2.737608
+   plot resolution:     2.500000
+   points:    14   16   14
+  
+ 
+ Non-default options chosen:
+   Highest accuracy cutoffs used in SCF
+   Electrostatic potential fit to point charges on atomic centers
+   Electron density computed on grid number  -7
+  
+ Non-default print settings:
+      1=  2 102=  8
+  
+  end of program pre
+   
+   
+  start of program onee
+  smallest eigenvalue of S:    2.391E-01
+  number of canonical orbitals.....           14
+  end of program onee
+   
+   
+  start of program hfig
+  initial wavefunction generated automatically from atomic wavefunctions
+ 
+  Irreducible     Total no   No of occupied orbitals 
+  representation  orbitals   Shell_1  Shell_2    ...
+  No Symm           14          9
+  ------------------------
+  Orbital occupation/shell    1.000
+ 
+  end of program hfig
+   
+   
+  start of program probe
+  end of program probe
+   
+   
+  start of program grid
+   
+  number of gridpoints: 
+     atom         C1        H2        H3        H4        O5        H6     total
+  grid # 1         6      1332      1236      1236       856      1371      6037
+  grid # 2        38       580       650       605       558       705      3136
+   
+  end of program grid
+   
+   
+  start of program scf
+ number of electrons..........         18
+ number of alpha electrons....          9
+ number of beta electrons.....          9
+ number of orbitals, total....         14
+ number of doubly-occ'd orbs..          9
+ number of open shell orbs....          0
+ number of occupied orbitals..          9
+ number of virtual orbitals...          5
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: HF
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot   1  N  N  0  N    -113.35027544788           2.0E-02  1.6E-01
+etot   2  N  Y  0  N    -113.53463080220  1.8E-01  5.2E-03  4.2E-02
+etot   3  N  Y  0  N    -113.54569300047  1.1E-02  1.7E-03  9.6E-03
+etot   4  N  Y  0  N    -113.54643594820  7.4E-04  3.2E-04  1.5E-03
+etot   5  N  Y  0  N    -113.54646537172  2.9E-05  1.3E-04  4.0E-04
+etot   6  N  Y  0  N    -113.54646839389  3.0E-06  1.1E-05  6.2E-05
+etot   7  N  N  0  N    -113.54646842323  2.9E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............      40.34191305425
+   (E)  Total one-electron terms.....    -235.81836277225
+   (I)  Total two-electron terms.....      81.92998129477
+   (L)  Electronic energy............    -153.88838147748  (E+I)
+   (N)  Total energy.................    -113.54646842323  (A+L)
+  
+ SCFE: SCF energy: HF      -113.54646842323 hartrees   iterations:   7
+  
+ 
+ HOMO energy:    -0.35274
+ LUMO energy:     0.57112
+ 
+  Orbital energies: 
+  -20.25868  -11.09090   -1.28734   -0.86781   -0.61262   -0.57445
+   -0.52536   -0.40930   -0.35274    0.57112    0.66525    0.68789
+    0.70200    0.73997
+ 
+  end of program scf
+   
+   
+  start of program ch
+  gridpoints used for charge fit         5865
+    out of a possible maximum of         6037
+  
+   Electrostatic potential fitting constrained to reproduce
+     total charge:                yes
+     dipole moment:               no 
+     traceless quadrupole moment: no 
+     traceless octapole moment:   no 
+  
+  Atomic charges from electrostatic potential: 
+   
+ Atom       C1           H2           H3           H4           O5      
+ Charge    0.15998      0.02160     -0.00351     -0.00351     -0.47034
+   
+ Atom       H6      
+ Charge    0.29577
+  
+  sum of atomic charges:     0.000000
+   
+ RMS Error   1.12E-03 hartrees
+ 
+  end of program ch
+   
+   
+  start of program elden
+  
+  Calculating electrostatic potential in units of kcal/mol
+  File written:
+    CH3OH_STO-3G_potential.plt
+ 
+  Calculating orbital amplitude...
+  Files written:
+    CH3OH_STO-3G_MO_9.plt
+    CH3OH_STO-3G_MO_10.plt
+ 
+  Calculating electron density...
+  charge density evaluated on         3136  gridpoints
+  File written:
+    CH3OH_STO-3G_density.plt
+  
+  end of program elden
+   
+   
+  start of program post
+  ***************************************** 
+ 
+ Occupied + virtual Orbitals- final wvfn
+ 
+  ***************************************** 
+   
+   
+                              1         2         3         4         5
+  eigenvalues-            -20.25868 -11.09090  -1.28734  -0.86781  -0.61262
+    1 C1               S   -0.00054   0.99218  -0.08685   0.20210   0.00806
+    2 C1               S    0.00462   0.03583   0.21838  -0.60948  -0.00620
+    3 C1               X    0.00140  -0.00010   0.02646   0.02611   0.38081
+    4 C1               Y   -0.00395   0.00034  -0.10070  -0.09408  -0.13353
+    5 C1               Z   -0.00050   0.00005  -0.01739  -0.01553   0.15451
+    6 H2               S   -0.00031  -0.00672   0.02588  -0.19776   0.18284
+    7 H3               S   -0.00037  -0.00671   0.02663  -0.19420  -0.20077
+    8 H4               S   -0.00037  -0.00671   0.02663  -0.19419  -0.20077
+    9 O5               S   -0.99417   0.00042  -0.22341  -0.07617  -0.04437
+   10 O5               S   -0.02600  -0.00458   0.79940   0.32059   0.21627
+   11 O5               X    0.00347   0.00060  -0.09903  -0.01073   0.30972
+   12 O5               Y   -0.00173  -0.00279   0.05926  -0.18517   0.26493
+   13 O5               Z    0.00125  -0.00055  -0.03263  -0.06248   0.24059
+   14 H6               S    0.00566  -0.00106   0.13967   0.15815  -0.35273
+   
+                              6         7         8         9        10
+  eigenvalues-             -0.57445  -0.52536  -0.40930  -0.35274   0.57112
+    1 C1               S    0.00000   0.00986   0.01672   0.00000   0.01181
+    2 C1               S    0.00000  -0.06640  -0.06753   0.00000  -0.01186
+    3 C1               X   -0.23455   0.18535  -0.28328  -0.08676  -0.43896
+    4 C1               Y   -0.14050   0.45425   0.15807  -0.05197   0.50164
+    5 C1               Z    0.45665   0.23496  -0.09686   0.16892  -0.07112
+    6 H2               S    0.00000   0.41026  -0.25523   0.00000   0.17013
+    7 H3               S   -0.34878  -0.03866   0.20811  -0.27862  -0.26988
+    8 H4               S    0.34878  -0.03866   0.20811   0.27862  -0.26988
+    9 O5               S    0.00000  -0.02181  -0.08198   0.00000  -0.11881
+   10 O5               S    0.00000   0.10718   0.43039   0.00000   0.76018
+   11 O5               X   -0.17372   0.12705   0.60014   0.40211  -0.58101
+   12 O5               Y   -0.10406  -0.46193  -0.24871   0.24087   0.07766
+   13 O5               Z    0.33823  -0.07686   0.23173  -0.78288  -0.27453
+   14 H6               S    0.00000   0.22293  -0.29738   0.00000  -0.87852
+   
+                             11        12        13        14
+  eigenvalues-              0.66525   0.68789   0.70200   0.73997
+    1 C1               S    0.00158   0.00001   0.19350   0.15458
+    2 C1               S    0.04694  -0.00004  -1.20407  -0.90688
+    3 C1               X    0.47746   0.48561   0.46824  -0.56949
+    4 C1               Y    0.81095   0.29087  -0.28907   0.29413
+    5 C1               Z    0.49474  -0.94543   0.15161  -0.20201
+    6 H2               S   -0.93628   0.00001   0.28511   0.71793
+    7 H3               S    0.16175  -0.83573   0.82447   0.05349
+    8 H4               S    0.16175   0.83578   0.82441   0.05348
+    9 O5               S   -0.03065   0.00000  -0.04097  -0.02206
+   10 O5               S    0.18960   0.00001   0.25995   0.12342
+   11 O5               X   -0.12802  -0.08140  -0.29445   0.17011
+   12 O5               Y    0.49587  -0.04876  -0.02837   0.75782
+   13 O5               Z    0.08681   0.15846  -0.15997   0.32053
+   14 H6               S    0.23788  -0.00001  -0.38044   0.53005
+   
+  
+  end of program post
+   
+ Total cpu seconds     user:       1.190   user+sys:       1.660
+  
+ Total elapsed time:    4 seconds
+
+Job CH3OH_STO-3G completed on chem-alpha at Tue Aug 21 07:31:04 2007

@@ -1,0 +1,185 @@
+
+###########################################################################
+#
+#                 Cambridge Crystallographic Data Centre
+#                                CCDC 
+# 
+###########################################################################
+#
+#  This CIF contains data generated directly from an entry in the Cambridge 
+#  Structural Database and will include bibliographic, chemical, crystal, 
+#  experimental, refinement, and atomic coordinate data, as available.
+#     
+#  Copyright  2004  The Cambridge Crystallographic Data Centre
+# 
+#  This CIF is provided on the understanding that it is used for bona fide 
+#  research purposes only.  It may contain copyright material of the CCDC
+#  or of third parties, and may not be copied or further disseminated in 
+#  any form, whether machine-readable or not, except for the purpose of 
+#  generating routine backup copies on your local computer system.
+# 
+#  For further information about the CCDC, data deposition and data 
+#  retrieval see <www.ccdc.cam.ac.uk>. Bona fide researchers may freely 
+#  download  Mercury and enCIFer from this site to visualise CIF-encoded 
+#  structures and to carry out CIF format checking respectively.
+#
+###########################################################################
+
+data_CSD_CIF_JORXET
+_audit_creation_date 1992-11-25
+_audit_creation_method CSD-ConQuest-V1
+_database_code_CSD JORXET
+_database_code_depnum_ccdc_fiz 'CSD 55696'
+_chemical_formula_sum 'C42 H32 Ag1 Cl3 O1 P2'
+_chemical_formula_moiety
+;
+C42 H32 Ag1 Cl3 O1 P2
+;
+_journal_coden_Cambridge 68
+_journal_volume 47
+_journal_year 1992
+_journal_page_first 75
+_journal_name_full 'Z.Naturforsch.,A:Phys.Sci. '
+loop_
+_publ_author_name
+"G.Wulfsberg"
+"D.Jackson"
+"W.Ilsley"
+"S.Dou"
+"A.Weiss"
+"J.Gagliardi Junior"
+_chemical_name_systematic
+;
+(2,4,6-Trichlorophenolato-O)-bis(triphenylphosphine)-silver(i)
+;
+_chemical_melting_point 447.15
+_cell_volume   3816.691
+_exptl_crystal_colour 'colorless'
+_exptl_special_details
+;
+Melting point range 447.15-450.15K
+
+;
+_diffrn_ambient_temperature ?
+_diffrn_special_details
+;
+The study was carried out at room temperature,in the range 283-303K
+
+;
+#These two values have been output from a single CSD field.
+_refine_ls_R_factor_gt 0.0396
+_refine_ls_wR_factor_gt 0.0396
+_symmetry_cell_setting monoclinic
+_symmetry_space_group_name_H-M 'P 21/c'
+_symmetry_Int_Tables_number 14
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 -x,1/2+y,1/2-z
+3 -x,-y,-z
+4 x,-1/2-y,-1/2+z
+_cell_length_a 16.692(4)
+_cell_length_b 17.942(4)
+_cell_length_c 12.857(3)
+_cell_angle_alpha 90
+_cell_angle_beta 97.60(1)
+_cell_angle_gamma 90
+_cell_formula_units_Z 4
+loop_
+_atom_type_symbol
+_atom_type_radius_bond
+C 0.68
+H 0.23
+Ag 1.59
+Cl 0.99
+O 0.68
+P 1.05
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ag1 Ag 0.19940 0.52870 0.20230
+P1 P 0.0946(1) 0.6247(1) 0.1851(1)
+P2 P 0.3153(1) 0.5092(1) 0.1066(1)
+Cl1 Cl 0.3087(1) 0.5601(1) 0.4178(2)
+Cl2 Cl 0.1792(1) 0.2858(1) 0.3673(2)
+Cl3 Cl 0.4532(1) 0.3285(1) 0.6303(2)
+O1 O 0.1875(2) 0.4467(2) 0.3302(3)
+C1 C 0.0243(3) 0.6206(3) 0.2830(4)
+C2 C -0.0169(3) 0.6845(3) 0.3117(5)
+C3 C -0.0712(4) 0.6769(4) 0.3853(5)
+C4 C -0.0863(3) 0.6058(4) 0.4266(5)
+C5 C -0.0455(3) 0.5427(4) 0.3954(5)
+C6 C 0.0111(3) 0.5500(3) 0.3238(4)
+C7 C 0.0320(3) 0.6200(3) 0.0576(4)
+C8 C 0.0722(4) 0.6108(3) -0.0303(5)
+C9 C 0.0278(4) 0.6071(3) -0.1316(5)
+C10 C -0.0577(4) 0.6117(3) -0.1422(5)
+C11 C -0.0964(4) 0.6205(3) -0.0550(5)
+C12 C -0.0534(3) 0.6252(3) 0.0465(5)
+C13 C 0.1324(3) 0.7217(3) 0.1903(5)
+C14 C 0.1133(4) 0.7697(3) 0.1067(6)
+C15 C 0.1529(4) 0.8411(4) 0.1166(8)
+C16 C 0.2029(5) 0.8647(5) 0.2044(8)
+C17 C 0.2171(5) 0.8155(6) 0.2824(8)
+C18 C 0.1838(4) 0.7425(4) 0.2797(6)
+C19 C 0.4033(3) 0.4676(3) 0.1850(4)
+C20 C 0.3931(4) 0.4006(4) 0.2337(6)
+C21 C 0.4592(5) 0.3660(4) 0.2926(6)
+C22 C 0.5333(4) 0.4026(5) 0.3024(6)
+C23 C 0.5463(4) 0.4690(4) 0.2566(5)
+C24 C 0.4789(4) 0.5009(4) 0.1976(5)
+C25 C 0.3058(3) 0.4554(3) -0.0145(4)
+C26 C 0.3631(4) 0.4050(3) -0.0382(5)
+C27 C 0.3546(4) 0.3684(4) -0.1320(6)
+C28 C 0.2879(5) 0.3810(4) -0.2045(6)
+C29 C 0.2308(4) 0.4311(5) -0.1835(6)
+C30 C 0.2388(4) 0.4676(4) -0.0885(6)
+C31 C 0.3510(3) 0.5990(3) 0.0660(5)
+C32 C 0.3962(4) 0.6084(3) -0.0154(5)
+C33 C 0.4217(4) 0.6778(4) -0.0431(6)
+C34 C 0.4005(5) 0.7391(4) 0.0095(8)
+C35 C 0.3566(6) 0.7308(4) 0.090(1)
+C36 C 0.3312(5) 0.6617(4) 0.1180(8)
+C37 C 0.2462(3) 0.4217(3) 0.3960(5)
+C38 C 0.3101(4) 0.4650(3) 0.4470(5)
+C39 C 0.3739(4) 0.4380(4) 0.5166(5)
+C40 C 0.3753(4) 0.3645(5) 0.5405(5)
+C41 C 0.3160(5) 0.3169(4) 0.4977(6)
+C42 C 0.2531(4) 0.3458(3) 0.4251(5)
+H1 H -0.0007(28) 0.7256(26) 0.2864(40)
+H2 H -0.1096(25) 0.7195(25) 0.3994(37)
+H3 H -0.1248(26) 0.6007(26) 0.4757(38)
+H4 H -0.0562(27) 0.4949(25) 0.4211(39)
+H5 H 0.0521(25) 0.5099(24) 0.3040(38)
+H6 H 0.1377(25) 0.6020(24) -0.0219(38)
+H7 H 0.0534(29) 0.6035(28) -0.1837(39)
+H8 H -0.1048(26) 0.6082(25) -0.2080(38)
+H9 H -0.1611(26) 0.6236(24) -0.0670(38)
+H10 H -0.0864(27) 0.6308(27) 0.0976(38)
+H11 H 0.0796(26) 0.7572(26) 0.0460(38)
+H12 H 0.1351(32) 0.8688(29) 0.0654(42)
+H13 H 0.2416(25) 0.9202(26) 0.2069(39)
+H14 H 0.2434(31) 0.8207(32) 0.3339(43)
+H15 H 0.1996(28) 0.7061(26) 0.3307(38)
+H16 H 0.3481(26) 0.3774(27) 0.2209(43)
+H17 H 0.4500(28) 0.3202(25) 0.3207(40)
+H18 H 0.5720(27) 0.3782(27) 0.3322(42)
+H19 H 0.5891(28) 0.4944(28) 0.2712(46)
+H20 H 0.4893(26) 0.5319(24) 0.1665(38)
+H21 H 0.4156(25) 0.3946(24) 0.0146(38)
+H22 H 0.3985(25) 0.3332(24) -0.1481(38)
+H23 H 0.2840(28) 0.3548(26) -0.2672(38)
+H24 H 0.1873(26) 0.4389(28) -0.2262(40)
+H25 H 0.2021(27) 0.4980(26) -0.0741(41)
+H26 H 0.4113(26) 0.5665(25) -0.0557(37)
+H27 H 0.4533(25) 0.6808(25) -0.1076(37)
+H28 H 0.4174(26) 0.7884(25) -0.0140(38)
+H29 H 0.3432(34) 0.7654(27) 0.1140(43)
+H30 H 0.3024(28) 0.6577(28) 0.1660(39)
+H31 H 0.4187(25) 0.4737(24) 0.5585(38)
+H32 H 0.3164(26) 0.2624(24) 0.5114(38)
+#END

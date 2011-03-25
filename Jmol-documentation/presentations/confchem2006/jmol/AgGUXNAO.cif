@@ -1,0 +1,160 @@
+
+###########################################################################
+#
+#                 Cambridge Crystallographic Data Centre
+#                                CCDC 
+# 
+###########################################################################
+#
+#  This CIF contains data generated directly from an entry in the Cambridge 
+#  Structural Database and will include bibliographic, chemical, crystal, 
+#  experimental, refinement, and atomic coordinate data, as available.
+#     
+#  Copyright  2004  The Cambridge Crystallographic Data Centre
+# 
+#  This CIF is provided on the understanding that it is used for bona fide 
+#  research purposes only.  It may contain copyright material of the CCDC
+#  or of third parties, and may not be copied or further disseminated in 
+#  any form, whether machine-readable or not, except for the purpose of 
+#  generating routine backup copies on your local computer system.
+# 
+#  For further information about the CCDC, data deposition and data 
+#  retrieval see <www.ccdc.cam.ac.uk>. Bona fide researchers may freely 
+#  download  Mercury and enCIFer from this site to visualise CIF-encoded 
+#  structures and to carry out CIF format checking respectively.
+#
+###########################################################################
+
+data_CSD_CIF_GUXNAO
+_audit_creation_date 2003-05-28
+_audit_creation_method CSD-ConQuest-V1
+_database_code_CSD GUXNAO
+_database_code_depnum_ccdc_archive 'CCDC 169487'
+_chemical_formula_sum 'C29 H34 Ag1 O2 P1'
+_chemical_formula_moiety
+;
+C29 H34 Ag1 O2 P1
+;
+_journal_coden_Cambridge 580
+_journal_volume 21
+_journal_year 2002
+_journal_page_first 1289
+_journal_name_full 'Polyhedron '
+loop_
+_publ_author_name
+"S.C.Ngo"
+"K.K.Banger"
+"P.J.Toscano"
+"J.T.Welch"
+_chemical_name_systematic
+;
+Triphenylphosphine-(2,2,6,6-tetramethyl-3,5-heptanedione-O,O')-silver(i)
+;
+_cell_volume   2696.717
+_exptl_crystal_colour 'yellow'
+_exptl_crystal_density_diffrn 1.363
+_exptl_crystal_description 'plate'
+_exptl_crystal_preparation 'tetrahydrofuran/pentane'
+_diffrn_ambient_temperature 298
+#These two values have been output from a single CSD field.
+_refine_ls_R_factor_gt 0.0422
+_refine_ls_wR_factor_gt 0.0422
+_symmetry_cell_setting monoclinic
+_symmetry_space_group_name_H-M 'P 21/c'
+_symmetry_Int_Tables_number 14
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 -x,1/2+y,1/2-z
+3 -x,-y,-z
+4 x,-1/2-y,-1/2+z
+_cell_length_a 13.253(6)
+_cell_length_b 11.756(3)
+_cell_length_c 17.722(5)
+_cell_angle_alpha 90
+_cell_angle_beta 102.40(3)
+_cell_angle_gamma 90
+_cell_formula_units_Z 4
+loop_
+_atom_type_symbol
+_atom_type_radius_bond
+C 0.68
+H 0.23
+Ag 1.59
+O 0.68
+P 1.05
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ag1 Ag 0.8398(1) 0.0115(1) 0.7274(1)
+P1 P 0.9857(1) -0.0914(2) 0.7843(1)
+O1 O 0.7451(4) 0.1028(5) 0.6308(3)
+O2 O 0.6872(4) -0.0079(5) 0.7629(3)
+C1 C 0.6489(5) 0.1191(6) 0.6141(4)
+C2 C 0.5788(5) 0.0858(6) 0.6576(4)
+C3 C 0.5991(6) 0.0239(6) 0.7278(4)
+C4 C 0.6121(6) 0.1882(7) 0.5394(4)
+C5 C 0.4948(7) 0.2024(9) 0.5141(5)
+C6 C 0.6624(7) 0.3044(8) 0.5496(5)
+C7 C 0.6503(8) 0.1257(10) 0.4749(5)
+C8 C 0.5114(5) -0.0097(7) 0.7674(4)
+C9 C 0.5399(7) 0.0376(9) 0.8502(5)
+C10 C 0.4046(6) 0.0331(7) 0.7283(5)
+C11 C 0.5086(7) -0.1393(8) 0.7687(5)
+C12 C 1.0539(6) -0.1588(6) 0.7178(4)
+C13 C 0.9991(7) -0.1873(7) 0.6456(5)
+C14 C 1.0432(8) -0.2462(8) 0.5937(5)
+C15 C 1.1459(9) -0.2784(8) 0.6142(6)
+C16 C 1.2022(7) -0.2481(8) 0.6863(6)
+C17 C 1.1579(6) -0.1893(7) 0.7376(5)
+C18 C 1.0854(5) -0.0149(6) 0.8510(4)
+C19 C 1.1472(6) 0.0626(7) 0.8220(5)
+C20 C 1.2201(7) 0.1270(8) 0.8715(6)
+C21 C 1.2310(7) 0.1174(9) 0.9494(7)
+C22 C 1.1690(8) 0.0434(9) 0.9784(5)
+C23 C 1.0957(6) -0.0231(7) 0.9308(4)
+C24 C 0.9504(5) -0.2119(6) 0.8386(4)
+C25 C 1.0228(7) -0.2962(7) 0.8697(4)
+C26 C 0.9908(7) -0.3898(7) 0.9056(5)
+C27 C 0.8905(8) -0.4012(8) 0.9130(5)
+C28 C 0.8227(7) -0.3161(9) 0.8851(5)
+C29 C 0.8508(6) -0.2207(7) 0.8477(4)
+H1 H 0.50800 0.10630 0.63780
+H2 H 0.46310 0.12860 0.50730
+H3 H 0.47850 0.24320 0.46610
+H4 H 0.46930 0.24360 0.55280
+H5 H 0.73590 0.29620 0.56550
+H6 H 0.63670 0.34570 0.58830
+H7 H 0.64600 0.34530 0.50160
+H8 H 0.62900 0.16590 0.42700
+H9 H 0.62160 0.05030 0.46960
+H10 H 0.72430 0.12110 0.48810
+H11 H 0.48690 0.01870 0.87750
+H12 H 0.54660 0.11880 0.84820
+H13 H 0.60430 0.00510 0.87650
+H14 H 0.40570 0.11480 0.72710
+H15 H 0.35480 0.00810 0.75680
+H16 H 0.38620 0.00440 0.67650
+H17 H 0.45440 -0.16410 0.79320
+H18 H 0.57370 -0.16750 0.79720
+H19 H 0.49610 -0.16800 0.71680
+H20 H 0.92760 -0.16590 0.63090
+H21 H 1.00310 -0.26520 0.54340
+H22 H 1.17710 -0.32090 0.57900
+H23 H 1.27390 -0.26840 0.70040
+H24 H 1.19850 -0.16940 0.78750
+H25 H 1.13990 0.07070 0.76710
+H26 H 1.26360 0.17870 0.85110
+H27 H 1.28150 0.16210 0.98380
+H28 H 1.17630 0.03760 1.03330
+H29 H 1.05280 -0.07450 0.95210
+H30 H 1.09380 -0.28830 0.86630
+H31 H 1.03990 -0.44820 0.92550
+H32 H 0.86840 -0.46740 0.93680
+H33 H 0.75310 -0.32200 0.89200
+H34 H 0.80120 -0.16240 0.82870
+#END

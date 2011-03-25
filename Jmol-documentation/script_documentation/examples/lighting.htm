@@ -1,0 +1,33 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript">
+height=250
+width=250
+
+title="LIGHTING";model="1crn.pdb";ref="set (lighting)"
+Scripts=new Array("select *;cpk 0.6;wireframe 0.1;zoom 600; cartoons on;color cartoons structure"
+," There are four principal adjustments you can make to the lighting effects in Jmol. Try different combinations for effect."
+," <b>specular</b> Sets the size of the apparent reflection from a light source. <i>set specular 0</i> turns off this effect."
+	,"set specular 0 ~~ set specular 20 ~~ set specular 40 ~~ set specular 60 ~~ set specular 100"
+," <b>specpower</b> Sets the density of dots in the specular reflection."
+	,"set specpower 0 ~~ set specpower 20 ~~ set specpower 40 ~~ set specpower 60 ~~ set specpower 100"
+,' <b>ambient</b> Sets the amount of "ambient" light filling the shadows created by the apparent light source. An ambient value of 0 creates an effect of a spotlight on a stage; a value of 100 removes the shadow entirely, creating a flat, nonrealistic effect.'
+	,"set ambient 0 ~~ set ambient 20 ~~ set ambient 40 ~~ set ambient 60 ~~ set ambient 100"
+,' <b>diffuse</b> Sets the amount of "diffuse" light apparently emanating from the spotlight, but not hitting and reflecting off the model directly. Setting the diffuse value to 0 turns this effect off; giving the effect of the model in a black-walled room where no light reflection is possible, effectively turning off all shadows.'
+	,"set diffuse 0 ~~ set diffuse 20 ~~ set diffuse 40 ~~ set diffuse 60 ~~ set diffuse 100"
+
+)
+remarks=""
+
+
+</script>
+</head>
+<body>
+<script type="text/javascript">showpage()</script>
+</body></html>

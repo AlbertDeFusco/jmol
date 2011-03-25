@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+  Translated from default version (...)_en.xml (v 1.2)
+-->
+<document>
+	<body>
+		<title>Demostración de las capacidades de Jmol</title>
+		<section title="Capturas de pantalla">
+			<p>Visita la <a href="../screenshots/">galería de pantallas</a>
+			(imágenes estáticas) para ver ejemplos de lo que se puede hacer con Jmol.
+			</p>
+		</section>
+		<section title="Páginas de demostración interactiva con la miniaplicación">
+			<p>
+	Estas son páginas sencillas que demuestran las prestaciones básicas de la miniaplicación Jmol 
+	usando algunas de las posibilidades de interacción mediante guiones proporcionadas por
+	la <a href="[root]/jslibrary">biblioteca de javascript Jmol.js</a>.
+			</p>
+			<blockquote>
+  			<i>Nótese que estas páginas están destinadas a demostración desde el servidor
+  			de la sede web de Jmol.
+  			Si intentas crear tu propia página web simplemente copiando su código fuente,
+  			es probable que no funcione, debido a la disposición de archivos necesaria.
+  			Lee antes las
+  			<a href="[root]/jslibrary/index.es.html#Recomendaciones%20generales">recomendaciones generales</a>
+  			en particular, y el resto de la <a href="[root]/jslibrary">documentación de Jmol.js</a>. 
+  			</i>
+			</blockquote>
+			<ul>
+				<li><a href="./atoms/">Átomos</a></li>
+				<li><a href="./bonds/">Enlaces</a></li>
+				<li><a href="./trace/">Esqueleto de proteínas</a></li>
+				<li><a href="./dots/">Superficies punteadas</a></li>
+				<li><a href="./alphahelix/">Hélice alfa</a></li>
+				<li><a href="./aminoacids/">Aminoácidos</a></li>
+				<li><a href="./nanotech/">Nanotecnología</a></li>
+				<li><a href="./strands/">Hebras</a></li>
+				<li><a href="./vibration/">Vibración</a></li>
+				<li><a href="./animation/">Animación</a></li>
+				<li><a href="./ribbons/">Cintas</a></li>
+				<li><a href="./cartoons/">Representación esquemática</a></li>
+				<li><a href="./jssample0/">Página muy sencilla</a>, con código fuente y explicaciones</li>
+				<li><a href="./jssample1/">Una página que incluye controles para el usuario</a>, 
+				        con código fuente y explicaciones</li>
+				<li><a href="./jssample2/">Carga de modelos moleculares en línea</a></li>
+				<li><a href="./jssample3/">A través de marcos</a></li>
+			</ul>
+			<p>
+			Puedes ver aplicaciones más sofisticadas de la miniaplicación Jmol siguiendo la lista de 
+			<a href="http://wiki.jmol.org/index.php?title=Websites_Using_Jmol">sitios web que usan Jmol</a> en la Wiki de Jmol.
+			</p>
+			<p>
+			También puedes visitar demostraciones de
+			<a href="http://chemapps.stolaf.edu/jmol/">prestaciones avanzadas y especializadas</a> de Jmol.
+			</p>
+		</section>
+		<section title="Exportación a escenas 3D">
+			<p>Jmol puede exportar a varios formatos de escenas 3D / mundos 3D / realidad virtual, como VRML, X3D o U3D. 
+			Puedes ver algunos <a href="./3dscenes/">archivos de ejemplo</a>.
+			</p>
+		</section>
+	</body>
+</document>

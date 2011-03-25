@@ -1,0 +1,14 @@
+animationInfo=new Array()
+animationInfo.lastFrameDelay=0
+animationInfo.firstModelIndex=0
+animationInfo.displayModelIndex=0
+animationInfo.animationReplayMode=0
+animationInfo.animationPaused=false
+animationInfo.displayModelName="Jobname.Temp"
+animationInfo.lastModelIndex=12
+animationInfo.animationOn=false
+animationInfo.animationDirection=1
+animationInfo.currentDirection=1
+animationInfo.firstFrameDelay=0
+animationInfo.animationFps=10
+animationInfo.displayModelNumber=1

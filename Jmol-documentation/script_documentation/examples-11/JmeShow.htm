@@ -1,0 +1,6 @@
+<script type=text/javascript>
+if (document.location.href.indexOf("?SMILES") > 0)
+ document.write(opener.document.getElementById("JME").nonisomericSmiles() + "<br/><br/><br/>" + opener.document.getElementById("JME").smiles())
+else
+ document.write(opener.document.getElementById("JME").jmeFile())
+</script>

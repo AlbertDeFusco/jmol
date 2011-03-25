@@ -1,0 +1,14 @@
+# Comments
+object 1 class gridpositions counts 1 1 1
+origin 0.0 0.0 0.0
+delta 1.0 0.0 0.0
+delta 0.0 1.0 0.0 
+delta 0.0 0.0 1.0
+object 2 class gridconnections counts 1 1 1
+object 3 class array type double rank 0 times n data follows
+1. 2. 3.
+attribute "dep" string "positions"
+object "regular positions regular connections" class field
+component "positions" value 1
+component "connections" value 2
+component "data" value 3

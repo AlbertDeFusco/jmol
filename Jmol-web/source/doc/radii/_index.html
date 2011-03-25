@@ -1,0 +1,154 @@
+<!-- do not delete this;  trigger quirks mode for IE6, e.g. by inserting a comment -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta http-equiv="Content-Script-Type" content="text/javascript; charset=iso-8859-1">
+<meta name="Author" content="Angel Herráez">
+<!-- Based on Dr. Scot Wherland's "Atomic and ionic radii in Chime" web page, 
+	http://www.wsu.edu/~wherland/pt3d2fm.htm
+	Uses either
+	- Dr. Scot Wherland's pertbl3d.PDB file with his radii values "collected in the periodic table database program 'KC? Discoverer' for the Journal of Chemical Education: Software"
+	or
+	- Modified pertbl3d_j.PDB file  and internal values of Jmol (defined in JmolConstants.java) "obtained from Openbabel"
+-->
+<title></title>	<!-- it is set later by js -->
+
+<!-- Start of solution for fixed positioning, taken from http://tagsoup.com/-dev/null-/css/fixed/ by Eric Bednarz -->
+		<style type="text/css" media="screen">
+		@import "./fixed4all.css";
+		</style>
+		<!--[if IE]>
+		<link
+		 href="./fixed4ie.css"
+		 rel="stylesheet"
+		 type="text/css"
+		 media="screen">
+		<script type="text/javascript">
+		onload = function() { content.focus() }
+		</script>
+		<![endif]-->
+<!-- End of solution for fixed positioning -->
+
+<link href="jmol_radii.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">var cfgUsed=1 //use Jmol's radii and colors</script>
+<script src="messages.$CURRENT_LANGUAGE$.js" type="text/javascript"></script>
+<script src="../jmol/Jmol.js" type="text/javascript"></script>
+<script src="radii_common.js" type="text/javascript"></script>
+<script type="text/javascript">
+function setWidthStyles()
+{	if (appletWidth != 500)
+	{	if ( navigator.userAgent.indexOf("MSIE") != -1 ) { document.getElementById("content").style.marginLeft = appletWidth + "px" }
+		else { document.body.style.paddingLeft = appletWidth + "px"
+			document.getElementById("sidebar").style.width = appletWidth + "px"
+		}
+	}
+}
+</script>
+</head>
+
+<body onLoad="setResColorStyles(); document.title=tx_0; setWidthStyles()">
+<!-- Do not put FORM tags for the whole body, they seem incompatible with the positioning solution 
+	(recent (sep05) tests point that Jmol does not require them any longer)
+	They are useful for setting controls via javascript, so I put them within the DIV#content -->
+<!-- All document is written through Javascript; nothing needs translation here, texts are in messages.[language code].js -->
+<script type="text/javascript">
+var appletWidth = 500	//can be changed, at user's risk (see fn. setWidthStyles)
+
+wr('<div id="header">' + tx_0 + '</div>')
+
+setBkgColor()
+
+wr('<div id="sidebar">')
+	jmolInitialize("../jmol")
+	jmolApplet(appletWidth, scr_load + scr_vdw);
+
+wr('</div>')
+
+tx = '<div id="content"><form name="JmolControls">' + tx_1
+tx += '&nbsp;&nbsp;&nbsp;'
+tx += '<input type="button" value="' + tx_Reload + '" onClick="this.form.reset(); jmolScript(scr_load + scr_vdw)">'
+wr(tx)
+
+wr('<div style="text-align:center; margin:5px 0 5px 0;" class="box">')
+	jmolButton(scr_reset, tx_ResetOr)
+wr('&nbsp;&nbsp;<input type="button" value="' + tx_Bkg + '" onClick="toggleBkgColor()"><br />')
+	jmolCheckbox("label %e", "label off", tx_Labels, false, "labelToggle")
+wr('</div>')
+
+tx = '<div class="box"><span class="section">' + tx_SglR + ':</span>'
+tx += '<p class="reducedSpaced"><input type="button" value="' + tx_Vdw + '" onClick="jmolScript(scr_vdw); reApplyLabels(this.form)">'
+tx += '&nbsp;&nbsp;'
+tx += '<input type="button" value="' + tx_AtR + '" onClick="jmolScript(scr_charge(0)); reApplyLabels(this.form)"></p>'
+tx += '<p class="reducedSpaced">' + tx_2 + ' '
+for (i=qRangeIni; i<=qRangeEnd; i++) 
+{	var j=i; if (i>0) j= "+" + i
+	tx += '<input type="button" value="' + i + '" onClick="toggleLabelsCtl(1,this.form); jmolScript(\'' + scr_charge(i) + '\')">'
+}
+tx += '</p></div>'
+wr(tx)
+
+tx = '<div class="box"><span class="section">' + tx_AllR + ':</span>&nbsp;&nbsp;&nbsp;' + tx_3 
+tx += '<div class="colorKey">'
+wr(tx)
+buildChargeLegend()
+tx = '</div>'
+tx += '<ul class="reducedSpaced"><li>' 
+tx += tx_7a + ' <input type="button" value="' + tx_7b + '" onClick="allRadii(); toggleLabelsCtl(0,this.form)"></li>'
+tx += '<li>' + tx_4 + ' <select onChange="showPer(this.selectedIndex); this.selectedIndex=0">'
+tx += '<option>..' + tx_Choose + '..</option>'
+for (i=0; i<scr_per.length; i++)
+{	tx += '<option>' + tx_PeriodName[i] + '</option>'
+}
+tx += '</select></li>'
+tx += '<li>' + tx_5 + ' <select onChange="showGroup(this.selectedIndex); this.selectedIndex=0">'
+tx += '<option>..' + tx_Choose + '..</option>'
+for (i=0; i<scr_grp.length; i++)
+{	tx += '<option>' + tx_GroupName[i] + '</option>'
+}
+tx += '</select></li></ul></div>'
+wr(tx)
+
+tx = '<div class="box"><span class="section">' + tx_10 + ':</span>'
+tx += '<div class="colorKey">'
+wr(tx)
+	jmolButton(scr_colorMetal, tx_ColorAs)
+tx = ''
+for (i=0; i<3; i++) { tx += ' <span class="colorMetal' + i + '">' + tx_Metal[i] + '</span>,' }
+tx = tx.substr(0,tx.length-1) + '.'		//trim last comma
+tx += '</div>'
+wr(tx)
+
+wr('<div class="colorKey">')
+	jmolButton(scr_colorMetal2, tx_ColorAs)
+tx = ''
+for (i=3; i<8; i++) { tx += ' <span class="colorMetal' + i + '">' + tx_Metal[i] + '</span>,' }
+tx = tx.substr(0,tx.length-1) + '.'		//trim last comma
+tx += '</div>'
+wr(tx)
+
+	jmolButton(scr_colorCPK, tx_ColorAsCPK)
+wr('</div>')
+
+wr('<div class="box"><span class="section">' + tx_11 + ':</span><br>')
+	jmolButton(scr_Abund, "X")
+wr(' ' + tx_6 + '<br>')
+	jmolButton(scr_pattIon, "X")
+wr(' ' + tx_12 + '<br>')
+	jmolButton(scr_inPdb, "X")
+tx = ' ' + tx_13
+tx += '</div>'
+
+tx += '<p class="cfg">' + tx_8 + '</p>'
+
+tx += '<p align=center>'
+tx += '<a href="acknowledge.htm">' + tx_9 + '</a>'
+tx += '</p>'
+
+tx += '</form></div>'	//end of div#content
+wr(tx)
+</script>
+</body>
+</html>

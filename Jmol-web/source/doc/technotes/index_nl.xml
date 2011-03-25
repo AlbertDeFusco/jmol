@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+  Dutch translation 
+  Translated from default version : index_en.xml (v 1.1)
+-->
+<!DOCTYPE somethingOrAnything [
+<!ENTITY graphicsEngine   SYSTEM "graphicsEngine_nl.xml" >
+<!ENTITY antiAliasing     SYSTEM "antiAliasing_nl.xml" >
+<!ENTITY noHeapMemory     SYSTEM "noHeapMemory_nl.xml" >
+<!ENTITY floatingPoint    SYSTEM "floatingPoint_nl.xml" >
+<!ENTITY browserEnhancementTechnologies
+                          SYSTEM "browserEnhancementTechnologies_nl.xml" >
+<!ENTITY floatsVsDoubles  SYSTEM "floatsVsDoubles_nl.xml" >
+]>
+<document>
+  <body>
+    <title>Jmol Technische Nota's</title>
+
+    &graphicsEngine;
+    &antiAliasing;
+    &noHeapMemory;
+    &floatingPoint;
+    &browserEnhancementTechnologies;
+    &floatsVsDoubles;
+    
+  </body>
+</document>

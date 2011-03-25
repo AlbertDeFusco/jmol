@@ -1,0 +1,101 @@
+HETATM    1  F           1       1.698   9.509   2.548
+HETATM    2  F           2       1.699   1.811   0.850
+HETATM    3  F           3       1.699   1.811   4.247
+HETATM    4  F           4       5.096   1.811   0.850
+HETATM    5  F           5       5.096   1.811   4.247
+HETATM    6  F           6      -0.001   3.849   2.548
+HETATM    7  F           7       3.397   3.849   2.548
+HETATM    8  F           8      -0.001   3.849   5.945
+HETATM    9  F           9       3.397   3.849   5.945
+HETATM   10  F          10       6.793   3.849   2.548
+HETATM   11  F          11       6.793   3.849   5.945
+HETATM   12  F          12       0.001   7.471   0.850
+HETATM   13  F          13       3.398   7.471   0.850
+HETATM   14  F          14       0.001   7.471   4.247
+HETATM   15  F          15       3.398   7.471   4.247
+HETATM   16  F          16       6.794   7.471   0.850
+HETATM   17  F          17       6.794   7.471   4.247
+HETATM   18  F          18       1.698   9.509   5.945
+HETATM   19  F          19       5.095   9.509   2.548
+HETATM   20  F          20       5.095   9.509   5.945
+HETATM   21  O          21       1.698   7.132   2.548
+HETATM   22  H          22       1.698   6.132   2.548
+HETATM   23  O          23       1.699   4.188   0.850
+HETATM   24  H          24       1.699   5.188   0.850
+HETATM   25  O          25       1.699   4.188   4.247
+HETATM   26  H          26       1.699   5.188   4.247
+HETATM   27  O          27       5.096   4.188   0.850
+HETATM   28  H          28       5.096   5.188   0.850
+HETATM   29  O          29       5.096   4.188   4.247
+HETATM   30  H          30       5.096   5.188   4.247
+HETATM   31  O          31      -0.001   1.472   2.548
+HETATM   32  H          32      -0.001   0.472   2.548
+HETATM   33  O          33       3.397   1.472   2.548
+HETATM   34  H          34       3.397   0.472   2.548
+HETATM   35  O          35      -0.001   1.472   5.945
+HETATM   36  H          36      -0.001   0.472   5.945
+HETATM   37  O          37       3.397   1.472   5.945
+HETATM   38  H          38       3.397   0.472   5.945
+HETATM   39  O          39       6.793   1.472   2.548
+HETATM   40  H          40       6.793   0.472   2.548
+HETATM   41  O          41       6.793   1.472   5.945
+HETATM   42  H          42       6.793   0.472   5.945
+HETATM   43  O          43       0.001   9.848   0.850
+HETATM   44  H          44       0.001  10.848   0.850
+HETATM   45  O          45       3.398   9.848   0.850
+HETATM   46  H          46       3.398  10.848   0.850
+HETATM   47  O          47       0.001   9.848   4.247
+HETATM   48  H          48       0.001  10.848   4.247
+HETATM   49  O          49       3.398   9.848   4.247
+HETATM   50  H          50       3.398  10.848   4.247
+HETATM   51  O          51       6.794   9.848   0.850
+HETATM   52  H          52       6.794  10.848   0.850
+HETATM   53  O          53       6.794   9.848   4.247
+HETATM   54  H          54       6.794  10.848   4.247
+HETATM   55  O          55       1.698   7.132   5.945
+HETATM   56  H          56       1.698   6.132   5.945
+HETATM   57  O          57       5.095   7.132   2.548
+HETATM   58  H          58       5.095   6.132   2.548
+HETATM   59  O          59       5.095   7.132   5.945
+HETATM   60  H          60       5.095   6.132   5.945
+CONECT   21   22
+CONECT   22   21
+CONECT   23   24
+CONECT   24   23
+CONECT   25   26
+CONECT   26   25
+CONECT   27   28
+CONECT   28   27
+CONECT   29   30
+CONECT   30   29
+CONECT   31   32
+CONECT   32   31
+CONECT   33   34
+CONECT   34   33
+CONECT   35   36
+CONECT   36   35
+CONECT   37   38
+CONECT   38   37
+CONECT   39   40
+CONECT   40   39
+CONECT   41   42
+CONECT   42   41
+CONECT   43   44
+CONECT   44   43
+CONECT   45   46
+CONECT   46   45
+CONECT   47   48
+CONECT   48   47
+CONECT   49   50
+CONECT   50   49
+CONECT   51   52
+CONECT   52   51
+CONECT   53   54
+CONECT   54   53
+CONECT   55   56
+CONECT   56   55
+CONECT   57   58
+CONECT   58   57
+CONECT   59   60
+CONECT   60   59
+END

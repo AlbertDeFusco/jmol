@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Jmol-SMILES test</title>
+
+<script>
+function go() {
+  var pattern = document.getElementById("inputPattern").value
+  var smiles = document.getElementById("inputSmiles").value
+  var asSmarts = document.getElementById("chkSmarts").checked
+  var isAll = document.getElementById("chkAll").checked
+  var ret = document.getElementById("jmolSmiles1").find(pattern, smiles, asSmarts, isAll)
+  if (ret < 0)
+    alert(document.getElementById("jmolSmiles1").getLastError())
+  else 
+    alert(ret == 0 && !asSmarts ? "These two SMILES strings represent different structures." 
+	 : ret == 1 ? (asSmarts ? "One match was found." : "These two SMILES strings match.") 
+  		: "There were " + ret + " matches.")
+}
+
+function init(trigger) {
+  var search = document.location.search;
+  var find = unescape((search + "find=[H][C@](C)(Br)[C@]([H])(O)CC").split("find=")[1].split("&")[0])
+  var inwhat = unescape((search + "&in=CC[C@@H](O)[C@@H](C)Br").split("in=")[1].split("&")[0])
+  var pattern = document.getElementById("inputPattern").value = find
+  var smiles = document.getElementById("inputSmiles").value = inwhat
+}
+
+</script>
+</head>
+<body onload=init()>
+
+<center>
+<table border=3 cellpadding=10 width=600><tr><td>This page simply tests <a href=JmolSmilesApplet.jar>JmolSmilesApplet.jar</a>. It just returns a value 1 or more if it finds a given pattern in the SMILES string; 0 if it doesn't, and -1 if there is an error processing the request.
+<br>
+<br>
+
+<object name='jmolSmiles1' id='jmolSmiles1' classid='java:JmolSmilesApplet' type='application/x-java-applet' width='10' height='10' > 
+<param name='name' value='jmolSmilesApplet' /> 
+<param name='archive' value='JmolSmilesApplet.jar' /> 
+<param name='mayscript' value='true' /> 
+<param name='codebase' value='.' /> 
+</object>
+find <label title="substructure"><input id=chkSmarts type=radio name=stype checked >SMARTS</label>/<label  title="full structure match"><input id=chkSmiles type=radio name=stype>SMILES</label>: 
+<input id=inputPattern type=text size=30 value="CC"> 
+within SMILES:   <input id=inputSmiles type=text size=30 value="CCCC">
+<br>
+<br>
+<center>
+<input id=chkAll type=checkbox checked> all occurances
+<input type=button value=GO onclick=go()>
+</center>
+</td></tr><tr><td>
+
+The commend that does this is simply:
+<pre>
+
+ var retValue = document.getElementById("jmolSmiles1").find(pattern, smiles, asSmarts, isAll)
+
+</pre>
+If -1 is returned, you can check for the cause using:
+<pre>
+
+ alert(document.getElementById("jmolSmiles1").getLastError())
+
+</pre>
+
+
+</td></tr><tr><td>
+
+Documentation: <a target="_blank" href="http://www.daylight.com/dayhtml/doc/theory/theory.smarts.html">SMARTS</a>
+<a target="_blank" href="http://www.daylight.com/dayhtml/doc/theory/theory.smiles.html">SMILES</a>
+
+</td></tr></table>
+</center>
+</body>
+</html>

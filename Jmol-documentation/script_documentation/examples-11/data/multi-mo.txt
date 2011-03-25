@@ -1,0 +1,22 @@
+load files "C6H6.smol" "C6H6.smol"
+set debug false
+set showScript
+//prompt "testing multiprocess in multi-mo.txt"
+parallel showMOs(i,j) {
+	process{
+		mo model 1.1 @i
+	}
+	process{
+//prompt("in process 2")
+		mo model 2.1 @j
+		mo model 2.1 color green yellow
+	}
+	echo "starting processes..."
+}
+
+show multiProcessor
+
+t = now()
+showMOs(22,23)
+frame *;
+print "two molecular orbitals/parallel " + (now() - t) 

@@ -1,0 +1,26 @@
+set measurements angstroms
+zoomlarge = false;
+defaultdirectory = "data"
+
+load lac_dna1.pdb.gz;
+zoom 200
+select *;
+select nucleic;
+spacefill;
+select protein;
+wireframe 0.2;
+select *:A;color purple;
+select *:B;color green;
+color chain;
+ssbonds 0.25;
+color ssbonds [255,200,50];
+anim fps 10; anim mode palindrome;
+
+btnSetup=true
+
+	script btnSurface.spt
+	script btnAnim.spt
+	script btnCavity.spt
+
+btnSetup=false
+

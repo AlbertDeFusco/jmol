@@ -1,0 +1,51 @@
+<!--
+  French translation 
+  Translated from default version : performance.xml (v 1.2)
+-->
+  <section title="Performances">
+  <section
+    title="Les perfomances sont bonnes! Pourquoi est-ce si rapide?">
+    <p>
+      On n'utilise pas d'appels graphiques Java. L'image compl&#x00E8;te
+      est construite hors &#x00E9;cran et envoy&#x00E9;e &#x00E0;
+      l'&#x00E9;cran avec une seule op&#x00E9;ration
+      java.awt.Graphics.drawImage.
+    </p>
+  </section>
+
+  <section
+    title="La vitesse de dessin est vraiment lente. Que puis-je faire?">
+    <ul>
+      <li>Trouver une machine plus rapide ... de ce si&#x00E8;cle</li>
+      <li>
+        Convaincre Sun de r&#x00E9;gler les probl&#x00E8;mes de
+        performance graphique
+      </li>
+      <li>
+        Revoir le code source et touver un moyen de l'acc&#x00E9;lerer
+      </li>
+    </ul>
+  </section>
+
+  <section
+    title="Est-ce qu'une carte graphique 3D am&#x00E9;liorera
+           les performances?">
+    <p>
+      Une carte graphique tr&#x00E8;s performante aidera sans doute.
+      Le syst&#x00E8;me sous-jacent passe pas mal de temps &#x00E0;
+      copier des bitmaps 32 bits RGB &#x00E0; l'&#x00E9;cran. Mais
+      aucune possibilit&#x00E9; 3D de la carte ne sera utilis&#x00E9;e.
+    </p>
+  </section>
+
+  <section
+    title="Pourquoi est-ce que &#x00E7;&#x00E0; devient si lent quand
+           j'agrandis la fen&#x00EA;tre?">
+    <p>
+      Deux fois plus de pixels implique deux fois plus de travail ... et
+      si votre applet est deux fois plus large et deux fois plus haute
+      vous avez 4 fois plus de pixels, vous avez donc 1/4 de la vitesse.
+    </p>
+  </section>
+
+</section>

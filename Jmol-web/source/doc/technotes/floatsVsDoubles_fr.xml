@@ -1,0 +1,46 @@
+<!--
+  French translation 
+  Translated from default version : floatsVsDoubles.xml (v 1.1)
+-->
+<section title="Floats vs. Doubles">
+  <p>
+    Plusieurs personnes ont demand&#x00E9; pourquoi le code de Jmol
+    utilise des floats au lieu de doubles. En v&#x00E9;rit&#x00E9;,
+    beaucoup des plus jeunes programmeurs Java n'ont probablement
+    jamais vu un programme avec autant de floats.
+  </p>
+  <p>
+    La r&#x00E9;ponse est qu'ils sont plus petits ... les floats
+    occupent 4 octets et les doubles 8 octets. Et pourtant, ils ont
+    suffisamment de plage d'utilisation et de pr&#x00E9;cision pour
+    nos besoins.
+  </p>
+  <p>
+    Donc, pourquoi est-ce important qu'ils soient plus petits? Vous vous
+    dites probablement que la m&#x00E9;moire ne co&#x00FB;te pas cher et,
+    en g&#x00E9;n&#x00E9;ral, vous avez raison.
+  </p>
+  <p>
+    Cependant, Jmol doit pouvoir fonctionner en tant qu'applet sur des
+    JVMs 1.1, o&#x00F9; le total de m&#x00E9;moire virtuelle est quelque
+    peu plus petit.
+  </p>
+  <p>
+    Plus important, la <i>bande passante</i> m&#x00E9;moire n'est jamais
+    bon march&#x00E9;. Les fabricants de CPU font tout ce qu'ils peuvent
+    pour essayer de concevoir des caches plus grands pour essayer
+    d'accro&#x00EE;tre la bande passante m&#x00E9;moire effective.
+    Ainsi, en travaillant avec des floats sur 4 octets au lieu de
+    doubles sur 8 octets, nous pouvons utiliser plus efficacement la
+    m&#x00E9;moire syst&#x00E8;me ... les diff&#x00E9;rents niveaux de
+    cache + la bande passante m&#x00E9;moire globale. Nous pouvons
+    stocker plus de donn&#x00E9;es dans un cache de taille fixe et nous
+    pouvons r&#x00E9;cup&#x00E9;rer plus de donn&#x00E9;es de la
+    m&#x00E9;moire &#x00E0; chaque fois que nous acc&#x00E9;dons &#x00E0;
+    une ligne de cache.
+  </p>
+  <p>
+    Franchement, c'est aussi facile d'utiliser des floats ... et il n'y a
+    pas de raison de g&#x00E2;cher.
+  </p>
+</section>

@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Jmol Paper Figures</title>
+<script type="text/javascript">
+
+figures = []
+
+function fig(id,img,tw,th,aw,ah,cap) {
+  figures[figures.length] = [id,img,tw,th,aw,ah,cap]
+}
+
+function getFigures() {
+  var s = "<table width=800><tr>"
+  for (var i = 0; i < figures.length; i++) {
+	if (i % 3 == 0) s += "</tr><tr>"
+	s += getFigure(i)
+  }
+  s += "</table>"
+  document.write(s)
+}
+
+function getFigure(i) {
+  var caption = getCaption(i)
+  var img = getImage(i)
+  var s = "<td valign=top><table><tr><td><a href=javascript:popup(" + i + ")><img src=examples-11/" + img + " width=200 height=200></a></td></tr>"
+  s += "<tr><td><h3>" + caption + "</h3></td></tr>" 
+  s += "</table></td>"
+  return s
+}
+
+//fig(1a,'quartz.png',200,200,500,500,'Quartz loaded without symmetry (<b>load quartz.cif</b>).')
+
+function getCaption(i) {
+  return "Figure " + figures[i][0] + ". " + figures[i][6]
+}
+
+function getImage(i) {
+  return "data/" + figures[i][1]
+}
+
+woptions="menubar=yes,resizable=1,scrollbars,alwaysRaised,width=600,height=600,left=50"
+
+function popup(i) {
+  var script = "script=" + escape("script localPath 'data' '" + getImage(i) + "'")
+  var caption = "&caption=" + escape(getCaption(i))
+  var sm=""+Math.random()
+  sm=sm.substring(2,10)
+  var newwin=open("figurePopup.htm?" + script + caption,"jmol_"+sm,woptions)
+}
+</script>
+<script type="text/javascript" src="figures.js"></script>
+</head>
+<body>
+Click on an image to start Jmol with that model state. 
+<br>
+<br>
+
+<script type="text/javascript">
+getFigures()
+</script>
+</body>
+</html>

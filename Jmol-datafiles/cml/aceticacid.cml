@@ -1,0 +1,21 @@
+<molecule title="acetic_acid.mol" xmlns="http://www.xml-cml.org/schema/cml2/core"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.xml-cml.org/schema/cml2/core cmlAll.xsd">
+  <atomArray>
+    <atom id="a1" elementType="C" x3="0.1853" y3="0.0096" z3="0.4587"/>
+    <atom id="a2" elementType="O" x3="0.6324" y3="1.0432" z3="0.8951"/>
+    <atom id="a3" elementType="C" x3="-1.0665" y3="-0.1512" z3="-0.3758"/>
+    <atom elementType="O" formalCharge="-1" id="a4" x3="0.7893" y3="-1.1734" z3="0.6766"/>
+    <atom id="a5" elementType="H" x3="-1.7704" y3="-0.8676" z3="0.1055"/>
+    <atom id="a6" elementType="H" x3="-0.8068" y3="-0.5215" z3="-1.3935"/>
+    <atom id="a7" elementType="H" x3="-1.5889" y3="0.8259" z3="-0.4854"/>
+  </atomArray>
+  <bondArray>
+    <bond atomRefs2="a1 a2" order="2"/>
+    <bond atomRefs2="a1 a3" order="1"/>
+    <bond atomRefs2="a1 a4" order="1"/>
+    <bond atomRefs2="a3 a5" order="1"/>
+    <bond atomRefs2="a3 a6" order="1"/>
+    <bond atomRefs2="a3 a7" order="1"/>
+  </bondArray>
+</molecule>

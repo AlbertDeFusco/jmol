@@ -1,0 +1,75 @@
+# Crystalline PEI.2H2O 
+#
+# Computation of the band structure.
+# First, a SCF density computation, then a non-SCF band structure calculation.
+
+ndtset 2
+
+#Dataset 1 : usual self-consistent calculation
+kptopt1 1          
+iscf1 3
+ngkpt1  2 2 2
+prtden1 1         
+toldfe1 1.0d-5
+prtgeo1 1
+
+#Dataset 2 : the band structure
+iscf2    -2
+getden2  -1
+kptopt2  -3
+nband2   44
+ndivk2   10 12 17      
+kptbounds2  0 0 0.5
+0 0 0  
+0 0.5 0  
+-0.5 0.5 0
+-0.5 0 0
+-0.5 0 0.5
+-0.5 0.5 0.5
+0 0.5 0.5
+
+tolwfr2  1.0d-12
+enunit2  1
+
+#Definition of the unit cell
+spgroup 15
+#spgaxor 1
+#spgorig 1
+brvltt -1
+acell 13.26 4.61 7.36 angstrom
+angdeg 90 101 90
+#chkprim 0
+
+#Definition of the atom types
+ntypat 4           
+zatnum 1 6 7 8
+natom 38
+natrd 10           
+type 2 3 4 1 1 1 1 1 1 1
+xred
+ -0.014124460846      0.902782142398      0.073557427271
+  0.000000000000      0.056297381942      0.250000000000
+  0.153069712666      0.431300901843      0.321759751220
+  0.033450613916      0.699682235568      0.087578675514
+  0.902276750100      0.855598872979      0.027584590220
+  0.128417131021      0.544117822582      0.428862758835
+  0.069563285231      0.221313831119      0.268472385921
+  0.227089738239      0.292869050642      0.441757804434
+  0.330621809286      0.328805136596      0.266551950361
+  0.184675654967     -0.022802186999      0.215283696488
+
+#Definition of the planewave basis set
+ecut 8.0         # Maximal kinetic energy cut-off, in Hartree
+
+#Definition of the SCF procedure
+nstep 100          
+diemac 40.0
+diemix 0.5
+
+#Optimization of the lattice parameters
+optcell 2
+ionmov  3
+ntime  200
+dilatmx 1.5
+ecutsm  0.5
+

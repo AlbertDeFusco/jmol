@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://www.jmol.org"
+  xmlns="http://www.jmol.org"
+  elementFormDefault="qualified">
+
+<xs:element name="fah_projects" type="typeFahProjects"/>
+
+<xs:complexType name="typeFahProjects">
+  <xs:sequence>
+    <xs:element name="fah_proj" type="typeFahProj" maxOccurs="unbounded"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="typeFahProj">
+  <xs:attribute name="number" type="typeNumber" use="required"/>
+  <xs:attribute name="name" type="typeName"/>
+  <xs:attribute name="public" type="typePublic"/>
+  <xs:attribute name="file" type="typeFile"/>
+  <xs:attribute name="server" type="typeServer"/>
+  <xs:attribute name="atoms" type="typeAtoms"/>
+  <xs:attribute name="preferred" type="typePreferred"/>
+  <xs:attribute name="deadline" type="typeDeadline"/>
+  <xs:attribute name="credit" type="typeCredit"/>
+  <xs:attribute name="frames" type="typeFrames"/>
+  <xs:attribute name="code" type="typeCode"/>
+  <xs:attribute name="contact" type="typeContact"/>
+</xs:complexType>
+
+<xs:simpleType name="typeNumber">
+  <xs:restriction base="xs:integer">
+    <xs:minInclusive value="0"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="typeName">
+  <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType name="typePublic">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="n"/>
+    <xs:enumeration value="y"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="typeFile">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="y"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="typeServer">
+  <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType name="typeAtoms">
+  <xs:restriction base="xs:integer">
+    <xs:minInclusive value="0"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="typePreferred">
+  <xs:restriction base="xs:decimal">
+    <xs:minInclusive value="0"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="typeDeadline">
+  <xs:restriction base="xs:decimal">
+    <xs:minInclusive value="0"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="typeCredit">
+  <xs:restriction base="xs:decimal">
+    <xs:minInclusive value="0"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="typeFrames">
+  <xs:restriction base="xs:integer">
+    <xs:minExclusive value="0"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="typeCode">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="A"/>
+    <xs:enumeration value="AD"/>
+    <xs:enumeration value="A0"/>
+    <xs:enumeration value="A4"/>
+    <xs:enumeration value="DB"/>
+    <xs:enumeration value="DC"/>
+    <xs:enumeration value="DG"/>
+    <xs:enumeration value="G"/>
+    <xs:enumeration value="G3"/>
+    <xs:enumeration value="GB"/>
+    <xs:enumeration value="GC"/>
+    <xs:enumeration value="GG"/>
+    <xs:enumeration value="GG2"/>
+    <xs:enumeration value="GG2MT"/>
+    <xs:enumeration value="GS"/>
+    <xs:enumeration value="GST"/>
+    <xs:enumeration value="GT"/>
+    <xs:enumeration value="ND"/>
+    <xs:enumeration value="Q"/>
+    <xs:enumeration value="SP"/>
+    <xs:enumeration value="T"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="typeContact">
+  <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+</xs:schema>

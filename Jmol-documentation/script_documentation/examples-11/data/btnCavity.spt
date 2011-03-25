@@ -1,0 +1,47 @@
+if (btnsetup)
+	set hoverdelay 0.1
+	set echo btnCavitybg 60% 0%
+	set echo btnCavitybg center
+	echo "                     "
+	color echo background translucent 0.8 yellow
+	set echo btnCavitybg script "animOn=true;script btnAnim.spt;surfaceOn=true;script btnSurface.spt;script btnCavity.spt"
+
+	set echo btnCavity 60% 0%
+	set echo btnCavity center
+	color echo green
+	color echo background translucent 1.0 yellow
+	cavityON = true
+endif
+
+isosurface delete
+set echo btnCavity
+cavityOn = !cavityOn
+
+if (!cavityOn)
+	echo cavities
+	color echo green
+else
+
+	# javascript alert('in btnCavity')
+
+	echo ...working...
+	color echo red
+	refresh
+
+	model 1;isosurface s1b "iso1b.jvxl" translucent 0.4 blue
+	model 2;isosurface s2b "iso2b.jvxl" translucent 0.4 blue
+	model 3;isosurface s3b "iso3b.jvxl" translucent 0.4 blue
+	model 4;isosurface s4b "iso4b.jvxl" translucent 0.4 blue
+	model 5;isosurface s5b "iso5b.jvxl" translucent 0.4 blue
+	model 6;isosurface s6b "iso6b.jvxl" translucent 0.4 blue
+	model 7;isosurface s7b "iso7b.jvxl" translucent 0.4 blue
+	model 8;isosurface s8b "iso8b.jvxl" translucent 0.4 blue
+	model 9;isosurface s9b "iso9b.jvxl" translucent 0.4 blue
+	model 10;isosurface s10b "iso10b.jvxl" translucent 0.4 blue
+	model 11;isosurface s11b "iso11b.jvxl" translucent 0.4 blue
+	model 12;isosurface s12b "iso12b.jvxl" translucent 0.4 blue
+	model 13;isosurface s13b "iso13b.jvxl" translucent 0.4 blue
+	model 14;isosurface s14b "iso14b.jvxl" translucent 0.4 blue
+	echo no cavities
+
+endif

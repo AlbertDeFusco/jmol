@@ -1,0 +1,56 @@
+<!--
+  French translation 
+  Translated from default version : graphics.xml (v 1.2)
+-->
+<section title="Graphiques et rendu">
+  
+  <section title="Quelles sont les diff&#x00E9;rences avec Jmol v10?">
+    <p>
+      Un nouveau moteur graphique 3D a &#x00E9;t&#x00E9;
+      d&#x00E9;velopp&#x00E9; pour Jmol v10 pour correctement supporter
+      les intersections de formes. C'est important quand on visualise
+      des mod&#x00E8;les mol&#x00E9;culaires remplis.
+    </p>
+    <p>
+      Le moteur 3D a aussi des performances nettement sup&#x00E9;rieures
+      avec des grosses mol&#x00E9;cules.
+    </p>
+  </section>
+
+  <section
+    title="Je vois des d&#x00E9;fauts.
+           Pourquoi les dessins ne sont-ils pas anti-alias&#x00E9;s?">
+    <p>
+      Aucun appel graphique java n'est utilis&#x00E9; pour la construction
+      de l'image. La sc&#x00E8;ne compl&#x00E8;te est construite en
+      m&#x00E9;moire et transferr&#x00E9;e &#x00E0; l'&#x00E9;cran avec
+      une seule op&#x00E9;ration drawImage.<br />
+      H&#x00E9; ... vous n'&#x00EA;tes pas la personne qui se plaignait
+      de la vitesse?
+      <i>(Une version future incluera Full-Scene-Anti-Aliasing.)</i>
+    </p>
+  </section>
+  
+  <section
+    title="Mais j'ai besoin d'images de meilleur qualit&#x00E9; ...">
+    <p>
+      Utilisez l'application Jmol et exportez vers PovRay.
+    </p>
+  </section>
+  
+  <section title="Est-ce que Jmol supporte les isosurfaces?">
+    <p>
+      Pas encore. C'est relativement dans notre liste de priorit&#x00E9;s.
+    </p>
+  </section>
+  
+  <section
+   title="Quelles formes Joml supporte pour les structures secondaires
+          des prot&#x00E9;ines?">
+    <p>
+      En utilisant la terminologie RasMol/Chime, Jmol supporte actuellement
+      <b>backbone</b>, <b>trace</b>, <b>strands</b>, <b>meshribbons</b>,
+      <b>ribbons</b>, et <b>cartoons</b>.
+    </p>
+  </section>
+</section>

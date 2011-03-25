@@ -1,0 +1,179 @@
+<section title="Browser Enhancement Technologies">
+  <p>
+    I will try to give a brief summary of the 4 different techniques that
+    can be used to add functionality to the browser. It is important that we
+    use the correct terminology to keep from getting confused.
+  </p>
+  <p>
+    In order from simplest to most complex:
+  </p>
+
+  <h3>Helper Application</h3>
+  <p>
+    A helper application is a regular application that gets automatically
+    launched when the browser receives file that it doesn't know what to do
+    with. The type of the file is identified by something called the
+    'MIME-type'.
+  </p>
+  <p>
+    Lets look at an example using a fresh installation of Netscape/Mozilla.
+    (We are going to say Netscape/Mozilla because Internet Explorer has some
+    'special' support for other MSFT products).
+  </p>
+  <p>
+    The first time Mozilla receives a .doc file with mime-type
+    'application/msword' it doesn't know what to do with the file. It knows
+    that the file is not of type 'text/html' or 'image/jpeg', so it doesn't
+    know how to handle that file type natively.
+  </p>
+  <p>
+    Therefore, Mozilla prompts the user to ask whether he/she wants to save
+    the file or launch an application. If the user selects an application then
+    he/she can choose to always launch the application when files of that
+    mime-type are encountered.
+  </p>
+  <p>
+    Every browser has this table of 'associations' between mime-types and
+    applications ... although Safari's table seems to be well-hidden.
+  </p>
+  <p>
+    A helper application can be any application ... including the Jmol app.
+  </p>
+  <p>
+    <i>Note that for this scheme to work properly the web server must be
+    configured to send the correct mime-type. This is usually not a problem
+    for major applications. However, it is a problem for less well known
+    file types on web servers with novice system administrators ... as
+    is often the case with people try to build and deploy Chime web apps.</i>
+  </p>
+  
+  <h3>Untrusted (or Unsigned) Applet</h3>
+  <p>
+    This is a Java Applet that is embedded in a web page. Most untrusted
+    applets are quite small and download quickly. The user never really
+    notices them. They are little menuing system, games, etc.
+  </p>
+  <p>
+    This type of applet is 'untrusted' in the sense that it came from some
+    arbitrary web server some random place on the web. Therefore, we don't
+    really trust it. Therefore, untrusted applets are placed in a tight
+    security box. They cannot read or write to the local hard disk and they
+    can only talk to the web server where they came from. If they try to do
+    anything else then they are promptly decapitated.
+  </p>
+  <p>
+    The JmolApplet is an untrusted applet ... fatter and more complex than
+    most untrusted applets.
+  </p>
+
+  <h3>Trusted (or Signed) Applet</h3>
+  <p>
+    The security restrictions placed on an untrusted applet are rather
+    severe. And people want to develop web-based applications that can do
+    fancier things ... like save files to the local hard disk.
+  </p>
+  <p>
+    Before this type of applet is executed, the browser explicitly asks the
+    user for permission to run this applet. By saying yes the user is
+    essentially giving permission for the software to be installed on the
+    local hard drive.
+  </p>
+  <p>
+    To protect all parties a Trusted Applet is *signed* with an encrypted
+    digital signature. The encryption also ensures that the applet code has
+    not been modified or 'played with' by a 3rd party.
+  </p>
+  <p>
+    A 'certifying authority' is some organization that you trust to do the
+    verification ... kind of like the Better Business Bureau.
+  </p>
+  <p>
+    Starting with preliminary release 10.00.12 (this includes 10.2 and 11), Jmol includes a 
+	'signed' JmolApplet (JmolAppletSigned.jar), although no official 
+	'certifying authority' is backing it up.
+  </p>
+  <p>
+    When a user goes to a web page that has the signed JmolApplet, they will
+    be prompted and asked if they trust this applet. They will say 'yes' and
+    the session will continue.
+  </p>
+  <p>
+    The signed JmolApplet that is then downloaded can read/write files 
+	on their hard drive. It can also read/write data
+    from/to arbitrary places on the web.
+  </p>
+  <p>
+    That will give the signed JmolApplet a lot more leeway to do interesting
+    things ... like read local molecular model files ... or pull files
+    directly from databases on the web.
+  </p>
+  <p>
+    Note that this signed JmolApplet is still an applet that <i>only</i>
+    exists in the context of a specific web page. 
+    It is not an arbitrary application
+    that can be launched at any time.
+  </p>
+  <p>
+    A user cannot execute it unless it is part of a web page that they have
+    access to. However, this should include a web page that is coming from a
+    CD-ROM or is stored in a local file system.
+  </p>
+  <p>
+    The signed JmolApplet is offered for convenience of some users. However, 
+	we want to keep the unsigned JmolApplet for people who want to build simpler web
+    sites that do not request/require explicit permission to write to the
+    local hard drive.
+  </p>
+  <p>
+    I would like to see the unsigned JmolApplet be 'lean and mean' ... with
+    limited functionality ... but good support for just showing molecules to
+    beginning students and casual visitors.
+  </p>
+  <p>
+    The signed JmolApplet is for serious users who want more serious    
+    functionality.
+  </p>
+
+  <h3>Plug-in</h3>
+  <p>
+    To understand a plug-in it is helpful to think back to the helper
+    application. A helper application is not associated with a specific web
+    page. Rather, it is associated with a specific file type, a specific
+    mime-type. The web browser will launch MS Word every time it sees a
+    document with the mime-type 'application/msword'.
+  </p>
+  <p>
+    A plug-in functions in a similar way. But the display of the data is
+    embedded within the browser window. At some level, it is software that
+    extends the capabilities of the browser itself. It doesn't matter where
+    the files come from. When the browser sees a non-native mime-type it can
+    check its list of installed plug-ins and see if one of them can handle it.
+  </p>
+  <p>
+    Two popular examples are Flash and Acrobat Reader. People usually install
+    these things once and never worry about them again.
+  </p>
+  <p>
+    Once a plug-in is installed it can do whatever it wants ... like any piece
+    of installed software.
+  </p>
+  <p>
+    Developing and maintaining plug-ins is very costly and expensive. Although
+    Netscape defined a plug-in API, the fact is that the dynamic behavior of
+    each browser on each platform is different. And many browsers
+    'implement/support' the Netscape Plug-in API, but they are different
+    implementations and they have different behavior. The fundamental problem
+    is that you are trying to take one piece of complicated software (your
+    fancy plug-in) and embed it within another piece of complicated software
+    (the web browser), alongside other plug-ins. And, in general, you are
+    sharing the same memory and some of the same data structures. Therefore,
+    when someone makes a mistake things tend to break.
+  </p>
+  <p>
+    As I write this it becomes more clear than ever that a Jmol Plug-in will
+    never exist.
+  </p>
+  <p>
+    That's enough for now.
+  </p>
+</section>

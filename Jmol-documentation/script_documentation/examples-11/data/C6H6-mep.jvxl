@@ -1,0 +1,28 @@
+JVXL solvent-excluded surface
+range (-3.6571667, -3.3279688, -1.95) to (3.6571667, 3.3279688, 1.95)
+-12 -6.9110436 -6.28895 -3.684966
+24 0.6581947 0.0 0.0
+22 0.0 0.6619947 0.0
+14 0.0 0.0 0.6699939
+1 1.0 4.643372 0.0 0.0
+6 6.0 2.616899 0.0 0.0
+6 6.0 -2.616899 -0.0 0.0
+6 6.0 1.3084495 2.2663012 0.0
+6 6.0 1.3084495 -2.2663012 0.0
+6 6.0 -1.3084495 -2.2663012 0.0
+6 6.0 -1.3084495 2.2663012 0.0
+1 1.0 2.3216863 4.0212784 0.0
+1 1.0 2.3216863 -4.0212784 0.0
+1 1.0 -2.3216863 -4.0212784 0.0
+1 1.0 -2.3216863 4.0212784 0.0
+1 1.0 -4.643372 -0.0 0.0
+-1 35 90 35 90 Jmol voxel format version 0.9f
+# 
+# load C6H6.smol;isosurface delete resolution 3 solvent map mep
+0.0 1347 1272 1272 -0.09553222 0.036691315 -0.09553222 0.036691315
+ 424 4 10 4 10 4 10 4 248 4 9 6 8 6 8 6 8 6 9 4 207 2 10 6 8 6 7 8 6 8 6 8 6 8 7 6 8 6 10 2 138 2 11 4 9 6 8 6 7 8 6 8 5 10 4 10 4 10 4 10 5 8 6 8 7 6 8 6 9 4 11 2 82 2 11 4 9 6 7 8 6 8 6 8 5 10 4 10 4 10 4 10 4 10 4 10 5 8 6 8 6 8 7 6 9 4 11 2 67 4 9 6 7 8 6 8 5 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 5 8 6 8 7 6 9 4 66 4 9 6 7 8 5 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 5 8 7 6 9 4 66 4 8 8 5 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 5 8 8 4 66 4 8 8 5 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 5 8 8 4 66 4 9 6 7 8 5 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 5 8 7 6 9 4 66 4 9 6 7 8 5 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 5 8 7 6 9 4 66 4 8 8 5 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 5 8 8 4 66 4 8 8 5 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 5 8 8 4 66 4 9 6 7 8 5 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 5 8 7 6 9 4 66 4 9 6 7 8 6 8 5 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 4 10 5 8 6 8 7 6 9 4 67 2 11 4 9 6 7 8 6 8 6 8 5 10 4 10 4 10 4 10 4 10 4 10 5 8 6 8 6 8 7 6 9 4 11 2 82 2 11 4 9 6 8 6 7 8 6 8 5 10 4 10 4 10 4 10 5 8 6 8 7 6 8 6 9 4 11 2 138 2 10 6 8 6 7 8 6 8 6 8 6 8 7 6 8 6 10 2 207 4 9 6 8 6 8 6 8 6 9 4 248 4 10 4 10 4 10 4 1070
+A_8nYnYA8@3XvvXl3XvvXl_8YY8@^11^JFGhnhnJGYXXEXEG:kke:kkeXEEGGFGnnGGYU77U-i'-'6$|#dSjjdS$##$hh{{PP{PO:gge:ggePPPO$$hh${|#SjjS##{;i'';6{rr4!-4-C=n+GG=+1%z$K^^K%$%KEmmET5t-5-+;{{dIm=I=2Z[[EZ[[Em==2V;{{Vdt--+jKEmmEjTz$K^^K$%zn+GG+z1b!--bCkk@/E@Epv.fvfqjMIjIREf9E99C^^!1nUlKUK3IV7h7hIVlKK3J1JnC^^!f999ZMIIZR5.ff5q)/EE)p__MAtllMt^!Pm!mOF]MFMB&ytbOtO=XeeGOP7h'x'x7hOPXeeGbOO=+&+y]MMBYPmmYOCAttC^R33R!.yy!qr(rww2wmc[vcvD?`5j:e4k&y&y4k:e5j?`[vvD<2<m(((w-.-qC&&CM6kkMi3jiqq3i5)x:):'IV.q%z+t8g6i6i8g+t%z.qIVx::'vjiiv5l.6.ilR44R:ALL:^3joo35*w*(IV.q${+tB]SLSLB]+t${.qIVw(uju5l0A0^leSSe*h<<*7,_%_z,az/zpahXhG=b3l:eSLn1n1SL:e3l=bXG7a/7pa%,%%z,@h@7uccu*h<<*7_%_zz/zphXhG=b3l:eSLn1n1SL:e3l=bXG7/7p%%%z@h@7uccu:ALL:^3jsoo3s5*w>*>(IV.q${+tB]SLSLB]+t${.qIVw>>(ujssu5l0A0^leSSeM6kkMi3jqq35)x)'IV.q%z+t8g6i6i8g+t%z.qIVx'vjv5l.6.ilR44R!.yy!q6r(rw6ew2wmec[cD?`5j:e4k&y&y4k:e5j?`[D<e2<me(6((w6-.-qC&&CMAllM^!P!OF]FB)&y)tbt=XGOP7h'x'x7hOPXGb=+)&+y)]BYPYOCAC^R33R+@/@p+2v.vq2RjMjRREfE9PC!P:1n:UlU3IV7h7hIVl3J:1Jn:PC!Pf9ZRMZRR52.5q2)+/)p+__ZZ94!4C9V=n=1Vf%z%%fAKTA5t5+T;dTImI2ZEZEm2VT;VdTt+jAKjTAfz%fzVnz1Vb9!bC9kZkZrrtXXt{TAAT{Z2-i-62Zr$|dd$#r$${$b{P{ObD:eDD:eDbPOb$$$${$r|#r{Z;2i;62{Z{TrArAT{tXXtrrxx|L55L|7JFhhJY7OXXXGO8:e88:e8OXGOG7FGY7|UL7575UL|xxX11XZA_nnA@Z43l443l4Z_@Z^X1111^XgFFgG))GG))GgFFg
+yxyy|y|yyxw{||{ww{||{wxy||yxyyyyrqutxtxruqpospsonvvnnvvnossopquxxupqrttrnmmnmmfffjmqqjmfffbllbb`fbf``ii``ii``ff`bbllbbffmqqmfffjmmmjmfnn{zz{zzwuvxxwvujjjorrojjjaejjea![!!![WbbWVVXVXVU[[UU[[UVXXVVWbbVW[!![!aejje!ajjorrojjjuvxxvjuwzzzwz{{|{|||{zvyzyvumquqmebcecbY^^YSSQORQROM~7 ORROQSQSY^^Ybccbemqqemuvyyuvz{||z{||{xz||{zxvruvuriehihe[[ZSVZVSLQQLGGE~7 GGLQQLSVVSZ[Z[ehheiruuirvxzzvx{||{yu{{yutjtji^i^[UZ[ZUNNGGAA=~7 AAGGNNUZZU[^[^ijijtutuy{{ywryywrfdippfidZYZZZYQQJJCC<<66444466<<CCJJQQYZZYZdiiZdfprprfwyywplttpla_jja_VUVUMMFF??8800****0088??FFMMUUV_V_ajljlapttpkjnnkj]e]e]]U]S]SUQJQJCC;;33**####**33;;CCJJQUSQSU]~5 ejejknnkkjnnkje]e]]S]SQJQJCC;;33**####**33;;CCJJQSQS]]]]ejejknnkplttpla_]jja]_VUUVUUMMFF??8800****0088??FFMMUUUUV_]]V_ajljlapttpwryywrfdppfdZYZYQQJJCC<<66444466<<CCJJQQYYZdZdfprprfwyywyu{{yuitjtjiZi^i^Z[U[UNNGGAA=~7 AAGGNNUU[Z^[^Ziijijitutuy{{y{x||{xvrvrieieZ[[ZZSZSLLGGE~7 GGLLSSZZ[Z[Zeeirirvxvx{||{z|{|{zuzvzvuhumumhebebVYYVQSSQQOQOM~7 OOQQSQSQVYYVbbehmemhuuvuvuzz{z{z||||y{z{zyqwuwuqcjjjjc^aa^![![RWWRVVVVUUUUVVVRWVWR[[!^a!a^cjjcjqujuqwyzwzy{|{|zzvxxvjorrojejnmnmje!ffjjff!bbbbXb`b`X[``[[``[X``Xb~5 !ff!fejjmjmjfejonrnrojvxxvzzmmfmqqmflrqttrqlfpopofinniinnifoofplqpqlfrmtqtqrmfmmuxxusyxyyyxsvwwvvwwvsxxsyuyxyxyuy||y{||{{||{y||y
+#-------end of jvxl file data-------
+Script completed
+Jmol script terminated

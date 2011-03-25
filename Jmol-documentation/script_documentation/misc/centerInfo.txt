@@ -1,0 +1,4 @@
+centerInfo=new Array()
+centerInfo[0]=-0.2629152
+centerInfo[1]=-0.12216714
+centerInfo[2]=0

@@ -1,0 +1,57 @@
+<html>
+<head>
+<script type=text/javascript>
+function showJmol(script) {
+ var sm=""+Math.random()
+ sm=sm.substring(2,10)
+ var newwin=open("JmolPopup.htm?script=" + script,"jmol_"+sm,woptions)
+}
+
+woptions="menubar=yes,resizable=1,scrollbars,alwaysRaised,width=600,height=600,left=50"
+
+</script>
+
+</head>
+<body>
+Just a gallery of pictures produced by <a href=Jmol-11_3.zip>the Jmol 1.3.35 application (not the applet)</a> using the 
+
+<br />
+<br />
+write povray 800 800 [filename]
+<br />
+<br />
+command followed by processing the .pov and .pov.ini output files using POV-Ray for windows. If you download the .pov file, you can run it as a script in Jmol 11.3.35 to recreate the
+scene. 
+<table border=1>
+<tr><td><a href=t.pov>t.pov</a>
+<br /><a href=t.pov.ini>t.pov.ini</a>
+<br /><a href="javascript:showJmol('t.pov')">open Jmol</a>
+</td><td><img src=t.pov.png /></td></tr>
+
+<tr><td><a href=t2.pov>t2.pov</a>
+<br /><a href=t2.pov.ini>t2.pov.ini</a>
+<br /><a href="javascript:showJmol('t.pov')">open Jmol</a>
+</td><td><img src=t2.pov.png /></td></tr>
+
+<tr><td><a href=bdna.pov>bdna.pov</a>
+<br /><a href=bdna.pov.ini>bdna.pov.ini</a>
+<br /><a href="javascript:showJmol('bdna.pov')">open Jmol</a>
+</td><td><img src=bdna.pov.png /></td></tr>
+
+<tr><td><a href=watermo.pov>watermo.pov</a>
+<br /><a href=watermo.pov.ini>watermo.pov.ini</a>
+<br /><a href="javascript:showJmol('watermo.pov')">open Jmol</a>
+</td><td><img src=watermo.pov.png /></td></tr>
+
+<tr><td><a href=watermo2.pov>watermo2.pov</a>
+<br /><a href=watermo2.pov.ini>watermo2.pov.ini</a>
+<br /><a href="javascript:showJmol('watermo2.pov')">open Jmol</a>
+</td><td><img src=watermo2.pov.png /></td></tr>
+
+<tr><td><a href=caffeineplane.pov>caffeineplane.pov</a>
+<br /><a href=caffeineplane.pov.ini>caffeineplane.pov.ini</a>
+<br /><a href="javascript:showJmol('caffeineplane.pov')">open Jmol</a>
+</td><td><img src=caffeineplane.pov.png /></td></tr>
+</table>
+</body>
+</html>

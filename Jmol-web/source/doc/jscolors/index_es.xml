@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+-->
+<document>
+  <body>
+    <title>Colores</title>
+
+    <section title="Colores usados por Jmol">
+      <script src="./jmol_constants.js" type="text/javascript"></script>
+      <script src="./jmol_colors_layout.js" type="text/javascript"></script>
+      		<p>Se pueden colorear los objetos en Jmol usando la instrucción color (o colour):<br/>
+				<tt>color [objeto] [color o patrón de coloreado]</tt>
+			</p>
+			<ul>
+				<li>El <tt>[color]</tt> se especifica en forma de triplete decimal 
+				[rojo,verde,azul] o hexadecimal [xRRVVAA].
+				También puede ser un nombre de color reconocido por JavaScript, 
+				por RasMol o por Jmol. 
+				(Los colores predefinidos que usa Jmol y sus valores 
+				se indican en la tablas que siguen.) </li>
+				<li>El <tt>[patrón de coloreado]</tt> se indica usando términos 
+				predefinidos que se describen en esta página.</li>
+				<li>El <tt>[objeto]</tt> puede ser atoms, bonds, backbone, cartoon, 
+				stars, rockets, ribbon, dots, label, echo, hbonds, ssbonds, axes, 
+				boundbox, measures, polyhedra, isosurface, pmesh, unitcell.</li>
+				<li>si se omite el objeto, se usará <tt>atoms</tt>.</li>
+			</ul>
+			<p>Se incluye alguna información sobre colores en RasMol para
+			quienes estén adaptando a Jmol materiales basados en RasMol o Chime.
+			</p>
+			<p>Muchos de los patrones de coloreado descritos a continuación
+			sólo son aplicables para archivos PDB y mmCIF de biomacromoléculas.
+			</p>
+
+      <section title="Átomos ('colores CPK', colores predeterminados para los elementos)">
+        <p>Instrucciones relacionadas: <tt>color cpk , set defaultColors Jmol , set defaultColors Rasmol</tt>
+        </p>
+		<p>Aplica colores a cada átomo del objeto de acuerdo con el elemento químico,
+		según se indica en las tablas que siguen. Las representaciones del esqueleto,
+		tales como cintas, esquemáticas, etc., se representan con el color de
+		los carbonos alfa en el caso de proteínas, y con el del fósforo para 
+		ácidos nucleicos.
+		</p>
+        <h4>Colores predeterminados para los elementos, según tabla periódica:</h4>
+        <blockquote style="font-style:italic;">
+	      Poniendo el puntero del ratón sobre cada elemento se muestra información.
+			<span id="clickComment"><br/>
+			Al hacer clic sobre un elemento avanzarás 
+			hasta su posición en la lista siguiente.
+			</span>
+			<script type="text/javascript">
+			if (navigator.userAgent.indexOf("MSIE")!=-1) { document.getElementById("clickComment").style.display="none" }
+			</script>
+        </blockquote>
+        <script type="text/javascript">buildPeriodicTable();</script>
+				<br/>
+        <h4>Colores predeterminados para los elementos, según número atómico:</h4>
+        <blockquote>El esquema &#x201C;CPKnew&#x201D; sólo es aplicable a Rasmol v. 2.7.3 (o posterior); sólo se muestran las diferencias con el CPK clásico.
+        Nota: CPKnew para átomos desconocidos es
+          <span style="background-color:#FA1691;">FA1691</span>,
+          ligeramente diferente del CPK
+          <span style="background-color:#FF1493;">FF1493</span>,
+          pero se ha omitido en la tabla por claridad.
+        </blockquote>
+		<table><tr valign="top">
+			<td><script type="text/javascript">buildElementTable();</script></td>
+			<td width="30">
+			</td>
+			<td><script type="text/javascript">buildIsotopeTable();</script></td>
+		</tr></table>
+		<br/>
+      </section>
+
+      <section title="Residuos: aminoácidos, nucleótidos">
+	        <p>Instrucciones relacionadas: <tt>color [objeto] amino, color [objeto] shapely</tt>
+	        </p>
+			<p>
+			<b>'amino'</b> representa en un color propio los residuos de cada uno de 
+			los 20 aminoácidos canónicos (así como Asx y Glx), 
+			y con un color adicional todo lo demás (incluidos los nucleótidos, 
+			los disolventes y los ligandos).
+			Algunos colores son comunes a dos o más aminoácidos que tienen 
+			propiedades similares. 
+			<br/><br/>
+			<b>'shapely'</b> usa un juego diferente de colores para los aminoácidos 
+			(todos diferentes) y también colores diferentes para cada uno de los 6 
+			tipos de nucleótido.
+			</p>
+        <script type="text/javascript">assignLastAa('otro');
+		  buildResidueTable(
+          'Proteína', 'amino', 'Proteína', 'shapely', '(igual en RasMol, excepto amino para otro)',
+          'Nucleico', 'shapely', '(A,G,C,T igual en RasMol)');
+        </script>
+				<br/>
+      </section>
+
+      <section title="Cadenas">
+        <p>Instrucción relacionada: <tt>color [objeto] chain</tt>
+        </p>
+		<p>Representa cada cadena del modelo con un color diferente. 
+		Este patrón de coloreado es particularmente útil para diferenciar
+		las partes de una estructura multimérica, o las dos hebras de
+		un DNA bicatenario.
+		Los átomos de grupos HETERO (sólo en archivos PDB) se colorean 
+		en un tono diferente que los de campos ATOM: más oscuro para las
+		cadenas A-Q,S, más claro para las cadenas R,T-Z. 
+		</p>
+		<p>El formato PDB
+		<a href="http://www.wwpdb.org/documentation/format32/sect9.html#ATOM">requiere</a>
+		que cada identificador de cadena sea un carácter alfanumérico no en blanco. 
+		En consecuencia, en cada modelo de un archivo PDB se admite un máximo de
+		62 cadenas (26 veces 2, con las letras A-Z mayúsculas y minúsculas, más otras
+		10, con identificadores entre 0 y 9). Un ejemplo con 62 cadenas es <tt>2zkr</tt>.
+        Los archivos PDB obtenidos antes de la remediación de la base de datos pueden 
+        tener identificadores de cadena en blanco o no alfanuméricos (p. ej., signos
+        de puntuación), pero esto actualmente ya no se permite. 
+        Aunque la cadena 'A' recibe el mismo color que la cadena 'a' (y así sucesivamente),
+        se pueden seleccionar por separado (véase la instrucción
+        <tt>set chainCaseSensitive</tt>).
+		</p>
+        <script type="text/javascript">assignLastChain('ninguno');
+		buildChainTable('Identificador', 'de cadena');
+        </script>
+				<br/>
+      </section>
+            
+      <section title="Estructura secundaria">
+        <p>Instrucción relacionada: <tt>color structure</tt>
+        </p>
+		<p>
+		Utiliza colores distintos para diferenciar seis tipos de
+		estructura secundaria en proteínas (3 tipos de hélices, hebras o láminas beta, 
+		giros y bucles) y el DNA del RNA. 
+		La estructura secundaria se lee del archivo PDB (campos HELIX y SHEET)
+		o, si esa información no está disponible, se determina usando un algoritmo. 
+		</p>
+        <script type="text/javascript">buildStructTable(
+          'Proteína',
+          ['hélice &#945;','hélice 3<sub>10</sub>','hélice &#960;','hebra &#946;','giro (&#946;)','otra'],
+          '(igual en RasMol, excepto 3<sub>10</sub> y &#960;)',
+          'Acido nucleico',
+          ['DNA','RNA'],
+          '(igual en DRuMS)',
+          'Otros',
+          ['carbohidrato','otros']
+          );
+        </script>
+				<br/>
+      </section>
+      
+			
+		<section title="Gradientes"><a name="gradnt"></a>
+			<p>Se pueden usar diversas propiedades que varían en un intervalo
+			continuo para colorear átomos y estructuras. En tales casos,
+			Jmol usa varios gradientes de color, o "arco iris".
+			</p>
+			<table><tr valign="top">
+			<td>
+				<b>Arco iris directo (roygb) </b>
+				<p>rojo -&gt; anaranjado -&gt; amarillo -&gt; verde -&gt; azul</p>
+				<b>Arco iris inverso (bgyor)</b>
+				<p>azul -&gt; verde -&gt; amarillo -&gt; anaranjado -&gt; rojo</p>
+				<b>Gradiente rojo-blanco-azul (rwb)</b>
+				<p>rojo -&gt; tonos de rojo-rosado -&gt; blanco -&gt; tonos de azul -&gt; azul</p>
+				<b>Gradiente azul-blanco-rojo (bwr) </b>
+				<p>azul -&gt; tonos de azul -&gt; blanco -&gt; tonos de rosado-rojo -&gt; rojo</p>
+				<b>Arco iris bajo (low)</b>
+				<p>rojo -&gt; anaranjado -&gt; amarillo </p>
+				<b>Arco iris alto (high) </b>
+				<p>amarillo -&gt; verde -&gt; azul</p>
+				</td>
+				<td><img src="./gradients.png" width="278" height="472" hspace="6"/>
+				</td>
+			</tr></table>
+		</section>
+		
+		
+		<section title="Posición en la cadena">
+			<p>Instrucciones relacionadas: <tt>color [objeto] group, color [objeto] monomer</tt>
+			</p>
+			<p>Se colorea mediante un arco iris inverso (bgyor), de acuerdo con
+			la posición de los grupos o residuos (por ejemplo, 
+			aminoácidos o nucleótidos) a lo largo de una cadena.
+			</p>
+			<script type="text/javascript">buildRainbowTable(
+	          'N-terminal o 5&#8217;-',
+	          'C-terminal o 3&#8217;-');
+	        </script>
+			<p>(azul = nitrógeno = N-terminal = comienzo de la cadena = 5')
+			<br/>(rojo = oxígeno = C-terminal = final de la cadena = 3') 
+			</p>
+			<p><b>'group'</b>:
+			</p>
+			<ul>
+				<li>Se aplica el intervalo completo de colores a los 
+				grupos indicados o seleccionados de la cadena (es decir, 
+				la escala es relativa, no absoluta).</li>
+				<li>Se utiliza el orden de los grupos en el archivo, 
+				no el número que tienen asignado en el archivo.</li>
+				<li>El coloreado es independiente para cada cadena. </li>
+			</ul>
+			<p><b>'monomer'</b>:
+			</p>
+			<p>Una variación, relativa a "monómeros" en un "polímero" más que a
+			"grupos" en una "cadena". Un "polímero" es una serie de "monómeros"
+			conectados (al menos para este propósito).
+			  </p>
+			<ul>
+				<li>Jmol interpreta el patrón de esqueleto en residuos consecutivos
+				("monómeros") para identificar "polímeros" continuos. </li>
+				<li>Si una cadena está interrumpida, las dos porciones de la cadena se
+				reconocen como polímeros independientes y, por tanto, se
+				colorean independientemente con el intervalo completo de colores,
+				a pesar de que ambos trozos están marcados con el mismo
+				identificador de cadena en el archivo. </li>
+				<li>De nuevo, la numeración de los grupos en el archivo es
+				irrelevante.</li>
+				<li>Los grupos HETERO pueden formar parte de un polímero
+				dependiendo de cómo estén etiquetados en el archivo PDB/mmCIF 
+				y siempre que tengan un patrón de esqueleto reconocible por Jmol
+				como una secuencia de unidades individuales. </li>
+			</ul>
+			<p><b>Nota para RasMol/Chime</b>: 
+			En RasMol/Chime, el índice de un grupo es relativo a la cadena
+			completa, mientras que en Jmol es relativo al conjunto de grupos
+			de la cadena seleccionado en ese momento.
+			Además, la instrucción "set hetero" no está disponible en Jmol. 
+			Si quieres excluir los grupos "hetero", no los selecciones.
+			</p>
+			<br/>
+		</section>
+			
+			<section title="Variabilidad posicional">
+				<p>Instrucciones relacionadas: <tt>color [object] relativeTemperature, color [object] fixedTemperature</tt>
+				</p>
+				<p>Cada átomo se colorea, siguiendo un gradiente bwr, según su
+				"factor de temperatura" (o factor B, o factor de Debye-Waller) 
+				guardado en el archivo PDB o mmCIF. Esto proporciona
+				típicamente una medida de la mobilidad de un átomo dado, 
+				o la incertidumbre en su posición. Un factor B cristalográfico
+				elevado puede indicar una estructura incorrecta. 
+				</p>
+				<script type="text/javascript">buildRwbTable(
+				'menor variabilidad posicional', 
+				'mayor variabilidad posicional', 
+				-1)
+				</script>
+				<p>(azul = frío = temperatura baja = estático/immóvil)<br/>
+			  	(rojo = caliente = temperatura alta = variable/móvil)
+			  	</p>
+				<p><b>'fixedTemperature'</b>: 
+				el factor se refiere a una escala absoluta de 0 a 100.
+				</p>
+				<p><b>'relativeTemperature'</b>: 
+				el color es relativo a los valores mínimo y máximo de factor B
+				presentes en el archivo (no en la selección).
+				</p>
+				<p><b>'relativeTemperature'</b> tras 'set rangeSelected on': 
+				el color es relativo a los valores mínimo y máximo de factor B
+				presentes en la parte del modelo seleccionada actualmente.
+				</p>
+				<p>Nota: el campo del factor de temperatura en una archivo PDB 
+				es usado a veces por el autor del archivo para indicar cualquier
+				otra propiedad de los átomos del modelo.
+				</p>
+				<p><b>Nota para RasMol/Chime</b>: 
+				En RasMol y Chime, 'temperature' (la única opción disponible) utiliza
+				también una escala relativa, pero con un arco iris inverso (bgyor). 
+				En Jmol, 'temperature' hace lo mismo que 'relativeTemperature'.
+				</p>
+				<br/>
+			</section>
+
+      <section title="Carga">
+			<section title="Carga formal">
+			    <p>Instrucción relacionada: <tt>color [objeto] formalCharge</tt>
+			    </p>
+				<p>Colorea los átomos según su carga formal, o estado de ionización. 
+				Usa un gradiente rojo-blanco-azul (rwb) restringido: 
+				tonos de rojo para los aniones, 
+				tonos de azul para los cationes, blanco para los átomos sin carga. 
+				El intervalo de valores manejado por Jmol para la carga formal 
+				es de -4 a +7, en una escala absoluta.
+				</p>
+				<script type="text/javascript">buildChargeTable('Carga');
+			    </script>
+				<p>(rojo = oxígeno = carboxilo = negativo)<br/>
+    			(azul = nitrógeno = amino = positivo)	
+    			</p>
+			</section>
+			<section title="Carga parcial">
+			    <p>Instrucción relacionada: <tt>color [objeto] partialCharge</tt>
+			    </p>
+				<p>Colorea los átomos según su carga parcial, o densidad electrónica. 
+				Usa un gradiente rojo-blanco-azul (rwb): 
+				tonos de rojo para alta densidad electrónica, 
+				tonos de azul para baja densidad electrónica, blanco para neutro. 
+				El intervalo de valores para la carga parcial se ajusta de
+				acuerdo con los valores mínimo y máximo presentes en el archivo
+				(es decir, se usa una escala relativa a los valores del archivo, 
+				pero no a los del conjunto de átomos seleccionados).
+				</p>
+				<script type="text/javascript">buildRwbTable(
+				'carga negativa', 
+				'carga positiva',
+				 1);
+        		</script>
+				<p>(rojo = oxígeno = carboxilo = negativo)<br/>
+    			(azul = nitrógeno = amino = positivo)	
+				</p>
+				</section>
+				<p><b>Nota para RasMol/Chime</b>:
+        		En RasMol y Chime, 'charge' (la única opción disponible) está diseñado 
+        		para archivos PDB que contienen cargas parciales en las columnas
+        		del factor B, y utiliza un gradiente arco iris directo (roygb) 
+        		con una escala relativa a los valores presentes en el archivo.
+        		En Jmol, 'charge' hace lo mismo que 'formalCharge'.
+        		</p>
+				<br/>
+      </section>
+
+      <section title="Isosuperficies">
+				<p>Instrucción relacionada: <tt>isoSurface</tt>
+				</p>
+				<p>Las isosuperficies (del disolvente, moleculares, orbitales...) 
+				se pueden colorear uniformemente o empleando un "mapa" de colores
+				que refleja el valor de alguna propiedad en cada punto de la
+				superficie (por ejemplo, el potencial electrostático molecular, 
+				la distancia, etc.). 
+				Para estos mapas están disponibles todos los <a href="#gradnt">gradientes</a> 
+				de color predefinidos (así como los gradientes inversos), 
+				usando el parámetro 'colorScheme' de la instrucción 'isoSurface'. 
+				</p>
+				<br/>
+      </section>
+
+      <section title="Enlaces de hidrógeno">
+        <p>Instrucción relacionada: <tt>color hBonds type </tt>
+        </p>
+		<p>Colorea los enlaces de hidrógeno de una proteína basándose en el
+		número de residuos comprendido entre los átomos que participan en el enlace. 
+		Para los enlaces de hidrógeno en un ácido nucleico se emplea otro
+		color diferente. 
+		</p>
+		<script type="text/javascript">buildHbondsTable(
+          'Distancia',
+          ['+2', '+3 (giros)', '+4 (hélice &#945;)', '+5', '-3', '-4', 'otra (lámina &#946;)', 'pares de bases']);
+        </script>
+				<br/>
+      </section>
+      
+      <section title="Fuentes">
+        <ul>
+          <li><a href="http://jmol.svn.sourceforge.net/viewvc/jmol/trunk/Jmol/src/org/jmol/viewer/JmolConstants.java?view=markup">
+            JmolConstants.java</a></li>
+          <li><a href="http://www.umass.edu/microbio/rasmol/distrib/rasman.htm#cpkcolours">
+            Colores usados por Rasmol y Chime</a>
+            (RasMol 2.6&#946;2, Eric Martz, <tt>http://www.umass.edu/microbio/rasmol/</tt>).</li>
+          <li><a href="http://openrasmol.org/doc/rasmol.html#cpkcolours">
+            Colores usados por Rasmol</a>
+            (manual oficial de Rasmol, <tt>http://openrasmol.org/</tt>).</li>
+          <li><a href="http://www.umass.edu/molvis/drums/">Esquema de colores DRuMS</a>
+            (pendiente de ser incorporado aquí al completo).</li>
+			<li><a href="http://jmol.sourceforge.net/project/">Listas de correo</a> 
+			Jmol-users y Jmol-developers.</li>
+        </ul>
+        <br/>
+      </section>
+    </section>
+
+    <section title="Colores de JavaScript">
+      <script src="./jsColorNames.js"></script>
+      <br/>
+    </section>
+
+    <section title="Paleta de colores de 8 bits de Netscape">
+      <script src="./colors.js"></script>
+    </section>
+
+  </body>
+</document>

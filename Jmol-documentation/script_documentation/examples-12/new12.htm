@@ -1,0 +1,268 @@
+<html>
+<body>
+<H2>Jmol 12.0 new features 7/28/2010</H2>
+New Jmol features introduced since the release of Jmol 11.8 on 8/26/2009 are highlighted here.
+<br />A PDF version of this file is <a href=../examples-12/Jmol-12.0-quickstart.pdf>Jmol-12.0-quickstart.pdf</a>
+<br />Item links are to topics in <a href=../examples-11/new.htm>examples-11/new.htm</a> 
+<br />
+<br /><a href=#general>Generally new capability</a>
+<br /><a href=#GUI>Graphical User Interface</a>
+<br /><a href=#readers>New file readers</a>
+<br /><a href=#reading>New file reading capabilities</a>
+<br /><a href=#export>New file output/export capabilities</a>
+<br /><a href=#smiles>Structure searching/matching</a>
+<br /><a href=#properties>Atom properties</a>
+<br /><a href=#scripting>Jmol scripting functions and variables</a>
+<br /><a href=#commands>New commands</a>
+<br /><a href=#options>New command options</a>
+
+<H3><a name=general>Generally new capability</a></H3>
+
+-- customizable mouse button/action bindings
+<br />-- multi-touch/Kiosk capability using <a href=http://code.google.com/p/sparsh-ui/>SPARSHUI</a> adaptation (<a href=http://www.youtube.com/watch?v=7x8uDRQKIg0>U-Tube video</a>)
+<br />-- parallel multiprocessor capability for isosurface creation
+<br />-- drag-and-drop to signed applets and the application -- see <a href=drop.htm>drop.htm</a>
+<br />
+<br />-- model kit mode allows rapid construction of simple models
+<br />-- extensive support for depiction of space groups -- see <a href=../examples-11/jcse/explore.htm>Jmol Crystal Structure Explorer</a>
+<br />
+<br />-- conversion of 2D models (SMILES, JME, MOL) to 3D -- see <a href=../examples-11/JmeToJmol.htm>JmeToJmol.htm</a>
+<br />-- interface to <a href=http://www.chemene.com:8080/ccd/jsdraw/>JSDraw</a> for 2D structure input -- see <a href=../examples-11/jsdraw/jstest.htm>jstest.htm</a>
+<br />-- interface to <a href=http://code.google.com/p/flot/>Flot</a> for plotting data -- see <a href=../examples-11/jmol-flot.htm>jmol-flot.htm</a> and <a href=../examples-11/jmol-flot-energy.htm>jmol-flot-energy.htm</a>
+<br />
+<br />-- full implementation of Daylight SMILES/SMARTS
+<br />-- extension of Daylight SMARTS to <a href=http://jmol.svn.sourceforge.net/viewvc/jmol/trunk/Jmol/src/org/jmol/smiles/package.html>3D conformation</a>
+<br />-- introduction of <a href=http://jmol.svn.sourceforge.net/viewvc/jmol/trunk/Jmol/src/org/jmol/smiles/package.html>Jmol bioSMILES and bioSMARTS</a>
+<br />-- new <a href=../examples-11/JmolSmilesApplet.jar>JmolSmilesApplet.jar</a>. See <a href=../examples-11/JmolSmiles.htm>JmolSmiles.htm</a>, <a href=../examples-11/JmolSmilesTest.htm>JmolSmilesTest.htm</a>, 
+<br />
+<br />-- JavaScript-like flow commands and TIMEOUT
+<br />-- JavaScript-like TRY/CATCH error handling
+<br />
+<br />-- direct reading of <a href=http://eds.bmc.uu.se/eds/>Uppsala electron density maps</a>
+<br />-- natural bond orbital reading/rendering
+<br />
+<br />-- direct logging to files using the LOG command
+
+<H3><a name=GUI>Graphical User Interface:</a></H3>
+<a href=../examples-11/new.htm?topic=23>right-edge zoom </a>
+<br /><a href=../examples-11/new.htm?topic=27>new mouse action: LEFT-DOUBLE-CLICK-DRAG </a>
+<br /><a href=../examples-11/new.htm?topic=33>new multi-touch interface </a>
+<br /><a href=../examples-11/new.htm?topic=67>SET command autocompletion in console</a>
+<H3><a name=readers>New file readers:</a></H3>
+<a href=../examples-11/new.htm?topic=90>CRYSTAL reader </a>
+<br /><a href=../examples-11/new.htm?topic=40>DGRID reader </a>
+<br /><a href=../examples-11/new.htm?topic=89>isosurface DSN6/O electron density map readering</a>
+<br /><a href=../examples-11/new.htm?topic=128>2D MOL reader to 3D </a>
+<br /><a href=../examples-11/new.htm?topic=127>JME reader converts 2D to 3D </a>
+<br /><a href=../examples-11/new.htm?topic=151>direct loading of SMILES strings to 3D</a>
+<br /><a href=../examples-11/new.htm?topic=135>direct reading of Uppsala electron density maps</a>
+<br /><a href=../examples-11/new.htm?topic=51>VASP vasprun.xml </a>
+<br /><a href=../examples-11/new.htm?topic=53>XPLOR electron density reader </a>
+<H3><a name=reading>New file reading capabilities:</a></H3>
+<a href=../examples-11/new.htm?topic=143>drag-and-drop to signed applet and from browsers </a>
+<br /><a href=../examples-11/new.htm?topic=91>reading of polymer(1D) and slab(2D) unit cells </a>
+<br /><a href=../examples-11/new.htm?topic=61>loading with option to save a local version (LOAD .... AS ….)</a>
+<br /><a href=../examples-11/new.htm?topic=106>reading of Natural Bond Orbitals </a>
+<br /><a href=../examples-11/new.htm?topic=68>reading of simple PDB trajectories </a>
+<br /><a href=../examples-11/new.htm?topic=136>Spartan/Cygress FILTER "noOrient" </a>
+<br /><a href=../examples-11/new.htm?topic=60>extended XYZ file format </a>
+<br /><a href=../examples-11/new.htm?topic=92>reading specialized file data as property_xxxx</a>
+<H3><a name=export>New file output/export capabilities:</a></H3>
+<a href=../examples-11/new.htm?topic=78>new LOG command </a>
+<br /><a href=../examples-11/new.htm?topic=11>Jmol Archive Format (.jmol) </a>
+<br /><a href=../examples-11/new.htm?topic=19>JVXL XML format </a>
+<br /><a href=../examples-11/new.htm?topic=99>webExport enhancements</a>
+<br /><a href=../examples-11/new.htm?topic=169>export of IDTF/laTeX for 3D-PDF files </a>
+<H3><a name=smiles>Structure searching/matching:</a></H3>
+<a href=../examples-11/new.htm?topic=168>full 3D-SEARCH SMILES/SMARTS and bioSMILES/bioSMARTS implementation </a>
+<br /><a href=../examples-11/new.htm?topic=163>{*}.find("SEQUENCE") </a>
+<br /><a href=../examples-11/new.htm?topic=139>{*}.find("smartsString",asArray) </a>
+<br /><a href=../examples-11/new.htm?topic=152>{*}.find("SMILES”,"MF") </a>
+<br /><a href=../examples-11/new.htm?topic=152>{*}.find("SMARTS","MF") </a>
+<br /><a href=../examples-11/new.htm?topic=140>SMILES stereochemistry matching </a>
+<br /><a href=../examples-11/new.htm?topic=142>SMILES-based conformational testing and alignment </a>
+<br /><a href=../examples-11/new.htm?topic=141>light-weight JmolSmilesApplet.jar </a>
+<br /><a href=../examples-11/new.htm?topic=153>SMARTS atropisomer matching </a>
+<br /><a href=../examples-11/new.htm?topic=155>MEASURE search("...") </a>
+<br /><a href=../examples-11/new.htm?topic=158>SET picking measure SEQUENCE </a>
+<br /><a href=../examples-11/new.htm?topic=165>SHOW SMILES </a>
+<H3><a name=properties>Atom properties:</a></H3>
+<a href=../examples-11/new.htm?topic=120>better RNA hydrogen bond calculation </a>
+<br /><a href=../examples-11/new.htm?topic=118>generalized hydrogen bond calculation </a>
+<br /><a href=../examples-11/new.htm?topic=121>shapes: negative size implies ONLY </a>
+<br /><a href=../examples-11/new.htm?topic=44>van der Waals default 23%AUTO </a>
+<br />
+<br /><a href=../examples-11/new.htm?topic=12>{xxx}.cartoon (etc.) Shapes: size testing and setting</a>
+<br /><a href=../examples-11/new.htm?topic=160>{xxx}.eta for nucleic acids </a>
+<br /><a href=../examples-11/new.htm?topic=74>{xxx}.polymer </a>
+<br /><a href=../examples-11/new.htm?topic=104>{xxx}.selected </a>
+<br /><a href=../examples-11/new.htm?topic=163>{xxx}.find("SEQUENCE") </a>
+<br /><a href=../examples-11/new.htm?topic=139>{xxx}.find("smartsString",asArray) </a>
+<br /><a href=../examples-11/new.htm?topic=152>{xxx}.find("SMILES”,"MF") </a>
+<br /><a href=../examples-11/new.htm?topic=152>{xxx}.find("SMARTS","MF") </a>
+<br /><a href=../examples-11/new.htm?topic=79>{xxx}.ionicRadius </a>
+<br /><a href=../examples-11/new.htm?topic=160>{xxx}.theta for nucleic acids </a>
+<br /><a href=../examples-11/new.htm?topic=4>{xxx}.volume("type") </a>
+<br /><a href=../examples-11/new.htm?topic=97>{xxx}.x {xxx}.y {xxx}.z </a>
+<H3><a name=scripting>Jmol scripting functions and variables:</a></H3>
+<a href=../examples-11/new.htm?topic=98>x**y </a>
+<br /><a href=../examples-11/new.htm?topic=174>associative arrays </a>
+<br /><a href=../examples-11/new.htm?topic=1>acos(x) </a>
+<br /><a href=../examples-11/new.htm?topic=112>compare() </a>
+<br /><a href=../examples-11/new.htm?topic=48>hkl(a,b,c) </a>
+<br /><a href=../examples-11/new.htm?topic=31>3x3 matrix math </a>
+<br /><a href=../examples-11/new.htm?topic=111>4x4 matrix math </a>
+<br /><a href=../examples-11/new.htm?topic=50>measure() </a>
+<br /><a href=../examples-11/new.htm?topic=18>now() </a>
+<br /><a href=../examples-11/new.htm?topic=175>prompt() </a>
+<br /><a href=../examples-11/new.htm?topic=100>quaternion arrays</a>
+<br /><a href=../examples-11/new.htm?topic=100>quaternion differences, means, and standard deviations </a>
+<br /><a href=../examples-11/new.htm?topic=1>quaternion dot product q1.dot(q2) </a>
+<br /><a href=../examples-11/new.htm?topic=8>symop(n) </a>
+<br /><a href=../examples-11/new.htm?topic=7>symop(n,"...") </a>
+<br /><a href=../examples-11/new.htm?topic=9>symop(n) * symop(m) </a>
+<br /><a href=../examples-11/new.htm?topic=83>_multiTouchServer, _multiTouchClient flags </a>
+<br /><a href=../examples-11/new.htm?topic=10>$SCRIPT_PATH$ script pre-processing variable</a>
+<H3><a name=commands>New commands:</a></H3>
+<a href=../examples-11/new.htm?topic=80>implicit SCRIPT command </a>
+<br /><a href=../examples-11/new.htm?topic=26>BIND </a>
+<br /><a href=../examples-11/new.htm?topic=103>COMPARE </a>
+<br /><a href=../examples-11/new.htm?topic=148>FIX</a>
+<br /><a href=../examples-11/new.htm?topic=78>LOG</a>
+<br /><a href=../examples-11/new.htm?topic=164>MAPPROPERTY</a>
+<br /><a href=../examples-11/new.htm?topic=132>PARALLEL</a>
+<br /><a href=../examples-11/new.htm?topic=161>PLOT </a>
+<br /><a href=../examples-11/new.htm?topic=132>PROCESS</a>
+<br /><a href=../examples-11/new.htm?topic=172>PROMPT </a>
+<br /><a href=../examples-11/new.htm?topic=66>STRUTS </a>
+<br /><a href=../examples-11/new.htm?topic=173>SWITCH/CASE </a>
+<br /><a href=../examples-11/new.htm?topic=71>TIMEOUT</a>
+<br /><a href=../examples-11/new.htm?topic=176>TRY/CATCH </a>
+<br /><a href=../examples-11/new.htm?topic=26>UNBIND </a>
+<H3><a name=options>New command options:</a></H3>
+<a href=../examples-11/new.htm?topic=105>translucent color schemes </a>
+<br /><a href=../examples-11/new.htm?topic=159>AXES CENTER {x y z} </a>
+<br /><a href=../examples-11/new.htm?topic=35>AXES LABELS </a>
+<br /><a href=../examples-11/new.htm?topic=34>AXES TICKS</a>
+<br /><a href=../examples-11/new.htm?topic=54>BOUNDBOX $isosurface1 </a>
+<br /><a href=../examples-11/new.htm?topic=55>BOUNDBOX SCALE x.x option </a>
+<br /><a href=../examples-11/new.htm?topic=34>BOUNDBOX TICKS</a>
+<br /><a href=../examples-11/new.htm?topic=57>CALCULATE HYDROGENS </a>
+<br /><a href=../examples-11/new.htm?topic=62>COLOR “BW” </a>
+<br /><a href=../examples-11/new.htm?topic=62>COLOR “WB” </a>
+<br /><a href=../examples-11/new.htm?topic=95>CONNECT XX% YY% ...</a>
+<br /><a href=../examples-11/new.htm?topic=57>DELETE HYDROGENS </a>
+<br /><a href=../examples-11/new.htm?topic=45>DRAW BOUNDBOX</a>
+<br /><a href=../examples-11/new.htm?topic=29>DRAW INTERSECTION $myIsosurfaceID PLANE|HKL </a>
+<br /><a href=../examples-11/new.htm?topic=29>DRAW INTERSECTION BOUNDBOX PLANE|HKL </a>
+<br /><a href=../examples-11/new.htm?topic=29>DRAW INTERSECTION UNITCELL PLANE|HKL </a>
+<br /><a href=../examples-11/new.htm?topic=30>DRAW LINEDATA</a>
+<br /><a href=../examples-11/new.htm?topic=58>DRAW POLYGON </a>
+<br /><a href=../examples-11/new.htm?topic=47>DRAW SYMOP </a>
+<br /><a href=../examples-11/new.htm?topic=45>DRAW UNITCELL </a>
+<br /><a href=../examples-11/new.htm?topic=88>FRAME TITLE (from file-based model names)</a>
+<br /><a href=../examples-11/new.htm?topic=82>FRANK OFF (local signed applet)</a>
+<br /><a href=../examples-11/new.htm?topic=25>GETPROPERTY mouseInfo </a>
+<br /><a href=../examples-11/new.htm?topic=41>GETPROPERTY SHAPEINFO </a>
+<br /><a href=../examples-11/new.htm?topic=15>GETPROPERTY shapeInfo.isosurface </a>
+<br /><a href=../examples-11/new.htm?topic=39>GETPROPERTY shapeInfo.pmesh </a>
+<br /><a href=../examples-11/new.htm?topic=117>INVERTSELECTED STEREO option </a>
+<br /><a href=../examples-11/new.htm?topic=14>ISOSURFACE ... COLOR "color1 color2 color3..." </a>
+<br /><a href=../examples-11/new.htm?topic=28>ISOSURFACE color MESH [color] </a>
+<br /><a href=../examples-11/new.htm?topic=17>ISOSURFACE ... map CONTOUR DISCRETE and INCREMENT </a>
+<br /><a href=../examples-11/new.htm?topic=156>ISOSURFACE ... map MEP functionType </a>
+<br /><a href=../examples-11/new.htm?topic=134>ISOSURFACE lattice {a b c} </a>
+<br /><a href=../examples-11/new.htm?topic=135>ISOSURFACE "=nnnn"</a>
+<br /><a href=../examples-11/new.htm?topic=38>ISOSURFACE ANISOTROPY generalized</a>
+<br /><a href=../examples-11/new.htm?topic=93>ISOSURFACE CAP </a>
+<br /><a href=../examples-11/new.htm?topic=63>ISOSURFACE color DENSITY </a>
+<br /><a href=../examples-11/new.htm?topic=13>ISOSURFACE contour DISCRETE </a>
+<br /><a href=../examples-11/new.htm?topic=13>ISOSURFACE contour INCREMENT </a>
+<br /><a href=../examples-11/new.htm?topic=65>ISOSURFACE INLINE </a>
+<br /><a href=../examples-11/new.htm?topic=6>ISOSURFACE FULLPLANE </a>
+<br /><a href=../examples-11/new.htm?topic=38>ISOSURFACE OFFSET</a>
+<br /><a href=../examples-11/new.htm?topic=43>ISOSURFACE SCALE3D</a>
+<br /><a href=../examples-11/new.htm?topic=86>ISOSURFACE SIGMA </a>
+<br /><a href=../examples-11/new.htm?topic=93>ISOSURFACE SLAB</a>
+<br /><a href=../examples-11/new.htm?topic=56>ISOSURFACE WITHIN x.x {points} </a>
+<br /><a href=../examples-11/new.htm?topic=21>LABELS DISPLAY </a>
+<br /><a href=../examples-11/new.htm?topic=21>LABELS HIDE</a>
+<br /><a href=../examples-11/new.htm?topic=94>LCAOCARTOON CPK </a>
+<br /><a href=../examples-11/new.htm?topic=151>LOAD $CCC(C)C -- smiles string loading </a>
+<br /><a href=../examples-11/new.htm?topic=138>LOAD @x where x is an array of file names </a>
+<br /><a href=../examples-11/new.htm?topic=20>LOAD -n (single vibration) </a>
+<br /><a href=../examples-11/new.htm?topic=167>LOAD DATA </a>
+<br /><a href=../examples-11/new.htm?topic=130>LOAD INLINE "JME string" and load "@x" </a>
+<br /><a href=../examples-11/new.htm?topic=61>LOAD "filename" AS "localFileName" </a>
+<br /><a href=../examples-11/new.htm?topic=87>LOAD "somefilename" 0  (last-model loading)</a>
+<br /><a href=../examples-11/new.htm?topic=155>MEASURE search("...") </a>
+<br /><a href=../examples-11/new.htm?topic=34>MEASURE TICKS</a>
+<br /><a href=../examples-11/new.htm?topic=57>MINIMIZE ADDHYDROGENS </a>
+<br /><a href=../examples-11/new.htm?topic=131>MINIMIZE SILENT </a>
+<br /><a href=../examples-11/new.htm?topic=38>PMESH ANISOTROPY generalized</a>
+<br /><a href=../examples-11/new.htm?topic=38>PMESH OFFSET</a>
+<br /><a href=../examples-11/new.htm?topic=7>PRINT symop(n,"...") </a>
+<br /><a href=../examples-11/new.htm?topic=113>ROTATE (matrix variable) </a>
+<br /><a href=../examples-11/new.htm?topic=114>ROTATE COMPARE option </a>
+<br /><a href=../examples-11/new.htm?topic=115>ROTATE HELIX option </a>
+<br /><a href=../examples-11/new.htm?topic=116>ROTATE TRANSLATE {x y z} option </a>
+<br /><a href=../examples-11/new.htm?topic=5>SCRIPT LOCALPATH/REMOTEPATH </a>
+<br /><a href=../examples-11/new.htm?topic=49>SELECT configuration=1 </a>
+<br /><a href=../examples-11/new.htm?topic=129>SELECT CYSTINE </a>
+<br /><a href=../examples-11/new.htm?topic=73>SELECT POLYMER=n</a>
+<br /><a href=../examples-11/new.htm?topic=119>SELECT RANGESELECTED extended </a>
+<br /><a href=../examples-11/new.htm?topic=137>SELECT search() -- 3D-SMARTS </a>
+<br /><a href=../examples-11/new.htm?topic=102>SELECT SPINE </a>
+<br /><a href=../examples-11/new.htm?topic=122>SELECT within(BASEPAIR) </a>
+<br /><a href=../examples-11/new.htm?topic=123>SELECT within(nResidues, GROUP, atoms) </a>
+<br /><a href=../examples-11/new.htm?topic=73>SELECT within(POLYMER, {someAtoms}) </a>
+<br /><a href=../examples-11/new.htm?topic=126>SELECT within(SEQUENCE,"1-letter-code sequence") </a>
+<br /><a href=../examples-11/new.htm?topic=22>SET allowGestures </a>
+<br /><a href=../examples-11/new.htm?topic=149>SET allowModelKit </a>
+<br /><a href=../examples-11/new.htm?topic=76>SET allowMultiTouch </a>
+<br /><a href=../examples-11/new.htm?topic=157>SET cartoonBaseEdges </a>
+<br /><a href=../examples-11/new.htm?topic=2>SET clickCallback </a>
+<br /><a href=../examples-11/new.htm?topic=166>SET dotScale </a>
+<br /><a href=../examples-11/new.htm?topic=150>SET HIGHLIGHT </a>
+<br /><a href=../examples-11/new.htm?topic=84>SET isKiosk </a>
+<br /><a href=../examples-11/new.htm?topic=131>SET minimizationSilent</a>
+<br /><a href=../examples-11/new.htm?topic=149>SET ModelKitMode</a>
+<br /><a href=../examples-11/new.htm?topic=81>SET mouseDragFactor </a>
+<br /><a href=../examples-11/new.htm?topic=81>SET mouseWheelFactor </a>
+<br /><a href=../examples-11/new.htm?topic=37>SET phongExponent </a>
+<br /><a href=../examples-11/new.htm?topic=64>SET picking connect</a>
+<br /><a href=../examples-11/new.htm?topic=85>SET picking deleteAtom</a>
+<br /><a href=../examples-11/new.htm?topic=64>SET picking deleteBond</a>
+<br /><a href=../examples-11/new.htm?topic=144>SET picking dragAtom </a>
+<br /><a href=../examples-11/new.htm?topic=145>SET picking dragMinimize </a>
+<br /><a href=../examples-11/new.htm?topic=146>SET picking dragMinimizeMolecule -- responsive docking </a>
+<br /><a href=../examples-11/new.htm?topic=147>SET picking invertStereo </a>
+<br /><a href=../examples-11/new.htm?topic=158>SET picking measure SEQUENCE </a>
+<br /><a href=../examples-11/new.htm?topic=72>set picking select STRUCTURE</a>
+<br /><a href=../examples-11/new.htm?topic=72>set picking select POLYMER </a>
+<br /><a href=../examples-11/new.htm?topic=75>SET pickingStyle DRAG </a>
+<br /><a href=../examples-11/new.htm?topic=70>SET preserveState FALSE </a>
+<br /><a href=../examples-11/new.htm?topic=101>SET quaternionFrame "A", "C", and "P" for nucleic acids </a>
+<br /><a href=../examples-11/new.htm?topic=36>SET saveProteinStructureState </a>
+<br /><a href=../examples-11/new.htm?topic=59>SET slabByAtom </a>
+<br /><a href=../examples-11/new.htm?topic=59>SET slabByMolecule </a>
+<br /><a href=../examples-11/new.htm?topic=77>SET waitForMoveTo FALSE </a>
+<br /><a href=../examples-11/new.htm?topic=16>SET zshade  </a>
+<br /><a href=../examples-11/new.htm?topic=52>SET zshadePower </a>
+<br /><a href=../examples-11/new.htm?topic=124>SHOW BASEPAIRS </a>
+<br /><a href=../examples-11/new.htm?topic=24>SHOW MOUSE [option] </a>
+<br /><a href=../examples-11/new.htm?topic=165>SHOW SMILES </a>
+<br /><a href=../examples-11/new.htm?topic=47>SHOW SYMOP </a>
+<br /><a href=../examples-11/new.htm?topic=71>SHOW TIMEOUTS </a>
+<br /><a href=../examples-11/new.htm?topic=170>SPACEFILL RESET </a>
+<br /><a href=../examples-11/new.htm?topic=96>TRANSLATE SELECTED x/y/z </a>
+<br /><a href=../examples-11/new.htm?topic=34>UNITCELL TICKS</a>
+<br /><a href=../examples-11/new.htm?topic=133>WIREFRAME ONLY and wireframe -x.y </a>
+<br /><a href=../examples-11/new.htm?topic=170>WIREFRAME RESET </a>
+<br /><a href=../examples-11/new.htm?topic=69>WRITE MESH </a>
+<br /><a href=../examples-11/new.htm?topic=42>WRITE PMESH </a>
+<br /><a href=../examples-11/new.htm?topic=5>WRITE state LOCALPATH/REMOTEPATH </a>
+<br /><a href=../examples-11/new.htm?topic=32>ZOOM IN|OUT</a>
+<br /><a href=../examples-11/new.htm?topic=32>ZOOMTO IN|OUT </a>
+</body>
+</html>

@@ -1,0 +1,7 @@
+orientationInfo=new Array()
+orientationInfo.moveTo="moveto 1.0 0 0 1 0;"
+orientationInfo.rotateZYZ="reset;"
+orientationInfo.transYPercent=0
+orientationInfo.transXPercent=0
+orientationInfo.zoom=100
+orientationInfo.rotateXYZ="reset;"

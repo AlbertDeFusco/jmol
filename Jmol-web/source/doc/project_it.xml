@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Italian translation 
+  Translated from default version : project_en.xml (v 1.5)
+-->
+<!DOCTYPE somethingOrAnything [
+<!ENTITY language SYSTEM "language.xml" >
+]>
+<project name="Jmol">
+	<title>Jmol</title>
+	<links>
+		<table width="100%">
+			<tr>
+				<td align="left" valign="middle">
+					<a href="[root]/"><img src="[images]/Jmol_smallLogo.jpg" border="0" alt="Jmol"/></a>
+					&language;
+				</td>
+				<td align="right" valign="middle">
+					<font size="2">
+						<a href="[root]/">Home</a> 
+	    | <a href="[root]/demo/">Pagine dimostrative</a>
+	    | <a href="[root]/websites/">Siti web</a>
+						<br/>
+						<a href="[root]/docs/">Documentazione</a>
+	    | <a href="http://wiki.jmol.org">Wiki</a>
+	    | <a href="[root]/history/">Storia</a> 
+	    | <a href="[root]/faqs/">Domande frequenti</a>
+						<br/>
+						<a href="[root]/browsercheck/">Controllo browser</a>
+	    | <a href="[root]/download/">Download</a> 
+	    | <a href="[root]/project/">Paginas del progetto</a>
+					</font>
+				</td>
+			</tr>
+		</table>
+	</links>
+	<notice>
+		<p><small>
+      Hosted by
+      <a href="http://www.sf.net/projects/jmol/">
+					<img src="http://www.sf.net/sflogo.php?group_id=23629" border="0" alt="SourceForge Logo" align="middle"/>
+				</a>
+			</small></p>
+	</notice>
+</project>

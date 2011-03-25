@@ -1,0 +1,119 @@
+<html>
+<head>
+<script type="text/javascript" src=Jmol.js></script>
+<script type="text/javascript">
+pdbID = "1crn"
+syncEnabled = false;
+
+function loadTwo() {
+ syncEnabled = false
+ setTimeout("loadPDB()",200)
+}
+
+function loadPDB() {
+ var s = prompt("PDB ID?",pdbID)
+ if (!s)return
+ pdbID = s
+ jmolScriptWait("zap;set echo top left;echo loading... ","A")
+ jmolScriptWait("zap;set echo top left;echo loading... ","B")
+  _jmol.RCSBserver = "http://pdb202.sdsc.edu" //temporarily only 4/17/06
+ jmolLoadAjax_STOLAF_RCSB("PDB",pdbID,"","A")
+}
+
+function loadPDB() {
+ jmolScriptWait("load data/1crn.pdb","A")
+ jmolScriptWait("load data/1crn.pdb","B") 
+}
+
+function myfunc(app,message,param) {
+ setTimeout("loadB()",100)
+}
+
+defaultscript = "restrict none;select not protein and not nucleic and not solvent;wireframe 0.10;select *;color structure;"
+function loadB() {
+ var s = jmolGetPropertyAsString("filecontents","","A")
+// document.getElementById("data").innerHTML = "<pre>"+s+"</pre>"
+ jmolScript(defaultscript + "cartoons on;","A")
+ jmolLoadInlineScript(s,defaultscript + "calculate structure;cartoons on;","B")
+ syncEnabled = true
+ startSync()
+}
+
+
+function startSync() {
+ setTimeout("sync()",100)
+}
+
+sLastA = ''
+sLastB = ''
+
+inSync=false
+function sync() {
+ if (inSync)return
+ inSync=true
+ var syncing =  syncEnabled && document.getElementById("drive").checked
+ if (syncing && syncingA) {
+   document.getElementById("tdA").style.backgroundColor="blue"
+   var s = jmolGetPropertyAsArray("orientationInfo","","A").moveTo
+   if (sLastA != s)jmolScriptWait(s.replace(/1\.0/,"0.1"),"B")
+   sLastA = s
+   inSync=false
+   startSync()
+ } else if (syncing && syncingB) {
+   document.getElementById("tdB").style.backgroundColor="blue"
+   var s = jmolGetPropertyAsArray("orientationInfo","","B").moveTo
+   if (sLastB != s)jmolScriptWait(s.replace(/1\.0/,"0.1"),"A")
+   sLastB = s
+   inSync=false
+   startSync()
+ }
+ inSync=false
+}
+
+function checkFocusA() {
+ syncingA = true;
+ syncingB = false;
+ var syncing =  syncEnabled && document.getElementById("drive").checked
+ document.getElementById("tdA").style.backgroundColor=(syncing ? "violet" : "white")
+ document.getElementById("tdB").style.backgroundColor="white"
+}
+
+function checkFocusB() {
+ syncingB = true;
+ syncingA = false;
+ var syncing =  syncEnabled && document.getElementById("drive").checked
+ document.getElementById("tdB").style.backgroundColor=(syncing ? "violet" : "white")
+ document.getElementById("tdA").style.backgroundColor="white"
+}
+
+function doLoad() {
+ document.getElementById("info").reset()
+}
+
+</script>
+</head>
+<body onload = doLoad()>
+
+<table border = 1 cellpadding=40><tr>
+
+<td id=tdA onMouseOver=checkFocusA()>
+
+<script>jmolApplet(400,"set loadStructCallback \"myfunc\";","A")</script>
+<br/>File-derived structure
+</td>
+<td id=tdB onMouseOver=checkFocusB()>
+<script>jmolApplet(400,"","B")</script>
+<br/>Jmol-derived structure
+</td></tr>
+<tr><td colspan=2 align=center>
+<a href=javascript:loadTwo()>load PDB file</a> 
+<br/>
+<form id=info>
+<input type=checkbox id=drive checked=false onClick=startSync() accessKey="1">Synchronize
+</form>
+</td></tr>
+</table>
+
+
+</body>
+</html>

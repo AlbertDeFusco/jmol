@@ -1,0 +1,81 @@
+Complete list of new Jmol script/JavaScript functionality introduced in 11.4.
+
+See http://chemapps.stolaf.edu/jmol/docs for details. 
+
+Jmol 11.4 includes over 70 new features since Jmol 11.2, including:
+
+ %l -- element (atomic) number 
+ ****Jmol Embedded Script**** in comments (/* ... */)
+ ****Jmol Embedded Script**** in super-comments (/** ... **/)
+ .type math function 
+ @{mathExpression} 
+ \ marks continuation lines in scripts 
+ _1 parameter for "first atom" in CONNECT 
+ _slabPlane and _depthPlane 
+ adjustable scale for unit cell 
+ antialiasing in Jmol 
+ automatic calculation of alternating single/double aromatic bonds 
+ calculate surfaceDistance FROM or WITHIN 
+ color [object] property [property] "schemename" range [min] [max] 
+ colors in Jmol math 
+ connect aromatic auto 
+ customizable menus 
+ direct string replacement in atom expressions 
+ draw object title lines specific for models 
+ expanded "within" capability 
+ export of VRML 
+ extended bond orders 
+ extended boundbox command 
+ extended show boundbox command 
+ frame titles 
+ getproperty stateinfo TYPE 
+ gOpenMol formated plt files for isosurfaces 
+ helixes as barrels, not rockets 
+ if/while/for capability 
+ inline SCRIPT command 
+ isosurface CAP 
+ isosurface mapping of MEP and MO data onto planes 
+ isosurface SQUARED 
+ Jmol math .boundbox qualifier 
+ Jmol math getProperty() function 
+ jmolLoadInlineArray([line1, line2, ....])
+ jmolLoadInlineArray([model1, model2, ....])
+ jmolLoadInlineString("line1\nline2\n....")  
+ load symmetry range 
+ load TRAJECTORY 
+ local/global functions (applet) 
+ Mac Spartan06 DIRECTORY reading 
+ model-based parallel array calculations 
+ model-specific echos 
+ MOLDEN reader 
+ POV-Ray EXPORT (application only) 
+ programmatic color definition 
+ quaternion command 
+ ramachandran command 
+ reading models from ZIP files 
+ reading text-based content of ZIP and JAR files 
+ Remdiated PDB support 
+ select ISAROMATIC 
+ select within(x.x,"plane",$plane) 
+ set ? 
+ set atom properties directly using Jmol math 
+ set atom properties with an array 
+ set drawPicking 
+ set isosurfacePropertySmoothing ON/OFF 
+ SET RESTRICTED TO JMOL VARIABLES ONLY 
+ set wireframeRotation 
+ Settable atom colors using Jmol math 
+ show FRAME option 
+ show spacegroup "X,Y,Z;-X,Y,Z;..." 
+ Spherical Basis Set Molecular Orbitals 
+ support for prime in nmes 
+ support for SITE records in PDB and CIF 
+ sychronize command 
+ user-defined macros, subroutines, and functions capability 
+ VALENCE property 
+ WebExport (application) 
+ write FILE (applet) 
+ write FILE [filename] (application) 
+
+
+

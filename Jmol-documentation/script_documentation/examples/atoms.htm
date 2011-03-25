@@ -1,0 +1,43 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+title="ATOMS";model="caffeine.xyz";ref="atoms"
+Scripts=new Array("select *;wireframe 0.1;spacefill 0.4;color atoms none"
+," The <i>spacefill</i> command turns spacefilling models one and off."
+	,"spacefill off"
+	,"spacefill on"
+," The default size is the Van der Waals radius. If you want to specify a size then you can do so (a) in Angstroms using a decimal (\"1.0\", not \"1\")"+FTREF250+" or (b) as a percent of the Van der Waal radius for that atom, using a percent sign (10%)."
+	,"spacefill 0.2"
+	,"spacefill 0.8"
+	,"spacefill 100%"
+	,"spacefill 50%"
+," In addition, you can size the spheres based on ionic radius or crystallographic B-factor (\"temperature factor\")."
+	,"spacefill ionic"
+	,"load 1blu.pdb;restrict within (5.0,*.Fe3);delay 3.0;spacefill temperature"
+," By default, atoms have the Jmol color scheme. You can explicitly assign atom colors using JavaScript standard color names, octal equivalents, or RGB triples."
+	,"select carbon; color atoms forestgreen"
+	,"select hydrogen; color atoms [xFF00FF]"
+	,"select oxygen; color atoms [0,255,0]"
+	,"select *;color white; select carbon and atomno<8; color atoms green"
+," You can change the default either to the Rasmol \"CPK\" standard or the Jmol standard, or you can customize any specific element's color. You can explicitly assign atom colors to elements using JavaScript standard color names, octal equivalents, or RGB triples."
+	,"set defaultColors Rasmol"
+	,"set defaultColors Jmol"
+	,"color carbon [x0e0e0e]"
+	,"color hydrogen yellow"
+)
+remarks=""
+//]]>
+
+</script>
+</head>
+<body>
+<script type="text/javascript">showpage(0)</script>
+</body>
+</html>

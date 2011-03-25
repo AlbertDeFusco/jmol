@@ -1,0 +1,66 @@
+<!--
+  Dutch translation 
+  Translated from default version : index.en.html (v 1.1)
+-->
+<html>
+  <head>
+    <title>Jmol applet 'strands' demo</title>
+    <script src="../../jmol/Jmol.js"></script>
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <form>
+      <table border="1">
+	<tr>
+	  <td>
+	    <h2>jellyfish <br /> Green Flourescent Protein 1gfl.pdb</h2>
+
+	    <script>
+	      jmolApplet(400, "load 1gfl.pdb.gz;" +
+	      "spacefill off; wireframe off; strands on; color strands amino");
+	    </script>
+	  </td>
+	  
+	  <td>
+	    Strands bieden een representatie van de proteïnen backbone door gebruik van lijnen.
+	    Controlepunten worden middenin tussen aangrenzende alfa-koolstoffen gekozen.
+	    De strands zijn loodrecht tegenover de peptide gerangschikt.
+	    Een hermiet kubieke curve wordt gebruikt om de punten vloeiend met elkaar te verbinden.<br />
+	    
+	    <script>
+	      jmolHtml("Kleur de strands<br />");
+	      jmolMenu([
+	        "color strands none",
+		"color strands structure",
+		["color strands amino", null, "selected"],
+		"color strands shapely",
+		"color strands aquamarine",
+		"color strands slateblue",
+		"color strands goldenrod"
+		], -1);
+	    </script>
+	    <br />
+
+	    Strand telling<br />
+	    <script>
+	      jmolMenu([
+	      "set strands 1",
+	      "set strands 2",
+	      "set strands 3",
+	      ["set strands 5", null, "selected"],
+	      "set strands 7",
+	      "set strands 9",
+	      "set strands 11",
+	      "set strands 15",
+	      "set strands 20"
+	      ], -1);
+	    </script>
+	  </td>
+	</tr>
+      </table>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<html><body><center><script type="text/javascript">
+
+var image = opener.jmolGetPropertyAsString("image")
+alert(image.length)
+var image = opener.jmolEvaluate("script('set antialiasdisplay false;refresh;getproperty image;set antialiasdisplay true')")
+alert(image.length)
+var script = opener.jmolGetPropertyAsString("stateInfo")
+document.write('<img src="data:image/jpeg;base64,'+image+'">')
+
+</script></center>
+<pre>
+
+<script type="text/javascript">document.write(script)</script>
+</pre>
+</body></html>

@@ -1,0 +1,769 @@
+INPUT=256~863~ARCHIVE=1413~6351~PROPARC=7764~7950~PROPIN=0~0~MOLSTATE=1119~248~VIBSTATE=1367~26~OUTPUT=15784~3364~CELLS=1393~20~ISOD=0~0~ISOE=0~0~RETCODE=15714~70~VOUT=19148~10618~                                                                           
+BEGININPUT
+  OPT HF 3-21G FREQ 
+water
+0 1
+ 1   0.000000000   0.000000000   0.001999969
+ 8   0.000000000   0.000000000   0.959999979
+ 1   0.925356949   0.000000000   1.207948631
+ENDCART
+EMPTYVAL
+    1 
+    3 
+ENDEMPTYVAL
+PLANE
+ENDPLANE
+POINT
+ENDPOINT
+ISOTOPE
+ENDISOTOPE
+FROZEN
+ENDFROZEN
+TRANSITION
+ENDTRANSITION
+ATOMALIGN
+ENDATOMALIGN
+ATOMLABELS
+"H1"
+"O1"
+"H2"
+ENDATOMLABELS
+MOLFONT
+Helvetica
+12
+ENDMOLFONT
+LABELTYPE
+LABELATOM
+ENDLABELTYPE
+SEARCHCENTER
+ENDSEARCHCENTER
+BEGINFORMALCHARGE
+ENDFORMALCHARGE
+BEGINRES
+ENDRES
+HESSIAN
+   -1   -4   -1
+    1    2    1
+    2    3    1
+ENDHESS
+SEARCHLINK
+ENDSEARCHLINK
+LIGAND
+ENDLIGAND
+STRUCTMODEL
+3 0 524288 0
+ENDSTRUCTMODEL
+ALIGN
+  1.000000 0.000000 0.000000 0.000000
+  0.000000 1.000000 0.000000 0.000000
+  0.000000 0.000000 1.000000 0.000000
+  0.000000 0.000000 0.000000 1.000000
+ENDALIGN
+BEGINPROPIN
+
+ENDPROPIN
+ENDINPUT
+BEGINMOLSTATE
+MODEL=3~HYDROGEN=1~LABELS=0
+ -0.00000004 -0.00000004  1.00000000  0.00000000 -0.99999994  0.00000000 -0.00000004  0.00000000
+  0.00000000 -0.99999994 -0.00000004  0.00000000  0.00000000  0.00000000  0.00000000  1.00000000
+ENDMOLSTATE
+BEGINVIBSTATE
+ENDVIBSTATE
+BEGINCELLS
+ENDCELLS
+BEGINARCHIVE
+External AB INITIO PROGRAM: converted archive file
+Jobname.Temp
+   3  13   7  12   0   1  13   0 RHF      3-21G(d)           NOOPT FREQ        
+GEOMETRY
+  1     1.4748825     0.0000000     0.3592780
+  8    -0.0000000     0.0000000    -0.7185561
+  1    -1.4748825    -0.0000000     0.3592780
+BASIS
+   0   2   1   1   0
+   0   1   3   1   0
+   0   3   4   2   0
+   1   2   7   2   0
+   1   1   9   2   0
+   0   2  10   3   0
+   0   1  12   3   0
+   5.4471780000D+00
+   3.9715132057D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   8.2454700000D-01
+   5.5791992333D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   1.8319200000D-01
+   1.9956757048D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   3.2203700000D+02
+   3.2095934430D+00   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   4.8430800000D+01
+   4.5991397399D+00   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   1.0420600000D+01
+   2.9251827834D+00   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   7.4029400000D+00
+  -1.2936951550D+00   4.2572304448D+00   0.0000000000D+00   0.0000000000D+00
+   1.5762000000D+00
+   1.2247121155D+00   2.1497572264D+00   0.0000000000D+00   0.0000000000D+00
+   3.7368400000D-01
+   3.4063437267D-01   4.1645752785D-01   0.0000000000D+00   0.0000000000D+00
+   5.4471780000D+00
+   3.9715132057D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   8.2454700000D-01
+   5.5791992333D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   1.8319200000D-01
+   1.9956757048D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+ENERGY
+  -7.5585959742D+01   0.0000000000D+00
+WAVEFUNC   3-21G(d)   QCHEM 
+  -2.0427217023D+01  -1.3209640667D+00  -6.8553273325D-01  -5.2982951827D-01
+  -4.7723229866D-01   2.6107047249D-01   3.6032867038D-01   1.2066507898D+00
+   1.2766516277D+00   1.7839706220D+00   1.8633440990D+00   2.0248052371D+00
+   3.1032972962D+00
+   2.4589642812D-03   6.8673777929D-03   9.8322350690D-01   9.5771033149D-02
+   0.0000000000D+00   0.0000000000D+00   3.4369987837D-03  -3.7689746745D-02
+   0.0000000000D+00   0.0000000000D+00  -6.4297532955D-03   2.4589642811D-03
+   6.8673777929D-03
+   1.1498756929D-01   2.0494801184D-02  -2.2977991235D-01   2.1801923731D-01
+   0.0000000000D+00   0.0000000000D+00   7.9193578792D-02   7.0971120956D-01
+   0.0000000000D+00   0.0000000000D+00   8.9879641471D-02   1.1498756929D-01
+   2.0494801184D-02
+   2.3227805818D-01   1.8208785395D-01   0.0000000000D+00   0.0000000000D+00
+   3.9588770965D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   3.6968757801D-01   0.0000000000D+00   0.0000000000D+00  -2.3227805818D-01
+  -1.8208785395D-01
+   1.2773439062D-01   1.0711889769D-01   8.5752001032D-02  -7.9987541752D-02
+   0.0000000000D+00   0.0000000000D+00   4.4450855819D-01  -3.9388457979D-01
+   0.0000000000D+00   0.0000000000D+00   5.1489744265D-01   1.2773439062D-01
+   1.0711889769D-01
+   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   0.0000000000D+00   5.2104632584D-01   0.0000000000D+00   0.0000000000D+00
+   0.0000000000D+00   6.3233502557D-01   0.0000000000D+00   0.0000000000D+00
+   0.0000000000D+00
+   5.2583370194D-02   8.6038740688D-01   1.1031517820D-01  -3.6141038692D-02
+   0.0000000000D+00   0.0000000000D+00  -2.0776061086D-01  -1.0412360590D+00
+   0.0000000000D+00   0.0000000000D+00  -4.5844498469D-01   5.2583370194D-02
+   8.6038740688D-01
+  -3.4476619462D-02  -1.1557647027D+00   0.0000000000D+00   0.0000000000D+00
+   3.0400548396D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   7.7789335465D-01   0.0000000000D+00   0.0000000000D+00   3.4476619462D-02
+   1.1557647027D+00
+   9.6748690013D-01  -6.8162913698D-01   0.0000000000D+00   0.0000000000D+00
+  -1.9942748865D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+  -4.3748324865D-01   0.0000000000D+00   0.0000000000D+00  -9.6748690013D-01
+   6.8162913698D-01
+   9.7558404122D-01  -4.9917974137D-01   6.5860767600D-02  -9.3123287579D-02
+   0.0000000000D+00   0.0000000000D+00  -2.5357514544D-01  -9.2460034216D-02
+   0.0000000000D+00   0.0000000000D+00  -2.8549426962D-01   9.7558404122D-01
+  -4.9917974137D-01
+   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   0.0000000000D+00   1.0293968044D+00   0.0000000000D+00   0.0000000000D+00
+   0.0000000000D+00  -9.6503858478D-01   0.0000000000D+00   0.0000000000D+00
+   0.0000000000D+00
+   2.3715844733D-01   9.2551958173D-02   4.1983242046D-02  -1.2644406828D-01
+   0.0000000000D+00   0.0000000000D+00   1.0154407593D+00  -1.5993226685D-01
+   0.0000000000D+00   0.0000000000D+00  -1.1321113336D+00   2.3715844733D-01
+   9.2551958173D-02
+   1.6490678490D-01   4.8573250775D-01   0.0000000000D+00   0.0000000000D+00
+   1.0660587693D+00   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+  -1.4143434783D+00   0.0000000000D+00   0.0000000000D+00  -1.6490678490D-01
+  -4.8573250775D-01
+   2.6629393491D-01   3.5867753681D-01  -8.6671871838D-02   1.6384088885D+00
+   0.0000000000D+00   0.0000000000D+00   1.5376303972D-01  -1.9689430307D+00
+   0.0000000000D+00   0.0000000000D+00  -4.6249189133D-01   2.6629393491D-01
+   3.5867753681D-01
+HESSIAN 3-21G(d)
+   9
+   3.9514341946D-01
+   0.0000000000D+00   6.6682629105D-06
+   2.2207550981D-01   0.0000000000D+00   2.0437037747D-01
+  -3.5767813761D-01   0.0000000000D+00  -2.6138436077D-01   7.1535627521D-01
+   0.0000000000D+00  -5.9989758702D-06   0.0000000000D+00   0.0000000000D+00
+   1.1997952080D-05
+  -1.8276665885D-01   0.0000000000D+00  -2.1771551434D-01   0.0000000000D+00
+   0.0000000000D+00   4.3543102868D-01
+  -3.7465281853D-02   0.0000000000D+00   3.9308850962D-02  -3.5767813761D-01
+   0.0000000000D+00   1.8276665885D-01   3.9514341946D-01
+   0.0000000000D+00  -6.6928703769D-07   0.0000000000D+00   0.0000000000D+00
+  -5.9989758676D-06   0.0000000000D+00   0.0000000000D+00   6.6682629054D-06
+  -3.9308850962D-02   0.0000000000D+00   1.3345136869D-02   2.6138436077D-01
+   0.0000000000D+00  -2.1771551434D-01  -2.2207550981D-01   0.0000000000D+00
+   2.0437037747D-01
+GEOMETRY2
+  1        1.47488250000000        0.00000000000000        0.35927803333600
+  8       -0.00000000000000        0.00000000000000       -0.71855606667100
+  1       -1.47488250000000       -0.00000000000000        0.35927803333600
+ENDARCHIVE
+BEGINPROPARC
+       Spartan Properties Archive 117
+    
+PROP STRING INITIAL_KEYWORDS 4 BEGIN
+     "OPT"
+     "HF"
+     "3-21G"
+     "FREQ"
+END
+PROP STRING CALCULATION_VERSION = " 123"
+PROP STRING CALCULATION_TARGET = "PowerPC(Darwin)"
+PROP STRING MACHINEHOSTNAME = "ngmac.ch.liv.ac.uk"
+PROP  VALUE ORIGINAL_ATOM_COUNT =       3.000000000 
+PROP  VALUE ORIGINAL_COORDS BYATOM  3 BEGIN
+        0.0000000       0.0000000    0.0019999690       0.0000000       0.0000000       0.9600000 
+        0.9253569       0.0000000       1.2079486 
+END
+PROP  VALUE BE_TIME_SE_MIN =    0.001000000000 
+PROP  VALUE BE_TIME_HF_MIN =       0.000000000 
+PROP  VALUE SCF_ITERS =       9.000000000 
+PROP  VALUE SCF_CTIME =      0.1400000000 
+PROP  VALUE CORR_ENERGIES 1 BEGIN
+      -75.5859597 
+END
+PROP  VALUE QM_DIPOLE 3 BEGIN
+    1.0896942E-14  -9.9452619E-16       2.3873777 
+END
+PROP  VALUE QM_QUADPOLE 6 BEGIN
+        6.0476238      -2.5510746      -3.4965492   2.4015380E-15   1.1648945E-15   2.0621910E-15 
+END
+PROP  VALUE QM_OCTPOLE 10 BEGIN
+    2.3707184E-14   2.5390846E-15      -1.2757584   1.7932838E-15       1.8133269  -1.7031613E-14 
+   -3.1396240E-15  -6.6755715E-15      -0.5375685  -4.3323684E-15 
+END
+PROP  VALUE DIPDERIV 9  3 BEGIN
+        0.1935988   9.9992017E-17      -0.1037926   1.8526916E-16       0.4357193   1.9472831E-16 
+       -0.1769399   6.4129253E-17       0.1647898      -0.3871977  -1.7400383E-16  -6.8868522E-16 
+   -2.8392022E-17      -0.8714385  -1.9334733E-16  -9.8532293E-16   3.0891876E-17      -0.3295796 
+        0.1935988   7.4011810E-17       0.1037926  -1.5687714E-16       0.4357193  -1.3809779E-18 
+        0.1769399  -9.5021129E-17       0.1647898 
+END
+PROP  VALUE IR_INTENS0 3 BEGIN
+       79.9687023     0.048557205       9.1688892 
+END
+PROP  VALUE GX_ZPVE =       13.66270598 
+PROP  VALUE GX_THERMO 5 BEGIN
+       13.6627060      13.6635788       0.8888115       0.8888115       0.5925410 
+END
+PROP  VALUE SOLV_SM54_A =      -8.854944402 
+PROP  VALUE BE_TIME_SE_MIN =       0.000000000 
+PROP  VALUE PROP_KEYWORDS =       0.000000000 
+PROP  VALUE PROP_ISOTOPES 0  2 BEGIN
+END
+PROP STRING SYM_STRING = "C2v"
+PROP  VALUE E_KCAL =      -47430.91235 
+PROP STRING DO_QSAR = "STARTED"
+PROP  VALUE ATOMIC_CPK_VOLUME BYATOM BEGIN
+        3.7689647      11.8479452       3.7689647 
+END
+PROP  VALUE ATOMIC_CPK_AREA BYATOM BEGIN
+        9.2976002      17.8314471       9.2976002 
+END
+PROP  VALUE CPKVOLUME =       19.38587452 
+PROP  VALUE CPKAREA =       36.42664754 
+PROP  VALUE OVALITY =       1.043786038 
+PROP  VALUE WEIGHT =       18.01500000 
+PROP  VALUE HOMO_N =       5.000000000 
+PROP  VALUE E_HOMO =     -0.4772322987 
+PROP  VALUE E_LUMO =      0.2610704725 
+PROP  VALUE TOT_ELECTRONEG =      0.1080809131 
+PROP  VALUE TOT_HARDNESS =      0.3691513856 
+PROP  VALUE LogP_GC =     -0.3832000000 
+PROP  VALUE MO_ENERGY 13 BEGIN
+      -20.4272170      -1.3209641      -0.6855327      -0.5298295      -0.4772323       0.2610705 
+        0.3603287       1.2066508       1.2766516       1.7839706       1.8633441       2.0248052 
+        3.1032973 
+END
+DIPOLE
+     -5.9261263E-15       0.0000000       2.3874268
+PROP  VALUE DIPOLE_VEC 3 BEGIN
+   -5.9261263E-15       0.0000000       2.3874268 
+END
+PROP  VALUE DIPOLE_MAG =       2.387426814 
+PROP  VALUE Q_MINUS_MUL =     -0.7328342176 
+PROP  VALUE Q_PLUS_MUL =      0.3664171088 
+MULLIKEN
+         0.36641711     -0.73283422      0.36641711
+PROP  VALUE MULCHARGES BYATOM BEGIN
+        0.3664171      -0.7328342       0.3664171 
+END
+PROP  VALUE Q_MINUS_NAO =     -0.8758459401 
+PROP  VALUE Q_PLUS_NAO =      0.4379229701 
+NPA
+         0.43792297     -0.87584594      0.43792297
+PROP  VALUE NATCHARGES BYATOM BEGIN
+        0.4379230      -0.8758459       0.4379230 
+END
+PROP  VALUE CHELP_INFO =       1025.501000 
+PROP  VALUE Q1_POINTS =       12.00000000 
+PROP  VALUE Q1_COORDS 12  3 BEGIN
+        1.4748825       0.0000000       0.3592780       0.1000000       0.0000000      -0.7185561 
+       -0.1000000       0.0000000      -0.7185561       0.0000000       0.1000000      -0.7185561 
+        0.0000000      -0.1000000      -0.7185561       0.0000000       0.0000000      -0.6185561 
+        0.0000000       0.0000000      -0.8185561    -0.057735026    -0.057735026      -0.7762911 
+      0.057735026     0.057735026      -0.7762911     0.057735026    -0.057735026      -0.6608211 
+     -0.057735026     0.057735026      -0.6608211      -1.4748825       0.0000000       0.3592780 
+END
+PROP  VALUE Q1_CHARGES 12 BEGIN
+        0.3744485      12.6505741      12.6505741     -12.4289896     -12.4289896       0.2645710 
+       -1.1601551    -0.050901528    -0.050901528      -0.0973395      -0.0973395       0.3744485 
+END
+PROP  VALUE Q1_RMS =      0.7868417792 
+PROP  VALUE Q1_PRMS =      0.5588525270 
+PROP  VALUE Q1_ATOMIC_MM BYATOM  10 BEGIN
+        0.3744485       0.0000000       0.0000000       0.0000000       0.0000000       0.0000000 
+        0.0000000       0.0000000       0.0000000       0.0000000 
+       -0.7488970   1.0416449E-13   3.8418822E-15       0.3484435       1.0268463      -0.9967986 
+     -0.030047739    0.0012490119   1.6510786E-13   1.9678943E-14 
+        0.3744485       0.0000000       0.0000000       0.0000000       0.0000000       0.0000000 
+        0.0000000       0.0000000       0.0000000       0.0000000 
+END
+CHELP
+         0.44405415     -0.88810830      0.44405415
+PROP  VALUE ESPCHARGES BYATOM BEGIN
+        0.4440541      -0.8881083       0.4440541 
+END
+PROP  VALUE CHELP_RMS =       1.547050456 
+PROP  VALUE CHELP_PRMS =       1.547050456 
+PROP  VALUE IR_INTENS 3 BEGIN
+       79.9690782     0.048555475       9.1688986 
+END
+PROP  VALUE THERMO_INFO =       11298.15000 
+PROP  VALUE THERMO_TEMP =       298.1500000 
+PROP  VALUE THERMO_PRESS =       1.000000000 
+PROP  VALUE THERMO 10 BEGIN
+       13.6627377       2.5907749       0.8887221       0.8887221   0.00087203257     0.034608179 
+      0.010475799   3.2615921E-06       2.9807885       2.9807885 
+END
+PROP  VALUE ZEROPOINT =       13.66273774 
+PROP  VALUE G_THERMO =       2.590774940 
+PROP  VALUE H_TRAN =      0.8887220782 
+PROP  VALUE H_ROT =      0.8887220782 
+PROP  VALUE H_VIB =   0.0008720325749 
+PROP  VALUE H_TOT =       16.03353532 
+PROP  VALUE S_TRAN =     0.03460817913 
+PROP  VALUE S_ROT =     0.01047579850 
+PROP  VALUE S_VIB =   3.261592084E-06 
+PROP  VALUE S_TOT =     0.04508723923 
+PROP  VALUE C_TRAN =       2.980788456 
+PROP  VALUE C_ROT =       2.980788456 
+PROP  VALUE C_VIB =     0.02540613081 
+PROP  VALUE C_TOT =       5.986983043 
+PROP  VALUE G_THERMO_0 =       2.590774940 
+PROP  VALUE H_TRAN_0 =      0.8887220782 
+PROP  VALUE H_ROT_0 =      0.8887220782 
+PROP  VALUE H_VIB_0 =   0.0008720325749 
+PROP  VALUE H_TOT_0 =       16.03353532 
+PROP  VALUE S_TRAN_0 =     0.03460817913 
+PROP  VALUE S_ROT_0 =     0.01047579850 
+PROP  VALUE S_VIB_0 =   3.261592084E-06 
+PROP  VALUE S_TOT_0 =     0.04508723923 
+PROP  VALUE C_TRAN_0 =       2.980788456 
+PROP  VALUE C_ROT_0 =       2.980788456 
+PROP  VALUE C_VIB_0 =     0.02540613081 
+PROP  VALUE C_TOT_0 =       5.986983043 
+PROP  VALUE MIN_VIBRATIONS =       0.000000000 
+PROP  VALUE FREQ_SCALE =       1.000000000 
+PROP  VALUE FREQ_QUALITY =       1.000000000 
+VIBFREQ
+   3
+   1799.32     A1 
+   3812.23     A1 
+   3945.68     B1 
+ -0.3743 -0.0000  0.5623 -0.0000 -0.0000 -0.0709  0.3743  0.0000  0.5623
+ -0.5967 -0.0000 -0.3528 -0.0000  0.0000  0.0445  0.5967 -0.0000 -0.3528
+ -0.5467 -0.0000 -0.3995  0.0689 -0.0000  0.0000 -0.5467  0.0000  0.3995
+PROP STRING FREQ_LAB 3 BEGIN
+     "A1"
+     "A1"
+     "B1"
+END
+PROP  VALUE FREQ_VAL 3 BEGIN
+     1799.3166351    3812.2260473    3945.6836278 
+END
+PROP  VALUE MOMENT_I_cm 3 BEGIN
+       28.9481757      13.7298184       9.3128368 
+END
+PROP  VALUE MOMENT_I 3 BEGIN
+        0.5823390       1.2278132       1.8101522 
+END
+PROP  VALUE TOTAL_MASS =       18.01056500 
+ PROP VALUE PROP_TIME_MIN =     0.003
+PROP VALUE TOTAL_WALL_TIME =        0.0777
+ENDPROPARC
+BEGINRETCODE
+    0 0 164 sp_property
+Successful completion
+ENDRETCODE
+BEGINOUTPUT
+
+MacSPARTAN '04 MECHANICS PROGRAM: MAC/G5             build 123   
+  (Job run on ngmac.ch.liv.ac.uk)
+
+
+ Reading coordinates from previous archive
+  Adjusted 3 (out of 9) low frequency modes
+
+  Reason for exit: Successful completion
+  Mechanics CPU Time :   0:00:00.1
+  Mechanics Wall Time:   0:00:00.3
+
+
+MacSPARTAN '04 Semi-Empirical Program:  (PowerPC(Darwin))     build  123       
+   Job run on machine : ngmac.ch.liv.ac.uk                      
+
+  WATER                                                                      
+  Memory Used:          30.08 Kb
+  Reason for exit: Successful completion
+  Semi-Empirical Program CPU Time :   0:00:00.1
+  Semi-Empirical Program Wall Time:   0:00:00.2
+
+
+MacSPARTAN '04 Fast HF Program:  (PowerPC(Darwin))            build  123       
+  Job run on machine :                ngmac.ch.liv.ac.uk                      
+  Calculation started: Wed Mar 16 12:01:07 2005  
+
+  WATER                                                                      
+
+  Run type: Geometry optimization
+  Model: RHF/3-21G          
+  Number of shells:   7
+     5 S shells
+     2 SP shells
+  Number of basis functions:  13
+  Number of electrons:        10
+  Number of heavy atoms:       1
+  Number of hydrogens:         2
+  Use of molecular symmetry enabled
+  Molecular charge:   0
+  Spin multiplicity:  1
+  Memory model: incore     3.1 Mb
+
+  Point Group = CNV Order =  2 Nsymop =  4
+  This system has   2 degrees of freedom
+   Hessian from MMFF94     calculation used.
+                        Max.      Max.        Neg. 
+ Cycle     Energy       Grad.     Dist.       Eigen
+     1    -75.5855267    .01246    .00304
+     2    -75.5858937    .00324    .00025
+     3    -75.5859598    .00001    .00000
+
+WATER                                                                          
+
+
+  E(HF)  =     -75.5859598 a.u.
+  Memory Used:     .000 Mb
+  Reason for exit: Successful completion
+  Fast HF Program CPU Time :   0:00:00.0
+  Fast HF Program Wall Time:   0:00:00.3
+
+MacSPARTAN '04 Quantum Mechanics Program:  (PowerPC(Darwin))  build  123
+
+Job type: Frequency calculation.
+Method: RHF
+Basis set: 3-21G(*)
+Number of shells: 7
+Number of basis functions: 13
+
+SCF model:
+ A restricted Hartree-Fock SCF calculation will be
+ performed using Pulay DIIS extrapolation
+
+ SCF total energy:     -75.5859597 hartrees
+
+  Program Wall Time:    0:00:03.0
+  Reason for exit: Sucessful completion 
+  Quantum Mechanics Program CPU Time :   0:00:00.6
+  Quantum Mechanics Program Wall Time:   0:00:02.6
+
+
+MacSPARTAN '04 Semi-Empirical Program:  (PowerPC(Darwin))     build  123       
+   Job run on machine : ngmac.ch.liv.ac.uk                      
+    Semi-empirical Property Calculation 
+
+  WATER                                                                      
+
+  Guess from Archive
+    
+  Energy Due to Solvation
+   Solvation Energy SM5.4/A         -8.855
+  Memory Used:          31.02 Kb
+  Reason for exit: Successful completion
+  Semi-Empirical Program CPU Time :   0:00:-0.0
+  Semi-Empirical Program Wall Time:   0:00:00.2
+
+
+SPARTAN PROPERTIES PACKAGE: MAC/G5             build 123                       
+   
+   
+  Reason for exit: Successful completion
+  Properties Program CPU Time :   0:00:00.2
+  Properties Program Wall Time:   0:00:00.4
+
+molecule water terminated normally
+
+
+
+End-   molecule "water" Wed Mar 16 12:01:11 2005
+ENDOUTPUT
+BEGINVOUTPUT
+               MacSPARTAN '04 
+          build 123 (Jan 26 2005)
+
+ Wavefunction Developers: 
+    B.J. Deppmeier, A.J. Driessen, T.S. Hehre, W.J. Hehre, 
+    J.A. Johnson, P.E. Klunzinger, J.M. Leonard, I.N. Pham 
+    W.J. Pietro, Jianguo Yu 
+ 
+ Q-Chem Developers:  
+   J. Kong, C.A. White, A.I. Krylov, C.D. Sherrill,  
+   R.D. Adamson, T.R. Furlani, M.S. Lee, A.M. Lee,  
+   S.R. Gwaltney, T.R. Adams, C. Ochsenfeld, A.T.B. Gilbert,  
+   G.S. Kedziora,  V.A. Rassolov, D. R. Maurice, N. Nair,  
+   Y. Shao, N.A. Besley, P.E. Maslen, J.P. Dombroski,  
+   H. Dachsel, W.M. Zhang, P.P. Korambath, J. Baker,  
+   E.F. C. Byrd, T. Van Voorhis, M. Oumi, S. Hirata,  
+   C.P. Hsu, N. Ishikawa, J. Florian, A. Warshel,  
+   B.G. Johnson, P.M.W. Gill, M. Head-Gordon, J.A. Pople  
+ 
+ Wavefunction Inc.           Sales:   sales@wavefun.com  
+ Irvine CA                   Support: support@wavefun.com  
+                             Web:     www.wavefun.com   
+ 
+Copyright © 1995 - 2004 
+----------------------------------------------------
+
+Job run on "ngmac.ch.liv.ac.uk" (PowerMac 2.00 Ghz[dual processor] G5)
+
+           Spartan 'O4 Quantum Mechanics Module    123
+
+ Macintosh (OS-X ppc)
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$comment
+water
+$end
+$molecule
+ 0 1
+    1                0    0.78047426395    0.19012176131
+    8                0                0   -0.38024352261
+    1                0   -0.78047426395    0.19012176131
+$end
+$rem
+JOBTYPE    FREQ
+EXCHANGE     	HF
+BASIS        	3-21G*
+GUI          	 GUI_SPARTAN
+TERSE_OUTPUT 	 TRUE
+$end
+--------------------------------------------------------------
+Processing $rem in /Volumes/NGG5/Applications/beta/Spartan 04.app/Contents/MacOS/../SharedSupport//qchem/aux/../config/preferences.
+   (Site specific preferences.)
+  ... THRESH             9
+  ... SCF_CONVERGENCE    7
+  ... SMALL_PROD_XCMAT   9
+  ... BASIS_LIN_DEP_THRESH     5
+  ... ONEEXE_SPAR	TRUE
+  ... GUI              GUI_SPARTAN
+  ... TERSE_OUTPUT     TRUE
+Processing $rem in system registry
+  ... MEM_TOTAL 768 # MB 
+  ... AO2MO_DISK   768 # MB 
+Processing $rem in the input.
+  ... JOBTYPE    FREQ
+  ... EXCHANGE     	HF
+  ... BASIS        	3-21G*
+  ... GUI          	 GUI_SPARTAN
+  ... TERSE_OUTPUT 	 TRUE
+
+Total Memory Limit in MB = 768
+Mega-Array Size in MB = 31
+ ----------------------------------------------------
+       Standard Nuclear Orientation (Angstroms)
+    I     Atom         X            Y            Z
+ ----------------------------------------------------
+    1      H        .780474      .000000      .190122
+    2      O        .000000      .000000     -.380244
+    3      H       -.780474      .000000      .190122
+ ----------------------------------------------------
+ Molecular Point Group                 C2v   NOp =  4
+ Largest Abelian Subgroup              C2v   NOp =  4
+ Nuclear Repulsion Energy =     9.0977487758 hartrees
+ There are        5 alpha and        5 beta electrons
+ Requested basis set is 3-21G(d)
+ There are 7 shells and 13 basis functions
+
+-------------------------------------------------
+-  Entering fldman on Wed Mar 16 12:01:07 2005  -
+-------------------------------------------------
+
+
+                       Distance Matrix (Angstroms)
+             H (  1)   O (  2)
+   O (  2)   .966673
+   H (  3)  1.560949   .966673
+ 
+
+-------------------------------------------------
+-  Entering gesman on Wed Mar 16 12:01:07 2005  -
+-------------------------------------------------
+
+ A cutoff of  1.0D-09 yielded     28 shell pairs
+ There are    103 function pairs
+ Smallest overlap matrix eigenvalue = 1.11E-01
+ Multipole matrices computed through 2nd order
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+
+-------------------------------------------------
+-  Entering scfman on Wed Mar 16 12:01:08 2005  -
+-------------------------------------------------
+
+ A restricted Hartree-Fock SCF calculation will be
+ performed using Pulay DIIS extrapolation
+ SCF converges when DIIS error is below 1.0E-07
+ ---------------------------------------
+  Cycle       Energy         DIIS Error
+ ---------------------------------------
+    1     -75.5097253767      2.32E-01
+    2     -75.5514998338      4.28E-02
+    3     -75.5806160502      2.07E-02
+    4     -75.5857812919      2.21E-03
+    5     -75.5859537198      4.59E-04
+    6     -75.5859596986      3.64E-05
+    7     -75.5859597422      2.19E-06
+    8     -75.5859597423      3.41E-07
+    9     -75.5859597423      9.22E-08 Convergence criterion met
+ ---------------------------------------
+ SCF time:  CPU 0.14 s  wall 0.00 s
+
+-------------------------------------------------
+-  Entering anlman on Wed Mar 16 12:01:08 2005  -
+-------------------------------------------------
+
+ Analysis of SCF Wavefunction
+ 
+         Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 H                      .366417
+      2 O                     -.732834
+      3 H                      .366417
+  ----------------------------------------
+  Sum of atomic charges =      .000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                  .0000
+    Dipole Moment (Debye)
+         X        .0000      Y        .0000      Z       2.3874
+       Tot       2.3874
+    Quadrupole Moments (Debye-Ang)
+        XX      -3.9718     XY        .0000     YY      -6.8380
+        XZ        .0000     YZ        .0000     ZZ      -7.1532
+    Traceless Quadrupole Moments (Debye-Ang)
+       QXX       6.0476    QYY      -2.5511    QZZ      -3.4965
+       QXY        .0000    QXZ        .0000    QYZ        .0000
+    Octapole Moments (Debye-Ang^2)
+       XXX        .0000    XXY        .0000    XYY        .0000
+       YYY        .0000    XXZ       2.2801    XYZ        .0000
+       YYZ       2.1234    XZZ        .0000    YZZ        .0000
+       ZZZ       6.3926
+    Traceless Octapole Moments (Debye-Ang^2)
+       XXX        .0000    YYY        .0000    ZZZ      -1.2758
+       XXY        .0000    XXZ       1.8133    XYY        .0000
+       XYZ        .0000    XZZ        .0000    YYZ       -.5376
+       YZZ        .0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX      -5.4004   XXXY        .0000   XXYY      -1.8619
+      XYYY        .0000   YYYY      -4.2011   XXXZ        .0000
+      XXYZ        .0000   XYYZ        .0000   YYYZ        .0000
+      XXZZ      -2.4310   XYZZ        .0000   YYZZ      -2.2690
+      XZZZ        .0000   YZZZ        .0000   ZZZZ      -9.2299
+    Traceless Hexadecapole Moments (Debye-Ang^3)
+      XXXX      17.7617   XXXY        .0000   XXXZ        .0000
+      XXYY     -20.9879   XXYZ        .0000   XXZZ       3.2262
+      XYYY        .0000   XYYZ        .0000   XYZZ        .0000
+      XZZZ        .0000   YYYY      21.1722   YYYZ        .0000
+      YYZZ       -.1843   YZZZ        .0000   ZZZZ      -3.0418
+ -----------------------------------------------------------------
+
+-------------------------------------------------
+-  Entering drvman on Wed Mar 16 12:01:08 2005  -
+-------------------------------------------------
+
+ Calculating MO derivatives via CPSCF
+   1         3           9       .111623     .031966
+   2         3           9       .013228     .005201
+   3         6           6       .000757     .000355
+   4        11           1       .000013     .000013
+   5        12           0       .000000     .000000    Roots Converged
+ Calculating analytic Hessian of the SCF energy
+ Polarizability Matrix (a.u.)
+            1           2           3
+    1  -6.8020676   0.0000000   0.0000000
+    2   0.0000000  -0.7834782   0.0000000
+    3   0.0000000   0.0000000  -3.6268282
+ 
+ Direct stationary perturbation theory relativistic correction:
+ 
+ rels  =        .031829689191
+ relv  =       -.104933480329
+ rel2e =        .023934010097
+ E_rel =       -.049169781041
+ 
+ Gradient time:  CPU 0.36 s  wall 2.00 s
+
+-------------------------------------------------
+-  Entering vibman on Wed Mar 16 12:01:10 2005  -
+-------------------------------------------------
+
+ **********************************************************************
+ **                                                                  **
+ **                       VIBRATIONAL ANALYSIS                       **
+ **                       --------------------                       **
+ **                                                                  **
+ **        VIBRATIONAL FREQUENCIES (CM**-1) AND NORMAL MODES         **
+ **                  INFRARED INTENSITIES (KM/MOL)                   **
+ **                                                                  **
+ **********************************************************************
+ 
+
+ Frequency:      1799.31                3812.22                3945.67
+ IR Intens:       79.969                   .049                  9.169
+               X      Y      Z        X      Y      Z        X      Y      Z
+ H           .391   .000  -.587     .608   .000   .360     .569   .000   .416
+ O           .000   .000   .074     .000   .000  -.045    -.072   .000   .000
+ H          -.391   .000  -.587    -.608   .000   .360     .569   .000  -.416
+
+ STANDARD THERMODYNAMIC QUANTITIES AT   298.18 K  AND     1.00 ATM
+
+   This Molecule has  0 Imaginary Frequencies
+   Zero point vibrational energy:       13.663 kcal/mol
+
+   Atom    1 Element H  Has Mass    1.00783
+   Atom    2 Element O  Has Mass   15.99491
+   Atom    3 Element H  Has Mass    1.00783
+   Molecular Mass:    18.010570 amu
+   Principal axes and moments of inertia in atomic units:
+                           1         2         3
+    Eigenvalues --      2.07958   4.38462   6.46420
+          X            -1.00000    .00000    .00000
+          Y              .00000    .00000  -1.00000
+          Z              .00000   1.00000    .00000
+   Rotational Symmetry Number is   2
+   The Molecule is an Asymmetric Top
+   Translational Enthalpy:         .889 kcal/mol
+   Rotational Enthalpy:            .889 kcal/mol
+   Vibrational Enthalpy:         13.664 kcal/mol
+   gas constant (RT):              .593 kcal/mol
+   Translational Entropy:        34.609  cal/mol.K
+   Rotational Entropy:           10.476  cal/mol.K
+   Vibrational Entropy:            .003  cal/mol.K
+
+   Total Enthalpy:               16.034 kcal/mol
+   Total Entropy:                45.088  cal/mol.K
+ 
+ Total job wall time:  3.00 s
+ENDVOUTPUT

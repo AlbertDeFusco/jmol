@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+  Hungarian translation 
+  Translated from default version : index_en.xml 
+-->
+<document>
+	<body>
+		<title>Sourceforge Project oldal</title>
+		<section title="Sourceforge Project oldal">
+			<p><a href="http://sourceforge.net/projects/jmol/">Sourceforge Project Fõoldal</a>
+			</p>
+		</section>
+		<section title="Jmol lezelezõlisták">
+			<section title="A jmol-users levelzõlista">
+				<p>
+        A <code>jmol-users@lists.sourceforge.net</code> levelezõlista a Jmol-lal kapcsolatos
+        dolgok megbeszélésére alakult. A témákhoz kizárólag tagok szólhatnak hozzá.
+      </p>
+				<p>
+					<a href="http://lists.sourceforge.net/lists/listinfo/jmol-users">
+          Kattints ide
+        </a>
+        a <code>jmol-users@lists.sourceforge.net</code> listára való feliratkozáshoz 
+        vagy az onnan történõ leiratkozáshoz 
+      </p>
+				<p>
+        Ha kíváncsi vagy a régebbi hozzászólásokra nézd át a 
+        <code>jmol-users@lists.sourceforge.net</code>
+					<a href="http://sourceforge.net/mailarchive/forum.php?forum_name=jmol-users">
+          levlista-archívumot.
+        </a>
+				</p>
+			</section>
+			<section title="A jmol-developers levelezõlista">
+				<p>
+        A <code>jmol-developers@lists.sourceforge.net</code> levelezõlista a Jmol szoftverrel
+        kapcsolatos fejlesztések megbeszélésére alakult.
+      </p>
+				<p>
+        Feltételezzük, hogy mindenki, aki jelentkezik a jmol-developers 
+        (fejlesztõ) listára feliratkozik a jmol-users (felhasználók)
+        listára is, így aztán szeretnénk, ha nem küldenétek el ugyanazt 
+        a levelet <code>jmol-developers</code>-re és a <code>jmol-users</code>-re is.
+      </p>
+				<p>
+					<a href="http://lists.sourceforge.net/lists/listinfo/jmol-developers">
+          Kattints ide
+        </a>
+        a <code>jmol-developers@lists.sourceforge.net</code> listára való feliratkozáshoz 
+        vagy az onnan történõ leiratkozáshoz 
+      </p>
+				<p>
+        Ha kíváncsi vagy a régebbi hozzászólásokra nézd át a  
+        <code>jmol-developers@lists.sourceforge.net</code>
+					<a href="http://sourceforge.net/mailarchive/forum.php?forum_name=jmol-developers">
+          levlista-archívumot.
+        </a>
+				</p>
+			</section>
+		</section>
+		<section title="Hiba Adatbázis">
+			<p><a href="http://sourceforge.net/tracker/?group_id=23629&amp;amp;atid=379133">Hiba Adatbázis</a>
+			</p>
+		</section>
+		<section title="Feature Requests">
+			<p><a href="http://sourceforge.net/tracker/?group_id=23629&amp;amp;atid=379136">Feature requests</a>
+			</p>
+		</section>
+	</body>
+</document>

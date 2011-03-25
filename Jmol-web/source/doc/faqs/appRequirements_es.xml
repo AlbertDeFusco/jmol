@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+  Translated from default version (...)_en.xml (v 1.1)
+-->
+<section title="Requisitos de sistema para la aplicación">
+  <section title="¿En qué plataformas funciona la aplicación Jmol?">
+    <p>
+      La <i>aplicación</i> o programa autónomo Jmol debería funcionar en cualquier sistema 
+	  que admita Java 1.4. No es compatible con versiones de Java anteriores. 
+    </p>
+  </section>
+</section>

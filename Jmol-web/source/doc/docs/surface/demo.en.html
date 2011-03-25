@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Author" content="Angel Herráez">
+<title>Testing surfaces on Jmol</title>
+<link href="../../default.css" rel="stylesheet" type="text/css">
+<link href="surface.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body { margin:2px; }
+-->
+</style>
+<script type="text/javascript" src="../../jmol/Jmol.js"></script>
+</head>
+
+<body><form>
+<div style="position:fixed; width:510px;">
+<script type="text/javascript">
+jmolInitialize("../../jmol/")
+jmolApplet(500, "")
+</script>
+<br>
+<div align="center">This page by Angel Herr&aacute;ez ; please, post comments on <a href="http://sourceforge.net/mailarchive/forum.php?forum_id=2151" target="_blank">jmol-users</a> mailing list </div>
+</div>
+
+<div style="position:absolute; left:515px;">
+<h1 align="center">Testing surfaces on Jmol </h1>
+<p align="center"><a href="index.en.html">back to documentation page</a> </p>
+Load molecule:
+<script type="text/javascript">
+jmolRadioGroup([ ["load arg.pdb; zoom 90;",  "small molecule (arginine)"], ["load lysozyme.pdb",  "medium molecule (lysozyme)"] ])
+</script>
+<h3>Coarse pseudo-surfaces:</h3>
+<p class="comment">(mutually exclusive here)</p>
+<script type="text/javascript">
+var allOff = "color atoms cpk; dots off; GeoSurface off; isosurface off; spacefill off; "
+jmolHtml("Using <b>spacefill</b>:")
+jmolButton(allOff + "spacefill 100%; color yellowtint;", "100%")
+jmolButton(allOff + "spacefill +1.2; color yellowtint;", "+1.2")
+jmolButton(allOff + "spacefill +1.4; color yellowtint;", "+1.4")
+jmolButton(allOff, "off")
+jmolBr()
+jmolHtml("Using <b>dots</b>:")
+jmolButton(allOff + "dots 100%; color dots yellowtint; ", "100%")
+jmolButton(allOff + "dots +1.2; color dots yellowtint; ", "+1.2")
+jmolButton(allOff + "dots +1.4; color dots yellowtint; ", "+1.4")
+jmolButton(allOff,"off")
+
+jmolHtml("<br>Combined with <b>set solvent</b>:")
+jmolRadioGroup([ ["set solvent on; ",  "on"], ["set solvent off; ",  "off", "checked"] ])
+jmolHtml(" &nbsp;(reapply dots to see)")
+
+jmolBr()
+jmolHtml("<b>GeoSurface</b>:")
+jmolButton(allOff + "GeoSurface 100%; color GeoSurface yellowtint; ", "100%")
+jmolButton(allOff + "GeoSurface +1.2; color GeoSurface yellowtint; ", "+1.2")
+jmolButton(allOff + "GeoSurface +1.4; color GeoSurface yellowtint; ", "+1.4")
+jmolButton(allOff,"off")
+jmolButton('color geosurface translucent', 'translucent')
+jmolButton('color geosurface opaque', 'opaque')
+</script>
+</p>
+
+<h3>Polished isosurfaces:</h3>
+
+	   <p class="comment">
+  &nbsp;&nbsp;&nbsp;(Load a molecule first, from above or below choices)</p>
+	   <p><strong>Calculate</strong> a  surface on the currently selected set of atoms:<br> 
+	     <span class="comment">(caution! may take several seconds or even minutes)</span><br>
+	     <span class="comment">(mutually exclusive here)</span><script type="text/javascript">
+var textWorking = "set echo top center; echo calculating...;"
+</script>
+    <ul>
+	   <li>solvent-accesible surface: 
+         <input type="button" onClick="jmolScript(textWorking); jmolScript('isosurface off; isosurface saSurface; set echo off;')" value="isoSurface saSurface">
+	  </li>
+		<li>solvent-excluded surface (1.2 &Aring;):
+         <input type="button" onClick="jmolScript(textWorking); jmolScript('isosurface off; isosurface solvent; set echo off;')" value="isoSurface solvent">
+	  </li>
+		 <li>solvent-excluded surface (1.4 &Aring;)
+         <input type="button" onClick="jmolScript(textWorking); jmolScript('isosurface off; isosurface molecular; set echo off;')" value="isoSurface molecular">
+		 </li>
+		<li>Last isoSurface:
+				 <script type="text/javascript">
+		jmolLink('isosurface off', 'hide')
+		jmolHtml("&nbsp;")
+		jmolLink('isosurface on', 'show')
+		jmolHtml("&nbsp;")
+		jmolLink('isosurface delete', 'delete')
+		jmolHtml("&nbsp;")
+		jmolLink('color isosurface translucent', 'translucent')
+		jmolHtml("&nbsp;")
+		jmolLink('color isosurface opaque', 'opaque')
+				 </script>
+		</li>
+	</ul>
+</p>
+	   <p>Or choose <strong>pre-made examples</strong> of molecular surfaces<br>
+         <span class="comment">(these are JVXL files with solvent-excluded surface, 1.2 &Aring; probe)</span>:</p>
+	   <p>An A-T base pair in DNA (66 atoms)
+         <input type="button" onClick="jmolScript('load at.pdb; rotate y 90;')" value="load">
+&nbsp;&nbsp;
+  <input type="button" onClick="jmolScript('isosurface &quot;at.jvxl&quot;')" value="load surface">
+	   </p>
+	   <p>Two base pairs (82 atoms)
+         <input type="button" onClick="jmolScript('load 2pairs.pdb; rotate y 90;')" value="load">
+  &nbsp;&nbsp;
+  <input type="button" onClick="jmolScript('isosurface &quot;2pairs.jvxl&quot;')" value="load surface">
+	   </p>
+	   <p>
+  Four base pairs (164 atoms)
+  <input type="button" onClick="jmolScript('load 4pairs.pdb; rotate y 90;')" value="load">
+&nbsp;&nbsp;
+  <input type="button" onClick="jmolScript('isosurface &quot;4pairs.jvxl&quot;')" value="load surface">
+	   </p>
+	   <p>
+  Six base pairs (246 atoms)
+  <input type="button" onClick="jmolScript('load 6pairs.pdb; rotate y 90;')" value="load">
+  &nbsp;&nbsp;
+  <input type="button" onClick="jmolScript('isosurface &quot;6pairs.jvxl&quot;')" value="load surface">
+	   </p>
+	   <p>
+  A DNA portion of 17 base pairs (701 atoms)
+  <input type="button" onClick="jmolScript('load dna.pdb')" value="load">
+  &nbsp;&nbsp;
+  <input type="button" onClick="jmolScript('isosurface &quot;dna.jvxl&quot;')" value="load surface">
+	   </p>
+	   <p>A subunit of streptavidin (876 atoms) with its biotin ligand bound and a little portion of another subunit covering the ligand (&quot;cap&quot;) 
+	     <input type="button" onClick="jmolScript('load 1swe_su.pdb; define ~ligand (not protein and not water);')" value="load">
+         &nbsp;&nbsp;<br>
+         <script type="text/javascript">
+function surfaceBaseDist(m)
+{	if (m.selectedIndex==0) return
+	jmolScript('isosurface ~base' + m + ' "sav_base' + m + '.jvxl"; color isosurface translucent bluetint')
+}
+         </script>
+&nbsp;&nbsp;&nbsp; 
+<input type="button" onClick="surfaceBaseDist('')" value="load base surface">
+(876 atoms) 
+<!--
+&nbsp;&nbsp;&nbsp; load base surface:
+<select name="distan" onChange="surfaceBaseDist(this.value)">
+    <option value="">...choose...</option>
+    <option value="6">6 &Aring; from ligand (106 atoms)</option>
+    <option value="7">7 &Aring; from ligand (161 atoms)</option>
+    <option value="10">10 &Aring; from ligand (336 atoms)</option>
+    <option value="20">20 &Aring; from ligand (760 atoms)</option>
+    <option value="">whole subunit (876 atoms)</option>
+</select>
+-->
+<br>
+&nbsp;&nbsp;&nbsp;
+<input type="button" onClick="jmolScript('isosurface ~cap &quot;sav_cap.jvxl&quot;; color isosurface translucent yellowtint')" value="load cap surface">
+(50 atoms) 
+<br>
+Biotin: 
+<script type="text/javascript">
+jmolLink('define temp selected; select ~ligand; wireframe off; spacefill off; select temp;', 'hide')
+jmolHtml("&nbsp;")
+jmolLink('define temp selected; select ~ligand; wireframe 35; spacefill 120; select temp;', 'ball & stick ')
+jmolHtml("&nbsp;")
+jmolLink('define temp selected; select ~ligand; wireframe off; spacefill on; select temp;', 'spacefill')
+</script>
+</p>
+	   <p>A subunit in hemoglobin (1123 atoms) with its hem group  and a bound oxygen molecule
+	     <input type="button" onClick="jmolScript('load 1hho_b.pdb; define ~ligand (hetero and not water)')" value="load">
+&nbsp;&nbsp;
+  <input type="button" onClick="jmolScript('isosurface &quot;1hho_b.jvxl&quot;; color isosurface translucent IndianRed')" value="surface">
+<br>
+Oxyhem: 
+<script type="text/javascript">
+jmolLink('define temp selected; select ~ligand; wireframe off; spacefill off; select temp;', 'hide')
+jmolHtml("&nbsp;")
+jmolLink('define temp selected; select ~ligand; wireframe 35; spacefill 120; select temp;', 'ball & stick ')
+jmolHtml("&nbsp;")
+jmolLink('define temp selected; select ~ligand; wireframe off; spacefill on; select temp;', 'spacefill')
+</script>
+<br>
+Water: 
+<script type="text/javascript">
+jmolLink('define temp selected; select water; wireframe off; spacefill off; select temp;', 'hide')
+jmolHtml("&nbsp;")
+jmolLink('define temp selected; select water; wireframe 35; spacefill 120; select temp;', 'ball & stick ')
+jmolHtml("&nbsp;")
+jmolLink('define temp selected; select water; wireframe off; spacefill on; select temp;', 'spacefill')
+</script>
+</p>
+  </div>
+</form></body>
+</html>

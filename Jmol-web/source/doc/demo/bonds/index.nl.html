@@ -1,0 +1,69 @@
+<!--
+  Dutch translation 
+  Translated from default version : index.en.html (v 1.1)
+-->
+<html>
+  <head>
+    <title>Jmol applet bonds demo</title>
+    <script src="../../jmol/Jmol.js"></script>
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <form>
+      <table border="1">
+	<tr>
+	  <td>
+	    <h1>Aspirine</h1>
+	    <script>
+	      jmolApplet(400, "load aspirina.mol.gz;spacefill off");
+	    </script>
+	  </td>
+	  
+	  <td>
+	    <p>
+	      Voor compatibiliteit met de RasMol scriptingtaal wordt het commando om de
+	      bondsize te besturen <b>wireframe</b> genoemd. De parameter is de
+	      bond radius in Angstroms. Probeer het volgende:
+	    </p>
+	    <script>
+	      jmolRadioGroup(["wireframe off",
+	      "wireframe on",
+	      "wireframe 0.1",
+	      "wireframe 0.125",
+	      ["wireframe 0.15", null, "checked"],
+	      "wireframe 0.25",
+	      "wireframe 0.3",
+	      "wireframe 0.5"
+	      ], "<br />");
+	    </script>
+	    <p>
+	      <i>Voor compatibiliteit met de bestaande RasMol/Chime scripts worden
+	      meerdere bonds niet weergegeven met grotere bonds.</i>
+	    </p>
+	    <p>
+	      Standaard neemt de bond de kleur aan, afhankelijk van de kleuren van de 2 atomen die het verbindt.
+	      Indien je de kleur van de bond wil wijzigigen, kan je een kleur toewijzen.
+	    </p>
+	    <script>
+	      var colorRadioGroup = [
+	      ["color bonds none", "color bonds none <i># neemt atoomkleuren over</i>", "checked"],
+	      "color bonds dodgerblue",
+	      "color bonds goldenrod",
+	      "color bonds orchid"
+	      ];
+	      jmolRadioGroup(colorRadioGroup, "<br />");
+	    </script>
+	    <p>
+	      <script>
+		jmolCheckbox("spacefill 20%", "spacefill off", " <i>toon atomen</i>");
+	      </script>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+    </form>
+  </body>
+</html>

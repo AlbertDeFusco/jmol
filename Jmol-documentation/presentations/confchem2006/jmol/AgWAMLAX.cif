@@ -1,0 +1,178 @@
+
+###########################################################################
+#
+#                 Cambridge Crystallographic Data Centre
+#                                CCDC 
+# 
+###########################################################################
+#
+#  This CIF contains data generated directly from an entry in the Cambridge 
+#  Structural Database and will include bibliographic, chemical, crystal, 
+#  experimental, refinement, and atomic coordinate data, as available.
+#     
+#  Copyright  2004  The Cambridge Crystallographic Data Centre
+# 
+#  This CIF is provided on the understanding that it is used for bona fide 
+#  research purposes only.  It may contain copyright material of the CCDC
+#  or of third parties, and may not be copied or further disseminated in 
+#  any form, whether machine-readable or not, except for the purpose of 
+#  generating routine backup copies on your local computer system.
+# 
+#  For further information about the CCDC, data deposition and data 
+#  retrieval see <www.ccdc.cam.ac.uk>. Bona fide researchers may freely 
+#  download  Mercury and enCIFer from this site to visualise CIF-encoded 
+#  structures and to carry out CIF format checking respectively.
+#
+###########################################################################
+
+data_CSD_CIF_WAMLAX
+_audit_creation_date 1994-01-24
+_audit_creation_method CSD-ConQuest-V1
+_database_code_CSD WAMLAX
+_chemical_formula_sum 'C36 H30 Ag1 Br1 P2'
+_chemical_formula_moiety
+;
+C36 H30 Ag1 Br1 P2
+;
+_journal_coden_Cambridge 186
+_journal_year 1993
+_journal_page_first 1387
+_journal_name_full 'J.Chem.Soc.,Dalton Trans. '
+loop_
+_publ_author_name
+"G.A.Bowmaker"
+"Effendy"
+"J.V.Hanna"
+"P.C.Healy"
+"B.W.Skelton"
+"A.H.White"
+_chemical_name_systematic
+;
+Bromo-bis(triphenylphosphine)-silver(i)
+;
+_chemical_melting_point 461.15
+_cell_volume   3101.310
+_exptl_crystal_colour 'white'
+_exptl_crystal_density_diffrn 1.53
+_exptl_special_details
+;
+Melting point range 461.15-463.15K
+Isomorphous with various other MXbis(triphe
+nylphosphine) complexes reported
+
+;
+_diffrn_ambient_temperature ?
+_diffrn_special_details
+;
+The study was carried out at room temperature,in the range 283-303K
+
+;
+#These two values have been output from a single CSD field.
+_refine_ls_R_factor_gt 0.032
+_refine_ls_wR_factor_gt 0.032
+_symmetry_cell_setting monoclinic
+_symmetry_space_group_name_H-M 'C 2/c'
+_symmetry_Int_Tables_number 15
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 1/2+x,1/2+y,z
+3 -x,y,1/2-z
+4 1/2-x,1/2+y,1/2-z
+5 -x,-y,-z
+6 -1/2-x,-1/2-y,-z
+7 x,-y,-1/2+z
+8 -1/2+x,-1/2-y,-1/2+z
+_cell_length_a 25.329(6)
+_cell_length_b 9.065(3)
+_cell_length_c 15.342(4)
+_cell_angle_alpha 90
+_cell_angle_beta 118.31(2)
+_cell_angle_gamma 90
+_cell_formula_units_Z 4
+loop_
+_atom_type_symbol
+_atom_type_radius_bond
+C 0.68
+H 0.23
+Ag 1.59
+Br 1.21
+P 1.05
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ag1 Ag 0.00000 0.12228(6) 0.25000
+Br1 Br 0.00000 0.40553(8) 0.25000
+P1 P 0.09477(6) -0.0047(1) 0.2917(1)
+C1 C 0.1587(2) 0.1129(5) 0.3156(3)
+C2 C 0.1572(2) 0.2567(6) 0.3443(4)
+C3 C 0.2058(3) 0.3487(6) 0.3681(5)
+C4 C 0.2558(3) 0.2989(7) 0.3628(5)
+C5 C 0.2565(3) 0.1589(7) 0.3324(4)
+C6 C 0.2081(2) 0.0645(6) 0.3083(4)
+C7 C 0.0899(2) -0.1337(5) 0.1969(3)
+C8 C 0.0782(3) -0.0770(6) 0.1062(4)
+C9 C 0.0685(3) -0.1689(7) 0.0280(4)
+C10 C 0.0685(3) -0.3190(7) 0.0394(5)
+C11 C 0.0794(2) -0.3761(6) 0.1292(5)
+C12 C 0.0898(2) -0.2845(5) 0.2076(4)
+C13 C 0.1201(2) -0.1179(5) 0.4029(3)
+C14 C 0.0775(2) -0.1959(5) 0.4158(4)
+C15 C 0.0933(2) -0.2804(6) 0.4988(4)
+C16 C 0.1526(3) -0.2884(6) 0.5712(4)
+C17 C 0.1954(2) -0.2101(6) 0.5594(4)
+C18 C 0.1789(2) -0.1263(6) 0.4753(4)
+H1 H 0.12260 0.29320 0.34940
+H2 H 0.20360 0.45150 0.38700
+H3 H 0.29030 0.36340 0.38170
+H4 H 0.29100 0.12420 0.32610
+H5 H 0.20790 -0.03520 0.28400
+H6 H 0.07650 0.02930 0.09690
+H7 H 0.06090 -0.12710 -0.03590
+H8 H 0.06140 -0.38440 -0.01500
+H9 H 0.07980 -0.48360 0.13770
+H10 H 0.09650 -0.32660 0.27050
+H11 H 0.03530 -0.19050 0.36420
+H12 H 0.06240 -0.33590 0.50610
+H13 H 0.16430 -0.34920 0.63020
+H14 H 0.23710 -0.21170 0.61040
+H15 H 0.20950 -0.07250 0.46640
+P1B P -0.09477(6) -0.0047(1) 0.2083(1)
+C1B C -0.1587(2) 0.1129(5) 0.1844(3)
+C7B C -0.0899(2) -0.1337(5) 0.3031(3)
+C13B C -0.1201(2) -0.1179(5) 0.0971(3)
+C2B C -0.1572(2) 0.2567(6) 0.1557(4)
+C6B C -0.2081(2) 0.0645(6) 0.1917(4)
+C8B C -0.0782(3) -0.0770(6) 0.3938(4)
+C12B C -0.0898(2) -0.2845(5) 0.2924(4)
+C14B C -0.0775(2) -0.1959(5) 0.0842(4)
+C18B C -0.1789(2) -0.1263(6) 0.0247(4)
+C3B C -0.2058(3) 0.3487(6) 0.1319(5)
+H1B H -0.12260 0.29320 0.15060
+C5B C -0.2565(3) 0.1589(7) 0.1676(4)
+H5B H -0.20790 -0.03520 0.21600
+C9B C -0.0685(3) -0.1689(7) 0.4720(4)
+H6B H -0.07650 0.02930 0.40310
+C11B C -0.0794(2) -0.3761(6) 0.3708(5)
+H10B H -0.09650 -0.32660 0.22950
+C15B C -0.0933(2) -0.2804(6) 0.0012(4)
+H11B H -0.03530 -0.19050 0.13580
+C17B C -0.1954(2) -0.2101(6) -0.0594(4)
+H15B H -0.20950 -0.07250 0.03360
+C4B C -0.2558(3) 0.2989(7) 0.1372(5)
+H2B H -0.20360 0.45150 0.11300
+H4B H -0.29100 0.12420 0.17390
+C10B C -0.0685(3) -0.3190(7) 0.4606(5)
+H7B H -0.06090 -0.12710 0.53590
+H9B H -0.07980 -0.48360 0.36230
+C16B C -0.1526(3) -0.2884(6) -0.0712(4)
+H12B H -0.06240 -0.33590 -0.00610
+H14B H -0.23710 -0.21170 -0.11040
+H3B H -0.29030 0.36340 0.11830
+H8B H -0.06140 -0.38440 0.51500
+H13B H -0.16430 -0.34920 -0.13020
+#END

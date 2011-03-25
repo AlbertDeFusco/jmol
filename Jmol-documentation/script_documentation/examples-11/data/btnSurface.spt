@@ -1,0 +1,49 @@
+if (btnsetup)
+
+	# javascript alert('surface setup')
+
+	set hoverdelay 0.1
+	set echo btnSurfacebg 40% 0%
+	set echo btnSurfacebg center
+	echo "                     "
+	color echo background translucent 0.8 yellow
+	set echo btnSurfacebg script "animOn=true;script btnAnim.spt;cavityOn=true;script btnCavity.spt;script btnSurface.spt"
+
+	set echo btnSurface 40% 0%
+	set echo btnSurface center
+	color echo background translucent 1.0 yellow
+	surfaceOn=true
+endif
+
+isosurface delete
+set echo btnSurface
+surfaceOn = !surfaceOn
+
+if (!surfaceOn)
+	echo surfaces
+	color echo green
+else
+
+	# javascript alert('in btnSurface')
+
+	echo ...working...
+	color echo red
+	refresh
+
+	model 1;isosurface s1b "iso1.jvxl" translucent 0.4 yellow
+	model 2;isosurface s2b "iso2.jvxl" translucent 0.4 yellow
+	model 3;isosurface s3b "iso3.jvxl" translucent 0.4 yellow
+	model 4;isosurface s4b "iso4.jvxl" translucent 0.4 yellow
+	model 5;isosurface s5b "iso5.jvxl" translucent 0.4 yellow
+	model 6;isosurface s6b "iso6.jvxl" translucent 0.4 yellow
+	model 7;isosurface s7b "iso7.jvxl" translucent 0.4 yellow
+	model 8;isosurface s8b "iso8.jvxl" translucent 0.4 yellow
+	model 9;isosurface s9b "iso9.jvxl" translucent 0.4 yellow
+	model 10;isosurface s10b "iso10.jvxl" translucent 0.4 yellow
+	model 11;isosurface s11b "iso11.jvxl" translucent 0.4 yellow
+	model 12;isosurface s12b "iso12.jvxl" translucent 0.4 yellow
+	model 13;isosurface s13b "iso13.jvxl" translucent 0.4 yellow
+	model 14;isosurface s14b "iso14.jvxl" translucent 0.4 yellow
+	echo no surfaces
+
+endif

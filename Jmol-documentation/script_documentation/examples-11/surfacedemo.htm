@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Jmol Interactive Examples -- Surfaces</title>
+<link rel="stylesheet" type="text/css" href="demo.css" />
+<script type="text/javascript" src="Jmol.js"></script>
+<script language=javascript src=surfacedemos.js></script>
+<script type="text/javascript">
+demo = 1
+// "?demo=7"
+if(location.search.length>1)eval(location.search.substring(1,1000))
+theScript = 'set defaultdirectory "./data";'+Demo[demo].script
+
+function executeCmd() {
+  var Ret = jmolScriptWaitAsArray(document.getElementById('cmdArea').value)
+  if ((Ret+"").indexOf("ERROR") >= 0)
+    alert(Ret[0][0][3].replace(/\|/g,"\n"))
+
+}
+
+function reloadCmd() {
+  document.getElementById("cmdArea").value = Demo[demo].script
+}
+
+</script>
+</head>
+<body>
+
+<h2>
+<script type="text/javascript">document.write("#"+demo+" "+Demo[demo].title)</script>
+</h2>
+
+<table><tr><td>
+<script type="text/javascript">
+
+info = '&lt;script type="text/javascript" src="Jmol.js">&lt;/script>'
+	+'<br />&lt;script type="text/javascript"> '
+	+'<br /><br /> jmolApplet(400,\''+theScript+'\') '
+	+'<br /> jmolCommandInput() '
+	+'<br /> jmolButton("console") '
+	+'<br /><br />&lt;/script>'
+
+document.write("<code>"+info+"</code>")
+document.write("<br /><br /><br /><table><tr><td><textarea id='cmdArea' rows='10' cols='40'>"+Demo[demo].script+"</textarea>"
+	+"</td><td><br /><input type=button value='OK' onclick='executeCmd()' style='width:60px' />"
+	+"<br /><input type=button value='original' onclick='reloadCmd()' style='width:60px'/>"
+	+"<br /><input type=button value='console' onclick=\"jmolScript('console')\" style='width:60px' />"
+	+"<br /><a href=\"javascript:window.close()\">close</a>"
+	+"</td></tr></table>"
+	)
+</script>
+
+</td><td>
+
+<script type="text/javascript">
+jmolApplet(450,theScript)
+jmolCommandInput()
+jmolButton("console")
+</script>
+<br />
+
+
+</td></tr></table>
+</body>
+</html>

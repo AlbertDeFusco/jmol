@@ -1,0 +1,10 @@
+load inline "5 4 C 5.88 -4.59 C 7.09 -3.89 C 8.30 -4.59 C 4.73 -3.79 Cl 7.09 -2.49 1 2 1 2 3 1 1 4 1 2 5 -2"
+load append "2-ClBu.mol"
+frame *;select *;wireframe only;label %[atomno]
+select 2.1
+color labels yellow
+set labeloffset -5 10
+color yellow
+
+compare {2.1} {1.1} smiles "CC(Cl)CC" rotate translate
+set echo top left;

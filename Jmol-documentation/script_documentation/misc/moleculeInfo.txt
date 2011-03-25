@@ -1,0 +1,8 @@
+moleculeInfo=new Array()
+moleculeInfo[0]=new Array()
+moleculeInfo[0].nElements=3
+moleculeInfo[0].numberInModel=1
+moleculeInfo[0].mf="H 4 C 1 O 1"
+moleculeInfo[0].number=1
+moleculeInfo[0].modelNumber=1
+moleculeInfo[0].nAtoms=6

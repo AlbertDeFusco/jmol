@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+  Translated from default version (...)_en.xml (v 1.1)
+-->
+<section title="Requisitos de sistema para JmolApplet">
+
+  <section title="¿En qué navegadores se puede ejecutar JmolApplet?">
+    <p>
+      JmolApplet funciona en la mayoría de navegadores habituales <br />
+      <i>
+	Nótese que éstas son las versiones mínimas ...
+	cualquiera más reciente debe funcionar
+      </i>
+      <ul>
+	<li>
+	  Win32 <i>(Win98 Segunda Edición o posterior)</i>
+	  <ul>
+	    <li>Microsoft IE 5.0 con MSFT Java Virtual Machine</li>
+	    <li>
+	      Microsoft IE 5.0 con Sun Java Plug-in 1.4<br />
+	      <i>IE 5.0 es lo que incluye Win98SE</i>
+	    </li>
+	    <li>Netscape 4.76</li>
+	    <li>Netscape 7.0 con Sun Java Plug-in</li>
+	    <li>Mozilla 1.3 con Sun Java Plug-in 1.4</li>
+	    <li>Firefox 1.0 con Sun Java Plug-in 1.4</li>
+	    <li>Opera 7.5.4 con Sun Java Plug-in 1.4</li>
+	  </ul>
+	</li>
+	<li>
+	  MacOS X 10.3.3 <i>(Panther actualizado al menos a 10.3.3)</i>
+	  <ul>
+	    <li>Safari 1.2.1 (v125.1)</li>
+	    <li>
+	      Mozilla/Firefox siempre que esté correctamente configurado para usar Java 1.4.2<br />
+	      <i>
+		(véase <a href="http://javaplugin.sourceforge.net">
+		javaplugin.sourceforge.net</a>)
+	      </i>
+	    </li>
+	  </ul>
+	</li>
+	<li>
+	  Linux/Unix
+	  <ul>
+	    <li>Mozilla 1.2.1 con Java Plug-in 1.4</li>
+	    <li>Firefox 1.0 con Java Plug-in 1.4</li>
+	    <li>
+	      Konqueror hasta la 3.3 <i>NO FUNCIONA</i>
+	      <i>muchos problemas</i>
+	    </li>
+	  </ul>
+	</li>
+	<li>
+	  MacOS 9
+	  <ul>
+	    <li>
+	      Netscape 4.78<br />
+	      <i>muy lento</i>
+	    </li>
+	    <li>
+	      MSFT IE<br />
+	      <i>carece de LiveConnect</i>
+	    </li>
+	  </ul>
+	</li>
+      </ul>
+    </p>
+    <p>
+      Para comprobar tu navegador, prueba la
+      <a href="../browsercheck">verificación del navegador para Jmol</a>
+    </p>
+    <p>
+      Por favor, informa de los problemas a <code>jmol-developers@lists.sf.net</code>.
+    </p>
+    
+  </section>
+
+  <section title="¿Qué máquina virtual de Java (JVM) debo usar con Internet Explorer en Win32?">
+    <p>
+      Instala Sun Java Plug-in desde
+      <a href="http://www.java.com">www.java.com</a>
+    </p>
+    <p>
+      Jmol funciona correctamente en la máquina virtual Java de Microsoft.
+      Sin embargo, Microsoft interrumpió su suministro en 2002 (¿?).
+      Dado que Microsoft ya no respalda realmente este producto,
+      recomendamos encarecidamente que actualices.
+    </p>
+    <p>
+      Si entiendes lo suficiente para haber formulado esta pregunta,
+      deberías entender qué es lo que tienes que actualizar.
+    </p>
+  </section>
+
+  <section title="¿Qué ocurre con MacOS X?">
+    <p>
+      Sólo están respaldados Mac OS X 10.3.3 y superior con Safari v125.1.
+      Hasta ese punto no había comunicación LiveConnect entre 
+      JavaScript y Java.
+    </p>
+    <p>
+      Internet Explorer en Mac OS X <i>no</i> está respaldado
+      debido a que no admite la comunicación LiveConnect. 
+    </p>
+  </section>
+  
+  <section title="Puedo ver el modelo, pero los botones no funcionan">
+    <p>
+      ¿Estás usando un naveagdor <i>compatible</i>?
+    </p>
+    <p>
+      Para comprobar tu navegador, prueba la 
+      <a href="../browsercheck">verificación del navegador para Jmol</a>
+    </p>
+    <p>
+      La miniaplicación JmolApplet funciona en muchos navegadores.
+      Lamentablemente, muchos de ellos no admiten la comunicación LiveConnect
+      entre JavaScript y Java. Por ello, si la página web utiliza
+      JavaScript para controlar la miniaplicación, no funcionará en esos navegadores.
+    </p>
+    <p>
+      Una lista parcial:
+      <ul>
+	<li>Cualquiera en MacOS X anterior a 10.3.3 con Java 1.4.2</li>
+	<li>IE en Mac OS X</li>
+	<li>
+	  Mozilla/Netscape en OS X<br />
+	  <i>salvo que tengas instalado el javaplugin</i>
+	</li>
+      </ul>
+    </p>
+  </section>
+
+  <section title="Los botones no funcionan en Mozilla/Firefox en MacOS X">
+    <p>
+      Por defecto, Mozilla/Firefox utilizará Java 1.3 ... y éste no 
+      admite la comunicación LiveConnect entre JavaScript y Java. 
+    </p>
+    <p>
+      Debes instalar el conector java plugin para MacOS X desde 
+      <a href="http://javaplugin.sourceforge.net">javaplugin.sourceforge.net</a>
+    </p>
+  </section>
+
+  <section
+   title="¿Es preciso hardware OpenGL o 3D para ejecutar JmolApplet?">
+    <p>
+      No se requiere hardware especial para ejecutar JmolApplet.
+      El motor gráfico es un z-buffer implementado en Java
+      y diseñado para representar moléculas. <i>(De hecho, diseñado
+      sólo para Jmol.)</i>
+    </p>
+    <p>
+      Si tienes una buena tarjeta gráfica, correrá más rápido,
+      pero no tiene relación con las capacidades 3D 
+      de la tarjeta. 
+    </p>
+  </section>
+</section>

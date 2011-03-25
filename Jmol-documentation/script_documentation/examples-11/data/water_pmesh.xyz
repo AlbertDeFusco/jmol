@@ -1,0 +1,5 @@
+3
+#jmolscript:pmesh axes1 "inline" "4 3.44 2.0 0.828 3.44 -0.5 0.828 2.0 1.0 0.828 5.0 1.0 0.828 2 3 0 1 0 3 2 3 2";color pmesh yellow;pmesh dots;pmesh plane1 "inline" "4 5 2 .828 5 -0.5 .828 2 -0.5 .828 2 2 .828 1 5 0 1 2 3 0";color pmesh translucent red;pmesh planex "inline" "4 3.44 -.5 2.0 3.44 2.0 2.0 3.44 2.0 -.5 3.44 -.5 -.5 1 5 0 1 2 3 0";color pmesh translucent white;moveto 1 626 -388 -676 119.7 50;
+H 3.452 0.490 1.558
+H 3.435 0.494 0.040
+O 3.445 1.006 0.828

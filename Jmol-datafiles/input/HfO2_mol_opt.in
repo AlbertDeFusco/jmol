@@ -1,0 +1,61 @@
+# H2 molecule in a big box
+#
+# This file will optimize automatically the interatomic distance
+
+#Define the methodology to find the minimum
+ionmov  3              # Use the modified Broyden algorithm
+ntime   20             # Maximum number of Broyden "timesteps"
+tolmxf  5.0d-4         # Stopping criterion for the geometry optimization : when 
+                       # the residual forces are less than tolmxf, the Broyden 
+                       # algorithm can stop
+
+xcart   0.0  0.0  0.0  # Hf
+        0.7 -0.7  0.0  # O
+        0.7  0.7  0.0  # O
+
+toldff  5.0d-5         # Will stop the SCF cycle when, twice in a row, 
+                       # the difference between two consecutive evaluations of
+                       # forces differ by less than toldff (in Hartree/Bohr)
+
+
+#nband    1             # Only one band is occupied. In order to get the energy,
+                       # forces ..., there is no need to compute more than one band.
+
+#-------------------------------------------------------------------------------
+#The rest of this file is similar to the t11.in file, except
+#that xcart has been moved above, and that toldfe has been replaced
+#by toldff, see above.
+
+#Definition of the unit cell
+acell 15 15 15    # The keyword "acell" refers to the
+                  # lengths of the primitive vectors (in Bohr)
+                  # The priitive cell is cubic by default
+
+#Definition of the atom types
+ntype 2           # There is only 2 type of atom
+zatnum 72 8          # The keyword "zatnum" refers to the atomic number of the 
+                  # possible type(s) of atom. The pseudopotential(s) 
+                  # mentioned in the "files" file must correspond
+                  # to the type(s) of atom. Here, the only type is Hydrogen.
+                         
+
+#Definition of the atoms
+natom 3           # There are 3 atoms
+type 1 2 2        # HfO2 
+
+#Definition of the planewave basis set
+ecut 40.0         # Maximal kinetic energy cut-off, in Hartree
+
+#Definition of the k-point grid
+nkpt 1            # Only one k point is needed for isolated system,
+                  # taken by default to be 0.0 0.0 0.0
+
+#Definition of the SCF procedure
+nstep 20          # Maximal number of SCF cycles
+#toldfe is no more defined, as toldff is used above... 
+diemac 1.0        # Although this is not mandatory, it is worth to
+                  # precondition the SCF cycle. The model dielectric
+diemix 0.5        # function used as the standard preconditioner
+                  # is described in the "dielng" input variable section.
+                  # Here, we follow the prescriptions for molecules
+                  # in a big box

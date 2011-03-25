@@ -1,0 +1,52 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript">
+
+//showappcode=1
+messagecallback="domessagecallback"
+nmes=0
+ncolsfortextarea=60
+
+function domessagecallback(n,a){
+	showmsg(n,"message: "+a+"\n")
+	showmsg((++nmes),"domessagecallback")
+}	
+
+
+title="Callback";model="caffeine.xyz";ref="?search=callback"
+Scripts=new Array(""
+," Callbacks are enabled by adding a \"MessageCallback\" parameter to the &lt;object> element. The format is:"
++"<br /><br />&lt;param name=\"MessageCallback\" value=\"SomeFuntionName\" />.<br /><br />"
+," After the model loads, set the picking to one mode or another. The callback functions all return two parameters, the applet name followed by the message. Click on an atom to see what it gives."
+	,"set picking ON;#resets to 'atom-only' mode"
+	,"set picking DISTANCE;#now click two atoms"
+	,"set picking ANGLE;#now click three atoms"
+	,"set picking TORSION;#now click four atoms"
+	,"set picking OFF"
+	,"load \"1blu.pdb\""
+	,"load \"caffeine.xyz\""
+	,"show boundbox"
+	,"show center"
+	,"show file"
+	,"show model"
+	,"show orientation"
+	,"show pdbheader"
+	,"show transform"
+	,"show zoom"
+
+
+)
+remarks=""
+
+</script>
+</head>
+<body>
+<script type="text/javascript">showpage()</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!--
+  French translation 
+  Translated from default version : floatingPoint.xml (v 1.1)
+-->
+<section title="Repr&#x00E9;sentation en virgule flottante">
+  <p>
+    Quelqu'un a soulev&#x00E9; un point que je pense &#x00EA;tre
+    d'int&#x00E9;r&#x00EA;t g&#x00E9;n&#x00E9;ral.
+  </p>
+
+  <p>
+    Concernant l'affichage des param&#x00E8;tre des cellules cristallines:
+    <pre>
+      > Dans certains cas, les valeurs a, b, ou c etc s'affichent avec
+      > des d&#x00E9;cimales 'suppl&#x00E9;mentaires'. L'applet 10pre8
+      > affiche a=10.436999 alors que le champ CRYST1 du fichier pdb a la
+      > valeur 10.437. Probablement une erreur 'd'arrondi' avec les
+      > calculs des coordon&#x00E9;es de la cellule.
+    </pre>
+    En fait, ce cas particulier est un point plus subtil. Il ne s'agit pas
+    vraiment d'un probl&#x00E8;me 'd'arrondi' car aucun calcul n'est fait
+    sur ces nombres.
+  </p>
+
+  <p>
+    Mais c'est quand m&#x00EA;me un probl&#x00E8;me. Et la <i>cause</i>
+    de ce probl&#x00E8;me est d'int&#x00E9;r&#x00EA;t
+    g&#x00E9;n&#x00E9;ral pour ceux qui travaillent avec des nombres
+    &#x00E0; virgule flottante.
+  </p>
+
+  <p>
+    Nous avons l'habitude de travailler en base 10 ... 10 doigts. De temps
+    en temps nous tombons sur des nombre rationels qui ne peuvent pas
+    &#x00EA;tre repr&#x00E9;sent&#x00E9; en base 10. Les exemples les plus
+    courants sont peut-&#x00EA;tre 1/3 et 2/3. Nous les &#x00E9;crivons
+    0.33 ou 0.67 ou nous ajoutons quelques chiffres (0.33333 0.66667) si
+    nous avons besoin de plus de pr&#x00E9;cision dans nos calculs.
+  </p>
+
+  <p>
+    Et bien, nous rencontrons le m&#x00EA;me probl&#x00E8;me dans le
+    monde de l'informatique. Et les gens se sont battus avec des
+    mani&#x00E8;res de r&#x00E9;gler ce probl&#x00E8;me depuis le
+    d&#x00E9;but des ordinateurs.
+  </p>
+
+  <p>
+    La plupart des ordinateurs actuels utilisent
+    g&#x00E9;n&#x00E9;ralement une repr&#x00E9;sentation en virgule
+    flottante d&#x00E9;finie en 1985 par l'organisation de normalisation
+    IEEE:
+    <code>
+      IEEE Std 754-1985
+      IEEE Standard for Binary Floating-Point Arithmetic
+    </code>
+
+    Il s'agit d'une repr&#x00E9;sentation 'base 2' (binaire) des nombres
+    &#x00E0; virgule flottante, et non une repr&#x00E9;sentation
+    'base 10'. Fondamentalement, cel&#x00E0; signifie qu'il y a un autre
+    ensemble de nombres rationels qui ne peuvent pas &#x00EA;tre
+    repr&#x00E9;sent&#x00E9;s de fa&#x00E7;on exacte.
+  </p>
+
+  <p>
+    Dans ce cas, aucun calcul n'a &#x00E9;t&#x00E9; effectu&#x00E9;
+    sur le nombre 10.437 ... il a &#x00E9;t&#x00E9; lu directement depuis
+    le fichier. Mais le nombre 10.437 ne peut pas &#x00EA;tre
+    repr&#x00E9;sent&#x00E9; exactement en binaire ... nous finissons
+    donc avec 10.436999 (Je n'ai pas vraiment v&#x00E9;rifi&#x00E9;, mais
+    je suppose que c'est le cas).
+  </p>
+
+
+  <p>
+    D'autres faits en vrac:
+    <ul>
+      <li>
+        COBOL supportait les nombres d&#x00E9;cimaux et &#x00E0; virgule
+        fixe pour r&#x00E9;gler ce probl&#x00E8;me pour g&#x00E9;rer les
+        dollars et les cents dans un environnement d'affaire.
+      </li>
+      <li>
+        Une des repr&#x00E9;sentation sur les mainframes IBM &#x00E9;tait
+        en base 16 (au lieu de base 2). Bien que ceci ne r&#x00E8;gle
+        pas ce probl&#x00E8;me particulier, il donnait de meilleurs
+        performances (pendant le processus de 'normalisation').
+      </li>
+      <li>
+        Les gens qui veulent de hautes performances ne suivent
+        g&#x00E9;n&#x00E9;ralement pas la norme IEEE.
+      </li>
+      <li>
+        Les sp&#x00E9;cifications de la Machine Virtuelle Java initiale
+        *n&#x00E9;cessitait* une repr&#x00E9;sentation IEEE (et le
+        comportement op&#x00E9;rationnel associ&#x00E9;) pour les nombres
+        &#x00E0; virgule flottante. Ceci (devait) assure la
+        portabilit&#x00E9; entre plateformes ... les m&#x00EA;mes calculs
+        devaient donner le m&#x00EA;me r&#x00E9;sultat sur
+        diff&#x00E9;rents syst&#x00E8;mes. Cette exigence a
+        &#x00E9;t&#x00E9; quelque peu rel&#x00E2;ch&#x00E9;e depuis ...
+        pour permettre de meilleures performances de calcul ... et &#x00E0;
+        cause de l'admission qu'il s'agit d'un probl&#x00E8;me insoluble.
+      </li>
+      <li>
+        Je pense que le plupart des gens sont d'accord pour dire que la
+        norme IEEE a des erreurs, mais les gens doivent la suivre
+      </li>
+      <li>
+        Les syst&#x00E8;mes permettant de faire des maths
+        symboliques/pures (Mathematice, MATLAB, Macsyma) supportent les
+        nombres rationels (repr&#x00E9;sentation fractionnelle d'entiers
+        ... 1/3, 2/3) pour essayer d'&#x00E9;viter ce type de
+        probl&#x00E8;me pour les nombres <i>rationels</i>.
+      </li>
+    </ul>
+  </p>
+</section>

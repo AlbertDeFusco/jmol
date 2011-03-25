@@ -1,0 +1,739 @@
+<html>
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script type="text/javascript" src="Jmol.js"></script>
+<script type="text/javascript" src="new.js"></script>
+<script type="text/javascript">
+
+
+function getXYZ() {
+ return jmolEvaluate('"" + {selected}.size + "\n\n"+{selected}.label("%e %x %y %z").lines')
+}
+
+function getXYZ2() {
+ var data = jmolEvaluate('"" + {selected}.size + "\n\n"+{selected}.label("%-2e %10.5x %10.5y %10.5z").lines')
+ dowritenew("<pre>"+data+"</pre>")
+}
+
+function getMOL() {
+ var result = jmolEvaluate('"line1\nline2\nline3\n"+(""+{selected}.size)%-3+(""+{selected}.bonds.size)%-3+"  0  0  0\n"+{selected}.labels("%10.4x%10.4y%10.4z %-2e  0  0  0  0  0").lines+{selected}.bonds.labels("%3D1%3D2%3ORDER  0  0  0").lines')
+ dowritenew("<pre>"+result+"</pre>")
+}
+
+function getMOL2() {
+ var data = ('"line1\nline2\nline3\n"+(""+{selected}.size)%-3+(""+{selected}.bonds.size)%-3+"  0  0  0\n"+{selected}.labels("%-10.4x%-10.4y%-10.4z %2e  0  0  0  0  0").lines+{selected}.bonds.labels("%3D1%3D2%3ORDER  0  0  0").lines')
+ dowritenew("<pre>"+data+"</pre>")
+}
+
+function getPDB() {
+ jmolScriptWait('pdbAtomData = {selected and not hetero}.label("ATOM  %5i  %-3a%1A%3n %1c%4R%1E   %8.3x%8.3y%8.3z%6.2Q%6.2b          %2e  ").lines')
+ jmolScriptWait('pdbHeteroData =   {selected and hetero}.label("HETATM%5i %-4a%1A%3n %1c%4R%1E   %8.3x%8.3y%8.3z%6.2Q%6.2b          %2e  ").lines')
+ var data = jmolEvaluate('pdbAtomData + pdbHeteroData')
+ jmolScriptWait('pdbAtomData = none;pdbHeteroData = none')
+ dowritenew("<pre>"+data+"</pre>")
+}
+
+
+//logLevel=0  // 4 is standard ;1 gives fatal errors only; 2 gives all errors;
+              // 3 gives errors and warnings; 4 gives errors, warnings and information; 5 adds debug.
+
+//<![CDATA[
+//model = "http://www.rcsb.org/pdb/files/1blu.pdb"
+title="ATOMS";
+model=';set echo top left;echo loading quartz.cif...;delay 1;load "quartz.cif" {1 1 1};message done'
+docsearch = document.location.search.substring(1)
+if(docsearch.indexOf("model=")>=0)model=unescape(docsearch.split("model=")[1].split("&")[0])
+
+latestVersion = '### Be sure you have the <a href=http://jmol.sourceforge.net/files>Latest version</a>. Very latest may appear here: <a href=http://www.stolaf.edu/academics/chemapps/jmol/docs/examples-11/Jmol-11_3.zip>Jmol-11_3.zip</a>###'
+
+
+function testanim(app,frame,fileno,modelno,firstno,lastno,isRunning) {
+alert(Math.floor(firstno / 1000000)+ " " + (firstno % 1000000))
+
+ var s = app+" " + frame + " " + fileno+ " " + modelno + " " + firstno + " " + lastno + " " + isRunning;
+ showmsg("",s,"")
+}
+
+
+messagecallback="showmsg"
+animcallback=""
+pickcallback=""
+loadstructcallback=""
+
+delayms = 100; delayms0 = 1000
+polling = false;
+
+Callbacks=new Array("-atomPicked","-fileLoaded","-fileLoadError","-frameChanged","-measurePending","-measureCompleted","-measurePicked","-scriptStarted","-scriptEcho","-scriptStatus","-scriptError","-scriptMessage", "-scriptTerminated","-userAction","-viewerRefreshed","-newOrientation")
+
+function getCheckList(){
+ var s=""
+ var skey=""
+ var ischecked=0
+ for(var i=0;i<Callbacks.length;i++){
+	skey=Callbacks[i]
+	ischecked=(skey.charAt(0)!="-")
+	if(ischecked)polling=true;
+	Callbacks[i]=skey=skey.replace(/\-/,"")
+	s+=" <label><input type=checkbox onclick=getCallbackOptions() id='"+skey+"'"+(ischecked?" checked=1":"")+">"+skey+"</label>"
+	if((i+1)%4==0)s+="<br>"
+ }
+ s+=" <a href=javascript:setOptions(1)>all</a> <a href=javascript:setOptions(0)>none</a> "
+ return s
+}
+
+nSkip = 1;
+
+
+Scripts=new Array(" "
+
+,'This page lists features added between Jmol 11.0 and Jmol 11.2. Other pages describe features introduced between <a href=new.htm>Jmol 10.2 and Jmol 11.0</a> and planned for <a href=new.htm>Jmol 11.4</a>. <a target=_blank href=../index.htm?ver=11.2>Documentation for 11.2</a> is also available. There is also a <a href=new2.txt>simple list</a> of script modifications. Take a look and see what is new. Comments? Suggestions? <a href=mailto:hansonr@stolaf.edu>Bob Hanson</a>'
+
+,latestVersion
+
+,'### perspectiveModel = 11 as default ###'
+,'# The default perspective model for Jmol 11.2.0 is now 11, rather than 10. Tests on installed websites should be done, and if the appearance is not as desired, "set persepectiveModel 10" can be used to force Jmol to use the old perspective model. Differences in models can be investigated using <a href="perspective.htm">perspective.htm</a>. Zoom values in the new (linear) model can result in substantially larger structures. Advantages of using the new model include that (a) the zoom level is now linearly dependent upon the zoom value, (b) there is substantially improved rendering of balls and sticks at high levels of zoom, and (c) molecular "navigation" is possible.'
+,'load 1crn.pdb'
+,'perspectiveModel=10;zoom 100'
+,'perspectiveModel=11;zoom 100'
+,'perspectiveModel=10;zoom 200'
+,'perspectiveModel=11;zoom 170 #roughly the same as 10/200'
+,'perspectiveModel=11;zoom 200'
+,'perspectiveModel=10;zoom 1000'
+,'perspectiveModel=11;zoom 410 #roughly the same as 10/1000'
+,'perspectiveModel=11;zoom 1000'
+
+,'### load "xxx::filename" ###'
+,'# Jmol 11.1.30 introduces the option to specify the format of the file with the filename. This option overrides Jmol\'s internal automatic file typing, which should generally be sufficient. But it is possible that in the future Jmol will read types of files that cannot be so readily distinguished, in which case this option will be important.'
+,'load xyz::caffeine.xyz'
+
+,'### isosurface options BACKLIT, FULLYLIT, FRONTLIT ###'
+,'# Jmol 11.1.29 introduces new options for displaying isosurfaces, particularly cavities and pockets.'
+,'load lta-11(1).xyz'
+,'isosurface INTERIOR sasurface'
+,'isosurface backlit'
+,'isosurface frontlit'
+,'load 1dry.pdb;moveto /* time, axisAngle */ 1.0 { 819 -536 -204 83.74} /* zoom, translation */  246.79 0.0 0.0  /* center, rotationRadius */ {-3.0044985 -0.35549927 7.535001} 34.60526;'
+,'isosurface minset 500 pocket sasurface'
+,'isosurface frontlit'
+,'isosurface backlit'
+,'isosurface fullylit'
+
+,'### isosurface POCKET, INTERIOR, and minSET n ###'
+,'# Jmol 11.1.29 introduces the capability to distinguish between cavities and surfaces that are internal to an overall structure. In addition, the POCKET keyword, which can be used along with CAVITY or any surface type, includes only surfaces that are not internal -- that have an opening, that is. In the case of POCKET CAVITY, the cavities are opened so that they can be looked into. POCKET can tend to produce numerous fragments; the added MINSET n option allows discarding of smaller fragments. '
+,'load lta-11(1).xyz'
+,'isosurface POCKET cavity 1.0 sasurface 0.2'
+,'isosurface minset 1000 POCKET cavity 1.0 sasurface 0.2'
+,'isosurface minset 1000 INTERIOR cavity 1.0 sasurface 0.2'
+,'isosurface delete;isosurface pocket sasurface 1.2'
+
+,'### hypertext links for ECHO ###'
+,'# Jmol 11.1.28 introduces the capability to tie an echo (2D- or 3D-positioned) to a script so that it acts just like a hypertext link on a web page. Reducing the hover delay time matches better the behavior of a web page link. See also <a href=buttons.htm>buttons.htm</a>.'
+,'set hoverDelay 0.1; set echo bottom center;font echo 10; background echo yellow; echo change background color;set echo bottom script "if backGroundColor == \\"[xffffff]\\";backGround black;else;background white;endif "'
+
+
+,'### new "javascript" command and x = javascript("...") [applet only] ###'
+,'# Jmol 11.1.28 allows excution of a javaScript command within Jmol and assignment of the return of a JavaScript command to a variable. For applications that should not allow execution of JavaScript within an applet, add <b>_jmol.noEval = true</b> as part of the page code.'
+,'javascript alert("this is a message from Jmol")'
+,'x = javascript("document.location")'
+,'set echo top right; echo %{javascript("document.location").split("/")[-1]}'
+,'javascript jmolScript("javascript alert(\'this is nuts\')")'
+
+,'### x = script("...") ###'
+,'# Jmol 11.1.28 allows assignment of the messages normally going to the message cue or return of a JavaScript command to a variable.'
+,'load quartz.cif {1 1 1}'
+,'x = script("show symmetry");message @x'
+,'x = script("show symmetry").lines.find("Spacegroup");message @x'
+,'x = script("show symmetry").lines.find("Spacegroup").split(":")[2];message @x'
+,'set echo top right; echo %{script("show symmetry").lines.find("Spacegroup").split(":")[2]}'
+
+
+,'### MOPAC 2007 GRAPHF "mgf" file reading and new MO options HOMO and LUMO ###'
+,'# Jmol 11.1.28 reads MOPAC 2007 (Version 7.101 or higher) formatted GRAPHF data. In addition, you can now specify HOMO or LUMO provided the data in the file includes orbital-occupancy numbers.'
+,'load Formaldehyde.mgf;moveto /* time, axisAngle */ 1.0 { -985 -134 -104 61.72} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {0.8964291 -1.655519E-4 0.0} 2.596429;'
+,'mo 4'
+,'mo HOMO'
+,'mo LUMO'
+,'mo LUMO +1'
+,'mo HOMO -1'
+,'load fe(c5h5)2.mgf;moveto 1.0 { -985 -134 -104 61.72} 80;'
+,'mo HOMO'
+,'mo next'
+,'mo prev'
+
+
+,'### CSF molecular orbital reading from AM1, PM3, EHT, Gaussian, and DFT calculations; MO default rendering change ###'
+,'# Jmol 11.1.28 can read and display MOPAC, Extended Huckel, and Density Functional molecular orbitals created using CACHe (now <a href=http://www.computers.us.fujitsu.com/www/products_bioscience.shtml?products/bioscience/cache>Sigress</a>). In addition, Jmol 11.1.28 changes the default rendering for molecular orbitals using the MO command to <b>MESH NOFILL FRONTONLY</b>'
+,'load Gaussian.csf;moveto /* time, axisAngle */ 1.0 { -997 -67 -46 65.17} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {-0.5420239 0.004712522 1.4899998E-4} 2.587429;'
+,'mo homo'
+,'mo lumo'
+,'mo 20'
+,'mo next # click this a time or two'
+,'mo prev'
+
+,'### MO/ISOSURFACE/PMESH FRONTONLY/NOTFRONTONLY, TRIANGLES/NOTRIANGLES ###'
+,'# Jmol 11.1.28 introduces two new options for displaying molecular orbitals and other isosurfaces. FRONTONLY displays just the front of the surface -- especially useful in the context MESH NOFILL FRONTONLY. TRIANGLES displays the surface with a bit of space between each rendered triangle, mostly for debugging or educational purposes.'
+,'load FeBr2.csf;moveto /* time, axisAngle */ 1.0 { -742 668 60 39.66} /* zoom, translation */  400.0 0.0 0.0  /* center, rotationRadius */ {2.31 0.0 0.0} 4.41;'
+,'mo homo'
+,'mo mesh nofill notfrontonly'
+,'mo mesh nofill frontonly'
+,'mo fill nomesh triangles'
+,'mo fill nomesh notriangles'
+
+
+,'### isosurface list AND ISOSURFACE IDENTIFIER CHANGE ###'
+,'# Jmol 11.1.28 adds <b>isosurface LIST</b> to give more information about loaded isosurfaces. In addition, there is a change to previous versions: When an isosurface is created but no identifier is included, then the previously created isosurface is replaced with the new isosurface. In previous versions, when no identifier was used, a new isosurface was created. THIS IS NO LONGER THE CASE. Note that this is only in the case of isosurface creation. The command ISOSURFACE DELETE still deletes all isosurfaces.' 
+
+,'### unicode characters in Jmol ###'
+,'# Jmol 11.1.26 adds the ability to read and write scripts that include unicode characters escaped using the \\uxxxx convention. (Second column of <a target=_blank href=http://unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP932.TXT>UNICODE reference</a>). It is important to use quotation marks around the label or echo string if unicode characters are used.'
+,'load caffeine.xyz'
+,'set echo top left;echo "alpha is \u03B1"'
+
+
+,'### JVXL files from MOs ###'
+,'# Jmol 11.1.26 fixes a bug introduced in 11.1.0 that caused Jmol to create invalid JVXL files created from structure-file-based molecular orbital data. These orbitals appear without any color.'
+
+,'### fully independent GeoSurface and Dots ###'
+,'# Code reformulation in Jmol 11.1.25 allowed for the separation of "dots" from "geoSurface," which are now two totally independent objects. geoSurface default coloring is now much like dots -- inheriting the color of the associated atoms -- but with the added characteristic that a geosurface can be made translucent. However, the way geosurfaces are constructed -- by overlapping geodesic fragments -- may not be conducive to translucency.'
+,'load caffeine.xyz;zoom 50'
+,'geosurface on'
+,'color geosurface translucent 3 yellow'
+,'dots +0.3'
+,'geosurface off'
+,'### cavity depiction for biomolecules ###'
+,'# Jmol 11.1.24 introduces the capability to render cavities using ISOSURFACE as though they were "filled with foam." Four parameters are involved: (1) a selected atom set, (2) a set of atoms to ignore (probably solvent and/or a ligand in the cavity itself), (3) an "envelope radius" (typically 3 to 10 Angstroms), and (4) a cavity minimum diameter. The envelope radius only affects cavity identification in the perifery of the model. It can be thought of as the radius of the maximum opening radius of the cavity. If this number is small, then cavities will not be identified as part of large molecular folds. '
+,'load 1crn.pdb'
+,'isosurface s1 cavity 1.2 10'
+,'isosurface s1 cavity 1.2 6'
+,'isosurface s1 cavity 0.5 6'
+,'isosurface s1 cavity 0.1 3'
+
+
+,'### isosurface WITHIN x.xx {point}  ###'
+,'# Jmol allows the rendering of isosurface fragments. Starting with Jmol 11.1.22, the WITHIN parameter allows specification of a number of angstroms around some point in space. An atom expression may be used, in which case its geometric center is used as the reference point. Note that this is in distinction to the use of WITHIN in "isosurface select(within x.xxx, some_atom_expression)", where it indicates that Jmol should select for the isosurface only atoms "within x.xxx Angstroms of ANY atom" of the expression.'
+,'load 2by9.pdb;moveto /* time, axisAngle */ 1.0 { -917 -400 -18 106.08} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {23.699003 21.285 22.801003} 29.576609;'
+,'isosurface s1 within 10.0 (atomno=185) sasurface'
+,'isosurface s1 within 10.0 (atomno=185) sasurface colorscheme rwb color absolute 0 20 map property temperature translucent 0.2'
+,'isosurface s2 within 8.0 (atomno=433) sasurface colorscheme rwb color absolute 0 20 map property temperature translucent 0.2'
+
+
+,'### isosurface MODEL n  ###'
+,'# In general, when an isosurface is created you must be displaying the single model to which it is to be associated. Now you can use the MODEL keyword followed by a "file.model" number (1.1, 2.1, etc.) to specify an associated model.'
+,'load cyclohexane_movie.xyz'
+,'isosurface model 1.2 plane {1 1 1 0};'
+,'isosurface model 1.8 plane {1 -1 1 0};'
+,'frame 0'
+,'frame 1.2'
+,'frame 1.8'
+,'animation on'
+
+,'### specifying width and height in WRITE ###'
+,'# Jmol 11.1.22 allows writing of JPG and other image file formats with new width and height specified. For example, regardless of the size of the application window, <b>write image 800 600 "pic.jpg"</b> creates a JPG file 800 pixels wide by 600 pixels high. Too large a width/height combination may exhaust available memory and lead to program failure.'
+
+,'### load APPEND / data "APPEND" and set appendNew  ###'
+,'# Jmol 11.1.22 introduces the capability to load model data either from files or inline without losing the current model. The default is to load the new data into a new model frame, but if <b>appendNew = false</b> is issued first, then the new data (provided it is a single model) is appended to the currently displayed model, creating no new model. This in effect makes loading multiple files all in one command unnecessary (but still possibly convenient). By default, models are loaded into new frames, but this can be changed by setting appendNew=false. In that case, files or data containing single models will be appended to the data in the CURRENT FRAME.'
+,'load caffeine.xyz'
+,'set appendNew true;load append cyclohexane_movie.xyz'
+,'file 1'
+,'file 2'
+,'model 1.1'
+,'model 2.5'
+,'load caffeine.xyz;set appendNew false;load append cholesterol.mol'
+,'load caffeine.xyz;set appendNew false;data "append"|2|testing|C 2 2 2|O 1 1 1|end "append"'
+
+
+,'### load =xxxx and set loadFormat  ###'
+,'# The Jmol application can read files from any URL. Starting with Jmol 11.1.22, <b>load =xxxx</b> allows quick access to files in a standard directory anywhere on the host computer or the web. Simply supply a formatted string as the loadFormat variable, and you can load files in that directory simply by preceding their name on the load line with an = sign. The default is <b>loadFormat = "http://www.rcsb.org/pdb/files/%FILE.pdb"</b>, so from the application <b>load =1crn</b> loads 1crn.pdb directly from the RCSB web site. On the web, this forms an alternative to <b>defaultDirectory</b>.'
+,'loadFormat = "./%FILE.pdb"'
+,'load =1crn'
+,'load caffeine.xyz'
+,'load files "=1crn" "=2by9";frame 0'
+
+
+,'### load FILES  ###'
+,'# A nonsense quoted string is no longer necessary for multiple file loading. Starting with Jmol 11.1.22 you can use the keyword "FILES". File names should still be in quotes.'
+,'load FILES "caffeine.xyz" "1crn.pdb";frame 0'
+
+
+,'### variable translucency ###'
+,'# Jmol 11.1.21 introduces variable translucency. <b>color xxxx translucent n</b> where xxxx is some object such as atoms or bonds or cartoons, and n is one of: (a) a decimal from 0.0 (opaque) to 1.0 (transparent), (b) a number 2-9, in increasing steps of translucency, or (c) a number 20-255. On this last scale 20 is opaque and 255 is transparent. Note that "transparent" (1.0 or 8 or 255) is <i>invisible</i> but still counting as "visible" in a select command. Translucency of -1 is the former "screened" translucency of Jmol 10.2.'
+,'load caffeine.xyz;isosurface molecular'
+,'color isosurface translucent -1'
+,'color isosurface translucent 0.0'
+,'color isosurface translucent 0.2'
+,'color isosurface translucent 0.4'
+,'color isosurface translucent 0.6'
+,'color isosurface translucent 0.8'
+,'color isosurface translucent 1.0'
+,'color isosurface translucent 2'
+,'color isosurface translucent 3'
+,'color isosurface translucent 4'
+,'color isosurface translucent 5'
+,'color isosurface translucent 6'
+,'color isosurface translucent 7'
+,'color isosurface translucent 32'
+,'color isosurface translucent 64'
+,'color isosurface translucent 96'
+,'color isosurface translucent 128'
+,'color isosurface translucent 192'
+,'color isosurface translucent 224'
+,'color isosurface translucent 256'
+
+,'### color axis1 and set showAxes true ###'
+,'# Jmol 11.1.20 enables differential coloring of axes. In addition, a change relative to Jmol 11.0 is that these colorations persist past file loading -- they are more like background than actual model-associated objects. You can turn axes off and on without clearing their diameter or color using <b>showAxes = TRUE</b> or <b>showAxes = false</b>.'
+,'load quartz.cif {1 1 1};rotate x 30'
+,'color axis1 purple'
+,'color axis2 [xFFFF00];axes 0.1'
+,'set showAxes false'
+,'set showAxes true'
+,'color axis3 [200,100,50]'
+,'load caffeine.xyz;axes molecular;axes on'
+,'color axes red'
+
+
+,'### user-defined properties and isosurface VARIABLE x ###'
+,'# Jmol 11.1.18/19 introduces user-defined atom properties. The data are first loaded into a variable from a file. Values in the file can be interspersed with text and/or white-space (tabs, space characters, new lines), '
++'in which case only the numbers will be read. The data can be visualized by applying them to an isosurface using <b>isosurface variable x</b>, which maps one value from the file to each atom in the model (starting with the first model atom) '
++'and then displays a van der Waals radius isosurface using those colors. Atomic data may also be assigned to a specific subset of the model\'s atoms using the <b>data</b> command in the form <b>select (some atoms);data "property_myprop @x"</b>. '
++'Quotes and the prefix "property_" are required. "x" may be any previously assigned variable name. Then the command <b>isosurface property_myprop</b> displays color only at the specified atom positions.'
+
+,'load caffeine.xyz'
+,'x = "1 3 5 7 9 8 6 4 2 0";'
+,'select carbon;data "property_x @x"'
+,'print {*}.property_x # average'
+,'x5 = {carbon}[5].property_x;print x5 # 5th atom'
+,'print {carbon}.property_x.min # minimum value'
+,'print {carbon}.property_x.max # maximum value'
+,'select {carbon}[5];label @x5;color label black;color label background yellow'
+,'select *;dots 0.5;color dots property_x'
+
+,'### isosurface COLORSCHEME bwr ###'
+,'# Jmol 11.1.18 adds "bwr" to the list of colorschemes. It is simply blue-white-red, the reverse of rwb. Merely for convenience.'
+,'load 1crn.pdb;isosurface sasurface 1.2 map colorscheme rwb property temperature'
+,'load 1crn.pdb;isosurface sasurface 1.2 map colorscheme bwr property temperature'
+
+
+,'### isosurface mapping of atomic properties ###'
+,'# Jmol 11.1.18 introduces the capability to map any standard atom property (temperature, surfacedistance, atomno, elemno, charge, etc.) onto an isosurface.'
+,'load 1crn.pdb'
+,'isosurface sasurface 1.2 map colorscheme rwb property temperature translucent 0.5'
+
+,'### support for APBS multigrid output files ###'
+,'# Jmol 11.1.18 adds support for <a href="http://apbs.sourceforge.net">Adaptive Poisson-Boltzmann Solver</a> "multigrid-dx" files for creating electrostatic potential maps of biomolecules. The files are used just like CUBE files, after the MAP parameter. These files are VERY large (> 10 Mb). Shown here is a JVXL equivalent created using the command <b><isosurface s1 sasurface color absolute -5 5 map "1dry-mep.dx";write isosurface "1dry-mep.jvxl"</b>. The original DX file was 12.9 Mb (mapping data only, without the isosurface); the JVXL file is 65 K, including both isosurface and mapping data - a compression ratio of roughly 200:1 over the DX file and 400:1 overall. An extra keyword has been added to the JVXL format as part of this feature. Normally JVXL files are in BOHR -- same as CUBE files; however if the keyword ANGSTROMS appears on line three, then all units are assumed to be in Angstrom, not Bohr.'
+,'load 1dry.pdb'
+,'isosurface s1 "1dry-mep.jvxl"'
+,'isosurface s1 colorscheme bwr "1dry-mep.jvxl"'
+
+
+,'### min/max modifier for properties ###'
+,'# Jmol 11.1.15/16 adds min and max. '
+,'load caffeine.xyz'
+,'print {*}.bonds.length.max  #the longest bond length'
+,'print {*}.atoms.max.xyz         #the coordinates of the last atom'
+,'y = {*}.atoms.max.xyz + {-1 -1 0};print y;draw @y "this is the last atom"'
+,'y = {*}.atoms.max.xyz + 0.5;set echo lastAtom @y; echo "this is the last atom"'
+
+,'### new Jmol.js "jmolEvaluate()" function ###'
+,'# Since Jmol 11.1.14 now allows "molecular math" to be carried out, it seems a natural extension to introduce a JavaScript function that returns a number or string as appropriate. The code behind the first is simply: <br/><br/>JavaScript:alert(jmolEvaluate(prompt(\'enter molecular math\',\'{oxygen} + {carbon}\')))<br /><br />'
+,'load caffeine.xyz'
+,'<a href="JavaScript:alert(jmolEvaluate(prompt(\'enter molecular math\',\'{oxygen} + {carbon}\')))">evaluate molecular math</a>'
+,'<a href="JavaScript:alert(jmolEvaluate(prompt(\'enter molecular math\',\'(2.0 * {carbon}  + 2 + {nitrogen} - {hydrogen})/2\')))">degree of unsaturation</a>'
+,'<a href="JavaScript:alert(jmolEvaluate(prompt(\'enter molecular math\',\'&quot;The number of methyl groups is &quot; + {carbon and connected(3,hydrogen)}.size\')))">number of methyl groups</a>'
+,'<a href="JavaScript:alert(jmolEvaluate(prompt(\'enter molecular math\',\'{carbon}.xyz\')))">average carbon position</a>'
+,'<a href="JavaScript:alert(jmolEvaluate(prompt(\'enter molecular math\',\'({oxygen}.xyz).distance({carbon}.xyz)\')))">distance from average oxygen position to average carbon position</a>'
+,'draw line1 (oxygen) (carbon)'
+,'<a href="JavaScript:jmolScriptWait(\'select (carbon)[3]; color yellow;\');alert(jmolEvaluate(prompt(\'enter molecular math\',\'{carbon}[3].ident\')))">identity of the third carbon</a>'
+,'<a href="JavaScript:jmolScriptWait(\'set bondmode or\');alert(jmolEvaluate(prompt(\'enter molecular math\',\'{carbon}[3].bonds.ident\')))">list bonds to the third carbon</a>'
+
+
+,'### new {atom expression}.label "xxxx" for SET ###'
+,'# Jmol 11.1.14 now allows customized output of atom data. Click on the next line, then select some atoms, then click on that last line.'
+,'load caffeine.xyz;set picking select;selectionHalos on'
+,'# now deselect some atoms'
+,'set picking ident;getProperty "evaluate" "\\"\\n\\"+{selected}.size+\\"\\n\\n\\"+ {selected}.label(\\"%a %x %y %z\\")"'
+,'<a href="javascript:alert(getXYZ())">using JavaScript and an alert</a>'
+,'<a href="javascript:getXYZ2()">or XYZ data to a new window</a>'
+,'<a href="javascript:getMOL()">or MOL data to a new window</a>'
+,'<a href="javascript:getPDB()">or PDB data to a new window</a>'
+
+,'### new {atom expression}.distance({atom expression}) and set dynamicMeasurements ###'
+,'# Jmol 11.1.14 adds a new atom property, "distance" for IF and SET commands. Since we can now move atoms relative to others it may be important to have measures automatically updating as well. '
+,'load "files" "cholesterol.mol" "cholesterol.mol";moveto /* time, axisAngle */ 1.0 { -995 -57 -81 63.0} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {1.5921419 5.311639 3.3426435} 14.3;'
+,'select file=1;translateSelected {0 5 5};file 0;center visible;'
+,'select file=1;invertSelected POINT (*/1.1);rotateSelected x 180;rotateSelected y 180'
+,'rotateSelected spin internal X 10'
+,'set allowRotateSelected true;set dynamicMeasurements;set measure angstroms; measure (oxygen/1) (oxygen/2)'
+,'spin off'
+,'set echo top left;set picking select;selectionhalos on;select oxygen'
+,'echo the average distance in Angstroms from |the atoms selected|in one model to the other|is %{{selected and */1.1}.distance({selected and */2.1})} Angstroms.'
+,'font echo 12'
+,'# go ahead and manipulate the models while they turn. Make more measurements if you like. Press the ALT key to rotate just the top model.'
+
+
+,'### new {atom expression}.atomProperty ###'
+,'# Jmol 11.1.14 introduces the capability to probe a model for information in a very simple way. Just add "." and an atom property after the braces. '
+,'load cholesterol.mol;moveto /* time, axisAngle */ 1.0 { -894 446 46 44.7} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {-0.79554987 2.6462 0.8125} 10.3;'
+,'set echo top left;set picking select;selectionhalos on;select none'
+,'echo the average coordinate of the selected atoms is | {%{{selected}.x},%{{selected}.y},%{{selected}.z}};font echo 12;select oxygen'
+
+,'### new %{{atom expression}} variable data into MESSAGE and ECHO text ###'
+,'Jmol 11.1.14 introduces the capability to insert data dynamically into message and echo text. '
+,'load cholesterol.mol;moveto /* time, axisAngle */ 1.0 { -894 446 46 44.7} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {-0.79554987 2.6462 0.8125} 10.3;'
+,'set echo top left;set picking select;selectionhalos on;select none'
+,'echo You have selected  %{{carbon and selected}.size} carbon atoms.'
+
+,'###  {atom expression} in IF and SET ###'
+,'Jmol 11.1.14 IF and SET statements can use braces to mean "the number of atoms" matching an atom expression. Note the use of braces, not parentheses here. '
+,'load cholesterol.mol;moveto /* time, axisAngle */ 1.0 { -894 446 46 44.7} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {-0.79554987 2.6462 0.8125} 10.3;'
+,'nOxygen = {oxygen}.size;nHydrogen = {hydrogen}.size;nCarbon = {carbon}.size; print ": O" + nOxygen + " H" + nHydrogen + " C" + nCarbon'
+,'nC2 = nCarbon * 2;print nC2'
+,'nHsat = nC2 + 2;print nHsat'
+,'diff = nHsat - nHydrogen;print diff'
+,'deg = diff / 2;print deg'
+,'# Alternatively, you can do these all together:'
+,'deg = (2.0 * {carbon}  + 2 - {hydrogen}) / 2;print deg'
+
+,'set echo top left;echo Degree of Unsaturation = %{deg}'
+
+,'### new "invertSelected" command ###'
+,'# Jmol 11.1.13 introduces the capability to invert atom positions across a plane or through a point. These position changes are recorded in the state via a new DATA "coord" type.'
+,'load cholesterol.mol;moveto /* time, axisAngle */ 1.0 { -957 289 -16 72.1} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {-0.79554987 2.6462 0.8125} 10.3;'
+,'invertSelected POINT (*)'
+,'invertSelected'
+,'invertSelected POINT (C5)'
+,'invertSelected POINT (C5)'
+,'select connected(C5) and not carbon;'
+,'select selected or connected(selected) and not C5;'
+,'invertSelected PLANE (c4) (c5) (c6)'
+,'invertSelected PLANE (c4) (c5) (c6)'
+,'# Voile -- instant epimerization -- sure beats diethylazodicarboxylate!'
+
+,'### new "rotateSelected" command ###'
+,'# Jmol 11.1.13 introduces the capability to rotate only SELECTED molecules.'
+,'load "files" "cholesterol.mol" "cholesterol.mol";moveto /* time, axisAngle */ 1.0 { -995 -57 -81 63.0} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {1.5921419 5.311639 3.3426435} 14.3;'
+,'select file=1;translateSelected {0 5 5};file 0;center visible;'
+,'select file=1;invertSelected POINT (*/1)'
+,'select file=1;rotateSelected x 180;'
+,'select file=1;rotateSelected y 180;'
+,'select file=1;rotateSelected spin internal X 10'
+,'set allowRotateSelected true'
+,'# go ahead and manipulate the models while they turn. Press the ALT key to rotate just the top model.'
+
+,'### new "write coords" command ###'
+,'# The Jmol 11.1.13 application (not applet) allows you to write the (selected) atom coordinates to a script file.'
+,'load cholesterol.mol'
+,'invertselected'
+,'write coord myfile.spt'
+
+
+,'### new "file" command ###'
+,'# Jmol 11.1.12 introduces the "file" command for use when multiple files are loaded. <b>file n</b>, where n is an integer, makes all models contained in the nth file loaded displayable, resets the animation range to that set of models and, if all atoms are in the display set (<b>display *</b>), displays all atoms in that set of models. It is equivalent to <b>frames n</b> in a multifile context or <b>frames ALL</b> in a single-file/multi-model context.'
+,'load "files" "cyclohexane_movie.xyz" "caffeine.xyz"'
+,'file 1'
+,'file 2'
+,'file 0'
+
+,'### new select file= option ###'
+,'# Jmol 11.1.12 allows quick selection of all atoms in all models from a specific file in a multi-file context.'
+,'load "files" "cyclohexane_movie.xyz" "caffeine.xyz"'
+,'file 0'
+,'select file=1;color yellow'
+,'select file=2;spacefill off'
+,'display file=1'
+,'display file=2'
+,'file 0;select file=2;translateselected {0 3 3};display file=2 or model=1.7'
+,'script selectfile.spt'
+
+,'### variables allowed in Jmol commands ###'
+,'# Jmol 11.1.12 introduces a whole new concept in variables. Once a variable is assigned a value, you can use it in ANY Jmol command by prepending an @ sign to it. This allows, for example, variable spacefill or file names or basically anything. You do have to stay away from special names for variables such as "radius" -- pick names that you know will be unique.'
+,'load gold.cif {5 5 5};'
+,'auRadius = 0.4'
+,'spacefill @auRadius; auRadius = auRadius * 1.5'
+,'#now click on the above link a few times'
+,'script gold.spt # some nice effects are now easily scripted'
+,'# this is a VERY simple script file <a href=data/gold.spt>gold.spt</a>'
+
+,'### /** **/ super-comments ###'
+,'# There are occasions when one would like to comment out comments. Jmol 11.1.12 detects /** ... **/ as super-comments -- comments that can envelope /*... */ comments. These comments can be used to temporarily comment out blocks of script that already have /*...*/ comments present.'
+
+,'### set showScript ###'
+,'# Jmol 11.1.9 introduces <b>set showScript</b>, a simple way to display the contents of a script file while it is running. The format is "[scriptLevel.lineNumber.commandNumber]". You can slow down the script by a specified number of milliseconds per command if you wish. After running the script, use the <a href=javascript:showmsgbox()>popup</a> window to see what transpired.'
+,'set showScript on'
+,'script testscript.spt'
+,'set showScript off'
+,'set showScript 1000'
+,'script testscript.spt'
+,'set showScript off'
+
+,'### new script command options ###'
+,'# Jmol 11.1.9 introduces three new script options: CHECK, LINE n, and COMMAND n. The first just checks the script, including file loading. The other two options allow for starting the script at different points.'
+,'script testscript.spt CHECK'
+,'set showScript on'
+,'script testscript.spt LINE 3'
+,'script testscript.spt COMMAND 3'
+,'set showScript off'
+
+
+
+,'### new goto command ###'
+,'# Jmol 11.1.9 introduces the GOTO command. The label to goto is specified using a MESSAGE command. If the label starts with underscore, _xxxx, then the jump is silent, otherwise the message text is displayed. Check out <a href=data/testscript2.spt>testcript2.spt</a>.'
+,'set showScript on'
+,'script testscript2.spt'
+,'set showScript off'
+
+
+,'### new file.model notation ###'
+,'# Jmol 11.1.9 introduces a simple way of addressing specific models in specific files when multiple files are loaded: <b>file.model</b>. If the model is "0", then all models for that file are selected.'
+,'load "files" "caffeine.xyz" "cyclohexane_movie.xyz"'
+,'frame all'
+,'display 1.1'
+,'display 2.1,2.7'
+,'select 2.1,2.10;color yellow'
+,'select C1*/2.0;color green # all C-1 carbons in all models in the cyclohexane movie'
+,'frame range 2.1 2.10;display *'
+,'animation play'
+,'animation rewind'
+
+
+
+,'### select connected() with bond type option ###'
+,'# Jmol 11.1.8 introduces the capability to select for specific types of connections.'
+,'load caffeine.xyz;connect (_C) (_O) double modify;select none;selectionHalos on'
+,'select connected(double)'
+,'select connected(double, carbon)'
+,'select connected(0,single)'
+,'select connected(2,3,single)'
+
+,'### connect with radius/color options ###'
+,'# Jmol 11.1.8 introduces the capability to specify radius and color/translucency when make new and modify old connections (bonds).'
+,'load caffeine.xyz'
+,'connect 1.405 1.425 (_C) (_N) red'
+,'connect (_C) (_H) radius 0.05'
+,'connect 1.5 2.5 (_H) (_O) hbond radius 0.1 translucent yellow create'
+
+,'### internal slabbing ###<br><img src=img/slab.jpg width=100 height=100>'
+,'# Jmol 11.1.5 introduces the capability to slab "internally" -- that is based on model coordinates (so that the user can see the slabbed model from different perspectives). Both slab and depth are supported.'
+,'load 1crn.pdb;cartoon on;isosurface sasurface'
+,'slab plane x=10;slab on;moveto /* time, axisAngle */ 1.0 { 28 -880 474 56.2} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {9.268828 9.787275 6.9670877} 17.6;'
+,'slab off'
+,'# In this next example, we load a crystal, define two planes using isosurface, and use those planes to define the slabbing surfaces'
+,'load quartz.cif {2 2 2};moveto /* time, axisAngle */ 1.0 { -997 -20 -72 30.0} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {2.5324771 4.257381 5.4054003} 10.7;slab on;'
+,'isosurface p1 hkl {1/2 1/2 1/2};isosurface p2 hkl {1/4 1/4 1/4};'
+,'isosurface;isosurface off'
+,'depth plane $p1;'
+,'slab plane $p2;'
+,'select not clickable;color translucent yellow;'
+,'slab off'
+,'# direct use of Miller planes in slab or depth:'
+,'depth plane none;slab hkl {1/3 1/3 1/3};slab on'
+,'slab plane none;depth hkl {1/2 1/2 1/2};slab on'
+,'# all the slabbing is embedded in the cIF file on this one:'
+,'load quartz-slab.cif'
+
+
+
+,'### navigation ###'
+,'# Starting with Jmol 11.1.5 you can use the arrow keys to "navigate" through a model. The idea is to be able to drive a navigation point around/through a model. See <a href=../misc/navigation.pdf>navigation.pdf</a> for details regarding the new Jmol 11 perspective/navigation model.'
+,'load 1crn.pdb;select *;cartoon on;color group;'
+,'set navigationMode; # Automatically loads perspective model 11, which included navigation. Now use the arrow keys'
+,'navigate 3 depth 50;'
+,'navigate 3 center (*);'
+,'navigate 2 trace (*);'
+,'set navigationMode off'
+
+,'### show set ###'
+,'# Jmol 11.1.1 allows you to get a list of all settings using <b>show set</b>.'
+,'show set'
+
+,'### write MO filename; write ISOSURFACE filename ###'
+,'# Jmol 11.1.0 allows writing of JVXL files directly from scripts in the Jmol application (not the applet). This allows, among other things, for fully automated no-display creation of JVXL files using, for example: <b>Jmol.jar -ions t.spt</b> where t.spt includes something such as "load file.smol; mo 37; write mo mo37.jvxl".'
+,' <a href=javascript:dotest(-1)>[appletInfo]</a>'
+ +' <a href=javascript:dotest(-2)>[animationInfo]</a>'
+ +' <a href=javascript:dotest(0)>[fileName]</a>'
+ +' <a href=javascript:dotest(1)>[fileHeader]</a>'
+ +' <a href=javascript:dotest(2)>[fileContents]</a>'
+ +'<br><a href=javascript:dotest(8.1)>[atomList]</a>'
+ +' <a href=javascript:dotest(8)>[atomInfo]</a>'
+ +' <a href=javascript:dotest(7)>[bondInfo]</a>'
+ +' <a href=javascript:dotest(7.5)>[moleculeInfo]</a>'
+ +" <a href=javascript:dotest(10)>[extractModel]</a>"
+ +'<br><a href=javascript:dotest(3)>[orientationInfo]</a>'
+ +' <a href=javascript:dotest(3.1)>[auxiliaryInfo]</a>'
+ +' <a href=javascript:dotest(3.2)>[transformInfo]</a>'
+ +' <a href=javascript:dotest(3.3)>[centerInfo]</a>'
+ +' <a href=javascript:dotest(3.4)>[boundboxInfo]</a>'
+ +"<br><a href=javascript:dotest(4)>[modelInfo]</a>"
+ +" <a href=javascript:dotest(4.2)>[polymerInfo]</a>"
+ +" <a href=javascript:dotest(4.3)>[chainInfo]</a>"
+ +" <a href=javascript:dotest(4.4)>[shapeInfo]</a>"
+ +" <a href=javascript:dotest(4.5)>[stateInfo]</a>"
+ +" <a href=javascript:dotest(9)>[reload THIS orientation]</a>"
+ +"<br><br>"
+
+//," JSON data returned:<br><textarea name=outputJSON id=outputJSON rows=5 cols=50></textarea>"
+," <input  type=checkbox name=idecode id=idecode checked=1>Decoded: <a href=javascript:showoutput()>new window</a><br><textarea name=output id=output rows=5 cols=50 wrap=off></textarea>"
+)
+remarks=""
+//]]>
+
+
+function getCallbackOptions(){
+ var s=""
+ for(var i=0;i<Callbacks.length;i++)if(document.getElementById(Callbacks[i]).checked)s+=Callbacks[i]
+ var waspolling = polling
+ polling = (s!="")
+ if(polling && !waspolling)pollApplet()
+ return "monitoring:"+s
+}
+
+function pollApplet(){
+   whatm=getCallbackOptions()
+   if(!polling){
+	document.title = ""
+	return
+   }
+   document.title = (new Date())
+   var A=jmolGetStatus(whatm)
+   parseMessages(A)
+   if(polling)setTimeout("pollApplet()",delayms)
+}
+
+function setOptions(all_or_none){
+ for(var i=0;i<Callbacks.length;i++)document.getElementById(Callbacks[i]).checked = all_or_none
+ polling = (all_or_none == 1) 
+}
+
+
+function test1() {
+ jmolSetAtomCoordRelative(Math.floor(Math.random()*6),Math.random()/5-0.1,Math.random()/5-0.1,Math.random()/5-0.1)
+ jmolScriptWait("refresh")
+}
+
+function fire(i0,n){
+ for(var i=0; i < n; i++) {
+   //alert(Scripts[i0+i]);
+   jmolScript(Scripts[i0+i]);
+ }
+}
+
+
+what="visible"
+whatp="centerInfo"
+whatm=""
+
+function xshowoutput(s){ if(!s) s=document.getElementById("output").value; dowritenew("<pre>"+s+"</pre>") };function oldshowoutput(){
+ dowritenew("<pre>"+document.getElementById("output").value+"</pre>")
+}
+
+function dotest(iwhat){
+ if(iwhat!=3)monitoron=false
+ var s=""
+ var sJSON=""
+ var info=""
+ var sinfo=""
+ var sparam=""
+ var str=""
+ if(iwhat==-1){
+   sinfo="appletInfo"
+ }else if(iwhat==-2){
+   sinfo="animationInfo"
+ }else if(iwhat==0){
+   str="fileName"
+ }else if(iwhat==1){
+   str="fileHeader"
+   info = jmolGetPropertyAsString(sinfo)
+ }else if(iwhat==2){
+   str="fileContents"
+ }else if(iwhat==3){
+   sinfo="orientationInfo"
+ }else if(iwhat==3.1){
+   sinfo="auxiliaryInfo"
+ }else if(iwhat==3.2){
+   sinfo="transformInfo"
+ }else if(iwhat==3.3){
+   sinfo="centerInfo"
+ }else if(iwhat==3.4){
+   sinfo="boundboxInfo"
+ }else if(iwhat==3.5){
+   sinfo="zoomInfo"
+ }else if(iwhat==4){
+   sinfo="modelInfo"
+ }else if(iwhat==4.2){
+   sparam="PROMPT"
+   sinfo="polymerInfo"
+ }else if(iwhat==4.3){
+   sparam="PROMPT"
+   sinfo="chainInfo"
+ }else if(iwhat==4.4){
+   sinfo="shapeInfo"
+ }else if(iwhat==4.5){
+   sparam="visible"
+   sinfo="stateInfo"
+ }else if(iwhat==7){
+   sparam="PROMPT"
+   sinfo="bondInfo"
+ }else if(iwhat==7.5){
+   sparam="PROMPT"
+   sinfo="moleculeInfo"
+ }else if(iwhat==8){
+   sparam="PROMPT"
+   sinfo="atomInfo"
+ }else if(iwhat==8.1){
+   sparam="PROMPT"
+   sinfo="atomList"
+ }else if(iwhat==9){
+   info = jmolGetPropertyAsArray("orientationInfo")
+   s="load "+jmolGetPropertyAsString("fileName")+";"+info.moveTo
+   document.getElementById("cmd").value=s
+   jmolScript(s)
+ }else if(iwhat==10){
+   s=prompt("enter an atom expression",what)
+   if(!s)return
+   what=s
+   s = jmolGetPropertyAsString("extractModel",what)
+   var A=jmolGetPropertyAsArray("orientationInfo")
+   showoutput(s);   jmolLoadInlineScript(s,A.moveTo)
+ }
+ if(str!=""){
+   s=jmolGetPropertyAsString(str)
+ }else if(sinfo!=""){
+   if(sparam == "PROMPT"){
+     s=prompt("enter an atom expression",what)
+     if(!s)return
+     what=s
+     sparam=what
+   }
+   if(document.getElementById("idecode").checked){
+	s=jmolGetPropertyAsArray(sinfo,sparam)
+	s=_jmolEnumerateObject(s,sinfo)
+   }else{
+	s=jmolGetPropertyAsJSON(sinfo,sparam)
+   }
+ }
+ if(s!="")document.getElementById("output").value=s
+}
+
+function parseMessages(A){
+ if(!A)return
+ var s=""
+ for(var i=A.length-1;i>=0;i--){
+	s=A[i][3]+"\n"+s
+	showmsg("msg",A[i])
+ }
+ document.getElementById("output").value=s
+}
+
+monitoron=0
+function domonitor(isiter){
+  if(!isiter)monitoron=!monitoron
+  if(!monitoron)return
+  dotest(3)
+  setTimeout("domonitor(1)",delayms)  
+}
+
+</script>
+</head>
+<body>
+<script type="text/javascript">showpage(0)</script></body>
+</html>

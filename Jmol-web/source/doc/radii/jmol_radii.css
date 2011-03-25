@@ -1,0 +1,55 @@
+/* Written by  Angel Herráez */
+body { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+}
+
+h2 { color:yellow; font-size:1.15em; font-weight:normal; margin:0 0 0 8px; }
+
+.box { 
+	margin: 3px 0 3px 0; padding:5px; 
+	border: 2px inset #cccccc;
+}
+
+.section {
+	color:#0000FF;
+	font-size:1.05em;
+}
+
+.reducedSpaced {
+	margin-top:4px;
+	margin-bottom:4px;
+}
+
+.colorKey {
+	padding:3px; 
+	margin:5px 0 5px 0; 
+	font-weight:bold;
+}
+
+div#header { 
+/*	overflow:hidden; */
+	text-align:center; 
+	font-size:28px; 
+}
+
+.cfg {
+	font-size:0.85em; 
+	margin-top:7px; 
+	text-align:center;
+	/*border:1px dashed #cccccc; */
+}
+
+/* These colors must match those in scripts: */
+.colorMetal0 {color: #6699CC; font-weight: bold;}
+.colorMetal1 {color: #FFCC00; font-weight: bold;}
+.colorMetal2 {color: #33CC00; font-weight: bold;}
+
+.colorMetal3 {color: #8899AA; font-weight: bold;}
+.colorMetal4 {color: #99FFFF; font-weight: bold;}
+.colorMetal5 {color: #FFCC00; font-weight: bold;}
+.colorMetal6 {color: #33CC00; font-weight: bold;}
+.colorMetal7 {color: #FF6666; font-weight: bold;}
+
+input {		/* MSIE buttons are too narrow with single-character content */
+	padding-left:4px; padding-right:4px;
+}

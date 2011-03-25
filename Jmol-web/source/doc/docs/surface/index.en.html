@@ -1,0 +1,299 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Surfaces in Jmol</title>
+<link href="../../default.css" rel="stylesheet" type="text/css">
+<link href="surface.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div align="center">[ &lt;&lt; <a href="../">return to Jmol documentation</a> ] </div>
+<h1>Surfaces in Jmol v.11 </h1>
+<p align="center">There is a <a href="demo.en.html">testing / demo page</a> including a Jmol applet to see results. </p>
+<p>This documentation does not detail all the options, but aims to collect  the different ways to render surfaces, and clarify their differences. For details, go to the official <em>interactive scripting documentation</em> for each command. </p>
+<p><u>Syntax used</u>: a <span class="command">command</span> in the script language; a <span class="parmt">parameter</span> description that must be filled in with a value. The mix of lower- and uppercase in the commands is for better readability, but Jmol is not case-sensitive.</p>
+<p><u>Abbreviation</u>: <strong>vdW</strong> = van der Waals. </p>
+<p><u>Definition</u>: <strong>probe</strong> (solvent probe) is a sphere that approximates the effective size of the solvent molecule. Jmol, as Rasmol, uses a sphere with 1.2 &Aring; radius for water; Chime uses 1.2 &Aring; for dots and 1.4 &Aring; for surfaces. Other programs/authors use 1.4 &Aring;. The probe radius can be defined using the <span class="command">set radius</span> command.</p>
+<hr>
+Index:
+<blockquote>
+  <p>Surfaces based on molecule: </p>
+  <ul>
+    <li><a href="#SAS">solvent-accesible surfaces</a></li>
+    <li><a href="#SES">solvent-excluded surfaces or molecular surfaces </a></li>
+    <li><a href="#Partial">partial or open surfaces</a></li>
+  </ul>
+  <p>Surfaces depicting orbitals:</p>
+  <ul>
+    <li><a href="#Orbitals">atomic and molecular orbitals</a> </li>
+  </ul>
+  <p>Surfaces not based on molecule: </p>
+  <ul>
+    <li><a href="#nonMol">mathematical surfaces</a> </li>
+  </ul>
+  <p><a href="#Save">Saving and loading surface data</a> </p>
+  <p><a href="#Color">Coloring surfaces</a>  </p>
+</blockquote>
+<hr>
+<h2><a name="SAS"></a>1) Solvent-accessible surfaces (or Lee-Richards surfaces)</h2>
+<ul type="square">
+  <li> <img src="sas_and_ses.gif" width="400" height="321" align="right">Described by the <strong>center</strong> of the  probe as it rolls along the atoms vdW spheres.</li>
+  <li>Corresponds to using an extended sphere around each atom (at a distance from the atom centre equal to the sum of the atom and probe radii), and eliminating those points that lie within  neighbour spheres. </li>
+  <li>The accessible surface is therefore 
+  sort of an expanded van der Waals surface.</li>
+  <li>It is larger (more external) than the &quot;molecular&quot; surface. </li>
+</ul>
+<br clear="all">
+<p>
+<img src="img_heme/spacefill.png" width="275" height="316" align="right">
+<img src="img_heme/dots.png" width="275" height="316" align="right">How to obtain them in Jmol:</p>
+<blockquote>
+  <p>(images of dots 100% and spacefill 100% shown as a reference)
+  </p>
+</blockquote>
+<h3><img src="img_heme/spacefill12.png" width="275" height="316" align="right">a) Solid spheres</h3>
+<p><span class="command">spacefill +1.2</span></p>
+<ul>
+  <li>Draws atoms as expanded van der Waals spheres, giving the impression of a solid surface. </li>
+  <li>Since the rendering uses the atoms, it is incompatible with showing atoms and bonds inside the &quot;surface&quot;. </li>
+  <li>1.2 and 1.4 (&Aring; for probe radius) are the commonly used values, but you can use any other.</li>
+  <li>Color is according to previous <span class="command">color&nbsp;atoms</span> command (CPK scheme by default). </li>
+</ul>
+
+<h3><img src="img_heme/dots12.png" width="275" height="316" align="right">b) Dotted surfaces</h3>
+<p><span class="command">dots +1.2</span> </p>
+<ul>
+  <li>Draws a dotted surface, using expanded dotted spheres (but only surface dots, no dots in the enclosed volume). </li>
+  <li>1.2 and 1.4 (&Aring; for probe radius) are the commonly used values, but you can use any other. </li>
+  <li>Using the <em>+n</em> parameter overrides the existing <span class="command">set&nbsp;solvent</span> &nbsp;and&nbsp; <span class="command">set&nbsp;radius</span> status. </li>
+  <li>Dots color is inherited from current <span class="command">color&nbsp;atoms</span> and may be overrided by using <span class="command">color&nbsp;dots</span>. </li>
+</ul>
+<p><span class="command">set solvent on; dots on</span> &nbsp;</p>
+<ul>
+  <li><em></em> Has the same effect as the former. The expansion of spheres (probe radius) will be 1.2 unless otherwise stated by a previous <span class="command">set&nbsp;radius</span>. </li>
+</ul>
+<p>To hide the dots: <span class="command">dots off</span> <br>
+(note: <span class="command">geoSurface off</span> will also hide the dots).</p>
+
+<h3><img src="img_heme/geosurface.png" width="275" height="316" align="right">c) Solid surfaces, crude and  quick</h3>
+<p><span class="command">geoSurface </span><span class="command"> +1.2</span> &nbsp;</p>
+<ul>
+  <li>Draws a geodesic surface using the result of <span class="command">dots</span> as vertices. Hence, the syntax is the same as for <span class="command">dots</span>. </li>
+  <li>It is a crude rendering but calculates quickly, and has better visibility than dots.</li>
+  <li>Using the +n parameter overrides the existing <span class="command">set solvent</span> / <span class="command">set radius</span> status.</li>
+  <li>Defaults to opaque grey, but can be colored and made translucent using the <span class="command">color geoSurface </span>  command. </li>
+</ul>
+<p><span class="command">set solvent on; geoSurface  </span><span class="command"> on</span> &nbsp;</p>
+<ul>
+  <li>Has the same effect as the  former. The expansion of spheres (probe radius) will be 1.2 unless otherwise stated by a previous <span class="command">set radius</span>. </li>
+</ul>
+<p>To hide the surface: <span class="command">geoSurface </span><span class="command"> off</span> <br>
+(note: <span class="command">dots off</span> will also hide the geoSurface).</p>
+
+<h3><img src="img_heme/isoruface-sasurface.png" width="275" height="316" align="right">d) Solid surfaces, fine and slow </h3>
+<p><span class="command">isoSurface </span><span class="parmt">id</span><span class="command"> saSurface </span><span class="parmt">radius</span></p>
+<ul>
+  <li>Draws a continuous surface using the center of the rolling probe. </li>
+  <li>It  looks smoother  in the valleys than the former methods, depending on the resolution value (see below). </li>
+  <li>The radius (of the  probe) is optional; its default setting is 1.2 &Aring; or that otherwise determined by the <span class="command">set&nbsp;radius</span> command.</li>
+  <li>The optional <span class="code">id</span> assigns a name to the surface, so that later one can turn it on and off selectively, change its color or translucency... </li>
+  <li>Defaults to opaque  blue, but can be colored and made translucent using the <span class="command">color&nbsp;isoSurface </span> or <span class="command">color $</span><span class="parmt">named object</span> command.</li>
+  <li>Using <span class="command">isoSurface&nbsp;resolution</span>&nbsp;<span class="parmt">n</span><span class="command"> saSurface&nbsp;</span><span class="parmt">radius</span> allows control over the fineness of detail of the surface. Default is 2 points per &Aring;. </li>
+  <li>Be aware that for very large molecules or increased values of resolution, the calculation may take minutes. During calculation, the command line prompt in the console is returned, but Jmol will not be responsive (seems to be locked, but it's just busy; check your CPU meter which will be at 100%); upon finishing, <em>Script completed </em>appears in the console.</li>
+  <li>It is advisable to <a href="#Save">save</a> surface data to a JVXL file so that delivering the surface to users happens in a fast way. </li>
+</ul>
+<p>To hide the surface: <span class="command">isoSurface </span><span class="parmt">id</span><span class="command"> off</span> </p>
+<p><u><em>Rasmol note</em></u>: for the record, Rasmol 2.7.3 has <span class="command">surface solvent </span><span class="parmt">radius</span><font color="#000000"> for this. </font></p>
+<h2><a name="SES"></a>2) Molecular surfaces (or solvent-excluded surfaces, or Connolly surfaces)</h2>
+<ul type="square">
+  <li> <img src="sas_and_ses.gif" width="400" height="321" align="right">Described by the <strong>closest point </strong> of the solvent &quot;probe&quot; as it rolls along the atoms vdW spheres. </li>
+  <li>In other words: the surface traced by the <strong>inward-facing</strong> surface of the probe. </li>
+  <li>Still in other words: <font color="#000000">the <strong>evolute</strong> of the surface of the probe</font>.</li>
+  <li>Composed of
+      <ul>
+        <li>contact surface: is the part of the vdW surface that can be touched by the probe.</li>
+        <li>reentrant surface: formed by the inward-facing part of the probe when it is in contact with more than one atom.</li>
+      </ul>
+  </li>
+  <li>(Delimits the <strong>solvent-excluded</strong> volume in Connolly's terminology, equal to van der Waals volume plus interstitial volume) </li>
+  <li>The surface is smaller (more internal) than the solvent-accesible surface. </li>
+</ul>
+
+<br clear="all">
+<p><img src="img_heme/isosurface-solvent.png" width="275" height="316" align="right">Here, we only have an option for solid surfaces, fine and very slow:</p>
+<p><span class="command">isoSurface </span><span class="parmt">id</span><span class="command"> solvent </span><span class="parmt">radius</span>
+<br>
+<span class="command">isoSurface </span><span class="parmt">id</span><span class="command"> molecular</span></p>
+<ul>
+  <li>Draws a continuous surface  using the contact and reentrant surfaces. </li>
+  <li>The surface is quite smoother than solvent-accesible ones.</li>
+  <li><span class="command">isoSurface solvent</span> is synonymous with <span class="command">isoSurface solvent&nbsp;1.2</span> (unless another value has been set using <span class="command">set&nbsp;radius</span>). </li>
+  <li><span class="command">isoSurface molecular</span> is synonymous with <span class="command">isoSurface solvent&nbsp;1.4</span>. </li>
+  <li>The optional <span class="code">id</span> assigns a name to the surface, so that later one can turn it on and off selectively, change its color or translucency... </li>
+  <li>Defaults to opaque  blue (a lighter tint), but can be colored and made translucent using the <span class="command">color&nbsp;isoSurface </span> or <span class="command">color&nbsp;$</span><span class="parmt">named object</span> command. </li>
+  <li>Using <span class="command">isoSurface resolution</span>&nbsp;<span class="parmt">n</span> <span class="command">solvent&nbsp;</span><span class="parmt">radius</span> allows control over the fineness of detail of the surface. Default is 2 points per &Aring;.</li>
+  <li>Be aware that for molecules over 100 atoms or for increased values of resolution, the calculation may take minutes. During calculation, the command line prompt in the console is returned, but Jmol will not be responsive (seems to be locked, but it's just busy; check your CPU meter which will be at 100%). Upon finishing, <em>Script completed </em>appears in the console.</li>
+  <li>It  is advisable to <a href="#Save">save</a> surface data to a JVXL file so that delivering the surface to users happens in a fast way. </li>
+</ul>
+<p>To hide the surface: <span class="command">isoSurface </span><span class="parmt">id</span><span class="command"> off</span> </p>
+<p><u><em>Rasmol note</em></u>: for the record, Rasmol 2.7.3 has <span class="command">surface molecule </span><span class="parmt">radius</span><font color="#000000">  for this. </font></p>
+<p>Effect of probe radius: <span class="smallType">(click to enlarge)</span><br>
+<a href="img/isosurface-solvent.jpg"><img src="img/isosurface-solvent.jpg" width="550" border="0" align="top" title="click to enlarge"></a></p>
+<p>Summarizing and comparing different isosurface options: <span class="smallType">(click to enlarge)</span><br>
+<a href="img/isosurface-options.jpg"><img src="img/isosurface-options.jpg" width="550" border="0" align="top" title="click to enlarge"></a></p>
+<h2><a name="Partial"></a>3) Partial or open surfaces </h2>
+<p>All the above, as usual with Jmol script commands, applies to the currently selected set of atoms. A closed surface can be generated around the selected set of atoms, but another possibility is to get an open or fragmented surface, that does not close where there are unselected atoms. </p>
+<h3>For dots and geoSurface </h3>
+<table width="100%"  border="0" cellspacing="0" cellpadding="6">
+  <tr align="center" valign="middle">
+    <td>If <span class="command">set dotsSelectedOnly off</span> or <span class="command">false</span> is used (the default), the dots or geoSurface will be fragmented, interrupted at the areas where they would contact with the surface for nonselected neighbours.</td>
+    <td>You can first use <span class="command">set dotsSelectedOnly on</span> or <span class="command">true</span>, meaning that the dots or geoSurface will close around the currently selected atoms.</td>
+  </tr>
+  <tr align="center" valign="top">
+    <td><img src="img/geo-dotsselectedonly-off.png" width="300" height="200"><br>
+    <span class="command noBold">set&nbsp;dotsSelectedOnly&nbsp;off; <br>
+    select&nbsp;_H; geoSurface&nbsp;+1.2</span></td>
+    <td><img src="img/geo-dotsselectedonly-on.png" width="300" height="200"><br>
+      <span class="command noBold">set&nbsp;dotsSelectedOnly&nbsp;on; <br>
+select&nbsp;_H; geoSurface&nbsp;+1.2</span></td>
+  </tr>
+</table>
+<p>In addition, dots can
+be turned on and off selectively (unlike isoSurface or geoSurface).</p>
+<h3>For isoSurface</h3>
+<p>a) By default, it will be built upon previously selected atoms, and will be interrupted at the areas where they would contact with the surface for nonselected neighbours, except that <span class="command">isoSurface saSurface </span> and <span class="command">isoSurface solvent </span>apply an implicit <span class="command">ignore(solvent)</span>. To override that, use <span class="command">ignore(none)</span> explicitly (<span class="command noBold">ignore</span> is explained below).</p>
+<p>b) You can use <span class="command"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;isoSurface select(</span><span class="parmt">atom expression</span><span class="command">) saSurface </span> <br>
+<span class="command">&nbsp;&nbsp;&nbsp;&nbsp;isoSurface select(</span><span class="parmt">atom expression</span><span class="command">) solvent</span> <br>
+<span class="command">&nbsp;&nbsp;&nbsp;&nbsp;isoSurface select(</span><span class="parmt">atom expression</span><span class="command">) molecular</span> <br>
+to make a temporary selection to which this surface will apply --without affecting the overall set of selected atoms--. The surface will be interrumpted as before, if applicable. </p>
+<p>c) If you don't want the nonselected atoms to affect or interrupt the surface, use <br>
+<span class="command">&nbsp;&nbsp;&nbsp;&nbsp;isoSurface ignore(</span><span class="parmt">atom expression</span><span class="command">) saSurface </span>
+<br>
+<span class="command">&nbsp;&nbsp;&nbsp;&nbsp;isoSurface ignore(</span><span class="parmt">atom expression</span><span class="command">) solvent </span>
+<br>
+<span class="command">&nbsp;&nbsp;&nbsp;&nbsp;isoSurface ignore(</span><span class="parmt">atom expression</span><span class="command">) molecular</span>
+<br>
+This
+  turns out to be critically important;
+for example, you don't want to include solvent molecules  inside the &quot;solvent surface&quot;. It may also be  needed where there are close contacts with other parts of the molecule (e.g., other chain or an hetero group); otherwise, the surface will have &quot;holes&quot;. </p>
+<p>Options (b) and (c) can be combined together, as in <br>
+  <span class="command noBold">&nbsp;&nbsp;&nbsp;isoSurface surf1 select(*:A) ignore(hetero) </span><span class="command noBold">solvent 1.3</span></p>
+<p>To have a closed surface around a certain selected set of atoms, one can do:<br>
+  <span class="command noBold">&nbsp;&nbsp;&nbsp;define temp </span><span class="parmt">atom expression</span><span class="command noBold">; isoSurface surf1 select(temp) ignore(not temp) molecular</span></p>
+<p></p>
+<h2><a name="Orbitals"></a>4) Atomic and molecular orbitals </h2>
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+  <tr valign="top">
+    <td>Using <span class="command">lcaoCartoon</span><br>
+    <img src="img/lcaocartoon.png" width="218" height="172"></td>
+    <td>Using <span class="command">MO</span> <br>
+    <img src="img/mo.png" width="234" height="217"></td>
+    <td nowrap>Using <span class="command">isoSurface <b>atomicOrbital</b></span><br>
+    <img src="img/iso-atomorbital-1.png" width="170" height="183"></td>
+  </tr>
+</table>
+<p>Using <span class="command"></span><span class="command">isoSurface <b>lcaoCartoon</b></span> , <span class="command">isoSurface lobe </span>, <span class="command">isoSurface <b>MO</b></span></p>
+<p>&nbsp;&nbsp;&nbsp;(someone else can write about these) </p>
+<p></p>
+<h2><a name="nonMol"></a>5) Mathematical, geometrical, non-molecular surfaces </h2>
+<p>This means surfaces that do not depend on molecule geometry, but are based on a mathematical formula (although they can be located relative to atoms of the molecule).</p>
+<p><span class="command"><img src="img/draw-plane.png" width="184" height="167" align="right">draw </span><span class="parmt">id</span> &nbsp;<span class="parmt">size</span><span class="command"> plane {</span><span class="parmt">x y z</span><span class="command">}</span> <span class="command">{</span><span class="parmt">x y z</span><span class="command">}</span> <span class="command">{</span><span class="parmt">x y z</span><span class="command">}</span> <br>
+<span class="command">draw </span><span class="parmt">id</span> &nbsp;<span class="parmt">size</span><span class="command"> plane (</span><span class="parmt">atom expression</span><span class="command">) (</span><span class="parmt">atom expression</span><span class="command">) (</span><span class="parmt">atom expression</span><span class="command">) </span></p>
+<ul>
+  <li>Draws a quadrilateral plane defined by the 3 points or atom expressions given.</li>
+  <li>Braces or parenthesis, respectively, are compulsory. </li>
+  <li>If no <span class="code">size</span> is given, the plane extends to the atoms or coordinates. If a size is given, the plane extends (size&gt;100) or shrinks (size&lt;100). </li>
+  <li>The optional <span class="code">id</span> assigns a name to the drawn object, so that later one can turn it on and off selectively, change its color or translucency... </li>
+</ul>
+<p><span class="command"><img src="img/pmesh.png" width="196" height="171" align="right">pMesh</span> </p>
+<ul>
+  <li>Reads surface data from a file.</li>
+  <li>The surface is a combination of triangles or cuadrilaterals. </li>
+  <li>Available renderings are: dots in the vertices, mesh joining the vertices, solid surface joining the vertices. Any combination can be used, using the keywords <span class="command">dots noDots mesh noMesh fill noFill</span> . (Default is fill noMesh noDots). </li>
+  <li>Color and translucency are also allowed for the filled pMesh, using <span class="command">color pMesh</span>&nbsp;. </li>
+  <li>Look up the interactive scripting documentation for description of the pmesh options and file format.</li>
+</ul>
+<p><span class="command"><img src="img/iso-sphere.png" width="171" height="165" align="right">isoSurface </span><span class="parmt">id</span><span class="command"> center {</span><span class="parmt">x y z</span><span class="command">} <b>sphere</b></span> <span class="parmt">radius</span>
+  <br>
+  <span class="command">isoSurface  </span><span class="parmt">id</span><span class="command"> center (</span><span class="parmt">atom expression</span><span class="command">) <b>sphere</b></span> <span class="parmt">radius</span> </p>
+<ul>
+  <li>Draws a sphere, either centered on coordinates or centered based on a set of atoms. Braces and parenthesis, respectively, are mandatory.</li>
+  <li>Default center is the origin of coordinates {0,0,0}. </li>
+  <li>The optional <span class="code">id</span> assigns a name to the surface, so that later one can turn it on and off selectively, change its color or translucency... </li>
+</ul>
+<p><span class="command">isoSurface  </span><span class="parmt">id</span><span class="command"> center {</span><span class="parmt">x y z</span><span class="command">} <b>ellipsoid {</b></span><span class="parmt">cx cy cz e</span><span class="command"><b>}</b></span> <br>
+<span class="command">isoSurface </span><span class="parmt">id</span><span class="command"> center (</span><span class="parmt">atom expression</span><span class="command">) <b>ellipsoid {</b></span><span class="parmt">cx cy cz e</span><span class="command"><b>}</b></span></p>
+<ul>
+  <li><span class="command"><img src="img/iso-ellipsoid.png" width="166" height="172" align="right"></span>Draws an ellipsoid with this geometry: </li>
+</ul>
+<blockquote>
+  <ul type="square">
+    <li><strong>orientation</strong>: the ellipsoid main axis is defined between the declared center and the <span class="parmt">cx&nbsp;cy&nbsp;cz</span> point. </li>
+    <li><strong>shape</strong>: <span class="parmt">e</span> defines the eccentricity, i.e. the ratio between the other two axes and the main axis (the two secondary axes have a fixed ratio =1 between themselves):<br>
+      e&lt;1: ellipsoid is elongated along the main axis (cigar shape); <br>
+    e&gt;1: ellipsoid is shortened along the main axis (disk shape). </li>
+    <li><strong>size</strong>: apart from changing <span class="parmt">cx cy cz</span>, the size of the ellipsoid can also be changed using the <span class="command">scale</span>&nbsp;<span class="parmt">n</span> keyword (before the <span class="command"><b>ellipsoid</b></span> keyword). </li>
+    <li>The optional <span class="code">id</span> assigns a name to the surface, so that later one can turn it on and off selectively, change its color or translucency... </li>
+  </ul>
+</blockquote>
+<p>Other options, more advanced (see the interactive scripting documentation):</p>
+<table width="100%"  border="0" cellspacing="0" cellpadding="2">
+  <tr align="center" valign="top">
+    <td><span class="command">isoSurface <b>plane</b></span> <br>
+    <img src="img/ios-plane.png" width="159" height="157"></td>
+    <td><span class="command">isoSurface <b>functionXY</b></span><br>
+    <img src="img/iso-function.png" width="166" height="174"></td>
+  </tr>
+</table>
+<h2><a name="Save"></a>6) Saving and loading surface data</h2>
+<h3>Surface output to and input from JVXL (Jmol Voxel) format file</h3>
+<ul type="square">
+  <li>Briefly: JVXL is specific to Jmol and is a much more compact alternative to Cube format, containing only the information for one or a few surfaces. Further, it can be generated by Jmol, while Cube is only generated by Gaussian (a commercial program).</li>
+  <li>More details in the <span class="command">isoSurface</span> documentation and in <a href="http://www.stolaf.edu/academics/chemapps/jmol/docs/misc/JVXL-format.pdf">detailed specification of the JVXL format</a> (PDF).</li>
+</ul>
+<p>Saving surface data into a JVXL file:</p>
+<ul>
+  <li>First, generate and render the surface (<span class="command">isoSurface saSurface</span> &nbsp;or&nbsp; <span class="command">isoSurface solvent</span> or any other isosurface).</li>
+  <li>Suggestion: clear the console (this facilitates copying  the complete text later).</li>
+  <li>If you are working in the console, use <span class="command">show isoSurface</span> . </li>
+  <li>Equivalent: pop-up menu <span class="code">&gt; Show &gt; Isosurface JVXL data</span> (will open the console and output the data to it). </li>
+  <li>From script: <span class="command">console on; show isoSurface</span> . </li>
+  <li>Copy the (long) result from the console and paste it into a text editor. Save the file (any extension will do, but <strong>.jvxl</strong> is suggested).</li>
+</ul>
+<p>Loading data from a JVXL file:</p>
+<ul>
+  <li>This renders the surface in almost no time (much less than the calculation needed to generate the surface the first time). </li>
+  <li>Simple way: <span class="command">isoSurface &quot;</span><span class="parmt">filename</span><span class="command">&quot;</span> &nbsp;or&nbsp; <span class="command">isoSurface file &quot;</span><span class="parmt">filename</span><span class="command">&quot;</span></li>
+  <li>Double quotes are mandatory around the filename (path, name and extension). If required while writing the page with JavaScript, you can use <span class="command">isoSurface &amp;quot;</span><span class="parmt">filename</span><span class="command">&amp;quot;</span> . The keyword <span class="command">file</span> is optional.</li>
+  <li>If the file contains data for several isosurfaces or the isosurface data is within  the same file as the coordinates, look up the interactive scripting documentation. </li>
+</ul>
+<h3>Surface input from Gaussian Cube format file </h3>
+<ul>
+  <li>Same syntax as loading from a JVXL file (above).</li>
+</ul>
+<h2><a name="Color"></a>7) Coloring surfaces </h2>
+<p>Use <span class="command">color dots</span> , <span class="command">color geoSurface</span> , <span class="command">color isoSurface</span> , <span class="command">color pMesh</span> , etc. </p>
+<p>If the isosurface was assigned an <span class="command"> </span><span class="parmt">id</span>, then use <span class="command">color $</span><span class="parmt">id</span>&nbsp; <span class="parmt">color specification</span>. </p>
+<p>Remember you can use <span class="command">translucent </span>or <span class="command">opaque</span> in addition to the color. </p>
+<p>Isosurfaces can also be colored in gradients according to a &quot;map&quot;, including by distance, by molecular electrostatic potential, etc. Seek more information on the official Interactive Scripting Documentation.</p>
+<p>&nbsp; </p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<hr align="left" width="40%">
+<p>This page was written by Angel Herr&aacute;ez, Universidad de Alcal&aacute;, in Spain. Information was obtained through testing, from <em>jmol-users</em> and <em>jmol-developers</em> e-mail distribution list, and from Bob Hanson's <em>Interactive Scripting Documentation </em> and example pages. Images generated by Angel Herr&aacute;ez or Bob Hanson. Contributions are welcome. </p>
+<p>Some bibliography (used and potential):</p>
+<ul>
+  <li><a href="http://www.netsci.org/Science/Compchem/feature14e.html">http://www.netsci.org/Science/Compchem/feature14e.html</a> - Solvent-Accessible Surfaces (part 5 of <em>Molecular Surfaces: A Review</em>, by Michael L. Connolly, 1996). Explained with drawings. Historical review. </li>
+  <li><a href="http://en.wikipedia.org/wiki/Accessible_Surface_Area">Accessible Surface Area on Wikipedia </a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Solvent_excluded_surface">Solvent Excluded Surface on Wikipedia</a></li>
+  <li><a href="http://geometry.molmovdb.org/3v/">http://geometry.molmovdb.org/3v/</a> - 3V: Voss Volume Voxelator. Using the Richards' rolling probe method,
+  you can derive volume information from any PDB file.Volume calculator web tools; also downloadable. Good drawing comparing SA and SE. Runs the calculation on the web server, the surface can be obtained in the form of a PDB file with oxygen atoms.</li>
+  <li><a href="http://www.scripps.edu/%7Esanner/html/msms_home.html">http://www.scripps.edu/~sanner/html/msms_home.html</a> - MSMS package for calculating molecular surfaces</li>
+  <li><a href="http://www.expasy.org/spdbv/text/epot.htm">http://www.expasy.org/spdbv/text/epot.htm</a> - Electrostatic Potential: how to compute electrostatic potentials in SwissPDB Viewer or open potentials computed by other programs.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,269 @@
+Complete list of new Jmol script/JavaScript functionality in 11.0 relative to 10.2. 
+See http://www.stolaf.edu/academics/chemapps/jmol/docs for details. Some of these 
+commands are not documented because they are intended for serialization only -- for the
+construction of a Jmol script describing the precise state of the applet or application.
+
+axes command
+bondOrder single|double|triple|hbonds  # *undocumented; for serialization
+boundbox command
+calculate hbonds
+calculate structure
+calculate surface [distance|+distance|distance%]
+color altloc
+color halos
+color insertion
+color measures
+color molecule
+color selectionHalos ....
+color surfaceDistance
+conformation [n]
+console ON|OFF|CLEAR
+data command
+dipole command
+dots +x.x
+dots n%
+draw arrow
+draw line
+draw plane
+draw point
+echo "first line | second line | ...."
+exit [to stop all script execution and clear script queue]
+fractional coordinates
+frame play
+frame playrev
+frame prev
+frame range
+frank command
+geosurface command
+getproperty animationInfo
+getproperty appletInfo
+getproperty atomInfo
+getproperty auxiliaryInfo
+getproperty bondInfo
+getproperty boundBoxInfo
+getproperty centerInfo
+getproperty chainInfo
+getproperty dataInfo
+getproperty extractModel
+getproperty fileContents
+getproperty fileContents
+getproperty fileHeader
+getproperty fileName
+getproperty jmolStatus
+getproperty measurementInfo
+getproperty modelInfo
+getproperty moleculeInfo
+getproperty orientationInfo
+getproperty polymerInfo
+getproperty shapeInfo
+getproperty transformInfo
+halos ON/OFF
+halos n% 
+halos x.y
+hbonds, cartoons: enhanced biomolecule DSSP hydrogen bond calculation
+help command
+hover "first line | second line | ...."
+if;else;endif;
+initialize  # *undocumented; for serialization
+isosurface [atomic orbitals]
+isosurface [ellipsoids]
+isosurface [lcaoCartoon hybrid orbitals]
+isosurface [molecular orbitals]
+isosurface [spheres]
+isosurface [user-defined functions]
+isosurface JVXL file creation/reading
+javascript:jmolAppletAddParam()
+javascript:jmolDecodeJSON()
+javascript:jmolGetPropertyAsArray()
+javascript:jmolGetPropertyAsJavaObject()
+javascript:jmolGetPropertyAsJSON()
+javascript:jmolGetPropertyAsString()
+javascript:jmolGetStatus()
+javascript:jmolLoadAjax_MSA()
+javascript:jmolLoadAjax_STOLAF_ANY()
+javascript:jmolLoadAjax_STOLAF_RCSB()
+javascript:jmolLoadAjaxJS()
+javascript:jmolLoadInLine([array of model strings])
+javascript:jmolLoadInlineScript()
+javascript:jmolRestoreOrientation()
+javascript:jmolRestoreOrientationDelayed()
+javascript:jmolSaveOrientation()
+javascript:jmolScriptWait()
+javascript:jmolScriptWaitAsArray()
+javascript:jmolSetAtomCoord()
+javascript:jmolSetAtomCoordRelative()
+javascript:jmolSetCallback()
+javascript:jmolSetLogLevel()
+label "first line | second line | ...."
+label formats: %A, %N, %o, %S, %u, %X, %Y, %Z
+lcaoCartoon command
+load "fileset" "file1.xyz" "file2.PDB" "file3.CIF" ...
+load "myfile.cif" n
+load "myfile.cif" {i j k}
+load "myfile.pdb" {i j k} spacegroup "[Hall Symbol]"
+load "myfile.pdb" {i j k} spacegroup "[H-M Symbol]"
+load "myfile.pdb" {i j k} spacegroup "[Jones-Faitful operator set]"
+load "myfile.xyz" {i j k} unitcell {a b c alpha beta gamma}
+load argusFile limited capability
+load CML expanded functionality
+load DOM node expanded functionality
+load file with embedded "#jmolscript:"
+load gamess output basis/orbital coefficients
+load gaussian output basis/orbital coefficients
+load spartan output basis/orbital coefficients
+load TRIPOS/SYBYL mol2 data file viewer support
+load Wavefunction Odyssey file viewer support
+load Wavefunction Spartan 06 file viewer support
+load WebMO file basis/orbital coefficients
+measure RANGE [min] [max] (atomset) (atomset) .....
+measure all
+measure allConnected
+measure delete
+measure "some label format"
+measures off
+message command
+mo [JVXL file creation]
+mo color
+mo cutoff
+mo next
+mo noplane
+mo plane "xy"
+mo plane {1 1 1 0}
+mo prev
+mo resolution
+mo TITLEFORMAT
+mo translucent
+moveTo [time-sec] front|back|left|right|top|bottom
+pause
+pmesh inline
+polyhedra [# vertices] [basis] [selection sets] [display options]
+quit [to quit currently running script]
+restore bonds [name]
+restore orientation [name] [timeSeconds]
+restore selection [name]
+restore state [name]
+resume
+rotate -x
+rotate 10 $line1
+rotate 20 (atomno=8) (atomno=10)
+rotate y 10 (atomno=4)
+rotate y 10 molecular (atomno=4)
+rotate/zoom enhancement of mouse action with SHIFT-LEFT (zoom/rotate)
+save bonds [name]
+save orientation [name]
+save selection [name]
+save state [name]
+select AL*  # * wildcard for PDB group names
+select A*   # * wildcard for non-PDB/mmCIF atom names and atom names for all file types
+select ({...})  # *undocumented; for serialization
+select BONDS ({...})  # *undocumented; for serialization
+select cell={1 j k}
+select cell=555
+select molecule=n
+select PDB and mmCIF alternate location visualization
+select site=n
+select surfacedistance=xxx
+select symop=n
+select unitcell
+select fractionalCharge
+select [not] specialPosition
+select [not] symmetry
+select within(ELEMENT,expression)
+select within(MOLECULE,...)
+select within(SITE,expression)
+set [any parameter name]
+set animFrameCallback
+set appletProxy
+set axesMolecular
+set axesUnitCell
+set axesWindow
+set backgroundModel N
+set cartoonRockets
+set dataSeparator
+set defaultDirectory
+set defaultLoadScript
+set displayCellParameters
+set dotsSelectedOnly
+set dotSurface
+set echo all
+set echo none
+set echo myecho 50  100
+set echo myecho {1/1 1/1 1/1};echo (1 1 1)
+set echo myecho (atomno=10) or (atomno=8);echo x
+set echo somename 30% 50%
+set forceAutoBond
+set fractionalCharge
+set frank
+set hermiteLevel [-8 to 8]
+set hideNotSelected
+set highResolution 
+set history n
+set hovercallback
+set labelAtom
+set labelFront  # no parameters
+set labelGroup  # no parameters
+set labelPointer on/off/background
+set loadStructCallback
+set loglevel [0-5]
+set measureAllModels
+set measurements nm
+set measurements pm
+set measurements au
+set measurements Bohr
+set measturementNumbers
+set messagecallback
+set pickcallback
+set picking SELECT ELEMENT
+set picking SELECT MOLECULE
+set picking SELECT SITE
+set picking SPIN
+set pickingStyle MEASURE
+set pickingStyle MEASURE OFF
+set pickingStyle SELECT toggle
+set pickingStyle SELECT selectOrToggle
+set pickingStyle SELECT extendedSelect
+set rangeSelected
+set refreshing [false/true]  # *undocumented; for serialization
+set ribbonAspectRatio n
+set showscript
+set scriptQueue
+set selectionHalos ON/OFF
+set sheetSmoothing [0 to 1]
+set showHiddenSelectionHalos
+set showAxes //deprecated --  see "axes"
+set showBoundBox //deprecated -- see "boundBox"
+set showSelections //deprecated -- see "set display"
+set showUnitcell //deprecated -- see "unitcell"
+set statusReporting
+set traceAlpha
+set zoomLarge
+show data "type"
+show draw
+show $drawObject
+show history
+show isosurface
+show measurements
+show mo
+show [any parameter name]
+show spacegroup
+show spacegroup "Pmmn"
+show state
+show symmetry
+show unitcell
+show url
+show url "url"
+spin -x
+spin 10 $axis1
+spin 20 (atomno=8) (atomno=10)
+spin y 10 (atomno=4)
+spin y 10 molecular (atomno=4)
+subset *:C
+translateSelected command
+unitcell command
+write
+zap  # allows echos and MUCH more
+zoom (atom) +|-delta
+zoom (atom) *|/factor
+zoomTo [time-sec] (atom) +|-delta
+zoomTo [time-sec] (atom) *|/factor
+

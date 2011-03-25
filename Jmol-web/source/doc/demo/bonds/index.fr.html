@@ -1,0 +1,73 @@
+<!--
+  French translation 
+  Translated from default version : index.en.html (v 1.1)
+-->
+<html>
+  <head>
+    <title>D&#x00E9;monstration applet jmol applet liens</title>
+    <script src="../../jmol/Jmol.js"></script>
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <form>
+      <table border="1">
+        <tr>
+          <td>
+            <h1>aspirine</h1>
+            <script>
+              jmolApplet(400, "load aspirina.mol.gz;spacefill off");
+            </script>
+          </td>
+          <td>
+            <p>
+              Pour conserver la compatibilit&#x00E9; avec le langage de
+              script RasMol, la commande pour contr&#x00F4;ler la taille
+              des liens s'appelle <b>wireframe</b>. Le param&#x00E8;tre
+              est le rayon du lien en angstroms. Essayez les commandes
+              suivantes:
+            </p>
+            <script>
+              jmolRadioGroup(
+                ["wireframe off",
+                 "wireframe on",
+                 "wireframe 0.1",
+                 "wireframe 0.125",
+                 ["wireframe 0.15", null, "checked"],
+                 "wireframe 0.25",
+                 "wireframe 0.3",
+                 "wireframe 0.5"
+                ], "<br />");
+            </script>
+            <p>
+              <i>Il faut noter que pour la compatibilit&#x00E9; avec les
+              scripts existants RasMol/Chime, les liens multiples ne
+              sont pas affich&#x00E9;s avec des liens plus larges.</i>
+            </p>
+            <p>
+              Par d&#x00E9;faut, un lien h&#x00E9;rite des couleurs des
+              deux atomes qu'il relie. Si vous voulez changer la couleur
+              du lien, vous pouvez affecter des couleurs explicites
+            </p>
+            <script>
+              var colorRadioGroup = [
+                ["color bonds none", "color bonds none <i># h&#x00E9;rite de la couleur des atomes</i>", "checked"],
+                "color bonds dodgerblue",
+                "color bonds goldenrod",
+                "color bonds orchid"
+              ];
+              jmolRadioGroup(colorRadioGroup, "<br />");
+            </script>
+            <p>
+              <script>
+                jmolCheckbox("spacefill 20%", "spacefill off", " <i>affiche les atomes</i>");
+              </script>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

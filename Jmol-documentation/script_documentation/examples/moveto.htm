@@ -1,0 +1,55 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript">
+nmoves=0
+
+function showmsg(n,what){
+ var swhat=what+""
+ document.getElementById("msg").value=n+": "+swhat+"\n"+document.getElementById("msg").value
+ if(swhat.indexOf("moveTo")>=0){
+	var s="showorientation('"+swhat.replace(/\n/g,"|")+"')"
+	setTimeout(s,100)
+ }
+}
+
+function saveAngle(){
+	setTimeout('jmolScript("show orientation")',100)
+
+}
+
+function showorientation(swhat){
+	var thismove=swhat.split("|")[0]
+	var s=(++nmoves)+". <a href=\"javascript:void(setTimeout('document.jmol.script(\\'"+thismove+";set echo off\\')',100))\">"+thismove+"</a> "
+	thismove=swhat.split("|")[2]
+	s+="<br>&nbsp;&nbsp;&nbsp;&nbsp;or "+"<a href=\"javascript:void(setTimeout('document.jmol.script(\\'"+thismove+";set echo off\\')',100))\">"+thismove+"</a><br>"
+	var d=document.getElementById("listing")
+	d.innerHTML=s+d.innerHTML
+}
+
+title="MOVETO";model="1crn.pdb";ref="moveto"
+Scripts=new Array("select *;rockets on;wireframe off;spacefill off;color structure"
+," The <i>moveto</i> command rotates the model around a specified axis by a specified number of degrees over a specific number of seconds. <img src=moveto.gif align=right>"
+	,"moveto 1 1 0 0 -90 #view from top"
+	,"moveto 1 0 1 0 90 #view from left"
+	,"moveto 1 0 1 0 -90 #view from right"
+	,"moveto 1 0 0 1 180 #view upside down"
+	,"moveto 5 0 0 1 -90 #five-second smooth transition"
+	,"moveto 2 0 0 0 0 #two-second transition to default view"
+	,"moveto 0 0 1 0 -90 #instantaneous transition"
+	,"moveto 0 0 0 0 0 #instantaneous switch to default view"
+," Move the model around all you want with the mouse. When you have an orientation you want to say, click here to execute the saveAngle() function. This function uses the jmol.script(\"show orientation\") along with a message callback to get information about the current orientation and save it. This information is then used to write to a SPAN region below. <a href=javascript:saveAngle()>saveAngle()</a>"
+	,"<span id=listing></span>"
+)
+remarks=""
+
+</script>
+</head>
+<body>
+<script type="text/javascript">showpage()</script>
+</body></html>

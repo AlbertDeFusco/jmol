@@ -1,0 +1,701 @@
+<?xml version="1.0"?>
+<document>
+  <body>
+    <title>Jmol</title>
+
+    <header>
+      <p>
+	Jmol is a free, open source molecule viewer.
+	<ul>
+	  <li>
+	    The JmolApplet is a web browser applet that can be
+	    integrated into web pages.
+	  </li>
+	  <li>
+	    The Jmol application is a standalone Java application
+	    that runs on the desktop.
+	  </li>
+	  <li>
+	    The JmolViewer can also be integrated
+	    into other Java applications.
+	  </li>
+	</ul>
+      </p>
+    </header>
+
+    <section title="Jmol v9 Features">
+      <p>
+	Jmol v9 has these features:
+      </p>
+      <ul>
+	<li>Available as both a Java application
+	and as a web browser applet</li>
+	
+	<li>Supports RasMol/Chime scripting</li>
+	
+	<li>Displays inter-atomic distances, bond
+	angles, and dihedral angles.</li>
+	
+	<li>Displays vectors (velocity, dipole, etc.),
+	charges, and atomic symbols.</li>
+	
+	<li>Can display unit cell boxes, and energy bands.</li>
+	
+	<li>Animates the results of simulations.</li>
+	
+	<li>Animates the computed vibrational modes.</li>
+	
+	<li>Reads many types of files: 
+	<a href="http://www.abinit.org/" TARGET="_top">ABINIT</a>,
+	<a href="http://www.qtp.ufl.edu/Aces2/" TARGET="_top">ACES II</a>,
+	<a href="http://www.scm.com/" TARGET="_top">ADF</a>
+	(Amsterdam Density Functional),
+	<a href="http://journals.iucr.org/c/services/cifguide.html">CIF/mmCIF</a>,
+	<a href="http://www.xml-cml.org" TARGET="_top">CML 1/2</a>
+	(Chemical Markup Language),
+	<a href="http://www.kjemi.uio.no/software/dalton/dalton.html">Dalton</a>,
+	<a href="http://www.msg.ameslab.gov/GAMESS/GAMESS.html" TARGET="_top">GAMESS</a>,
+	<a href="http://www.gaussian.com/" TARGET="_top">Gaussian 90/92/94/96/98/03</a>,
+	<a href="http://www.bioinformatics.org/ghemical/" TARGET="_top">Ghemical</a>,
+	HIN,
+	<a href="http://www.schrodinger.com/Products/jaguar.html">Jaguar</a>,
+	<a href="http://www.mdli.com/">MDL molfiles</a>,
+	MOPAC 7/97/2002,
+	<a href="http://www.rcsb.org/pdb/" TARGET="_top">PDB</a>,
+	VASP,
+	XYZ (XMol).
+	</li>
+	
+	<li>Prints or exports images in these formats:
+	GIF, JPG, PPM, BMP, PNG, PDF,
+	PostScript, and PovRay (including animations).
+	</li>
+	
+      </ul>
+    </section>
+
+    <section title="v9 screen shots">
+      <screenshots>
+	<screenshot image="screenshot1.jpg">
+	  A shaded rendering of caffeine.
+	</screenshot>
+	<screenshot image="screenshot2.jpg">
+	  A frame of an S<sub>N</sub>2 reaction animation with the distance
+	  measured between the chlorine and carbon atoms
+	</screenshot>
+	<screenshot image="screenshot3.jpg">
+	  Vibration animation of methanol with vectors displayed.
+	</screenshot>
+	<screenshot image="screenshot4.jpg">
+	  Display of a crystal structure.
+	</screenshot>
+	<screenshot image="screenshot5.jpg">
+	  Display of bounding box and axes of coordinates space.
+	  Note the transparency of the yellow halo around selected atoms.
+	</screenshot>
+      </screenshots>
+    </section>
+
+    <section title="JmolApplet v9">
+      <section title="Jmol Applet Requirements">
+	<p>The Jmol applet runs with the JVM 1.1 included with the most
+	popular browsers on the Win32 platform.</p>
+	<p>For other platforms and for better rendering quality we
+	strongly recommend the latest Sun Java Virtual Machine,
+	available through the
+	<a href="http://java.sun.com/getjava/download.html">Java Plug-in</a>.
+	</p>
+      </section>
+      
+      <section title="Creating a Web page">
+	<p>To use the Jmol applet in a web page, use the HTML standard
+	&lt;APPLET&gt; element. The <b>code</b>, <b>archive</b>, <b>width</b>
+	and <b>height</b> attributes are required. If you will be using
+	JavaScript to drive the applet you will want to use the <b>name</b>
+	attribute to uniquely identify the applet. You will also want to
+	use the <b>mayscript</b> attribute to tell the browse to allow
+	the applet to call JavaScript function. 
+	</p>
+	<p> The <b>param</b> element is used to pass parameters to the applet.
+	You will normally specify the parameter with name="load" in order
+	to load a molecule. You may also use JavaScript to dynamically
+	load molecules into the applet. See the
+	<a href="../scripting">Scripting</a> page for more information.
+	
+	<appletExample>
+<![CDATA[<applet name="jmol1" code="JmolApplet" archive="JmolApplet.jar"
+        width="200" height="200" mayscript="true">
+  <param name="load" value="caffeine.xyz"/>
+</applet>]]>
+	</appletExample>
+	</p>
+
+	<p>The following applet displays a CML (Chemical Markup Language) file. 
+	
+	<appletExample>
+<![CDATA[<applet name="jmol2" code="JmolApplet" archive="JmolApplet.jar" 
+        width="200" height="200" mayscript="true">
+  <param name="load" value="methanol1.cml"/>
+</applet>]]>
+	</appletExample>
+	</p>
+
+	<p>Some types of molecular data can be embedded in the HTML
+	page. In this case, the data is passed as the value of the
+	the "loadInline" parameter. The following applet displays the
+	same molecule as above, but the CML data is
+	embedded rather than in a file. Note, the single quotes around
+	the PARAM VALUE attribute, combined with the double quotes in the
+	CML source code.
+	
+	<appletExample>
+<![CDATA[<applet code="JmolApplet" archive="JmolApplet.jar" 
+        width="200" height="200" mayscript="true">
+  <param name="loadInline" value='
+<molecule id="methanol">
+  <atomArray atomID="a1 a2 a3 a4 a5 a6"
+    elementType="C O H H H H"
+    x3="-0.748 0.558 -1.293 -1.263 -0.699 0.716"
+    y3="-0.015 0.420  0.202  0.754 -0.934 1.404"
+    z3="0.024 -0.278 -0.901  0.600  0.609 0.137"/>
+</molecule>
+'/>
+</applet>]]>
+	</appletExample>
+	</p>
+
+	<p>The use of &lt; characters in attribute values lead to invalid (X)HTML code, but all
+	browsers seem to accept it. If valid X(HTML) code is important to you, you need to escape
+	all &lt;'s with &amp;lt;, as in:
+	
+	<appletExample>
+<![CDATA[<applet code="JmolApplet" archive="JmolApplet.jar"
+        width="200" height="200" mayscript="true">
+  <param name="loadInline" value='
+&lt;molecule id="methanol">
+  &lt;atomArray atomID="a1 a2 a3 a4 a5 a6"
+    elementType="C O H H H H"
+    x3="-0.748 0.558 -1.293 -1.263 -0.699 0.716"
+    y3="-0.015 0.420  0.202  0.754 -0.934 1.404"
+    z3="0.024 -0.278 -0.901  0.600  0.609 0.137"/>
+&lt;/molecule>
+'/>
+</applet>]]>
+	</appletExample>
+	</p>
+      </section>
+
+      <section title="Applet parameters">
+	<p>The following parameters control the appearance and behavior of the
+	applet. All parameter names and values are case insensitive.
+	</p>
+	<appletParameterList>
+	  <param name="load">
+	    A file relative to the HTML page on the same web server where
+	    the applet was loaded from. The applet security manager prevents
+	    the applet from accessing molecule files which are stored on
+	    other web servers. 
+	  </param>
+	  
+	  <param name="loadInline">
+	    <p>CML data stored inline.</p>
+	    <p>
+	      <i>
+		Unfortunately, newline characters get ignored inside the
+		double quotes in HTML elements. Therefore, it is not possible
+		to pass other file formats using loadInline.
+		Jmol v10 will introduce a new technique for dealing with
+		this problem.
+	      </i>
+	    </p>
+	  </param>
+	  
+	  <param name="bgcolor">
+	    The specification of the background color. Acceptable parameter
+	    values are consistent with HTML: a hash mark followed by a
+	    hexadecimal color specification (#RRGGBB) or one of the sixteen
+	    sRGB color names (black silver gray white maroon red purple
+	    fuchsia green lime olive yellow navy blue teal aqua).
+	    <appletExample>
+<![CDATA[<applet code="JmolApplet" archive="JmolApplet.jar" 
+      width="200" height="200" mayscript="true">
+  <param name="load" value="methanol1.cml"/>
+  <param name="bgcolor" value="#00A0A0">/
+</applet>]]>
+	    </appletExample>
+	  </param>
+        
+	  <param name="style">
+	    <p>
+	      <b><i>Note:</i> This parameter will be deprecated in Jmol v10. </b>
+	    </p>
+	    The rendering style used for atoms and bonds.  One of:
+	    <ul>
+	      <li>shaded &lt;default&gt;</li>
+	      <li>wireframe</li>
+	      <li>quickdraw <i>deprecated</i></li>
+	    </ul>
+	    <appletExample>
+<![CDATA[<applet code="JmolApplet" archive="JmolApplet.jar" 
+        width="200" height="200" mayscript="true">
+  <param name="load" value="methanol1.cml"/>
+  <param name="style" value="shaded"/>
+</applet>]]>
+	    </appletExample>
+	    <appletExample>
+<![CDATA[<applet code="JmolApplet" archive="JmolApplet.jar" 
+        width="200" height="200" mayscript="true">
+  <param name="load" value="methanol1.cml"/>
+  <param name="style" value="wireframe"/>
+</applet>]]>
+	    </appletExample>
+	  </param>
+        
+	  <param name="label">
+	    <p>
+	      <b><i>Note:</i> This parameter will be deprecated in Jmol v10. </b>
+	    </p>
+	    The labels to display for atoms.  One of:
+	    <dl>
+	      <dt>none &lt;default&gt;</dt> <dd>do not display labels.</dd>
+	      <dt>symbol</dt> <dd>label atoms with their atomic symbol.</dd>
+	      <dt>number</dt> <dd>label atoms with their number.</dd>
+	    </dl>
+	    <appletExample>
+<![CDATA[<applet code="JmolApplet" archive="JmolApplet.jar" 
+        width="200" height="200" mayscript="true">
+  <param name="load" value="methanol1.cml"/>
+  <param name="label" value="symbol"/>
+</applet>]]>
+	    </appletExample>
+	    <appletExample>
+<![CDATA[<applet code="JmolApplet" archive="JmolApplet.jar" 
+        width="200" height="200" mayscript="true">
+  <param name="load" value="methanol1.cml"/>
+  <param name="label" value="number"/>
+</applet>]]>
+	    </appletExample>
+	  </param>
+	  
+	  <param name="wireframeRotation">
+	    <b><i>Note:</i> This parameter will be deprecated in Jmol v10. </b>
+	    Whether or not to use the wireframe mode during rotations.
+	    Improves rendering performance of large molecules. One of:
+	    <ul>
+	      <li>true</li>
+	      <li>false &lt;default&gt;</li>
+	    </ul>
+	    <appletExample>
+<![CDATA[<applet code="JmolApplet" archive="JmolApplet.jar" 
+        width="200" height="200" mayscript="true">
+  <param name="load" value="methanol1.cml"/>
+  <param name="wireframeRotation" value="true"/>
+</applet>]]>
+	    </appletExample>
+	  </param>
+
+	  <param name="script">
+	    Allows you to specify a script which is to be run when
+	    the applet is loaded. Note that web browsers remove the newline
+	    character from element values, even inside double quotes. Therefore,
+	    you <i>must</i> separate script statements with a semicolon
+	    character, even though they may be on multiple lines in your
+	    HTML file.
+	    <appletExample>
+<![CDATA[<applet code="JmolApplet" archive="JmolApplet.jar" 
+        width="200" height="200" mayscript="true">
+  <param name="load" value="methanol1.cml"/>
+  <param name="script" value="rotate y 10; loop 1"/>
+</applet>]]>
+	    </appletExample>
+	  </param>
+
+	</appletParameterList>
+      </section>
+    
+      <section title="Mouse gestures">
+	<p>The following mouse actions control the applet:
+	<ul>
+	  <li>Left Mouse Button -
+	  rotates the molecule in x and y dimensions</li>
+	  <li>Right Mouse Button -
+	  &lt;reserved for future expansion&gt;</li>
+	  <li>Shift-Right Mouse Button -
+	  horizontal movement of the mouse rotates the molecule
+	  in the z dimension</li>
+	  <li>Ctrl-Right Mouse Button -
+	  translates (moves) the molecule</li>
+	  <li>Shift-Left Mouse Button -
+	  vertical movement of the mouse zooms in and out</li>
+	  <li>Ctrl-Left Mouse Button -
+	  controls the slab functionality for slicing through
+	  a molecule
+	  [if enabled through scripting <b>set slab on</b>]</li>
+	</ul>
+	</p>
+	<p>These mouse gestures were chosen to be compatible with the
+	MDL Chime plug-in.
+	</p>
+      </section>
+
+      <section title="Animation examples">
+	<p>A carbon-cation rearrangement reaction
+	
+	<appletExample>
+<![CDATA[
+  <applet name="anim" code="JmolApplet" archive="JmolApplet.jar"
+          width="350" height="350" mayscript="true">
+    <param name="load"   value="SN1_reaction.cml">
+  </applet>
+  <form>
+    <input type="button" value="rewind"
+           onClick="document.anim.script('animate rewind')">
+    <input type="button" value="prev"
+           onClick="document.anim.script('animate prev')">
+    <input type="button" value="next"
+           onClick="document.anim.script('animate next')">
+    <input type="button" value="play"
+           onClick="document.anim.script('animate play')">
+    <input type="button" value="revplay"
+           onClick="document.anim.script('animate revplay')">
+  </form>
+ ]]>
+	</appletExample>
+	</p>
+
+	<p>Rotamers of ethane
+      
+	<appletExample>
+<![CDATA[
+  <script>
+  function play2(script) {
+    document.anim2.script(script);
+  }
+  </script>
+<applet name="anim2" code="JmolApplet" archive="JmolApplet.jar"
+    width="350" height="350" mayscript="true">
+  <param name="load" value="conformeren.cml"/>
+</applet>
+  <form>
+    <input type="button" value="rewind"  onClick="play2('animate rewind')">
+    <input type="button" value="prev"    onClick="play2('animate prev')">
+    <input type="button" value="next"    onClick="play2('animate next')">
+    <input type="button" value="play"    onClick="play2('animate play')">
+    <input type="button" value="revplay" onClick="play2('animate revplay')">
+  </form>
+]]>
+	</appletExample>
+	</p>
+      </section>
+    
+      <section title="Examples with other file formats">
+	<p>Aspirin in MDL mol file format
+      
+	<appletExample>
+<![CDATA[<applet code="JmolApplet" archive="JmolApplet.jar"
+    width="350" height="350" mayscript="true">
+  <param name="load" value="aspirina.mol"/>
+  <param name="bgcolor" value="navy"/>
+  <param name="label"   value="symbol"/>
+  <param name="wireframeRotation" value="true"/>
+</applet>
+]]>
+	</appletExample>
+	</p>
+
+      </section>
+    </section>
+
+    <section title="Jmol v9 Scripting">
+      <p>
+	Both the application and the applet support scripting.
+	The examples below use the applet, but the scripts can be used
+	in the Jmol application too. We recommend testing and debugging
+	long scripts within the context of the Jmol application because
+	you can receive diagnostic error messages. 
+      </p>
+      <p>
+	Jmol implements a large subset of the RasMol/Chime molecular
+	visualization scripting language. A full description of the
+	RasMol scripting language is available in the RasMol manual
+	on the Open RasMol web site at
+	<a href="http://www.openrasmol.org/">http://www.openrasmol.org</a>.
+	A description of the scripting language extensions for the
+	MDL Chime plug-in are available at
+	<a href="http://www.mdlchime.com/">http://www.mdlchime.com</a>.
+      </p>
+      <p>
+        A description of the Jmol implementation of the scripting language
+	is available as part of the <a href="../docs/JmolUserGuide">Jmol User Guide</a>. 
+      </p>
+      <p>
+        For smaller scripts and small molecules the transition from
+	Chime to Jmol should be straightforward. 
+	With larger, more
+	complicated Chime web applications you may have challenges
+	because the button/event mechanism is different. 
+	With larger molecules Jmol currently has performance problems.
+	In addition, most protein-specific visualization commands/options
+	are not yet implemented in Jmol (cartoons, strands, etc). 
+      </p>
+      <p>
+        Simple scripts which are executed at applet load time can be
+	executed using the "script" parameter as part of your applet
+	definition in HTML. These scripts will execute 
+	on browser platforms which do not support JavaScript or the
+	LiveConnect interface between JavaScript and Java applets.
+      </p>
+      <p>
+        To develop more flexible web applications using the Jmol applet,
+	you write JavaScript code which passes text strings using the
+	"script" method of the applet. 
+      </p>
+      <p>
+        For additional examples and documentation on Jmol applet scripting
+	see the <a href="../applet">Applet web page</a>.
+      </p>
+
+      <section title="Eye Candy Without JavaScript">
+	<p>This example demonstrates how scripting can be used without
+	JavaScript. Browsers that do not support LiveConnect communication
+	between JavaScript and Java applets will still run this type
+	of script.
+	
+<table border="1"><tr><td>
+<appletExample>
+<![CDATA[
+<applet name="flash" code="JmolApplet" archive="JmolApplet.jar"
+        width="300" height="100" align="left" mayscript="true">
+	<param name="bgcolor" value="teal">
+	<param name="script" value="
+	load 'jmol.mol';
+	select all; cpk off; wireframe 10; color yellow;
+	move 0 0 0 400 0 0 0 0 2;
+	cpk 10; wireframe  5; delay 0.1;
+	cpk 30; wireframe 15; delay 0.1;
+	cpk 50; wireframe 30; delay 0.1;
+	cpk 70; wireframe 50; delay 0.1;
+	select atomno=1, atomno=9;  color blue;   delay 0.1;
+	select atomno=2, atomno=10; color red;    delay 0.1;
+	select atomno=3, atomno=11; color green;  delay 0.1;
+	select atomno=4, atomno=12; color orange; delay 0.1;
+	select atomno=5, atomno=13; color pink;   delay 0.1;
+	select atomno=6, atomno=14; color brown;  delay 0.1;
+	select atomno=7, atomno=15; color purple; delay 0.1;
+	select atomno=8, atomno=16; color cyan;   delay 0.1;
+	move 0 0 0 -400 0 0 0 0 1;
+	move 0 0 360 50 0 0 0 0 1;
+	move 0 360 0 350 0 0 0 0 1;
+	loop 5;
+	">
+</applet>
+]]>
+</appletExample>
+</td></tr></table>
+      </p>
+      <br/>
+    </section>
+
+    <section title="Basic Scripting">
+      <p>
+        This example shows some of the scripting available.
+<appletExample>
+<![CDATA[<applet name="jmol3" code="JmolApplet" archive="JmolApplet.jar"
+        width="200" height="200" mayscript="true">
+  <param name="load" value="caffeine.xyz"/>
+</applet>
+<br>
+<a href="javascript:document.jmol3.setStyle('WIREFRAME')">
+WIREFRAME</a>
+<a href="javascript:document.jmol3.setStyle('SHADED')">
+SHADED</a>
+<br>
+<a href="javascript:document.jmol3.load('aspirina.mol');">
+aspirina.mol</a>
+<a href="javascript:document.jmol3.load('bulk_si.in');">
+bulk_si.in</a>
+<a href="javascript:document.jmol3.load('caffeine.xyz');">
+caffeine.xyz</a>
+<a href="javascript:document.jmol3.load('dna.xyz');">
+dna.xyz</a>
+<a href="javascript:document.jmol3.load('estron.cml');">
+estron.cml</a>
+<br>
+<a href="javascript:document.jmol3.script('background blue ; move 90 180 -45 0 0 0 0 0 5; 
+center 1 ; move 0 0 360 100 0 0 0 0 2 ; delay 2 ; reset; background white')">move</a>
+<a href="javascript:document.jmol3.script('script move.txt');">
+move off of server</a>
+<a href="javascript:document.jmol3.script('load aspirina.mol')">
+load aspirina via script</a>
+<a href="javascript:document.jmol3.script('source testscript.txt')">
+run test script off of server</a>
+<br>
+<a href="javascript:document.jmol3.setWireframeRotation(true)">
+setWireframeRotation(true)</a>
+<a href="javascript:document.jmol3.setWireframeRotation(false)">
+setWireframeRotation(false)</a>
+<br>
+<a href="javascript:document.jmol3.setPerspectiveDepth(true)">
+setPerspectiveDepth(true)</a>
+<a href="javascript:document.jmol3.setPerspectiveDepth(false)">
+setPerspectiveDepth(false)</a>
+<br>
+<a href="javascript:document.jmol3.script('background black')">
+background black</a>
+<a href="javascript:document.jmol3.script('background grey')">
+background grey</a>
+<a href="javascript:document.jmol3.script('background [222,222,222]')">
+background [222,222,222]</a>
+<a href="javascript:document.jmol3.script('background white')">
+background white</a>]]>
+</appletExample>
+      </p>
+    </section>
+
+    <section title="Advanced Scripting">
+      <p>
+        This examples shows more advanced interaction of a HTML page with
+        the applet.
+<appletExample>
+<![CDATA[
+<script>
+function run(script) {
+  document.jmol4.script(script);
+}
+
+function addToScript(script) {
+  fullscript = document.area.script.value;
+  fullscript += script + '\n';
+  document.area.script.value = fullscript;
+  }
+  
+function linkScript(script) {
+  document.write('<a href="javascript:addToScript(');
+  document.write("'" + script + "'");
+  document.write(')\">');
+  document.write(script);
+  document.writeln('</a>&nbsp;&nbsp');
+}
+
+function br() {
+  document.write("<br>");
+}
+
+</script>
+<table border=1>
+<tr><td width=350 align=right>
+<applet name="jmol4" code="JmolApplet" archive="JmolApplet.jar"
+        width="350" height="350" align="left" mayscript="true">
+    <param name="bgcolor" value="black">
+</applet>
+</td>
+<td>
+Enter your RasMol/Chime script here
+<form name="area">
+<textarea name="script" cols=40 rows=10></textarea><br>
+<input type="reset"  value="Clear Script">
+<input type="button" value="Execute Script"
+  onClick="run(document.area.script.value)">
+</form>
+<br>
+Enter one-line RasMol/Chime script commands here
+<form name="line" onSubmit=
+ "run(document.line.script.value);document.line.script.select();return false;">
+<input name="script" onFocus="document.line.script.select()" size=50 type=text>
+</form>
+</td></tr></table>
+
+<script>
+linkScript('load aspirina.mol');
+linkScript('load caffeine.xyz');
+linkScript('load dna.xyz');
+linkScript('load estron.cml');
+br();
+linkScript('set display selected');
+linkScript('set display normal');
+linkScript('set bondmode or');
+linkScript('set bondmode and');
+br();
+linkScript('color atoms purple');
+linkScript('color bonds green');
+linkScript('color yellow');
+linkScript('color atoms [100, 150, 200]');
+br();
+linkScript('select all');
+linkScript('select none');
+linkScript('select atomno=1,atomno=2');
+linkScript('select elemno=1');
+linkScript('select hydrogens');
+linkScript('select carbons');
+br();
+linkScript('delay .1');
+linkScript('delay .5');
+linkScript('delay');
+linkScript('delay 5');
+linkScript('refresh');
+br();
+linkScript('reset');
+linkScript('rotate x 15');
+linkScript('rotate y 15');
+linkScript('rotate z 15');
+linkScript('move 360 0 0 0 0 0 0 0 4');
+linkScript('move 0 360 0 0 0 0 0 0 4');
+linkScript('move 0 0 360 0 0 0 0 0 4');
+br();
+linkScript('translate x 50');
+linkScript('translate x 0');
+linkScript('translate x -50');
+linkScript('move 0 0 0 0 50 -50 0 0 4');
+linkScript('move 0 0 0 0 -50 50 0 0 4');
+br();
+linkScript('zoom 50');
+linkScript('zoom 200');
+linkScript('move 0 0 0 100 0 0 0 0 4');
+br();
+linkScript('set boundbox on');
+linkScript('set boundbox off');
+linkScript('set axes on');
+linkScript('set axes off');
+br();
+linkScript('monitor 1 4');
+</script>
+]]>
+</appletExample>
+        </p>
+      </section>
+    
+      <section title="Showing Animations">
+	<p>
+<appletExample><![CDATA[
+  <script>
+  function play(script) {
+    document.anim3.script(script);
+  }
+  </script>
+  <applet name="anim3" code="JmolApplet" archive="JmolApplet.jar"
+          width="350" height="350" mayscript="true">
+    <param name="load"   value="SN1_reaction.xyz">
+  </applet>
+  <form>
+    <input type="button" value="rewind"  onClick="play('animate rewind')">
+    <input type="button" value="prev"    onClick="play('animate prev')">
+    <input type="button" value="next"    onClick="play('animate next')">
+    <input type="button" value="play"    onClick="play('animate play')">
+    <input type="button" value="revplay" onClick="play('animate revplay')">
+    <br>
+    <input type="button" value="repeated with 2 second delay"
+           onClick="play('animate play; loop 2')">
+    <br>
+    <input type="button" value="repeated no delay"
+           onClick="play('animate play; loop 0')">
+    <br>
+    <input type="button" value="forward and reverse"
+           onClick="play('animate play; animate revplay; loop 0')">
+  </form>]]>
+</appletExample>
+        </p>
+      </section>
+    </section>
+
+  </body>
+</document>

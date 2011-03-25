@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<list xmlns="http://www.xml-cml.org/schema/cml2/core"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.xml-cml.org/schema/cml2/core cmlAll.xsd">
+  <molecule title="methanol">
+    <atomArray atomID="a1 a2 a3 a4 a5 a6" elementType="C  O  H  H  H  H"
+          x3="-0.748 0.558 -1.293 -1.263 -0.699 0.716"
+          y3="-0.015 0.420 0.202 0.754 -0.934 1.404"
+          z3="0.024 -0.278 -0.901 0.600 0.609 0.137"/>
+  </molecule>
+  <molecule title="mauveine">
+    <atomArray atomID="a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 a22 a23 a24 a25 a26 a27 a28 a29 a30 a31" elementType="C C C C C C N C C N C C C C C N C C C C C C C C C C C C N C H" formalCharge="0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" x3="-3.927100 -5.265600 -5.375000 -4.140600 -2.750000 -2.645800 -1.520800 -0.187500 -0.187500 -1.364600 1.203100 2.489600 2.489600 1.203100 -1.578100 3.822900 4.411500 -2.270800 -2.322900 -1.843800 -1.145800 -1.041700 3.666700 4.359400 5.859400 6.604200 5.911500 -6.546900 -6.656300 6.661500 4.682300" y3="4.218800 3.630200 2.135400 1.224000 1.869800 3.364600 1.010400 1.708300 3.260400 4.005200 0.906300 1.599000 3.151000 3.953100 -0.593800 0.958300 -0.432300 -1.447900 -2.890600 -3.640600 -2.838500 -1.338500 -1.770800 -3.052100 -3.104200 -1.822900 -0.536500 4.541700 1.437500 -4.546900 1.708300" z3="0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0"/>
+    <bondArray atomRef1="a1 a1 a2 a2 a3 a3 a4 a5 a5 a6 a7 a7 a8 a8 a9 a9 a11 a12 a12 a13 a15 a22 a16 a16 a17 a17 a18 a19 a21 a21 a23 a24 a25 a25 a26" atomRef2="a2 a6 a3 a28 a4 a29 a5 a6 a7 a10 a8 a15 a9 a11 a10 a14 a12 a13 a16 a14 a18 a15 a17 a31 a23 a27 a19 a20 a20 a22 a24 a25 a26 a30 a27" order="1 2 2 1 1 1 2 1 1 1 2 1 1 1 2 1 2 1 1 2 2 1 1 1 2 1 1 2 1 2 1 2 1 1 2" />
+  </molecule>
+  <molecule title="benzene">
+    <atomArray>
+      <atom id="a1" elementType="C" x3="-1.3961" y3="0.0013" z3="-0.0504"/>
+      <atom id="a2" elementType="C" x3="-0.7402" y3="-0.3516" z3="1.1313"/>
+      <atom id="a3" elementType="C" x3="0.6556" y3="-0.344" z3="1.1844"/>
+      <atom id="a4" elementType="C" x3="1.3956" y3="0.0123" z3="0.0546"/>
+      <atom id="a5" elementType="C" x3="0.7398" y3="0.3611" z3="-1.1284"/>
+      <atom id="a6" elementType="C" x3="-0.656" y3="0.3577" z3="-1.1803"/>
+      <atom id="a7" elementType="H" x3="-2.4975" y3="-0.0029" z3="-0.0919"/>
+      <atom id="a8" elementType="H" x3="-1.3241" y3="-0.6376" z3="2.0213"/>
+      <atom id="a9" elementType="H" x3="1.1731" y3="-0.6224" z3="2.1169"/>
+      <atom id="a10" elementType="H" x3="2.4971" y3="0.0152" z3="0.0956"/>
+      <atom id="a11" elementType="H" x3="1.3239" y3="0.6376" z3="-2.0214"/>
+      <atom id="a12" elementType="H" x3="-1.1735" y3="0.6347" z3="-2.1132"/>
+    </atomArray>
+    <bondArray>
+      <bond atomRefs2="a1 a2" order="A"/>
+      <bond atomRefs2="a1 a6" order="A"/>
+      <bond atomRefs2="a1 a7" order="S"/>
+      <bond atomRefs2="a2 a3" order="A"/>
+      <bond atomRefs2="a2 a8" order="S"/>
+      <bond atomRefs2="a3 a4" order="A"/>
+      <bond atomRefs2="a3 a9" order="S"/>
+      <bond atomRefs2="a4 a5" order="A"/>
+      <bond atomRefs2="a4 a10" order="S"/>
+      <bond atomRefs2="a5 a6" order="A"/>
+      <bond atomRefs2="a5 a11" order="S"/>
+      <bond atomRefs2="a6 a12" order="S"/>
+    </bondArray>
+  </molecule>
+</list>
+

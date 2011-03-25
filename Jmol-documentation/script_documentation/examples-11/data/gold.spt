@@ -1,0 +1,52 @@
+# this script is the first of its kind -- demonstrating the use of
+# variables in Jmol 11.1.12. We use the variable "auRadius" here to 
+# smoothly adjust the gold radius in the spacefill command. 
+# The idea is that @auRadius in any command inserts the value of
+# auRadius at the time that command is executed. 
+
+load gold.cif {5 5 5};wireframe off;spacefill 1.45;draw off;axes off;unitcell off;
+
+# rotate to orientation
+
+moveto /* time, axisAngle */ 5.0 { 329 816 -476 154.9} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationauRadius */ {10.196499 10.1965 9.176849} 18.8;
+
+# create the clipping planes
+
+draw plane1 (atomno=1) (atomno=2) (atomno=6)
+draw plane2 (atomno=1) (atomno=6) (atomno=5)
+draw plane3 (atomno=1) (atomno=2) (atomno=5)
+draw plane4 (atomno=513) (atomno=532) (atomno=429)
+
+# select tetrahedron
+
+select within(999,plane,$plane1) and within(999,plane,$plane2) and within(-999,plane,$plane3) and within(-999,plane,$plane4)
+
+# fade unwanted atoms
+
+select not selected
+auRadius = 1.45
+message _here1
+auRadius = auRadius - 0.02
+spacefill @auRadius
+refresh
+if (auRadius > 0.02);goto _here1;endif
+
+display not selected
+
+
+#reorient
+
+moveto /* time, axisAngle */ 5.0 { -180 497 -849 149.7} /* zoom, translation */  100.0 -6.0 15.1  /* center, rotationRadius */ {10.196499 10.1965 9.176849} 18.8;
+
+#fade in nontetrahedral atoms
+
+select not displayed;color translucent white;
+display (atomx < 20 && atomy < 20)
+auRadius = 0.05
+message _here2
+auRadius = auRadius + 0.02
+spacefill @auRadius
+refresh
+if (auRadius < 1.45);goto _here2;endif
+
+

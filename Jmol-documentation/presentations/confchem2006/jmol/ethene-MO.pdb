@@ -1,0 +1,15 @@
+HEADER
+REMARK ethene
+HETATM    1  C           1       0.000   0.662   0.000                       C
+HETATM    2  H           1       0.930   1.199   0.000                       H
+HETATM    3  H           1      -0.930   1.199   0.000                       H
+HETATM    4  C           1       0.000  -0.662   0.000                       C
+HETATM    5  H           1       0.930  -1.199   0.000                       H
+HETATM    6  H           1      -0.930  -1.199   0.000                       H
+CONECT    1    2    3    4    4
+CONECT    2    1
+CONECT    3    1
+CONECT    4    5    6    1    1
+CONECT    5    4
+CONECT    6    4
+END

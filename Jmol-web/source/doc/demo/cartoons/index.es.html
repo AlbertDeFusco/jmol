@@ -1,0 +1,54 @@
+<!--
+  Spanish translation 
+  Translated from default version : (...).en.html (v 1.1)
+-->
+<html>
+  <head>
+    <title>Demostración de representación esquemática con JmolApplet</title>
+    <script src="../../jmol/Jmol.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <form>
+      <table border="1">
+	<tr>
+	  <td>
+	    <h2>Representación esquemática (<i>cartoons</i>)</h2>
+	    <script>
+	      jmolApplet(400, "load 1CRN.pdb.gz; cpk off; wireframe off;" +
+	      "cartoon; color cartoon structure");
+	    </script>
+	  </td>
+	  <td>
+	    
+	    <script>
+	      function modelRadio(model, checked) {
+	      var script = "load " + model +
+	      ".gz; cpk off; wireframe off; cartoon; color cartoon structure";
+	      jmolRadio(script, model + "<br />", checked);
+	      }
+	      
+	      modelRadio("1CRN.pdb", true);
+	      modelRadio("1D68.pdb");
+	      modelRadio("3PTE.cif");
+	      modelRadio("1GFL.pdb");
+	      modelRadio("1D66.pdb");
+	      
+	      jmolHtml("<hr />Ampliar y mirar de cerca<br />");
+	      jmolButton("zoom 300");
+	      jmolBr();
+	      jmolButton("zoom 100");
+	      jmolBr();
+	      jmolHtml("<hr />Hacerlo girar<br />");
+	      jmolCheckbox("spin on", "spin off", "giro");
+	    </script>
+	  </td>
+	</tr>
+      </table>
+    </form>
+  </body>
+</html>

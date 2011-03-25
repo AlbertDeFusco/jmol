@@ -1,0 +1,171 @@
+<section title="JmolApplet deployment">
+  <section
+   title="For the applet, what must be installed on web client machines?">
+    <p>
+      No special Jmol-specific software needs to be installed
+      on the client machines.
+    </p>
+    <p>
+      Client machines do not need anything other than a web browser
+      that supports Java, and a recent version of Java installed and enabled
+      in the browser (best is Java Virtual Machine from Sun). 
+      When a client visits a web page containing the JmolApplet, the
+      applet gets automatically downloaded from the web server and
+      executed.
+    </p>
+    <p>
+      The JmolApplet runs as an <b>untrusted</b> applet. The applet
+      does not any confirmation from the user to load and begin
+      execution. There is also a <b>trusted</b> version of the applet
+      (JmolAppletSigned)
+	  for authors that prefer to make use of its advantages 
+	  (see <a href="technotes/#Browser Enhancement Technologies">TechNotes, Browser Enhancement Technologies</a> 
+	  for details).
+    </p>
+  </section>
+
+  <section title="Jmol.js JavaScript Library">
+    <p>
+      It is strongly recommended that you 
+      use the <a href="../jslibrary/">Jmol.js JavaScript Library</a>
+      to allocate your applets within your web pages. 
+    </p>
+  </section>
+  
+  <section
+   title="Can the JmolApplet be permanently installed locally,
+   like a plug-in?">
+    <p>No.</p>
+    <p>
+      Applets get cached in the local browser cache. Subsequent uses of
+      the applet will pull the applet from the cache
+      (after confirming that the date/time/size have not changed
+      on the web server). At least, that's the theory ...
+      and it works correctly on the browsers I have seen :-)
+    </p>
+  </section>
+  
+  <section title="What MIME types must be installed on the server?">
+    <p>
+      None. The web server needs no special configuration. 
+    </p>
+    <p>
+      Applets do not get associated with MIME types in the same way that
+      plugins do. While the Chime <i>plugin</i> requires configuration
+      of the web server, the Jmol<i>Applet</i> does not.
+    </p>
+    <p>
+      Check out the Tech Note on
+      <a href="../technotes/#Browser Enhancement Technologies">
+	Browser Enhancement Technologies
+      </a>
+    </p>
+  </section>
+
+  <section title="Should I use APPLET, OBJECT or EMBED for my html tag?">
+    <p>
+      You are strongly recommended to use the
+      <a href="../jslibrary/">Jmol.js JavaScript Library</a>, 
+      since it will automatically insert the best choice according to the 
+      user's browser.
+    </p>
+    <p>
+      If you insist on doing it yourself,
+      <code>EMBED</code> is not good for applets; <code>APPLET</code> is 
+      better than <code>OBJECT</code>.
+    </p>
+    <p>
+      <i>
+	Do not be confused by the Sun Java Plug-in developer documentation!
+      </i>
+    </p>
+    <p>
+      Unfortunately, the Sun Java Plug-in documentation does not do a good
+      job of explaining the current state of the world. The doc was written
+      several years ago and really needs to be cleaned up. In many places
+      it still seems to recommend the use of the <code>OBJECT</code> tag.
+      That is the way things used to be up until about 2002.
+      Since then the Sun Java
+      Plug-in has had direct support for the <code>APPLET</code>
+      tag on Microsoft
+      Internet Explorer, and this issue has essentially gone away.
+      However, Sun needs to maintain the doc for legacy corporate intranet
+      applications that were deployed using the <code>OBJECT</code> tag. 
+    </p>
+    <p>
+      Chapter 12 of the Sun Java Plug-in developer guide says:<br/>
+      With Internet Explorer it is recommended that you use the
+      APPLET tag for internet deployment.<br/>
+      ...<br/>
+      With Netscape it is recommended that you use the
+      APPLET tag for internet deployment.
+    </p>
+  </section>
+
+  <a name="loadInline" />
+  <section title="I am having problems with loadInline">
+    <p>
+      <i>You should probably use the
+      <a href="../jslibrary/">Jmol.js JavaScript Library</a></i>
+    </p>
+    <p>
+      Make sure you make a clear distinction between the
+      loadInline <i>param tag</i> and the loadLine <i>method</i>.
+    </p>
+  </section>
+
+  <section title="The loadInline param does not seem to work">
+    <p>
+      <i>You should probably use the
+      <a href="../jslibrary/">Jmol.js JavaScript Library</a></i>
+    </p>
+    <p>
+      Unfortunately, the mechanism for the loadInline param tag is rather
+      ugly ... the HTML specification causes a few problems for us.
+    </p>
+    <p>
+      The HTML specification requires that newline characters get removed
+      (and carriage-return characters get turned into spaces) <i>before</i>
+      the parameter string is passed to the applet. Therefore, the browser
+      removes the newline characters before they get sent to the applet.
+    </p>
+    <p>
+      Jmol has a special syntax to work around this issue. 
+      you put a vertical bar beginning of each line ... like this:
+      <code>
+<pre>
+	...
+	&lt;param name="loadInline" value="
+|put your
+|molecular model
+|data here
+" /&gt;
+</pre>
+      </code>
+      The JmolApplet will replace the vertical bars with a newline character.
+      (Any white space up through the first vertical bar is removed).
+    </p>
+    <p>
+      If you have a text string with the molecular model and you want to
+      convert it, you can use a regular expression to perform the substitution.
+      Different OS platforms use different conventions for line termination, so
+      your code should check for three different end-of-line sequences ...
+      <code>carriage-return</code>, <code>linefeed</code>, or
+      <code>carriage-return linefeed</code>.
+    </p>
+    <p>
+      In Perl:
+      <code>
+	myMolecularModel ~= s/\r|\n|\r\n/|/g;
+      </code>
+    </p>
+    <p>
+      In JavaScript:
+      <code>
+	myMolecularModel.replace(/\r|\n|\r\n/g, "|");
+      </code>
+    </p>
+  </section>
+  
+</section>    
+

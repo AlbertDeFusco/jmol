@@ -1,0 +1,24 @@
+#JVXL VERSION 1.4
+functionXY
+curveAsStringXY
+-2 -2.0 -2.0 -2.0 ANGSTROMS
+21 0.2 0.0 0.0
+21 0.0 0.2 0.0
+21 0.0 0.0 0.2
+1 1.0 -2.0 -2.0 -2.0 //BOGUS H ATOM ADDED FOR JVXL FORMAT
+2 2.0 2.0 2.0 2.0 //BOGUS He ATOM ADDED FOR JVXL FORMAT
+-1 35 90 35 90 Jmol voxel format version 1.4
+# 
+1.4E-45 -836 925 -834 0 -0.031914562 1.4315836 0.1 0.5 rendering:isosurface isosurface1 fill noMesh noDots notFrontOnly frontlit
+ 0 83 1 20 1 19 2 18 3 18 3 17 4 17 4 17 4 17 4 17 4 18 3 18 3 19 2 20 1 20 1 125 1 19 2 18 3 18 3 17 4 16 5 16 5 16 5 16 5 16 5 16 5 16 5 17 4 18 3 18 3 19 2 20 1 83 1 19 2 18 3 17 4 16 5 16 5 15 6 15 6 15 6 15 6 15 6 15 6 15 6 16 5 16 5 17 4 18 3 19 2 20 1 41 1 19 2 18 3 17 4 16 5 15 6 15 6 14 7 14 7 14 7 14 7 14 7 14 7 14 7 15 6 15 6 16 5 17 4 18 3 19 2 20 1 20 1 18 3 17 4 16 5 15 6 15 6 14 7 13 8 13 8 13 8 13 8 13 8 13 8 13 8 14 7 15 6 15 6 16 5 17 4 18 3 20 1 19 2 18 3 16 5 15 6 15 6 14 7 13 8 13 8 12 9 12 9 12 9 12 9 12 9 13 8 13 8 14 7 15 6 15 6 16 5 18 3 19 2 18 3 17 4 16 5 15 6 14 7 13 8 13 8 12 9 12 9 12 9 12 9 12 9 12 9 12 9 13 8 13 8 14 7 15 6 16 5 17 4 18 3 18 3 16 5 15 6 14 7 13 8 13 8 12 9 12 9 11 10 11 10 11 10 11 10 11 10 12 9 12 9 13 8 13 8 14 7 15 6 16 5 18 3 17 4 16 5 15 6 14 7 13 8 12 9 12 9 11 10 11 10 11 10 11 10 11 10 11 10 11 10 12 9 12 9 13 8 14 7 15 6 16 5 17 4 17 4 16 5 15 6 14 7 13 8 12 9 12 9 11 10 11 10 11 10 11 10 11 10 11 10 11 10 12 9 12 9 13 8 14 7 15 6 16 5 17 4 17 4 16 5 15 6 14 7 13 8 12 9 12 9 11 10 11 10 11 10 10 11 11 10 11 10 11 10 12 9 12 9 13 8 14 7 15 6 16 5 17 4 17 4 16 5 15 6 14 7 13 8 12 9 12 9 11 10 11 10 11 10 11 10 11 10 11 10 11 10 12 9 12 9 13 8 14 7 15 6 16 5 17 4 17 4 16 5 15 6 14 7 13 8 12 9 12 9 11 10 11 10 11 10 11 10 11 10 11 10 11 10 12 9 12 9 13 8 14 7 15 6 16 5 17 4 18 3 16 5 15 6 14 7 13 8 13 8 12 9 12 9 11 10 11 10 11 10 11 10 11 10 12 9 12 9 13 8 13 8 14 7 15 6 16 5 18 3 18 3 17 4 16 5 15 6 14 7 13 8 13 8 12 9 12 9 12 9 12 9 12 9 12 9 12 9 13 8 13 8 14 7 15 6 16 5 17 4 18 3 19 2 18 3 16 5 15 6 15 6 14 7 13 8 13 8 12 9 12 9 12 9 12 9 12 9 13 8 13 8 14 7 15 6 15 6 16 5 18 3 19 2 20 1 18 3 17 4 16 5 15 6 15 6 14 7 13 8 13 8 13 8 13 8 13 8 13 8 13 8 14 7 15 6 15 6 16 5 17 4 18 3 20 1 20 1 19 2 18 3 17 4 16 5 15 6 15 6 14 7 14 7 14 7 14 7 14 7 14 7 14 7 15 6 15 6 16 5 17 4 18 3 19 2 20 1 41 1 19 2 18 3 17 4 16 5 16 5 15 6 15 6 15 6 15 6 15 6 15 6 15 6 16 5 16 5 17 4 18 3 19 2 20 1 83 1 19 2 18 3 18 3 17 4 16 5 16 5 16 5 16 5 16 5 16 5 16 5 17 4 18 3 18 3 19 2 20 1 125 1 20 1 19 2 18 3 18 3 17 4 17 4 17 4 17 4 17 4 18 3 18 3 19 2 20 1 20 1 63
+=@e(@w:@)x715t@ewKsdHR:j###5v:@dHR^MXdHRv:@j:j##dH|RT@e-w+)x15w:h@w_@eb:@bHHMMHME=Aw+((W_<-.HLW^]dW^HL-.Wc_w((=tAHZMHRMW@be:(w@@HM~4 E@@+((_^<./LM^_de^_LM./_c^((@t@MZMMRM@W@e(wxv175=EA@E@774vrZS###EAZSaYZSEA##Z|S-v74Eh@E_A7b5'vnte_ww(+((+(vtt_KC;e5+)C;KAC;+)jeC;tT_+v+(+w((wwt:_KH;sRW__^ZrSCK;qcUA_qwq_UA<qK;r!SE^@_sHRKW;je###-<..</###eUcAkG</cApGcA</XkcAJe##<|/<q.#r#5e|5:)@HLLMEA+5)_<G/M_e_MG/c_5)tAZMSLW@5e)H;RW^^_ZSC;qcA_qwq_A<q;!SE_A^HRW;MAX]ddeaYKAwpGew###|weG/wATY>e;dBXRAH;RW^^_ZSC;qcA_qw|q_A<q;!SE_A^HRW;:)@HLLMEA+)_</M_e_M/c_)tAZMSLW@e)jej##-../##ejUAkXG/AGA/XkXAJej#|/q.r#5ej|H;R|W_c_^cZS|C;q<cA_cq<w/q<_cA<q<;!S|E^c@_cHR|W;e_Tw-w((((v-t_TK;eJ5);A;)jeJ;T_T+v-(w((w-w:_Txv+15=At@@t74v+rS!##AtS!YTS!At#|S!-v+4h@t_Atb5'v+n:(@hHMZMMZE@h+(^E</|MZ_Ee>_EMZ/|c^E(t@hZMZRMZW@he(:(@_HMRMMREA_+(w_@<.qLS^Ad;^ALS.qc_@(wtA_ZMRRMRW@_e(==@W@@W75bw(wsRH##r@WRHXBRH@W#r|RH-w(w5bh@W_@Wb=:((ev'nt_:K;We5|5)e;WAR;W)eje5|;WT_:+v'n(ew:
+#~58 $~4 #~13 $%'((('%$#~10 $&)-/00-)&$#~8 $&*17<><71+&$#~7 %)1;FOROF;1*%#~6 $'-7FVchcVE7-'$#~5 $(0<OcquqcN<0($#~5 $)1>Rhu|uhQ>1)$#~5 $(0<OcquqcN<0($#~5 $'-7FVchcVE7-'$#~6 %)0;ENQNE:1*%#~7 $&+17<><71+&$#~8 $&)-010-*&$#~10 $%'()('%$#~13 $~4 #~58 os^eNX>L2C*<'9&8&:'>*E.O6ZAgPt`po!H6)#(1=C@7.).:K^ps_I4&%9a9cvhAjA-*7J`sfO7&(K?_7JwRBkKT.)8OfY@+(LYfl6tw#DwudR*+?YN4&=Ciz%JNJYW*/wH=%3ME-,gfr);:<iFA-9(je)*C?*7@@?R>zjKsto_QB;1&;;)BkT#V@kaejZVb8Tc;$7:)G{$$OkLe|o7v[:$s?#6;)BkU%ZFriorb!f:Tc;#7>*7@A@R;qY7cln_RB;1&;E-,geoz%jUx`qr/%ie)*CN4&=Dl%0Zc`ng44yI>%3MZ@+(N!n{N:AD!,|hT++?YfO7')LBe@V*^LpNU/*9Ofs_I4&&9b;fykCkB-+7J`to!H6)#(1=C@7.).:K^po^N>2*&%&'*.6AP`pseXLC<88:>EO[gt
+#-------end of jvxl file data-------
+# cutoff = 1.4E-45; pointsPerAngstrom = 5.0; nSurfaceInts = 835; nBytesData = 3898; contoured; precision colored; 0 contours
+# data minimum = -0.031914562; data maximum = 1.4315836 
+# value mapped to red = 0.1; value mapped to blue = 0.5
+# created using Jvxl.java
+# precision: true nColorData 834
+# isosurface contour functionXY "curveAsStringXY" {-2 -2 -2} {-21 .2 0 0} {21 0 .2 0} {21 0 0 .2} color absolute 0.1 0.5 "ch3cl-esp.cub.gz"; ; # FILE0="file:/C:/jmol-dev/workspace/Jmol-documentation/script_documentation/examples-11/data/ch3cl-esp.cub.gz"
+# isosurface isosurface1 fill noMesh noDots notFrontOnly frontlit
+# bytes read: 1812500; approximate voxel-only input/output byte ratio: 486:1

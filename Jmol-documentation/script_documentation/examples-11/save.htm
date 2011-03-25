@@ -1,0 +1,445 @@
+<html>
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script type="text/javascript" src="Jmol.js"></script>
+<script type="text/javascript" src="new.js"></script>
+<script type="text/javascript">
+
+
+
+var mailrecipient = ""
+var mailsender = ""
+var mailtitle = ""
+function sendState(){
+ var whoto=prompt("Enter the email address you would like to send this state to.", mailrecipient)
+ if(!whoto){
+	alert("Please indicate a recipient for this report.")
+	return 0
+ }
+ if(whoto.indexOf("@")<0){
+	alert("Please indicate a FULL recipient address, with \"@\" sign, such as hansonr@stolaf.edu.")
+	return 0
+ }
+ mailrecipient = whoto
+
+ var whofrom=prompt("Enter your email address (from which this message will be sent)", mailsender)
+ if(!whofrom){
+	alert("Please indicate a sender for this report.")
+	return 0
+ }
+ if(whofrom.indexOf("@")<0){
+	alert("Please indicate a FULL sender address, with \"@\" sign, such as campbelp@stolaf.edu.")
+	return 0
+ }
+ mailsender = whofrom
+
+ var stitle=prompt("Enter a title for this state", mailtitle)
+ if (!stitle)
+	stitle = "untitled"
+ else
+	mailtitle = stitle
+ savedata=jmolGetPropertyAsString("stateInfo")
+ document.frmsend.senddata.value=savedata
+ document.frmsend.to.value=whoto
+ document.frmsend.from.value=whofrom
+ document.frmsend.subject.value="Jmol state: " + stitle
+ document.frmsend.whencreated.value=(new Date())
+ document.frmsend.title.value=stitle
+ document.frmsend.submit()
+ alert("Jmol state \n\n"+stitle+"\n\nsent to "+whoto)
+ return 1
+}
+
+
+
+
+
+
+
+
+//logLevel=0  // 4 is standard ;1 gives fatal errors only; 2 gives all errors;
+              // 3 gives errors and warnings; 4 gives errors, warnings and information; 5 adds debug.
+
+//<![CDATA[
+//model = "http://www.rcsb.org/pdb/files/1blu.pdb"
+title="ATOMS";
+model=';set echo top left;echo loading quartz.cif...;delay 1;load "quartz.cif" {1 1 1};message done'
+//model="tp.pdb;zoom 800;"
+docsearch = document.location.search.substring(1)
+if(docsearch.indexOf("model=")>=0)model=unescape(docsearch.split("model=")[1].split("&")[0])
+
+latestVersion = '### Be sure you have the <a href=http://jmol.sourceforge.net/files>Latest version</a>. Very latest may appear here: <a href=http://www.stolaf.edu/academics/chemapps/jmol/docs/examples-11/Jmol-11_3.zip>Jmol-11_3.zip</a>###'
+
+
+
+
+
+//model=';script "javascript:loadMyFile()"'
+function loadMyFile(){
+  var script ='data "model"Job PY_QZ1-1_GOB1V started on bc54 at Fri Jul 27 07:57:45 2007\n'+'jobid: bc54-0-46a9ebc8\n'
+          +'+--------------------------------------------------------------------+\n'
+          +'  |  Jaguar version 6.5, release 106                                   |\n'
+          +'  |                                                                    |\n'
+          +'  |  Copyright (c) 2005 Schrodinger,  LLC.                             |\n'
+          +'  |  All Rights Reserved.                                              |\n'
+          +'  |                                                                    |\n'
+//[etc.]
+      +"end model;"
+      +"wireframe .1; cpk off;" +
+          "frame 3; vectors on; color vectors yellow;" +
+          "move 10 -20 10 0 0 0 0 0 1; delay 1; vibration on;";
+
+  jmolScript(script)
+
+}
+
+messagecallback="showmsg"
+animcallback=""
+pickcallback=""
+loadstructcallback=""
+
+delayms = 100; delayms0 = 1000
+polling = false;
+
+Callbacks=new Array("-atomPicked","-fileLoaded","-fileLoadError","-frameChanged","-measurePending","-measureCompleted","-measurePicked","-scriptStarted","-scriptEcho","-scriptStatus","-scriptError","-scriptMessage", "-scriptTerminated","-userAction","-viewerRefreshed","-newOrientation")
+
+function getCheckList(){
+ var s=""
+ var skey=""
+ var ischecked=0
+ for(var i=0;i<Callbacks.length;i++){
+	skey=Callbacks[i]
+	ischecked=(skey.charAt(0)!="-")
+	if(ischecked)polling=true;
+	Callbacks[i]=skey=skey.replace(/\-/,"")
+	s+=" <label><input type=checkbox onclick=getCallbackOptions() id='"+skey+"'"+(ischecked?" checked=1":"")+">"+skey+"</label>"
+	if((i+1)%4==0)s+="<br>"
+ }
+ s+=" <a href=javascript:setOptions(1)>all</a> <a href=javascript:setOptions(0)>none</a> "
+ return s
+}
+
+nSkip = 1;
+
+
+Scripts=new Array(" "
+
+,'This page lists all new features being introduced in Jmol 11.3 (to be released as Jmol 11.4 when the time comes). Other pages describe features introduced between <a href=new0.htm>Jmol 10.2 and Jmol 11.0</a> and between <a href=new2.htm>Jmol 11.0 and Jmol 11.2</a>. <a target=_blank href=../index.htm?version=11.2>Documentation for 11.2</a> is also available. <br />There is also a <a href=new.txt>simple list</a> of script modifications. Take a look and see what is new. Comments? Suggestions? <a href=mailto:hansonr@stolaf.edu>Bob Hanson</a>'
+
+,latestVersion
+
+,'### if/while/for capability ###'
+,'# Jmol 11.3.23 introduces a full complement of if/elseif/else/endif, while/end while, and for/end for program flow capability. See the <a href="../index.htm?ver=11.4#if_while_for">online documentation</a> for details and examples.'
+,'### user-defined macros, subroutines, and functions capability ###'
+,'# Jmol 11.3.22 introduces the capability to execute user-defined macros (single-word commands), subroutines (methods that accept parameters), and functions (methods that return values) within Jmol scripts and mathematical expressions.See the <a href="../index.htm?ver=11.4#functions">online documentation</a> for details and examples.'
+,'### new customizable menus ###'
+,'# Jmol 11.3.15 introduces customizable menus. You provide a file the shows only the menus you want to have different. The overall format and full default Jmol menu is at <a href=http://chemapps.stolaf.edu/jmol/docs/misc/Jmol.mnu>Jmol.mnu</a>. The default menu is loaded using an empty string. In this case, the test menu is <a href=test.mnu>test.mnu</a>.'
+,'load menu "../test.mnu";script "javascript:alert(\'now try the menu\')"'
+,'load menu "" # load the default menu.'
+,'# along with this capability are two new show and getProperty options:'
+,'show menu'
+,'getproperty "menu"'
+,'# to load Jmol with an alternative menu in an applet, use (for now) <code>jmolSetCallback("menuFile","whatever.mnu")</code> prior to <code>JmolApplet()</code>'
+,'# for the Jmol application, use the command line switch </b>-m FILENAME</b>.'
+
+,'### %l -- element (atomic) number ###'
+,'# Jmol 11.3.14 allows %l (lower case L) in labels shows the element number (atomic number) of the atom.'
+,'label %l'
+
+,'### new programmatic color definition ###'
+,'# Jmol 11.3.14 accepts color points {r g b} that can be defined programmatically.'
+,'r = 255;g=255;b=100;message _loop;background {@r @g @b};r = r - 10; g = g - 10;if (r > 0); refresh;goto _loop;endif;background black'
+
+,'### color [object] property [property] "schemename" range [min] [max] ###'
+,'# Jmol 11.3.14 introduces a much more flexible method of setting color schemes.'
+,'load 1crn.pdb'
+,'color atoms property temperature "rwb" # without range: full scale'
+,'color atoms property temperature "rwb" range 0 100'
+,'color atoms property temperature "rwb" range 0 50'
+,'color atoms property temperature "rwb" range 0 20'
+,'color atoms property temperature "rwb" range 0 10'
+,'color atoms property temperature "rwb" range 10 0 # and reverse -- just reverse numbers'
+,'# Or, you can define a color scheme on the fly:'
+,'color atoms property temperature "[xff0000] [xff2000] [xff4000] [xff6000] [xff8000] [xffa000] [xffc000] [xffe000] [xfff000] [xffff00] [xf0f000]" range 0 10'
+,'# And you can name schemes for use later:'
+,'color "myScheme=[xff0000] [xff2000] [xff4000] [xff6000] [xff8000] [xffa000] [xffc000] [xffe000] [xfff000] [xffff00] [xf0f000]"'
+,'cartoons on;color cartoons property atomno "myScheme"'
+,'# If you want to have access to the reverse, call it <b>user</b> and then use scheme "resu"'
+,'color "user=[xe0ff00] [xa0ff00] [x60ff00] [x20ff00] [x00ff20] [x00ff60] [x00ffa0] [x00ffe0] [x00e0ff] [x00a0ff] [x0060ff]"'
+,'load 1crn.pdb;cartoons on;color cartoons property atomno "user" # note that color schemes persist through a file load'
+,'cartoons on;color cartoons property atomno "resu"'
+,'### colors in Jmol math ###'
+,'# You can now access the color for a given value with Jmol math'
+,'load 1crn.pdb;refresh;color atoms property atomno "roygb";x = 0 +javascript("prompt(\'pick a number from 1 to "+{*}.size+"\',50)");y=javascript("alert(\'the color for atom number " + x + " is " + x.color  + " == " + x.color.color + "\')");c=x.color;background @c'
+,'set pickcallback "jmolscript:x=javascript(\\"alert(\'\\"+_atompicked+\\"\')\\")"'
+,'load 1crn.pdb;color atoms property atomno "roygb";x=javascript("alert(\'pick an atom to set the background to its color\')");'
++'set pickcallback "jmolscript:n=_atompicked+1;colorpt={atomindex=_atompicked}.color;colorhex=colorpt.color;set echo top left;complement={255,255,255}-colorpt;color echo @complement;str=\\"\\"+n+\\" \\"+colorpt+\\" \\"+colorhex;echo @str;background @colorpt"'
+,'color "rwb" range 0 100;x = {atomindex=_atompicked}.temperature.color;echo @x'
+,'### new SHOW FRAME option ###'
+,'# Jmol 11.3.10 introduces SHOW FRAME, which delivers frame number, model name, file name, and file title for each model in the current frame set.'
+,'show frame'
+,'load C6H6.smol;show frame'
+,'load C6H6.smol;frame 0;show frame'
+,'load C6H6.smol;frame range 3-4;frame 0;show frame'
+,'load files "caffeine.xyz" "1crn.pdb";frame 0;show frame'
+
+
+,'### new SYNCHRONIZE command ###'
+,'# Jmol 11.3.9 introduces a new method allowing two or more applets to be synchronized in terms of orientation. Move one with the mouse, and the other moves as well. In addition, the sync command allows ANY command to be sent to one or more other applets directly, without the intervention of JavaScript. Applets are identified by appletId (jmolApplet0, for instance) along with an optional bracketed sync group identifier -- generally a random number that identifies the page containing the controlling applet (generated by a new version of Jmol.js). If the syncId is not given, then the ID for the page containing the controlling applet is used. This feature is important for cross-frame synchronization only. Synchronization settings and commands can be given to the applet running the script (.), all applets (*), all other applets (>), or a specific applet (appletId or appletId[syncId]). For details and examples, see <a href=sync2.htm>sync2.htm</a>.'
+
+,'### load symmetry range ###'
+,'# Jmol 11.3.9 introduces the capability of visualizing the close contacts around a crystalline protein (or any other cyrstal structure) that are to atoms that are in proteins in adjacent unit cells or adjacent to the protein itself. The option RANGE x, where x is a distance in angstroms, placed right after the braces containing the set of unit cells to load does this. The distance, if a positive number, is the maximum distance away from the closest atom in the {1 1 1} set. If the distance x is a negative number, then -x is the maximum distance from the {not symmetry} set. The difference is that in the first case the primary unit cell (555) is first filled as usual, using symmetry operators, and close contacts to this set are found. In the second case, only the file-based atoms (Jones-Faithful operator x,y,z) are initially included, then close contacts to that set are found. Depending upon the application, one or the other of these options may be desirable.'
+,'load quartz.cif'
+,'load quartz.cif {1 1 1}'
+,'load quartz.cif {444 666 1} range 3.0'
+,'load quartz.cif {444 666 1} range -3.0'
+,'load 1crn.pdb {444 666 1} range 4.0'
+,'load 1crn.pdb {444 666 1} range -4.0;unitcell off;axes off;display not symmetry or symmetry and (oxygen or nitrogen);connect 4.0 {not symmetry and (oxygen or nitrogen)} {symmetry and displayed} hbond;center visible'
+
+,'### adjustable scale for unit cell ###'
+,'# Jmol 11.3.8 allows for adjusting the scale of the axes for unit cells. A scale of 2 is "standard". Note that the axis scale is the same for all models loaded and persists from one model to the next upon loading.'
+,'load quartz.cif {1 1 1};moveto /* time, axisAngle */ 1.0 { -1000 3 29 61.64} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {1.2289999 2.1286902 2.7027001} 5.806031 /* navigation center, translation, depth */ {0.0 0.0 0.0} -9.724187 29.23801 50.0'
+,'axes scale 1.0'
+,'axes scale 2.0'
+,'axes scale 2.4'
+,'load quartz.cif {555 666 1};moveto /* time, axisAngle */ 1.0 { -1000 3 29 61.64} /* zoom, translation */  50.0 0.0 0.0  /* center, rotationRadius */ {1.2289999 2.1286902 2.7027001} 5.806031 /* navigation center, translation, depth */ {0.0 0.0 0.0} -9.724187 29.23801 50.0'
+,'axes scale 4.0'
+
+,'### export of VRML ###'
+,'# Jmol 11.3.4 introduces a VRML option for the WRITE command. For example, <b>write VRML "myfile.wrl"</b>. Still in development; an outgrowth of the <a href="http://www.grc.org/programs.aspx?year=2007&program=visualiz">2007 Gordon Research Conference on Visualization in Science and Education</a>.'
+
+,'### new QUATERNION command ###'
+,'# Jmol 11.3.3 introduces the QUATERNION command, and experimental command that produces a 3D-projection of the 4D quaternion or quaternion derivative map of a protein or nucleic acid. Still in development; an outgrowth of the <a href="http://www.grc.org/programs.aspx?year=2007&program=visualiz">2007 Gordon Research Conference on Visualization in Science and Education</a>.'
+,'load 1crn.pdb;cartoons on;color structure'
+,'quaternion'
+,'quaternion derivative;select visible;trace off;color structure'
+
+,'### new RAMACHANDRAN command ###'
+,'# Jmol 11.3.3 introduces the RAMACHANDRAN command, and experimental command that produces a 3D Ramachandran plot of a protein. Still in development; an outgrowth of the <a href="http://www.grc.org/programs.aspx?year=2007&program=visualiz">2007 Gordon Research Conference on Visualization in Science and Education</a>.'
+,'load 1crn.pdb;cartoons on;color structure'
+,'ramachandran;color structure'
+
+,'### isosurface mapping of MEP and MO data onto planes ###'
+,'# Jmol 11.3.2 adds the capability to map MEP and MO data onto planes.'
+,'load C6H6.smol;moveto /* time, axisAngle */ 1.0 { 923 -262 283 126.9} /* zoom, translation */  100.0 0.0 0.0  /* center, rotationRadius */ {0.0 0.0 0.0} 3.657167 /* navigation center, translation, depth */ {0.0 0.0 0.0} 0.0 0.0 50.0;'
+,'mo homo'
+,'mo off'
+,'isosurface plane {0 0 2 -1.5} map mo homo'
+,'isosurface plane {0 0 2 -1.5} map MEP #(bug fixed here in 11.3.9)'
+
+,'### PERSPECTIVE DEFAULT NOW 11, NOT 10 ###'
+,'# Jmol 11.3.0 switches the default perspective model to 11. This allows for linear zoom, a far greater range of zoom, and smooth transition into and out of navigation mode. You can still invoke the old model using <b>set perspectiveModel 10</b> (possibly as a defaultLoadScript), if you need to have the exact perspective of earlier Jmol versions. Try different zoom settings and switch perspectives to see the differences.'
+,'load 1crn.pdb;set perspectiveDepth on # after loading crystal structures, this may be off'
+,'save orientation;perspectivemodel = 11;restore orientation # new default'
+,'save orientation;perspectivemodel = 10;restore orientation # old default'
+
+
+,' <a href=javascript:dotest(-1)>[appletInfo]</a>'
+ +' <a href=javascript:dotest(-2)>[animationInfo]</a>'
+ +' <a href=javascript:dotest(0)>[fileName]</a>'
+ +' <a href=javascript:dotest(1)>[fileHeader]</a>'
+ +' <a href=javascript:dotest(2)>[fileContents]</a>'
+ +'<br><a href=javascript:dotest(8.1)>[atomList]</a>'
+ +' <a href=javascript:dotest(8)>[atomInfo]</a>'
+ +' <a href=javascript:dotest(7)>[bondInfo]</a>'
+ +' <a href=javascript:dotest(7.5)>[moleculeInfo]</a>'
+ +" <a href=javascript:dotest(10)>[extractModel]</a>"
+ +'<br><a href=javascript:dotest(3)>[orientationInfo]</a>'
+ +' <a href=javascript:dotest(3.1)>[auxiliaryInfo]</a>'
+ +' <a href=javascript:dotest(3.2)>[transformInfo]</a>'
+ +' <a href=javascript:dotest(3.3)>[centerInfo]</a>'
+ +' <a href=javascript:dotest(3.4)>[boundboxInfo]</a>'
+ +"<br><a href=javascript:dotest(4)>[modelInfo]</a>"
+ +" <a href=javascript:dotest(4.2)>[polymerInfo]</a>"
+ +" <a href=javascript:dotest(4.3)>[chainInfo]</a>"
+ +" <a href=javascript:dotest(4.4)>[shapeInfo]</a>"
+ +" <a href=javascript:dotest(4.5)>[stateInfo]</a>"
+ +" <a href=javascript:dotest(9)>[reload THIS orientation]</a>"
+ +"<br><br>"
+
+//," JSON data returned:<br><textarea name=outputJSON id=outputJSON rows=5 cols=50></textarea>"
+," <input  type=checkbox name=idecode id=idecode checked=1>Decoded: <a href=javascript:showoutput()>new window</a><br><textarea name=output id=output rows=5 cols=60 wrap=off></textarea>"
+)
+remarks=""
+//]]>
+
+
+function getCallbackOptions(){
+ var s=""
+ for(var i=0;i<Callbacks.length;i++)if(document.getElementById(Callbacks[i]).checked)s+=Callbacks[i]
+ var waspolling = polling
+ polling = (s!="")
+ if(polling && !waspolling)pollApplet()
+ return "monitoring:"+s
+}
+
+function pollApplet(){
+   whatm=getCallbackOptions()
+   if(!polling){
+	document.title = ""
+	return
+   }
+   document.title = (new Date())
+   var A=jmolGetStatus(whatm)
+   parseMessages(A)
+   if(polling)setTimeout("pollApplet()",delayms)
+}
+
+function setOptions(all_or_none){
+ for(var i=0;i<Callbacks.length;i++)document.getElementById(Callbacks[i]).checked = all_or_none
+ polling = (all_or_none == 1) 
+}
+
+
+function test1() {
+ jmolSetAtomCoordRelative(Math.floor(Math.random()*6),Math.random()/5-0.1,Math.random()/5-0.1,Math.random()/5-0.1)
+ jmolScriptWait("refresh")
+}
+
+function test2() {
+ jmolScript("data \"coord\"3;1 2 3 4;2 3 4 5;5 6 7 8;end \"coord\";")
+}
+	
+
+	function fire(i0,n){
+ for(var i=0; i < n; i++) {
+   //alert(Scripts[i0+i]);
+   jmolScript(Scripts[i0+i]);
+ }
+}
+
+
+what="visible"
+whatp="centerInfo"
+whatm=""
+
+function xshowoutput(s){ if(!s) s=document.getElementById("output").value; dowritenew("<pre>"+s+"</pre>") };function oldshowoutput(){
+ dowritenew("<pre>"+document.getElementById("output").value+"</pre>")
+}
+
+function dotest(iwhat){
+ if(iwhat!=3)monitoron=false
+ var s=""
+ var sJSON=""
+ var info=""
+ var sinfo=""
+ var sparam=""
+ var str=""
+ if(iwhat==-1){
+   sinfo="appletInfo"
+ }else if(iwhat==-2){
+   sinfo="animationInfo"
+ }else if(iwhat==0){
+   str="fileName"
+ }else if(iwhat==1){
+   str="fileHeader"
+   info = jmolGetPropertyAsString(sinfo)
+ }else if(iwhat==2){
+   str="fileContents"
+ }else if(iwhat==3){
+   sinfo="orientationInfo"
+ }else if(iwhat==3.1){
+   sinfo="auxiliaryInfo"
+ }else if(iwhat==3.2){
+   sinfo="transformInfo"
+ }else if(iwhat==3.3){
+   sinfo="centerInfo"
+ }else if(iwhat==3.4){
+   sinfo="boundboxInfo"
+ }else if(iwhat==3.5){
+   sinfo="zoomInfo"
+ }else if(iwhat==4){
+   sinfo="modelInfo"
+ }else if(iwhat==4.2){
+   sparam="PROMPT"
+   sinfo="polymerInfo"
+ }else if(iwhat==4.3){
+   sparam="PROMPT"
+   sinfo="chainInfo"
+ }else if(iwhat==4.4){
+   sinfo="shapeInfo"
+ }else if(iwhat==4.5){
+   sparam="visible"
+   sinfo="stateInfo"
+ }else if(iwhat==7){
+   sparam="PROMPT"
+   sinfo="bondInfo"
+ }else if(iwhat==7.5){
+   sparam="PROMPT"
+   sinfo="moleculeInfo"
+ }else if(iwhat==8){
+   sparam="PROMPT"
+   sinfo="atomInfo"
+ }else if(iwhat==8.1){
+   sparam="PROMPT"
+   sinfo="atomList"
+ }else if(iwhat==9){
+   info = jmolGetPropertyAsArray("orientationInfo")
+   s="load "+jmolGetPropertyAsString("fileName")+";"+info.moveTo
+   document.getElementById("cmd").value=s
+   jmolScript(s)
+ }else if(iwhat==10){
+   s=prompt("enter an atom expression",what)
+   if(!s)return
+   what=s
+   s = jmolGetPropertyAsString("extractModel",what)
+   var A=jmolGetPropertyAsArray("orientationInfo")
+   showoutput(s);   jmolLoadInlineScript(s,A.moveTo)
+ }
+ if(str!=""){
+   s=jmolGetPropertyAsString(str)
+ }else if(sinfo!=""){
+   if(sparam == "PROMPT"){
+     s=prompt("enter an atom expression",what)
+     if(!s)return
+     what=s
+     sparam=what
+   }
+   if(document.getElementById("idecode").checked){
+	s=jmolGetPropertyAsArray(sinfo,sparam)
+	s=_jmolEnumerateObject(s,sinfo)
+   }else{
+	s=jmolGetPropertyAsJSON(sinfo,sparam)
+   }
+ }
+ if(s!="")document.getElementById("output").value=s
+}
+
+function parseMessages(A){
+ if(!A)return
+ var s=""
+ for(var i=A.length-1;i>=0;i--){
+	s=A[i][3]+"\n"+s
+	showmsg("msg",A[i])
+ }
+ document.getElementById("output").value=s
+}
+
+monitoron=0
+function domonitor(isiter){
+  if(!isiter)monitoron=!monitoron
+  if(!monitoron)return
+  dotest(3)
+  setTimeout("domonitor(1)",delayms)  
+}
+
+</script>
+</head>
+<body>
+<script type="text/javascript">showpage(0)</script>
+<form name="frmsend" action="savestate.php" method="post" target="results" onSubmit="sendState();return false">
+<input type="submit">
+<input name="title" type="text" />
+<input name="to" type="text" />
+<input name="from" type="text" />
+<input name="subject" type="text" />
+<input name="whencreated" type="text" />
+<textarea name="senddata" wrap="virtual" />
+state will be put here
+</textarea>
+</form>
+<iframe name="results" id="results" bgcolor="red" width='500' height='500'></iframe>
+</body>
+</html>

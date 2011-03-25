@@ -1,0 +1,99 @@
+<project name="Jmol-FAH" default="main" basedir=".">
+  <!--
+      DocumentId  $Id: build.xml 6784 2007-02-10 22:04:29Z nicove $
+  -->
+
+  <property name="base.dir"    value="." />
+  <property name="src.dir"     value="src" />
+  <property name="build.dir"   value="build" />
+  <property name="classes.dir" value="build/classes" />
+  <property name="dist.dir"    value="build/dist" />
+
+  <property name="copyright.file" value="COPYRIGHT.txt" />
+  <property name="license.file"   value="LICENSE.txt" />
+  <property name="readme.file"    value="README.txt" />
+
+  <property name="activation.dir"    value="jars/activation" />
+  <property name="activation.jar"    value="activation.jar" />
+  <property name="activation.lic"    value="LICENSE_activation.txt" />
+  <property name="commons-email.dir" value="jars/commons-email" />
+  <property name="commons-email.jar" value="commons-email-1.1.jar" />
+  <property name="commons-email.lic" value="LICENSE_commonsemail.txt" />
+  <property name="commons-io.dir"    value="jars/commons-io" />
+  <property name="commons-io.jar"    value="commons-io-1.4.jar" />
+  <property name="commons-io.lic"    value="LICENSE_commonsio.txt" />
+  <property name="mail.dir"          value="jars/mail" />
+  <property name="mail.jar"          value="mail.jar" />
+  <property name="mail.lic"          value="LICENSE_mail.txt" />
+
+  <target name="main" depends="init,jar,dist">
+  </target>
+
+  <target name="jar" depends="init,compile">
+    <jar destfile="${build.dir}/JmolFah.jar">
+      <fileset dir="${classes.dir}">
+        <include name="**/*.class" />
+      </fileset>
+      <manifest>
+        <attribute name="Main-Class" value="org.jmol.fah.checkxyz.Check" />
+        <attribute name="Class-Path" value="${activation.jar} ${mail.jar} ${commons-email.jar} ${commons-io.jar}" />
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="dist" depends="init,jar">
+    <mkdir dir="${dist.dir}" />
+  	<zip zipfile="${dist.dir}/JmolFah-${JmolFAH.Version}.zip">
+  	  <fileset dir="${base.dir}">
+  	    <include name="${copyright.file}" />
+  	    <include name="${license.file}" />
+  	    <include name="${readme.file}" />
+  	  </fileset>
+  	  <fileset dir="${build.dir}">
+  	    <include name="JmolFah.jar" />
+  	  </fileset>
+  	  <fileset dir="${activation.dir}">
+  	    <include name="${activation.jar}" />
+  	    <include name="${activation.lic}" />
+  	  </fileset>
+      <fileset dir="${mail.dir}">
+        <include name="${mail.jar}" />
+        <include name="${mail.lic}" />
+      </fileset>
+      <fileset dir="${commons-email.dir}">
+        <include name="${commons-email.jar}" />
+        <include name="${commons-email.lic}" />
+      </fileset>
+      <fileset dir="${commons-io.dir}">
+        <include name="${commons-io.jar}" />
+        <include name="${commons-io.lic}" />
+      </fileset>
+    </zip>
+  </target>
+
+  <target name="compile" depends="init">
+    <mkdir dir="${classes.dir}" />
+    <javac srcdir="${src.dir}"
+           destdir="${classes.dir}"
+           source="1.4">
+      <classpath>
+        <fileset dir="${commons-email.dir}">
+          <include name="${commons-email.jar}" />
+        </fileset>
+        <fileset dir="${commons-io.dir}">
+          <include name="${commons-io.jar}" />
+        </fileset>
+        <fileset dir="${activation.dir}">
+          <include name="${activation.jar}" />
+        </fileset>
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="init" id="init">
+    <tstamp/>
+    <delete dir="${build.dir}" />
+    <property file="${src.dir}/org/jmol/fah/Jmol-FAH.properties" prefix="JmolFAH" />
+  </target>
+
+</project>

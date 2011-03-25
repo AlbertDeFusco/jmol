@@ -1,0 +1,2575 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="jmol-confchem_files/filelist.xml">
+<link rel=Edit-Time-Data href="jmol-confchem_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Jmol: Open-source molecular visualization and analysis</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="date"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceType"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceName"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Bob Hanson</o:Author>
+  <o:LastAuthor>Bob Hanson</o:LastAuthor>
+  <o:Revision>90</o:Revision>
+  <o:TotalTime>2194</o:TotalTime>
+  <o:Created>2006-04-13T04:24:00Z</o:Created>
+  <o:LastSaved>2006-05-01T06:55:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>6643</o:Words>
+  <o:Characters>37870</o:Characters>
+  <o:Company>St. Olaf College</o:Company>
+  <o:Lines>315</o:Lines>
+  <o:Paragraphs>88</o:Paragraphs>
+  <o:CharactersWithSpaces>44425</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:ApplyBreakingRules/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<link rel=Stylesheet type="text/css" media=all href=jmol-confchem.css>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.MsoEndnoteReference
+	{mso-style-noshow:yes;
+	letter-spacing:0pt;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{mso-style-noshow:yes;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.demoframe, li.demoframe, div.demoframe
+	{mso-style-name:demoframe;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	background:#A8A8F0;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.demoframetitle, li.demoframetitle, div.demoframetitle
+	{mso-style-name:demoframetitle;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	background:#A8A8F0;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.demoimagecell, li.demoimagecell, div.demoimagecell
+	{mso-style-name:demoimagecell;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	background:#A8A8F0;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.democaptioncell, li.democaptioncell, div.democaptioncell
+	{mso-style-name:democaptioncell;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	background:#A8A8F0;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.booktitle
+	{mso-style-name:booktitle;}
+ /* Page Definitions */
+ @page
+	{mso-endnote-numbering-style:arabic;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 3.5in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;
+	mso-endnote-numbering-style:arabic;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1056926466;
+	mso-list-type:hybrid;
+	mso-list-template-ids:951909482 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+<script language="JavaScript"  src="jmol/demos.js">
+<script language="JavaScript"  src="jmol/demo.js">
+</script>
+
+<script language="JavaScript">
+
+function getDemoCell(i,width){
+  if(!width) width=250
+  var s="<a target=_blank href=jmol/demo.htm?scripting=1;demo="+i+"><img src=img/"+Demo[i].image
+	+" title=\"click to load the Jmol applet in a pop-up window\" width="+width+" height="+width+"/></a>"
+  s="<table cellpadding=5 cellspacing=0 class=demotable><tr><td class=demoimagecell>"+s
+	+"</td></tr><tr><td class=democaptioncell>"+Demo[i].caption+"</td></tr></table>"
+  document.write("<table cellpadding=0 cellspacing=0><tr><td class=demoframe width="+width+" valign=top>"+s+"</td></tr></table>")
+}
+
+function getDemoCell3(i1,i2,i3,width){
+  if(!width) width=200
+  document.write("<table cellspacing=0 cellpadding=0><tr><td valign=top>")
+  getDemoCell(i1,width)
+  document.write("</td><td valign=top>")
+  getDemoCell(i2,width)
+  document.write("</td><td valign=top>")
+  getDemoCell(i3,width)
+  document.write("</td></tr></table>")
+}
+</script>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="12290"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="#EEEEEE" lang=EN-US link=blue vlink=purple style='tab-interval:
+.5in'>
+
+<div class=Section1>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=635 valign=top style='width:476.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:18.0pt'>Jmol: Open-source
+  molecular visualization and analysis<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width=635 valign=top style='width:476.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.stolaf.edu/people/hansonr" target=_blank>Robert M.
+  Hanson</a> (St. Olaf College), <a
+  href="mailto:ewilligh@uni-koeln.de?subject=Jmol:%20Open-source...">Egon
+  Willighagen</a> (Cologne University Bioinformatics Center), <a
+  href="mailto:nvervell@club-internet.fr?subject=Jmol:%20Open%20source...">Nicolas
+  Vervelle</a> (Jmol Project), <a
+  href="mailto:molvisions@mac.com?subject=Jmol:%20Open-source...">Timothy
+  Driscoll</a> (molvisions), and <a
+  href="mailto:miguel@jmol.org?subject=Jmol:%20Open-source...">Miguel Howard</a>
+  (Jmol Project)<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Introduction to Jmol<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td width=435 valign=top style='width:326.55pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://jmol.sourceforge.net/" target="_blank">Jmol</a> is a free,
+  open-source molecule viewer for chemistry and biochemistry. It works on
+  multiple platforms, including Windows, Mac OS X, and Linux/Unix systems. The
+  software consists of three parts, all written in the Java programming
+  language: the Jmol applet, the Jmol application, and the Java development
+  toolkit, JmolViewer. The Jmol application is a standalone Java application
+  that runs on the desktop. JmolViewer is a set of Java “classes” that can be
+  integrated into other Java applications to provide molecular visualization
+  and analysis of chemical structure. While interesting in their own right, in
+  this paper we will focus on the third component of the triad, the Jmol
+  applet, as it is the component that can be integrated into web pages.<o:p></o:p></span></p>
+  </td>
+  <td width=315 valign=top style='width:236.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt'><script language="JavaScript">
+getDemoCell(7)
+  </script></span><span style='font-size:14.0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='display:none;mso-hide:all'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width=600 style='width:6.25in;
+ mso-cellspacing:1.5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Jmol has many features to offer
+  in the fields of chemistry and biochemistry. We will highlight many of them
+  in this paper. Screen shots illustrating the broad variety of applications of
+  Jmol are shown in Figure 1. For example, Jmol supports rendering of secondary
+  structures of proteins and nucleic acids, it can produce animations of
+  chemical reactions and conformational changes, and it can help visualize
+  vibrations of small molecules based on quantum mechanics or molecular
+  mechanics calculations. </span></p>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+   style='mso-cellspacing:0in;mso-padding-alt:7.5pt 7.5pt 7.5pt 7.5pt'>
+   <tr style='mso-yfti-irow:0'>
+    <td style='background:#A8A8F0;padding:7.5pt 7.5pt 7.5pt 7.5pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='font-size:14.0pt'>Figure 1. Some Examples of Jmol. <o:p></o:p></span></b></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td style='background:#A8A8F0;padding:7.5pt 7.5pt 7.5pt 7.5pt'>
+    <p class=MsoNormal><span style='font-size:10.0pt'><script language="JavaScript">
+getDemoCell3(2,4,5,200)
+    </script><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+    <td style='background:#A8A8F0;padding:7.5pt 7.5pt 7.5pt 7.5pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='font-size:10.0pt'>click on an image to open a new window using Jmol.
+    <o:p></o:p></span></b></p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Recent work has added many
+  new capabilities (Figure 2), including the ability to select specific groups
+  of atoms based on connectivity and to modify bonding patterns. Jmol can now display
+  orbitals and other surfaces, including planes and axes that can help in the
+  visualization of symmetry. Most recently, Jmol can now depict a wide range of
+  polyhedral structures. These and many more capabilities will be highlighted
+  in this paper.</span></p>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+   style='mso-cellspacing:0in;mso-padding-alt:7.5pt 7.5pt 7.5pt 7.5pt'>
+   <tr style='mso-yfti-irow:0'>
+    <td style='background:#A8A8F0;padding:7.5pt 7.5pt 7.5pt 7.5pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='font-size:14.0pt'>Figure 2. Recent additions to Jmol functionality. <o:p></o:p></span></b></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td style='background:#A8A8F0;padding:7.5pt 7.5pt 7.5pt 7.5pt'>
+    <p class=MsoNormal><span style='font-size:10.0pt'><script language="JavaScript">
+getDemoCell3(11,3,10,200)
+    </script><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2'>
+    <td style='background:#A8A8F0;padding:7.5pt 7.5pt 7.5pt 7.5pt'>
+    <p class=MsoNormal><span style='font-size:10.0pt'><script language="JavaScript">
+getDemoCell3(6,1,9,200)
+    </script><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+    <td style='background:#A8A8F0;padding:7.5pt 7.5pt 7.5pt 7.5pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='font-size:10.0pt'>click on an image to open a new window using Jmol.
+    <o:p></o:p></span></b></p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Jmol supports many of the
+  common input and output formats, and new file reading capabilities are added
+  on an as-needed basis (Table 1). Compressed files are automatically
+  uncompressed in the browser for faster downloads.</span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=631
+   style='width:473.4pt;border-collapse:collapse;mso-yfti-tbllook:480;
+   mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+   <tr style='mso-yfti-irow:0;height:27.5pt'>
+    <td width=631 colspan=2 valign=top style='width:473.4pt;border:solid windowtext 1.0pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+    height:27.5pt' idth631>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='font-size:14.0pt'>Table 1. File formats read by Jmol<span
+    style='mso-spacerun:yes'>  </span>(April, 2006)<o:p></o:p></span></b></p>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>CIF<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.iucr.org/iucr-top/cif/" target="_blank">Crystallographic
+    Information File</a><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>mmCIF<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.iucr.org/iucr-top/cif/mmcif/ndb/" target="_blank">Macromolecular
+    Crystallographic Information File</a><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:3'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>CML<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.xml-cml.org/" target="_blank">Chemical Markup Language</a>
+    file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:4'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>CSF<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.cachesoftware.com/cache/" target="_blank">Fujitsu CAChe</a>
+    chemical structure file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:5'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>CTFile<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.mdli.com/" target="_blank">Elsevier Molecular Design</a>
+    chemical table file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:6'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>GAMESS<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.msg.ameslab.gov/GAMESS/GAMESS.html" target="_blank">General
+    Atomic and Molecular Electronic Structure System</a> output file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:7'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>Gaussian<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.gaussian.com/" target="_blank">Gaussian, Inc.</a> output
+    file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:8'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>HIN<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.hyper.com/" target="_blank">HyperChem</a> native file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:9'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>Jaguar<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.ncsa.uiuc.edu/" target="_blank">National Center for
+    Supercomputing Applications</a> Jaguar output file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:10'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>MM1GP<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.uku.fi/~thassine/ghemical/" target="_blank">Ghemical</a>
+    molecular mechanics file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:11'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>MOL<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.mdli.com/" target="_blank">Elsevier Molecular Design</a>
+    structure file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:12'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>MOLPRO<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.molpro.net/" target="_blank">Molpro</a> output file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:13'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>MOPOUT<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'>MOPAC (public domain)
+    output file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:14'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>NWCHEM<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.emsl.pnl.gov/docs/nwchem/nwchem.html" target="_blank">Pacific
+    Northwest National Laboratory NWChem</a><span style='mso-spacerun:yes'> 
+    </span>output file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:15'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>PDB<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.rcsb.org/pdb" target="_blank">Research Collaboratory for
+    Structural Bioinformatics Protein Data Bank</a> file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:16'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>QOUT<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.q-chem.com/" target="_blank">Q-Chem, Inc.</a> output file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:17'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>SHELX<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://shelx.uni-ac.gwdg.de/SHELX/" target="_blank">SHELX</a> output
+    file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:18'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>SMOL<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.wavefun.com/" target="_blank">Wavefunction, Inc. Spartan</a>
+    data file<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:19'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>XYZ<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://iubio.bio.indiana.edu/soft/chemistry/xmol.readme"
+    target="_blank">Minnesota Supercomputer Institute XMol</a> file format<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:20'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth127>
+    <p class=MsoNormal><span style='font-size:14.0pt'>XYZ+vib<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth504>
+    <p class=MsoNormal><span style='font-size:14.0pt'>XYZ format files with
+    added vibrational vector information (source unknown)<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:21;mso-yfti-lastrow:yes'>
+    <td width=127 valign=top style='width:95.4pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal><span style='font-size:14.0pt'>XYZ-FAH<o:p></o:p></span></p>
+    </td>
+    <td width=504 valign=top style='width:5.25in;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://folding.stanford.edu/" target="_blank">Folding@home</a> XYZ
+    file<o:p></o:p></span></p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>The Problem of Molecular
+  Visualization on the Web<o:p></o:p></span></b></p>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Chemistry is often referred
+  to as the “molecular” science. As such, students of chemistry early on are
+  introduced to molecules as three-dimensional objects, and many sorts of
+  wooden or plastic or even paper molecular models are used in the teaching of
+  chemistry. To this day, many students in organic chemistry are still required
+  to purchase molecular model “kits” that allow the construction of a limited
+  set of molecular structures. These kits help students “see” the symmetries
+  and structural factors involved in chemical geometry and reactivity. <o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.rasmol.org/" target="_blank">RasMol</a></span><a
+  style='mso-endnote-id:edn1' href="#_edn1" name="_ednref1" title=""><span
+  class=MsoEndnoteReference><span style='font-size:8.0pt'><span
+  style='mso-special-character:footnote'><![if !supportFootnotes]><span
+  class=MsoEndnoteReference><span style='font-size:8.0pt;mso-fareast-font-family:
+  "Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+  mso-bidi-language:AR-SA'>[1]</span></span><![endif]></span></span></span></a><span
+  style='font-size:14.0pt'> was a key development in the history of
+  computer-based molecular<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>visualization. Roger Sayle
+  began developing it in 1989 as a system for<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>rendering 3D molecules on
+  raster displays. He spent several years in the<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>early 1990s improving
+  performance and porting to various systems. With the<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>help of the growing user
+  community, he continued to add functionality,<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>much of it related to PDB
+  files and biochemistry. In 1993 he released the<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>copyright to the public
+  domain and posted the source code on the internet.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>One of RasMol’s most
+  intriguing aspects was (and still is) that it has a<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>scripting language which
+  can be used to control the visual representation<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>of the molecule. One could
+  develop lists of operations to be carried out<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>on the molecule in order to
+  showcase important aspects of the molecular<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>structure such as alpha helixes,
+  beta-pleated sheets, and hydrogen bonds.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>RasMol is a stand-alone
+  program that requires downloading and<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>installation. In the mid
+  1990s, with increasing interest in graphical web<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>browsers on the internet,
+  there was growing demand among<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>chemical/biochemical
+  educators and researchers for a method of conveying<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>the three-dimensional
+  aspect of molecules on the web. Using the RasMol<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>public domain source code
+  as a basis, Molecular Design Inc. created a<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>plug-in for the Netscape
+  web browser. The <a href="http://www.mdl.com/products/framework/chime/"
+  target="_blank">Chime Netscape plug-in</a> was<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>introduced to the chemical
+  community at the 211th ACS National Meeting<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>almost exactly 10 years
+  ago, in April of 1996.</span><a style='mso-endnote-id:edn2' href="#_edn2"
+  name="_ednref2" title=""><span class=MsoEndnoteReference><span
+  style='font-size:8.0pt'><span style='mso-special-character:footnote'><![if !supportFootnotes]><span
+  class=MsoEndnoteReference><span style='font-size:8.0pt;mso-fareast-font-family:
+  "Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+  mso-bidi-language:AR-SA'>[2]</span></span><![endif]></span></span></span></a><span
+  style='font-size:14.0pt'> Chime’s primary use was<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>for visualizations within
+  MDL’s proprietary chemical inventory database<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>system, but it was also
+  made freely available to the public.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Chime was an enabler for
+  educators, providing widespread availability to a<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>web-based scriptable
+  “virtual” molecular model kit along the lines of<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>RasMol. Chime was quickly
+  adopted by educators as a valuable tool for<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>displaying molecules and
+  demonstrating concepts. Thus, with the<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>introduction of Chime,
+  virtual molecular visualization took a big step<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>into the general chemistry,
+  organic and biochemistry classroom.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Chime was based upon
+  browser plug-in technology, and therefore inherited a<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>set of technical
+  complexities associated with plug-ins. A problem for<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>end-users was that the
+  plug-in required manual installation on individual<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>user machines. At the university
+  level in particular this was a problem,<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>as students might be using
+  campus-wide public computing resources largely<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>out of the control of the
+  professor or the designer of the web site.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>A set of larger problems
+  was caused by the fact that plug-in behavior was<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>different across browsers
+  and operating systems. Netscape and Microsoft<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>did not implement plug-ins
+  in the same way. The MSFT Internet Explorer<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>plug-in mechanism was
+  different from the Netscape Navigator plug-in<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>mechanism and Netscape on
+  Windows behaved differently from Netscape on<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Macintosh. At times this
+  made it difficult for content developers to build<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>portable web pages that
+  would reliably run on different web browser<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>platforms.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>In the long run, this
+  inconsistent plug-in behavior had an even more<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>significant impact on MDL
+  and on the future of Chime. Porting and<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>maintaining Chime on
+  different platforms represented a significant ongoing<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>software development cost
+  to MDL. These costs became increasingly<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>difficult to justify,
+  particularly after the internet “bubble” burst. MDL<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>ultimately made the
+  decision to stop porting to new systems and to put<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Chime in “maintenance
+  mode”. Consider these notes at MDL's <a
+  href="http://www.mdli.com/support/developer/chime/documentation/faq.jsp#GC2"
+  target="_blank">Chime support web site</a>:<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:.6in;margin-bottom:
+  0in;margin-left:.6in;margin-bottom:.0001pt'><b>When will you have a version
+  of Chime for Macintosh OS-X or Linux?</b><span style='font-size:14.0pt'><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:.6in;margin-bottom:
+  0in;margin-left:.6in;margin-bottom:.0001pt'>We don't have any current plans
+  for an OS-X version of Macintosh or a Linux version.<span style='font-size:
+  14.0pt'><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:.6in;margin-bottom:
+  0in;margin-left:.6in;margin-bottom:.0001pt'><b>Why doesn't Chime work with
+  Netscape 6 and 7?</b><span style='font-size:14.0pt'><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:.6in;margin-bottom:
+  0in;margin-left:.6in;margin-bottom:.0001pt'>Chime has been tested on a number
+  of platforms, including certain versions of Netscape and Internet Explorer.
+  The fully tested browser and operating system combinations are listed under
+  the Requirements link. Other combinations of operating system and browser may
+  work partially or not at all. Unfortunately, we don't have the resources to
+  test Chime on every new browser and operating system.<span style='font-size:
+  14.0pt'><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>The Jmol Solution<o:p></o:p></span></b></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>This potential crisis for
+  chemical educators who were developing web-based content using Chime was
+  diffused by the timely development of Jmol.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>The Java programming
+  language</span><a style='mso-endnote-id:edn3' href="#_edn3" name="_ednref3"
+  title=""><span class=MsoEndnoteReference><span style='font-size:8.0pt'><span
+  style='mso-special-character:footnote'><![if !supportFootnotes]><span
+  class=MsoEndnoteReference><span style='font-size:8.0pt;mso-fareast-font-family:
+  "Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+  mso-bidi-language:AR-SA'>[3]</span></span><![endif]></span></span></span></a><span
+  style='font-size:14.0pt'> was designed as a modern programming environment
+  for the web. Cross-platform support and safe execution of downloaded code are
+  fundamental to the design. Because the Jmol applet is written in Java, most
+  of the cross-platform porting, maintenance and installation issues associated
+  with the Chime plug-in do not exist. Jmol development regularly occurs on
+  Linux, Mac OS X and Windows systems. When a user visits a web page containing
+  the Jmol applet,<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>the program is
+  automatically downloaded and executed on the client’s browser without
+  requiring installation.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Dan Gezelter started
+  writing Jmol in the late 1990s with the intention of building a replacement
+  for XMol, an early program distributed by the </span><st1:place><st1:PlaceName><span
+    style='font-size:14.0pt'>Minnesota</span></st1:PlaceName><span
+   style='font-size:14.0pt'> </span><st1:PlaceName><span style='font-size:14.0pt'>Supercomputer</span></st1:PlaceName><span
+   style='font-size:14.0pt'> </span><st1:PlaceType><span style='font-size:14.0pt'>Center</span></st1:PlaceType></st1:place><span
+  style='font-size:14.0pt'> (now the <a
+  href="http://iubio.bio.indiana.edu/soft/chemistry/xmol.readme" target="_blank">Minnesota
+  Supercomputer Institute</a>).</span><a style='mso-endnote-id:edn4'
+  href="#_edn4" name="_ednref4" title=""><span class=MsoEndnoteReference><span
+  style='font-size:8.0pt'><span style='mso-special-character:footnote'><![if !supportFootnotes]><span
+  class=MsoEndnoteReference><span style='font-size:8.0pt;mso-fareast-font-family:
+  "Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+  mso-bidi-language:AR-SA'>[4]</span></span><![endif]></span></span></span></a><span
+  style='font-size:14.0pt'> Dan, then assistant professor at the University of
+  Notre Dame, had started the <a href="http://www.openscience.org/"
+  target="_blank">OpenScience Project</a> to promote open-source scientific
+  software. Although Dan has not been directly affiliated with Jmol for a
+  number of years, his early contributions as project founder were very
+  important.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Egon Willighagen joined the
+  project in 1998, contributing support for CML files and other file formats as
+  well as other new functionality. In 2002 he became Jmol project leader and
+  oversaw a number of public releases. Egon also has responsibility for
+  maintaining the interface between the <a href="http://cdk.sourceforge.net/">Chemical
+  Development Kit software library</a> and Jmol.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Miguel Howard joined the
+  project in late 2002, with the explicit goal of building Jmol into a viable
+  replacement for the Chime plug-in. His first major contribution was an
+  interpreter for the RasMol/Chime scripting language. In the spring of 2003
+  Miguel began designing and implementing a software-based graphics engine that
+  would provide cross-platform high-performance 3D functionality. He
+  subsequently redesigned and re-implemented the core architecture to support
+  efficient rendering of macromolecules with hundreds of thousands of atoms.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>An extended testing period began
+  at the end of 2003. Through 2004 a small set of users around the world made
+  significant contributions to the Jmol project by testing Jmol releases and
+  explaining scripting behaviors of RasMol and Chime.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Tim Driscoll, because of
+  his extensive experience with Chime, was particularly helpful during this
+  process. He helped resolve a number of issues associated with macromolecules,
+  including definitions of protein/nucleic predefined sets and schematic
+  rendering of secondary structures.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Bob Hanson also got
+  involved during this time, developing an interactive web site providing Jmol <a
+  href="http://www.stolaf.edu/academics/chemapps/jmol/docs">script documentation
+  and examples</a>. Feedback and contributions from Bob and other JavaScript
+  experts led to the development of the Jmol.js JavaScript library, which makes
+  introducing Jmol into web pages almost trivial.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Jmol version 10.00, a fully
+  functional replacement for the Chime plug-in, was released in December 2004.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>As the Jmol community grew,
+  requests for new functionality came in. Through 2005 a number of new
+  scripting, rendering and file format features were introduced into the
+  development version of Jmol. Notable additions included support for polyhedra
+  representations and isosurfaces. <o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Nicolas (Nico) Vervelle
+  joined Jmol because of his interest in the <a href="folding.stanford.edu">Folding@home</a></span><span
+  class=MsoHyperlink><o:p></o:p></span></p>
+  <p class=MsoNormal><span class=MsoHyperlink><span style='font-size:14.0pt'><a
+  href="folding.stanford.edu">project</a></span></span><span style='font-size:
+  14.0pt'>. He contributed the file reader for folding@home’s files and added
+  expressions for substructure searching using SMILES syntax. Nico then took
+  over responsibility for managing internationalization and localization
+  efforts.</span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Another official release, <a
+  href="http://sourceforge.net/project/showfiles.php?group_id=23629">Jmol
+  version 10.2</a>, was made in April 2006. It included language localizations
+  for Catalan, German, Spanish, Estonian, French, Dutch, and Portuguese. In the
+  spirit of open source development, localizations were contributed and
+  maintained by Jmol users from different countries.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Jmol development continues
+  along a variety of paths, and the Jmol community continues to grow, with
+  increasing involvement and interest from educators and scientists around the
+  world.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>What follows is a
+  discussion of the use of Jmol in education in a variety of chemical and
+  biochemical contexts. The discussion highlights web sites that have utilized
+  Jmol, general capabilities of the current version of Jmol, and a few sneak
+  peeks of some of the more experimental features of Jmol not yet publicly
+  released. This list is by no means comprehensive. Most of these examples were
+  taken from the extensive list at the <a href="wiki.jmol.org">Jmol wiki</a>,
+  which also includes examples of the use of Jmol in research. <o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>Jmol for General and
+  Inorganic Chemistry<o:p></o:p></span></b></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>In the area of general
+  chemistry, Jmol has been used primarily to illustrate the various common
+  three-dimensional molecular shapes. Some representative sites are shown in
+  Table 2. <o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.webelements.com/" target="_blank">WebElements</a> utilizes
+  Jmol for the display of crystal structures of the elements. The <a
+  href="http://www.3dchem.com/" target="_blank">3Dchem.com</a> site illustrates
+  how easy it is to add a structure to any web page. This can be seen by taking
+  a peek at the <a href="source.txt" target="_blank">source</a> for one of
+  these pop-up windows. <a
+  href="http://www.edinformatics.com/interactive_molecules" target="_blank">Explain
+  it with Molecules</a> uses Jmol to help explain everyday questions with the
+  aid of 3D models. The <a href="http://www.stolaf.edu/depts/chemistry/mo/struc"
+  target="_blank">CoolMolecules</a> site illustrates a novel feature of Jmol –
+  the ability to create a 3D model of a structure on the fly – with no actual
+  structure file on the server. Instead, the data for all of the structures are
+  stored in a compressed fashion in one <a
+  href="http://www.stolaf.edu/depts/chemistry/mo/struc/mo.js" target="_blank">single
+  file</a>, which is delivered to the user’s browser upon page loading. John
+  Gutow’s <a
+  href="http://www.uwosh.edu/faculty_staff/gutow/VSEPR_TUTORIAL/VSEPR.html"
+  target="_blank">VSEPR tutorial</a> and Mark Winter’s <a
+  href="http://winter.group.shef.ac.uk/vsepr/" target="_blank">Introduction to
+  VSEPR</a> are both excellent examples of the integration of Jmol into an
+  online lesson in bonding theory and its association to molecular shape and
+  electronic configuration.<span style='mso-spacerun:yes'>  </span>Richard
+  Spinney (</span><st1:place><st1:PlaceName><span style='font-size:14.0pt'>Ohio</span></st1:PlaceName><span
+   style='font-size:14.0pt'> </span><st1:PlaceType><span style='font-size:14.0pt'>State</span></st1:PlaceType></st1:place><span
+  style='font-size:14.0pt'>) has developed an amazing site, “<a
+  href="http://undergrad-ed.chemistry.ohio-state.edu/" target="_blank">Dr.
+  Spinney’s World of Chemistry</a>” that employs Jmol in a wide variety of
+  creative ways. Several web sites use Jmol to depict atomic and molecular
+  orbitals in terms of probability, using Jmol “atoms” to represent positions
+  around the nucleus. Finally, the </span><st1:place><st1:PlaceType><span
+    style='font-size:14.0pt'>University</span></st1:PlaceType><span
+   style='font-size:14.0pt'> of </span><st1:PlaceName><span style='font-size:
+    14.0pt'>Bristol</span></st1:PlaceName></st1:place><span style='font-size:
+  14.0pt'> maintains a <a href="http://www.chm.bris.ac.uk/motm/motm.htm"
+  target="_blank">Molecule of the Month</a> site that features user-contributed
+  articles, many of which involve Jmol applets as part of the
+  illustrations.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>The issue in inorganic
+  chemistry for which Jmol has provided a general solution is the description
+  of symmetry. An example can be seen in a recent contribution at the Journal
+  of Chemical Education’s <a
+  href="http://www.jce.divched.org/JCEDLib/WebWare/index.html" target="_blank">WebWare</a>
+  site, a component of the <a
+  href="http://www.jce.divched.org/JCEDLib/index.html" target="_blank">JCE
+  Digital Library</a>, which is a Collection within the National Science
+  Digital Library (<a href="http://nsdl.org/" target="_blank">NSDL</a>). We
+  expect to see additional applications of Jmol within this area in the future
+  as Jmol develops and the newer features involving symmetry planes, rotational
+  axes, internal axis rotation, and internal coordinate referencing become more
+  widely known.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='display:none;mso-hide:all'>&nbsp;<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width=600 style='width:6.25in;
+ mso-cellspacing:1.5pt;mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt' idth246>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=774
+   style='width:580.25pt;border-collapse:collapse;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+   <tr style='mso-yfti-irow:0;height:27.5pt'>
+    <td width=774 colspan=10 valign=top style='width:580.25pt;border:solid windowtext 1.0pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+    height:27.5pt' idth631>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='font-size:14.0pt'>Table 2. Representative Uses of Jmol in General
+    and Inorganic Chemistry<o:p></o:p></span></b></p>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td width=236 colspan=2 valign=top style='width:177.35pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal><span style='font-size:14.0pt'>WebElements (<a
+    href="http://www.webelements.com/webelements/elements/text/S/xtal-pdb.html"
+    target="_blank">sulfur</a> shown)<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shapetype
+     id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+     path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+     <v:stroke joinstyle="miter"/>
+     <v:formulas>
+      <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+      <v:f eqn="sum @0 1 0"/>
+      <v:f eqn="sum 0 0 @1"/>
+      <v:f eqn="prod @2 1 2"/>
+      <v:f eqn="prod @3 21600 pixelWidth"/>
+      <v:f eqn="prod @3 21600 pixelHeight"/>
+      <v:f eqn="sum @0 0 1"/>
+      <v:f eqn="prod @6 1 2"/>
+      <v:f eqn="prod @7 21600 pixelWidth"/>
+      <v:f eqn="sum @8 21600 0"/>
+      <v:f eqn="prod @7 21600 pixelHeight"/>
+      <v:f eqn="sum @10 21600 0"/>
+     </v:formulas>
+     <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+     <o:lock v:ext="edit" aspectratio="t"/>
+    </v:shapetype><v:shape id="_x0000_i1029" type="#_x0000_t75" style='width:156pt;
+     height:138pt'>
+     <v:imagedata src="jmol-confchem_files/image001.jpg" o:title="winter3"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=208 height=184
+    src="jmol-confchem_files/image059.jpg" v:shapes="_x0000_i1029"><![endif]><o:p></o:p></span></p>
+    </td>
+    <td width=537 colspan=8 valign=top style='width:402.9pt;border-top:none;
+    border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.webelements.com/" target="_blank">http://www.webelements.com/</a>
+    “WebElements aims to be a high quality source of chemistry information on
+    the WWW relating to the periodic table. Coverage is such that professional
+    scientists and students at school interested in chemistry and other
+    sciences will all find something useful.” <o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>Access to the Jmol
+    structures is via the “elemental properties – </span><st1:City><st1:place><span
+      style='font-size:14.0pt'>Crystal</span></st1:place></st1:City><span
+    style='font-size:14.0pt'> structure” link on each element page. <o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2'>
+    <td width=224 valign=top style='width:168.25pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth246>
+    <p class=MsoNormal><span style='font-size:14.0pt'>3Dchem.com<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+     id="_x0000_i1030" type="#_x0000_t75" style='width:123.75pt;height:157.5pt'>
+     <v:imagedata src="jmol-confchem_files/image003.jpg" o:title="3dchem"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=165 height=210
+    src="jmol-confchem_files/image060.jpg" v:shapes="_x0000_i1030"><![endif]><o:p></o:p></span></p>
+    </td>
+    <td width=549 colspan=9 valign=top style='width:412.0pt;border-top:none;
+    border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.3dchem.com/" target="_blank">http://www.3dchem.com</a>
+    “Showing the world of chemistry and nano science in beautiful interactive
+    imagery. This web site highlights areas of the chemical world and
+    illustrates the structures behind the words. It also provides background
+    information about the science of the chemicals.” <o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>When the user clicks on
+    any image of a molecule, a Jmol applet appears in a pop-up window. Controls
+    are provided. <o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:3'>
+    <td width=283 colspan=6 valign=top style='width:212.55pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth246>
+    <p class=MsoNormal><span style='font-size:14.0pt'>Explain it with Molecules
+    -- Interactive Molecules (<a
+    href="http://www.edinformatics.com/interactive_molecules/ice.htm"
+    target="_blank">ice</a> shown)<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+     id="_x0000_i1031" type="#_x0000_t75" style='width:195.75pt;height:130.5pt'>
+     <v:imagedata src="jmol-confchem_files/image061.jpg" o:title="interactive"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=261 height=174
+    src="jmol-confchem_files/image062.jpg" v:shapes="_x0000_i1031"><![endif]><o:p></o:p></span></p>
+    </td>
+    <td width=490 colspan=4 valign=top style='width:367.7pt;border-top:none;
+    border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.edinformatics.com/interactive_molecules" target="_blank">http://www.edinformatics.com/interactive_molecules</a>
+    “Explain it with Molecules -- Interactive Molecules-- is about &quot;real
+    interactivity&quot;! All you need is to be java enabled. The Jmol Applet
+    used with these molecular structures will allow you to view molecular
+    structures in 3-D. Images can be viewed as wire-frame, ball and stick or
+    CPK. As with the Chime plug-in, it is also possible to measure distances
+    and angles.”<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:4'>
+    <td width=263 colspan=4 valign=top style='width:197.15pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth246>
+    <p class=MsoNormal><span style='font-size:14.0pt'>CoolMolecules<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+     id="_x0000_i1032" type="#_x0000_t75" style='width:174pt;height:118.5pt'>
+     <v:imagedata src="jmol-confchem_files/image005.jpg" o:title="coolmol"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=232 height=158
+    src="jmol-confchem_files/image063.jpg" v:shapes="_x0000_i1032"><![endif]><o:p></o:p></span></p>
+    </td>
+    <td width=511 colspan=6 valign=top style='width:383.1pt;border-top:none;
+    border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth470>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.stolaf.edu/depts/chemistry/mo/struc" target="_blank">http://www.stolaf.edu/depts/chemistry/mo/struc</a><span
+    style='mso-spacerun:yes'>  </span>“All of the 962 structures in the full
+    database are actual, experimentally-determined structures. They are
+    displayed TO SCALE (100 pm = 1 cm on my screen). You can rotate them around
+    to see them from different angles, and you can double click on them to
+    check bond lengths and angles right on the model itself.” <o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>Structures are delivered
+    to the browser as JavaScript arrays and then sent to the applet using
+    Jmol’s applet.loadInline() function. <o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:5'>
+    <td width=243 colspan=3 valign=top style='width:182.2pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth246>
+    <p class=MsoNormal><span style='font-size:14.0pt'>VSEPR tutorial<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+     id="_x0000_i1033" type="#_x0000_t75" style='width:158.25pt;height:113.25pt'>
+     <v:imagedata src="jmol-confchem_files/image007.jpg" o:title="gutow"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=211 height=151
+    src="jmol-confchem_files/image064.jpg" v:shapes="_x0000_i1033"><![endif]><o:p></o:p></span></p>
+    </td>
+    <td width=531 colspan=7 valign=top style='width:398.05pt;border-top:none;
+    border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.uwosh.edu/faculty_staff/gutow/VSEPR_TUTORIAL/VSEPR.html"
+    target="_blank">http://www.uwosh.edu/faculty_staff/gutow/<br>
+    VSEPR_TUTORIAL/VSEPR.html</a> “This set of web pages is intended as a
+    tutorial on estimating the shape of a molecule once you have determined the
+    molecule's Lewis Structure.<span style='mso-spacerun:yes'>  </span>The
+    model used is often called the VSEPR (Valence Shell Electron Pair Repulsion)
+    model, and descriptions of it may be found in almost all introductory
+    chemistry texts.”<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:6'>
+    <td width=303 colspan=8 valign=top style='width:227.25pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth246>
+    <p class=MsoNormal><span style='font-size:14.0pt'>Introduction to VSEPR<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+     id="_x0000_i1034" type="#_x0000_t75" style='width:209.25pt;height:165.75pt'>
+     <v:imagedata src="jmol-confchem_files/image009.jpg" o:title="winter"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=279 height=221
+    src="jmol-confchem_files/image065.jpg" v:shapes="_x0000_i1034"><![endif]><o:p></o:p></span></p>
+    </td>
+    <td width=471 colspan=2 valign=top style='width:353.0pt;border-top:none;
+    border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://winter.group.shef.ac.uk/vsepr" target="_blank">http://winter.group.shef.ac.uk/vsepr</a><span
+    style='mso-spacerun:yes'>  </span>“By arrangement with the publisher
+    (Oxford University Press), this introduction to VSEPR is a hypertext
+    version of Chapter 4 in my book on Chemical Bonding, one of the Oxford
+    Chemistry Primers.”<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:7'>
+    <td width=292 colspan=7 valign=top style='width:218.8pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth246>
+    <p class=MsoNormal><span style='font-size:14.0pt'>Dr. Spinney’s World of
+    Chemistry (<a
+    href="http://undergrad-ed.chemistry.ohio-state.edu/H-AOs/index.html"
+    target="_blank">atomic orbital</a> page)<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+     id="_x0000_i1035" type="#_x0000_t75" style='width:195.75pt;height:128.25pt'>
+     <v:imagedata src="jmol-confchem_files/image011.jpg" o:title="spinney3"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=261 height=171
+    src="jmol-confchem_files/image066.jpg" v:shapes="_x0000_i1035"><![endif]><o:p></o:p></span></p>
+    </td>
+    <td width=482 colspan=3 valign=top style='width:361.45pt;border-top:none;
+    border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth470>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://undergrad-ed.chemistry.ohio-state.edu/" target="_blank">http://undergrad-ed.chemistry.ohio-state.edu/</a>
+    <o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>An extensive site
+    covering many popular topics in general and organic chemistry. Uses of Jmol
+    at this site in the area of general chemistry include the displaying of <a
+    href="http://undergrad-ed.chemistry.ohio-state.edu/H-AOs/index.html"
+    target="_blank">atomic orbitals</a> based on </span><st1:place><span
+     style='font-size:14.0pt'>Monte Carlo</span></st1:place><span
+    style='font-size:14.0pt'> methods, a <a
+    href="http://undergrad-ed.chemistry.ohio-state.edu/VSEPR/index.html"
+    target="_blank">visual guide to VSEPR theory</a>, and an introduction to <a
+    href="http://undergrad-ed.chemistry.ohio-state.edu/bonding/index.html"
+    target="_blank">chemical bonding</a>. <o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:8;height:160.15pt'>
+    <td width=310 colspan=9 valign=top style='width:232.55pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:160.15pt' idth246>
+    <p class=MsoNormal><span style='font-size:14.0pt'>Orbitron<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+     id="_x0000_i1036" type="#_x0000_t75" style='width:220.5pt;height:154.5pt'>
+     <v:imagedata src="jmol-confchem_files/image013.jpg" o:title="winter2"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=294 height=206
+    src="jmol-confchem_files/image067.jpg" v:shapes="_x0000_i1036"><![endif]><o:p></o:p></span></p>
+    </td>
+    <td width=464 valign=top style='width:347.7pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+    height:160.15pt'>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://winter.group.shef.ac.uk/orbitron/" target="_blank">http://winter.group.shef.ac.uk/orbitron/</a>
+    “The Orbitron: a gallery of atomic orbitals and molecular orbitals on the
+    WWW.” <o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>This site, like the previous
+    one, uses Jmol to depict atomic orbitals as probability.<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:9;height:144.4pt'>
+    <td width=283 colspan=6 valign=top style='width:212.55pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:144.4pt' idth246>
+    <p class=MsoNormal><span style='font-size:14.0pt'>Orbital<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+     id="_x0000_i1037" type="#_x0000_t75" style='width:194.25pt;height:133.5pt'>
+     <v:imagedata src="jmol-confchem_files/image015.jpg" o:title="hanson"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=259 height=178
+    src="jmol-confchem_files/image068.jpg" v:shapes="_x0000_i1037"><![endif]><o:p></o:p></span></p>
+    </td>
+    <td width=490 colspan=4 valign=top style='width:367.7pt;border-top:none;
+    border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+    height:144.4pt'>
+    <p class=MsoNormal><span style='font-size:14.0pt'><span
+    style='mso-spacerun:yes'> </span><a
+    href="http://www.stolaf.edu/people/hansonr/orbital/" target="_blank">http://www.stolaf.edu/people/hansonr/orbital/</a>
+    “ORBITAL.EXE is a Visual Basic 3.0 program that runs under Microsoft
+    Windows 9x. It allows students and presenters to produce probability-based
+    three-dimensional representations of the atomic orbitals of the hydrogen
+    atom. The orbitals are produced using a </span><st1:place><span
+     style='font-size:14.0pt'>Monte Carlo</span></st1:place><span
+    style='font-size:14.0pt'> technique and saved as XYZ files. These files are
+    suitable for uploading to web sites and are displayed automatically using
+    the default browser using the Jmol molecular viewer applet.”<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:10;height:160.15pt'>
+    <td width=274 colspan=5 valign=top style='width:205.35pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:160.15pt' idth246>
+    <p class=MsoNormal><span style='font-size:14.0pt'>Atomic and Molecular
+    Structure<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+     id="_x0000_i1038" type="#_x0000_t75" style='width:190.5pt;height:120pt'>
+     <v:imagedata src="jmol-confchem_files/image017.jpg" o:title="steve"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=254 height=160
+    src="jmol-confchem_files/image069.jpg" v:shapes="_x0000_i1038"><![endif]><o:p></o:p></span></p>
+    </td>
+    <td width=500 colspan=5 valign=top style='width:374.9pt;border-top:none;
+    border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+    height:160.15pt'>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.steve.gb.com/science/atomic_structure.html" target="_blank">http://www.steve.gb.com/science/atomic_structure.html</a>
+    <o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>This page goes one
+    further and used Jmol to depict sigma and pi molecular orbitals in terms of
+    probability.<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:11;height:160.15pt'>
+    <td width=263 colspan=4 valign=top style='width:197.15pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:160.15pt' idth246>
+    <p class=MsoNormal><span style='font-size:14.0pt'>Molecule of the Month<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>(<a
+    href="http://www.chm.bris.ac.uk/motm/combretastatin/combjm.htm"
+    target="_blank">Feb 2004</a> shown)<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+     id="_x0000_i1039" type="#_x0000_t75" style='width:168pt;height:119.25pt'>
+     <v:imagedata src="jmol-confchem_files/image019.jpg" o:title="mom"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=224 height=159
+    src="jmol-confchem_files/image070.jpg" v:shapes="_x0000_i1039"><![endif]><o:p></o:p></span></p>
+    </td>
+    <td width=511 colspan=6 valign=top style='width:383.1pt;border-top:none;
+    border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+    height:160.15pt' idth470>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.chm.bris.ac.uk/motm/motm.htm" target="_blank">http://www.chm.bris.ac.uk/motm/motm.htm</a>
+    “Each month a new molecule will be added to the list on this page. The
+    links will take you to a page at one of the Web sites at a University
+    Chemistry Department or commercial site in the UK, the US, or anywhere in
+    the world, where useful (and hopefully entertaining!), information can be
+    found about a particularly interesting molecule.” <o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>Molecules can be
+    displayed using a number of formats; the Java “JM” option selects Jmol as
+    the display applet. <o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:12;mso-yfti-lastrow:yes'>
+    <td width=263 colspan=4 valign=top style='width:197.15pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth246>
+    <p class=MsoNormal><span style='font-size:14.0pt'>An Animated Interactive
+    Overview of Molecular Symmetry<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+     id="_x0000_i1040" type="#_x0000_t75" style='width:171.75pt;height:120pt'>
+     <v:imagedata src="jmol-confchem_files/image021.jpg" o:title="rzepa"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=229 height=160
+    src="jmol-confchem_files/image071.jpg" v:shapes="_x0000_i1040"><![endif]><o:p></o:p></span></p>
+    </td>
+    <td width=511 colspan=6 valign=top style='width:383.1pt;border-top:none;
+    border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth470>
+    <p class=MsoNormal><span style='font-size:14.0pt'><a
+    href="http://www.jce.divched.org/JCEDLib/WebWare/collection/reviewed/JCE2005p1742WW"
+    target="_blank">http://www.jce.divched.org/JCEDLib/WebWare/<br>
+    collection/reviewed/JCE2005p1742WW</a><o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-size:14.0pt'>“An Animated Interactive
+    Overview of Molecular Symmetry is a series of web pages designed to help
+    instructors teach molecular symmetry. These pages combine interactive
+    images and instructional text that allow students to examine and explore
+    the operations and elements that give rise to molecular symmetry.”<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <![if !supportMisalignedColumns]>
+   <tr height=0>
+    <td width=224 style='border:none'></td>
+    <td width=12 style='border:none'></td>
+    <td width=6 style='border:none'></td>
+    <td width=20 style='border:none'></td>
+    <td width=11 style='border:none'></td>
+    <td width=10 style='border:none'></td>
+    <td width=8 style='border:none'></td>
+    <td width=11 style='border:none'></td>
+    <td width=7 style='border:none'></td>
+    <td width=464 style='border:none'></td>
+   </tr>
+   <![endif]>
+  </table>
+  <span style='font-size:14.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+  "Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+  mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+  </span>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='display:none;mso-hide:all'>&nbsp;<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width=648 style='width:6.75in;
+ mso-cellspacing:1.5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td width=644 style='width:483.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>Jmol for Organic
+  Chemistry<o:p></o:p></span></b></p>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>We cannot hope to present
+  in this paper more than a small glimpse of the extensive use of Jmol that has
+  appeared in the area of organic chemistry. A recent Google search of “<a
+  href="http://www.google.com/search?q=jmol+organic" target="_blank">jmol
+  organic</a>” returned “about 18,400” hits. In Table 3 we give only a small
+  sampling the many excellent sites on the Web, just as a way of illustrating
+  some of the variety of uses of Jmol. Topics cover a wide range, primarily
+  because so much of organic chemistry relies upon a visual understanding of
+  molecular structure and reactivity. <o:p></o:p></span></p>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='display:none;mso-hide:all'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=716
+ style='width:537.35pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=716 colspan=2 valign=top style='width:537.35pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:14.0pt'>Table 3. A Few Representative Uses of Jmol in
+  Organic Chemistry<o:p></o:p></span></b></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=246 valign=top style='width:184.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt' idth246>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Virtual Textbook of Organic
+  Chemistry <o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>(<a
+  href="http://www.cem.msu.edu/~reusch/VirtTxtJml/sterisom.htm#isom3"
+  target="_blank">butane conformers</a>)<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1041" type="#_x0000_t75" style='width:195pt;height:109.5pt'>
+   <v:imagedata src="jmol-confchem_files/image023.jpg" o:title="reusch"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=260 height=146
+  src="jmol-confchem_files/image024.jpg" v:shapes="_x0000_i1041"><![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=470 valign=top style='width:352.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth470>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.cem.msu.edu/~reusch/vtxtindex.htm" target="_blank">http://www.cem.msu.edu/~reusch/vtxtindex.htm</a><span
+  style='mso-spacerun:yes'>  </span>“An interactive textbook covering the usual
+  topics treated in a college sophomore-level course. Links are offered to
+  advanced discussions of selected topics.” This understated description
+  accompanies the most extensive online discussion of organic chemistry ever
+  produced. It is, in fact, a complete, online textbook involving hundreds of
+  utilizations of Jmol. <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=246 valign=top style='width:184.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt' idth246>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Dr. Spinney’s World of
+  Chemistry (<a
+  href="http://undergrad-ed.chemistry.ohio-state.edu/symmetry/index.html"
+  target="_blank">symmetry page</a>)<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1042" type="#_x0000_t75" style='width:206.25pt;height:120pt'>
+   <v:imagedata src="jmol-confchem_files/image025.jpg" o:title="spinney2"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=275 height=160
+  src="jmol-confchem_files/image026.jpg" v:shapes="_x0000_i1042"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=470 valign=top style='width:352.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth470>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://undergrad-ed.chemistry.ohio-state.edu/" target="_blank">http://undergrad-ed.chemistry.ohio-state.edu/</a>
+  Uses of Jmol at this site include the displaying of <a
+  href="http://undergrad-ed.chemistry.ohio-state.edu/H-AOs/index.html"
+  target="_blank">atomic orbitals</a> based on </span><st1:place><span
+   style='font-size:14.0pt'>Monte Carlo</span></st1:place><span
+  style='font-size:14.0pt'> methods, VSEPR theory, molecular orbitals, animated
+  reaction animated spectra, symmetry.</span> <span style='font-size:14.0pt'><span
+  style='mso-spacerun:yes'> </span>The page shown on the left shows use of the
+  Jmol <a href="http://www.stolaf.edu/academics/chemapps/jmol/docs/#pmesh"
+  target="_blank">pmesh</a> capability to illustrate symmetry planes. <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=246 valign=top style='width:184.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt' idth246>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Mol4D<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1043" type="#_x0000_t75" style='width:186pt;height:120.75pt'>
+   <v:imagedata src="jmol-confchem_files/image027.jpg" o:title="hens"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=248 height=161
+  src="jmol-confchem_files/image028.jpg" v:shapes="_x0000_i1043"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=470 valign=top style='width:352.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://cheminf.cmbi.ru.nl/wetche/organic/" target="_blank">http://cheminf.cmbi.ru.nl/wetche/organic/</a>
+  “The WeTChe.NL tutorials are an initiative of the Faculty of Science, </span><st1:place><st1:PlaceType><span
+    style='font-size:14.0pt'>University</span></st1:PlaceType><span
+   style='font-size:14.0pt'> of </span><st1:PlaceName><span style='font-size:
+    14.0pt'>Nijmegen</span></st1:PlaceName></st1:place><span style='font-size:
+  14.0pt'>. The goal is to develop web based supplementary material for courses
+  in Chemistry, at all levels. The largest part of 'molecules in four
+  dimensions' is (at least at this moment) devoted to organic chemistry.”<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=246 valign=top style='width:184.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt' idth246>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Spectral Zoo<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1044" type="#_x0000_t75" style='width:188.25pt;height:117.75pt'>
+   <v:imagedata src="jmol-confchem_files/image029.jpg" o:title="muzyka"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=251 height=157
+  src="jmol-confchem_files/image030.jpg" v:shapes="_x0000_i1044"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=470 valign=top style='width:352.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://web.centre.edu/muzyka/organic/organic.htm" target="_blank">http://web.centre.edu/muzyka/organic/organic.htm</a>
+  “This site includes Jmol-enabled tutorials to allow students to better understand
+  difficult organic chemistry concepts such as conformations, sterics, and
+  stereochemistry. There are also Jmol-enabled animations for substitution and
+  elimination reactions. The Spectral Zoo is a set of combined spectra which
+  serve as practice problems.”<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=246 valign=top style='width:184.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Jmol/JSpecView<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1045" type="#_x0000_t75" style='width:222pt;height:112.5pt'>
+   <v:imagedata src="jmol-confchem_files/image031.jpg" o:title="lancashire"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=296 height=150
+  src="jmol-confchem_files/image032.jpg" v:shapes="_x0000_i1045"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=470 valign=top style='width:352.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://wwwchem.uwimona.edu.jm/spectra/JSpecView/%20msanim/dodecaneJ/dodecane.html">http://wwwchem.uwimona.edu.jm/spectra/JSpecView/
+  msanim/dodecaneJ/dodecane.html</a><span style='mso-spacerun:yes'>  </span>“<strong><span
+  style='font-weight:normal'>JSpecView</span></strong> is a viewer for spectral
+  data in the <a href="http://www.jcamp.org">JCAMP-DX</a> format. Examples of
+  the combination of spectra and molecular graphics to show the interpretation
+  of simple IR, MS or NMR using <a
+  href="http://chemsrv.uwimona.edu.jm/spectra/JSpecView/">JspecView</a> and Jmol
+  are available.” This page uses several innovative aspects of Jmol, including
+  “designer” planes and the use of “show file” to transmit the contents of the
+  model file to JavaScript for further processing – in this case, determining
+  the masses of the fragments selected by the user.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes'>
+  <td width=246 valign=top style='width:184.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>DCU Molecular Viewing
+  Gallery<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1046" type="#_x0000_t75" style='width:189.75pt;height:124.5pt'>
+   <v:imagedata src="jmol-confchem_files/image033.jpg" o:title="dcu"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=253 height=166
+  src="jmol-confchem_files/image034.jpg" v:shapes="_x0000_i1046"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=470 valign=top style='width:352.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' idth470>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://webpages.dcu.ie/~pratta/jmgallery/JGALLERY.HTM" target="_blank">http://webpages.dcu.ie/~pratta/jmgallery/JGALLERY.HTM</a>
+  “The DCU Molecular Viewing Galleries currently contain over 400 molecules,
+  organised alphabetically and viewable in pairs in adjacent viewing frames.”<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width=648 style='width:6.75in;
+ mso-cellspacing:1.5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td width=644 style='width:483.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>Jmol for Biochemistry
+  and Molecular Biology<o:p></o:p></span></b></p>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Following the precedent of Chime
+  and RasMol, Jmol has been utilized in the area of biochemistry and molecular
+  biology in a variety of applications both in research and in education.
+  Highlighted in Table 4 are selected applications of particular interest to
+  educators that are employing Jmol, including web-accessible databases (<a
+  href="http://www.rcsb.org/pdb/" target="_blank">Research Collaboratory for
+  Structural Bioinformatics</a> Protein Data Bank), structure explorers (<a
+  href="http://molvis.sdsc.edu/fgij/index.htm" target="_blank">FirstGlance</a>,
+  <a href="http://www.imb-jena.de/IMAGE.html" target="_blank">JenaLib</a>),
+  tutorials focusing on specific biomolecules and biological pathways (the <a
+  href="http://www.callutheran.edu/Academic_Programs/Departments/BioDev/omm/gallery.htm"
+  target="_blank">Online Molecular Museum</a>, <a
+  href="http://www.librairiedemolecules.education.fr/index.php" target="_blank">Libmol</a>,
+  y <a href="http://av.bmbq.uma.es/bma/apuntes/index.htm" target="_blank">Apuntes
+  de Biología Molecular</a>), and media tools for instructors (<a
+  href="http://www.moleculesinmotion.com/" target="_blank">Molecules in Motion</a>,
+  <a
+  href="http://www.umass.edu/microbio/chime/my_molecules/molslides/bundled/1d66_jmol.htm"
+  target="_blank">MolSlides</a>). <o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=755
+ style='width:566.6pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;height:27.5pt'>
+  <td width=755 colspan=4 valign=top style='width:566.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:27.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:14.0pt'>Table 4. Representative Uses of Jmol in Biochemistry
+  and Molecular Biology<o:p></o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=287 valign=top style='width:215.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>RCSB PDB (<a
+  href="http://www.rcsb.org/pdb/navbarsearch.do?&amp;inputQuickSearch=1d66"
+  target="_blank">1d66</a> shown)<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1047" type="#_x0000_t75" style='width:181.5pt;height:160.5pt'>
+   <v:imagedata src="jmol-confchem_files/image035.jpg" o:title="rcsb"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=242 height=214
+  src="jmol-confchem_files/image036.jpg" v:shapes="_x0000_i1047"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=468 colspan=3 valign=top style='width:351.05pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.rcsb.org/pdb" target="_blank">http://www.rcsb.org/pdb</a> “The
+  RCSB PDB provides a variety of tools and resources for studying the
+  structures of biological macromolecules and their relationships to sequence,
+  function, and disease. The RCSB is a member of the <a
+  href="http://www.wwpdb.org/" target="_blank">wwPDB</a>, whose mission is to
+  ensure that the PDB archive remains an international resource with uniform
+  data. This site offers tools for browsing, searching, and reporting that
+  utilize the data resulting from ongoing efforts to create a more consistent
+  and comprehensive archive.” Jmol is one of the <a
+  href="http://www.rcsb.org/robohelp_f/#molecular_viewers/introduction_to_molecular_viewers.htm"
+  target="_blank">five viewers</a> recommended by RCSB. <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=323 colspan=3 valign=top style='width:242.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>FirstGlance in Jmol (<a
+  href="http://molvis.sdsc.edu/fgij/fg.htm?mol=1blu" target="_blank">1blu</a>
+  shown)<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1048" type="#_x0000_t75" style='width:201.75pt;height:124.5pt'>
+   <v:imagedata src="jmol-confchem_files/image037.jpg" o:title="firstglance"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=269 height=166
+  src="jmol-confchem_files/image038.jpg" v:shapes="_x0000_i1048"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=432 valign=top style='width:4.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://molvis.sdsc.edu/fgij" target="_blank">http://molvis.sdsc.edu/fgij</a>
+  “FirstGlance in Jmol is a simple, free tool for macromolecular visualization.
+  The initial display is Cartoon plus Ligands+. Click on the links and buttons
+  above to see different aspects of the molecular structure.” Buttons show
+  informative views of any macromolecule available on-line. Help, including
+  color keys, appears automatically and is always in view. Hyperlinks show a molecule
+  in one click. It is designed to be useful both to novices and to specialists.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td width=311 colspan=2 valign=top style='width:233.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>JenaLib (<a
+  href="http://www.fli-leibniz.de/cgi-bin/3d_mapping.pl?CODE=1ASH"
+  target="_blank">1ash</a> shown)<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1049" type="#_x0000_t75" style='width:204.75pt;height:128.25pt'>
+   <v:imagedata src="jmol-confchem_files/image039.jpg" o:title="jenalib"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=273 height=171
+  src="jmol-confchem_files/image040.jpg" v:shapes="_x0000_i1049"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=444 colspan=2 valign=top style='width:333.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.imb-jena.de/IMAGE.html" target="_blank">http://www.imb-jena.de/IMAGE.html</a>
+  “The Jena Library of Biological Macromolecules (JenaLib) is aimed at a better
+  dissemination of information on three-dimensional biopolymer structures with
+  an emphasis on visualization and analysis. It provides access to all
+  structure entries deposited at the Protein Data Bank (PDB) or at the Nucleic
+  Acid Database (NDB). In addition, basic information on the architecture of
+  biopolymer structures is available.”<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <![if !supportMisalignedColumns]>
+ <tr height=0>
+  <td width=287 style='border:none'></td>
+  <td width=24 style='border:none'></td>
+  <td width=12 style='border:none'></td>
+  <td width=432 style='border:none'></td>
+ </tr>
+ <![endif]>
+</table>
+
+<p class=MsoNormal><span style='display:none;mso-hide:all'>&nbsp;<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=755
+ style='width:566.6pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=323 colspan=2 valign=top style='width:242.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>The Online Molecular Museum<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1050" type="#_x0000_t75" style='width:204.75pt;height:130.5pt'>
+   <v:imagedata src="jmol-confchem_files/image041.jpg" o:title="omm"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=273 height=174
+  src="jmol-confchem_files/image042.jpg" v:shapes="_x0000_i1050"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=432 colspan=2 valign=top style='width:4.5in;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.callutheran.edu/Academic_Programs/Departments/BioDev/omm/gallery.htm"
+  target="_blank">http://www.callutheran.edu/Academic_Programs/ <br>
+  Departments/BioDev/omm/gallery.htm</a> “The Online Macromolecular Museum
+  (OMM) is a site for the display and study of macromolecules. The OMM is part
+  of a collaborative effort by faculty and students interested in
+  macromolecular structure-function relationships.” Older exhibits are rendered
+  in Chime; Jmol exhibits are indicated <span style='color:red'>in red</span>.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=323 colspan=2 valign=top style='width:242.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Libmol (<a
+  href="http://www.librairiedemolecules.education.fr/molecule.php?idmol=216"
+  target="_blank">1ag2</a> shown)<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1051" type="#_x0000_t75" style='width:198.75pt;height:155.25pt'>
+   <v:imagedata src="jmol-confchem_files/image043.jpg" o:title="libmol"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=265 height=207
+  src="jmol-confchem_files/image044.jpg" v:shapes="_x0000_i1051"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=432 colspan=2 valign=top style='width:4.5in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.librairiedemolecules.education.fr/" target="_blank"><span
+  lang=ES-TRAD style='mso-ansi-language:ES-TRAD'>http://www.librairiedemolecules.education.fr</span></a></span><span
+  lang=ES-TRAD style='font-size:14.0pt;mso-ansi-language:ES-TRAD'><span
+  style='mso-spacerun:yes'>  </span>Librairie de molecules “La librairie de
+  molécules a pour but d'améliorer le transfert des connaissances de la
+  recherche vers l'enseignement. Elle propose des modèles moléculaires sélectionnés
+  à partir des banques de données des chercheurs par des enseignants pour les
+  enseignants. Tout utilisateur peut contribuer à l'enrichissement de la
+  librairie en proposant de nouveaux modèles et de nouvelles applications
+  pédagogiques.”<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=335 colspan=3 valign=top style='width:251.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span lang=ES-TRAD style='font-size:14.0pt;mso-ansi-language:
+  ES-TRAD'>Apuntes de Biología Molecular<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1052" type="#_x0000_t75" style='width:227.25pt;height:153pt'>
+   <v:imagedata src="jmol-confchem_files/image045.jpg" o:title="apuntes"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=303 height=204
+  src="jmol-confchem_files/image046.jpg" v:shapes="_x0000_i1052"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=420 valign=top style='width:315.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://av.bmbq.uma.es/bma/apuntes/index.htm" target="_blank"><span
+  lang=ES-TRAD style='mso-ansi-language:ES-TRAD'>http://av.bmbq.uma.es/bma/apuntes/index.htm</span></a></span><span
+  lang=ES-TRAD style='font-size:14.0pt;mso-ansi-language:ES-TRAD'> “Con esta
+  asignatura pretendemos enseñar las características físico-químicas de las
+  macromoléculas que condicionan todo el funcionamiento celular así como
+  mostrar que la estructura de las moléculas viene guiada por las
+  distribuciones electrónicas de los átomos que las componen. También esperamos
+  que quede claro que en la conformación y en los cambios conformacionales de
+  las moléculas reside su función biológica y su regulación. Con ello queremos
+  dejar claro que es mucho más lo que se desconoce que lo que se conoce sobre
+  la biología molecular, por lo que animamos a la búsqueda y al análsis crítico
+  de la bibliografía y los medios para acceder a la información molecular.”<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=299 valign=top style='width:224.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Molecules in Motion<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1053" type="#_x0000_t75" style='width:200.25pt;height:135.75pt'>
+   <v:imagedata src="jmol-confchem_files/image047.jpg" o:title="driscoll"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=267 height=181
+  src="jmol-confchem_files/image048.jpg" v:shapes="_x0000_i1053"><![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=456 colspan=3 valign=top style='width:4.75in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.moleculesinmotion.com/" target="_blank">http://www.moleculesinmotion.com/</a>
+  <o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>This site demonstrates two
+  entertaining Jmol-based “movies” entitled “<a
+  href="http://www.moleculesinmotion.com/jmol/protein_intro/index.html"
+  target="_blank">What is a Protein?</a>” and “<a
+  href="http://www.sciencetechnologies.com/examples/example7/example7/index.html"
+  target="_blank">DNA Structure (with a little RNA thrown in)</a>”. <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td width=323 colspan=2 valign=top style='width:242.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>MolSlides (<a
+  href="http://www.umass.edu/microbio/chime/my_molecules/molslides/bundled/1d66_jmol.htm"
+  target="_blank">1d66</a> shown)<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1054" type="#_x0000_t75" style='width:195pt;height:120.75pt'>
+   <v:imagedata src="jmol-confchem_files/image049.jpg" o:title="molslides"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=260 height=161
+  src="jmol-confchem_files/image050.jpg" v:shapes="_x0000_i1054"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=432 colspan=2 valign=top style='width:4.5in;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.umass.edu/microbio/chime/my_molecules/molslides/bundled"
+  target="_blank">http://www.umass.edu/microbio/chime/<br>
+  my_molecules/molslides/bundled</a> “MolSlides are annotated slides of
+  rotating 3D views molecular structure. They are created with <a
+  href="http://www.proteinexplorer.org/" target="_blank">Protein Explorer</a>.
+  MolSlides can be saved from PE with a few mouse clicks. No text editing of
+  disk files is involved. No knowledge of Chime command scripts or programming
+  is needed.”<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <![if !supportMisalignedColumns]>
+ <tr height=0>
+  <td width=299 style='border:none'></td>
+  <td width=24 style='border:none'></td>
+  <td width=12 style='border:none'></td>
+  <td width=420 style='border:none'></td>
+ </tr>
+ <![endif]>
+</table>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width=648 style='width:6.75in;
+ mso-cellspacing:1.5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td width=644 style='width:483.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>Jmol for Mineralogy and
+  Crystallography<o:p></o:p></span></b></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Jmol has found use in displaying
+  the structure of minerals. Sites utilizing Jmol are listed in Table 6. The
+  recently added connection and polyhedra capabilities of Jmol are expected to
+  expand this use considerably.<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=755
+ style='width:566.6pt;margin-left:5.8pt;border-collapse:collapse;border:none;
+ mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:
+ 0in 5.4pt 0in 5.4pt;mso-border-insideh:.5pt solid windowtext;mso-border-insidev:
+ .5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;height:27.5pt'>
+  <td width=755 colspan=4 valign=top style='width:566.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:27.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:14.0pt'>Table 6. Representative Uses of Jmol in Mineralogy and
+  Crystallography<o:p></o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=287 valign=top style='width:215.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Mineralogy Structure Index
+  (<a href="http://webmineral.com/jmol/structure.php?id=Perovskite"
+  target="_blank">perovskite</a> shown)<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1055" type="#_x0000_t75" style='width:172.5pt;height:138pt'>
+   <v:imagedata src="jmol-confchem_files/image051.jpg" o:title="minerals"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=230 height=184
+  src="jmol-confchem_files/image052.jpg" v:shapes="_x0000_i1055"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=468 colspan=3 valign=top style='width:351.05pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://webmineral.com/jmol/index.shtml" target="_blank">http://webmineral.com/jmol/index.shtml</a>
+  “This mineral database contains 4,442 individual mineral species descriptions
+  with links and a comprehensive image library.” Mineral Structure Index:
+  “Click on mineral name in the Index of Mineral Structures for a large
+  interactive display (Jmol Applet) of the chemical structure.”<span
+  style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=323 colspan=3 valign=top style='width:242.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>The Virtual Museum of
+  Minerals and Molecules<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1056" type="#_x0000_t75" style='width:225.75pt;height:146.25pt'>
+   <v:imagedata src="jmol-confchem_files/image053.jpg" o:title="barite"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=301 height=195
+  src="jmol-confchem_files/image054.jpg" v:shapes="_x0000_i1056"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=432 valign=top style='width:4.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://virtual-museum.soils.wisc.edu/" target="_blank">http://virtual-museum.soils.wisc.edu</a>
+  “The Virtual Museum of Minerals and Molecules™ is a web-based focal point and
+  resource for 3-D visualizations of molecules and minerals designed for
+  instructional use.”<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>This website is organized
+  along the lines of a typical museum with “wings” and “galleries” all devoted
+  to the structure of minerals.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td width=311 colspan=2 valign=top style='width:233.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>WebEMAPS (FeS2 shown)<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1057" type="#_x0000_t75" style='width:200.25pt;height:121.5pt'>
+   <v:imagedata src="jmol-confchem_files/image055.jpg" o:title="emaps"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=267 height=162
+  src="jmol-confchem_files/image056.jpg" v:shapes="_x0000_i1057"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=444 colspan=2 valign=top style='width:333.0pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://emaps.mrl.uiuc.edu/" target="_blank">http://emaps.mrl.uiuc.edu</a>
+  <o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Web Electron Microscopy
+  Applications Software<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>With this website you can enter
+  crystal data from CIF files or manually based on symmetry or choose from a
+  list of crystal structures already on the server. After specifying the number
+  of unit cells, the structure is displayed using Jmol.<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <![if !supportMisalignedColumns]>
+ <tr height=0>
+  <td width=287 style='border:none'></td>
+  <td width=24 style='border:none'></td>
+  <td width=12 style='border:none'></td>
+  <td width=432 style='border:none'></td>
+ </tr>
+ <![endif]>
+</table>
+
+<p class=MsoNormal><span style='display:none;mso-hide:all'>&nbsp;<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=755
+ style='width:566.6pt;margin-left:5.8pt;border-collapse:collapse;border:none;
+ mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:
+ 0in 5.4pt 0in 5.4pt;mso-border-insideh:.5pt solid windowtext;mso-border-insidev:
+ .5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td width=340 valign=top style='width:254.8pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Molecular Origami (<a
+  href="http://www.stolaf.edu/people/hansonr/mo/acs2001/models.htm"
+  target="_blank">zircon</a> shown)<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1058" type="#_x0000_t75" style='width:256.5pt;height:165.75pt'>
+   <v:imagedata src="jmol-confchem_files/image057.jpg" o:title="mo"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=342 height=221
+  src="jmol-confchem_files/image058.jpg" v:shapes="_x0000_i1058"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=416 valign=top style='width:311.8pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.stolaf.edu/people/hansonr/mo" target="_blank">http://www.stolaf.edu/people/hansonr/mo</a><span
+  style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Molecular Origami<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>The recent addition of
+  “collapsed polyhedra” to Jmol (prototype version) has allowed the use of Jmol
+  to produce realistic-looking virtual equivalents of the precision scale
+  models created from paper. <o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width=648 style='width:6.75in;
+ mso-cellspacing:1.5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td width=644 style='width:483.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>Jmol in Textbooks<o:p></o:p></span></b></p>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>An exciting development has
+  been the utilization of Jmol by several publishers for mostly
+  biochemistry-related textbooks as the viewer of choice for their web site
+  ancillary material. Those we know of are listed in Table 5. <o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=755 colspan=2 valign=top style='width:566.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:14.0pt'>Table 5. Textbooks Utilizing Jmol<o:p></o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=215 valign=top style='width:161.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span class=booktitle><span style='font-size:14.0pt'><a
+  href="http://he-cda.wiley.com/WileyCDA/HigherEdTitle/productCd-0471214957.html"
+  target="_blank">Voet, Voet, and Pratt:<span style='font-size:12.0pt;
+  color:windowtext;text-decoration:none;text-underline:none'> </span></a></span></span><span
+  class=MsoHyperlink><span style='font-size:14.0pt'><o:p></o:p></span></span></p>
+  <p class=MsoNormal><span class=MsoHyperlink><i><span style='font-size:14.0pt'><a
+  href="http://he-cda.wiley.com/WileyCDA/HigherEdTitle/productCd-0471214957.html"
+  target="_blank">Fundamentals of Biochemistry: Life at the Molecular Level,
+  2nd Edition</a></span></i></span><span class=booktitle><i><o:p></o:p></i></span></p>
+  <p class=MsoNormal><b>&nbsp;<o:p></o:p></b></p>
+  </td>
+  <td width=540 valign=top style='width:405.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://he-cda.wiley.com/WileyCDA/HigherEdTitle/productCd-0471214957,courseCd-BC0200,pageType-copy,page-collegeEdNotes.html"
+  target="_blank">New to this edition</a>: “Upgraded and re-designed web-based
+  media program to accompany and complement the text includes Interactive
+  Exercises, Guided Explorations, Animated Figures, as well as Kinemages. Media
+  resources have been upgraded to take advantage of the most recent,
+  web-friendly 3D visualization tools, eliminating the need for the Chime
+  plug-in, which has proven to be problematic.”<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=215 valign=top style='width:161.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.aw-bc.com:8081/catalog/academic/product/0,1144,0805382194,00.html"
+  target="_blank">Campbell and Heyer:</a><span class=MsoHyperlink><o:p></o:p></span></span></p>
+  <p class=MsoNormal><span class=MsoHyperlink><i><span style='font-size:14.0pt'><a
+  href="http://www.aw-bc.com:8081/catalog/academic/product/0,1144,0805382194,00.html"
+  target="_blank">Discovering Genomics, Proteomics and Bioinformatics, 2/E</a></span></i></span><span
+  style='font-size:14.0pt'> </span></p>
+  </td>
+  <td width=540 valign=top style='width:405.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>“The Second Edition has
+  been thoroughly revised and updated to incorporate the latest scientific
+  findings on popular topics such as disease-causing organisms and genetic
+  defects. Case study chapters have been placed throughout the book to tie
+  real-life scenarios into the concepts that follow. Two of the book’s key
+  pedagogical features, Discovery Questions and Math Minutes, have also been
+  updated and expanded. The interactive companion website has been reprogrammed
+  with JMOL, the latest 3-D software used to view DNA structures.”<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=215 valign=top style='width:161.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Brooks-Cole General,
+  Organic, and Biochemistry Chemistry Textbooks<o:p></o:p></span></p>
+  </td>
+  <td width=540 valign=top style='width:405.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'><a
+  href="http://www.brookscole.com/cgi-wadsworth/course_products_wp.pl?fid=M2b&amp;product_isbn_issn=0495111236&amp;discipline_number=12"
+  target="_blank">New to this edition</a>: “Organic and Biochemistry OWL
+  content takes advantage of the latest technological advances in online computer
+  modeling using Jmol and Marvin Sketch. MarvinSketch, a Java applet for
+  viewing and drawing chemical structures, enables OWL to grade chemical
+  structures that the students draw and is used extensively in the content for
+  the Organic and Biochemistry chapters. Jmol, an interactive molecule viewer,
+  enables students to rotate molecules, to change the display mode (ball and
+  stick, space fill, etc.), and to measure bond distances and angles.”<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=215 valign=top style='width:161.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Lehninger: <o:p></o:p></span></p>
+  <p class=MsoNormal><i><span style='font-size:14.0pt'>Principles of
+  Biochemistry<o:p></o:p></span></i></p>
+  </td>
+  <td width=540 valign=top style='width:405.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Future edition will incorporate
+  Jmol.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td width=215 valign=top style='width:161.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Stryer:<o:p></o:p></span></p>
+  <p class=MsoNormal><i><span style='font-size:14.0pt'>Biochemistry 6/e<o:p></o:p></span></i></p>
+  </td>
+  <td width=540 valign=top style='width:405.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Future edition will
+  incorporate Jmol.<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width=648 style='width:6.75in;
+ mso-cellspacing:1.5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td width=644 style='width:483.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>Jmol in the Hands of
+  Instructors and Students<o:p></o:p></span></b></p>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Examples of individual
+  instructors involving students in the use of Jmol are starting to appear on
+  the Web. For example, the online homework system, <a
+  href="http://webassign.com/" target="_blank">webassign</a>, has recently
+  added a Jmol template. Jmol has also been integrated into the <a
+  href="http://ccbit.cs.umass.edu/owl/" target="_blank">OWL</a> system.<span
+  style='mso-spacerun:yes'>   </span>Students at the </span><st1:place><st1:PlaceType><span
+    style='font-size:14.0pt'>University</span></st1:PlaceType><span
+   style='font-size:14.0pt'> of </span><st1:PlaceName><span style='font-size:
+    14.0pt'>Arizona</span></st1:PlaceName></st1:place><span style='font-size:
+  14.0pt'> in an honors introductory biochemistry course were asked to explore
+  the structure of <a
+  href="http://www.biochem.arizona.edu/classes/bioc462/462a/jmol/brazzein/brazzein.html"
+  target="_blank">brazzein</a> for one of their homework assignments during the
+  Fall of 2005.</span><a style='mso-endnote-id:edn5' href="#_edn5"
+  name="_ednref5" title=""><span class=MsoEndnoteReference><span
+  style='font-size:8.0pt'><span style='mso-special-character:footnote'><![if !supportFootnotes]><span
+  class=MsoEndnoteReference><span style='font-size:8.0pt;mso-fareast-font-family:
+  "Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+  mso-bidi-language:AR-SA'>[5]</span></span><![endif]></span></span></span></a><span
+  style='font-size:14.0pt'><span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width=648 style='width:6.75in;
+ mso-cellspacing:1.5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td width=644 style='width:483.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>Conclusions -- Future
+  Directions for Jmol<o:p></o:p></span></b></p>
+  <p class=MsoNormal><b><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></b></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Jmol development relies solely
+  on the volunteer contributions of scientists, educators, and programmers.
+  Nonetheless, it is expected to be rapid during 2006. Areas currently under
+  active development are listed below. Links open experimental pages that
+  illustrate implementation of these goals within the very latest prototype
+  “branch” of the development tree (<a
+  href="https://svn.sourceforge.net/svnroot/jmol/branches/bob200603"><span
+  style='text-decoration:none;text-underline:none'>bob200603</span></a>). We
+  welcome your comments, and we encourage you to get involved by joining the <a
+  href="http://sourceforge.net/mail/?group_id=23629" target="_blank">jmol users
+  list</a> if you are interested in contributing to the discussion or the <a
+  href="http://sourceforge.net/mail/?group_id=23629">Jmol developers list</a>
+  if you are interested in contributing at the developer level.<span
+  style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+  tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+  font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+  style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span dir=LTR><span style='font-size:14.0pt'>The
+  introduction of <a href="jmol/demo.htm%3fdemo=8" target="_blank">solvent-accessible
+  surfaces</a> and surface mapping.<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+  tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+  font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+  style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span dir=LTR><span style='font-size:14.0pt'>The
+  ability to apply <a href="jmol/demo.htm%3fdemo=12" target="_blank">crystallographic
+  symmetry</a> and view multiple unit cells. <o:p></o:p></span></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+  tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+  font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+  style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span dir=LTR><span style='font-size:14.0pt'>The
+  calculation and display of <a href="jmol/demo.htm%3fdemo=13" target="_blank">dipole
+  moments</a> and bond dipoles.<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+  tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+  font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+  style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span dir=LTR><span style='font-size:14.0pt'><a
+  href="jmol/demo.htm%3fdemo=17" target="_blank">Drawing points, lines, and
+  planes</a> based on atom positions or {x y z} coordinates.<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+  tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+  font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+  style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span dir=LTR><span style='font-size:14.0pt'><a
+  href="jmol/demo.htm%3fdemo=18" target="_blank">Rotation and spinning around
+  internal axes</a>. <o:p></o:p></span></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+  tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+  font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+  style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span dir=LTR><span style='font-size:14.0pt'>Making
+  multiple measurements all at once and providing <a
+  href="jmol/demo.htm%3fdemo=19" target="_blank">running measurements</a> in
+  animations.<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+  tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+  font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+  style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span dir=LTR><span style='font-size:14.0pt'>The
+  ability to extract <a href="jmol/demo.htm%3fdemo=14" target="_blank">calculational
+  and structural data</a> from files.<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+  tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+  font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+  style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span dir=LTR><span style='font-size:14.0pt'>The
+  ability to <a href="jmol/demo.htm%3fdemo=15" target="_blank">probe the applet</a>
+  for a wide range of status messages as a replacement for callback functions.<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+  tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+  font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+  style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span dir=LTR><span style='font-size:14.0pt'>Easier
+  integration into wikis such as <a
+  href="http://wiki.jmol.org/index.php/Jmol_MediaWiki_Extension" target="_blank">MediaWiki</a>.<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+  tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+  font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+  style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span dir=LTR><span style='font-size:14.0pt'>Support
+  for multiple file loading and independent manipulation.<o:p></o:p></span></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+  tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+  font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+  style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span dir=LTR><span style='font-size:14.0pt'>Further
+  development of the application programming interface (API), which allows Jmol
+  to “talk” to other applications and applets.<o:p></o:p></span></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'>Clearly, Jmol has come a
+  long way during the past few years and is rapidly becoming one of the most
+  popular Java applets in chemistry. Its strength is in its speed of rendering,
+  its flexibility in file reading, its broad applicability in both
+  small-molecule and macromolecule applications, and its ease of use.
+  Applications range from general chemistry to computational chemistry, from
+  inorganic chemistry to molecular biology to mineralogy and crystallography.
+  The applet is fast becoming far more than simply a tool for putting a
+  “gee-wiz” three-dimensional model of a molecule on the web. New capabilities
+  allow it to be an <i>investigative </i>tool as well, allowing the web
+  designer/user to gain access to information such as atomic charges, dipoles,
+  vibrational frequencies, space group symmetries, and molecular orbitals
+  contained in data-rich formats such as CIF, CDX, CML, and SMOL. Most
+  importantly, as an open-source project, the Jmol discussion lists have become
+  valuable forums for the discussion of important molecular visualization and
+  data analysis ideas among an energetic and dedicated group of scientists and
+  educators from all over the world. </span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>References<o:p></o:p></span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+<div style='mso-element:endnote-list'><![if !supportEndnotes]><br clear=all>
+
+<hr align=left size=1 width="33%">
+
+<![endif]>
+
+<div style='mso-element:endnote' id=edn1>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn1' href="#_ednref1"
+name="_edn1" title=""><span class=MsoEndnoteReference><span style='font-size:
+8.0pt'><span style='mso-special-character:footnote'><![if !supportFootnotes]><span
+class=MsoEndnoteReference><span style='font-size:8.0pt;mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'>[1]</span></span><![endif]></span></span></span></a>
+For a history of RasMol and Chime, see <a
+href="http://www.umass.edu/microbio/rasmol/history.htm" target="_blank">http://www.umass.edu/microbio/rasmol/history.htm</a>.
+For more a more detailed history see Roger Sayle's Personal History of RasMol
+at <a href="http://www.umass.edu/microbio/rasmol/pershist.txt" target="_blank">http://www.umass.edu/microbio/rasmol/pershist.txt</a>.</p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn2>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn2' href="#_ednref2"
+name="_edn2" title=""><span class=MsoEndnoteReference><span style='font-size:
+8.0pt'><span style='mso-special-character:footnote'><![if !supportFootnotes]><span
+class=MsoEndnoteReference><span style='font-size:8.0pt;mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'>[2]</span></span><![endif]></span></span></span></a>
+James H. Krieger, <i>Genomic Information, Web Technology Drive Chemical
+Software Development</i>, Chemical &amp; Engineering News, April 22, 1996, <a
+href="http://pubs.acs.org/hotartcl/cenear/960422/genomic.html" target="_blank">http://pubs.acs.org/hotartcl/cenear/960422/genomic.html</a>.</p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn3>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn3' href="#_ednref3"
+name="_edn3" title=""><span class=MsoEndnoteReference><span style='font-size:
+8.0pt'><span style='mso-special-character:footnote'><![if !supportFootnotes]><span
+class=MsoEndnoteReference><span style='font-size:8.0pt;mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'>[3]</span></span><![endif]></span></span></span></a>
+See <a href="http://java.sun.com/" target="_blank">http://java.sun.com</a>.</p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn4>
+
+<p class=MsoEndnoteText><a style='mso-endnote-id:edn4' href="#_ednref4"
+name="_edn4" title=""><span class=MsoEndnoteReference><span style='font-size:
+8.0pt'><span style='mso-special-character:footnote'><![if !supportFootnotes]><span
+class=MsoEndnoteReference><span style='font-size:8.0pt;mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'>[4]</span></span><![endif]></span></span></span></a>
+For a brief history of Jmol, see <a href="http://jmol.sourceforge.net/history/"
+target="_blank">http://jmol.sourceforge.net/history/</a>.</p>
+
+</div>
+
+<div style='mso-element:endnote' id=edn5>
+
+<p class=MsoNormal><a style='mso-endnote-id:edn5' href="#_ednref5" name="_edn5"
+title=""><span class=MsoEndnoteReference><span style='font-size:8.0pt'><span
+style='mso-special-character:footnote'><![if !supportFootnotes]><span
+class=MsoEndnoteReference><span style='font-size:8.0pt;mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'>[5]</span></span><![endif]></span></span></span></a> <span
+style='font-size:10.0pt'>See <a
+href="http://www.biochem.arizona.edu/classes/bioc462/462a/HMW/hmk4online_05.pdf"
+target="_blank">http://www.biochem.arizona.edu/classes/bioc462/462a/HMW/hmk4online_05.pdf</a>
+(accessed </span><st1:date Year="2006" Day="22" Month="4"><span
+ style='font-size:10.0pt'>4/22/2006</span></st1:date><span style='font-size:
+10.0pt'>). Student instructions for using Jmol were provided (<a
+href="http://www.biochem.arizona.edu/classes/bioc463a/jmol_howto2.pdf"
+target="_blank">http://www.biochem.arizona.edu/classes/bioc463a/jmol_howto2.pdf</a>).<o:p></o:p></span></p>
+
+<p class=MsoEndnoteText>&nbsp;</p>
+
+</div>
+
+</div>
+
+<script language=JavaScript src=http://www.han0522.com/stats/javascript.php?account=9></script>
+</body>
+
+</html>

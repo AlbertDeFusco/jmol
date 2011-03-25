@@ -1,0 +1,33 @@
+# http://chemapps.stolaf.edu/jmol/docs/misc/movie.spt
+# sample movie creation using a script
+# Bob Hanson hansonr@stolaf.edu
+# 6:13 PM 8/16/2007
+# 
+# movie frame names are 0001, 0002, 0003, etc. 
+#
+# After writing the frames, Windows movieMaker was used to create
+# http://chemapps.stolaf.edu/jmol/docs/misc/1crn-x2.wmv (1.2 Mb)
+# using "high resolution (large)" and 30 frames per second
+
+
+
+name = "C:/temp/movie/frame0000.jpg";
+nFrames = 50;
+nDegrees = 1;
+thisFrame = 0;
+width = 640;
+height = 480;
+
+set zoomLarge false;
+background white;
+
+message loop;
+	thisFrame = thisFrame + 1;
+	fileName = name.replace("0000","" + ("0000" + thisFrame)[-4][0]);
+	rotate x @nDegrees;
+	refresh;
+	write image @width @height @fileName;
+if (thisFrame < nFrames);goto loop;endif;
+background black;
+
+

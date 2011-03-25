@@ -1,0 +1,34 @@
+<section title="About the Jmol project">
+
+  <section title="How do you write Jmol?">
+    <p>
+      Capital <b>J</b>, lower case <b>mol</b>
+    </p>
+    <p>
+      Please do not write it any other way ... to avoid confusion with
+      other projects ... keep reading ...
+    </p>
+  </section>
+
+  <section title="Is there another JMol?">
+    <p>
+      Yes, there is a project called JMol ... but not Jmol ... <i>note the
+      difference in spelling.</i>
+    </p>
+    <p>
+      Will York wrote the JMol viewer at the
+      Complex Carbohydrate Research Center,
+      University of Georgia, USA. The home page was at
+      http://www.ccrc.uga.edu/~will/jmol/jmol.html
+      (it is no longer there).
+    </p>
+  </section>
+
+  <section title="How do I reference Jmol in published papers?">
+    <p>
+      Both on the web and in published papers you should
+      reference Jmol in this way:<br/>
+      <b>Jmol: an open-source Java viewer for chemical structures in 3D. http://www.jmol.org/</b>
+    </p>
+  </section>
+</section>

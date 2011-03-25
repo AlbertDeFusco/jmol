@@ -1,0 +1,70 @@
+<!--
+  Spanish translation 
+  Translated from default version : (...).en.html (v 1.1)
+-->
+<html>
+  <head>
+    <title>Demostración de enlaces con JmolApplet</title>
+    <script src="../../jmol/Jmol.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <form>
+      <table border="1">
+	<tr>
+	  <td>
+	    <h1>Aspirina</h1>
+	    <script>
+	      jmolApplet(400, "load aspirina.mol.gz;spacefill off");
+	    </script>
+	  </td>
+	  
+	  <td>
+	    <p>
+	      Por compatibilidad con el lenguaje de RasMol, la instrucción para
+	      controlar el grosor de los enlaces se llama <b>wireframe</b>. El parámetro
+	      es el radio del enlace medido en angstroms. Prueba esto:
+	    </p>
+	    <script>
+	      jmolRadioGroup(["wireframe off",
+	      "wireframe on",
+	      "wireframe 0.1",
+	      "wireframe 0.125",
+	      ["wireframe 0.15", null, "checked"],
+	      "wireframe 0.25",
+	      "wireframe 0.3",
+	      "wireframe 0.5"
+	      ], "<br />");
+	    </script>
+	    <p>
+	      <i>Por compatibilidad con los guiones existentes de RasMol/Chime,
+	      no se muestran los enlaces múltiples.</i>	    
+	    </p>
+	    <p>
+	      Por defecto, un enlace hereda los colores de los dos átomos que conecta. 
+	      Si quieres cambiar el color de un enlace, puedes hacerlo asignándolo explícitamente:
+	    </p>
+	    <script>
+	      var colorRadioGroup = [
+	      ["color bonds none", "color bonds none <i># hereda el color de los átomos</i>", "checked"],
+	      "color bonds dodgerblue",
+	      "color bonds goldenrod",
+	      "color bonds orchid"
+	      ];
+	      jmolRadioGroup(colorRadioGroup, "<br />");
+	    </script>
+	    <p>
+	      <script>
+		jmolCheckbox("spacefill 20%", "spacefill off", " <i>mostrar los átomos</i>");
+	      </script>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+    </form>
+  </body>
+</html>

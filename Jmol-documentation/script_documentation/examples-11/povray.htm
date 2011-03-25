@@ -1,0 +1,70 @@
+<html>
+<head>
+<script type=text/javascript>
+function showJmol(script) {
+ var sm=""+Math.random()
+ sm=sm.substring(2,10)
+ var doc = "JmolPopup.htm?script=script " + script
+alert(doc)
+ var newwin=open(doc,"jmol_"+sm,woptions)
+}
+
+
+woptions="menubar=yes,resizable=1,scrollbars,alwaysRaised,width=600,height=600,left=50"
+</script>
+
+</head>
+<body>
+Just a gallery of pictures produced by <a href=Jmol-11_3.zip>the Jmol 1.3.35 application (not the applet)</a> using the 
+
+<br />
+<br />
+write povray 800 800 [filename]
+<br />
+<br />
+command followed by processing the .pov and .pov.ini output files using POV-Ray for windows. If you download the .pov file, you can run it as a script in Jmol 11.3.35 to recreate the
+scene. 
+<table border=1>
+<tr><td><a href=img/t.pov>t.pov</a>
+<br /><a href=img/t.pov.ini>t.pov.ini</a>
+<br /><a href="javascript:showJmol('img/t.pov.spt')">Open Jmol</a>
+</td><td><img src=img/t.pov.png /></td></tr>
+
+<tr><td><a href=img/t2.pov>t2.pov</a>
+<br /><a href=img/t2.pov.ini>t2.pov.ini</a>
+<br /><a href="javascript:showJmol('img/t2.pov.spt')">Open Jmol</a>
+</td><td><img src=img/t2.pov.png /></td></tr>
+
+<tr><td><a href=img/bdna.pov>bdna.pov</a>
+<br /><a href=img/bdna.pov.ini>bdna.pov.ini</a>
+<br /><a href="javascript:showJmol('img/bdna.pov.spt')">Open Jmol</a>
+</td><td><img src=img/bdna.pov.png /></td></tr>
+
+<tr><td><a href=img/watermo.pov>watermo.pov</a>
+<br /><a href=img/watermo.pov.ini>watermo.pov.ini</a>
+<br /><a href="javascript:showJmol('img/watermo.pov.spt')">Open Jmol</a>
+</td><td><img src=img/watermo.pov.png /></td></tr>
+
+<tr><td><a href=img/watermo2.pov>watermo2.pov</a>
+<br /><a href=img/watermo2.pov.ini>watermo2.pov.ini</a>
+<br /><a href="javascript:showJmol('img/watermo2.pov.spt')">Open Jmol</a>
+</td><td><img src=img/watermo2.pov.png /></td></tr>
+
+<tr><td><a href=img/caffeineplane.pov>caffeineplane.pov</a>
+<br /><a href=img/caffeineplane.pov.ini>caffeineplane.pov.ini</a>
+<br /><a href="javascript:showJmol('img/caffeineplane.pov.spt')">Open Jmol</a>
+</td><td><img src=img/caffeineplane.pov.png /></td></tr>
+
+<tr><td><a href=img/slab.pov>slab.pov</a>
+<br /><a href=img/slab.pov.ini>slab.pov.ini</a>
+<br /><a href="javascript:showJmol('img/slab.pov.spt')">Open Jmol</a>
+</td><td><img src=img/slab.pov.png /></td></tr>
+
+<tr><td><a href=img/text.pov>text.pov</a>
+<br /><a href=img/text.pov.ini>text.pov.ini</a>
+<br /><a href="javascript:showJmol('img/text.pov.spt')">Open Jmol</a>
+</td><td><img src=img/text.pov.png /></td></tr>
+
+</table>
+</body>
+</html>

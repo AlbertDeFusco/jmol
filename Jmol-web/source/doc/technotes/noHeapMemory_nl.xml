@@ -1,0 +1,83 @@
+<!--
+  Dutch translation 
+  Translated from default version : noHeapMemory_en.xml (v 1.1)
+-->
+<section title="Geen heap memory allocatie tijdens de hertekeningscyclus!">
+  <p>
+    Jmol voert geen heap memory allocatie uit tijdens de hertekeningscyclus!
+    Omwille van prestatieredenen is het voor ons belangrijk om deze richtlijn te blijven volgen.
+  </p>
+
+  <p>
+    <i>[Dave heeft een schets van deze memo gelezen en gaf zijn toestemming om zijn
+    code te gebruiken als een voorbeeld]</i>
+  </p>
+
+  <p>
+    Na een klein stukje van Dave's recente code te bekijken voor Ribbons/Mesh,
+    zag ik iets dat een discussie waard is.
+  </p>
+
+  <p>
+    Om eerlijk te zijn, Dave heeft zeer goede code geschreven. Maar met een kleine
+    wijzigingen kunnen we ervoor zorgen dat we optimale prestatie kunnen behouden.
+    Ik ga deze code dan ook gebruiken als een voorbeeld om de alertheid te verhogen
+    wat betreft geheugenallocatie problemen in Jmol.
+  </p>
+
+  <p>
+    Om Ribbons te tekenen had Dave 2 arrays van Point3i objecten nodig om de
+    schermco&#x00F6;rdinaten te kunnen bewaren van de hoeken van de 'ribbons'.
+    Hij wijst de arrays toe en vult ze op met nieuwe Point3i objecten.
+    Daarna volgt een berekening, de dingen worden uitgetekend, en mooi ogende
+    ribbons verschijnen op het scherm.
+  </p>
+
+  <p>
+    Daarna worden de tijdelijke objecten weggegooid. Hier ontstaat er een klein probleem:
+    tijdelijke opjecten die we toewijzen en weggooien tijdens de herteken-cyclus.
+  </p>
+
+  <p>
+    Waarom vormt dit een probleem?
+  </p>
+
+  <p>
+    Herteken-cycli gebeuren vrij snel ... hopelijk 30 keer per seconde tijdens rotaties.
+    Als we objecten toewijzen buiten de heap [door nieuwe SomeObject(...) parameters te gebruiken],
+    eindigen we met een snelle toewijzing van vele objecten.
+  </p>
+
+  <p>
+    Maar het probleem doet zich niet voor bij de toewijzing. Het probleem ontstaat bij het ongedaan
+    maken van de toewijzing. We verwerpen onmiddellijk de objecten. Deze verwerping van objecten
+    plaatst een overbodige last op de 'Java garbage collector', die doorheen het geheugen moeten
+    zoeken naar te dumpen datastructuren.
+  </p>
+
+  <p>
+    Als deze 'garbage collector' draait kan het soms pauzes genereren, waardoor er 'schokken'
+    onstaan in de respons van het systeem ... geen goed idee.
+  </p>
+
+  <p>
+    Daarom moeten we dit aanpakken door zoveel mogelijk objecten in het geheugen te 'recycleren'
+    tijdens de hertekencyclus.
+  </p>
+
+  <p>
+    We kunnen dit bereiken door de tijdelijke objecten te koppelen met instanties
+    van de Renderer klassen. We kunnen de Renderer instanties vragen om de tijdelijke
+    objecten voor ons toe te wijzen en/of te bewaren, en we kunnen op deze manier dezelfde
+    tijdelijke objecten hergebruiken doorheen de hertekencyclus.
+  </p>
+
+  <p>
+    Er zijn andere delen van het susteem waar deze techniek niet van toepassing is.
+    Bijvoorbeeld, bij IO operaties zijn we vrij om alles toe te wijzen of weg te gooien
+    alsof het rommel is. Tijdens IO wordt er veel tekst ontleed. Deze ontleding cre&#x00EB;rt vele
+    tijdelijke strings die een zeer korte levensduur hebben. Maar dit vormt geen probleem
+    aangezien we geen bestanden veelvuldig lezen omdat dit een vrij trage handeling vormt.
+  </p>
+
+</section>

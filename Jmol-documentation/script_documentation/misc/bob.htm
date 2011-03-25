@@ -1,0 +1,738 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Server: sf-web5 -->
+<!--
+Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: header.html 9148 2006-07-10 15:42:50Z oostendo $
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="The world's largest development and download repository of Open Source code and applications" />
+        <meta name="keywords" content="Open Source, Development, Developers, Projects, Downloads, OSTG, VA Software, SF.net, SourceForge" />
+        <link rel="alternate" type="application/rss+xml" title="SourceForge.net Project News" href="http://sourceforge.net/export/rss2_sfnews.php?group_id=1&amp;rss_fulltext=1" />
+        <link rel="alternate" type="application/rss+xml" title="SourceForge.net News" href="http://sourceforge.net/export/rss2_projnews.php?group_id=141424&amp;rss_fulltext=1" />
+        <title>SourceForge.net: jmol-developers</title>
+
+        <link rel="stylesheet" type="text/css" href="http://static.sourceforge.net/sfx.css" media="screen" title="SFx" />
+        <link rel="shortcut icon" href="http://static.sourceforge.net/images/favicon.ico" type="image/x-icon" />
+        <script type="text/javascript">
+                var link = document.createElement('link');
+                link.setAttribute('rel', 'stylesheet');
+                link.setAttribute('type', 'text/css');
+                link.setAttribute('href', 'http://static.sourceforge.net/sfxjs.css');
+                document.getElementsByTagName('head')[0].appendChild(link);
+
+                function help_window(helpurl) {
+                        HelpWin = window.open( 'http://sourceforge.net' + helpurl,'HelpWindow','scrollbars=yes,resizable=yes,toolbar=no,height=400,width=400');
+                }
+        </script>
+        <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="http://static.sourceforge.net/iestyles.css"  /><![endif]-->
+        <script type="text/javascript" src="http://static.sourceforge.net/sfx.js"></script>
+<!-- BEGIN: AdSolution-Tag 4.2: Global-Code [PLACE IN HTML-HEAD-AREA!] -->
+<!-- DoubleClick Random Number -->
+<script language="JavaScript" type="text/javascript">
+   dfp_ord=Math.random()*10000000000000000;
+   dfp_tile = 1;
+</script>
+<!-- End DoubleClick Random Number -->
+
+<!-- END: AdSolution-Tag 4.2: Global-Code -->
+<!-- after META tags -->
+</head>
+<body>
+<div id="head">
+	<ul class="ostgnavbar">
+		<li class="begin"><a href="http://ostg.com">OSTG</a></li>
+		<li><a href="http://thinkgeek.com">ThinkGeek</a></li>
+		<li><a href="http://slashdot.org">Slashdot</a></li>
+		<li><a href="http://itmj.com">ITMJ</a></li>
+
+		<li><a href="http://linux.com">Linux.com</a></li>
+		<li><a href="http://newsforge.com">NewsForge</a></li>
+		<li><a href="http://freshmeat.net">freshmeat</a></li>
+		<li><a href="http://newsletters.ostg.com">Newsletters</a></li>
+		<li><a href="http://sourceforge.pricegrabber.com/">PriceGrabber</a></li>
+		<li><a href="http://sel.as-us.falkag.net/sel?cmd=lnk&amp;kid=97082&amp;bid=218684&amp;dat=121642&amp;opt=0&amp;rdm=[timestamp]">Jobs</a></li>
+
+		<li><a href="http://sel.as-us.falkag.net/sel?cmd=lnk&amp;kid=97305&amp;bid=219319&amp;dat=121642&amp;opt=0&amp;rdm=[timestamp]">Broadband</a></li>
+	</ul><!-- End OSDN NavBar gid: 23629 keywords: jmol,os_groups,chemistry,JavaScript,bioinformatics,independent,java,visualization,3drendering,graphics,multimedia,scientific,cai,education -->
+	<div id="fad1p">&nbsp;</div>
+	<div id="masthead"> 
+		<h1>
+			<a href="/">SourceForge.net</a>
+		</h1>
+
+		<div id="top"> 
+			<form action="/search/" method="get" class="top" id="searchform" name="searchform">
+
+				<input type="hidden" name="type_of_search" value="soft" />
+				<fieldset>
+					<legend>Search</legend>
+
+					<label for="searchbox"> 
+						<input type="text" value=" Software" class="searchword passive" id="searchbox" name="words" tabindex="1" onFocus="this.className='active'; if(this.value==' Software')this.value='';" onblur="if(this.value=='')this.value=' Software';this.className='passive';" /> 
+					</label> 
+					<input type="submit" value="Search" id="searchsubmit" tabindex="0" />
+					<a href="/search/" class="advanced">Advanced</a>
+				</fieldset>
+
+			</form>
+			<form action="/my/favorite_redirect.php" method="post" class="top" id="myfav"><select name="navmenu" onChange="jump('parent',this,1)" class="smfc0b"><option value="">My Favorites</option>
+<option value="/">SF.net Home</option>
+<option value=""> </option>
+<option value="">---- My Projects ----</option>
+<option value="/projects/jmol/">jmol</option>
+<option value="/projects/jspecview/">jspecview</option>
+<option value=""> </option>
+
+<option value="">---- My Bookmarks ----</option>
+<option value="/my/bookmark_add.php?bookmark_url=%2Fmailarchive%2Fmessage.php%3Fmsg_id%3D8096056&amp;bookmark_title=">(Bookmark this page)</option>
+</select></form>
+			 <span class="account"> Welcome, <a href="/users/hansonr/">hansonr</a> - <a href="/account/logout.php" class="logout">Logout</a>- <small>We <a href='/docman/display_doc.php?docid=759&amp;group_id=1#semilogin'>remember you</a></small></span>
+	
+		</div>
+
+	</div>
+</div>
+<ul id="nav">
+	<li class="begin " onclick="hl(this), si('sfnet'), h('projects'), h('mypage'), h('help'); ">
+		<a href="/" onclick="return false;">SF.net</a>
+		<ul id="sfnet">
+			<li class="begin"><a href="/" >Home</a></li>
+<li><a href="/docs/about" >About</a></li>
+
+<li><a href="/supporters.php" >Supporters</a></li>
+<li><a href="/news/?group_id=141424" >Site&nbsp;News</a></li>
+<li><a href="/register/" >Create&nbsp;Project</a></li>
+<li><a href="/subscribe/" >Subscribe</a></li>
+<li><a href="http://newsletters.ostg.com/wws/subrequest/sourceforge-daily" >Newsletter</a></li>
+<li><a href="/docs/compile_farm" >Compile&nbsp;Farm</a></li>
+ 
+		</ul>
+
+	</li>
+	<li class="select" onclick="hl(this), si('projects'), h('sfnet'), h('mypage'), h('help');">
+		<a href="/projects/" onclick="return false;">Projects</a>
+		<ul id="projects">
+			<li class="begin"><a href="/softwaremap/" >Software&nbsp;Map</a></li>
+<li><a href="/register/" >Create&nbsp;Project</a></li>
+<li><a href="/new/" >New&nbsp;Releases</a></li>
+
+<li><a href="/top/mostactive.php?type=week" >Top&nbsp;Projects</a></li>
+<li><a href="/new/new_projects.php" >New&nbsp;Projects</a></li>
+<li><a href="/people/" >Help&nbsp;Wanted</a></li>
+
+		</ul>
+	</li>
+	<li  onclick="hl(this), si('mypage'), h('sfnet'), h('projects'), h('help');">
+		<a href="/account/login.php" onclick="return false;">My Page</a>
+
+		<ul id="mypage">
+			<li class="begin"><a href="/my/" >Summary</a></li>
+<li><a href="/my/myprojects.php" >Projects</a></li>
+<li><a href="/my/tracker.php" >Tracker</a></li>
+<li><a href="/my/task.php" >Tasks</a></li>
+<li><a href="/my/donations.php" >Donations</a></li>
+<li><a href="/account/" >Preferences</a></li>
+
+		</ul>
+
+	</li>
+	<li  onclick="hl(this), si('help'), h('sfnet'), h('projects'), h('mypage');">
+		<a href="/support/getsupport.php" onclick="return false;">Help</a>
+		<ul id="help">
+			<li class="begin"><a href="/support/getsupport.php" >Get&nbsp;Support</a></li>
+<li><a href="/docman/?group_id=1" >Documentation</a></li>
+<li><a href="/docs/A03/" >Site&nbsp;Updates</a></li>
+
+<li><a href="/support/priority.php"  class="subscribe">Priority&nbsp;Support</a></li>
+<li><a href="/docs/A04" >Site&nbsp;Status</a></li>
+
+		</ul>
+	</li>
+</ul>
+<div class="usernav">
+	<div id="status">
+		&nbsp;
+
+						<a href="/docs/A04/" class="button offline">&nbsp;<span>Site Status: (08/18)</span></a>
+	</div>
+	
+	<ul id="breadcrumb">
+			<li class="begin"><a href="/">SF.net</a></li>
+<li><a href="/softwaremap/">Projects</a></li>
+<li><a href="/projects/jmol/">Jmol</a></li>
+<li><a href="/mail/?group_id=23629">Mail</a></li>
+<li class="selected"><a href="">Archive</a></li>
+
+		</ul>
+</div>
+<div id="frame" class="mail_archive">
+	<div class="tbarwrap">
+
+		<b class="ttopw"><b class="t1w">&nbsp;</b><b class="t2w">&nbsp;</b></b> 
+		<div class="tboxw">
+			<div class="wrap">
+				<div class="tshade">
+				</div>
+<!-- begin content -->
+
+	
+				<div id="innerframe" class="project">
+					<div class="topnav">
+						<h2><span>Jmol</span>
+							<small>
+								&nbsp; 
+								&nbsp; 
+								<a href="/project/stats/?group_id=23629&amp;ugn=jmol" class="stats">Stats - Activity: 99.69%</a> 
+							
+								<span class="rss">
+									<a href="/export/rss2_project.php?group_id=23629">RSS</a>
+
+								</span>
+							</small>
+						</h2>
+						<form action="/search/" method="get" class="projectsearch">
+															<input type="hidden" name="ml_name" value="jmol-developers" />																														<input type="hidden" name="type_of_search" value="mlists" />							<input type="hidden" name="group_id" value="23629" />
+							<input type="text" value=" Mailing Lists" class="searchword passive" id="projectsearchbox" name="words" tabindex="4" onFocus="this.className='active'; if(this.value==' Mailing Lists')this.value='';" onblur="if(this.value=='')this.value=' Mailing Lists';this.className='passive';" /> 
+							<input type="submit" value="Search" class="submit" tabindex="5" />
+							<a href="/search/?group_id=23629&type_of_search=mlists&ml_name=jmol-developers&forum_id=2152" class="advanced">Advanced</a>
+
+						</form>
+
+												<ul class="nav">
+							<li class="begin"><a href="/projects/jmol/" >Summary</a></li>
+<li><a href="/project/admin/?group_id=23629" >Admin</a></li>
+<li><a href="http://jmol.sourceforge.net" >Home&nbsp;Page</a></li>
+<li><a href="/tracker/?group_id=23629" >Tracker</a></li>
+<li><a href="/tracker/?group_id=23629&amp;atid=379133" >Bugs</a></li>
+
+<li><a href="/tracker/?group_id=23629&amp;atid=379135" >Patches</a></li>
+<li><a href="/tracker/?group_id=23629&amp;atid=379136" >Feature&nbsp;Requests</a></li>
+<li class="selected"><a href="/mail/?group_id=23629" >Mail</a></li>
+<li><a href="/docman/?group_id=23629" >Docs</a></li>
+<li><a href="/project/screenshots.php?group_id=23629" >Screenshots</a></li>
+<li><a href="/news/?group_id=23629" >News</a></li>
+<li><a href="/svn/?group_id=23629" >Subversion</a></li>
+<li><a href="/project/showfiles.php?group_id=23629" >Files</a></li>
+
+			
+						</ul>
+																	</div>
+<!-- begin right column -->
+
+
+<!--
+/mailarchive/header.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: header.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+
+<p>
+<h3>Email Archive: <a href="forum.php?forum_id=2152">jmol-developers</A> (read-only)
+</h3>
+What follows is an exerpt from <a href=http://sourceforge.net/mailarchive/message.php?msg_id=8096056>Bob Hanson's first email message to Jmol-developers.</a> 
+
+</p>
+
+	<table width="100%">
+			<tr>
+	<td bgcolor="#dddddd" nowrap>
+			From: Bob Hanson &lt;hansonr@st...&gt; <br />
+						<img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" />
+		in-line data?
+						&nbsp;<br />
+		2004-05-18 08:48
+	</td>
+
+</tr>
+
+		<tr>
+			<td>
+				<b>Does/will the jmol applet have the capability to introduce data in-line?</b>
+ My reason for this is that then as a JavaScript programmer, I could 
+ create structures on the the fly right at the client without reference 
+ to a fixed server-based file. I think Chime-Pro can do this, but not Chime.
+ 
+ Thank you
+ 
+ Bob Hanson
+ 
+ <pre> For example, something like:
+ 
+ &lt;parame name=moldata value="
+ 
+ 
+ 
+   6  5
+     0.0000    0.0000    0.0000 S            
+     0.0000    0.0000    1.3400 H            
+     0.0000    1.3400    0.0000 H            
+     0.0000   -1.3400    0.0000 H            
+     1.3400    0.0000    0.0000 H            
+    -1.3400    0.0000    0.0000 H            
+   1  6  1
+   1  5  1
+   1  4  1
+   1  3  1
+   1  2  1
+ M  END
+ "&gt;
+ 
+ 
+ 
+ 
+ -- 
+ 
+ -- Robert M. Hanson, hansonr@st..., 507-646-3107 
+ Professor of Chemistry, St. Olaf College 
+ 1520 St. Olaf Ave., Northfield, MN 55057 
+ mailto:hansonr@st... 
+ <A href="http://www.stolaf.edu/people/hansonr" target="_NEW">http://www.stolaf.edu/people/hansonr</A> 
+ 
+</pre>
+			</td>
+
+		</tr>
+		</table>
+	<br />
+	&nbsp;
+	<p>
+	<h3>Thread View</h3>
+	</p>
+	
+<table width="100%" border="0" cellspacing="2" cellpadding="3">
+
+<tr bgcolor="#ffffff">
+<td align="middle"><font color="#000000"><b>Thread<b></font></td>
+<td align="middle"><font color="#000000"><b>Author<b></font></td>
+<td align="middle"><font color="#000000"><b>Date<b></font></td>
+</tr>
+
+
+	<tr bgcolor="#eaecef">
+			<td>
+				in-line data?
+			</td>
+
+	<td>
+		Bob Hanson &lt;hansonr@st...&gt;
+	</td>
+	<td>
+		2004-05-18 08:48
+	</td>
+	</tr>
+			
+
+
+<p>
+<table border="0">
+	<tr>
+	<td bgcolor="#DDDDDD" nowrap>By:  - <a href="/users//"></a> <br />
+		<a href="/forum/message.php?msg_id=8096058"><img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" /> Re: in-line data?</a> &nbsp; <br />
+		2004-05-18 09:05
+	</td>
+
+</tr>
+
+
+<!--
+/forum/nested_messages.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: nested_messages.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+	<tr>
+		<td>
+<b>First, the bad news.What you have written *should* work, but it does not ... for reasons that are beyond our control.</b>
+It turns out that newline characters get stripped from param valuestrings. This is according to the HTML/w3c spec. If I recall correctly,they do not get replace with spaces, they just get removed. So, by thetime we get this string, it has all been put onto one line.Interestingly, this means that we can read CML/XML (Chemical MarkupLanguage) files just fine ... because white space and newline charactersdo not matter. But for all the other file formats, we are dead.People can write scripts on multiple lines ... but each line of the scriptmust be terminated by ";" characters. Again because the newlines will beremoved.
+<b>The good news is, I have been thinking about another solution to this problem. And I think I have something that will work well.</b>
+ But I need to talk/work with someone on it. It is not a lot of coding work, but I don"t want to implement it until I
+can talk to a JavaScript/HTML programmer who is going to use it.
+<b>Did I just hear you volunteer?</b> :-)Miguel
+			<br />
+			<br />
+		</td>
+	</tr>
+
+</table>
+</p>
+
+
+
+<p>
+<table border="0">
+	<tr>
+	<td bgcolor="#DDDDDD" nowrap>By:  - <a href="/users//"></a> <br />
+		<a href="/forum/message.php?msg_id=8096063"><img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" /> Re: in-line data?</a> &nbsp; <br />
+
+		2004-05-18 09:52
+	</td>
+</tr>
+
+
+<!--
+/forum/nested_messages.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: nested_messages.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+	<tr>
+		<td>
+			Line endings are not an issue. In JavaScript I can produce the <embed> tag based on any convention you like. Certainly semicolons look good to me for line endings.
+<b>Yes, I"m certainly volunteering. This is the first I"ve looked at jmol, but I"m fairly impressed already.</b>
+ I"ve done extensive work with Chime, essentially all of it in an "on-the-fly" mode, where frames are filled with structures based on user input. But I"ve been frustrated that even with that I have to be referencing static files. I would be delighted to at least work out a simple sample page that would at least demonstrate some of these capabilities. For more information about my background, see <a href="http://www.stolaf.edu/people/hansonr" target="_blank">http://www.stolaf.edu/people/hansonr</a>A couple of years ago I looked into creating a plug-in with LiveConnect functionality, but that was right when Netscape dropped LiveConnect (Netscape 6?), so I didn"t follow up on that. I"ve also played around a bit with Java and applets, but that"s not my forte at all.
+<b>Also extremely useful would be the capability for JavaScript to read the data for a currently displayed file using scripting.</b>
+ For example,
+<pre>
+A=new Array()
+A=jmolapplet.getAtomCoordinates()
+
+or
+
+XYZ=new Array()
+XYZ=jmolapplet.getAtomCoordinates(3)
+
+or setting them:
+
+jmolapplet.setAtomCoordinates(3,XYZ)
+
+or all at once:
+
+jmolapplet.setAtomCoordinates(A)
+</pre>
+Is there information somewhere regarding the interactions possible between jmol and JavaScript commands?
+Bob Hanson
+			<br />
+
+			<br />
+		</td>
+	</tr>
+</table>
+</p>
+
+
+
+<p>
+<table border="0">
+	<tr>
+	<td bgcolor="#DDDDDD" nowrap>By:  - <a href="/users//"></a> <br />
+
+		<a href="/forum/message.php?msg_id=8621869"><img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" /> Re: in-line data?</a> &nbsp; <br />
+		2004-05-30 19:40
+	</td>
+</tr>
+
+
+<tr> <td>[clip]</td></tr>
+
+
+<!--
+/forum/nested_messages.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: nested_messages.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+	<tr>
+		<td>
+			Bob, <b>A general JavaScript mechanism for retrieving information about atom
+properties does not currently exist.</b>
+
+One can send script commands to control atom properties. 
+And one can receive limited information about changes in state through the
+Chime-compatible callback functions.
+I think we all agree that a broader, more flexible mechanism is needed.
+However, there are no plans to introduce this type of functionality as
+part of Jmol v10. It will need to wait for a later release. 
+I believe that the soonest we could begin serious work in this area will be late 2004.Miguel
+			<br />
+			<br />
+		</td>
+
+	</tr>
+</table>
+</p>
+
+
+
+<p>
+<table border="0">
+	<tr>
+	<td bgcolor="#DDDDDD" nowrap>By:  - <a href="/users//"></a> <br />
+		<a href="/forum/message.php?msg_id=8621871"><img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" /> Re: in-line data?</a> &nbsp; <br />
+
+		2004-05-31 06:41
+	</td>
+</tr>
+
+
+<!--
+/forum/nested_messages.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: nested_messages.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+	<tr>
+		<td>
+			Thanks, Miguel. OK. So is there any information available  (source code if nec.) 
+that lists what all of the publicly scriptable functions are of jmol and what all the callbacks return?
+Bob			<br />
+
+			<br />
+		</td>
+	</tr>
+</table>
+</p>
+
+</ul>
+
+</ul>
+
+<p>
+<table border="0">
+	<tr>
+
+	<td bgcolor="#DDDDDD" nowrap>By:  - <a href="/users//"></a> <br />
+		<a href="/forum/message.php?msg_id=8096069"><img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" /> Re: in-line data?</a> &nbsp; <br />
+		2004-05-18 11:30
+	</td>
+</tr>
+
+
+
+
+<tr> <td>[clip]</td></tr>
+
+<!--
+/forum/nested_messages.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: nested_messages.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+
+	<tr>
+		<td>
+			Bob wrote:> Line endings are not an issue. In JavaScript I can produce the <embed<br/> > > tag based on any convention you like. Certainly semicolons look good to> me for line endings.One would think that it would work to put semicolons at the end of thelines ... but it turns out that there are problems :-(The HTML 4.01 spec says the following:--------<a href="http://www.w3.org/TR/html4/types.html#type-cdata" target="_blank">http://www.w3.org/TR/html4/types.html#type-cdata</a>CDATA is a sequence of characters from the document character set and mayinclude character entities. User agents should interpret attribute valuesas follows:    * Replace character entities with characters,    * Ignore line feeds,    * Replace each carriage return or tab with a single space.--------The fact that carriage returns get replace with spaces, and line feeds get*ignored* means that the final value one gets depends upon whether thefile was edited with a Win32 editor.Win32 systems use carriage return + linefeed. This means that if one putsa semicolon at the end of the line, it will get turned into a semicolon +a space.Unix systems use only a linefeed. So a semicolon + linefeed will turn intoa semicolon.Therefore, we cannot put the semicolon at the end of the line.I think it would work if we put it at the beginning of the line. Theeffect on Win32 files would be that there was an extra space added at theend of the previous line. I do not think that would generally be a problemwith molecular model files. 
+<b>So, I was thinking of the vertical bar character "|" at the *beginning* ofa line to separate lines.</b>
+Q: Would it work for you to put "|" characters at the beginning of each line?
+Personally, I don"t like it. So I have tried to come up with another solution. I am thinking of this as an alternate mechanism for "inline" molecular models. 
+Here is what I am thinking ... we do not store the molecular model in the
+parameter string value. Rather, we store the moleculare model inside the HTML file itself ... with some tag that identifies it as the molecular model. The applet reads its own HTML file and pulls out the molecular
+model. The rough idea would be something like this:[applet code="JmolApplet" ...]  [param name="inline" value="my_molecular_model" /][/applet]<!--[my_molecular_model]recordsgohere[end]-->I still need to think through the details of how this would be done.It would probably work fine for .html files and pull the .html file fromthe local cache.It would probably have problems on pages that are generated by cgi"sbecause the applet would probably fetch the page again from the webserver.After writing this down ... I don"t like the idea as much as I used to :-(Q: thoughts/comments?> Yes, I"m certainly volunteering.[snip]> I would be delighted to> at least work out a simple sample page that would at least demonstrate> some of these capabilities.Get a rough draft of a page ready.[snip]> I"ve also played around a> bit with Java and applets, but that"s not my forte at all.It will be very helpful for me to have a JavaScript user.> Also extremely useful would be the capability for JavaScript to read the> data for a currently displayed file using scripting. For example,<br/> > > A=new Array()> A=jmolapplet.getAtomCoordinates()<br/> > > or<br/> > > XYZ=new Array()> XYZ=jmolapplet.getAtomCoordinates(3)<br/> > > or setting them:<br/> > > jmolapplet.setAtomCoordinates(3,XYZ)<br/> > > or all at once:<br/> > > jmolapplet.setAtomCoordinates(A)<br/> > > Is there information somewhere regarding the interactions possible> between jmol and JavaScript commands?Your suggestions are good.Currently, you should assume that the only thing you can do is run the  document.jmol.script("some RasMol/Chime script")In addition, the Chime callback functions are available.The whole area of LiveConnect communciations between JavaScript and Javaapplets is a swamp that is murky, ugly, and buggy.That is why I need people to work on it from the JavaScript side.My hope/plan is to define a relatively clean interface that will allowJavaScript to query the status of the display. This would be a JavaBeanAPI that would also be available to JavaScript ... that would allow one toinquire about the state of Jmol, including properties of the atoms.Miguel
+			<br />
+			<br />
+		</td>
+	</tr>
+
+</table>
+</p>
+
+
+
+<p>
+<table border="0">
+	<tr>
+	<td bgcolor="#DDDDDD" nowrap>By:  - <a href="/users//"></a> <br />
+		<a href="/forum/message.php?msg_id=8096077"><img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" /> Re: in-line data?</a> &nbsp; <br />
+
+		2004-05-18 12:56
+	</td>
+</tr>
+
+
+<!--
+/forum/nested_messages.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: nested_messages.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+	<tr>
+		<td>
+			<b>Miguel,Vertical bars are great. No problem there.... In fact, that"s precisely what I use in many web-based applications because | is a natural separator.</b>
+ Beginning of the line, end of the line--makes no matter to me. Probably looks nicer at the beginning of the line anyway.I would much prefer it all be part of the parameters. You will run into exactly the same issue with line feeds if it is HTML, and that really (in my mind, anyway) runs contrary to the data/delivery separation idea. Also, it associates the data with the parameters in a clear fashion. If these two are separated, you will also need tags and some sort of parameter that points to the data block by name, as there could easily be a dozen instances of the applet and a dozen data sets on a page (in principle). From a reader"s point of view, it will make far more sense to have all the information together, and from a programmatic point of view, scanning HTML text for data seems to me to be inelegant and possibly error-prone.Bob
+
+			<br />
+		</td>
+	</tr>
+</table>
+</p>
+
+
+
+<p>
+<table border="0">
+	<tr>
+	<td bgcolor="#DDDDDD" nowrap>By:  - <a href="/users//"></a> <br />
+
+		<a href="/forum/message.php?msg_id=8096080"><img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" /> Re: in-line data?</a> &nbsp; <br />
+		2004-05-18 13:22
+	</td>
+</tr>
+
+
+<!--
+/forum/nested_messages.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: nested_messages.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+	<tr>
+		<td>
+
+			Bob wrote:> Vertical bars are great. No problem there.... In fact, that"s precisely> what I use in many web-based applications because | is a natural> separator. Beginning of the line, end of the line--makes no matter to> me. 
+Probably looks nicer at the beginning of the line anyway.
+<b>Good ... I just finished implementing this and checking it in :-)</b>
+The format is: <param name="loadInline" value="|put|your|data|here" />The first vertical bar and any white space before it is ignored.I will send you a separate email with the JmolApplet.jar as an attachment.> I would much prefer it all be part of the parameters. You will run into> exactly the same issue with line feeds if it is HTML, and that really> (in my mind, anyway) runs contrary to the data/delivery separation idea.> Also, it associates the data with the parameters in a clear fashion. If> these two are separated, you will also need tags and some sort of> parameter that points to the data block by name, as there could easily> be a dozen instances of the applet and a dozen data sets on a page (in> principle). From a reader"s point of view, it will make far more sense> to have all the information together, and from a programmatic point of> view, scanning HTML text for data seems to me to be inelegant and> possibly error-prone.
+All good arguments ... we will hold off on this :-)Miguel
+			<br />
+			<br />
+		</td>
+	</tr>
+</table>
+</p>
+
+
+
+<p>
+<table border="0">
+
+	<tr>
+	<td bgcolor="#DDDDDD" nowrap>By:  - <a href="/users//"></a> <br />
+		<a href="/forum/message.php?msg_id=8096102"><img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" /> Re: in-line data?</a> &nbsp; <br />
+		2004-05-18 16:23
+	</td>
+</tr>
+
+<!--
+/forum/nested_messages.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: nested_messages.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+	<tr>
+		<td>
+			<b>Incredible. Yes, that worked. I"ll write an application tonight that utilizes this in an interesting way.
+</b>
+Miguel, please explain to me, a newcomer to the jmol business, how it is being developed. Are there many people with their own version of this as open code, of which you are one, or are you the creator and maintainer of the "official" jmol code?Bob HansonMiguel wrote:> Bob wrote:> <br/> > >Vertical bars are great. No problem there.... In fact, that"s precisely<br/> > >what I use in many web-based applications because | is a natural<br/> > >separator. Beginning of the line, end of the line--makes no matter to<br/> > >me. Probably looks nicer at the beginning of the line anyway.> > > Good ... I just finished implementing this and checking it in :-)> > The format is:>  <param name="loadInline" value="> |put> |your> |data> |here> " /<br/> > > > The first vertical bar and any white space before it is ignored.> > I will send you a separate email with the JmolApplet.jar as an attachment.> > > <br/> > >I would much prefer it all be part of the parameters. You will run into<br/> > >exactly the same issue with line feeds if it is HTML, and that really<br/> > >(in my mind, anyway) runs contrary to the data/delivery separation idea.<br/> > >Also, it associates the data with the parameters in a clear fashion. If<br/> > >these two are separated, you will also need tags and some sort of<br/> > >parameter that points to the data block by name, as there could easily<br/> > >be a dozen instances of the applet and a dozen data sets on a page (in<br/> > >principle). From a reader"s point of view, it will make far more sense<br/> > >to have all the information together, and from a programmatic point of<br/> > >view, scanning HTML text for data seems to me to be inelegant and<br/> > >possibly error-prone.> > > All good arguments ... we will hold off on this :-)> > > Miguel> > > > -------------------------------------------------------> This SF.Net email is sponsored by: SourceForge.net Broadband> Sign-up now for SourceForge Broadband and get the fastest> 6.0/768 connection for only $19.95/mo for the first 3 months!> <a href="http://ads.osdn.com/?ad_id=2562&alloc_id=6184&op=click" target="_blank">http://ads.osdn.com/?ad_id=2562&alloc_id=6184&op=click</a<br/> > > _______________________________________________> Jmol-developers mailing list> <a href="mailto:Jmol-developers@lists.sourceforge.net" target="_new">Jmol-developers@lists.sourceforge.net</a<br/> > > <a href="https://lists.sourceforge.net/lists/listinfo/jmol-developers" target="_blank">https://lists.sourceforge.net/lists/listinfo/jmol-developers</a>-- Robert M. Hanson, <a href="mailto:hansonr@stolaf.edu" target="_new">hansonr@stolaf.edu</a>, 507-646-3107Professor of Chemistry, St. Olaf College1520 St. Olaf Ave., Northfield, MN 55057mailto:<a href="mailto:hansonr@stolaf.edu" target="_new">hansonr@stolaf.edu</a><a href="http://www.stolaf.edu/people/hansonr" target="_blank">http://www.stolaf.edu/people/hansonr</a>"Imagination is more important than knowledge."  - Albert Einstein
+			<br />
+
+			<br />
+		</td>
+	</tr>
+</table>
+</p>
+
+
+
+<p>
+<table border="0">
+	<tr>
+	<td bgcolor="#DDDDDD" nowrap>By:  - <a href="/users//"></a> <br />
+
+		<a href="/forum/message.php?msg_id=8096104"><img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" /> Re: in-line data?</a> &nbsp; <br />
+		2004-05-18 16:58
+	</td>
+</tr>
+
+
+<!--
+/forum/nested_messages.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: nested_messages.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+	<tr>
+		<td>
+
+			> Incredible. Yes, that worked. I"ll write an application tonight that> utilizes this in an interesting way.That would be great!> Miguel, please explain to me, a newcomer to the jmol business,> how it is being developed.> Are there many people with their own version of this as open> code, of which you are one, or are you the creator and maintainer> of the "official" jmol code?Basically ... the latter.The Jmol project has been around a few years. In the past there were otherpeople who worked on it. Currently Egon and I are the main developers. Weoccasionally get assistance from others, especially in foreign languagetranslations. We are always looking for other developers.Jmol version 10 is a complete rewrite, explicitly designed to be areplacement for RasMol/Chime. I have been making pre-releases since lastfall. There are a handful of serious users who have helped outtremendously by providing valuable feedback and suggestions. They are alsocalled upon to give me some tutoring ... I am not a chemist.There are a few other people out there who have taken the Jmol code andmade "personal" modifications to it. The core "viewer" code is very easyto integrate into a larger Java application. But I do not believe thatthere are any other public lines of development based upon the Jmolsource.You could help out tremendously by being an active user. The primary areathat needs attention is the mechanism for integration with web pages. So,what we really need right now is people who can build serious webapplications (or port existing web applications from Chime to Jmol).Miguel
+			<br />
+			<br />
+		</td>
+	</tr>
+</table>
+</p>
+
+
+
+<p>
+<table border="0">
+	<tr>
+
+	<td bgcolor="#DDDDDD" nowrap>By:  - <a href="/users//"></a> <br />
+		<a href="/forum/message.php?msg_id=8096118"><img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" /> Re: in-line data?</a> &nbsp; <br />
+		2004-05-19 03:54
+	</td>
+</tr>
+
+
+<!--
+/forum/nested_messages.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: nested_messages.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+
+	<tr>
+		<td>
+			-----BEGIN PGP SIGNED MESSAGE-----Hash: SHA1On Tuesday 18 May 2004 23:58, Miguel wrote:> > Incredible. Yes, that worked. I"ll write an application tonight that> > utilizes this in an interesting way.<br/> > > That would be great!<br/> > > > Miguel, please explain to me, a newcomer to the jmol business,> > how it is being developed.> > Are there many people with their own version of this as open> > code, of which you are one, or are you the creator and maintainer> > of the "official" jmol code?<br/> > > Basically ... the latter.<br/> > > The Jmol project has been around a few years. In the past there were other> people who worked on it. Jmol was originally developed by Dan Gezelter, Notre Dame, South Bend as a MacOS version of XMol... Later Bradley took over as project leader, and 1.5 years ago I became leader... but since then Miguel has done so much, that practically he is leading the v10 branch, while I leaded the v6 branch... which ended in release v9...> Currently Egon and I are the main developers. We> occasionally get assistance from others, especially in foreign language> translations. We are always looking for other developers.Indeed. We need help in, at least, these areas:- - crystallography (space group symmetry implementation)- - animation (interpolation and property (e.g. energy) vs. frame plots)- - internationalisation (some Jmol parts are yet untranslatable...)- - interoperability with QM programs- - analysis plugins (tools that extend the Jmol viewer with tools used   in specific research fields, e.g. a plugin interfacing with Platon to do   report certain analyses)- - documentation!Egon- -- <a href="mailto:egonw@sci.kun.nl" target="_new">egonw@sci.kun.nl</a>PhD on Molecular Representation in ChemometricsNijmegen University<a href="http://www.cac.sci.kun.nl/people/egonw/" target="_blank">http://www.cac.sci.kun.nl/people/egonw/</a>GPG: 1024D/D6336BA6-----BEGIN PGP SIGNATURE-----Version: GnuPG v1.0.7 (SunOS)iD8DBQFAqx+6d9R8I9Yza6YRAgRrAJ9IE2KhdyXKJJ9KCLL8GnwkCpyC8ACghPpGVgs+tVsADPFt64dpWa2ufj4==cVLa-----END PGP SIGNATURE-----
+			<br />
+			<br />
+		</td>
+	</tr>
+
+</table>
+</p>
+
+
+
+<p>
+<table border="0">
+	<tr>
+	<td bgcolor="#DDDDDD" nowrap>By:  - <a href="/users//"></a> <br />
+		<a href="/forum/message.php?msg_id=8096123"><img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" /> Re: in-line data?</a> &nbsp; <br />
+
+		2004-05-19 09:27
+	</td>
+</tr>
+
+
+<!--
+/forum/nested_messages.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: nested_messages.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+	<tr>
+		<td>
+			<b>E.L. Willighagen wrote:> -----BEGIN PGP SIGNED MESSAGE-----> Hash: SHA1> > On Tuesday 18 May 2004 23:58, Miguel wrote:<br/> > >The Jmol project has been around a few years. In the past there were other<br/> > >people who worked on it. > > > Jmol was originally developed by Dan Gezelter, Notre Dame, South Bend as a > MacOS version of XMol... Later Bradley took over as project leader, and 1.5 > years ago I became leader... but since then Miguel has done so much, that > practically he is leading the v10 branch, while I leaded the v6 branch... > which ended in release v9...> > <br/> > >Currently Egon and I are the main developers.</b>
+
+
+ We occasionally get assistance from others, especially in foreign language translations. We are always looking for other developers.> > > Indeed. We need help in, at least, these areas:> >
+
+ - -<b> crystallography (space group symmetry implementation)</b>
+In case you are interested, I have written a program (Visual Basic) that implements all possible space groups and reads xtal files. I don"t really know what else is out there, but this might be useful for error checking or even algorithms. See <a href="http://www.stolaf.edu/people/hansonr/mo" target="_blank">http://www.stolaf.edu/people/hansonr/mo</a<br/> > > 
+
+- - <b>animation (interpolation and property (e.g. energy) vs. frame plots)</b> 
+- - internationalisation (some Jmol parts are yet untranslatable...)> 
+- - interoperability with QM programs> 
+- - analysis plugins (tools that extend the Jmol viewer with tools used>    
+in specific research fields, e.g. a plugin interfacing with Platon to do>    report certain analyses)> 
+<b>- - documentation!</b>
+> > Egon> > - -- > <a href="mailto:egonw@sci.kun.nl" target="_new">egonw@sci.kun.nl</a<br/> > > PhD on Molecular Representation in Chemometrics> Nijmegen University> <a href="http://www.cac.sci.kun.nl/people/egonw/" target="_blank">http://www.cac.sci.kun.nl/people/egonw/</a<br/> > > GPG: 1024D/D6336BA6> > -----BEGIN PGP SIGNATURE-----> Version: GnuPG v1.0.7 (SunOS)> > iD8DBQFAqx+6d9R8I9Yza6YRAgRrAJ9IE2KhdyXKJJ9KCLL8GnwkCpyC8ACghPpG> Vgs+tVsADPFt64dpWa2ufj4=> =cVLa> -----END PGP SIGNATURE-----> > > > -------------------------------------------------------> This SF.Net email is sponsored by: SourceForge.net Broadband> Sign-up now for SourceForge Broadband and get the fastest> 6.0/768 connection for only $19.95/mo for the first 3 months!> <a href="http://ads.osdn.com/?ad_id%62&alloc_ida84&op=click" target="_blank">http://ads.osdn.com/?ad_id%62&alloc_ida84&op=click</a<br/> > > _______________________________________________> Jmol-developers mailing list> <a href="mailto:Jmol-developers@lists.sourceforge.net" target="_new">Jmol-developers@lists.sourceforge.net</a<br/> > > <a href="https://lists.sourceforge.net/lists/listinfo/jmol-developers" target="_blank">https://lists.sourceforge.net/lists/listinfo/jmol-developers</a>-- Robert M. Hanson, <a href="mailto:hansonr@stolaf.edu" target="_new">hansonr@stolaf.edu</a>, 507-646-3107Professor of Chemistry, St. Olaf College1520 St. Olaf Ave., Northfield, MN 55057mailto:<a href="mailto:hansonr@stolaf.edu" target="_new">hansonr@stolaf.edu</a><a href="http://www.stolaf.edu/people/hansonr" target="_blank">http://www.stolaf.edu/people/hansonr</a>"Imagination is more important than knowledge."  - Albert Einstein
+</b>			<br />
+
+			<br />
+		</td>
+	</tr>
+</table>
+</p>
+
+</ul>
+
+<p>
+<table border="0">
+	<tr>
+	<td bgcolor="#DDDDDD" nowrap>By:  - <a href="/users//"></a> <br />
+
+		<a href="/forum/message.php?msg_id=8096108"><img src="http://images.sourceforge.net/images/msg.gif" alt="" width="10" height="12" /> Re: in-line data?</a> &nbsp; <br />
+		2004-05-18 17:36
+	</td>
+</tr>
+
+
+<!--
+/forum/nested_messages.html - Copyright 1999-2006 (c) Open Source Technology Group
+@version $Id: nested_messages.html 8913 2006-05-15 16:33:03Z jwh $
+-->
+	<tr>
+		<td>
+
+			<b>Anyone who responds so quickly to suggestions by serious users is a friend of mine. Here you go for starters. Count me in.</b>
+-- Robert M. Hanson, <a href="mailto:hansonr@stolaf.edu" target="_new">hansonr@stolaf.edu</a>, 507-646-3107Professor of Chemistry, St. Olaf College1520 St. Olaf Ave., Northfield, MN 55057mailto:<a href="mailto:hansonr@stolaf.edu" target="_new">hansonr@stolaf.edu</a><a href="http://www.stolaf.edu/people/hansonr" target="_blank">http://www.stolaf.edu/people/hansonr</a>"Imagination is more important than knowledge."  - Albert Einstein
+			<br />
+		</td>
+	</tr>
+</table>
+</p>
+
+
+	</body>
+</html>

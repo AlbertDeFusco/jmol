@@ -1,0 +1,215 @@
+<html>
+<!--
+/* $RCSfile$
+ * $Author$
+ * $Date$
+ * $Revision$
+ * A few changes by aHerraez 1-4 oct. 2008: 
+ *		- fix: no message was being shown for compatible browsers
+ *		- more user-friendly browser name and OS name displayed
+ *
+ * Copyright (C) 2004-2008  The Jmol Development Team
+ *
+ * Contact: jmol-developers@lists.sf.net
+ *
+ *  This library is free software; you can redistribute it and/or
+ *  modify it under the terms of the GNU Lesser General Public
+ *  License as published by the Free Software Foundation; either
+ *  version 2.1 of the License, or (at your option) any later version.
+ *
+ *  This library is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ *  Lesser General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Lesser General Public
+ *  License along with this library; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+ *  02111-1307  USA.
+ */
+-->
+<!--
+  Dutch translation 
+  Translated from default version : index.en.html (v 1.1)
+-->
+  <head>
+    <title>Jmol Browser Controle</title>
+    <script src="../jmol/Jmol.js"></script>
+		<script type="text/javascript">	
+      var msgNoGetElementById =
+      "<p>This seems to be an older web browser that does not support " +
+      "current browser standards. Jmol and/or the buttons to control Jmol " +
+      "probably <b>will not function properly</b> with this browser. We <b>recommend</b> " +
+      "that you upgrade to a newer web browser. </p>";
+
+      var msgGenericNoJava =
+      "<p>Your web browser reports that Java is not enabled. " +
+      "The Jmol applet <b>requires</b> Java support from your web browser.<br />" +
+      "Please <b>configure</b> your browser to enable java applets and/or <b>download</b> Java from " +
+      "<a href='http://www.java.com' target='_blank'>www.java.com " +
+      "<img border='0' src='get_java_red_button.gif' /></a>." +
+      "</p>";
+
+      var msgNoLiveConnectMac =
+      "<p>The Jmol applet itself <b>will function properly</b>. " +
+      "However, web pages constructed with HTML controls such as " +
+      "buttons, checkboxes, and links <b>will not function properly</b> because " +
+      "the controls cannot send the script commands to the Jmol applet.</p>" +
+      "<p>We <b>recommend</b> that you consider using Safari or another " +
+      "Macintosh browser that supports LiveConnect communications between " +
+      "JavaScript and Java applets.</p>";
+
+      var msgMacIE =
+      "<p>Microsoft Internet Explorer on Macintosh <b>does not support</b> " +
+      "LiveConnect communications between JavaScript and Java applets. </p>";
+
+      var msgMacOldSafari =
+      "<p>Older versions of Safari <b>do not support</b> " +
+      "LiveConnect communications between JavaScript and Java applets. </p>";
+
+      var msgMacMozillaOldJava =
+      "<p>Netscape/Mozilla/FireFox on Macintosh do not have access to " +
+      "the latest Java release and therefore <b>do not support</b> LiveConnect " +
+      "communications between JavaScript and Java applets. </p>";
+
+      var msgMacMozillaAlternative =
+      "<p>Or, <b>you can try</b> installing and using the Macintosh OS X Java "+
+      "Plug-in from" +
+      "<a href='http://javaplugin.sourceforge.net' target='_blank'>" +
+      "javaplugin.sourceforge.net</a>";
+
+      var msgMacOpera754OrLess =
+      "<p>This version of Opera on Macintosh seems to have <b>problems</b> " +
+      "running applets. </p>" +
+      "We <b>recommend</b> that you consider using Safari or another " +
+      "Macintosh browser that reliably runs Java applets and has " +
+      "LiveConnect communications between JavaScript and Java applets. </p>";
+
+      var msgLinuxKonqueror331OrLess =
+      "<p>All version of Konqueror on Linux/Unix up through 3.3.1 have " +
+      "<b>bugs</b> in java applet support. " +
+      "The Jmol team has filed bug reports with the Konqueror team and " +
+      "the Konqueror team is addressing them.</p>" +
+      "<p>A newer version of Konqueror newer than 3.3.1 " +
+      "may have fixed the problem. Or, " +
+      "you can use a Mozilla family browser.</p>";
+
+      var msgOK =
+      "<p>Your browser seems to <b>properly support</b> Jmol.</p>" +
+      "<p>If you do experience problems with Jmol running in your browser " +
+      " please report them to " +
+      "<code>jmol-developers@lists.sf.net</code> with a copy of this page.</p>";
+
+      var msgAcceptable =
+      "<p>Your browser <b>probably supports</b> Jmol.</p>" +
+      "<p>If you do experience problems with Jmol running in your browser " +
+      " please report them to " +
+      "<code>jmol-developers@lists.sf.net</code> with a copy of this page</p>";
+		</script>
+    <script src="browsercheck.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <img src="../images/Jmol_smallLogo.jpg" />
+    <hr />
+    <h1>Jmol Browser Controle</h1>
+    <h2>Informatie van context:</h2>
+    <blockquote>
+    <p>
+       De Jmol applet vereist een browser die Java applets ondersteunt.
+    </p>
+    <p>
+      De meeste websites die de Jmol applet gebruiken voegen HTML controlemiddelen toe
+      (knoppen, aanvinkvakjes, enz.) die scripts versturen om de Jmol applet te besturen.
+      Om deze besturing goed te laten werken moet de browser eveneens JavaScript en LiveConnect
+      communicatie tussen JavaScript en Java applets ondersteunen.
+    </p>
+    </blockquote>
+    
+    <h2>
+      Resultaten van het testen van uw browser:
+    </h2>
+		<noscript>
+		Either the browser does not support Javascript, or its use has been disabled.<br>
+		Javascript must be enabled in your browser for the Jmol applets to work.
+		</noscript>
+    <script type="text/javascript">
+			var tx = "<p><big>Your web browser seems to be " +
+				"<i>" + browserString + "</i>" +
+				" running on <i>" + osString + "</i></big></p>" +
+				"<table border='0'><tr>" +
+				"<td bgcolor='" + state + "' width='40'>&nbsp;</td>" +
+				"<td>" + msg + "</td>"+
+				"</tr></table>"
+			document.writeln(tx);
+    </script>
+    
+	<h3>Browser details:</h3>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <tr>
+	<td>Besturingssysteem</td>
+	<td>
+	  <script>
+	    document.write(osString);
+	  </script>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  Web browser
+	</td>
+	<td>
+	  <script>
+	    document.write(_jmol.browser);
+	  </script>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  Browser versie
+	</td>
+	<td>
+	  <script>
+	    document.write(_jmol.browserVersion);
+	  </script>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  navigator.userAgent
+	</td>
+	<td>
+	  <script>
+	    document.write(navigator.userAgent);
+	  </script>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  has getElementById()
+	</td>
+	<td>
+	  <script>
+	    document.write(!!document.getElementById);
+	  </script>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  navigator.javaEnabled()
+	</td>
+	<td>
+	  <script>
+	    document.write(navigator.javaEnabled());
+	  </script>
+	</td>
+      </tr>
+    </table>
+
+	<h3>Code produced by Jmol.js:</h3>
+	<script type="text/javascript">
+		jmolInitialize(".");
+		jmolSetDocument(false);
+		document.write( "<textarea cols='100' rows='15' style='width:95%; height:15em;'>"+ jmolApplet(200) +"</textarea>" );
+	</script>
+  </body>
+</html>

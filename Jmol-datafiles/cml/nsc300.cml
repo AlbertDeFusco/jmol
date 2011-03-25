@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!-- There are 1 results! -->
+<!-- The execution time is 0.032 seconds! -->
+<list>
+<entry xmlns:src="http://xml.apache.org/xindice/Query" src:col="/db/wwmm/nci/entry" src:key="nci_000300.xml"><identifier version="0.932Beta" tautomeric="0">
+   <basic>C6H5BrClNO3S,7-4-1H-3(13(10,11)12H)2H-5(8)6(4)9H2</basic>
+   <charge />
+  </identifier><identifier version="0.932Beta" tautomeric="1">
+   <basic>C6H5BrClNO3S,7-4-1H-3(13(10,11)12)2H-5(8)6(4)9H2,(H,10,11,12)</basic>
+   <charge />
+  </identifier><molecule id="NSC300" formalCharge="0">
+      <formula>C 6 H 5 N 1 O 3 ClB 1  junkChar </formula>
+      <metadata>
+         <module role="init">
+            <module xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" role="header">
+               <list>
+                  <scalar dictRef="ccml:program">MOPAC2002 (c) Fujitsu</scalar>
+                  <scalar dictRef="ccml:method">PM5</scalar>
+                  <scalar dictRef="ccml:program">MOPAC2002</scalar>
+                  <scalar dictRef="ccml:version">1.01</scalar>
+                  <scalar dictRef="ccml:wday">Mon</scalar>
+                  <scalar dictRef="ccml:month">Jun</scalar>
+                  <scalar dictRef="ccml:day">23</scalar>
+                  <scalar dictRef="ccml:hour">07</scalar>
+                  <scalar dictRef="ccml:min">33</scalar>
+                  <scalar dictRef="ccml:sec">41</scalar>
+                  <scalar dictRef="ccml:year">2003</scalar>
+               </list>
+            </module>
+            <module xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" role="title">
+               <list>
+                  <scalar dictRef="mopac:title1">[pos=298][name=mol1]Use XYZ by default</scalar>
+                  <scalar dictRef="mopac:title2" />
+               </list>
+            </module>
+            <module xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" role="keywords">
+               <list>
+                  <scalar dictRef="ccml:keyword">PM5</scalar>
+                  <scalar dictRef="ccml:keyword">PRECISE</scalar>
+                  <scalar dictRef="ccml:keyword">T=</scalar>
+                  <scalar dictRef="ccml:keyword">DUMP=N</scalar>
+                  <scalar dictRef="ccml:keyword">RECALC=</scalar>
+                  <scalar dictRef="ccml:keyword">GNORM=</scalar>
+               </list>
+            </module>
+         </module>
+         <module role="final">
+            <module xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" role="summary">
+               <list>
+                  <module start="125" end="130" name="compdetails" id="compdetails">
+            
+                     <scalar dictRef="ccml:method">PM5</scalar>
+            
+                     <scalar dictRef="ccml:program">MOPAC2002</scalar>
+            
+                     <scalar dictRef="ccml:version">1.01</scalar>
+            
+                     <scalar dictRef="ccml:wday">Mon</scalar>
+            
+                     <scalar dictRef="ccml:month">Jun</scalar>
+            
+                     <scalar dictRef="ccml:day">23</scalar>
+            
+                     <scalar dictRef="ccml:hour">07</scalar>
+            
+                     <scalar dictRef="ccml:min">33</scalar>
+            
+                     <scalar dictRef="ccml:sec">48</scalar>
+            
+                     <scalar dictRef="ccml:year">2003</scalar>
+          
+                  </module>
+                  <scalar dictRef="ccml:scfcount">70</scalar>
+                  <scalar dictRef="ccml:cputime" units="units:sec">6.20</scalar>
+                  <scalar dictRef="ccml:elapsedtime" units="units:sec">26</scalar>
+               </list>
+            </module>
+         </module>
+      </metadata>
+      <atomArray>
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a0" elementType="Cl" x3="0.001112385" y3="0.002577949" z3="-0.014542124" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a1" elementType="Br" x3="5.552180775" y3="0.001062665" z3="-0.012575563" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a2" elementType="C" x3="1.475228140" y3="2.213741426" z3="0.003148130" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a3" elementType="C" x3="1.498362182" y3="0.842770306" z3="-0.003829866" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a4" elementType="C" x3="2.674406156" y3="2.948681420" z3="-0.002537032" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a5" elementType="C" x3="3.884461977" y3="2.235516674" z3="0.004271573" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a6" elementType="C" x3="2.703696882" y3="0.104492324" z3="0.004632794" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a7" elementType="C" x3="3.885626331" y3="0.865905783" z3="-0.003389245" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a8" elementType="N" x3="2.713047367" y3="-1.263756033" z3="0.115903141" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a9" elementType="S" x3="2.656758448" y3="4.606716205" z3="-0.007500610" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a10" elementType="O" x3="3.883407116" y3="5.138279095" z3="-0.497852970" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a11" elementType="O" x3="1.426645486" y3="5.113132922" z3="-0.515205153" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a12" elementType="O" x3="2.642751679" y3="4.873912636" z3="1.560702053" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a13" elementType="H" x3="0.503629613" y3="2.729091121" z3="0.003599721" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a14" elementType="H" x3="4.846457269" y3="2.768332876" z3="0.006040693" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a15" elementType="H" x3="3.559462673" y3="-1.743411929" z3="-0.130848055" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a16" elementType="H" x3="1.870899415" y3="-1.752810568" z3="-0.127692628" />
+         <atom xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1" id="a17" elementType="H" x3="2.634092472" y3="5.732281469" z3="1.962472024" />
+      </atomArray>
+      <propertyList>
+         <property xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1">
+            <scalar dictRef="ccml:hof" units="units:kcal">-107.61015</scalar>
+         </property>
+         <property xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1">
+            <scalar dictRef="ccml:hof" units="units:kj">-450.24086</scalar>
+         </property>
+         <property xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1">
+            <scalar dictRef="ccml:totalen" units="units:ev">-2687.38803</scalar>
+         </property>
+         <property xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1">
+            <scalar dictRef="ccml:state" />
+         </property>
+         <property xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1">
+            <scalar dictRef="ccml:electen" units="units:ev">-12727.67202</scalar>
+         </property>
+         <property xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1">
+            <scalar dictRef="cml:pointgroup">C1</scalar>
+         </property>
+         <property xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1">
+            <scalar dictRef="ccml:corecore" units="units:ev">10040.28399</scalar>
+         </property>
+         <property xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1">
+            <scalar dictRef="ccml:ionpot" units="units:volt">9.47874</scalar>
+         </property>
+         <property xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1">
+            <scalar dictRef="ccml:filledlev">36</scalar>
+         </property>
+         <property xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1">
+            <scalar dictRef="cml:molwt">286.527</scalar>
+         </property>
+         <property xmlns:cml="http://www.xmlcml.org/dtd/cml1_0_1">
+            <scalar dictRef="ccml:dipole" units="units:debye">5.401</scalar>
+         </property>
+      </propertyList>
+   </molecule><propertyList /></entry>
+</list>

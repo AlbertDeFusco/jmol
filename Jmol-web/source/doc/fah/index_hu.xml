@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+  Hungarian translation 
+  Translated from default version : index_en.xml (v 1.14)
+-->
+<!DOCTYPE somethingOrAnything [
+<!ENTITY projects SYSTEM "fah-projects.xml" >
+]>
+<document>
+  <body>
+    &projects;
+    <title>Jmol Applet a Folding@Home r&#x00E9;sz&#x00E9;re</title>
+    <section>
+
+    <form name="fahForm" action="">
+      <script src="./fah.js" type="text/javascript"></script>
+      <script src="./createProjectList.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        createFahPage(
+          "Project kiv&#x00E1;laszt&#x00E1;sa",
+          "Project",
+          "N&#x00E9;v",
+          "Pont&#x00E9;rt&#x00E9;k",
+          "Atomok sz&#x00E1;ma",
+          "El&#x00F5;nyben r&#x00E9;szes&#x00ED;tett hat&#x00E1;rid&#x00F5;",
+          "V&#x00E9;gs&#x00F5; hat&#x00E1;rid&#x00F5;",
+          "Framek",
+          "K&#x00F3;dol&#x00E1;s",
+          "Contributed by",
+          "A project le&#x00ED;r&#x00E1;sa",
+          "Old&#x00F3;szer elrejt&#x00E9;se",
+          "<fah_count_files/> f&#x00E1;jl / <fah_count_projects/> project.",
+          "Ha vannak <b>current.xyz</b> f&#x00E1;jljaid a hi&#x00E1;nyz&#x00F3; projectekhez, k&#x00E9;rlek k&#x00FC;ldd el &#x00F5;ket a nicove@users.sourceforge.net c&#x00ED;mre",
+          "Hi&#x00E1;nyz&#x00F3; projectek",
+          "T&#x00E1;mogatni szeretn&#x00E9;d a Jmolt? Csatlakozz a 44383-as Jmol Csapathoz a Folding@Home-n&#x00E1;l."
+          );
+      </script>
+    </form></section>
+  </body>
+</document>

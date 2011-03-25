@@ -1,0 +1,7 @@
+appletInfo=new Array()
+appletInfo.version="10.x.25 (branch bob200603/11.0 beta)"
+appletInfo.date="006-16-07 01:51:"
+appletInfo.javaVersion="1.5.0_06"
+appletInfo.htmlName="jmolApplet0"
+appletInfo.javaVendor="Sun Microsystems Inc."
+appletInfo.operatingSystem="Windows XP"

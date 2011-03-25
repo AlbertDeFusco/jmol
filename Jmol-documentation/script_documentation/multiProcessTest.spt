@@ -1,0 +1,115 @@
+/*
+
+3:10 PM 4/17/2010 
+
+Jmol Version: 12.0.RC6_dev
+java.vendor: Sun Microsystems Inc.
+java.version: 1.6.0_12
+os.name: Windows XP
+memory: 1.7/5.2
+processors available: 2
+
+multiprocessTest.spt
+multiProcessor = true
+s2 created with cutoff=0.0; number of isosurfaces = 1
+s1 created with cutoff=0.0; number of isosurfaces = 1
+two molecular/parallel 4063
+------------------------
+multiProcessor = false
+s1 created with cutoff=0.0; number of isosurfaces = 1
+s2 created with cutoff=0.0; number of isosurfaces = 1
+two molecular/not parallel 8016
+------------------------
+------------------------
+multiProcessor = true
+s2 created with cutoff=0.0; number of isosurfaces = 1
+s1 created with cutoff=0.0; number of isosurfaces = 1
+two molecular selected/parallel 3125
+------------------------
+multiProcessor = false
+s1 created with cutoff=0.0; number of isosurfaces = 1
+s2 created with cutoff=0.0; number of isosurfaces = 1
+two molecular selected/not parallel 5218
+------------------------
+------------------------
+multiProcessor = true
+two molecular orbitals/parallel 328
+------------------------
+multiProcessor = false
+two molecular orbitals/not parallel 610
+
+*/
+
+parallel makeIsoSelected{
+process{isosurface s1 select(atomno < 150) molecular}
+process{isosurface s2 select (atomno > 150) molecular; color isosurface green}
+}
+
+parallel makeIsos{
+process{isosurface s1 molecular}
+process{isosurface s2 molecular; color isosurface green}
+}
+
+load 1crn.pdb
+
+
+set multiProcessor true
+show multiProcessor
+t = now()
+makeIsos
+print "two molecular/parallel " + (now() - t)
+
+print "------------------------"
+isosurface delete
+set multiProcessor false
+show multiProcessor
+t = now()
+makeIsos
+print "two molecular/not parallel " + (now() - t)
+
+print "------------------------"
+print "------------------------"
+isosurface delete
+set multiProcessor true
+show multiProcessor
+t = now()
+makeIsoSelected
+print "two molecular selected/parallel " + (now() - t) 
+
+print "------------------------"
+isosurface delete
+set multiProcessor false
+show multiProcessor
+t = now()
+makeIsoSelected
+print "two molecular selected/not parallel " + (now() - t) 
+
+print "------------------------"
+print "------------------------"
+
+load files "C6H6.smol" "C6H6.smol"
+
+parallel showMOs(i,j) {
+process{mo model 1.1 @i}
+process{mo model 2.1 @j}
+}
+
+set multiProcessor true
+show multiProcessor
+
+t = now()
+showMOs(22,23)
+frame *;
+print "two molecular orbitals/parallel " + (now() - t) 
+
+print "------------------------"
+mo delete
+
+set multiProcessor false
+show multiProcessor
+t = now()
+showMOs(22,23)
+frame *;
+print "two molecular orbitals/not parallel " + (now() - t) 
+
+set multiProcessor true

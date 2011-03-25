@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  French translation 
+  Translated from default version : index_en.xml (v 1.2)
+-->
+<document>
+	<body>
+		<title>Démonstration de Jmol</title>
+		<section title="Copies d'écran">
+			<p><a href="../screenshots/">Copies d'écran</a>
+			</p>
+		</section>
+		<section title="Démonstration de l'applet interactif">
+			<p>
+        Il s'agit de quelques pages simples qui présentent
+        certaines des possibilités de langage de script
+        interactif de l'applet Jmol
+        <ul>
+					<li><a href="./atoms/">atoms</a></li>
+					<li><a href="./bonds/">bonds</a></li>
+					<li><a href="./trace/">protein backbones</a></li>
+					<li><a href="./dots/">dotted surfaces</a></li>
+					<li><a href="./alphahelix/">alpha helix</a></li>
+					<li><a href="./aminoacids/">amino acids</a></li>
+					<li><a href="./nanotech/">nanotechnology</a></li>
+					<li><a href="./strands/">strands</a></li>
+					<li><a href="./vibration/">vibration</a></li>
+					<li><a href="./animation/">animation</a></li>
+					<li><a href="./ribbons/">ribbons</a></li>
+					<li><a href="./cartoons/">cartoons</a></li>
+				</ul>
+			</p>
+		</section>
+		<section title="Exemples de l'applet utilisant Jmol.js">
+			<p>
+        Il s'agit des pages d'exemples qui se trouvent dans la
+        discussion sur la
+        <a href="[root]/jslibrary">librairie JavaScript Jmol.js</a>:
+        <ul>
+					<li><a href="./jssample0/">Exemple très simple</a></li>
+					<li><a href="./jssample1/">
+            Exemple contenant des contrôles IHM
+          </a></li>
+					<li><a href="./jssample2/">
+            Chargement de modèles moléculaires en ligne
+          </a></li>
+					<li><a href="./jssample3/">
+            Plusieurs cadres
+          </a></li>
+				</ul>
+			</p>
+		</section>
+	</body>
+</document>

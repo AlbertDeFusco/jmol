@@ -1,0 +1,37 @@
+<html>
+<head>
+<script type="text/javascript" src="Jmol.js"></script>
+<script type="text/javascript">
+
+percent = 90
+
+function resizeApplet() {
+
+                if (navigator.appName.indexOf("Microsoft") != -1) {
+                    width=document.body.clientWidth;
+                    height=document.body.clientHeight;
+                } else {
+                    var netscapeScrollWidth=15;
+                    width=window.innerWidth - netscapeScrollWidth;
+                    height=window.innerHeight-netscapeScrollWidth;
+                }
+
+	var applet = _jmolGetApplet(0);
+	applet.width = width * percent/100
+	applet.height = height * percent/100
+}
+
+</script>
+</head>
+
+<body onresize = resizeApplet()>
+Now resize your window -- the applet should follow.
+<script type="text/javascript">
+jmolSetDocument(0)
+s = jmolApplet([400, "zoomlarge = false;load data/caffeine.xyz;connect 1.6 5.5 (atomno=3) (atomno=13) PARTIAL; connect 1.6 2.5 (atomno=7) (atomno=12) PARTIAL; connect 1.33 (carbon) (carbon) DOUBLE; connect 1.33 1.4 (carbon) (carbon) AROMATIC; wireframe 0.1; spacefill 10%")
+s = s.replace(/400px/g,percent+"%")
+document.write(s)//.replace(/\</g,"<br>&lt;"))
+</script>
+
+</body>
+</html>

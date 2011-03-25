@@ -1,0 +1,249 @@
+<project default="html" basedir=".">
+
+  <!-- Contributions -->
+  <taskdef resource="net/sf/antcontrib/antlib.xml">
+    <classpath>
+      <pathelement location="./ant-contrib.jar"/>
+    </classpath>
+  </taskdef>
+  <property name="version" value="12.0"/>
+  <property name="jmol-doc-dir" value="../Jmol"/>
+  <property name="fah.projects.dir" value="../Jmol-FAH/projects"/>
+  <property name="doc.dir" value="source/doc"/>
+  <property name="build.dir" value="build"/>
+  <property name="build.html" value="${build.dir}/html"/>
+  <property name="all.languages" value="de,en,es,et,fr,hu,it,nl,pt,pt_BR,ro"/>
+  <property name="outdated.format.begin" value="&lt;div class=&quot;outdatedMessage&quot;&gt;"/>
+  <property name="outdated.format.end" value="&lt;/div&gt;"/>
+  <target name="clean">
+    <delete dir="${build.dir}"/>
+  </target>
+  <target name="spotless" depends="clean">
+  </target>
+
+  <!-- Building web site -->
+  <target name="html" depends="clean">
+
+    <!-- Directory creation -->
+    <mkdir dir="${doc.dir}/images"/>
+    <mkdir dir="${build.html}"/>
+
+    <!-- Copy files from Jmol history -->
+    <copy todir="${doc.dir}/history" overwrite="yes">
+      <fileset dir="${jmol-doc-dir}/doc/source/history" includes="**/*"/>
+    </copy>
+
+    <!-- Generate index html files for each language -->
+    <for list="${all.languages}" delimiter="," param="current.language">
+      <sequential>
+        <antcall target="html_lang">
+          <param name="lang_value" value="@{current.language}"/>
+        </antcall>
+      </sequential>
+    </for>
+
+    <!-- Copy other files -->
+    <copy todir="${build.html}" overwrite="yes">
+      <fileset dir="${doc.dir}" includes="license.txt,document.dtd"/>
+    </copy>
+    <copy todir="${build.html}" overwrite="yes">
+      <fileset dir="${doc.dir}" excludes="**/*.xml,**/*.xsl,**/*~,**/cache.properties"/>
+    </copy>
+    <copy todir="${build.html}/fah" overwrite="yes" file="${doc.dir}/fah/fah-projects.xml"/>
+
+    <!-- Deal with _index.html files -->
+    <echo message="Copying _index.html files" level="info"/>
+    <for param="current.dir">
+      <dirset dir="${build.html}"/>
+      <sequential>
+        <if>
+          <available file="@{current.dir}/_index.html"/>
+          <then>
+            <for list="${all.languages}" delimiter="," param="current.language">
+              <sequential>
+                <if>
+                  <available file="@{current.dir}/messages.@{current.language}.js"/>
+                  <then>
+                    <copy todir="@{current.dir}" overwrite="yes">
+                      <fileset dir="@{current.dir}" includes="_index.html"/>
+                      <mapper type="glob" from="_index.html" to="index.@{current.language}.html"/>
+                    </copy>
+                    <replace dir="@{current.dir}" includes="index.@{current.language}.html">
+                      <replacefilter token="$$CURRENT_LANGUAGE$$" value="@{current.language}"/>
+                    </replace>
+                  </then>
+                </if>
+              </sequential>
+            </for>
+            <delete file="@{current.dir}/_index.html"/>
+          </then>
+        </if>
+      </sequential>
+    </for>
+
+    <!-- Copy files from Jmol docs -->
+  	<if>
+  	  <available file="${jmol-doc-dir}/build/doc" type="dir"/>
+  	  <then>
+  	    <copy todir="${build.html}/docs" overwrite="yes">
+  	      <fileset dir="${jmol-doc-dir}/build/doc" includes="**/*"/>
+  	    </copy>
+  	  </then>
+  	  <else>
+  	    <echo message="Jmol documentation was not found" level="warning"/>
+  	  </else>
+  	</if>
+
+    <!-- Copy files from Folding@Home projects -->
+    <if>
+      <available file="${fah.projects.dir}" type="dir"/>
+      <then>
+        <copy todir="${build.html}/fah/projects" overwrite="yes">
+          <fileset dir="${fah.projects.dir}" includes="**/*"/>
+        </copy>
+      </then>
+      <else>
+        <echo message="Folding@Home projects were not found" level="warning"/>
+      </else>
+    </if>
+
+    <!-- Replace content of files with variables -->
+    <replace dir="${build.html}" includes="**/*.html">
+      <replacefilter token="$$VERSION$$" value="${version}"/>
+    </replace>
+
+    <!-- Use Prerelease version for Jmol-fah
+    <replace dir="${build.html}/fah" includes="*.html">
+      <replacefilter token="[root]/jmol" value="../jmolPrerelease" />
+    </replace> -->
+
+    <!-- Create JavaScript for Jmol-fah projects -->
+    <xslt style="${doc.dir}/fah/createProjectList.xsl"
+          in="${doc.dir}/fah/fah-projects.xml"
+          out="${build.html}/fah/createProjectList.js">
+    </xslt>
+
+    <!-- Create list of missing Jmol-fah projects -->
+    <xslt style="${doc.dir}/fah/createMissingProjectList.xsl"
+          in="${doc.dir}/fah/fah-projects.xml"
+          out="${build.html}/fah/missingProjects.txt">
+    </xslt>
+    <xslt style="${doc.dir}/fah/createMissingAmberList.xsl"
+          in="${doc.dir}/fah/fah-projects.xml"
+          out="${build.html}/fah/missingAmber.txt">
+    </xslt>
+
+    <!-- Create list of available Jmol-fah projects -->
+    <xslt style="${doc.dir}/fah/createAvailableProjectList.xsl"
+          in="${doc.dir}/fah/fah-projects.xml"
+          out="${build.html}/fah/availableProjects.txt">
+    </xslt>
+    <xslt style="${doc.dir}/fah/createAvailableAmberList.xsl"
+          in="${doc.dir}/fah/fah-projects.xml"
+          out="${build.html}/fah/availableAmber.txt">
+    </xslt>
+
+    <!-- Replace paths -->
+    <replace dir="${build.html}" includes="*.html">
+      <replacefilter token="[images]" value="images"/>
+      <replacefilter token="[root]" value="."/>
+      <replacefilter token="[codebase]" value="jmol"/>
+    </replace>
+    <replace dir="${build.html}" includes="*/*.html">
+      <replacefilter token="[images]" value="../images"/>
+      <replacefilter token="[root]" value=".."/>
+      <replacefilter token="[codebase]" value="../jmol"/>
+    </replace>
+
+    <!-- Manage language flags -->
+    <echo message="Generating flags for available languages..." level="info"/>
+    <for param="current.dir">
+      <dirset dir="${build.html}"/>
+      <sequential>
+        <for list="${all.languages}" delimiter="," param="current.language">
+          <sequential>
+            <if>
+              <available file="@{current.dir}/index.@{current.language}.html"/>
+              <then>
+                <replaceregexp match="&lt;!-- &lt;flag lang=&quot;@{current.language}&quot;&gt;(.*)&lt;/flag&gt; --&gt;" replace="\1" flags="g">
+                  <fileset dir="@{current.dir}" includes="index.*.html"/>
+                </replaceregexp>
+              </then>
+              <else>
+                <replaceregexp match="&lt;!-- &lt;flag lang=&quot;@{current.language}&quot;&gt;(.*)&lt;/flag&gt; --&gt;" replace="&lt;!-- \1 --&gt;" flags="g">
+                  <fileset dir="@{current.dir}" includes="index.*.html"/>
+                </replaceregexp>
+              </else>
+            </if>
+          </sequential>
+        </for>
+      </sequential>
+    </for>
+
+    <!-- Manage outdated pages -->
+    <echo message="Generating warnings for outdated translations..." level="info"/>
+  	<for list="${all.languages}" delimiter="," param="current.language">
+  	  <sequential>
+  	    <if>
+  	      <available file="${doc.dir}/outdated_@{current.language}.xml"/>
+  	      <then>
+  	        <xmlproperty file="${doc.dir}/outdated_@{current.language}.xml" prefix="outdated_text_@{current.language}" keepRoot="false"/>
+  	      </then>
+  	    </if>
+  	  </sequential>
+  	</for>
+    <copy todir="${build.html}" overwrite="yes">
+      <fileset dir="${doc.dir}" includes="**/outdated.xml"/>
+    </copy>
+    <for param="current.dir">
+      <dirset dir="${build.html}"/>
+      <sequential>
+        <if>
+          <available file="@{current.dir}/outdated.xml"/>
+          <then>
+            <xmlproperty file="@{current.dir}/outdated.xml" prefix="@{current.dir}.outdated" keepRoot="false"/>
+            <for list="${all.languages}" delimiter="," param="current.language">
+              <sequential>
+                <if>
+                  <and>
+                    <available file="@{current.dir}/index.@{current.language}.html"/>
+                    <isset property="@{current.dir}.outdated.@{current.language}"/>
+                    <not>
+                      <equals arg1="${@{current.dir}.outdated.@{current.language}}" arg2="no"/>
+                    </not>
+                    <isset property="outdated_text_@{current.language}.${@{current.dir}.outdated.@{current.language}}"/>
+                  </and>
+                  <then>
+                    <for list="${@{current.dir}.outdated.@{current.language}}" delimiter="," param="current.outdated">
+                      <sequential>
+                        <replaceregexp file="@{current.dir}/index.@{current.language}.html" match="&lt;body&gt;" replace="&lt;body&gt;${outdated.format.begin}${outdated_text_@{current.language}.@{current.outdated}}${outdated.format.end}" flags="g"/>
+                      </sequential>
+                    </for>
+                  </then>
+                </if>
+              </sequential>
+            </for>
+          </then>
+        </if>
+      </sequential>
+    </for>
+    <delete>
+      <fileset dir="${build.html}" includes="**/outdated.xml"/>
+    </delete>
+
+    <!-- Modify access rights -->
+    <chmod perm="ug=rw,o=r" dir="${build.html}" includes="**/*"/>
+  </target>
+
+  <!-- Language dependent target -->
+  <target name="html_lang">
+
+    <!-- Generate index.<lang>.html files -->
+    <echo message="Generating ${lang_value} html files..." level="info"/>
+    <xslt basedir="${doc.dir}" destdir="${build.html}" style="${doc.dir}/style.xsl" includes="**/index_${lang_value}.xml">
+      <mapper type="glob" from="*_${lang_value}.xml" to="*.${lang_value}.html"/>
+      <param name="lang" expression="${lang_value}"/>
+      <param name="project_xml" expression="project_${lang_value}.xml"/>
+    </xslt>
+  </target>
+</project>

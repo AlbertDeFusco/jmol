@@ -1,0 +1,26 @@
+
+HOWTO create the UserGuide Script Command Overview in DocBook
+
+1. Get a XML version of the online documentation by Bob Hanson:
+
+http://www.stolaf.edu/people/hansonr/jmol/docs/?xml
+
+and save this as tmp.xml
+
+Konqueror seems to fail on the JavaScript now, but FireFox (1.0.6)
+is seems supposed to work.
+
+2. Convert this to DocBook XML source code:
+
+The XML output is dirty, and needs to be cleaned up first:
+
+xmllint --recover tmp.xml > source.xml
+
+xsltproc sheet.xsl source.xml  > target.xml
+
+3. Copy target.xml to the Jmol tree:
+
+cp target.xml Jmol/doc/source/guide/scriptCommands.docbook.xml
+
+
+

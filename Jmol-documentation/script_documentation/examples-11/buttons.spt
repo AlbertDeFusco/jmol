@@ -1,0 +1,21 @@
+set measurements angstroms
+zoomlarge = false;
+defaultdirectory = "data"
+load lac_dna1.pdb.gz;
+moveto /* time, axisAngle */ 1.0 { -90 -593 801 174.6} /* zoom, translation */  200.0 -0.08 -15.6  /* center, rotationRadius */ {-0.7555008 -5.6904993 -2.0655003} 48.285587;
+
+select *:A;color purple;
+select *:B;color green;
+color ssbonds [255,200,50];
+anim fps 10; anim mode palindrome;
+
+btnSetup=true
+
+	script btnSurface.spt
+	script btnAnim.spt
+	script btnCavity.spt
+	script btnCartoon.spt
+
+btnSetup=false
+
+set echo all;font echo 15

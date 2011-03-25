@@ -1,0 +1,290 @@
+INPUT=256~698~ARCHIVE=1248~1625~PROPARC=2873~3101~PROPIN=0~0~MOLSTATE=954~248~VIBSTATE=1202~26~OUTPUT=6025~1627~CELLS=1228~20~ISOD=0~0~ISOE=0~0~RETCODE=5974~51~VOUT=7652~1128~                                                                                
+BEGININPUT
+  OPT PM3 FREQ 
+H2_PM3_FREQ
+0 1
+ 1   0.000000000   0.000000000  -0.349525536
+ 1   0.000000000   0.000000000   0.349525536
+ENDCART
+EMPTYVAL
+    1 
+ENDEMPTYVAL
+PLANE
+ENDPLANE
+POINT
+ENDPOINT
+ISOTOPE
+ENDISOTOPE
+FROZEN
+ENDFROZEN
+TRANSITION
+ENDTRANSITION
+ATOMALIGN
+ENDATOMALIGN
+ATOMLABELS
+"H1"
+"H2"
+ENDATOMLABELS
+MOLFONT
+Helvetica
+12
+ENDMOLFONT
+LABELTYPE
+LABELATOM
+ENDLABELTYPE
+BEGINRES
+ENDRES
+HESSIAN
+   -1   -1
+    1    2    1
+ENDHESS
+LIGAND
+ENDLIGAND
+STRUCTMODEL
+3 0 524288 0
+ENDSTRUCTMODEL
+ALIGN
+  1.000000 0.000000 0.000000 0.000000
+  0.000000 1.000000 0.000000 0.000000
+  0.000000 0.000000 1.000000 0.000000
+  0.000000 0.000000 0.000000 1.000000
+ENDALIGN
+BEGINPROPIN
+
+ENDPROPIN
+ENDINPUT
+BEGINMOLSTATE
+MODEL=3~HYDROGEN=1~LABELS=0
+ -0.00999988 -0.00000004  0.99994999  0.00000000 -0.99994993  0.00000000 -0.00999988  0.00000000
+  0.00000000 -0.99999994 -0.00000004  0.00000000  0.00000000  0.00000000  0.00000000  1.00000000
+ENDMOLSTATE
+BEGINVIBSTATE
+ENDVIBSTATE
+BEGINCELLS
+ENDCELLS
+BEGINARCHIVE
+SPARTAN 'O2 SEMIEMPIRICAL PROGRAM: MAC               build 119f                
+H2_PM3_FREQ                                                                    
+   2   2   2   6   0   1   2   0 RHF      PM3             OPT      FREQ DIH
+GEOMETRY
+  1     0.0000000     0.0000000    -0.6605078
+  1     0.0000000     0.0000000     0.6605078
+BASIS   
+   0   3   1   1   0
+   0   3   4   2   0
+   2.0865391531D+00
+   1.9095342226D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   3.8006571140D-01
+   1.8468183665D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   1.0286061386D-01
+   5.7557261778D-02   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   2.0865391531D+00
+   1.9095342226D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   3.8006571140D-01
+   1.8468183665D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   1.0286061386D-01
+   5.7557261778D-02   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+ENERGY  
+  -1.3391465442D+01   0.0000000000D+00
+WAVEFUNC    PM3            
+  -1.6107600557D+01   4.7551665569D+00
+  -7.0710678119D-01  -7.0710678119D-01
+  -7.0710678119D-01   7.0710678119D-01
+HESSIAN   PM3            
+   6
+   9.1181698774D-06
+   0.0000000000D+00   9.1181698776D-06
+   0.0000000000D+00   0.0000000000D+00   3.8247544214D-01
+  -9.1181698774D-06   0.0000000000D+00   0.0000000000D+00   9.1181698774D-06
+   0.0000000000D+00  -9.1181698776D-06   0.0000000000D+00   0.0000000000D+00
+   9.1181698776D-06
+   0.0000000000D+00   0.0000000000D+00  -3.8247544214D-01   0.0000000000D+00
+   0.0000000000D+00   3.8247544214D-01
+ENDARCHIVE
+BEGINPROPARC
+  Spartan Properties Archive 117
+    
+PROP STRING INITIAL_KEYWORDS 3 BEGIN
+     "OPT"
+     "PM3"
+     "FREQ"
+END
+PROP STRING CALCULATION_VERSION = " 119f"
+PROP STRING CALCULATION_TARGET = "PowerPC(Darwin)"
+PROP  VALUE BE_TIME_MIN =    0.0010000000
+PROP  VALUE PROP_KEYWORDS =       0.0000000
+PROP STRING SYM_STRING = "Dih"
+PROP STRING DO_QSAR = "STARTED"
+PROP  VALUE ATOMIC_CPK_VOLUME BYATOM BEGIN
+        5.1556154       5.1556154 
+END
+PROP  VALUE ATOMIC_CPK_AREA BYATOM BEGIN
+       11.6831485      11.6831485 
+END
+PROP  VALUE CPKVOLUME =       10.311231
+PROP  VALUE CPKAREA =       23.366297
+PROP  VALUE OVALITY =       1.0199184
+PROP  VALUE WEIGHT =       2.0160000
+PROP  VALUE HOMO_N =       1.0000000
+PROP  VALUE E_HOMO =     -0.59194319
+PROP  VALUE E_LUMO =      0.17474908
+PROP  VALUE TOT_ELECTRONEG =      0.20859705
+PROP  VALUE TOT_HARDNESS =      0.38334614
+PROP  VALUE LogP_GC =     -0.42120000
+PROP  VALUE MO_ENERGY 2 BEGIN
+       -0.5919432       0.1747491 
+END
+DIPOLE
+          0.0000000       0.0000000   1.0608556E-16
+PROP  VALUE Q_MINUS_MUL =  -9.7650776E-12
+PROP  VALUE Q_PLUS_MUL =  -9.7650776E-12
+MULLIKEN
+     -9.7650776E-12  -9.7650776E-12
+PROP  VALUE MULCHARGES BYATOM BEGIN
+   -9.7650776E-12  -9.7650776E-12 
+END
+PROP  VALUE Q_MINUS_NAO =  -9.7650776E-12
+PROP  VALUE Q_PLUS_NAO =  -9.7650776E-12
+NPA
+     -9.7650776E-12  -9.7650776E-12
+PROP  VALUE NATCHARGES BYATOM BEGIN
+   -9.7650776E-12  -9.7650776E-12 
+END
+PROP  VALUE THERMO_INFO =   1.0132730E+08
+PROP  VALUE THERMO_TEMP =       298.14999
+PROP  VALUE THERMO_PRESS =       101317.00
+PROP  VALUE THERMO 10 BEGIN
+        6.4022954      -0.7341479       0.8887221       0.5924814   5.2659650E-09      28.0802022 
+        2.8107193   1.8479380E-08       2.9807885       1.9871923 
+END
+PROP  VALUE ZEROPOINT =       6.4022954
+PROP  VALUE G_THERMO =     -0.73414789
+PROP  VALUE H_TRAN =      0.88872206
+PROP  VALUE H_ROT =      0.59248137
+PROP  VALUE H_VIB =   5.2659650E-09
+PROP  VALUE H_TOT =       2.0736848
+PROP  VALUE S_TRAN =       28.080202
+PROP  VALUE S_ROT =       2.8107193
+PROP  VALUE S_VIB =   1.8479380E-08
+PROP  VALUE S_TOT =     0.030890922
+PROP  VALUE C_TRAN =       2.9807885
+PROP  VALUE C_ROT =       1.9871923
+PROP  VALUE C_VIB =   3.8171063E-07
+PROP  VALUE C_TOT =       4.9679811
+PROP  VALUE G_THERMO_0 =     -0.73414789
+PROP  VALUE H_TRAN_0 =      0.88872206
+PROP  VALUE H_ROT_0 =      0.59248137
+PROP  VALUE H_VIB_0 =   5.2659650E-09
+PROP  VALUE H_TOT_0 =       2.0736848
+PROP  VALUE S_TRAN_0 =       28.080202
+PROP  VALUE S_ROT_0 =       2.8107193
+PROP  VALUE S_VIB_0 =   1.8479380E-08
+PROP  VALUE S_TOT_0 =     0.030890922
+PROP  VALUE C_TRAN_0 =       2.9807885
+PROP  VALUE C_ROT_0 =       1.9871923
+PROP  VALUE C_VIB_0 =   3.8171063E-07
+PROP  VALUE C_TOT_0 =       4.9679811
+VIBFREQ
+   1
+   4478.47     Sg+
+  0.0000  0.0000 -0.7044  0.0000  0.0000  0.7044
+PROP STRING FREQ_LAB 1 BEGIN
+     "Sg+"
+END
+PROP  VALUE FREQ_VAL 1 BEGIN
+     4478.4718055 
+END
+PROP  VALUE MOMENT_I_cm 3 BEGIN
+        0.0000000      68.4579259      68.4579259 
+END
+ PROP VALUE PROP_TIME_MIN =     0.000
+ENDPROPARC
+BEGINRETCODE
+ 0 0
+Successful completion
+ENDRETCODE
+BEGINOUTPUT
+
+SPARTAN 'O2 SEMIEMPIRICAL PROGRAM: MAC               build 119f                
+   Job run on machine : rkanters-mac.local                      
+
+  H2_PM3_FREQ                                                                
+
+  Run type: Geometry optimization 
+           (Analytical Gradient)
+           (Analytical Gradient in FREQ)
+           (Numerical Frequency)
+           (MM/Amide correction used)
+  Model: RHF/PM3   
+  Number of shells:   2
+     2 S shells
+  Number of basis functions:    2
+  Number of electrons:    2
+  Use of molecular symmetry enabled
+  Molecular charge:   0
+  Spin multiplicity:  1
+
+  Point Group = DIH Order =  1 Nsymop =  4
+  This system has    1 degrees of freedom
+
+  Initial Hessian option
+   Hessian from  PM3       calculation used.
+                        Max.      Max.        Neg. 
+ Cycle        Energy    Grad.     Dist.       Eigen
+     1       -13.3915   0.00000   0.00000
+
+H2_PM3_FREQ                                                                    
+
+
+  Heat of Formation:      -13.391 kcal/mol
+
+  Estimating Force Constant matrix by central-differences
+
+   Calculating Hessian
+  Memory Used:          33.88 Kb
+  Reason for exit: Successful completion
+  Semi-Empirical Program CPU Time :   0:00:00.0
+  Semi-Empirical Program Wall Time:   0:00:00.1
+
+
+SPARTAN PROPERTIES PACKAGE: MAC               build 119f                       
+  Reason for exit: Successful completion
+  Properties Program CPU Time :   0:00:00.0
+  Properties Program Wall Time:   0:00:00.0
+
+molecule H2_PM3_FREQ terminated normally
+
+
+
+End-   molecule "H2_PM3_FREQ" Wed Mar 15 07:15:43 2006
+ENDOUTPUT
+BEGINVOUTPUT
+               MacSPARTAN (Darwin) 
+          build 119f (Dec 30 2003)
+
+ Wavefunction Developers: 
+    B.J. Deppmeier, A.J. Driessen, T.S. Hehre, W.J. Hehre, 
+    J.A. Johnson, P.E. Klunzinger, J.M. Leonard, I.N. Pham 
+    W.J. Pietro, Jianguo Yu 
+ 
+ Q-Chem Developers:  
+   J. Kong, C.A. White, A.I. Krylov, C.D. Sherrill,  
+   R.D. Adamson, T.R. Furlani, M.S. Lee, A.M. Lee,  
+   S.R. Gwaltney, T.R. Adams, C. Ochsenfeld, A.T.B. Gilbert,  
+   G.S. Kedziora,  V.A. Rassolov, D. R. Maurice, N. Nair,  
+   Y. Shao, N.A. Besley, P.E. Maslen, J.P. Dombroski,  
+   H. Dachsel, W.M. Zhang, P.P. Korambath, J. Baker,  
+   E.F. C. Byrd, T. Van Voorhis, M. Oumi, S. Hirata,  
+   C.P. Hsu, N. Ishikawa, J. Florian, A. Warshel,  
+   B.G. Johnson, P.M.W. Gill, M. Head-Gordon, J.A. Pople  
+ 
+ Wavefunction Inc.           Sales:   sales@wavefun.com  
+ Irvine CA                   Support: support@wavefun.com  
+                             Web:     www.wavefun.com   
+ 
+Copyright © 1995 - 2003 
+----------------------------------------------------
+
+Job run on "rkanters-mac.local" (PowerBook 999 Mhz (Unknown CPU))
+
+ENDVOUTPUT

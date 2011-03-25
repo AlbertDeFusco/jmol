@@ -1,0 +1,66 @@
+<script type="text/javascript" src="Jmol.js"></script>
+<table><tr><td>
+<script type="text/javascript">
+jmolSetCallback("xanimFrameCallback", "myfunc2")
+jmolSetCallback("xloadStructCallback", "myfunc3")
+jmolSetCallback("xmessageCallback", "myfunc4")
+jmolSetCallback("xhoverCallback", "myfunc")
+jmolSetTranslation(true);
+jmolApplet(200,"load data/caffeine.xyz")
+jmolApplet(200,"load data/caffeine.xyz")
+jmolHtml("<br>")
+jmolButton("initialize;load data/caffeine.xyz;","load")
+jmolButton("if(dotsON);dots off;set dotsON false;else;dots on;set dotsON", "dots on/off");
+jmolHtml("<br>")
+jmolSetTarget(0)
+jmolCommandInput("go",50)
+jmolHtml("<br>")
+jmolSetTarget(1)
+jmolCommandInput("go",50)
+
+
+function myfunc2(a,mess) {
+ document.myform.mytextarea.value+="\nframe: "+mess
+}
+
+function myfunc3(a,mess) {
+alert(mess)
+ document.myform.mytextarea.value+="\nload: "+mess
+}
+
+function myfunc4(a,mess) {
+//alert(a + " "+ mess)
+// var v = jmolGetPropertyAsJSON("atominfo","",app(a))
+ if ((mess+"").indexOf("completed") < 0)document.myform.mytextarea.value = ""
+ document.myform.mytextarea.value+="\n" + a + "\nmessagecallback: "+mess// +jmolDecodeJSON(v)
+}
+
+function app(a) {
+ return (a+"").replace(/jmolApplet/,"")
+}
+
+function myfunc(a,mess) {
+alert(mess)
+  var msg
+  var s = mess + ""  // NEVER operate on the 2nd parameter itself
+  if (s.charAt(0) == 'C')
+   msg = "yes, that is a carbon."
+ else
+   msg = "no, that is not a carbon. The carbons are grey."
+  jmolScript('hover "'+msg+'"',app(a))
+}
+
+</script>
+</td><td width=300>
+simple2.htm demonstrates:
+<p>1) A simple way to provide feedback to an applet using callbacks to textarea and text elements. Click on atoms or press a button.
+<p>2) The use of hover callbacks to customize hover text. Hover over a carbon atom first, then over a nitrogen atom.
+<p>3) The use of jmolCommandInput() to add a simple command line to a page.
+<p><form name=myform>
+<table>
+<tr><td>mytext:</td><td><input type=text name=mytext size=30></td></tr>
+<tr><td>mytextarea:</td><td><textarea name=mytextarea cols=40 rows=5 wrap=off></textarea></td></tr>
+<tr><td colspan=2><input type=button value="clear messages" onclick="document.myform.mytext.value=document.myform.mytextarea.value=''"><input type=button value=console onclick="jmolScript('console')"></td></tr>
+</table>
+</form>
+</table>

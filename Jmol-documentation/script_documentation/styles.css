@@ -1,0 +1,28 @@
+.example{color:darkred;font-family:Currier}
+.chimenote{color:darkgreen}
+.xref{color:red}
+.deprecated{color:#808080}
+.new{color:darkgreen;font-size:11pt}
+.tbl{color:darkgreen;font-size:9pt}
+td,body{background-color:#eeeeee;font-size:11pt}
+p,blockquote{margin-top:0px;margin-bottom:0px}
+i{font-family:helvetica;font-style: normal;font-size:10pt}
+pre{font-size:10pt}
+img{clear:right;float:right}
+img.nf{clear:none;float:none}
+.sep{background-color:#0000e0;font-size:3pt}
+h3{font-size:1.5em}
+.sep1{float:right}
+.found{color:red;background-color:#d0d0d0;font-weight:bold}
+.textParam{color:darkgreen;text-decoration:none}
+.cmdentry{color:red}
+
+@media print{
+#headerdiv{display:none}
+#toksdiv{display:none}
+#defsdiv{display:none}
+#indexdiv{display:none}
+#footerdiv{display:none}
+#cmdlistdiv{display:none}
+td,body{background-color:#FFFFFF;font-size:10pt}
+}

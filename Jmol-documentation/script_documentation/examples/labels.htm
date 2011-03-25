@@ -1,0 +1,75 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript">
+
+title="LABEL";model="1blu.pdb";ref="label"
+Scripts=new Array("labels off;font label 12;restrict within (5.0,*.Fe?)"
+," Several special characters starting with \"%\" allow for a variety of information to be displayed."
+	,"select *.Fe3;label \"atom %i: %a %e\""
+	,"select [CYS]37.SG;label \"residue %r\""
+	,"select [CYS]37.SG;label \"[%n]%r.%a B-factor=%b\""
+	,"select [CYS]49.SG;label \"%U occupancy=%q%\""
+	,"select *.Fe3;label \"coord=%x %y %z\""
+	,"select *.Fe3;label \"bonding radius=%I\""
+	,"select *.Fe3;label \"VDW radius=%V\""
+	,"select *.Fe3;label \"formal charge=%C part. charge=%P\""
+	,"select [LEU]*.C? and selected;label \"%a %r polymer len=%L\";spacefill 1.0"
+	,"select [TYR]30.CG and selected;label \"%a model ID=%M\"#useful if more than one model"
+," Note that label fonts of can be changed:"
+	,"select *.Fe3;label \"%i: %a %e\";font label 16"
+	,"select *.Fe3;label \"%i: %a %e\";font label 20 serif bold;"
+," and that this change is based on the current selection:"
+	,"select atomno=616;color label yellow; select atomno=624 or atomno=616;labels on"
+)
+remarks=""
+
+/*
+ %a;atom name -- This name depends upon the file type. For PDB files it is the
+name used for the atom; for Gaussian output files it will be a combination of the atom name and the atom number. If the file type is one such as MOL or XYZ that does not define an atom name, then it is just the element symbol (same as %e).
+
+ %b:B-factor/temperature factor (crystallographic parameter; same as %t)
+
+ %c:PDB chain/strand ID (A, B, C,...; same as %s)
+
+ %C:formal charge (0 if not identified in the file type)
+
+ %e;atomic symbol -- H, C, N, etc.; same as %a for some file types.
+
+ %i;atom number -- The <i>atom sequence number</i> in a PDB file; other file types start at
+1 for each model.
+
+ %I:Bonding radius used by Jmol (e.g. 0.68 for O; in Angstroms)
+
+ %L:polymer length (example?)
+
+ %M:model tag (start with "/"; file-type dependent)
+
+ %P:partial charge (0.0 if not identified in the file type)
+
+ %q:occupancy (crystallographic parameter; 0-100, in percent)
+
+ %r: the <i>residue number</i> in a PDB file, possibly including an
+insertion code if one is present.
+
+ %s:PEB chain/strand ID (A, B, C,...; same as %c)
+
+ %t:same as %b (deprecated)
+
+ %V:Van der Waals radius used by Jmol (e.g. 1.7 for O; in Angstroms)
+
+ %x;x-coordinate
+ %y:y-coordinate
+ %z:z-coordinate
+
+*/
+</script>
+</head>
+<body>
+<script type="text/javascript">showpage()</script>
+</body></html>

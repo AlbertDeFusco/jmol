@@ -1,0 +1,46 @@
+<script type="text/javascript" src="Jmol.js"></script>
+<table><tr><td>
+<script type="text/javascript">
+jmolApplet(600,"load data/caffeine.xyz;center (atomno=3);set allowembeddedscripts false")
+jmolHtml("</td><td>This page demostrates the differences between ")
+jmolButton("save orientation;set perspectiveModel 10;restore orientation;set echo top left;echo perspectiveModel=10", "perspectiveModel=10")
+jmolHtml(" and ")
+jmolButton("save orientation;set perspectiveModel 11;restore orientation;set echo top left;echo perspectiveModel=11", "perspectiveModel=11")
+jmolHtml(". Load a model and check it at the two perspective model settings.")
+jmolBr()
+jmolBr()
+jmolHtml("<b>The question I have is whether we should go to PerspectiveModel 11 as the default for Jmol 11.2.</b>")
+jmolBr()
+jmolBr()
+jmolButton("load data/caffeine.xyz;center (atomno=3)","caffeine.xyz");
+jmolButton("load data/1crn.pdb;cartoons on;center (atomno=127)", "1crn.pdb");
+jmolButton("load data/nanotour.pdb;moveto 5 1 0 0 90","nanotour.pdb");
+jmolBr()
+jmolHtml("For zoom 100, there is only a slight difference. Try different zoom settings. You will see some differences, because Model 10 is a nonlinear model, while Model 11 is linear.")
+jmolBr()
+jmolButton("zoom 100");
+jmolButton("zoom 200");
+jmolButton("zoom 400");
+jmolButton("zoom 800");
+jmolButton("zoom 1600");
+jmolButton("zoom 3200");
+jmolButton("zoom 32000");
+jmolBr()
+jmolHtml("The effect is much more significant for larger models, where Model 11 corrects for major defects in Model 10 in relation to balls, sticks, and slabbing. For the ")
+jmolButton("set perspectiveModel 10;load data/nanotour.pdb;moveto 0 {1 0 0 90};zoom 32000;spin on","model 10 problem (zoom 32000)");
+jmolHtml(", try it with and without slabbing. This problem is fixed in the ")
+jmolButton("set perspectiveModel 11;load data/nanotour.pdb;moveto 0 {1 0 0 90};zoom 3200;spin on","model 11 fix (zoom 3200)");
+jmolHtml(". Notice the odd way the CH4 bonds intersect the carbon sphere with perspectiveModel=10. This is fixed in perspectiveModel=11. Notice that the zoom setting for Model 10 has to be at 32000, while the zoom for Model 11 is only 3200. This is because Model 10 is nonlinear.")
+jmolBr()
+jmolButton("slab 60;slab on")
+jmolButton("slab off")
+jmolButton("spin on")
+jmolButton("spin off")
+jmolBr()
+jmolBr()
+jmolButton("save orientation");
+jmolButton("restore orientation");
+jmolBr()
+jmolButton("console")
+</script>
+</td></tr></table>

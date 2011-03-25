@@ -1,0 +1,9 @@
+boundboxInfo=new Array()
+boundboxInfo.center=new Array()
+boundboxInfo.center[0]=0
+boundboxInfo.center[1]=0
+boundboxInfo.center[2]=0
+boundboxInfo.edge=new Array()
+boundboxInfo.edge[0]=1.9605223
+boundboxInfo.edge[1]=1.9605223
+boundboxInfo.edge[2]=0

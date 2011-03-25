@@ -1,0 +1,8 @@
+#aframe{position:absolute;top:150px;left:10px;height:400px;width:530px;overflow:auto;}
+#bframe{position:absolute;top:150px;left:550px;height:400px;width:450px;overflow:auto}
+#atable{position:absolute;top:0px;left:10px;width:480px}
+td{text-align:top;vertical-align:top}
+#x,.x{visibility:hidden}
+a{text-decoration:none}
+a.ftnote{text-decoration:none;color:red}
+body{background-color:#eeeeee}

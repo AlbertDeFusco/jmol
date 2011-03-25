@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+  Translated from default version : graphicsEngine_en.xml (v 1.1)
+-->
+<section title="Motor gráfico">
+  <p>
+    El motor gráfico de Jmol está escrito completamente en Java. 
+    No hay Java3D, OpenGL ni ningún tipo de aceleración por hardware.
+  </p>
+  <p>
+    El motor gráfico no es una biblioteca de gráficos 3D general, sino que está especializado, 
+    se construyó específicamente para mostrar moléculas.
+    Por ello es muy eficaz dibujando esferas y cilindros.
+  </p>
+  <p>
+    Se trata de una implementación de un <i>z-buffer</i> completamente mediante software.
+    Hay un int[] pixelBuffer que guarda los valores ARGB y un
+    short[] zBuffer que guarda la profundidad de píxeles en ese punto.
+  </p>
+  <p>
+    Durante el ciclo de redibujado, se genera la pantalla completa en ese
+    pixelBuffer. Luego se dibuja la escena completa como una sola imagen en una 
+    sola operación Graphics.drawImage(...).
+  </p>
+  <p>
+    No se usa una lista de representación de mallas triangulares; eso sería muy lento.
+    En su lugar, hay rutinas optimizadas para trazar esferas y cilindros.
+  </p>
+  <p>
+    <i>Si ves la posibilidad de mejorar la velocidad de trazado,
+    por favor háznoslo saber.</i>
+  </p>
+</section>

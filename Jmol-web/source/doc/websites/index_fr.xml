@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!--
+  French translation 
+  Translated from default version : index_en.xml (v 1.1)
+-->
+<document>
+  <body>
+    <title>Sites web de visualisation mol&#x00E9;culaire</title>
+    
+    <section title="Sites web utilisant Jmol">
+      <p>
+        Une liste compl&#x00E8;te de sites Web qui utilisent Jmol pour
+        afficher des mol&#x00E9;cules est disponible sur les
+        <a href="http://wiki.jmol.org/index.php/Websites_Using_Jmol">
+          pages Wiki de Jmol
+        </a>.
+      </p>
+    </section>
+
+    <section title="Applications int&#x00E9;grant Jmol">
+      <p>
+        Jmol peut facilement &#x00EA;tre int&#x00E9;gr&#x00E9; dans des
+        applications existantes. Une liste compl&#x00E8;te d'applications
+        qui int&#x00E8;grent Jmol est disponible sur les
+        <a href="http://wiki.jmol.org/index.php/Applications_Embedding_Jmol">
+          pages Wiki de Jmol
+        </a>.
+      </p>
+    </section>
+	
+    <section title="Liens vers de la documentation en relation directe">
+      <ul>
+        <li>
+          <a href="http://www.openrasmol.org/doc/">
+            Documentation actuelle Open RasMol
+          </a>
+        </li>
+        <li>
+          <a href="http://www.umass.edu/microbio/rasmol/distrib/rasman.htm">
+            Manuel de r&#x00E9;f&#x00E9;rence RasMol Version 2.6-beta-2
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section title="MDL Chime">
+      <ul>
+        <li>
+          MDL Information Systems, Inc
+          <a href="http://www.mdlchime.com">
+            www.mdlchime.com
+          </a>
+        </li>
+        <li>
+          molviz.org
+          <a href="http://www.molviz.org/index.html#about">
+            A propos de MDL Chime
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section
+      title="Liens G&#x00E9;n&#x00E9;raux de Visualisation Mol&#x00E9;culaire">
+      <ul>
+        <li>
+          Open RasMol<br/>
+          <a href="http://www.openrasmol.org">www.openrasmol.org</a>
+        </li>
+        <li>
+          La Page RasMol &#x00E0; l'universit&#x00E9; du Massachusetts,
+          USA<br/>
+          <a href="http://www.umass.edu/microbio/rasmol/index2.htm">
+            www.umass.edu/microbio/rasmol/index2.htm
+          </a>
+        </li>
+        <li>
+          Index Mondial des Ressources de Visualisation
+          Mol&#x00E9;culaire<br/>
+          <a href="http://molvis.sdsc.edu/visres/">
+            molvis.sdsc.edu/visres
+          </a>
+        </li>
+        <li>
+          Logiciel libre de Visualisation Mol&#x00E9;culaire &#x00E0;
+          UMass<br/>
+          <a href="http://www.umass.edu/microbio/rasmol/">
+            www.umass.edu/microbio/rasmol
+          </a>
+        </li>
+        <li>
+          Explorateur de Prot&#x00E9;ine<br/>
+          <a href="http://www.proteinexplorer.org">
+            www.proteinexplorer.org
+          </a>
+        </li>
+        <li>
+          Banque de Donn&#x00E9;es de Prot&#x00E9;ines<br/>
+          <a href="http://www.pdb.org">www.pdb.org</a>
+        </li>
+      </ul>
+    </section>
+
+  </body>
+</document>

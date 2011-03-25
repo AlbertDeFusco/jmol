@@ -1,0 +1,551 @@
+INPUT=256~703~ARCHIVE=1253~1985~PROPARC=3238~3955~PROPIN=0~0~MOLSTATE=959~248~VIBSTATE=1207~26~OUTPUT=7244~2039~CELLS=1233~20~ISOD=0~0~ISOE=0~0~RETCODE=7193~51~VOUT=9283~9739~                                                                                
+BEGININPUT
+  OPT HF 3-21G FREQ 
+H2_RHF_FREQ
+0 1
+ 1   0.000000000   0.000000000  -0.367401506
+ 1   0.000000000   0.000000000   0.367401506
+ENDCART
+EMPTYVAL
+    1 
+ENDEMPTYVAL
+PLANE
+ENDPLANE
+POINT
+ENDPOINT
+ISOTOPE
+ENDISOTOPE
+FROZEN
+ENDFROZEN
+TRANSITION
+ENDTRANSITION
+ATOMALIGN
+ENDATOMALIGN
+ATOMLABELS
+"H1"
+"H2"
+ENDATOMLABELS
+MOLFONT
+Helvetica
+12
+ENDMOLFONT
+LABELTYPE
+LABELATOM
+ENDLABELTYPE
+BEGINRES
+ENDRES
+HESSIAN
+   -1   -1
+    1    2    1
+ENDHESS
+LIGAND
+ENDLIGAND
+STRUCTMODEL
+3 0 524288 0
+ENDSTRUCTMODEL
+ALIGN
+  1.000000 0.000000 0.000000 0.000000
+  0.000000 1.000000 0.000000 0.000000
+  0.000000 0.000000 1.000000 0.000000
+  0.000000 0.000000 0.000000 1.000000
+ENDALIGN
+BEGINPROPIN
+
+ENDPROPIN
+ENDINPUT
+BEGINMOLSTATE
+MODEL=3~HYDROGEN=1~LABELS=0
+ -0.00999988 -0.00000004  0.99994999  0.00000000 -0.99994993  0.00000000 -0.00999988  0.00000000
+  0.00000000 -0.99999994 -0.00000004  0.00000000  0.00000000  0.00000000  0.00000000  1.00000000
+ENDMOLSTATE
+BEGINVIBSTATE
+ENDVIBSTATE
+BEGINCELLS
+ENDCELLS
+BEGINARCHIVE
+External AB INITIO PROGRAM: converted archive file
+Jobname.Temp
+   2   4   4   6   0   1   4   0 RHF      3-21G(d)           NOOPT FREQ 
+GEOMETRY
+  1     0.0000000     0.0000000    -0.6942885
+  1     0.0000000     0.0000000     0.6942885
+BASIS
+   0   2   1   1   0
+   0   1   3   1   0
+   0   2   4   2   0
+   0   1   6   2   0
+   5.4471780000D+00
+   3.9715132057D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   8.2454700000D-01
+   5.5791992333D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   1.8319200000D-01
+   1.9956757048D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   5.4471780000D+00
+   3.9715132057D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   8.2454700000D-01
+   5.5791992333D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+   1.8319200000D-01
+   1.9956757048D-01   0.0000000000D+00   0.0000000000D+00   0.0000000000D+00
+ENERGY
+  -1.1229598352D+00   0.0000000000D+00
+WAVEFUNC   3-21G(d)   QCHEM 
+  -5.9424762085D-01   2.6570738977D-01   9.1749924144D-01   1.5319553420D+00
+   2.9065219160D-01   3.1053540401D-01   2.9065219160D-01   3.1053540401D-01
+  -1.1164009658D-01  -1.6353737552D+00   1.1164009658D-01   1.6353737552D+00
+   7.8315654201D-01  -6.6224767275D-01   7.8315654201D-01  -6.6224767275D-01
+   1.0778021601D+00  -1.2688175538D+00  -1.0778021601D+00   1.2688175538D+00
+HESSIAN 3-21G(d)
+   6
+  -1.1100240499D-05
+   0.0000000000D+00  -1.1100240499D-05
+   0.0000000000D+00   0.0000000000D+00   4.1364984714D-01
+   1.1100240501D-05   0.0000000000D+00   0.0000000000D+00  -1.1100240500D-05
+   0.0000000000D+00   1.1100240501D-05   0.0000000000D+00   0.0000000000D+00
+  -1.1100240500D-05
+   0.0000000000D+00   0.0000000000D+00  -4.1364984714D-01   0.0000000000D+00
+   0.0000000000D+00   4.1364984714D-01
+GEOMETRY2
+  1        0.00000000000000        0.00000000000000       -0.69428849999600
+  1        0.00000000000000        0.00000000000000        0.69428849999600
+ENDARCHIVE
+BEGINPROPARC
+     Spartan Properties Archive 117
+    
+PROP STRING INITIAL_KEYWORDS 4 BEGIN
+     "OPT"
+     "HF"
+     "3-21G"
+     "FREQ"
+END
+PROP STRING CALCULATION_VERSION = " 119f"
+PROP STRING CALCULATION_TARGET = "PowerPC(Darwin)"
+PROP  VALUE BE_TIME_MIN =       0.0000000
+PROP  VALUE SCF_ITERS =       5.0000000
+PROP  VALUE HF_ENERGY =      -1.1229598
+PROP  VALUE SCF_CTIME =     0.010000000
+PROP  VALUE CORR_ENERGIES 1 BEGIN
+       -1.1229598 
+END
+PROP  VALUE QM_DIPOLE 3 BEGIN
+        0.0000000       0.0000000  -3.0827772E-15 
+END
+PROP  VALUE QM_QUADPOLE 6 BEGIN
+       -0.4238041      -0.4238041       0.8476083       0.0000000       0.0000000       0.0000000 
+END
+PROP  VALUE QM_OCTPOLE 10 BEGIN
+        0.0000000       0.0000000  -2.3264508E-15       0.0000000   1.1632254E-15       0.0000000 
+        0.0000000       0.0000000   1.1632254E-15       0.0000000 
+END
+PROP  VALUE IR_INTENS 1 BEGIN
+    2.8860683E-27 
+END
+PROP  VALUE GX_ZPVE =       6.6580842
+PROP  VALUE GX_THERMO 5 BEGIN
+        6.6580842       6.6580842       0.8888115       0.5925410       0.5925410 
+END
+PROP  VALUE PROP_KEYWORDS =       0.0000000
+PROP STRING SYM_STRING = "Dih"
+PROP STRING DO_QSAR = "STARTED"
+PROP  VALUE ATOMIC_CPK_VOLUME BYATOM BEGIN
+        5.2292667       5.2292667 
+END
+PROP  VALUE ATOMIC_CPK_AREA BYATOM BEGIN
+       11.8179302      11.8179302 
+END
+PROP  VALUE CPKVOLUME =       10.458533
+PROP  VALUE CPKAREA =       23.635860
+PROP  VALUE OVALITY =       1.0219746
+PROP  VALUE WEIGHT =       2.0160000
+PROP  VALUE HOMO_N =       1.0000000
+PROP  VALUE E_HOMO =     -0.59424762
+PROP  VALUE E_LUMO =      0.26570739
+PROP  VALUE TOT_ELECTRONEG =      0.16427012
+PROP  VALUE TOT_HARDNESS =      0.42997751
+PROP  VALUE LogP_GC =     -0.42120000
+PROP  VALUE MO_ENERGY 4 BEGIN
+       -0.5942476       0.2657074       0.9174992       1.5319553 
+END
+DIPOLE
+          0.0000000       0.0000000   5.5580326E-17
+PROP  VALUE Q_MINUS_MUL =   8.3248963E-12
+PROP  VALUE Q_PLUS_MUL =   8.3250074E-12
+MULLIKEN
+      8.3248963E-12   8.3250074E-12
+PROP  VALUE MULCHARGES BYATOM BEGIN
+    8.3248963E-12   8.3250074E-12 
+END
+PROP  VALUE Q_MINUS_NAO =   4.4187498E-10
+PROP  VALUE Q_PLUS_NAO =   4.4187798E-10
+NPA
+      4.4187798E-10   4.4187498E-10
+PROP  VALUE NATCHARGES BYATOM BEGIN
+    4.4187798E-10   4.4187498E-10 
+END
+PROP  VALUE THERMO_INFO =   1.0132730E+08
+PROP  VALUE THERMO_TEMP =       298.14999
+PROP  VALUE THERMO_PRESS =       101317.00
+PROP  VALUE THERMO 10 BEGIN
+        6.6581008      -0.5374468       0.8887221       0.5924814   2.3092823E-09      28.0802022 
+        3.0089562   8.0899885E-09       2.9807885       1.9871923 
+END
+PROP  VALUE ZEROPOINT =       6.6581008
+PROP  VALUE G_THERMO =     -0.53744684
+PROP  VALUE H_TRAN =      0.88872206
+PROP  VALUE H_ROT =      0.59248137
+PROP  VALUE H_VIB =   2.3092823E-09
+PROP  VALUE H_TOT =       2.0736848
+PROP  VALUE S_TRAN =       28.080202
+PROP  VALUE S_ROT =       3.0089562
+PROP  VALUE S_VIB =   8.0899885E-09
+PROP  VALUE S_TOT =     0.031089158
+PROP  VALUE C_TRAN =       2.9807885
+PROP  VALUE C_ROT =       1.9871923
+PROP  VALUE C_VIB =   1.7407963E-07
+PROP  VALUE C_TOT =       4.9679809
+PROP  VALUE G_THERMO_0 =     -0.53744684
+PROP  VALUE H_TRAN_0 =      0.88872206
+PROP  VALUE H_ROT_0 =      0.59248137
+PROP  VALUE H_VIB_0 =   2.3092823E-09
+PROP  VALUE H_TOT_0 =       2.0736848
+PROP  VALUE S_TRAN_0 =       28.080202
+PROP  VALUE S_ROT_0 =       3.0089562
+PROP  VALUE S_VIB_0 =   8.0899885E-09
+PROP  VALUE S_TOT_0 =     0.031089158
+PROP  VALUE C_TRAN_0 =       2.9807885
+PROP  VALUE C_ROT_0 =       1.9871923
+PROP  VALUE C_VIB_0 =   1.7407963E-07
+PROP  VALUE C_TOT_0 =       4.9679809
+VIBFREQ
+   1
+   4657.41     Sg+
+  0.0000  0.0000 -0.7044  0.0000  0.0000  0.7044
+PROP STRING FREQ_LAB 1 BEGIN
+     "Sg+"
+END
+PROP  VALUE FREQ_VAL 1 BEGIN
+     4657.4103166 
+END
+PROP  VALUE MOMENT_I_cm 3 BEGIN
+        0.0000000      61.9583287      61.9583287 
+END
+ PROP VALUE PROP_TIME_MIN =     0.000
+ENDPROPARC
+BEGINRETCODE
+ 0 0
+Successful completion
+ENDRETCODE
+BEGINOUTPUT
+
+MacSPARTAN (Darwin) Fast HF Program:  (PowerPC(Darwin))      build  119f       
+  Job run on machine :                rkanters-mac.local                      
+  Calculation started: Wed Mar 15 07:11:45 2006  
+
+  H2_RHF_FREQ                                                                
+
+  Run type: Geometry optimization
+  Model: RHF/3-21G          
+  Number of shells:   4
+     4 S shells
+  Number of basis functions:   4
+  Number of electrons:         2
+  Number of heavy atoms:       0
+  Number of hydrogens:         2
+  Use of molecular symmetry enabled
+  Molecular charge:   0
+  Spin multiplicity:  1
+  Memory model: incore    3.1 Mb
+
+  Point Group = DIH Order =  1 Nsymop =  4
+  This system has   1 degrees of freedom
+   Hessian from  3-21G     calculation used.
+                        Max.      Max.        Neg. 
+ Cycle     Energy       Grad.     Dist.       Eigen
+     1     -1.1229598   0.00002   0.00001
+
+H2_RHF_FREQ                                                                    
+
+
+  E(HF)  =      -1.1229598 a.u.
+  Memory Used:    0.000 Mb
+  Reason for exit: Successful completion
+  Fast HF Program CPU Time :   0:00:00.0
+  Fast HF Program Wall Time:   0:00:00.7
+
+MacSPARTAN (Darwin) Quantum Mechanics Program:  (PowerPC(Darwin))  build  119f
+
+Job type: Frequency calculation.
+Method: RHF
+Basis set: 3-21G(*)
+Number of shells: 4
+Number of basis functions: 4
+
+SCF model:
+ A restricted Hartree-Fock SCF calculation will be
+ performed using Pulay DIIS extrapolation
+
+ SCF total energy:      -1.1229598 hartrees
+
+  Program Wall Time:    0:00:06.0
+  Reason for exit: Sucessful completion 
+  Quantum Mechanics Program CPU Time :   0:00:00.2
+  Quantum Mechanics Program Wall Time:   0:00:06.2
+
+
+SPARTAN PROPERTIES PACKAGE: MAC               build 119f                       
+  Reason for exit: Successful completion
+  Properties Program CPU Time :   0:00:00.0
+  Properties Program Wall Time:   0:00:00.5
+
+molecule H2_RHF_FREQ terminated normally
+
+
+
+End-   molecule "H2_RHF_FREQ" Wed Mar 15 07:11:54 2006
+ENDOUTPUT
+BEGINVOUTPUT
+               MacSPARTAN (Darwin) 
+          build 119f (Dec 30 2003)
+
+ Wavefunction Developers: 
+    B.J. Deppmeier, A.J. Driessen, T.S. Hehre, W.J. Hehre, 
+    J.A. Johnson, P.E. Klunzinger, J.M. Leonard, I.N. Pham 
+    W.J. Pietro, Jianguo Yu 
+ 
+ Q-Chem Developers:  
+   J. Kong, C.A. White, A.I. Krylov, C.D. Sherrill,  
+   R.D. Adamson, T.R. Furlani, M.S. Lee, A.M. Lee,  
+   S.R. Gwaltney, T.R. Adams, C. Ochsenfeld, A.T.B. Gilbert,  
+   G.S. Kedziora,  V.A. Rassolov, D. R. Maurice, N. Nair,  
+   Y. Shao, N.A. Besley, P.E. Maslen, J.P. Dombroski,  
+   H. Dachsel, W.M. Zhang, P.P. Korambath, J. Baker,  
+   E.F. C. Byrd, T. Van Voorhis, M. Oumi, S. Hirata,  
+   C.P. Hsu, N. Ishikawa, J. Florian, A. Warshel,  
+   B.G. Johnson, P.M.W. Gill, M. Head-Gordon, J.A. Pople  
+ 
+ Wavefunction Inc.           Sales:   sales@wavefun.com  
+ Irvine CA                   Support: support@wavefun.com  
+                             Web:     www.wavefun.com   
+ 
+Copyright © 1995 - 2003 
+----------------------------------------------------
+
+Job run on "rkanters-mac.local" (PowerBook 999 Mhz (Unknown CPU))
+
+           Spartan 'O2 Quantum Mechanics Module    119f
+
+ Macintosh (OS-X ppc)
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$comment
+H2_RHF_FREQ
+$end
+$molecule
+ 0 1
+    1                0                0   -0.36740167844
+    1                0                0    0.36740167844
+$end
+$rem
+JOBTYPE    FREQ
+EXCHANGE     	HF
+BASIS        	3-21G*
+GUI          	 GUI_SPARTAN
+TERSE_OUTPUT 	 TRUE
+$end
+--------------------------------------------------------------
+Processing $rem in /Applications/Spartan.app/Contents/MacOS/../SharedSupport//qchem/config/preferences.
+   (Site specific preferences.)
+  ... THRESH             9
+  ... SCF_CONVERGENCE    7
+  ... SMALL_PROD_XCMAT   9
+  ... LIN_DEP_THRESH     5
+  ... GUI              GUI_SPARTAN
+  ... TERSE_OUTPUT     TRUE
+Processing $rem in system registry
+  ... MEMORY_TOTAL 127926272  #  976 MB
+  ... CD_MAX_DISK  67108864  #  512 MB
+Processing $rem in the input.
+  ... JOBTYPE    FREQ
+  ... EXCHANGE     	HF
+  ... BASIS        	3-21G*
+  ... GUI          	 GUI_SPARTAN
+  ... TERSE_OUTPUT 	 TRUE
+
+#####################################################
+#  Entering fldman.exe on Wed Mar 15 07:11:48 2006  #
+#####################################################
+
+ ----------------------------------------------------
+       Standard Nuclear Orientation (Angstroms)
+    I     Atom         X            Y            Z
+ ----------------------------------------------------
+    1      H       0.000000     0.000000    -0.367402
+    2      H       0.000000     0.000000     0.367402
+ ----------------------------------------------------
+ Molecular Point Group                 D*h   NOp =***
+ Largest Abelian Subgroup              D2h   NOp =  1
+ Nuclear Repulsion Energy =     0.7201617195 hartrees
+ There are        1 alpha and        1 beta electrons
+ Requested basis set is 3-21G(d)
+ There are 4 shells and 4 basis functions
+ A cutoff of  1.0D-09 yielded     10 shell pairs
+ There are     10 function pairs
+
+#####################################################
+#  Entering gesman.exe on Wed Mar 15 07:11:50 2006  #
+#####################################################
+
+ Smallest overlap matrix eigenvalue = 1.07E-01
+ Multipole matrices computed through 2nd order
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+
+#####################################################
+#  Entering scfman.exe on Wed Mar 15 07:11:51 2006  #
+#####################################################
+
+ A restricted Hartree-Fock SCF calculation will be
+ performed using Pulay DIIS extrapolation
+ SCF converges when DIIS error is below 1.0E-07
+ ---------------------------------------
+  Cycle       Energy         DIIS Error
+ ---------------------------------------
+    1      -0.8432403616      9.26E-02  
+    2      -1.1220203567      1.74E-02  
+    3      -1.1229594846      3.37E-04  
+    4      -1.1229598352      2.15E-07  
+    5      -1.1229598352      3.09E-08  Convergence criterion met
+ ---------------------------------------
+ SCF time:  CPU 0.01 s  wall 0.00 s
+
+
+#####################################################
+#  Entering anlman.exe on Wed Mar 15 07:11:51 2006  #
+#####################################################
+
+ Analysis of SCF Wavefunction
+ 
+         Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 H                     0.000000
+      2 H                     0.000000
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X       0.0000      Y       0.0000      Z       0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX      -1.9942     XY       0.0000     YY      -1.9942
+        XZ       0.0000     YZ       0.0000     ZZ      -1.5704
+    Traceless Quadrupole Moments (Debye-Ang)
+       QXX      -0.4238    QYY      -0.4238    QZZ       0.8476
+       QXY       0.0000    QXZ       0.0000    QYZ       0.0000
+    Octapole Moments (Debye-Ang^2)
+       XXX       0.0000    XXY       0.0000    XYY       0.0000
+       YYY       0.0000    XXZ       0.0000    XYZ       0.0000
+       YYZ       0.0000    XZZ       0.0000    YZZ       0.0000
+       ZZZ       0.0000
+    Traceless Octapole Moments (Debye-Ang^2)
+       XXX       0.0000    YYY       0.0000    ZZZ       0.0000
+       XXY       0.0000    XXZ       0.0000    XYY       0.0000
+       XYZ       0.0000    XZZ       0.0000    YYZ       0.0000
+       YZZ       0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX      -1.7499   XXXY       0.0000   XXYY      -0.5833
+      XYYY       0.0000   YYYY      -1.7499   XXXZ       0.0000
+      XXYZ       0.0000   XYYZ       0.0000   YYYZ       0.0000
+      XXZZ      -0.7476   XYZZ       0.0000   YYZZ      -0.7476
+      XZZZ       0.0000   YZZZ       0.0000   ZZZZ      -2.6712
+    Traceless Hexadecapole Moments (Debye-Ang^3)
+      XXXX       0.5819   XXXY       0.0000   XXXZ       0.0000
+      XXYY       0.1940   XXYZ       0.0000   XXZZ      -0.7758
+      XYYY       0.0000   XYYZ       0.0000   XYZZ       0.0000
+      XZZZ       0.0000   YYYY       0.5819   YYYZ       0.0000
+      YYZZ      -0.7758   YZZZ       0.0000   ZZZZ       1.5516
+ -----------------------------------------------------------------
+
+#####################################################
+#  Entering drvman.exe on Wed Mar 15 07:11:52 2006  #
+#####################################################
+
+ Calculating MO derivatives via CPSCF
+   1         8           1      0.043811    0.043811
+   2         9           0      0.000000    0.000000    Roots Converged
+ Calculating analytic Hessian of the SCF energy
+ Polarizability Matrix (a.u.)
+            1           2           3
+    1   0.0000000   0.0000000   0.0000000
+    2   0.0000000   0.0000000   0.0000000
+    3   0.0000000   0.0000000  -6.1585561
+ 
+ Direct stationary perturbation theory relativistic correction:
+ 
+ rels  =       0.000017735237
+ relv  =      -0.000048149424
+ rel2e =       0.000018463866
+ E_rel =      -0.000011950321
+ 
+ Gradient time:  CPU 0.03 s  wall 1.00 s
+
+#####################################################
+#  Entering vibman.exe on Wed Mar 15 07:11:53 2006  #
+#####################################################
+
+ **********************************************************************
+ **                                                                  **
+ **                       VIBRATIONAL ANALYSIS                       **
+ **                       --------------------                       **
+ **                                                                  **
+ **        VIBRATIONAL FREQUENCIES (CM**-1) AND NORMAL MODES         **
+ **                  INFRARED INTENSITIES (KM/MOL)                   **
+ **                                                                  **
+ **********************************************************************
+ 
+
+ Frequency:      4657.40
+ IR Active:          YES
+ IR Intens:        0.000
+ Raman Active:       YES
+               X      Y      Z
+ H          0.000  0.000  0.707
+ H          0.000  0.000 -0.707
+
+ STANDARD THERMODYNAMIC QUANTITIES AT   298.18 K  AND     1.00 ATM
+
+   This Molecule has  0 Imaginary Frequencies
+   Zero point vibrational energy:        6.658 kcal/mol
+
+   Atom    1 Element H  Has Mass    1.00783
+   Atom    2 Element H  Has Mass    1.00783
+   Molecular Mass:     2.015660 amu
+   Principal axes and moments of inertia in atomic units:
+                           1         2         3
+    Eigenvalues --      0.00000   0.97162   0.97162
+          X             0.00000   0.00000   1.00000
+          Y             0.00000   1.00000   0.00000
+          Z             1.00000   0.00000   0.00000
+   Rotational Symmetry Number is   2
+   The Molecule is a Symmetric Top
+   Translational Enthalpy:        0.889 kcal/mol
+   Rotational Enthalpy:           0.593 kcal/mol
+   Vibrational Enthalpy:          6.658 kcal/mol
+   gas constant (RT):             0.593 kcal/mol
+   Translational Entropy:        28.081  cal/mol.K
+   Rotational Entropy:            3.009  cal/mol.K
+   Vibrational Entropy:           0.000  cal/mol.K
+
+   Total Enthalpy:                8.732 kcal/mol
+   Total Entropy:                31.090  cal/mol.K
+ 
+ Total job wall time:  6.00 s
+--------------0--------------
+ENDVOUTPUT

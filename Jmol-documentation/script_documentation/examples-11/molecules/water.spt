@@ -1,0 +1,116 @@
+#Jmol script 3:47 PM 2/27/2007 by Bob Hanson, St. Olaf College hansonr@stolaf.edu
+
+# this is the first script ever made using the capabilities of Jmol 11.1.15
+
+# it is a demonstration of the new scripting capabilities of Jmol. 
+
+# a file is read that has 80 water molecules in it.
+
+#set checkscript true # to follow along what is happening with the variables
+
+set loglevel 0 # no messages 
+
+## 1 ## set up the variables
+
+showHbonds = false   # set this true with !showHbonds = true during the run to show hydrogen bonds
+
+# testm = 30 # testm can be set during the run using "!set testm 30" for example to only show molecule 30
+
+
+
+scriptreportinglevel = 0
+
+
+# load Water!Liquid.xodydata
+
+initialize    # resets all variables
+maxradius = 9
+rate = 0.1
+thedelay = 0.002
+m = 0
+centerpt = {*}.xyz
+nMolecules = {*}[0].molecule
+
+
+message There are %{nMolecules} molecules with center at %{centerpt}
+
+message _start
+
+## 2 ## set the (new) molecule number #####
+
+m = m + 1
+if (m > nMolecules)
+  m = 1
+endif
+
+if (testm != 0)
+ m  = testm
+endif
+
+#m = 50; # testing purposes
+
+## 3 ## get it's coordinate ###
+
+mol = {molecule=m}
+mxyz = {mol_set}.xyz
+
+#debugging: message %{mxyz}
+
+## 4 ## assign pseudoARRAY variable "vNNN" where NNN is the molecule number
+
+# Each molecule must be tracked separately.
+
+# We will address its motion vector by @vm, which will be something like v134
+# Just imagine everywhere you see @vm below, it is "v134" or "v125" etc.
+# Or read "@vm" as "the value of the variable named by vm". vm is a pointer.
+
+vm = "v"+m
+
+# we only want to do this ONCE per molecule
+# every other molecule is set to go in or out initially
+
+if ("x" + @vm == "x")
+  if (m % 2)
+    f = 1
+  else
+    f = -1
+  endif
+  @vm = mxyz * f
+endif
+
+#debugging: vvalue = @vm;#message ---%{vm} is %{vvalue}
+
+
+# now check if we are too close to another molecule or too far from the center
+
+tooclose = not {mol_set} and within(1.6, {mol_set})
+if (tooclose > 0)
+  @vm = mxyz - {tooclose_set}.xyz
+else
+  if (centerpt.distance(mxyz) > maxradius)
+    @vm = {0 0 0} - @vm
+  endif
+endif
+
+
+# this next division normalizes the vector so we get constant rate motion
+
+motion = @vm / @vm * rate
+
+# and...move!
+
+select {mol_set}
+translateSelected @motion
+
+# redo Hydrogen bonds
+
+if (showHBonds)
+  connect (_H) (_O) hbonds delete
+  connect 2.0 (_H) (_O) hbonds radius 0.05 yellow create
+endif
+
+# pause briefly for refresh, the pick another molecule
+
+delay @thedelay; goto _start
+
+message DONE

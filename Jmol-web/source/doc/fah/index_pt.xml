@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+  Portuguese translation 
+  Translated from default version : index_en.xml (v 1.14)
+-->
+<!DOCTYPE somethingOrAnything [
+<!ENTITY projects SYSTEM "fah-projects.xml" >
+]>
+<document>
+  <body>
+    &projects;
+    <title>Applet Jmol para o Folding@Home</title>
+    <section>
+
+    <form name="fahForm" action="">
+      <script src="./fah.js" type="text/javascript"></script>
+      <script src="./createProjectList.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        createFahPage(
+          "Selecione o projecto",
+          "Projecto",
+          "Nome",
+          "Cr&#x00E9;dito",
+          "N&#x00FA;mero de &#x00E1;tomos",
+          "Preferido",
+          "Final do prazo",
+          "Quadros",
+          "C&#x00F3;digo",
+          "Contributed by",
+          "Descri&#x00E7;&#x00E3;o do projecto",
+          "Esconder solvente",
+          "<fah_count_files/> ficheiros / <fah_count_projects/> projectos.",
+          "Se tiver ficheiros <b>current.xyz</b> para os projectos que faltam, por favor envie-os para nicove@users.sourceforge.net",
+          "Projectos ausentes",
+          "Ajude o Jmol juntando-se &#x00E0; equipa Jmol #44383 no Folding@Home"
+          );
+      </script>
+    </form></section>
+  </body>
+</document>

@@ -1,0 +1,83 @@
+load c6h12.xyz
+
+
+C1 = {C1?}
+nC = C1.length
+
+C2 = []
+C3 = []
+C4 = []
+C5 = []
+C6 = []
+qC1 = []
+qC4 = []
+
+for (i = 1; i <=nC; i++) {
+	atomC = C1[i]
+	c2[i] = within("molecule",atomC) and {C2*} 
+	c3[i] = within("molecule",atomC) and {C3*}
+	c4[i] = within("molecule",atomC) and {C4*}
+	c5[i] = within("molecule",atomC) and {C5*}
+	c6[i] = within("molecule",atomC) and {C6*}
+	qC1[i] =quaternion(atomC,c2[i].xyz,c6[i].xyz)
+	qC4[i] =quaternion(c4[i], c4[i].xyz + c4[i].xyz - c5[i].xyz,c4[i].xyz + c4[i].xyz - c3[i].xyz)
+	
+}
+
+	font label 16 bold
+	background label white
+	color label black
+
+for (i = 1; i <=nC; i++) {
+	model @i
+	draw ID @{"qC1_" + i} scale 3.0 frame @{C1[i]} @{qC1[i]}
+	draw ID @{"qC4_" + i} scale 3.0 frame @{C4[i]} @{qC4[i]}
+	grp = within("molecule",C1[i])
+	grp.property_st = 1.0 - acos(abs(qC1[i].dot(qC4[i])))/acos(0)
+}
+
+color {*} property_st
+
+for (i = 1; i <=nC; i++) {
+	grp = within("molecule",C1[i])
+	select grp and c1?
+	//table and rough graph
+	var st = grp.property_st%3
+	var x = 30+ i * 8
+	var y = st * 100 - 50
+	draw ID @{"graph" + i} fixed [@x 0] [@x @y] color @{grp.color}
+	model @i
+	print " " + i + "\t\t\t" + st
+	frame title @st
+	draw ID @{"pt" + i} [@x @y] color @{grp.color}
+}
+
+x0 = 0
+mymodel=-1
+
+function showFrame(x, y, count) {
+	if (y > 50) {
+		x0 = 0
+		return
+	}
+	if (count==1)x0 = x
+	if (x0 == 0)return
+	var i = (x-30-4) / 8 + 1
+	if (mymodel != i) {
+		model @i
+	}
+	mymodel = i
+}
+
+if (_applet) {
+ set clickcallback "showFrame"
+ print clickcallback
+ // with the applet, we can turn off mouse picking and dragging
+ var script = "showFrame = function(app,x,y,m,count,M) {jmolScript('showFrame(' + x + ',' + y + ',' + count + ')');if (y <= 50)M[0]=0}"  
+ javascript @script
+ set echo top left; echo "click or drag on a colored bar|to go to another frame"
+} else {
+ set clickcallback "jmolscript:showFrame(_mouseX,_mouseY,_clickCount)"
+ set echo top left; echo "click on a colored bar|to go to that frame"
+}
+animation on

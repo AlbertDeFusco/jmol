@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<document>
+	<body>
+		<title>Molecular visualization websites</title>
+		<section title="Websites using Jmol">
+			<p>
+        A full list of websites that use Jmol to display molecules is
+        available on <a href="http://wiki.jmol.org/index.php/Websites_Using_Jmol">Jmol's Wiki pages</a>.
+      </p>
+			<section title="Jmol Applet for Folding@home">
+				<p>
+        Shows details for computation projects running in Folding@home, and the corresponding protein structure 
+	can be visualized using Jmol: <a href="[root]/fah/">Jmol Applet for Folding@home</a>.
+      </p>
+			</section>
+		</section>
+		<section title="Applications with embedded Jmol">
+			<p>
+	Jmol can easily be integrated into existing applications.
+	A full list of applications that embed Jmol is
+        available on <a href="http://wiki.jmol.org/index.php/Applications_Embedding_Jmol">Jmol's Wiki pages</a>.
+      </p>
+		</section>
+		<section title="Directly Related Documentation Links">
+			<ul>
+				<li>
+					<a href="http://www.openrasmol.org/doc/">
+	    Current Open RasMol documentation
+	  </a>
+				</li>
+				<li>
+					<a href="http://www.umass.edu/microbio/chime/manual/chimeman.htm">
+	    RasMol Version 2.6-beta-2 Reference Manual, supplemented with 
+		Chime-specific commands
+	  </a>
+				</li>
+			</ul>
+		</section>
+		<section title="MDL Chime">
+			<ul>
+				<li>
+	  Elsevier MDL:
+	  <a href="http://www.mdlchime.com">
+	    www.mdlchime.com
+	  </a>
+				</li>
+				<li>
+					<a href="http://www.molviz.org/index.html#about">About MDL Chime</a>
+	  in MolViz.org
+	</li>
+			</ul>
+		</section>
+		<section title="General Molecular Visualization links">
+			<ul>
+				<li>
+	  Open RasMol<br/>
+					<a href="http://www.openrasmol.org">
+	    www.openrasmol.org
+	  </a>
+				</li>
+				<li>
+	  RasMol Home Page at University of Massachusetts, USA<br/>
+					<a href="http://www.umass.edu/microbio/rasmol/index2.htm">
+	    www.umass.edu/microbio/rasmol/index2.htm
+	  </a>
+				</li>
+				<li>
+	  World Index of Molecular Visualization Resources<br/>
+					<a href="http://www.molvisindex.org/">
+	    www.molvisindex.org 
+	  </a>
+				</li>
+				<li>
+	  Molecular Visualization Freeware at UMass<br/>
+					<a href="http://www.umass.edu/microbio/rasmol/">
+	    www.umass.edu/microbio/rasmol
+	  </a>
+				</li>
+				<li>
+	  Protein Explorer<br/>
+					<a href="http://www.proteinexplorer.org">
+	    www.proteinexplorer.org
+	  </a>
+				</li>
+				<li>
+	  Protein Data Bank<br/>
+					<a href="http://www.pdb.org">
+	    www.pdb.org
+	  </a>
+				</li>
+			</ul>
+		</section>
+	</body>
+</document>

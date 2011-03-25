@@ -1,0 +1,68 @@
+<!--
+  Spanish translation 
+  Translated from default version : (...).en.html (v 1.1)
+-->
+<html>
+  <head>
+    <title>Demostración de átomos con JmolApplet</title>
+    <script src="../../jmol/Jmol.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <table border="1">
+      <tr>
+	<td>
+	  <h2>Cafeína</h2>
+	  <script>
+	    jmolApplet(400, "load caffeine.xyz.gz");
+	  </script>
+	</td>
+
+	<td>
+	  <form>
+	    <p>
+	      El lenguaje de guiones de RasMol tiene dos instrucciones sinónimas
+	      para controlar el tamaño de los átomos: <b>spacefill</b> y <b>cpk</b>
+	      (por Corey, Pauling y Koltun). Ambas son equivalentes.
+	    </p>
+	    
+	    <script>
+	      jmolRadio("spacefill on",
+	      "spacefill on <i>o</i> cpk on <i>o</i> spacefill 100%<br />");
+	      jmolRadio("spacefill off",
+	      "spacefill off <i>o</i> cpk off <i>o</i> spacefill 0 <i>o</i> spacefill 0%");
+	    </script>
+	    
+	    <p>
+	      Como ampliación del lenguaje de RasMol, Jmol
+	      permite además indicar el tamaño como un porcentaje del radio de 
+	      Van der Waals.
+	    </p>
+	    <script>
+	      jmolRadio("spacefill 20%", "spacefill 20% <i>o</i> cpk 20%<br />", "checked");
+	      jmolRadio("spacefill 25%", "spacefill 25% <i>o</i> cpk 25%<br />");
+	      jmolRadio("spacefill 50%", "spacefill 50% <i>o</i> cpk 50%<br />");
+	      jmolRadio("spacefill 75%", "spacefill 75% <i>o</i> cpk 75%<br />");
+	    </script>
+	    <p>
+	      Si quieres indicar un tamaño fijo, lo puedes hacer en Angstroms.
+	      Observa que el último botón indica "1.0" en lugar del entero "1".
+	      Esto es importante porque los valores enteros se interpretan como 
+	      <i>unidades de RasMol (1/250 de un Angstrom)</i>
+	    </p>
+	    <script>
+	      jmolRadio("spacefill 0.25", "spacefill 0.25 <i>o</i> cpk 0.25<br />");
+	      jmolRadio("spacefill 0.5",  "spacefill 0.5 <i>o</i> cpk 0.5<br />");
+	      jmolRadio("spacefill 0.75", "spacefill 0.75 <i>o</i> cpk 0.75<br />");
+	      jmolRadio("spacefill 1.0",  "spacefill 1.0 <i>o</i> cpk 1.0<br />");
+	    </script>
+	  </form>
+	</td>
+      </tr>
+    </table>
+  </body>
+</html>

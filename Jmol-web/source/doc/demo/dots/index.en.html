@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>jmol applet dots demo</title>
+    <script src="../../jmol/Jmol.js"></script>
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <form>
+      <table border="1">
+	<tr>
+	  <td>
+	    <h2>ddt</h2>
+	    <script>
+	      jmolApplet(400,
+	      "load ddt.xyz.gz; cpk 95%; wireframe .5; dots on");
+	    </script>
+	  </td>
+	  
+	  <td>
+	    Jmol has the ability to show two types of 'dots' surfaces. The first is a
+	    vanderWalls dots surface, where the dots are shown at the vanderWaals
+	    radius for all atoms. The second type of dots surface you can display is
+	    a Connolly or Solvent Accessible Surface, formed when a probe sphere
+	    (representing the solvent) is rolled over the surface.
+	    <br />
+	    <b>dots surface:</b><br />
+	    <script>
+	      jmolHtml("<i>");
+	      jmolRadioGroup([
+	      ["dots off", "no dots"],
+	      ["set solvent off; dots on", "van der Waals dots surface", "checked"],
+	      ["set solvent on; dots on", "solvent-accessible surface"]
+	      ], "<br />");
+	      jmolHtml("</i>");
+	      jmolBr();
+	      jmolHtml("<b>spacefill:</b><br />");
+	      jmolRadioGroup([
+	        "spacefill off",
+		"spacefill 20%",
+		["spacefill 95%", null, "checked"]
+		], "<br />");
+	      jmolBr();
+	      jmolHtml("<b>wireframe:</b><br />");
+	      jmolRadioGroup([
+	        "wireframe off",
+		"wireframe on",
+		"wireframe .15",
+		"wireframe .25",
+		["wireframe .5", null, "checked"]
+		], "<br />");
+		  /* command no longer available:
+	      jmolBr();
+
+	      var saddles="dots off; set solvent on; dots on;" +
+	      "color dotsSaddle blue; color dotsConcave red;" +
+	      "color dotsConvex yellow";
+	      
+	      jmolButton(saddles, "show saddles and cavities");
+	      */
+	    </script>
+	  </td>
+	</tr>
+      </table>
+    </form>
+  </body>
+</html>

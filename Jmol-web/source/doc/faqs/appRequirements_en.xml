@@ -1,0 +1,8 @@
+<section title="Application system requirements">
+  <section title="What platforms does the Jmol application run on?">
+    <p>
+      The Jmol <i>application</i> should run on any system that supports
+      Java 1.4. Previous versions of Java are not supported. 
+    </p>
+  </section>
+</section>

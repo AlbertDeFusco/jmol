@@ -1,0 +1,32 @@
+Jmol 11.1.14 introduces new capability to do arithmetic with variables that can be assigned 
+values based on a model. This text file simply lists some of the possibilities:
+
+EXPORTING SELECTED FILE FORMATS
+
+
+xyzFileData = "" + {selected}.size + "\n\n" + {selected}.label("%2a %10.6x %10.6y %10.6z")
+
+molFileData = "line1\nline2\nline3\n"+(""+{selected}.size)%-3+(""+{selected}.bonds.size)%-3+"  0  0  0\n"+{selected}.labels("%-10.4x%-10.4y%-10.4z %2e  0  0  0  0  0")+{selected}.bonds.labels("%3D1%3D2%3ORDER  0  0  0")
+
+pdbAtomData = {selected and not hetero}.label("ATOM  %5i  %-3a%1A%3n %1c%4R%1E   %8.3x%8.3y%8.3z%6.2Q%6.2b          %2e  ")
+pdbHeteroData =   {selected and hetero}.label("HETATM%5i %-4a%1A%3n %1c%4R%1E   %8.3x%8.3y%8.3z%6.2Q%6.2b          %2e  ")
+
+
+APPLICATION:
+
+1) define the variables as above
+2) write the variable to disk using, for example:
+
+write xyzFileData myfile.xyz
+
+
+APPLET:
+
+1) define the variables using jmolScriptWait()
+2) use jmolScriptEcho (new in Jmol.js 2/22/07) and the echo command to retrieve the data:
+
+jmolScriptWait('xyzFileData = "" + {selected} + "\n\n" + {selected}.label("%2a %10.6x %10.6y %10.6z")')
+var = jmolScriptEcho("echo %{xyzFileData}")
+
+
+

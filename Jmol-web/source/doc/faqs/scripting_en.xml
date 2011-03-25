@@ -1,0 +1,29 @@
+<section title="Scripting questions">
+
+  <section title="rotate Z ; rotate Y ; rotate Z">
+    <p>
+      When you issue the script the command <b>show orientation</b>
+      it outputs three axis rotations that will return the molecule
+      to its current orientation. This type of rotational orientation in
+      3-space is known as an <i>Euler Angle</i>.
+    </p>
+    <p>
+      Unfortunately, there are several different conventions for
+      Euler Angles. The most common are Z-X-Z (the x-convention) and
+      Z-Y-Z (the y-convention). The Z-Y-Z (y-convention) is generally
+      followed in in quantum mechanics. Therefore, Jmol uses the y-convention.
+    </p>
+    <p>
+      For more info see <br />
+      <a href="http://www.algebra.com/algebra/about/history/Euler-angles.wikipedia">
+	http://www.algebra.com/algebra/about/history/Euler-angles.wikipedia
+      </a><br />
+      <a href="http://mathworld.wolfram.com/EulerAngles.html">
+	http://mathworld.wolfram.com/EulerAngles.html
+      </a>
+      <a href="http://casgm3.anorg.chemie.uni-tuebingen.de/klaus/nmr/conventions/euler/euler.html">
+	http://casgm3.anorg.chemie.uni-tuebingen.de/klaus/nmr/conventions/euler/euler.html
+      </a>
+    </p>
+  </section>
+</section>

@@ -1,0 +1,35 @@
+<html height="100%">
+<head>
+<title>Jmol Popup Model</title>
+<script type="text/javascript" src="Jmol.js"></script>
+<script type="text/javascript">
+
+function refreshModelX(){
+	
+}
+
+function getState(){
+	if (!opener) {
+	  alert("The page that opened this pop-up window is not available.")
+	  return ""
+	}
+	return opener.jmolGetPropertyAsString("stateInfo")+";zoomLarge = false"
+}
+
+function doAlert(){
+	alert('Click on "refresh model" at any time to see the model in its current state in this window. You may refresh the model as often as desired, and you may resize this model as often as you like.')
+}
+
+</script>
+
+</head>
+<body height="100%">
+<h3>
+ <a href="javascript:jmolScript(getState())">refresh model</a>
+ <a href="javascript:doAlert()">note</a>
+</h3>
+<script type="text/javascript">
+jmolApplet(["100%","90%"],"script javascript:getState()")
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!--
+  French translation 
+  Translated from default version : index.en.html (v 1.1)
+-->
+<html>
+  <head>
+    <title>D&#x00E9;monstration applet jmol cartoons</title>
+    <script src="../../jmol/Jmol.js"></script>
+  </head>
+  <body>
+    <script>
+      jmolInitialize("../../jmol");
+      jmolCheckBrowser("popup", "../../browsercheck", "onClick");
+    </script>
+    <form>
+      <table border="1">
+        <tr>
+          <td>
+            <h2>Cartoons</h2>
+            <script>
+              jmolApplet(400, "load 1CRN.pdb.gz; cpk off; wireframe off;" +
+                "cartoon; color cartoon structure");
+            </script>
+          </td>
+          <td>
+
+            <script>
+              function modelRadio(model, checked) {
+                var script = "load " + model +
+                  ".gz; cpk off; wireframe off; cartoon; color cartoon structure";
+                jmolRadio(script, model + "<br />", checked);
+              }
+
+              modelRadio("1CRN.pdb", true);
+              modelRadio("1D68.pdb");
+              modelRadio("3PTE.cif");
+              modelRadio("1GFL.pdb");
+              modelRadio("1D66.pdb");
+
+              jmolHtml("<hr />Zoomer et regarder de plus pr&#x00E8;s<br />");
+              jmolButton("zoom 300");
+              jmolBr();
+              jmolButton("zoom 100");
+              jmolBr();
+              jmolHtml("<hr />Lui faire faire un tour<br />");
+              jmolCheckbox("spin on", "spin off", "spin");
+            </script>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

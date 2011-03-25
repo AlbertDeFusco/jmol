@@ -1,0 +1,5 @@
+load caffeine.xyz;selectionhalos on;
+select oxygen;
+delay 1;select nitrogen
+delay 1;select none
+selectionhalos off

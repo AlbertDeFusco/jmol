@@ -1,0 +1,56 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript">
+
+thisscale=parseInt((document.location.search+"=300").split("=")[1])
+if(thisscale==300){
+ width=200
+ height=200
+}
+eval(document.location.search.substring(1,100))
+
+thisscale=width
+
+function usercallback(s){
+ ifac=72
+ if(s=="set perspectivedepth off")s="set scale3d 6.86"
+ if(s.indexOf("set scale3d")!=0)return
+ var f=Math.floor(ifac/parseFloat(s.split("3d")[1]))-2
+ var s="<img src=hline.gif width="+f+" height=10>"
+ var d= document.getElementById("hline")
+ d.innerHTML=s
+}
+
+//showappcode=true
+//animcallback="showmsg"
+title="Scaling test";model="scaletest.xyz"
+Scripts=new Array(";wireframe on;cpk 0.02;set scale3d 1.0"
+," Note that proper scaling is only possible with the perspective depth set OFF. Try the scales with and with perspective depth. Only with perspective depth OFF it there a linear relationship between the model size and the 3D scale."
+	,"set perspectivedepth on"
+	,"set perspectivedepth off"
+	,"set scale3d 3.0"
+	,"set scale3d 2.0"
+	,"set scale3d 1.0"
+	,"set scale3d 0.50"
+	,"set scale3d .25"
+	,"set scale3d .125"
+	,"set scale3d .0625"
+," This is a "+(thisscale)+"x"+(thisscale)+" applet window. "
+," You can also try this with a <a href="+document.location.href.split("?")[0]+"?width="+(2*thisscale)+";height="+(2*thisscale)+">larger applet window ("+(2*thisscale)+"x"+(2*thisscale)+")</a>."
+," Or, you can also try this with a <a href="+document.location.href.split("?")[0]+"?width="+(thisscale/2)+";height="+(thisscale/2)+">smaller applet window ("+(thisscale/2)+"x"+(thisscale/2)+")</a>."
+
+	,""
+)
+remarks="These are 1-Angstrom markings."
+thecaption="100 pm (1.00 Angstroms)=<br><img src=vline.gif width=2 height=10><span id=hline><img src=hline.gif width="+(72/3.43*width/200)+" height=10></span><img src=vline.gif width=2 height=10>"
+</script>
+</head>
+<body>
+<script type="text/javascript">showpage()</script>
+</body></html>

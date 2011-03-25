@@ -1,0 +1,38 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript">
+title="BONDS";model="aspirin.mol";ref="set (misc)"
+Scripts=new Array("select *;color bonds none;wireframe 0.1;set bondmode AND"
+," Setting bond width. Note that decimals (\"1.0\", not \"1\") indicate Angstroms."+FTREF250+" The result is for bonds involving only the currently selected atoms."
+	,"wireframe .05"
+	,"wireframe .20"
+	,"select carbon;wireframe off"
+	,"wireframe on"
+," Displaying multiple bonds. Note that there is no selection option here. Either all multiple bonds are shown or all are not."
+	,"set bonds off"
+	,"set bonds on"
+," By default, a bond inherits the colors of the two atoms it connects. If you want to change the bond color you can assign explicit colors using the <i>color bonds</i> command. For example:"
+	,"color bonds dodgerblue"
+	,"select carbon;color bonds goldenrod"
+	,"color bonds [255,255,0]"
+	,"color bonds limegreen"
+	,"color bonds none"
+," Script commands operate on the currently selected set of atoms. Whether or not bonds are selected depends on the <i>bondmode</i>. The default bondmode is <i>AND</i>, meaning both atoms must be selected in order for the script mode to affect the bond. If bondmode is set to <i>OR</i>, then the bond is affected if either atom is selected."	
+	,"set bondmode OR;select oxygen;color bonds white"
+	,"select carbon;set bondmode AND;color bonds blue"
+	,"select carbon;set bondmode OR;color bonds blue"
+)
+remarks=""
+
+</script>
+</head>
+<body>
+<script type="text/javascript">showpage()</script>
+</body>
+</html>

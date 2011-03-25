@@ -1,0 +1,246 @@
+<html>
+<head>
+<title>Jmol color command object/option matrix</title>
+</head>
+<body>
+Draft color command matrix. Comments to  <a href=mailto:hansonr@stolaf.edu>Bob Hanson</a>
+<table width="780" border=1 cellpadding=5>
+<tr>
+	<th colspan=6 bgcolor=#e0e0a0><a target=_blank href="http://www.stolaf.edu/people/hansonr/jmol/docs/#.color">color</a> [object or element name] [NONE, color, color scheme] </th>
+</tr>
+<tr>
+	<th width="60%">OBJECT</th>
+  <th width="10%">NONE<a href=#none><sup>1</sup></a></th>
+<th width="10%">color<a href=#colors><sup>2</sup></a></th>
+<th width="10%">color scheme<a href=#schemes><sup>3</sup></a></th>
+</tr>
+
+<tr><td height="10" colspan="6"></td></tr>
+<tr><th><p align="left">atom objects:</p>
+	<p align="left">
+	(if the object is omitted, ATOMS is assumed)<br />
+	ATOMS, DOTS, LABELS<a href=#labels><sup>5</sup></a>, POLYHEDRA<a href=#na><sup>4</sup></a>, STARS<a href=#na><sup>4</sup></a>,  VECTORS, <br />
+			along with the
+		biomolecule-specific terms <br />
+		BACKBONE, CARTOONS, MESHRIBBON,
+		RIBBONS, ROCKETS, STRANDS, TRACE.
+</p></th>
+<td align=center><img src=ok.gif width="20" height="20" /></td>
+<td align=center><img src=ok.gif width="20" height="20" /></td>
+<td align=center nowrap="nowrap" ><img src=ok.gif width="20" height="20" /></td>
+</tr>
+
+<tr><td height="10" colspan="6"></td></tr>
+<tr><th><p align="left">bond objects:<br /></p>
+	<p align="left">BONDS, HBONDS<a href=#type><sup>6</sup></a>, and SSBONDS
+</p></th>
+<td align=center><img src=ok.gif width="20" height="20" /></td>
+<td align=center><img src=ok.gif width="20" height="20" /></td>
+<td>&nbsp;</td>
+</tr>
+
+<tr><td height="10" colspan="6"></td></tr>
+<tr><th><p align="left">model objects:<br /></p>
+	<p align="left">AXES, ECHO, HOVER, ISOSURFACE<a href=#surf><sup>7</sup></a>, MEASUREMENTS, PMESH<a href=#surf><sup>7</sup></a>, and UNITCELL
+</p></th>
+<td align=center><img src=ok.gif width="20" height="20" /></td>
+<td align=center><img src=ok.gif width="20" height="20" /></td>
+<td>&nbsp;</td>
+</tr>
+
+<tr><td colspan="6"></td></tr>
+<tr><th ><p align="left">element name<a href=#element><sup>8</sup></a>:<br /></p>
+	<p align="left">(British or American spellings of the full element names of all the elements in the Periodic Table, and "unknown" or &quot;dummy&quot; when the atomic symbol in the  coordinate file is not recognized, for example "X" or "Xx".)
+	</p></th>
+<td align=center><img src=ok.gif width="20" height="20" /></td>
+<td align=center><img src=ok.gif width="20" height="20" /></td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+	<th height="33" colspan="6">Notes:</th>
+</tr>
+
+<tr>
+	<td colspan=6><a id=none><sup>1</sup></a>
+ In Jmol the option NONE can have one of four different meanings, depending upon the context:
+<ol>
+<li>In the context of <b>color ATOMS NONE</b> or just <b>color NONE</b>, it means "not specified: revert to the default coloring scheme" (either Jmol or Rasmol, depending upon the setting of <b>set defaultColors</b>), which might have been modified using the <b>color [element]</b> command.</li>
+<li>In the context of coloring bond objects and atom objects other than ATOMS itself, (for example, <b>color BONDS NONE</b> or <b>color RIBBONS NONE</b>), it means "not specified: return to the state of inheriting the color of the associated atom," which might not be the default color. </li>
+<li>In the context of coloring model objects such as HOVER and AXES, it means "black."</li>
+<li>With the <b>background</b> command, as in <b>background LABELS NONE</b> it means "remove completely." </li>
+</ol> 
+
+
+</td>
+</tr>
+<tr>
+	<td colspan=6><a id=colors><sup>2</sup></a> <a target=_blank href="http://jmol.sourceforge.net/jscolors/#JavaScript%20colors">Colors</a> 
+in Jmol can be either a name, such as "green", or a red-green-blue color triple in brackets
+expressed as three decimal numbers, for example [255,32,0], or as one hexidecimal number, for example [xFF2000]. The color
+can be preceeded by <b>TRANSLUCENT</b> or <b>OPAQUE</b> to add additional visible character to the colored element.
+Biomolecular displays, such as ribbons, traces, and cartoons, are rendered by default in the color of alpha carbon atoms for proteins and the phosphorus atoms for
+nucleic acids. 
+
+
+</td>
+</tr>
+<tr>
+	<td colspan=6><a id=schemes><sup>3</sup></a> <a target=_blank href="http://jmol.sourceforge.net/jscolors/#Secondary%20structure">Color schemes</a> include 
+<a href=#amino>AMINO</a>,
+<a href=#chain>CHAIN</a>,
+<a href=#cpk>CPK</a>,
+<a href=#temp>FIXEDTEMPERATURE</a>,
+<a href=#charge>FORMALCHARGE</a>,
+<a href=#group>GROUP</a>,
+<a href=#mer>MONOMER</a>,
+<a href=#charge>PARTIALCHARGE</a>,
+<a href=#temp>RELATIVETEMPERATURE</a>,
+<a href=#shapely>SHAPELY</a>, and
+<a href=#structure>STRUCTURE</a>
+</td>
+</tr>
+
+
+<tr>
+	<td colspan=6><p><a id=na><sup>4</sup></a> Available in PreRelease only; not available in Jmol 10.00.00.
+</p>
+</td>
+</tr>
+
+<tr>
+	<td colspan=6><p><a id=labels><sup>5</sup></a> Color schemes for labels are available starting in Jmol PreRelease 10.00.39. In Jmol 10.00.00, labels could not be colored using color schemes.
+</p>
+</td>
+</tr>
+
+<tr><td colspan=6><p><a id=type><sup>6</sup></a> HBONDS has an additional option, TYPE, 
+	which allows for coloring hydrogen bonds in a biomolecule based on a <a target=_blank href="http://jmol.sourceforge.net/jscolors/#Hydrogen%20bonds">scheme</a> related to the number of residues between the atoms associated with the bond.
+</p>
+</td></tr>
+
+<tr>
+	<td colspan=6><a id=surf><sup>7</sup></a>Available in PreRelease only; not available in Jmol 10.00.00. To color a pmesh or isosurface, first select the specific surface you want to color using either the <b>pmesh [name]</b> or <b>isosurface [name]</b> command,
+then <b>color ISOSURFACE [color|NONE]</b> or  <b>color PMESH [color|NONE]</b>. 
+</td></tr>
+
+<tr>
+	<td colspan=6><a id=element><sup>8</sup></a>Available in PreRelease only; not available in Jmol 10.00.00. See also <a target=_blank href="http://jmol.sourceforge.net/jscolors/#Atoms%20('CPK%20colors')">element colors</a><br />
+- Changes in chemical element colors persist, regardless of loading a subsequent model, until they are reset using the <b>'set defaultColors'</b> command.<br />
+- Customizing the element color is independent of the currently selected atom set. <br />
+- The element color is overridden when another color scheme is applied, such as 'STRUCTURE' or 'CHAIN'. 
+</td></tr>
+
+</table>
+
+<br />
+<table width=780 border=1 cellpadding=5>
+<tr><th colspan=2 bgcolor=#e0e0a0>Jmol Color Schemes</th></tr>
+<tr>
+<th width="20%" valign=top><a id=amino>AMINO</a></th>
+<td width="80%">
+Renders each of the 20 standard <a target=_blank href="http://jmol.sourceforge.net/jscolors/#Residues">amino acid residues</a> as well as ASX and GLX in a different color
+(for a total of 22 colors for amino acids) along with one additional color for anything that is not a
+standard amino acid residue, AGX, or GLX (including nucleotides, solvents, and non-amino ligands). See also <a href=#shapely>SHAPELY</a>.</td>
+</tr>
+
+<tr>
+<th valign=top><a id=chain>CHAIN</a></th>
+<td>Renders each chain in the structure in a different color. 
+This color scheme is particularly useful for distinguishing the parts of a multimeric structure or the individual helices of a DNA double helix.</td>
+</tr>
+
+<tr>
+<th valign=top><a id=cpk>CPK</a></th>
+<td>Colors objects based on the default color scheme, either Jmol or Rasmol, as set by the <b>set defaultColors</b> command and possibly modified using the <b>color [element]</b> command.</td>
+</tr>
+
+<tr>
+<th valign=top><a id=charge>FORMALCHARGE and PARTIALCHARGE</a></th>
+<td>Distinguishes atoms based on <a target=_blank href="http://jmol.sourceforge.net/jscolors/#Charge">charge</a>. Uses a series of shades of reds for negatively charged (electron-rich) groups and shades of blue for positively charged (electron-poor) groups. 
+The greater the degree of charge, the deeper the color. Uncharged groups are white.
+The range of values for formal charge is -4 through +7; the range for partial charge is -1 to +1. 
+<br />
+<br />
+Rasmol/Chime note: While <b>CHARGE</b> can be used in place of <b>FORMALCHARGE</b>, the way Jmol reads and displays charge is quite different from the way Rasmol does so. 
+Jmol currently reads partial charge only from CML files (the scalar record with dictref="jmol:charge") and from Gaussian calculation output, not from PDB files. 
+
+The Rasmol "color charge" command simply takes the "temperature factor field" (columns 61-66 of the PDB file), normalizes it to fill a red-to-blue spectrum (instead of a blue-to-red one), and displays it. 
+For PDB files, Jmol reads the "charge on atom" field (columns 79-80 -- in chemical "2-" format, not "-2") as formal charge; for CML files, Jmol reads the atom record "formalCharge" attribute.
+If Rasmol-like "charge" behavior for PDB files is desired in Jmol, request it.
+</td>
+</tr>
+
+<tr>
+<th valign=top><a id=group></a>GROUP</th>
+<td>Uses a <a target=_blank href="http://jmol.sourceforge.net/jscolors/#Blue-red%20rainbow%20gradient">reverse rainbow</a> spectrum
+ (blue -> green -> yellow -> orange -> red) to color the specified groups (for example, residues or nucleotides) according to position along a chain of groups. 
+The spectrum is applied only across the specified or selected groups in the chain. 
+For proteins, the  N terminus is blue and the C terminus is red. For nucleic acids, the 5' terminus is  blue, and the 3' terminus is red.
+If any atom in a group is selected then the group is considered selected.  
+<br />
+<br />
+Note: The <b>color group</b> command
+<ol>
+<li>operates within every chain independently,
+</li>
+<li>operates on the selected or specified set of groups, not the entire chain, and
+</li>
+<li>uses the group index within the chain, not the number assigned to the group in the model file.
+</li>
+</ol>
+<br />Notes to ResMol users: 
+The group index is relative to the groups of the chain that are currently selected. 
+This differs from RasMol/Chime where group index is relative to the full chain.
+In addition, the "set hetero" command is not implemented. If you want to exclude "hetero" groups, then do not select them.
+</td>
+</tr>
+<tr>
+<td>
+
+<tr>
+<th valign=top><a id=mer>MONOMER</a></th>
+<td>A variation on <b>color group</b>, but relating to "monomers" in a "polymer" rather than "groups" in a "chain". 
+A "polymer" is a series of connected "monomers" (at least for these purposes). 
+Thus, if chain "A" has a break in it, <b>color monomer</b> recognizes the 2 pieces of chain "A" as 
+separate polymers, coloring each from red to blue independently,
+despite the fact that both parts are designated as chain "A" in the coordinate file. 
+HETERO groups may participate in a polymer, depending upon how the pdb/mmCIF file is marked up, 
+and as long as they have a backbone pattern that Jmol can recognize as a sequence of individual units.</td>
+</tr>
+
+<tr>
+<th valign=top><a id=shapely>SHAPELY</a></th>
+<td>Like <a href=#amino>AMINO</a>, coloring each of the standard amino acids and nucleotides differently, but using a <a target=_blank href="http://jmol.sourceforge.net/jscolors/#Residues">different color scheme</a> than AMINO.</td>
+</tr>
+
+<tr>
+<th valign=top><a id=structure>STRUCTURE</a></th>
+<td>Uses <a target=_blank href="http://jmol.sourceforge.net/jscolors/#Secondary%20structure">four different colors</a> to distinguish protein secondary structures: alpha helices, beta sheets, turns, and loops. 
+The secondary structure is either read from the PDB file (HELIX and SHEET records), if available, 
+or determined using an algorithm. Also distinguishes between RNA and DNA by color.</td>
+</tr>
+
+<tr>
+<th valign=top><a id=temp>FIXEDTEMPERATURE and RELATIVETEMPERATURE</a></th>
+<td>Color codes each atom according to the <a target=_blank href="http://jmol.sourceforge.net/jscolors/#Red-white-blue%20gradient">temperature-factor</a> (B-factor, or Debye-Waller factor) value stored in the 
+PDB or mmCIF file. Typically this gives a measure of the mobility or uncertainty of a given atom's position, and a high crystallographic B-factor may
+indicate an incorrect structure.
+ 
+High values are colored in warmer (red) colors and lower values in colder (blue) colors. 
+
+This feature can be used by the model creator to indicate any characteristic of the atoms of the model and is 
+often used to associate a "scale" value (such as amino acid variability in viral mutants) 
+with each atom in a PDB file. 
+
+For FIXEDTEMPERATURE, the index is relative to an absolute scale of 0 to 100;
+for RELATIVETEMPERATURE, the color is relative to the lowest and highest B-factor values within the file.
+<br />
+<br />
+Rasmol/Chime note: <b>TEMPERATURE</b> can be used in place of <b>RELATIVETEMPERATURE</b>.</td>
+</tr>
+
+</table>
+
+</body>
+</html>

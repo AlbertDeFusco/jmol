@@ -1,0 +1,33 @@
+<script type="text/javascript" src="Jmol.js"></script>
+<form>
+<table><tr><td rowspan = 10>
+<script type="text/javascript">
+jmolApplet(400,"load data/caffeine.xyz;select none;selectionhalos on;define methineH _H and connected(_C and connected(1, _H));define methylH _H and connected(_C and connected(3, _H))")
+jmolHtml("</td><td width=10>")
+jmolCheckbox("select all","select none","</td><td colspan=6>all/none",false)
+ jmolHtml("</td></tr><tr><td></td><td>")
+
+jmolCheckbox("select selected,_C,_N","select selected and !(_C, _N)","</td><td colspan=5>carbons and nitrogens",false)
+ jmolHtml("</td></tr><tr><td></td><td></td><td width=10>")
+ jmolCheckbox("select selected, _C","select selected and !_C","</td><td colspan=4>carbons",false)
+ jmolHtml("</td></tr><tr><td></td><td></td><td width=10>")
+ jmolCheckbox("select selected,_N","select selected and !_N","</td><td colspan=4>nitrogens",false)
+ jmolHtml("</td></tr><tr><td></td><td width=10>")
+jmolCheckbox("select selected,_O,_H","select selected and !(_O, _H)","</td><td colspan=5>oxygens and hydrogens",false)
+ jmolHtml("</td></tr><tr><td></td><td></td><td width=10>")
+ jmolCheckbox("select selected,_O","select selected and !_O","</td><td colspan=4>oxygens",false)
+ jmolHtml("</td></tr><tr><td></td><td></td><td width=10>")
+ jmolCheckbox("select selected,_H","select selected and !_H","</td><td colspan=4>hydrogens",false, "chkH")
+ jmolHtml("</td></tr><tr><td></td><td></td><td></td><td width=10>")
+   jmolCheckbox("select selected,methineH","select selected and !methineH","</td><td colspan=3>methine",false, "chkMethine")
+ jmolHtml("</td></tr><tr><td></td><td></td><td></td><td width=10>")
+   jmolCheckbox("select selected,methylH","select selected and !methylH","</td><td colspan=3>methyl",false, "chkMethyl")
+
+jmolSetCheckboxGroup(0, 1, 4)
+jmolSetCheckboxGroup(1, 2, 3)
+jmolSetCheckboxGroup(4, 5, "chkH")
+jmolSetCheckboxGroup("chkH", "chkMethine", "chkMethyl")
+
+</script>
+</td></tr></table>
+</form>

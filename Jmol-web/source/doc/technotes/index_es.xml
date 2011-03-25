@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+  Translated from default version : index_en.xml (v 1.2)
+-->
+<!DOCTYPE somethingOrAnything [
+<!ENTITY graphicsEngine   SYSTEM "graphicsEngine_es.xml" >
+<!ENTITY antiAliasing     SYSTEM "antiAliasing_es.xml" >
+<!ENTITY noHeapMemory     SYSTEM "noHeapMemory_es.xml" >
+<!ENTITY floatingPoint    SYSTEM "floatingPoint_es.xml" >
+<!ENTITY browserEnhancementTechnologies
+                          SYSTEM "browserEnhancementTechnologies_es.xml" >
+<!ENTITY floatsVsDoubles  SYSTEM "floatsVsDoubles_es.xml" >
+]>
+<document>
+  <body>
+    <title>Notas técnicas de Jmol</title>
+
+    &graphicsEngine;
+    &antiAliasing;
+    &noHeapMemory;
+    &floatingPoint;
+    &browserEnhancementTechnologies;
+    &floatsVsDoubles;
+    
+  </body>
+</document>

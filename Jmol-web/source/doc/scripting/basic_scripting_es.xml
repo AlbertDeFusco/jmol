@@ -1,0 +1,49 @@
+<![CDATA[
+<applet name="jmol" code="JmolApplet" archive="JmolApplet.jar"
+        codebase="[codebase]"
+        width="200" height="200" mayscript="true">
+  <param name="progressbar" value="true"/>
+  <param name="load" value="caffeine.xyz"/>
+</applet>
+<br/>
+<a href="javascript:document.jmol.script('wireframe on; spacefill off;');">
+alambres</a>
+<a href="javascript:document.jmol.script('wireframe off; spacefill on;');">
+esferas</a>
+<a href="javascript:document.jmol.script('wireframe 0.2; spacefill 25%;');">
+bolas y varillas</a>
+<br/>
+<a href="javascript:document.jmol.script('load aspirina.mol');">
+aspirina.mol</a>
+<a href="javascript:document.jmol.script('load bulk_si.in');">
+bulk_si.in</a>
+<a href="javascript:document.jmol.script('load caffeine.xyz');">
+caffeine.xyz</a>
+<a href="javascript:document.jmol.script('load dna.xyz');">
+dna.xyz</a>
+<a href="javascript:document.jmol.script('load estron.cml');">
+estron.cml</a>
+<br/>
+<a href="javascript:document.jmol.script('color background blue ; move 90 180 -45 0 0 0 0 0 5; 
+center 1 ; move 0 0 360 100 0 0 0 0 2 ; delay 2 ; reset; color background white')">mover</a>
+<a href="javascript:document.jmol.script('script move.txt');">
+mover desde el servidor</a>
+<a href="javascript:document.jmol.script('load aspirina.mol')">
+cargar aspirina mediante gui&oacute;n</a>
+<a href="javascript:document.jmol.script('script testscript.txt')">
+ejecutar gui&oacute;n de prueba desde el servidor</a>
+<br/>
+<a href="javascript:document.jmol.script('set perspectiveDepth on')">
+perspectiva</a>
+<a href="javascript:document.jmol.script('set perspectiveDepth off')">
+sin perspectiva</a>
+<br/>
+<a href="javascript:document.jmol.script('color background black')">
+fondo negro</a>
+<a href="javascript:document.jmol.script('color background grey')">
+fondo gris</a>
+<a href="javascript:document.jmol.script('color background [222,222,222]')">
+fondo [222,222,222]</a>
+<a href="javascript:document.jmol.script('color background white')">
+fondo blanco</a>
+]]>

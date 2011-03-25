@@ -1,0 +1,36 @@
+<section title="Performance">
+  <section title="Performance is great! Why is it so fast?">
+    <p>
+      It does not use any Java graphics calls. The entire
+      image is built offscreen and sent to the screen with one
+      java.awt.Graphics.drawImage operation.
+    </p>
+  </section>
+
+  <section title="Rendering speed is really slow. What can I do?">
+    <ul>
+      <li>Get a faster machine ... something built this century</li>
+      <li>Convince Sun to fix graphics performance problems</li>
+      <li>Review the source code and find some way to speed it up</li>
+    </ul>
+  </section>
+
+  <section title="Will a 3D graphics card improve performance?">
+    <p>
+      A high-performance graphics card will certainly help.
+      The underlying system spends a lot of time blitting 32-bit
+      RGB bitmaps to the screen. But no 3D capabilities of the card
+      will be used.
+    </p>
+  </section>
+
+  <section
+   title="Why does it get so much slower when I make the window bigger?">
+    <p>
+      Twice as many pixels means twice as much work ... and if your
+      applet is twice as wide and twice as high then you have 4 times
+      as many pixels so you get 1/4 the speed. 
+    </p>
+  </section>
+
+</section>

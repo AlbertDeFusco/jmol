@@ -1,0 +1,16 @@
+counter = 3
+message _here
+background red
+delay 1
+background blue
+delay 1
+background white
+delay
+counter = counter - 1
+if (counter == 0)
+  goto end
+else
+  goto _here
+endif
+
+message end

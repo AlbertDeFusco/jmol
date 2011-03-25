@@ -1,0 +1,1 @@
+<cfset urlname="http://www.stolaf.edu/academics/chemapps/jmol/docs/examples-11/data/caffeine.xyz"><cfif isDefined("URL.url")><cfset urlname=URL.url></cfif><cfhttp url=#urlname#></cfhttp><cfoutput>#cfhttp.fileContent#</cfoutput>

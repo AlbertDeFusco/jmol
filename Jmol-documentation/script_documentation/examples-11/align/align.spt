@@ -1,0 +1,7 @@
+load files "t1.pdb" "t2.pdb" "t2.pdb"
+color {3.1} yellow
+color {2.1} blue
+frame *
+cartoons only
+a={spine or connected(_P)}
+compare {2.1} {1.1} atoms {77-82 and a} {41-46 and a} {92-100 and a} {27-35 and a} rotate translate

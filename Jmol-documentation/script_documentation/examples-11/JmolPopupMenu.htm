@@ -1,0 +1,46 @@
+<html>
+<head>
+<script type="text/javascript" src="Jmol.js"></script>
+<script type="text/javascript">
+Menu = new Array();
+function addMenuItem(info) {
+  var S = info.split("\t");
+  var id = S[1];
+  var label = S[2];
+  var script = S[3];
+  if (!id)return
+  if (!label) label = "<hr>"
+  if (!script) script = "&nbsp;"
+  var m = Menu[Menu.length] = {};
+  m.id = id;
+  m.label = label;
+  m.script = script;
+}
+
+function showMenu(){
+  menu = jmolEvaluate("getProperty('menu')")
+  var S = menu.split("\n")
+  for (var i = 0; i < S.length; i++)addMenuItem(S[i])
+  var s = "<table border=1 cellspacing=3 cellpadding=3>";
+  for (var i = 0; i < Menu.length; i++) if(Menu[i].label){
+     var m = Menu[i];
+     s+="<tr><td valign=top>"+m.id+"</td><td valign=top>"+m.label+"</td><td valign=top>"+m.script+"</td></tr>"
+
+  }
+  s+="</table>"
+  document.getElementById("menudiv").innerHTML = s
+  document.getElementById("jmoldiv").innerHTML = "" //clear applet out
+}
+</script>
+<script language="javascript" src="jmolpopupmenu.js"></script>
+</head>
+<body>
+<div id=menudiv></div>
+<div id=jmoldiv>
+<script type="text/javascript">
+jmolInitialize()
+jmolApplet([2,2],"javascript showMenu()")
+</script>
+</div>
+</body>
+</html>

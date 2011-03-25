@@ -1,0 +1,13 @@
+transformInfo=new Array()
+transformInfo[0]=new Array()
+transformInfo[0][0]=-0.26248053
+transformInfo[0][1]=-0.23497209
+transformInfo[0][2]=-0.9358911
+transformInfo[1]=new Array()
+transformInfo[1][0]=-0.22091359
+transformInfo[1][1]=0.95877135
+transformInfo[1][2]=-0.17875901
+transformInfo[2]=new Array()
+transformInfo[2][0]=0.9393091
+transformInfo[2][1]=0.15983029
+transformInfo[2][2]=-0.30356744

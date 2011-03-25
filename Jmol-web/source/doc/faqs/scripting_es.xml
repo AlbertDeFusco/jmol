@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Spanish translation 
+  Translated from default version (...)_en.xml (v 1.1)
+-->
+<section title="Preguntas de instrucciones">
+
+  <section title="rotate Z ; rotate Y ; rotate Z">
+    <p>
+      Cuando se emite la instrucción <b>show orientation</b>
+      devuelve tres valores de rotación alrededor de los ejes, que devolverán la molécula
+      a su orientación actual. Este tipo de orientación rotacional en el
+      espacio tridimensional se concoe como <i>ángulo de Euler</i>.
+    </p>
+    <p>
+      Lamentablemente, hay varios convenios diferentes para los
+      ángulos de Euler. Los más frecuentes son Z-X-Z (el "convenio X") y
+      Z-Y-Z (el "convenio Y"). En mecánica cuántica se sigue generalmente el Z-Y-Z,
+      por lo cual Jmol utiliza este "convenio Y".
+    </p>
+    <p>
+      Hay más información en <br />
+      <a href="http://www.algebra.com/algebra/about/history/Euler-angles.wikipedia">
+	http://www.algebra.com/algebra/about/history/Euler-angles.wikipedia
+      </a><br />
+      <a href="http://mathworld.wolfram.com/EulerAngles.html">
+	http://mathworld.wolfram.com/EulerAngles.html
+      </a>
+      <a href="http://casgm3.anorg.chemie.uni-tuebingen.de/klaus/nmr/conventions/euler/euler.html">
+	http://casgm3.anorg.chemie.uni-tuebingen.de/klaus/nmr/conventions/euler/euler.html
+      </a>
+    </p>
+  </section>
+</section>

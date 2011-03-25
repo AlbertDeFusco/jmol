@@ -1,0 +1,132 @@
+function calcVolumeBabel() {
+ set defaultvdw babel
+ {*}.vdw = 0  // sets to default value
+ print script("show vdw").lines[1][20]
+ calcVolume(true)
+}
+
+function calcVolumeJmol() {
+ set defaultvdw jmol
+ {*}.vdw = 0  // sets to default value
+ print script("show vdw").lines[1][20]
+ calcVolume(true)
+}
+
+function calcVolumeRasmol() {
+ set defaultvdw rasmol
+ {*}.vdw = 0  // sets to default value
+ print script("show vdw").lines[1][20]
+ calcVolume(true)
+}
+
+function calcVolume(haveVDW, testing) {
+/*
+
+Yuan H. Zhao, Michael H. Abraham,* and Andreas M. Zissimos†
+J. Org. Chem, Vol. 68, No. 19, 2003 7369
+
+TABLE 2. Bondi Radii of Atoms and Their Volumes
+atom RBondi (Å) VvdW (Å3) atom RvdW (Å) VvdW (Å3)
+H 1.20 7.24 P 1.80 24.43
+C 1.70 20.58 S 1.80 24.43
+N 1.55 15.60 As 1.85 26.52
+O 1.52 14.71 B 2.13 40.48
+F 1.47 13.31 Si 2.10 38.79
+Cl 1.75 22.45 Se 1.90 28.73
+Br 1.85 26.52 Te 2.06 36.62
+I 1.98 32.52
+
+This page uses these VanDerWaal radii but calculates the 
+volume using a simple analytical cap-volume of intersecting spheres calculation.
+
+Visible atoms are selected. 
+Not appropriate when these atoms do not constitute a whole molecule.
+
+If there are fewer than 20 visible atoms, then the calculation is checked using 
+an isosurface calculation.
+
+Bob Hanson -- 7:01 PM 9/2/2009
+
+*/
+
+
+if (!haveVDW) {
+print "using VDW from J. Org. Chem, Vol. 68, No. 19, 2003 7369"
+
+{_H}.vdw  = 1.2 ;  {_P}.vdw   = 1.80 ;
+{_C}.vdw  = 1.7 ;  {_S}.vdw   = 1.80 ;
+{_N}.vdw  = 1.55 ; {_As}.vdw  = 1.85 ;
+{_O}.vdw  = 1.52 ; {_B}.vdw   = 2.13 ;
+{_F}.vdw  = 1.47 ; {_Si}.vdw  = 2.10 ; 
+{_Cl}.vdw = 1.75 ; {_Se}.vdw  = 1.90 ;
+{_Br}.vdw = 1.85 ; {_Te}.vdw  = 2.06 ;
+{_I}.vdw  = 1.98
+
+} 
+
+// total volume without overlaps
+
+var atoms = {visible}
+var natoms = atoms.size
+var vol = 0.0
+for (var i = 1; i <= nAtoms; i++) {
+ var rad = atoms[i].vdw
+ vol += 4.0/3.0 * 3.1415927 * rad * rad * rad
+}
+
+// run through all bonds
+
+var bnds = atoms.bonds.label("%i1 %i2").lines
+var nBonds = bnds.size
+var oneThirdPi = 0.33333333 * 3.1415927 
+for (var i = 1; i <= nBonds; i++) {
+ var iatom1 = bnds[i].split(" ")[1]
+ var iatom2 = bnds[i].split(" ")[2]
+ var atom1 = {atomno=iatom1}
+ var atom2 = {atomno=iatom2}
+ var d = atom1.distance(atom2)
+ var r1 = atom1.vdw
+ var r2 = atom2.vdw
+
+ // not intersecting
+
+ if (d >= r1 + r2)continue
+
+ // one inside the other!
+
+ if (d <= r2 - r1) {
+	vol -= 4 * oneThirdPi * r1 * r1 * r1
+	continue
+ }
+ if (d <= r1 - r2) {
+	vol -= 4 * oneThirdPi * r2 * r2 * r2
+	continue
+ }
+
+ // calculate hidden spherical cap height and volume
+
+ var h1 = r1 - (r1*r1 + d*d - r2*r2) / (2 * d)
+ var h2 = r2 - (r2*r2 + d*d - r1*r1) / (2 * d)
+ var vCap1 = oneThirdPi * h1 * h1 * (3 * r1 - h1)
+ var vCap2 = oneThirdPi * h2 * h2 * (3 * r2 - h2)
+
+ //print atom1.label("%a") + "\t" + atom2.label("%a") +  "\th1=" + h1 + "\th2=" + h2 + "\t" + vLost1 + "\t" + vLost2
+
+ // subtract off caps
+
+ vol -= vCap1 + vCap2
+
+}
+
+if (testing and nAtoms < 20) {
+  isosurface volume select @atoms ignore @{!atoms} resolution 20 sasurface 0 translucent off
+}
+
+
+print "The volume is " + vol%1 + " cubic Ang.\nor " + (vol * 0.602)%1 + " cubic cm per mole"
+return vol
+
+}
+print "functions calcVolume, calcVolumeBabel, calcVolumeJmol, and calcVolumeRasmol loaded"
+calcVolume()
+

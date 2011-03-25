@@ -1,0 +1,46 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Jmol Interactive Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript">
+
+//showappcode=true
+//animcallback="showmsg"
+ntd=3
+
+title="Secondary Structure";model="";ref="ribbon"
+Scripts=new Array("wireframe off;backbone off;ribbon off;trace off;cartoon off;strands off;meshribbon off;rockets off;"
+," First load one of the following models."
+	,"load 1crn.pdb ;cpk off; wireframe;# A small plant protein"
+	,"load 1d68.pdb ;cpk off; wireframe;# A small segment of double-stranded DNA"
+," The secondary structure of proteins and nucleic acids can be more easily visualized using a variety of graphical objects. These may be best viewed if the wireframe is turned off. Note that \"rockets\" are for proteins only, not nucleic acids. All of these objects have a \"radius\" that can be set when they are turned on. The number of parallel strands can also be set using the <i>set strands n</i> command."
+	,"*NOUL"
+	,"wireframe on ~~ wireframe 0.2 ~~ wireframe 0.1"
+	,"backbone on ~~ backbone 1.0 ~~ backbone 1.5"
+	,"ribbons on ~~ ribbons 2.0 ~~ ribbons off"
+	,"trace on ~~ trace 2.5 ~~ trace off"
+	,"cartoons on ~~ cartoons 2.0 ~~ cartoons off"
+	,"strands on ~~ strands 1.5 ~~ strands off"
+	,"set strands 3 ~~ set strands 8 ~~ set strands 20"
+	,"meshribbon on ~~ meshribbon 1.5 ~~ meshribbon off"
+	,"rockets on ~~ rockets 1.5 ~~ rockets off"
+	,"*UL"
+," You can color these objects much the same way you can color atoms and bonds."
+	,"ribbons on;color ribbons amino;rockets off;cartoons off;"
+	,"rockets on;color rockets structure;ribbons off;cartoons off;"
+	,"cartoons on;color cartoon group;rockets off;ribbons off;"
+," "
+	,""
+)
+remarks=""
+
+</script>
+</head>
+<body>
+<script type="text/javascript">showpage(0)</script>
+</body>
+</html>

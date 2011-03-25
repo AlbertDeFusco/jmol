@@ -1,0 +1,38 @@
+data_global
+_chemical_name_mineral 'Titanium'
+loop_
+_publ_author_name
+'Chebotareva E S'
+'Nuzhdina S G'
+_journal_name_full "Fizika Metallov i Metallovedenie"
+_journal_volume 36 
+_journal_year 1973
+_journal_page_first 200
+_journal_page_last 202
+_publ_section_title
+;
+ Observation of omega-titanium in a composite hard facing alloy based
+ on fine-grain diamonds
+ Locality: synthetic
+ Sample: at P = 4 GPa, known as the omega phase
+;
+_chemical_formula_sum 'Ti'
+_cell_length_a 4.6
+_cell_length_b 4.6
+_cell_length_c 2.82
+_cell_angle_alpha 90
+_cell_angle_beta 90
+_cell_angle_gamma 120
+_cell_volume 51.677
+_exptl_crystal_density_diffrn      3.077
+_symmetry_space_group_name_H-M 'P _ 6/m m m'
+loop_
+_symmetry_equiv_pos_as_xyz
+  'x,y,z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ti1   0.00000   0.00000   0.00000
+Ti2   0.33333   0.66667   0.50000

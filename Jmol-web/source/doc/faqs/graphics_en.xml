@@ -1,0 +1,58 @@
+<section title="Graphics and rendering">
+  
+  <section title="How are the graphics different in Jmol v10?">
+    <p>
+      A new 3D graphics engine has been developed for Jmol v10 to
+      properly support intersecting shapes. This is important
+      when viewing spacefilled molecular models.
+    </p>
+    <p>
+      The 3D engine also has much higher performance when dealing
+      with larger molecules. 
+    </p>
+  </section>
+
+  <section title="I see jaggies. Why aren't the graphics anti-aliased?">
+    <p>
+      No java graphics calls are used in the construction of the image.
+      The entire scene is constructed in memory and transferred to the
+      screen with one drawImage operation. <br />
+      Hey ... aren't you the person who was complaining about speed?
+    </p>
+    <p>
+      Recent (v11) versions of Jmol allow to use antialiasing,
+      both for the display and for exported images. Check out 
+      <a href="http://chemapps.stolaf.edu/jmol/docs/#setantialiasing">Jmol
+      Scripting Documentation</a>.
+    </p>
+    
+  </section>
+  
+  <section title="But I need some higher-quality images ...">
+    <p>
+      Export from the application to POV-Ray, or
+      <br />
+      increase the size of the application window, or
+      <br />
+      learn how to open Jmol in even larger sizes and export images 
+      without display, using the command line.
+    </p>
+  </section>
+  
+  <section title="Does Jmol support isosurfaces?">
+    <p>
+      Yes. Starting with version 10.2, Jmol has some functionality
+      for rendering isosurfaces,
+      that is greatly expanded on version 11.0.
+    </p>
+  </section>
+  
+  <section
+   title="What shapes does Jmol support for protein secondary structure?">
+    <p>
+      Using RasMol/Chime terminology, Jmol current supports
+      <b>backbone</b>, <b>trace</b>, <b>strands</b>, <b>ribbons</b>, 
+	  <b>meshribbons</b>, <b>cartoons</b>, and <b>rockets</b>.
+    </p>
+  </section>
+</section>

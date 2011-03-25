@@ -1,0 +1,212 @@
+<X3D profile='Immersive' version='3.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation=' http://www.web3d.org/specifications/x3d-3.1.xsd '>
+<head>
+<meta name='title' content="ala"/>
+<meta name='description' content=' '/>
+<meta name='creator' content=' '/>
+<meta name='created' content='2010-02-06, 14:51'/>
+<meta name='generator' content='Jmol 11.9.23  2010-01-28 04:44, http://www.jmol.org'/>
+<meta name='license' content='http://www.gnu.org/licenses/licenses.html#LGPL'/>
+</head>
+<Scene>
+<NavigationInfo type='EXAMINE'/>
+<Background skyColor='0 0 0'/>
+<Viewpoint fieldOfView='0.2837941' position='-3.6809206 -22.504227 15.904164' orientation='-0.58805466 0.45100704 -0.6714048 -1.348299'
+ jump='TRUE' description='v1'/>
+
+  <!-- Jmol perspective:
+  scalePixelsPerAngstrom: 73.77249
+  cameraDepth: 3.0
+  center: (16.3365, -7.6475, -0.34600002)
+  rotationRadius: 3.97167
+  boundboxCenter: (16.3365, -7.6475, -0.34600002)
+  translationOffset: translate y 0.08605852;
+  zoom: 100.0
+  moveto command: moveto 1.0 { -588 451 -671 77.25} 100.0 0.0 0.09 {16.3365 -7.6475 -0.34600002} 3.97167 {0.0 0.0 0.0} -47.65025 -190.71898 0.0;
+  screen width height dim: 588 581 588
+  -->
+
+<Transform translation='-16.337 7.648 .346'>
+<Transform translation='18.916 -6.649 -.169'>
+<Shape DEF='_0'><Sphere radius='0.253'/><Appearance DEF='_1'><Material diffuseColor='1 1 1' transparency='0'/></Appearance></Shape>
+</Transform>
+<Transform translation='15.197 -9.615 -.785'>
+<Shape USE='_0'></Shape>
+</Transform>
+<Transform translation='15.918 -8.579 -1.821'>
+<Shape USE='_0'></Shape>
+</Transform>
+<Transform translation='16.819 -9.437 -.764'>
+<Shape USE='_0'></Shape>
+</Transform>
+<Transform translation='15.858 -8.305 1.129'>
+<Shape USE='_0'></Shape>
+</Transform>
+<Transform translation='14.514 -6.69 -.962'>
+<Shape USE='_0'></Shape>
+</Transform>
+<Transform translation='13.757 -7.767 .08'>
+<Shape USE='_0'></Shape>
+</Transform>
+<Transform translation='18.267 -7.404 -.076'>
+<Shape DEF='_2'><Sphere radius='0.3495'/><Appearance DEF='_3'><Material diffuseColor='1 .055 .055' transparency='0'/></Appearance></Shape>
+</Transform>
+<Transform translation='15.948 -8.965 -.899'>
+<Shape DEF='_4'><Sphere radius='0.391'/><Appearance DEF='_5'><Material diffuseColor='.566 .566 .566' transparency='0'/></Appearance></Shape>
+</Transform>
+<Transform translation='16.78 -5.68 -.061'>
+<Shape USE='_2'></Shape>
+</Transform>
+<Transform translation='16.973 -6.899 -.0060'>
+<Shape USE='_4'></Shape>
+</Transform>
+<Transform translation='15.811 -7.835 .136'>
+<Shape USE='_4'></Shape>
+</Transform>
+<Transform translation='14.545 -7.112 -.023'>
+<Shape DEF='_6'><Sphere radius='0.3565'/><Appearance DEF='_7'><Material diffuseColor='.191 .316 .973' transparency='0'/></Appearance></Shape>
+</Transform>
+<Transform translation='18.429 -7.215 -.099' rotation='.649 1.755 -.093 3.142'>
+<Shape DEF='_8'><Cylinder DEF='_9' height='.5' radius='0.15'/><Appearance USE='_3'></Appearance></Shape>
+</Transform>
+<Transform translation='18.754 -6.838 -.146' rotation='.649 1.755 -.093 3.142'>
+<Shape DEF='_10'><Cylinder USE='_9'/><Appearance USE='_1'></Appearance></Shape>
+</Transform>
+<Transform translation='18.267 -7.404 -.076'>
+<Shape DEF='_11'><Sphere radius='0.1515'/><Appearance USE='_3'></Appearance></Shape>
+</Transform>
+<Transform translation='18.916 -6.649 -.169'>
+<Shape DEF='_12'><Sphere radius='0.1515'/><Appearance USE='_1'></Appearance></Shape>
+</Transform>
+<Transform translation='15.941 -8.868 -1.13' rotation='-.03 1.386 -.922 3.142'>
+<Shape DEF='_13'><Cylinder USE='_9'/><Appearance USE='_5'></Appearance></Shape>
+</Transform>
+<Transform translation='15.926 -8.675 -1.59' rotation='-.03 1.386 -.922 3.142'>
+<Shape USE='_10'></Shape>
+</Transform>
+<Transform translation='15.948 -8.965 -.899'>
+<Shape DEF='_14'><Sphere radius='0.1515'/><Appearance USE='_5'></Appearance></Shape>
+</Transform>
+<Transform translation='15.918 -8.579 -1.821'>
+<Shape USE='_12'></Shape>
+</Transform>
+<Transform translation='15.76 -9.128 -.87' rotation='-.751 .35 .114 3.142'>
+<Shape USE='_13'></Shape>
+</Transform>
+<Transform translation='15.385 -9.453 -.813' rotation='-.751 .35 .114 3.142'>
+<Shape USE='_10'></Shape>
+</Transform>
+<Transform translation='15.948 -8.965 -.899'>
+<Shape USE='_14'></Shape>
+</Transform>
+<Transform translation='15.197 -9.615 -.785'>
+<Shape USE='_12'></Shape>
+</Transform>
+<Transform translation='16.166 -9.083 -.865' rotation='.871 .528 .135 3.142'>
+<Shape USE='_13'></Shape>
+</Transform>
+<Transform translation='16.601 -9.319 -.798' rotation='.871 .528 .135 3.142'>
+<Shape USE='_10'></Shape>
+</Transform>
+<Transform translation='15.948 -8.965 -.899'>
+<Shape USE='_14'></Shape>
+</Transform>
+<Transform translation='16.819 -9.437 -.764'>
+<Shape USE='_12'></Shape>
+</Transform>
+<Transform translation='17.296 -7.025 -.023' rotation='.93 .637 -.05 3.142'>
+<Shape DEF='_15'><Cylinder DEF='_16' height='.695' radius='0.15'/><Appearance USE='_5'></Appearance></Shape>
+</Transform>
+<Transform translation='17.944 -7.278 -.058' rotation='.93 .637 -.05 3.142'>
+<Shape DEF='_17'><Cylinder USE='_16'/><Appearance USE='_3'></Appearance></Shape>
+</Transform>
+<Transform translation='16.973 -6.899 -.0060'>
+<Shape USE='_14'></Shape>
+</Transform>
+<Transform translation='18.267 -7.404 -.076'>
+<Shape USE='_11'></Shape>
+</Transform>
+<Transform translation='16.925 -6.594 -.02' rotation='-.156 1.987 -.045 3.142'>
+<Shape DEF='_18'><Cylinder DEF='_19' height='.618' radius='0.15'/><Appearance USE='_5'></Appearance></Shape>
+</Transform>
+<Transform translation='16.828 -5.985 -.047' rotation='-.156 1.987 -.045 3.142'>
+<Shape DEF='_20'><Cylinder USE='_19'/><Appearance USE='_3'></Appearance></Shape>
+</Transform>
+<Transform translation='16.973 -6.899 -.0060'>
+<Shape USE='_14'></Shape>
+</Transform>
+<Transform translation='16.78 -5.68 -.061'>
+<Shape USE='_11'></Shape>
+</Transform>
+<Transform translation='15.88 -8.4 -.382' rotation='.089 .266 -.673 3.142'>
+<Shape DEF='_21'><Cylinder DEF='_22' height='1.538' radius='0.15' top='FALSE' bottom='FALSE'/><Appearance USE='_5'></Appearance></Shape>
+</Transform>
+<Transform translation='15.811 -7.835 .136'>
+<Shape USE='_14'></Shape>
+</Transform>
+<Transform translation='15.948 -8.965 -.899'>
+<Shape USE='_14'></Shape>
+</Transform>
+<Transform translation='16.392 -7.367 .065' rotation='.775 1.624 -.095 3.142'>
+<Shape DEF='_23'><Cylinder DEF='_24' height='1.499' radius='0.15' top='FALSE' bottom='FALSE'/><Appearance USE='_5'></Appearance></Shape>
+</Transform>
+<Transform translation='15.811 -7.835 .136'>
+<Shape USE='_14'></Shape>
+</Transform>
+<Transform translation='16.973 -6.899 -.0060'>
+<Shape USE='_14'></Shape>
+</Transform>
+<Transform translation='15.823 -7.953 .384' rotation='.043 .573 .903 3.142'>
+<Shape DEF='_25'><Cylinder DEF='_26' height='.55' radius='0.15'/><Appearance USE='_5'></Appearance></Shape>
+</Transform>
+<Transform translation='15.846 -8.187 .881' rotation='.043 .573 .903 3.142'>
+<Shape DEF='_27'><Cylinder USE='_26'/><Appearance USE='_1'></Appearance></Shape>
+</Transform>
+<Transform translation='15.811 -7.835 .136'>
+<Shape USE='_14'></Shape>
+</Transform>
+<Transform translation='15.858 -8.305 1.129'>
+<Shape USE='_12'></Shape>
+</Transform>
+<Transform translation='14.348 -7.276 .0030' rotation='-.765 .364 .1 3.142'>
+<Shape DEF='_28'><Cylinder DEF='_29' height='.515' radius='0.15'/><Appearance USE='_7'></Appearance></Shape>
+</Transform>
+<Transform translation='13.954 -7.603 .054' rotation='-.765 .364 .1 3.142'>
+<Shape DEF='_30'><Cylinder USE='_29'/><Appearance USE='_1'></Appearance></Shape>
+</Transform>
+<Transform translation='14.545 -7.112 -.023'>
+<Shape DEF='_31'><Sphere radius='0.1515'/><Appearance USE='_7'></Appearance></Shape>
+</Transform>
+<Transform translation='13.757 -7.767 .08'>
+<Shape USE='_12'></Shape>
+</Transform>
+<Transform translation='14.861 -7.293 .017' rotation='.863 .507 .108 3.142'>
+<Shape DEF='_32'><Cylinder DEF='_33' height='.733' radius='0.15'/><Appearance USE='_7'></Appearance></Shape>
+</Transform>
+<Transform translation='15.495 -7.654 .096' rotation='.863 .507 .108 3.142'>
+<Shape DEF='_34'><Cylinder USE='_33'/><Appearance USE='_5'></Appearance></Shape>
+</Transform>
+<Transform translation='14.545 -7.112 -.023'>
+<Shape USE='_31'></Shape>
+</Transform>
+<Transform translation='15.811 -7.835 .136'>
+<Shape USE='_14'></Shape>
+</Transform>
+<Transform translation='14.537 -7.007 -.258' rotation='-.03 1.41 -.912 3.142'>
+<Shape USE='_28'></Shape>
+</Transform>
+<Transform translation='14.522 -6.795 -.727' rotation='-.03 1.41 -.912 3.142'>
+<Shape USE='_30'></Shape>
+</Transform>
+<Transform translation='14.545 -7.112 -.023'>
+<Shape USE='_31'></Shape>
+</Transform>
+<Transform translation='14.514 -6.69 -.962'>
+<Shape USE='_12'></Shape>
+</Transform>
+<Transform translation='14.43 -7.356 .336'><Billboard DEF='_35' axisOfRotation='0 0 0'><Transform translation='0.0 0.0 0.0'><Shape><Appearance DEF='_36'><Material diffuseColor='0 0 0' specularColor='0 0 0' ambientIntensity='0.0' shininess='0.0' emissiveColor='.191 .316 .973'/></Appearance><Text string="amino group"><FontStyle DEF='_37' size='0.4' family='SANS' style='PLAIN'/></Text></Shape></Transform></Billboard>
+</Transform>
+<Transform translation='17.713 -6.607 -.095'><Billboard DEF='_38' axisOfRotation='0 0 0'><Transform translation='0.0 0.0 0.0'><Shape><Appearance DEF='_39'><Material diffuseColor='0 0 0' specularColor='0 0 0' ambientIntensity='0.0' shininess='0.0' emissiveColor='1 0 0'/></Appearance><Text string="carboxy group"><FontStyle DEF='_40' size='0.4' family='SERIF' style='PLAIN'/></Text></Shape></Transform></Billboard>
+</Transform>
+</Transform>
+</Scene>
+</X3D>

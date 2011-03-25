@@ -1,0 +1,30 @@
+if (btnsetup)
+	set hoverdelay 0.1
+	# javascript alert('in btnAnimsetup')
+	set echo btnAnimbg 50% 0%
+	set echo btnAnimbg center
+	echo "                         "
+	color echo background translucent 0.8 yellow
+	set echo btnAnimbg script "script btnAnim.spt"
+	set echo btnAnim 50% 0%
+	set echo btnAnim center
+	color echo background translucent 1.0 yellow
+	animOn = true
+endif
+
+set echo btnAnim
+animOn = !animOn
+
+
+if (!animOn)
+	animation pause
+	echo animation on
+	color echo green
+	animOn=false
+else
+	echo animation off
+	color echo red
+	animation play
+endif
+
+

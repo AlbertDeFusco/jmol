@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<document>
+	<body>
+		<title>Download Jmol</title>
+		<section title="Downloading Jmol">
+			<p>The current official release is version $VERSION$.</p>
+			<p>It can be downloaded from SourceForge using the following link:
+			<a href="http://sourceforge.net/project/showfiles.php?group_id=23629">Jmol downloads page</a>.
+      <br/>(Look under the <tt>Jmol</tt> heading for the link whose name ends in <tt>binary.zip</tt> or <tt>binary.tar.gz</tt>, 
+	depending on the format you can decompress in your computer.)
+			</p>
+			<p>
+      Some prerelease test versions are also available from time to time (odd-numbered versions like 11.1, 11.3, 11.5). These have not been extensively checked and may have unresolved bugs.
+      <br/>(Look under the <tt>Jmol Prerelease Tests</tt> heading for the link whose name ends in <tt>binary.zip</tt> or <tt>binary.tar.gz</tt>, 
+	depending on the format you can decompress in your computer.)
+			</p>
+		</section>
+		<section title="Requirements">
+			<p>
+	The Jmol web browser applet may run on most browser Java Virtual
+	Machines, including the Microsoft and Netscape 4.7* implementations
+	of the Java 1.1 JVM. 
+	If you are running Microsoft Internet Explorer on the Windows
+	operating system you should upgrade to the Sun
+	Java Virtual Machine (see below).
+      </p>
+			<p>
+	The standalone Jmol application requires Java 1.4 or higher.
+      </p>
+			<p>In all cases, if possible, installing the latest Java version from Sun is recommended.
+	You can have it installed by visiting
+	<a href="http://www.java.com/">www.java.com</a> and following instructions therein.
+	</p>
+		</section>
+		<section title="Installing and Running Jmol">
+			<p>Jmol isn't really installed as other programs are, but here is a brief description of how to put it into use:</p>
+			<ul>
+				<li>To use the Jmol Application (stand-alone program that runs in your computer):
+				<ol>
+						<li>You only need to extract the <tt>Jmol.jar</tt> file from the downloaded package. 
+	Put it in any folder you like (such as <tt>c:\Program files\Jmol\</tt>, or even in <tt>My documents</tt>; the location 
+	is not important).
+					</li>
+						<li>Double-click on the <tt>Jmol.jar</tt> icon (or file) and it will run. Then, use the top menu 
+	to open molecular model files. 
+					</li>
+						<li>For more details, read 
+		<a href="http://wiki.jmol.org:81/index.php/Jmol_Application#Installing_Jmol_Application">this page in Jmol Wiki</a>.
+					</li>
+					</ol><br/>
+				</li>
+				<li>To use the Jmol Applet (that only runs inside a web browser):
+				<ol>
+						<li>As a user, you don't need to install or even download Jmol to be able to see web pages that use JmolApplet.
+		The necessary applet files will download to your computer automatically at the same time the web page is being downloaded 
+	and read. Nothing will be installed in your computer and there are no security concerns.
+					</li>
+						<li>As a web page author, you need to extract from the downloaded package and put into your webpage folder these files:
+		<tt>Jmol.js</tt> and all the files whose name starts with <tt>JmolApplet0</tt> and ends in <tt>.jar</tt>. 
+					</li>
+						<li> For more details, read 
+		<a href="http://wiki.jmol.org:81/index.php/Jmol_Applet#Installing_Jmol_Applet">this page in Jmol Wiki</a>.
+					</li>
+					</ol>
+				</li>
+			</ul>
+		</section>
+		<section title="Subversion Access">
+			<p>(For developers only)
+			</p>
+			<p>
+        You can browse the latest source code online or anonymously
+        checkout the project contained in the
+	<a href="http://subversion.tigris.org/">Subversion</a> (SVN)
+	repository.
+      </p>
+			<p>
+				<a href="http://jmol.svn.sourceforge.net/viewvc/jmol/trunk/Jmol">
+	  Browse the SVN repository
+	</a>
+			</p>
+			<p>
+        To checkout the source code use the following command:
+      </p>
+			<p>
+				<tt>
+		svn co https://jmol.svn.sourceforge.net/svnroot/jmol/trunk/Jmol
+	</tt>
+			</p>
+			<p>
+	This will check out to the <code>Jmol</code> subdirectory on your
+	system.
+      </p>
+			<p>
+	You can update the source code from withing your Jmol <i>sandbox</i>
+	by saying:
+	<tt>
+	  svn update
+	</tt>
+			</p>
+		</section>
+	</body>
+</document>

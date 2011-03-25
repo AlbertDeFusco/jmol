@@ -1,0 +1,170 @@
+# Jmol state version 11.3.35_dev  2007-10-18 22:28;
+
+function _setWindowState();
+# height 800;
+# width 800;
+  stateVersion = 1103035;
+  backgroundColor = "[x000000]";
+  axis1Color = "[xff0000]";
+  axis2Color = "[x008000]";
+  axis3Color = "[x0000ff]";
+  ambientPercent = 45;
+  diffusePercent = 84;
+  specular = true;
+  specularPercent = 22;
+  specularPower = 40;
+  specularExponent=6; set antialiasdisplay true;set antialiastranslucent true;
+end function;
+
+function _setFileState();
+
+  allowEmbeddedScripts = false;
+  autoBond = true;
+  appendNew = true;
+  applySymmetryToBonds = false;
+  bondRadiusMilliAngstroms = 150;
+  bondTolerance = 0.45;
+  defaultLattice = {0.0 0.0 0.0};
+  defaultLoadScript = "";
+  loadFormat = "http://www.rcsb.org/pdb/files/%FILE.pdb";
+  forceAutoBond = false;
+  minBondDistance = 0.4;
+  percentVdwAtom = 20;
+  smartAromatic = true;
+  load "data/caffeine.xyz";
+
+end function;
+
+function _setVariableState();
+
+   defaultanglelabel = "%VALUE %UNITS";
+   defaultcolorscheme = "Jmol";
+   defaultdistancelabel = "%VALUE %UNITS";
+   defaultdrawarrowscale = 0.5;
+   defaultloadscript = "";
+   defaulttorsionlabel = "%VALUE %UNITS";
+   defaulttranslucent = 0.5;
+  allowembeddedscripts = true;
+  allowrotateselected = false;
+  applysymmetrytobonds = false;
+  autobond = true;
+  autofps = false;
+  axes = window;
+  axesmode = 0;
+  axesscale = 2.0;
+  bondmodeor = false;
+  bondradiusmilliangstroms = 150;
+  bondtolerance = 0.45;
+  cartoonrockets = false;
+  chaincasesensitive = false;
+  disablepopupmenu = false;
+  displaycellparameters = true;
+  dotsselectedonly = false;
+  dotsurface = true;
+  dynamicmeasurements = false;
+  forceautobond = false;
+  greyscalerendering = false;
+  hbondsbackbone = false;
+  hbondssolid = false;
+  helppath = "http://www.stolaf.edu/academics/chemapps/jmol/docs/index.htm";
+  hermitelevel = 0;
+  hidenameinpopup = false;
+  hidenavigationpoint = false;
+  highresolutionflag = false;
+  hoverdelay = 0.5;
+  justifymeasurements = false;
+  loadformat = "http://www.rcsb.org/pdb/files/%FILE.pdb";
+  measureallmodels = false;
+  minbonddistance = 0.4;
+  navigationcentered = false;
+  navigationperiodic = false;
+  navigationspeed = 5.0;
+  percentvdwatom = 20;
+  perspectivedepth = true;
+  pickingspinrate = 10;
+  propertyatomnumberfield = 0;
+  propertycolorscheme = "roygb";
+  propertydatafield = 0;
+  rangeselected = false;
+  ribbonaspectratio = 16;
+  ribbonborder = false;
+  scriptdelay = 0;
+  selecthetero = true;
+  selecthydrogen = true;
+  sheetsmoothing = 1.0;
+  showhiddenselectionhalos = false;
+  showhydrogens = true;
+  showmeasurements = true;
+  showmultiplebonds = true;
+  shownavigationpointalways = false;
+  smartaromatic = true;
+  solventprobe = false;
+  solventproberadius = 1.2;
+  ssbondsbackbone = false;
+  testflag1 = false;
+  testflag2 = false;
+  testflag3 = false;
+  testflag4 = false;
+  tracealpha = true;
+  usenumberlocalization = true;
+  vectorscale = 1.0;
+  vibrationperiod = 0.5;
+  vibrationscale = 0.5;
+  zoomlarge = true;
+  zshade = false;
+
+#user-defined variables; 
+# --none--;
+
+# label defaults;
+  select none;
+  color label none;
+  background label none;
+  labelOffset = 4 4;
+  labelAlignment = left;
+  labelPointer = off;
+  font label 13 SansSerif Plain;
+
+end function;
+
+function _setModelState();
+
+  measures delete;
+  measures = nanometers;
+  font measures 15 SansSerif Plain;
+  select measures ({null});
+
+  isosurface plane {0 -2 -5 0} map molecular;# ({0:23}) ({null});
+  isosurface fill noMesh noDots notFrontOnly fullylit;
+  color $isosurface1 "roygb" range -1.8089305 0.0010;
+
+  boundBox off;
+
+end function;
+
+function _setPerspectiveState();
+  perspectiveModel = 11;
+  cameraDepth = 3.0;
+  center {-0.23140144 0.61279976 0.071704745};
+  moveto 0.0 {0 0 1 0} 100.0 0.0 0.0 {-0.23140144 0.61279976 0.071704745} 5.580881 {0.0 0.0 0.0} 2.06419 5.4664116 50.0;;
+  slab 100;depth 0;
+  spinX = 0;spinY = 30;spinZ = 0;spinFps = 30;
+end function;
+
+function _setSelectionState();
+  select ({0:23});
+end function
+
+function _setState();
+  initialize;
+  refreshing = false;
+  _setWindowState;
+  _setFileState;
+  _setVariableState;
+  _setModelState;
+  _setPerspectiveState;
+  _setSelectionState;
+  refreshing = true;set antialiasdisplay true; set antialiastranslucent true;
+end function;
+
+_setState;

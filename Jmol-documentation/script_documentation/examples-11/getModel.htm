@@ -1,0 +1,33 @@
+<html>
+<head>
+<script language="javascript" src="Jmol.js"></script>
+<script language="javascript">
+function loadCommand(s) {
+ if (s == 0)
+	s = document.location.search.substring(1)
+ if (s)
+	document.getElementById("url").value = s
+ else
+	s = document.getElementById("url").value
+ if (!s)return
+ return 'load "getModel.cfm?url=' + s + '"'
+}
+function getModel() {
+ if (!s)  s="http://www.stolaf.edu/academics/chemapps/jmol/docs/examples-11/caffeine.xyz"
+ return s
+}
+
+</script>
+</head>
+<center>
+<body>
+View any model from the web using Jmol.
+<br />
+URL:<input type=text size=60 id=url><input type=button onclick=jmolScript(loadCommand()) value=view>
+<br />
+<script language="javascript">
+ jmolApplet(500, 'script "javascript:loadCommand(0)"')
+</script>
+</center>
+</body>
+</html>

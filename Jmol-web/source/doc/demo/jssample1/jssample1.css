@@ -1,0 +1,15 @@
+.userData {
+	color: #CC0000;
+	font-weight: bold;
+}
+.comments {
+	font-family: "Times New Roman", Times, serif;
+	color: #FF00FF; font-size:1.1em;
+}
+.hilite1 { background-color: #FFFF66; }
+.hilite2 { background-color: #99FFFF; }
+.hilite3 { background-color: #FF99FF; }
+.hilite4 { background-color: #99FF33; }
+.hilite5 { background-color: #FFBB66; }
+.hilite6 { background-color: #9999FF; }
+.hilite7 { background-color: #99FF99; }

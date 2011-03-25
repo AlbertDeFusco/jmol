@@ -1,0 +1,2012 @@
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+                                --------------
+                                  WELCOME TO
+                                    PSI  3
+                                --------------
+
+  LABEL       =	6-31G** SCF H2O Optimization
+  SHOWNORM    =	0
+  PUREAM      =	0
+  PRINT_LVL   =	1
+
+  Parsed basis sets from /usr/local/psi/share/pbasis.dat
+
+  -Geometry before Center-of-Mass shift (a.u.):
+       Center              X                  Y                   Z
+    ------------   -----------------  -----------------  -----------------
+          OXYGEN      0.000000000000     0.000000000000     0.000000000000
+        HYDROGEN      0.000000000000     0.000000000000     1.889725988579
+        HYDROGEN      1.829533756804     0.000000000000    -0.473149600682
+
+
+  -Rotational constants (cm-1) :
+    A =   25.12555  B =   13.37733  C =    8.72955
+    It is an asymmetric top.
+
+  -Geometry after Center-of-Mass shift and reorientation (a.u.):
+       Center              X                  Y                   Z
+    ------------   -----------------  -----------------  -----------------
+          OXYGEN     -0.000000000000    -0.129476880255     0.000000000000
+        HYDROGEN      1.494186636402     1.027446024483     0.000000000000
+        HYDROGEN     -1.494186636402     1.027446024483     0.000000000000
+
+
+  -SYMMETRY INFORMATION:
+    Computational point group is C2v 
+    Number of irr. rep.      = 4
+    Number of atoms          = 3
+    Number of unique atoms   = 2
+
+
+  -BASIS SETS:
+
+   -Basis set on unique center 1:
+      ( (S (  5484.67166000     0.00183107)
+           (   825.23494600     0.01395017)
+           (   188.04695800     0.06844508)
+           (    52.96450000     0.23271434)
+           (    16.89757040     0.47019290)
+           (     5.79963534     0.35852085) )
+        (S (    15.53961625    -0.11077755)
+           (     3.59993359    -0.14802626)
+           (     1.01376175     1.13076701) )
+        (S (     0.27000582     1.00000000) )
+        (P (    15.53961625     0.07087427)
+           (     3.59993359     0.33975284)
+           (     1.01376175     0.72715858) )
+        (P (     0.27000582     1.00000000) )
+        (D (     0.80000000     1.00000000) )
+       )
+
+   -Basis set on unique center 2:
+      ( (S (    18.73113696     0.03349460)
+           (     2.82539437     0.23472695)
+           (     0.64012169     0.81375733) )
+        (S (     0.16127776     1.00000000) )
+        (P (     1.10000000     1.00000000) )
+       )
+
+
+  -BASIS SET INFORMATION:
+    Total number of shells = 12
+    Number of primitives   = 20
+    Number of AO           = 25
+    Number of SO           = 25
+
+    Irrep    Number of SO
+    -----    ------------
+      1           12
+      2            2
+      3            4
+      4            7
+
+
+  -Unique atoms in the canonical coordinate system (a.u.):
+       Center              X                  Y                   Z
+    ------------   -----------------  -----------------  -----------------
+          OXYGEN      0.000000000000    -0.000000000000    -0.129476880255
+        HYDROGEN      0.000000000000     1.494186636402     1.027446024483
+
+
+  -Geometry in the canonical coordinate system (a.u.):
+       Center              X                  Y                   Z
+    ------------   -----------------  -----------------  -----------------
+          OXYGEN      0.000000000000    -0.000000000000    -0.129476880255
+        HYDROGEN      0.000000000000     1.494186636402     1.027446024483
+        HYDROGEN      0.000000000000    -1.494186636402     1.027446024483
+
+
+  -Geometry in the canonical coordinate system (Angstrom):
+       Center              X                  Y                   Z
+    ------------   -----------------  -----------------  -----------------
+          OXYGEN      0.000000000000    -0.000000000000    -0.068516219302
+        HYDROGEN      0.000000000000     0.790689573744     0.543701060732
+        HYDROGEN      0.000000000000    -0.790689573744     0.543701060732
+
+
+  -Geometry in the reference coordinate system (a.u.):
+       Center              X                  Y                   Z
+    ------------   -----------------  -----------------  -----------------
+          OXYGEN      0.000000000000    -0.000000000000    -0.129476880255
+        HYDROGEN      0.000000000000     1.494186636402     1.027446024483
+        HYDROGEN      0.000000000000    -1.494186636402     1.027446024483
+
+
+  --------------------------------------------------------------------------
+
+    Nuclear Repulsion Energy (a.u.) =       8.801466202086
+
+  -The Interatomic Distances in angstroms:
+
+           1           2           3
+
+    1   0.0000000
+    2   1.0000000   0.0000000
+    3   1.0000000   1.5813791   0.0000000
+
+    Note: To print *all* bond angles, out-of-plane
+          angles, and torsion angles set print = 3
+
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+user time   =       0.07 seconds =       0.00 minutes
+system time =       0.02 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+                  --------------------------------------------
+                    CINTS: An integrals program written in C
+                     Justin T. Fermann and Edward F. Valeev
+                  --------------------------------------------
+
+
+  -OPTIONS:
+    Print level                 = 1
+    Integral tolerance          = 1e-15
+    Max. memory to use          = 2500000 double words
+    Number of threads           = 1
+    LIBINT's real type length   = 64 bit
+
+  -CALCULATION CONSTANTS:
+    Label                       = 6-31G** SCF H2O Optimization
+    Number of atoms             = 3
+    Number of atomic orbitals   = 25
+    Number of symmetry orbitals = 25
+    Maximum AM in the basis     = 2
+
+  -SYMMETRY INFORMATION;
+    Computational point group        = C2v
+    Number of irreps                 = 4
+
+    Wrote 13617 two-electron integrals to IWL file  0
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+user time   =       0.02 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+
+             ------------------------------------------
+
+                CSCF3.0: An SCF program written in C
+
+              Written by too many people to mention here
+
+             ------------------------------------------
+
+  I think the multiplicity is 1.
+  If this is wrong, please specify the MULTP keyword
+
+  label        = 6-31G** SCF H2O Optimization
+  wfn          = SCF
+  reference    = RHF
+  multiplicity = 1
+  charge       = 0
+  direct       = false
+  dertype      = NONE
+  convergence  = 7
+  maxiter      = 40
+  guess        = AUTO
+
+  nuclear repulsion energy        8.8014662020857
+  first run, so defaulting to core-hamiltonian guess
+
+  level shift                      = 0.100000
+  diis scale factor                = 1.000000
+  iterations before extrapolation  = 0
+  6 error matrices will be kept
+
+  keeping integrals in 114320 bytes of core
+
+  The lowest eigenvalue of the overlap matrix was 2.428012e-02
+
+  Using core guess to determine occupations
+
+
+  Symmetry block:   A1    A2    B1    B2   
+  DOCC:              3     0     1     1   
+  SOCC:              0     0     0     0   
+
+  reading integrals in the IWL format from files 33,35,36,37
+  wrote 6516 integrals to file92
+
+  iter       total energy        delta E         delta P          diiser
+    1       -68.3580970382    7.715956e+01    0.000000e+00    0.000000e+00
+    2       -71.3937987610    3.035702e+00    1.131060e-01    1.171447e+00
+    3       -75.8954552952    4.501657e+00    1.037310e-01    8.929095e-01
+    4       -76.0104881347    1.150328e-01    3.019475e-03    1.778684e-01
+    5       -76.0171247948    6.636660e-03    9.776641e-04    3.662894e-02
+    6       -76.0172883568    1.635620e-04    1.528765e-04    1.094924e-02
+    7       -76.0173089239    2.056712e-05    7.680516e-05    3.750131e-03
+    8       -76.0173093283    4.043912e-07    9.780733e-06    3.009389e-04
+    9       -76.0173093420    1.368539e-08    2.471762e-06    5.943722e-05
+   10       -76.0173093427    6.965735e-10    6.248476e-07    1.123005e-05
+   11       -76.0173093427    1.375611e-11    6.807764e-08    1.388467e-06
+
+ molecular orbitals for irrep A1 
+
+           1           2           3           4           5           6           7           8           9          10
+
+    1   0.9947150   0.2114006  -0.0714069  -0.0988706   0.0407654  -0.0174813   0.0803902   0.0272910   0.0420888  -0.0137728
+    2   0.0209638  -0.4782149   0.1593362   0.0624875  -0.2899886  -0.9045706   1.3308498   0.2975508   0.5216148   0.1514479
+    3   0.0040475  -0.4381721   0.3284674   1.3270493   0.5227552   1.6922720  -3.3203402  -0.8173616  -1.2076145  -0.1468854
+    4   0.0014148  -0.0758964  -0.5492784   0.2325008  -0.4621264   0.6520880   0.4590942   0.0837639   0.2357725   0.0564790
+    5  -0.0003139  -0.0342955  -0.3909115   0.5170726   0.2725637  -0.7911736  -1.0744616  -0.5012396  -0.5803915  -0.4266790
+    6  -0.0038273  -0.0012515   0.0091957  -0.0673908  -0.1939281  -0.3373102   0.2803627  -0.2459803   1.0424623   0.0313366
+    7  -0.0038656  -0.0077122  -0.0010027  -0.0515324   0.2220243  -0.3053820   0.6039044  -0.2638198  -0.4852683   0.7410745
+    8  -0.0038406  -0.0088777  -0.0368443  -0.0388375   0.0155930  -0.3518008   0.3307708   0.7906442  -0.0434744  -0.8839197
+    9   0.0001758  -0.1328286  -0.1466865  -0.0640810   0.6955775   0.2660928   0.3491620   0.2305190   0.5703285   0.0726513
+   10  -0.0002766  -0.0150091  -0.1032895  -1.0056171  -0.6399829  -0.2872141   0.6990829   0.1301674   0.0565621   0.0475849
+   11   0.0002289   0.0197834   0.0149388   0.0024602   0.1701635  -0.0368803   0.0121333  -0.1874604   0.1623632  -0.4377729
+   12   0.0001721   0.0128358  -0.0049166   0.0019170   0.0577778  -0.0519996  -0.1235310   0.2576273   0.1764125   0.6440154
+
+      -20.5681443  -1.3194670  -0.5611060   0.2025392   1.0516162   1.1303012   1.4076901   1.8176092   2.5120325   3.2940311
+
+        2.0000000   2.0000000   2.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+          11          12
+
+    1   0.2259298  -0.4061472
+    2  -0.1101846   0.3157444
+    3  -2.5963980   2.6139959
+    4  -0.4038191  -0.3747028
+    5  -0.8263162  -0.0747695
+    6   1.1326884  -1.1809845
+    7  -0.0958127  -1.8747295
+    8   0.2457677  -1.5566384
+    9   0.7541966   0.5435187
+   10   0.5236998  -0.2796098
+   11  -0.7683741  -0.4264278
+   12  -0.4724594  -0.3672793
+
+        3.6206477   4.0830283
+
+        0.0000000   0.0000000
+
+ molecular orbitals for irrep A2 
+
+           1           2
+
+    1  -0.6754549  -0.8616489
+    2  -0.3633895   0.6868267
+
+        1.7998064   2.9292018
+
+        0.0000000   0.0000000
+
+ molecular orbitals for irrep B1 
+
+           1           2           3           4
+
+    1  -0.6401716  -0.9625381  -0.0024268   0.0102944
+    2  -0.5007057   1.0339235  -0.2062399  -0.3965559
+    3  -0.0266517   0.0151565   0.7809915  -0.7188309
+    4  -0.0192662   0.0039871   0.3130397   0.7405846
+
+       -0.4943889   1.1690877   1.9237355   2.9383072
+
+        2.0000000   0.0000000   0.0000000   0.0000000
+
+ molecular orbitals for irrep B2 
+
+           1           2           3           4           5           6           7
+
+    1   0.4962934   0.3417920   0.1841270  -0.8946398  -0.0831261   0.3628566   0.6012427
+    2   0.2859073   0.8303785   0.2276947   1.7225933   0.5021038  -0.3977076   1.2754987
+    3   0.0338300   0.0308523  -0.2679660   0.0987811  -0.0769386  -0.7572994   1.4477069
+    4   0.2344526  -0.0622036  -0.7797987  -0.1310535  -0.1493691   0.4866326  -1.0857157
+    5   0.1419344  -1.3226295   0.7157855  -0.8638581  -0.0763895  -0.2110304  -0.4835887
+    6  -0.0114336   0.0119594  -0.0491207   0.1703041  -0.4911720   0.2970473   0.7840565
+    7  -0.0180772   0.0052447  -0.1008887   0.1067037   0.5623551   0.2835558   0.6708437
+
+       -0.6811047   0.2930006   0.9860211   1.2953253   2.5293580   2.7157483   3.8700721
+
+        2.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+Orbital energies (a.u.):
+
+  Doubly occupied orbitals
+   1A1    -20.568144     2A1     -1.319467     1B2     -0.681105  
+   3A1     -0.561106     1B1     -0.494389  
+
+
+  Unoccupied orbitals
+   4A1      0.202539     2B2      0.293001     3B2      0.986021  
+   5A1      1.051616     6A1      1.130301     2B1      1.169088  
+   4B2      1.295325     7A1      1.407690     1A2      1.799806  
+   8A1      1.817609     3B1      1.923735     9A1      2.512033  
+   5B2      2.529358     6B2      2.715748     2A2      2.929202  
+   4B1      2.938307    10A1      3.294031    11A1      3.620648  
+   7B2      3.870072    12A1      4.083028  
+
+
+        SCF total energy   =     -76.017309342692
+        kinetic energy     =      75.654850437559
+        nuc. attr. energy  =    -198.043981775033
+        elec. rep. energy  =      46.371821994783
+        potential energy   =    -151.672159780251
+        virial theorem     =       1.995231889838
+        wavefunction norm  =       1.000000000000
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+user time   =       0.00 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+                  --------------------------------------------
+                    CINTS: An integrals program written in C
+                     Justin T. Fermann and Edward F. Valeev
+                  --------------------------------------------
+
+
+  -OPTIONS:
+    Print level                 = 1
+    Integral tolerance          = 1e-15
+    Max. memory to use          = 2500000 double words
+    Number of threads           = 1
+    LIBINT's real type length   = 64 bit
+
+  -CALCULATION CONSTANTS:
+    Label                       = 6-31G** SCF H2O Optimization
+    Number of atoms             = 3
+    Number of atomic orbitals   = 25
+    Number of symmetry orbitals = 25
+    Maximum AM in the basis     = 2
+
+  -SYMMETRY INFORMATION;
+    Computational point group        = C2v
+    Number of irreps                 = 4
+  Rotational invariance condition satisfied.
+  |X cross Grad| =  0.000000000000   (it is the accuracy of the computed forces)
+  So long..
+
+
+  -SCF forces in the reference frame (a.u.):
+     Atom            X                  Y                   Z
+    ------   -----------------  -----------------  -----------------
+       1        0.000000000000     0.000000000000    -0.066082771284
+       2        0.000000000000     0.044087849340     0.033041385642
+       3        0.000000000000    -0.044087849340     0.033041385642
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+user time   =       0.17 seconds =       0.00 minutes
+system time =       0.02 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+
+	------------------------------------------------------
+	    OPTKING: for internal coordinate optimizations    
+	------------------------------------------------------
+
+Cartesian geometry and possibly gradient in a.u. with masses
+  8.0    15.99491462   0.0000000000  -0.0000000000  -0.1294768803
+  1.0     1.00782503   0.0000000000   1.4941866364   1.0274460245
+  1.0     1.00782503   0.0000000000  -1.4941866364   1.0274460245
+                       0.0000000000   0.0000000000  -0.0660827713
+                       0.0000000000   0.0440878493   0.0330413856
+                       0.0000000000  -0.0440878493   0.0330413856
+
+Generating simple internals
+
+Generating simple internals
+
+Simple Internal Coordinates and Values
+Stretches
+    (1 1 2) (1.00000000)
+    (2 1 3) (1.00000000)
+Bends
+    (3 2 1 3) (104.50000000)
+
+Using simple, possibly redundant, internal coordinates.
+ 
+ ** Taking normal optimization step. **
+
+Current SCF energy before step       -76.0173093427
+
+Taking geometry step number 1
+
+BuB^t Determinant: 2.373313e+00
+
+Generating empirical Hessian.
+
+Force Constants read from PSIF_OPTKING
+
+No BFGS update performed.
+
+Scaling displacements by 1.000000
+
+Internal Coordinate Update in Ang or Rad, aJ/Ang or aJ/Rad
+         Value          Force        Displacement   New Value
+ 1   1.0000000000  -0.4538572268  -0.0611291538   0.9388708462
+ 2   1.0000000000  -0.4538572268  -0.0611291538   0.9388708462
+ 3   1.8238690683  -0.0071336127  -0.0102265365   1.8136425318
+   MAX force:    0.4538572268   RMS force:    0.3705957605
+
+Back-transformation to cartesian coordinates...
+ Iter   RMS Delta(dx)   RMS Delta(dq)
+    2  0.028025535004  0.000384529907
+    3  0.000137087922  0.000000042849
+    4  0.000000023858  0.000000000000
+Convergence to displaced geometry took 4 iterations.
+
+New Cartesian Geometry in a.u.
+  8.0   0.0000000000   0.0000000000  -0.1223632565
+  1.0   0.0000000000   1.3972759189   0.9709968388
+  1.0   0.0000000000  -1.3972759189   0.9709968388
+
+Geometry written to chkpt
+
+******** OPTKING execution completed ********
+
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+                  --------------------------------------------
+                    CINTS: An integrals program written in C
+                     Justin T. Fermann and Edward F. Valeev
+                  --------------------------------------------
+
+
+  -OPTIONS:
+    Print level                 = 1
+    Integral tolerance          = 1e-15
+    Max. memory to use          = 2500000 double words
+    Number of threads           = 1
+    LIBINT's real type length   = 64 bit
+
+  -CALCULATION CONSTANTS:
+    Label                       = 6-31G** SCF H2O Optimization
+    Number of atoms             = 3
+    Number of atomic orbitals   = 25
+    Number of symmetry orbitals = 25
+    Maximum AM in the basis     = 2
+
+  -SYMMETRY INFORMATION;
+    Computational point group        = C2v
+    Number of irreps                 = 4
+
+    Wrote 13617 two-electron integrals to IWL file  0
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+user time   =       0.02 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+
+             ------------------------------------------
+
+                CSCF3.0: An SCF program written in C
+
+              Written by too many people to mention here
+
+             ------------------------------------------
+
+  I think the multiplicity is 1.
+  If this is wrong, please specify the MULTP keyword
+
+  label        = 6-31G** SCF H2O Optimization
+  wfn          = SCF
+  reference    = RHF
+  multiplicity = 1
+  charge       = 0
+  direct       = false
+  dertype      = NONE
+  convergence  = 7
+  maxiter      = 40
+  guess        = AUTO
+
+  nuclear repulsion energy        9.3759442489021
+
+  using old vector from file30 as initial guess
+  energy from old vector:   -76.01730934
+
+  level shift                      = 0.100000
+  diis scale factor                = 1.000000
+  iterations before extrapolation  = 0
+  6 error matrices will be kept
+
+  keeping integrals in 114320 bytes of core
+
+  The lowest eigenvalue of the overlap matrix was 2.208929e-02
+
+
+  Reading Occupations from file30
+
+  Symmetry block:   A1    A2    B1    B2   
+  DOCC:              3     0     1     1   
+  SOCC:              0     0     0     0   
+
+  reading integrals in the IWL format from files 33,35,36,37
+  wrote 6516 integrals to file92
+
+  iter       total energy        delta E         delta P          diiser
+    1       -76.0211006288    8.539704e+01    0.000000e+00    0.000000e+00
+    2       -76.0232029560    2.102327e-03    6.908094e-04    1.730078e-02
+    3       -76.0233981662    1.952102e-04    2.347047e-04    8.639609e-03
+    4       -76.0234378446    3.967836e-05    9.681613e-05    2.677290e-03
+    5       -76.0234411488    3.304241e-06    3.869050e-05    7.406302e-04
+    6       -76.0234413604    2.116190e-07    1.240952e-05    1.749706e-04
+    7       -76.0234413665    6.128090e-09    2.055094e-06    2.833035e-05
+    8       -76.0234413667    1.110720e-10    1.871877e-07    3.441580e-06
+    9       -76.0234413667    5.854872e-12    4.190287e-08    7.692506e-07
+
+ Correcting phases of orbitals.
+
+ molecular orbitals for irrep A1 
+
+           1           2           3           4           5           6           7           8           9          10
+
+    1   0.9946660   0.2103077  -0.0741071  -0.1010567   0.0488480   0.0098176   0.0836005   0.0287994   0.0588832  -0.0136243
+    2   0.0212334  -0.4704903   0.1654126   0.0516691   0.1431607  -0.8948085   1.3908906   0.2874332   0.5761800   0.1818462
+    3   0.0042822  -0.4148431   0.3421077   1.4627455  -0.2793655   1.5712356  -3.5966470  -0.8428891  -1.5071741  -0.2353921
+    4   0.0015895  -0.0885212  -0.5549273   0.2093120  -0.7113741   0.3624817   0.4075793   0.0310258   0.2033026  -0.0008001
+    5  -0.0001769  -0.0315467  -0.3882916   0.5125114   0.6492504  -0.6437067  -1.0882617  -0.4846348  -0.6851428  -0.5010062
+    6  -0.0039478  -0.0013829   0.0099818  -0.0750811  -0.0387840  -0.3905863   0.2918692  -0.2563426   1.0966257   0.0594652
+    7  -0.0037464  -0.0058109   0.0011377  -0.0547221   0.3661143  -0.1351890   0.6037003  -0.2423059  -0.5178587   0.7785960
+    8  -0.0037743  -0.0083306  -0.0376300  -0.0432461   0.1871047  -0.2887301   0.3489179   0.7752202  -0.0156262  -0.9891763
+    9  -0.0000294  -0.1502120  -0.1447726  -0.0503260   0.4258017   0.5861341   0.3577776   0.2324079   0.6672248   0.1233710
+   10  -0.0003395  -0.0128468  -0.0872062  -1.0621867  -0.4056014  -0.5016887   0.7911237   0.1404206   0.1222596   0.0693386
+   11   0.0003897   0.0220770   0.0150953   0.0043452   0.2010062   0.0550917   0.0093298  -0.1810809   0.1594759  -0.4903730
+   12   0.0002679   0.0137893  -0.0061531   0.0015242   0.0832689  -0.0095717  -0.1117147   0.2586399   0.1630215   0.6776949
+
+      -20.5576709  -1.3505695  -0.5732850   0.2158221   1.1002123   1.1384720   1.4196540   1.8136700   2.5964615   3.4118076
+
+        2.0000000   2.0000000   2.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+          11          12
+
+    1   0.2470529  -0.4031093
+    2  -0.3511813   0.0992666
+    3  -2.7903238   2.5765948
+    4  -0.5142004  -0.5325244
+    5  -0.8012172  -0.1221191
+    6   1.1748866  -1.1207466
+    7   0.0328485  -1.9842798
+    8   0.3473684  -1.5746638
+    9   0.8251797   0.7490924
+   10   0.5494780  -0.2930804
+   11  -0.7470202  -0.5046885
+   12  -0.4847956  -0.4579015
+
+        3.7528708   4.1210597
+
+        0.0000000   0.0000000
+
+ molecular orbitals for irrep A2 
+
+           1           2
+
+    1  -0.6721072  -0.9075228
+    2  -0.3498141   0.7239521
+
+        1.8076713   2.9984214
+
+        0.0000000   0.0000000
+
+ molecular orbitals for irrep B1 
+
+           1           2           3           4
+
+    1  -0.6382042  -0.9620040  -0.0392954  -0.0485153
+    2  -0.5001229   1.0450926  -0.1883575  -0.4156290
+    3  -0.0281105   0.0141503   0.7785347  -0.7576017
+    4  -0.0208906  -0.0162270   0.3001178   0.7769089
+
+       -0.4987527   1.1682969   1.9247271   3.0174372
+
+        2.0000000   0.0000000   0.0000000   0.0000000
+
+ molecular orbitals for irrep B2 
+
+           1           2           3           4           5           6           7
+
+    1   0.5043867   0.3253277   0.1243509  -0.8706594  -0.0147285   0.3490786   0.8248880
+    2   0.2737974   0.8664130   0.4258964   1.7862705   0.4804413  -0.5490734   1.3132297
+    3   0.0338863   0.0399191  -0.2738808   0.1753746  -0.1376852  -0.8411835   1.4912770
+    4   0.2431725  -0.0518959  -0.7671258  -0.1215280  -0.1132698   0.5685527  -1.2804351
+    5   0.1287301  -1.4582591   0.5736491  -1.0123736  -0.1036764  -0.1605624  -0.5161036
+    6  -0.0108923   0.0160447  -0.0539896   0.1765885  -0.4874940   0.3226075   0.8215345
+    7  -0.0191959   0.0097948  -0.1048323   0.1389736   0.5857098   0.2354531   0.6982715
+
+       -0.7122862   0.3094366   1.0106004   1.2956659   2.6031973   2.8464353   3.9606340
+
+        2.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+Orbital energies (a.u.):
+
+  Doubly occupied orbitals
+   1A1    -20.557671     2A1     -1.350570     1B2     -0.712286  
+   3A1     -0.573285     1B1     -0.498753  
+
+
+  Unoccupied orbitals
+   4A1      0.215822     2B2      0.309437     3B2      1.010600  
+   5A1      1.100212     6A1      1.138472     2B1      1.168297  
+   4B2      1.295666     7A1      1.419654     1A2      1.807671  
+   8A1      1.813670     3B1      1.924727     9A1      2.596462  
+   5B2      2.603197     6B2      2.846435     2A2      2.998421  
+   4B1      3.017437    10A1      3.411808    11A1      3.752871  
+   7B2      3.960634    12A1      4.121060  
+
+
+        SCF total energy   =     -76.023441366657
+        kinetic energy     =      75.885523672567
+        nuc. attr. energy  =    -199.299167301988
+        elec. rep. energy  =      47.390202262765
+        potential energy   =    -151.908965039223
+        virial theorem     =       1.998185853053
+        wavefunction norm  =       1.000000000000
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+user time   =       0.00 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+                  --------------------------------------------
+                    CINTS: An integrals program written in C
+                     Justin T. Fermann and Edward F. Valeev
+                  --------------------------------------------
+
+
+  -OPTIONS:
+    Print level                 = 1
+    Integral tolerance          = 1e-15
+    Max. memory to use          = 2500000 double words
+    Number of threads           = 1
+    LIBINT's real type length   = 64 bit
+
+  -CALCULATION CONSTANTS:
+    Label                       = 6-31G** SCF H2O Optimization
+    Number of atoms             = 3
+    Number of atomic orbitals   = 25
+    Number of symmetry orbitals = 25
+    Maximum AM in the basis     = 2
+
+  -SYMMETRY INFORMATION;
+    Computational point group        = C2v
+    Number of irreps                 = 4
+  Rotational invariance condition satisfied.
+  |X cross Grad| =  0.000000000000   (it is the accuracy of the computed forces)
+  So long..
+
+
+  -SCF forces in the reference frame (a.u.):
+     Atom            X                  Y                   Z
+    ------   -----------------  -----------------  -----------------
+       1        0.000000000000     0.000000000000     0.001391987879
+       2        0.000000000000    -0.007306642993    -0.000695993939
+       3        0.000000000000     0.007306642993    -0.000695993939
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+user time   =       0.15 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+
+	------------------------------------------------------
+	    OPTKING: for internal coordinate optimizations    
+	------------------------------------------------------
+
+Cartesian geometry and possibly gradient in a.u. with masses
+  8.0    15.99491462   0.0000000000   0.0000000000  -0.1223632565
+  1.0     1.00782503   0.0000000000   1.3972759189   0.9709968388
+  1.0     1.00782503   0.0000000000  -1.3972759189   0.9709968388
+                       0.0000000000   0.0000000000   0.0013919879
+                       0.0000000000  -0.0073066430  -0.0006959939
+                       0.0000000000   0.0073066430  -0.0006959939
+
+Simple Internal Coordinates and Values
+Stretches
+    (1 1 2) (0.93887085)
+    (2 1 3) (0.93887085)
+Bends
+    (3 2 1 3) (103.91406262)
+ 
+ ** Taking normal optimization step. **
+
+Current SCF energy before step       -76.0234413667
+
+Taking geometry step number 2
+
+BuB^t Determinant: 2.690864e+00
+
+Force Constants read from PSIF_OPTKING
+
+Performing BFGS Hessian update with previous 1 gradient(s).
+
+Scaling displacements by 1.000000
+
+Internal Coordinate Update in Ang or Rad, aJ/Ang or aJ/Rad
+         Value          Force        Displacement   New Value
+ 1   0.9388708462   0.0509420390   0.0050453003   0.9439161465
+ 2   0.9388708462   0.0509420390   0.0050453003   0.9439161465
+ 3   1.8136425318   0.0305892544   0.0383635173   1.8520060491
+   MAX force:    0.0509420390   RMS force:    0.0451880706
+
+Back-transformation to cartesian coordinates...
+ Iter   RMS Delta(dx)   RMS Delta(dq)
+    2  0.008493675197  0.000185281791
+    3  0.000084968273  0.000000022436
+    4  0.000000008501  0.000000000000
+Convergence to displaced geometry took 4 iterations.
+
+New Cartesian Geometry in a.u.
+  8.0   0.0000000000   0.0000000000  -0.1199826802
+  1.0   0.0000000000   1.4256101430   0.9521061023
+  1.0   0.0000000000  -1.4256101430   0.9521061023
+
+Geometry written to chkpt
+
+******** OPTKING execution completed ********
+
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:25 2006
+
+                  --------------------------------------------
+                    CINTS: An integrals program written in C
+                     Justin T. Fermann and Edward F. Valeev
+                  --------------------------------------------
+
+
+  -OPTIONS:
+    Print level                 = 1
+    Integral tolerance          = 1e-15
+    Max. memory to use          = 2500000 double words
+    Number of threads           = 1
+    LIBINT's real type length   = 64 bit
+
+  -CALCULATION CONSTANTS:
+    Label                       = 6-31G** SCF H2O Optimization
+    Number of atoms             = 3
+    Number of atomic orbitals   = 25
+    Number of symmetry orbitals = 25
+    Maximum AM in the basis     = 2
+
+  -SYMMETRY INFORMATION;
+    Computational point group        = C2v
+    Number of irreps                 = 4
+
+    Wrote 13617 two-electron integrals to IWL file  0
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+user time   =       0.02 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          1 seconds =       0.02 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+
+             ------------------------------------------
+
+                CSCF3.0: An SCF program written in C
+
+              Written by too many people to mention here
+
+             ------------------------------------------
+
+  I think the multiplicity is 1.
+  If this is wrong, please specify the MULTP keyword
+
+  label        = 6-31G** SCF H2O Optimization
+  wfn          = SCF
+  reference    = RHF
+  multiplicity = 1
+  charge       = 0
+  direct       = false
+  dertype      = NONE
+  convergence  = 7
+  maxiter      = 40
+  guess        = AUTO
+
+  nuclear repulsion energy        9.3206297144294
+
+  using old vector from file30 as initial guess
+  energy from old vector:   -76.02344137
+
+  level shift                      = 0.100000
+  diis scale factor                = 1.000000
+  iterations before extrapolation  = 0
+  6 error matrices will be kept
+
+  keeping integrals in 114320 bytes of core
+
+  The lowest eigenvalue of the overlap matrix was 2.231702e-02
+
+
+  Reading Occupations from file30
+
+  Symmetry block:   A1    A2    B1    B2   
+  DOCC:              3     0     1     1   
+  SOCC:              0     0     0     0   
+
+  reading integrals in the IWL format from files 33,35,36,37
+  wrote 6516 integrals to file92
+
+  iter       total energy        delta E         delta P          diiser
+    1       -76.0235504641    8.534418e+01    0.000000e+00    0.000000e+00
+    2       -76.0236101493    5.968519e-05    1.298728e-04    3.401978e-03
+    3       -76.0236123069    2.157610e-06    2.746719e-05    7.916886e-04
+    4       -76.0236125478    2.409056e-07    6.363849e-06    2.757165e-04
+    5       -76.0236125555    7.701672e-09    1.328467e-06    4.883938e-05
+    6       -76.0236125557    2.001883e-10    2.420643e-07    6.710402e-06
+    7       -76.0236125557    1.205080e-11    8.978732e-08    1.334193e-06
+
+ Correcting phases of orbitals.
+
+ molecular orbitals for irrep A1 
+
+           1           2           3           4           5           6           7           8           9          10
+
+    1   0.9946658   0.2106528  -0.0724752  -0.1016992   0.0513534  -0.0002361   0.0820144   0.0283083   0.0572688  -0.0135761
+    2   0.0212076  -0.4715000   0.1616871   0.0540092  -0.0316371  -0.8716648   1.4126395   0.2857625   0.5687080   0.1454428
+    3   0.0042849  -0.4185117   0.3360027   1.4567257  -0.0003356   1.5282921  -3.6147671  -0.8285865  -1.4711290  -0.2257479
+    4   0.0015472  -0.0854574  -0.5570967   0.2083712  -0.5991448   0.5319016   0.4139939   0.0357524   0.2000539  -0.0314547
+    5  -0.0001956  -0.0315053  -0.3930491   0.5036119   0.4573809  -0.7901459  -1.0592690  -0.4733895  -0.6676687  -0.4952117
+    6  -0.0039448  -0.0013293   0.0098237  -0.0742114  -0.1119596  -0.3587304   0.3143653  -0.2784249   1.0892213   0.0503358
+    7  -0.0037588  -0.0061468   0.0009135  -0.0544819   0.3420122  -0.2024133   0.5953724  -0.2347421  -0.5083474   0.7440031
+    8  -0.0038069  -0.0081085  -0.0369742  -0.0442483   0.1111963  -0.3169234   0.3512360   0.7889265  -0.0208441  -0.9812298
+    9  -0.0000004  -0.1480663  -0.1428854  -0.0529100   0.5632715   0.4752056   0.3254002   0.2286811   0.6549108   0.1209571
+   10  -0.0003397  -0.0129114  -0.0880043  -1.0599008  -0.4951652  -0.3886635   0.8050200   0.1369087   0.1136665   0.0825009
+   11   0.0003690   0.0220090   0.0148995   0.0038057   0.2035461   0.0072756   0.0010568  -0.1710620   0.1466807  -0.5181794
+   12   0.0002504   0.0133768  -0.0063084   0.0016384   0.0721271  -0.0303296  -0.1119429   0.2596527   0.1829587   0.6529467
+
+      -20.5573383  -1.3458816  -0.5678344   0.2151734   1.0919453   1.1343272   1.4110389   1.8305633   2.5875290   3.4049111
+
+        2.0000000   2.0000000   2.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+          11          12
+
+    1   0.2471714  -0.4027209
+    2  -0.3431315   0.1115078
+    3  -2.7614728   2.5850644
+    4  -0.4929182  -0.5109307
+    5  -0.7568857  -0.1066628
+    6   1.1682742  -1.1225202
+    7  -0.0394428  -2.0244373
+    8   0.4219710  -1.5324325
+    9   0.8068083   0.7394086
+   10   0.5438633  -0.2965367
+   11  -0.7342767  -0.5001547
+   12  -0.5024651  -0.4630574
+
+        3.7438985   4.1284951
+
+        0.0000000   0.0000000
+
+ molecular orbitals for irrep A2 
+
+           1           2
+
+    1  -0.6687721  -0.9112429
+    2  -0.3516346   0.7228771
+
+        1.8021069   3.0062496
+
+        0.0000000   0.0000000
+
+ molecular orbitals for irrep B1 
+
+           1           2           3           4
+
+    1  -0.6380548  -0.9623872  -0.0358144  -0.0433149
+    2  -0.5005436   1.0439757  -0.1878625  -0.4133513
+    3  -0.0275440   0.0137888   0.7847148  -0.7415222
+    4  -0.0207738  -0.0145379   0.2983517   0.7719848
+
+       -0.4974824   1.1690491   1.9318987   2.9954326
+
+        2.0000000   0.0000000   0.0000000   0.0000000
+
+ molecular orbitals for irrep B2 
+
+           1           2           3           4           5           6           7
+
+    1   0.5024618   0.3256952   0.1407069  -0.8691151  -0.0536391   0.3543593   0.8134365
+    2   0.2725954   0.8697919   0.4031001   1.7991036   0.5525599  -0.5064710   1.3259513
+    3   0.0331869   0.0395653  -0.2775844   0.1638276  -0.0584693  -0.8453319   1.4771166
+    4   0.2435068  -0.0506229  -0.7678249  -0.1337135  -0.1808228   0.5518145  -1.2632654
+    5   0.1278132  -1.4414849   0.5795074  -0.9957748  -0.0985879  -0.1659456  -0.5146963
+    6  -0.0116611   0.0161767  -0.0554559   0.1825708  -0.4974276   0.2743548   0.8377871
+    7  -0.0188863   0.0091068  -0.1075062   0.1296467   0.5715972   0.2929315   0.6650705
+
+       -0.7136828   0.3082277   1.0170778   1.2954959   2.5804886   2.8402726   3.9431300
+
+        2.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+Orbital energies (a.u.):
+
+  Doubly occupied orbitals
+   1A1    -20.557338     2A1     -1.345882     1B2     -0.713683  
+   3A1     -0.567834     1B1     -0.497482  
+
+
+  Unoccupied orbitals
+   4A1      0.215173     2B2      0.308228     3B2      1.017078  
+   5A1      1.091945     6A1      1.134327     2B1      1.169049  
+   4B2      1.295496     7A1      1.411039     1A2      1.802107  
+   8A1      1.830563     3B1      1.931899     5B2      2.580489  
+   9A1      2.587529     6B2      2.840273     4B1      2.995433  
+   2A2      3.006250    10A1      3.404911    11A1      3.743899  
+   7B2      3.943130    12A1      4.128495  
+
+
+        SCF total energy   =     -76.023612555732
+        kinetic energy     =      75.860812063471
+        nuc. attr. energy  =    -199.184859129734
+        elec. rep. energy  =      47.300434510531
+        potential energy   =    -151.884424619203
+        virial theorem     =       1.997858553589
+        wavefunction norm  =       1.000000000000
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+user time   =       0.00 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+                  --------------------------------------------
+                    CINTS: An integrals program written in C
+                     Justin T. Fermann and Edward F. Valeev
+                  --------------------------------------------
+
+
+  -OPTIONS:
+    Print level                 = 1
+    Integral tolerance          = 1e-15
+    Max. memory to use          = 2500000 double words
+    Number of threads           = 1
+    LIBINT's real type length   = 64 bit
+
+  -CALCULATION CONSTANTS:
+    Label                       = 6-31G** SCF H2O Optimization
+    Number of atoms             = 3
+    Number of atomic orbitals   = 25
+    Number of symmetry orbitals = 25
+    Maximum AM in the basis     = 2
+
+  -SYMMETRY INFORMATION;
+    Computational point group        = C2v
+    Number of irreps                 = 4
+  Rotational invariance condition satisfied.
+  |X cross Grad| =  0.000000000000   (it is the accuracy of the computed forces)
+  So long..
+
+
+  -SCF forces in the reference frame (a.u.):
+     Atom            X                  Y                   Z
+    ------   -----------------  -----------------  -----------------
+       1        0.000000000000     0.000000000000    -0.000828233964
+       2        0.000000000000     0.001059207628     0.000414116982
+       3        0.000000000000    -0.001059207628     0.000414116982
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+user time   =       0.15 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+
+	------------------------------------------------------
+	    OPTKING: for internal coordinate optimizations    
+	------------------------------------------------------
+
+Cartesian geometry and possibly gradient in a.u. with masses
+  8.0    15.99491462   0.0000000000   0.0000000000  -0.1199826802
+  1.0     1.00782503   0.0000000000   1.4256101430   0.9521061023
+  1.0     1.00782503   0.0000000000  -1.4256101430   0.9521061023
+                       0.0000000000   0.0000000000  -0.0008282340
+                       0.0000000000   0.0010592076   0.0004141170
+                       0.0000000000  -0.0010592076   0.0004141170
+
+Simple Internal Coordinates and Values
+Stretches
+    (1 1 2) (0.94391615)
+    (2 1 3) (0.94391615)
+Bends
+    (3 2 1 3) (106.11213025)
+ 
+ ** Taking normal optimization step. **
+
+Current SCF energy before step       -76.0236125557
+
+Taking geometry step number 3
+
+BuB^t Determinant: 2.667940e+00
+
+Force Constants read from PSIF_OPTKING
+
+Performing BFGS Hessian update with previous 2 gradient(s).
+
+Scaling displacements by 1.000000
+
+Internal Coordinate Update in Ang or Rad, aJ/Ang or aJ/Rad
+         Value          Force        Displacement   New Value
+ 1   0.9439161465  -0.0090250433  -0.0009099001   0.9430062465
+ 2   0.9439161465  -0.0090250433  -0.0009099001   0.9430062465
+ 3   1.8520060491  -0.0023769116  -0.0022182347   1.8497878144
+   MAX force:    0.0090250433   RMS force:    0.0074956103
+
+Back-transformation to cartesian coordinates...
+ Iter   RMS Delta(dx)   RMS Delta(dq)
+    2  0.000650934660  0.000001323212
+    3  0.000000490263  0.000000000001
+    4  0.000000000000  0.000000000000
+Convergence to displaced geometry took 4 iterations.
+
+New Cartesian Geometry in a.u.
+  8.0   0.0000000000   0.0000000000  -0.1200437334
+  1.0   0.0000000000   1.4230471060   0.9525905811
+  1.0   0.0000000000  -1.4230471060   0.9525905811
+
+Geometry written to chkpt
+
+******** OPTKING execution completed ********
+
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+                  --------------------------------------------
+                    CINTS: An integrals program written in C
+                     Justin T. Fermann and Edward F. Valeev
+                  --------------------------------------------
+
+
+  -OPTIONS:
+    Print level                 = 1
+    Integral tolerance          = 1e-15
+    Max. memory to use          = 2500000 double words
+    Number of threads           = 1
+    LIBINT's real type length   = 64 bit
+
+  -CALCULATION CONSTANTS:
+    Label                       = 6-31G** SCF H2O Optimization
+    Number of atoms             = 3
+    Number of atomic orbitals   = 25
+    Number of symmetry orbitals = 25
+    Maximum AM in the basis     = 2
+
+  -SYMMETRY INFORMATION;
+    Computational point group        = C2v
+    Number of irreps                 = 4
+
+    Wrote 13617 two-electron integrals to IWL file  0
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+user time   =       0.02 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+
+             ------------------------------------------
+
+                CSCF3.0: An SCF program written in C
+
+              Written by too many people to mention here
+
+             ------------------------------------------
+
+  I think the multiplicity is 1.
+  If this is wrong, please specify the MULTP keyword
+
+  label        = 6-31G** SCF H2O Optimization
+  wfn          = SCF
+  reference    = RHF
+  multiplicity = 1
+  charge       = 0
+  direct       = false
+  dertype      = NONE
+  convergence  = 7
+  maxiter      = 40
+  guess        = AUTO
+
+  nuclear repulsion energy        9.3299164012781
+
+  using old vector from file30 as initial guess
+  energy from old vector:   -76.02361256
+
+  level shift                      = 0.100000
+  diis scale factor                = 1.000000
+  iterations before extrapolation  = 0
+  6 error matrices will be kept
+
+  keeping integrals in 114320 bytes of core
+
+  The lowest eigenvalue of the overlap matrix was 2.228161e-02
+
+
+  Reading Occupations from file30
+
+  Symmetry block:   A1    A2    B1    B2   
+  DOCC:              3     0     1     1   
+  SOCC:              0     0     0     0   
+
+  reading integrals in the IWL format from files 33,35,36,37
+  wrote 6516 integrals to file92
+
+  iter       total energy        delta E         delta P          diiser
+    1       -76.0236143666    8.535353e+01    0.000000e+00    0.000000e+00
+    2       -76.0236149657    5.991084e-07    1.145566e-05    3.030895e-04
+    3       -76.0236150002    3.442754e-08    3.354283e-06    1.120353e-04
+    4       -76.0236150077    7.489646e-09    1.149576e-06    3.958617e-05
+    5       -76.0236150080    3.656027e-10    3.581590e-07    8.744378e-06
+    6       -76.0236150081    3.736034e-11    1.562356e-07    2.363128e-06
+    7       -76.0236150081    1.392664e-12    3.239085e-08    4.123668e-07
+
+ Correcting phases of orbitals.
+
+ molecular orbitals for irrep A1 
+
+           1           2           3           4           5           6           7           8           9          10
+
+    1   0.9946653   0.2106266  -0.0725897  -0.1016843   0.0513383   0.0007108   0.0821254   0.0283542   0.0575270  -0.0136667
+    2   0.0212123  -0.4713621   0.1619526   0.0537611  -0.0170391  -0.8733307   1.4121510   0.2857653   0.5696521   0.1475602
+    3   0.0042873  -0.4180579   0.3364647   1.4584927  -0.0245636   1.5294235  -3.6168655  -0.8296439  -1.4762496  -0.2261893
+    4   0.0015515  -0.0857558  -0.5570349   0.2081851  -0.6094853   0.5196851   0.4131429   0.0349740   0.1998250  -0.0304911
+    5  -0.0001932  -0.0314746  -0.3927585   0.5040376   0.4737094  -0.7814777  -1.0609714  -0.4738178  -0.6697129  -0.4960346
+    6  -0.0039462  -0.0013325   0.0098424  -0.0743414  -0.1062698  -0.3614245   0.3133394  -0.2773727   1.0901682   0.0506651
+    7  -0.0037567  -0.0061070   0.0009493  -0.0545306   0.3452792  -0.1963514   0.5958128  -0.2349088  -0.5092376   0.7465006
+    8  -0.0038045  -0.0081146  -0.0370173  -0.0442468   0.1175102  -0.3150126   0.3512551   0.7880803  -0.0203727  -0.9830687
+    9  -0.0000044  -0.1483678  -0.1429680  -0.0526172   0.5528848   0.4860049   0.3271782   0.2288892   0.6566682   0.1214252
+   10  -0.0003403  -0.0128851  -0.0877954  -1.0606248  -0.4880803  -0.3976912   0.8053247   0.1372065   0.1148436   0.0818194
+   11   0.0003718   0.0220365   0.0149109   0.0038529   0.2040019   0.0111580   0.0014498  -0.1715019   0.1473339  -0.5171026
+   12   0.0002523   0.0134089  -0.0063114   0.0016248   0.0731185  -0.0287693  -0.1118386   0.2596071   0.1817833   0.6548547
+
+      -20.5572497  -1.3464793  -0.5682591   0.2153452   1.0930053   1.1345780   1.4116317   1.8296392   2.5888926   3.4066627
+
+        2.0000000   2.0000000   2.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+          11          12
+
+    1   0.2475189  -0.4026381
+    2  -0.3462387   0.1079321
+    3  -2.7661230   2.5832729
+    4  -0.4949332  -0.5140772
+    5  -0.7590430  -0.1081661
+    6   1.1694984  -1.1213826
+    7  -0.0330055  -2.0234760
+    8   0.4194531  -1.5345541
+    9   0.8081328   0.7425195
+   10   0.5445970  -0.2963185
+   11  -0.7346577  -0.5014796
+   12  -0.5012505  -0.4640120
+
+        3.7458574   4.1286007
+
+        0.0000000   0.0000000
+
+ molecular orbitals for irrep A2 
+
+           1           2
+
+    1  -0.6689243  -0.9115733
+    2  -0.3513925   0.7233603
+
+        1.8025143   3.0065347
+
+        0.0000000   0.0000000
+
+ molecular orbitals for irrep B1 
+
+           1           2           3           4
+
+    1  -0.6380456  -0.9623436  -0.0363944  -0.0442829
+    2  -0.5005095   1.0441612  -0.1876828  -0.4136654
+    3  -0.0275891   0.0138082   0.7843762  -0.7427990
+    4  -0.0207967  -0.0148490   0.2982933   0.7726560
+
+       -0.4976041   1.1689881   1.9315344   2.9974777
+
+        2.0000000   0.0000000   0.0000000   0.0000000
+
+ molecular orbitals for irrep B2 
+
+           1           2           3           4           5           6           7
+
+    1   0.5026539   0.3255073   0.1390131  -0.8689429  -0.0508846   0.3539131   0.8165006
+    2   0.2725240   0.8699604   0.4068582   1.7989339   0.5486121  -0.5105689   1.3255791
+    3   0.0332292   0.0396769  -0.2773793   0.1653194  -0.0632127  -0.8463593   1.4781949
+    4   0.2435816  -0.0506001  -0.7676886  -0.1328350  -0.1769761   0.5539117  -1.2662613
+    5   0.1277244  -1.4438143   0.5773786  -0.9983137  -0.0990914  -0.1650795  -0.5151175
+    6  -0.0116119   0.0162087  -0.0553730   0.1823103  -0.4971504   0.2770037   0.8372750
+    7  -0.0189147   0.0091882  -0.1073661   0.1305105   0.5726490   0.2895127   0.6672021
+
+       -0.7139513   0.3084501   1.0169939   1.2955278   2.5825962   2.8418280   3.9452467
+
+        2.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+Orbital energies (a.u.):
+
+  Doubly occupied orbitals
+   1A1    -20.557250     2A1     -1.346479     1B2     -0.713951  
+   3A1     -0.568259     1B1     -0.497604  
+
+
+  Unoccupied orbitals
+   4A1      0.215345     2B2      0.308450     3B2      1.016994  
+   5A1      1.093005     6A1      1.134578     2B1      1.168988  
+   4B2      1.295528     7A1      1.411632     1A2      1.802514  
+   8A1      1.829639     3B1      1.931534     5B2      2.582596  
+   9A1      2.588893     6B2      2.841828     4B1      2.997478  
+   2A2      3.006535    10A1      3.406663    11A1      3.745857  
+   7B2      3.945247    12A1      4.128601  
+
+
+        SCF total energy   =     -76.023615008063
+        kinetic energy     =      75.864767530451
+        nuc. attr. energy  =    -199.204742937296
+        elec. rep. energy  =      47.316360398782
+        potential energy   =    -151.888382538514
+        virial theorem     =       1.997910550852
+        wavefunction norm  =       1.000000000000
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+user time   =       0.00 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+                  --------------------------------------------
+                    CINTS: An integrals program written in C
+                     Justin T. Fermann and Edward F. Valeev
+                  --------------------------------------------
+
+
+  -OPTIONS:
+    Print level                 = 1
+    Integral tolerance          = 1e-15
+    Max. memory to use          = 2500000 double words
+    Number of threads           = 1
+    LIBINT's real type length   = 64 bit
+
+  -CALCULATION CONSTANTS:
+    Label                       = 6-31G** SCF H2O Optimization
+    Number of atoms             = 3
+    Number of atomic orbitals   = 25
+    Number of symmetry orbitals = 25
+    Maximum AM in the basis     = 2
+
+  -SYMMETRY INFORMATION;
+    Computational point group        = C2v
+    Number of irreps                 = 4
+  Rotational invariance condition satisfied.
+  |X cross Grad| =  0.000000000000   (it is the accuracy of the computed forces)
+  So long..
+
+
+  -SCF forces in the reference frame (a.u.):
+     Atom            X                  Y                   Z
+    ------   -----------------  -----------------  -----------------
+       1        0.000000000000     0.000000000000     0.000101931848
+       2        0.000000000000    -0.000025790073    -0.000050965924
+       3        0.000000000000     0.000025790073    -0.000050965924
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+user time   =       0.15 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+
+	------------------------------------------------------
+	    OPTKING: for internal coordinate optimizations    
+	------------------------------------------------------
+
+Cartesian geometry and possibly gradient in a.u. with masses
+  8.0    15.99491462   0.0000000000   0.0000000000  -0.1200437334
+  1.0     1.00782503   0.0000000000   1.4230471060   0.9525905811
+  1.0     1.00782503   0.0000000000  -1.4230471060   0.9525905811
+                       0.0000000000   0.0000000000   0.0001019318
+                       0.0000000000  -0.0000257901  -0.0000509659
+                       0.0000000000   0.0000257901  -0.0000509659
+
+Simple Internal Coordinates and Values
+Stretches
+    (1 1 2) (0.94300625)
+    (2 1 3) (0.94300625)
+Bends
+    (3 2 1 3) (105.98503476)
+ 
+ ** Taking normal optimization step. **
+
+Current SCF energy before step       -76.0236150081
+
+Taking geometry step number 4
+
+BuB^t Determinant: 2.672758e+00
+
+Force Constants read from PSIF_OPTKING
+
+Performing BFGS Hessian update with previous 3 gradient(s).
+
+Scaling displacements by 1.000000
+
+Internal Coordinate Update in Ang or Rad, aJ/Ang or aJ/Rad
+         Value          Force        Displacement   New Value
+ 1   0.9430062465   0.0004224175   0.0000545158   0.9430607622
+ 2   0.9430062465   0.0004224175   0.0000545158   0.9430607622
+ 3   1.8497878144  -0.0001955938  -0.0003187195   1.8494690950
+   MAX force:    0.0004224175   RMS force:    0.0003629187
+
+Back-transformation to cartesian coordinates...
+ Iter   RMS Delta(dx)   RMS Delta(dq)
+    2  0.000067932522  0.000000014449
+    3  0.000000006974  0.000000000000
+Convergence to displaced geometry took 3 iterations.
+
+New Cartesian Geometry in a.u.
+  8.0   0.0000000000   0.0000000000  -0.1200760527
+  1.0   0.0000000000   1.4229584106   0.9528470472
+  1.0   0.0000000000  -1.4229584106   0.9528470472
+
+Geometry written to chkpt
+
+******** OPTKING execution completed ********
+
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+                  --------------------------------------------
+                    CINTS: An integrals program written in C
+                     Justin T. Fermann and Edward F. Valeev
+                  --------------------------------------------
+
+
+  -OPTIONS:
+    Print level                 = 1
+    Integral tolerance          = 1e-15
+    Max. memory to use          = 2500000 double words
+    Number of threads           = 1
+    LIBINT's real type length   = 64 bit
+
+  -CALCULATION CONSTANTS:
+    Label                       = 6-31G** SCF H2O Optimization
+    Number of atoms             = 3
+    Number of atomic orbitals   = 25
+    Number of symmetry orbitals = 25
+    Maximum AM in the basis     = 2
+
+  -SYMMETRY INFORMATION;
+    Computational point group        = C2v
+    Number of irreps                 = 4
+
+    Wrote 13617 two-electron integrals to IWL file  0
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+user time   =       0.02 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+
+             ------------------------------------------
+
+                CSCF3.0: An SCF program written in C
+
+              Written by too many people to mention here
+
+             ------------------------------------------
+
+  I think the multiplicity is 1.
+  If this is wrong, please specify the MULTP keyword
+
+  label        = 6-31G** SCF H2O Optimization
+  wfn          = SCF
+  reference    = RHF
+  multiplicity = 1
+  charge       = 0
+  direct       = false
+  dertype      = NONE
+  convergence  = 7
+  maxiter      = 40
+  guess        = AUTO
+
+  nuclear repulsion energy        9.3294192762845
+
+  using old vector from file30 as initial guess
+  energy from old vector:   -76.02361501
+
+  level shift                      = 0.100000
+  diis scale factor                = 1.000000
+  iterations before extrapolation  = 0
+  6 error matrices will be kept
+
+  keeping integrals in 114320 bytes of core
+
+  The lowest eigenvalue of the overlap matrix was 2.228313e-02
+
+
+  Reading Occupations from file30
+
+  Symmetry block:   A1    A2    B1    B2   
+  DOCC:              3     0     1     1   
+  SOCC:              0     0     0     0   
+
+  reading integrals in the IWL format from files 33,35,36,37
+  wrote 6516 integrals to file92
+
+  iter       total energy        delta E         delta P          diiser
+    1       -76.0236150127    8.535303e+01    0.000000e+00    0.000000e+00
+    2       -76.0236150186    5.868131e-09    1.393539e-06    2.895134e-05
+    3       -76.0236150191    4.956462e-10    4.137001e-07    1.135259e-05
+    4       -76.0236150192    9.575274e-11    1.532988e-07    4.323375e-06
+    5       -76.0236150192    7.702283e-12    6.363345e-08    1.064727e-06
+
+ Correcting phases of orbitals.
+
+ molecular orbitals for irrep A1 
+
+           1           2           3           4           5           6           7           8           9          10
+
+    1   0.9946654   0.2106249  -0.0726000  -0.1016755   0.0513150   0.0007242   0.0821351   0.0283571   0.0575154  -0.0136654
+    2   0.0212120  -0.4713665   0.1619756   0.0537587  -0.0167401  -0.8737107   1.4118702   0.2858096   0.5696437   0.1478598
+    3   0.0042868  -0.4180666   0.3364970   1.4583250  -0.0248387   1.5303144  -3.6162614  -0.8297683  -1.4761000  -0.2261395
+    4   0.0015516  -0.0857621  -0.5570075   0.2082307  -0.6099296   0.5191355   0.4131774   0.0350226   0.1999173  -0.0301015
+    5  -0.0001933  -0.0314807  -0.3927221   0.5041276   0.4744191  -0.7809015  -1.0612112  -0.4739600  -0.6697062  -0.4959706
+    6  -0.0039460  -0.0013329   0.0098424  -0.0743364  -0.1061194  -0.3616156   0.3131288  -0.2771596   1.0901624   0.0507045
+    7  -0.0037568  -0.0061072   0.0009477  -0.0545266   0.3452172  -0.1962836   0.5958933  -0.2350086  -0.5092617   0.7467717
+    8  -0.0038043  -0.0081175  -0.0370220  -0.0442304   0.1177424  -0.3150186   0.3511986   0.7879914  -0.0203667  -0.9829691
+    9  -0.0000043  -0.1483573  -0.1429878  -0.0526163   0.5525406   0.4862916   0.3274486   0.2289291   0.6566183   0.1213415
+   10  -0.0003402  -0.0128879  -0.0878138  -1.0605552  -0.4880038  -0.3981625   0.8050524   0.1372289   0.1148126   0.0816698
+   11   0.0003717   0.0220335   0.0149124   0.0038549   0.2039811   0.0112937   0.0015280  -0.1716011   0.1474393  -0.5167620
+   12   0.0002523   0.0134111  -0.0063079   0.0016248   0.0731805  -0.0287195  -0.1118585   0.2595953   0.1816244   0.6550295
+
+      -20.5572696  -1.3464664  -0.5682872   0.2153309   1.0930176   1.1345799   1.4116833   1.8294962   2.5888363   3.4065510
+
+        2.0000000   2.0000000   2.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+          11          12
+
+    1   0.2474465  -0.4026677
+    2  -0.3458991   0.1082821
+    3  -2.7657819   2.5835363
+    4  -0.4950152  -0.5139439
+    5  -0.7594892  -0.1081611
+    6   1.1693660  -1.1215835
+    7  -0.0328025  -2.0229309
+    8   0.4184574  -1.5349696
+    9   0.8082522   0.7421555
+   10   0.5445782  -0.2963135
+   11  -0.7348726  -0.5013288
+   12  -0.5011193  -0.4637525
+
+        3.7456953   4.1284452
+
+        0.0000000   0.0000000
+
+ molecular orbitals for irrep A2 
+
+           1           2
+
+    1  -0.6689551  -0.9114611
+    2  -0.3514003   0.7233024
+
+        1.8025450   3.0063515
+
+        0.0000000   0.0000000
+
+ molecular orbitals for irrep B1 
+
+           1           2           3           4
+
+    1  -0.6380496  -0.9623440  -0.0363634  -0.0442211
+    2  -0.5005077   1.0441514  -0.1877195  -0.4136555
+    3  -0.0275919   0.0138114   0.7843232  -0.7428758
+    4  -0.0207950  -0.0148296   0.2983323   0.7726360
+
+       -0.4976072   1.1689846   1.9314673   2.9975442
+
+        2.0000000   0.0000000   0.0000000   0.0000000
+
+ molecular orbitals for irrep B2 
+
+           1           2           3           4           5           6           7
+
+    1   0.5026566   0.3255308   0.1389841  -0.8689994  -0.0506754   0.3539201   0.8162266
+    2   0.2725552   0.8698760   0.4066902   1.7987390   0.5480435  -0.5106773   1.3254322
+    3   0.0332349   0.0396663  -0.2773463   0.1652972  -0.0637724  -0.8461887   1.4782851
+    4   0.2435646  -0.0506258  -0.7676994  -0.1327550  -0.1764697   0.5539182  -1.2661004
+    5   0.1277532  -1.4437326   0.5775984  -0.9982075  -0.0990807  -0.1651308  -0.5150758
+    6  -0.0116061   0.0162017  -0.0553558   0.1822506  -0.4970954   0.2773659   0.8370745
+    7  -0.0189157   0.0091876  -0.1073419   0.1305424   0.5727384   0.2891145   0.6674572
+
+       -0.7138868   0.3084361   1.0168913   1.2955228   2.5826730   2.8416598   3.9452190
+
+        2.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+Orbital energies (a.u.):
+
+  Doubly occupied orbitals
+   1A1    -20.557270     2A1     -1.346466     1B2     -0.713887  
+   3A1     -0.568287     1B1     -0.497607  
+
+
+  Unoccupied orbitals
+   4A1      0.215331     2B2      0.308436     3B2      1.016891  
+   5A1      1.093018     6A1      1.134580     2B1      1.168985  
+   4B2      1.295523     7A1      1.411683     1A2      1.802545  
+   8A1      1.829496     3B1      1.931467     5B2      2.582673  
+   9A1      2.588836     6B2      2.841660     4B1      2.997544  
+   2A2      3.006352    10A1      3.406551    11A1      3.745695  
+   7B2      3.945219    12A1      4.128445  
+
+
+        SCF total energy   =     -76.023615019181
+        kinetic energy     =      75.864575123039
+        nuc. attr. energy  =    -199.203608459258
+        elec. rep. energy  =      47.315418317038
+        potential energy   =    -151.888190142220
+        virial theorem     =       1.997908019816
+        wavefunction norm  =       1.000000000000
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+user time   =       0.00 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+                  --------------------------------------------
+                    CINTS: An integrals program written in C
+                     Justin T. Fermann and Edward F. Valeev
+                  --------------------------------------------
+
+
+  -OPTIONS:
+    Print level                 = 1
+    Integral tolerance          = 1e-15
+    Max. memory to use          = 2500000 double words
+    Number of threads           = 1
+    LIBINT's real type length   = 64 bit
+
+  -CALCULATION CONSTANTS:
+    Label                       = 6-31G** SCF H2O Optimization
+    Number of atoms             = 3
+    Number of atomic orbitals   = 25
+    Number of symmetry orbitals = 25
+    Maximum AM in the basis     = 2
+
+  -SYMMETRY INFORMATION;
+    Computational point group        = C2v
+    Number of irreps                 = 4
+  Rotational invariance condition satisfied.
+  |X cross Grad| =  0.000000000000   (it is the accuracy of the computed forces)
+  So long..
+
+
+  -SCF forces in the reference frame (a.u.):
+     Atom            X                  Y                   Z
+    ------   -----------------  -----------------  -----------------
+       1        0.000000000000     0.000000000000    -0.000009951987
+       2        0.000000000000     0.000001180126     0.000004975994
+       3        0.000000000000    -0.000001180126     0.000004975994
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+user time   =       0.15 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+
+	------------------------------------------------------
+	    OPTKING: for internal coordinate optimizations    
+	------------------------------------------------------
+
+Cartesian geometry and possibly gradient in a.u. with masses
+  8.0    15.99491462   0.0000000000   0.0000000000  -0.1200760527
+  1.0     1.00782503   0.0000000000   1.4229584106   0.9528470472
+  1.0     1.00782503   0.0000000000  -1.4229584106   0.9528470472
+                       0.0000000000   0.0000000000  -0.0000099520
+                       0.0000000000   0.0000011801   0.0000049760
+                       0.0000000000  -0.0000011801   0.0000049760
+
+Simple Internal Coordinates and Values
+Stretches
+    (1 1 2) (0.94306076)
+    (2 1 3) (0.94306076)
+Bends
+    (3 2 1 3) (105.96677348)
+ 
+ ** Taking normal optimization step. **
+
+Current SCF energy before step       -76.0236150192
+
+Taking geometry step number 5
+
+BuB^t Determinant: 2.672402e+00
+
+Force Constants read from PSIF_OPTKING
+
+Performing BFGS Hessian update with previous 4 gradient(s).
+
+Scaling displacements by 1.000000
+
+Internal Coordinate Update in Ang or Rad, aJ/Ang or aJ/Rad
+         Value          Force        Displacement   New Value
+ 1   0.9430607622  -0.0000324446  -0.0000042032   0.9430565590
+ 2   0.9430607622  -0.0000324446  -0.0000042032   0.9430565590
+ 3   1.8494690950   0.0000253495   0.0000352719   1.8495043669
+   MAX force:    0.0000324446   RMS force:    0.0000302650
+
+Back-transformation to cartesian coordinates...
+ Iter   RMS Delta(dx)   RMS Delta(dq)
+    2  0.000007348907  0.000000000150
+    3  0.000000000077  0.000000000000
+Convergence to displaced geometry took 3 iterations.
+
+New Cartesian Geometry in a.u.
+  8.0   0.0000000000   0.0000000000  -0.1200727090
+  1.0   0.0000000000   1.4229709901   0.9528205136
+  1.0   0.0000000000  -1.4229709901   0.9528205136
+
+Geometry written to chkpt
+
+******** OPTKING execution completed ********
+
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+                  --------------------------------------------
+                    CINTS: An integrals program written in C
+                     Justin T. Fermann and Edward F. Valeev
+                  --------------------------------------------
+
+
+  -OPTIONS:
+    Print level                 = 1
+    Integral tolerance          = 1e-15
+    Max. memory to use          = 2500000 double words
+    Number of threads           = 1
+    LIBINT's real type length   = 64 bit
+
+  -CALCULATION CONSTANTS:
+    Label                       = 6-31G** SCF H2O Optimization
+    Number of atoms             = 3
+    Number of atomic orbitals   = 25
+    Number of symmetry orbitals = 25
+    Maximum AM in the basis     = 2
+
+  -SYMMETRY INFORMATION;
+    Computational point group        = C2v
+    Number of irreps                 = 4
+
+    Wrote 13617 two-electron integrals to IWL file  0
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+user time   =       0.02 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+
+             ------------------------------------------
+
+                CSCF3.0: An SCF program written in C
+
+              Written by too many people to mention here
+
+             ------------------------------------------
+
+  I think the multiplicity is 1.
+  If this is wrong, please specify the MULTP keyword
+
+  label        = 6-31G** SCF H2O Optimization
+  wfn          = SCF
+  reference    = RHF
+  multiplicity = 1
+  charge       = 0
+  direct       = false
+  dertype      = NONE
+  convergence  = 7
+  maxiter      = 40
+  guess        = AUTO
+
+  nuclear repulsion energy        9.3294561853052
+
+  using old vector from file30 as initial guess
+  energy from old vector:   -76.02361502
+
+  level shift                      = 0.100000
+  diis scale factor                = 1.000000
+  iterations before extrapolation  = 0
+  6 error matrices will be kept
+
+  keeping integrals in 114320 bytes of core
+
+  The lowest eigenvalue of the overlap matrix was 2.228303e-02
+
+
+  Reading Occupations from file30
+
+  Symmetry block:   A1    A2    B1    B2   
+  DOCC:              3     0     1     1   
+  SOCC:              0     0     0     0   
+
+  reading integrals in the IWL format from files 33,35,36,37
+  wrote 6516 integrals to file92
+
+  iter       total energy        delta E         delta P          diiser
+    1       -76.0236150192    8.535307e+01    0.000000e+00    0.000000e+00
+    2       -76.0236150193    5.739764e-11    1.360399e-07    2.975283e-06
+    3       -76.0236150193    4.092726e-12    3.846740e-08    1.123090e-06
+
+ Correcting phases of orbitals.
+
+ molecular orbitals for irrep A1 
+
+           1           2           3           4           5           6           7           8           9          10
+
+    1   0.9946653   0.2106251  -0.0725989  -0.1016764   0.0513174   0.0007213   0.0821339   0.0283567   0.0575162  -0.0136654
+    2   0.0212120  -0.4713663   0.1619732   0.0537591  -0.0167933  -0.8736704   1.4118989   0.2858052   0.5696431   0.1478266
+    3   0.0042869  -0.4180663   0.3364939   1.4583391  -0.0247730   1.5302245  -3.6163191  -0.8297546  -1.4761076  -0.2261439
+    4   0.0015516  -0.0857609  -0.5570099   0.2082267  -0.6098687   0.5192102   0.4131755   0.0350188   0.1999084  -0.0301421
+    5  -0.0001933  -0.0314801  -0.3927260   0.5041185   0.4743215  -0.7809733  -1.0611849  -0.4739452  -0.6697040  -0.4959758
+    6  -0.0039461  -0.0013329   0.0098424  -0.0743367  -0.1061436  -0.3615924   0.3131515  -0.2771824   1.0901616   0.0507001
+    7  -0.0037568  -0.0061072   0.0009477  -0.0545269   0.3452185  -0.1963004   0.5958844  -0.2349982  -0.5092580   0.7467409
+    8  -0.0038043  -0.0081172  -0.0370215  -0.0442320   0.1177092  -0.3150214   0.3512042   0.7880016  -0.0203681  -0.9829766
+    9  -0.0000043  -0.1483579  -0.1429859  -0.0526167   0.5525918   0.4862458   0.3274188   0.2289248   0.6566208   0.1213492
+   10  -0.0003402  -0.0128877  -0.0878130  -1.0605612  -0.4880226  -0.3981010   0.8050794   0.1372262   0.1148140   0.0816858
+   11   0.0003717   0.0220337   0.0149122   0.0038547   0.2039827   0.0112738   0.0015195  -0.1715905   0.1474277  -0.5167979
+   12   0.0002523   0.0134109  -0.0063082   0.0016248   0.0731728  -0.0287270  -0.1118567   0.2595966   0.1816421   0.6550091
+
+      -20.5572660  -1.3464665  -0.5682831   0.2153323   1.0930153   1.1345795   1.4116774   1.8295122   2.5888403   3.4065600
+
+        2.0000000   2.0000000   2.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+          11          12
+
+    1   0.2474532  -0.4026649
+    2  -0.3459290   0.1082521
+    3  -2.7658089   2.5835128
+    4  -0.4950043  -0.5139528
+    5  -0.7594411  -0.1081592
+    6   1.1693773  -1.1215651
+    7  -0.0328326  -2.0229872
+    8   0.4185610  -1.5349248
+    9   0.8082384   0.7421875
+   10   0.5445789  -0.2963144
+   11  -0.7348505  -0.5013419
+   12  -0.5011344  -0.4637772
+
+        3.7457092   4.1284612
+
+        0.0000000   0.0000000
+
+ molecular orbitals for irrep A2 
+
+           1           2
+
+    1  -0.6689517  -0.9114720
+    2  -0.3514000   0.7233075
+
+        1.8025416   3.0063698
+
+        0.0000000   0.0000000
+
+ molecular orbitals for irrep B1 
+
+           1           2           3           4
+
+    1  -0.6380493  -0.9623440  -0.0363657  -0.0442259
+    2  -0.5005078   1.0441522  -0.1877160  -0.4136560
+    3  -0.0275916   0.0138110   0.7843289  -0.7428663
+    4  -0.0207951  -0.0148311   0.2983285   0.7726370
+
+       -0.4976064   1.1689853   1.9314748   2.9975348
+
+        2.0000000   0.0000000   0.0000000   0.0000000
+
+ molecular orbitals for irrep B2 
+
+           1           2           3           4           5           6           7
+
+    1   0.5026559   0.3255287   0.1389892  -0.8689940  -0.0507004   0.3539201   0.8162500
+    2   0.2725522   0.8698845   0.4067023   1.7987587   0.5481064  -0.5106605   1.3254474
+    3   0.0332343   0.0396672  -0.2773498   0.1652975  -0.0637091  -0.8462045   1.4782745
+    4   0.2435662  -0.0506232  -0.7676986  -0.1327642  -0.1765263   0.5539146  -1.2661124
+    5   0.1277506  -1.4437377   0.5775790  -0.9982146  -0.0990810  -0.1651268  -0.5150794
+    6  -0.0116068   0.0162024  -0.0553576   0.1822571  -0.4971014   0.2773255   0.8370955
+    7  -0.0189156   0.0091875  -0.1073445   0.1305381   0.5727279   0.2891596   0.6674284
+
+       -0.7138925   0.3084373   1.0169019   1.2955236   2.5826624   2.8416748   3.9452192
+
+        2.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+Orbital energies (a.u.):
+
+  Doubly occupied orbitals
+   1A1    -20.557266     2A1     -1.346466     1B2     -0.713893  
+   3A1     -0.568283     1B1     -0.497606  
+
+
+  Unoccupied orbitals
+   4A1      0.215332     2B2      0.308437     3B2      1.016902  
+   5A1      1.093015     6A1      1.134580     2B1      1.168985  
+   4B2      1.295524     7A1      1.411677     1A2      1.802542  
+   8A1      1.829512     3B1      1.931475     5B2      2.582662  
+   9A1      2.588840     6B2      2.841675     4B1      2.997535  
+   2A2      3.006370    10A1      3.406560    11A1      3.745709  
+   7B2      3.945219    12A1      4.128461  
+
+
+        SCF total energy   =     -76.023615019310
+        kinetic energy     =      75.864585391695
+        nuc. attr. energy  =    -199.203685891632
+        elec. rep. energy  =      47.315485480626
+        potential energy   =    -151.888200411005
+        virial theorem     =       1.997908154886
+        wavefunction norm  =       1.000000000000
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+user time   =       0.00 seconds =       0.00 minutes
+system time =       0.00 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+******************************************************************************
+tstart called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+                  --------------------------------------------
+                    CINTS: An integrals program written in C
+                     Justin T. Fermann and Edward F. Valeev
+                  --------------------------------------------
+
+
+  -OPTIONS:
+    Print level                 = 1
+    Integral tolerance          = 1e-15
+    Max. memory to use          = 2500000 double words
+    Number of threads           = 1
+    LIBINT's real type length   = 64 bit
+
+  -CALCULATION CONSTANTS:
+    Label                       = 6-31G** SCF H2O Optimization
+    Number of atoms             = 3
+    Number of atomic orbitals   = 25
+    Number of symmetry orbitals = 25
+    Maximum AM in the basis     = 2
+
+  -SYMMETRY INFORMATION;
+    Computational point group        = C2v
+    Number of irreps                 = 4
+  Rotational invariance condition satisfied.
+  |X cross Grad| =  0.000000000000   (it is the accuracy of the computed forces)
+  So long..
+
+
+  -SCF forces in the reference frame (a.u.):
+     Atom            X                  Y                   Z
+    ------   -----------------  -----------------  -----------------
+       1        0.000000000000     0.000000000000     0.000000313634
+       2        0.000000000000    -0.000000004167    -0.000000156817
+       3        0.000000000000     0.000000004167    -0.000000156817
+
+******************************************************************************
+tstop called on M-CHM-RKANTERS.local
+Tue Dec  5 18:30:26 2006
+
+user time   =       0.15 seconds =       0.00 minutes
+system time =       0.02 seconds =       0.00 minutes
+total time  =          0 seconds =       0.00 minutes
+
+	------------------------------------------------------
+	    OPTKING: for internal coordinate optimizations    
+	------------------------------------------------------
+
+Cartesian geometry and possibly gradient in a.u. with masses
+  8.0    15.99491462   0.0000000000   0.0000000000  -0.1200727090
+  1.0     1.00782503   0.0000000000   1.4229709901   0.9528205136
+  1.0     1.00782503   0.0000000000  -1.4229709901   0.9528205136
+                       0.0000000000   0.0000000000   0.0000003136
+                       0.0000000000  -0.0000000042  -0.0000001568
+                       0.0000000000   0.0000000042  -0.0000001568
+
+Simple Internal Coordinates and Values
+Stretches
+    (1 1 2) (0.94305656)
+    (2 1 3) (0.94305656)
+Bends
+    (3 2 1 3) (105.96879441)
+ 
+ ** Taking normal optimization step. **
+
+Current SCF energy before step       -76.0236150193
+
+Taking geometry step number 6
+
+BuB^t Determinant: 2.672431e+00
+
+Force Constants read from PSIF_OPTKING
+
+Performing BFGS Hessian update with previous 5 gradient(s).
+
+Scaling displacements by 1.000000
+
+Internal Coordinate Update in Ang or Rad, aJ/Ang or aJ/Rad
+         Value          Force        Displacement   New Value
+ 1   0.9430565590   0.0000008052   0.0000001110   0.9430566700
+ 2   0.9430565590   0.0000008052   0.0000001110   0.9430566700
+ 3   1.8495043669  -0.0000009534  -0.0000012551   1.8495031117
+   MAX force:    0.0000009534   RMS force:    0.0000008575
+
+MAX force is < 1.0e-05.  Optimization is complete.
+Final SCF energy is  -76.0236150193
+The Optimized geometry in a.u.
+  (  O   0.0000000000   0.0000000000  -0.1200727090 )
+  (  H   0.0000000000   1.4229709901   0.9528205136 )
+  (  H   0.0000000000  -1.4229709901   0.9528205136 )
+
+******** OPTKING execution completed ********

@@ -1,0 +1,22 @@
+# test.mnu Jmol version 11.3.15_dev  2007-08-28  7:23 AM 9/3/2007 Bob Hanson hansonr@stolaf.edu
+#
+# This file is just a very simple menu.
+
+# See http://chemapps.stolaf.edu/jmol/docs/misc/Jmol.mnu for details.
+
+# note that we only include here the menus that need changing.
+
+popupMenu = modelSetMenu - selectMenu renderMenu colorMenu - zoomMenu spinMenu  measureMenu aboutComputedMenu - myMenu
+selectMenu | Select = selectAll selectNone invertSelection - elementsComputedMenu 
+
+renderMenu | Style = renderSchemeMenu - atomMenu labelMenu bondMenu 
+renderSchemeMenu | Scheme = renderCpkSpacefill renderBallAndStick renderSticks renderWireframe
+atomMenu | Atoms = atomNone - atom15 atom20 atom25 atom50 atom75 atom100
+bondMenu | Bonds = bondNone bondWireframe - bond100 bond150 bond200 bond250 bond300
+labelMenu | Labels = labelNone - labelSymbol labelName labelNumber 
+colorMenu | Color = [color_atoms]Menu [color_bonds]Menu [color_labels]Menu [color_background]Menu
+schemeMenu | By Scheme = cpk altloc molecule formalcharge partialcharge#CHARGE
+
+myMenu | FEEDBACK = mailBob
+
+mailBob | Mail Bob= show url "http://chemapps.stolaf.edu/jmol/docs/examples-11/mailBob.htm"

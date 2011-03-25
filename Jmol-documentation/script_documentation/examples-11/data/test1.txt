@@ -1,0 +1,5 @@
+// script showing the effect of $SCRIPT_PATH$
+
+print "The path to this script is $SCRIPT_PATH$"
+delay 3
+path = "$SCRIPT_PATH$"

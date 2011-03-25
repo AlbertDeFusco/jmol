@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="display.xsl" type="text/xsl"?>
+<cml convention="FoX_wcml-2.0" fileId="TiO2_Rutile.xml" version="2.4"
+  xmlns="http://www.xml-cml.org/schema"
+  xmlns:castep="http://www.materialsgrid.org/castep/dictionary"
+  xmlns:castepunits="http://www.materialsgrid.org/castep/units"
+  xmlns:cml="http://www.xml-cml.org/dict/cmlDict"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:dc="http://purl.org/dc/elements/1.1/title"
+  xmlns:units="http://www.uszla.me.uk/FoX/units"
+  xmlns:cmlUnits="http://www.xml-cml.org/units/units"
+  xmlns:siUnits="http://www.xml-cml.org/units/siUnits"
+  xmlns:atomicUnits="http://www.xml-cml.org/units/atomic">
+  <metadataList title="Autocaptured metadata">
+    <metadata name="dc:date" content="2007-02-13"/>
+    <metadata name="castep:user" content=""/>
+    <metadata name="castep:host" content="node34.local"/>
+    <metadata name="castep:hosttype" content="x86_64-linux"/>
+    <metadata name="castep:numProcs" content="20"/>
+    <metadata name="castep:version" content="4.100"/>
+    <metadata name="castep:cmlversion" content="3"/>
+    <metadata name="castep:distribution" content="Academic"/>
+  </metadataList>
+  <metadataList title="Autocaptured metadata">
+    <metadata name="castep:title"
+    content="CASTEP calculation from Materials Studio"/>
+  </metadataList>
+  <!--             I N P U T    P A R A M E T E R S           -->
+  <module title="Initial System">
+    <molecule>
+      <atomArray>
+        <atom elementType="O" xFract="3.045000135899e-1"
+        yFract="3.045000135899e-1" zFract="0.000000000000e0"
+        occupancy="1.000000000000e0"/>
+        <atom elementType="O" xFract="6.954999864101e-1"
+        yFract="6.954999864101e-1" zFract="0.000000000000e0"
+        occupancy="1.000000000000e0"/>
+        <atom elementType="O" xFract="1.954999864101e-1"
+        yFract="8.045000135899e-1" zFract="5.000000000000e-1"
+        occupancy="1.000000000000e0"/>
+        <atom elementType="O" xFract="8.045000135899e-1"
+        yFract="1.954999864101e-1" zFract="5.000000000000e-1"
+        occupancy="1.000000000000e0"/>
+        <atom elementType="Ti" xFract="0.000000000000e0"
+        yFract="0.000000000000e0" zFract="0.000000000000e0"
+        occupancy="1.000000000000e0"/>
+        <atom elementType="Ti" xFract="5.000000000000e-1"
+        yFract="5.000000000000e-1" zFract="5.000000000000e-1"
+        occupancy="1.000000000000e0"/>
+      </atomArray>
+    </molecule>
+    <crystal id="struct" dictRef="castep:ucell">
+      <cellParameter latticeType="real" parameterType="length"
+        units="castepunits:a">4.592100143433e0 4.592100143433e0 2.957400083542e0</cellParameter>
+      <cellParameter latticeType="real" parameterType="angle"
+        units="castepunits:degree">9.000000000000e1 9.000000000000e1 9.000000000000e1</cellParameter>
+    </crystal>
+  </module>
+  <!--       F I N A L    P R O P E R T I E S      -->
+  <propertyList title="Final Properties" id="finalProperties">
+    <property dictRef="castep:Etot" title="Total energy" id="totalEnergy">
+      <scalar dataType="xsd:double" units="castepunits:ev">-4.902229700381e3</scalar>
+    </property>
+    <property dictRef="castep:stress" title="Final stress tensor"
+      id="finalStress">
+      <matrix rows="3" columns="3" dataType="xsd:double" units="castepunits:gpa">-3.938596109760e-3 0.000000000000e0 0.000000000000e0 0.000000000000e0 -3.938596109760e-3 0.000000000000e0 0.000000000000e0 0.000000000000e0 8.954829060016e-3</matrix>
+    </property>
+  </propertyList>
+  <metadata name="castep:totalTime" content="697.12" convention="castepunits:s"/>
+  <metadata name="dc:contributor"
+  content="FoX-2.0.1 (http://www.uszla.me.uk/FoX)"/>
+</cml>
