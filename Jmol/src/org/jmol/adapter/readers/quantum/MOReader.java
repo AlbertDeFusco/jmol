@@ -285,6 +285,7 @@ abstract public class MOReader extends BasisFunctionReader {
       readLine();
       return;
     }
+    
     // reset the coefficient maps
     dfCoefMaps = null;
     // Idea here is to concatenate results from gennbo if desired,
@@ -309,7 +310,12 @@ abstract public class MOReader extends BasisFunctionReader {
     int nBlank = 0;
     boolean haveMOs = false;
     if (line.indexOf("---") >= 0)
-      readLine();
+	    readLine();
+    //somebody decided to be difficult :|
+    if(line.indexOf("LEFT NATURAL ORBITALS") >= 0) {
+	    readLine();
+	    readLine();
+    }
     while (readLine() != null) {
       String[] tokens = getTokens();
       if (Logger.debugging) {
@@ -330,11 +336,25 @@ abstract public class MOReader extends BasisFunctionReader {
       }
       //not everyone has followed the conventions for ending a section of output
       String str = line.toUpperCase();
-      if (str.length() == 0 || str.indexOf("--") >= 0
-          || str.indexOf(".....") >= 0 || str.indexOf("NBO BASIS") >= 0 // reading NBOs
-          || str.indexOf("CI EIGENVECTORS WILL BE LABELED") >= 0 //this happens when doing MCSCF optimizations
-          || str.indexOf("LZ VALUE") >= 0 //open-shelled 
-          || str.indexOf("   THIS LOCALIZATION HAD") >= 0) { //this happens with certain localization methods
+      if (line.length() == 0 || line.indexOf("--") >= 0 || line.indexOf(".....") >=0 
+           || line.indexOf("NBO BASIS") >= 0 // reading NBOs
+           || line.indexOf("CI EIGENVECTORS WILL BE LABELED") >=0 //this happens when doing MCSCF optimizations
+           || line.indexOf("   THIS LOCALIZATION HAD") >=0 //this happens with certain localization methods
+	   || line.indexOf("... DONE WITH ENERGY LOCALIZATION ...") >=0
+	   || line.indexOf("... DONE WITH ORIENTATION ...") >=0
+	   || line.indexOf("... END OF SUBSYSTEM ORBITALS ...") >=0
+	   || line.indexOf("... END OF LOCALIZED ORBITALS ...") >=0
+	   || line.indexOf("... END OF RIGHT EOM NATURAL ORBITALS ...") >=0
+	   || line.indexOf("... END OF LEFT EOM NATURAL ORBITALS ...") >=0
+	   || line.indexOf("... DONE WITH LOCALIZATION ...") >=0
+	   || line.indexOf("... DONE WITH ORIENTATION ...") >=0
+	   || line.indexOf("CENTROIDS OF LOCALIZED ORBITALS (BOHR)") >=0
+	   || line.indexOf("ORBITAL ENERGIES FOR FILLED ORBITAL SPACE") >=0 //for canonical orbitals
+	   || line.indexOf("LZ VALUE ANALYSIS FOR MOLECULAR ORBITALS") >=0 //something happens when localizing after CASSCF
+	   || line.indexOf("LZ VALUE ANALYSIS FOR THE MOS") >=0 //something happens when localizing after CASSCF
+           || line.indexOf("CI EIGENSTATE") >= 0//more than one set can be found
+	   || line.indexOf("THE CIS NATURAL ORBITALS HAVE BEEN PUNCHED.") >= 0
+	   || line.indexOf("THE TDDFT NATURAL ORBITALS HAVE BEEN PUNCHED.") >=0) { 
         if (!haveCoeffMap) {
           haveCoeffMap = true;
           boolean isOK = true;

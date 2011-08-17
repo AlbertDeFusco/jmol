@@ -36,11 +36,15 @@ import java.util.ArrayList;
 import javax.vecmath.Vector3f;
 
 import org.jmol.adapter.smarter.Atom;
+import org.jmol.adapter.smarter.AtomSetCollection;
 import org.jmol.util.Logger;
+import org.jmol.viewer.JmolConstants;
 
 public class GamessUSReader extends GamessReader {
 
   private boolean lowdenCharges;
+  boolean qmefp=false;
+  int nqm=0;
   /*
   ------------------
   MOLECULAR ORBITALS
@@ -89,6 +93,7 @@ public class GamessUSReader extends GamessReader {
    */
   @Override
   protected boolean checkLine() throws Exception {
+	  boolean fragonly=false;
     boolean isBohr;
     if (line.indexOf("BASIS OPTIONS") >= 0){
       readBasisInfo();
@@ -98,12 +103,31 @@ public class GamessUSReader extends GamessReader {
       readControlInfo();
       return true;
     }
+    if(line.indexOf("COORD =FRAGONLY") >= 0) {
+	    fragonly=true;
+	    return true;
+    }
     if (line.indexOf("ATOMIC BASIS SET") >= 0) {
       readGaussianBasis("SHELL TYPE", "TOTAL");
       return false;
     }
-    if ((isBohr = line.indexOf("COORDINATES (BOHR)") >= 0)
-        || line.indexOf("COORDINATES OF ALL ATOMS ARE (ANGS)") >= 0) {
+    if(fragonly && ((isBohr=line.indexOf("READING $EFRAG GROUP")>=0) 
+              || line.indexOf("BEGINNING GEOMETRY SEARCH")>=0)) {
+	if (!doGetModel(++modelNumber))
+		return checkLastModel();
+	atomNames = new ArrayList<String>();
+	if (isBohr)
+		readEFPInBohrCoordinates();
+	else
+		readAtomsInAngstromCoordinates();
+	qmefp=true;
+	return true;
+      }
+
+
+
+    if (!fragonly && ((isBohr = line.indexOf("COORDINATES (BOHR)") >= 0)
+        || line.indexOf("COORDINATES OF ALL ATOMS ARE (ANGS)") >= 0)) {
       if (!doGetModel(++modelNumber))
         return checkLastModel();
       atomNames = new ArrayList<String>();
@@ -119,7 +143,8 @@ public class GamessUSReader extends GamessReader {
       readFrequencies();
       return true;
     }
-    if (line.indexOf("SUMMARY OF THE EFFECTIVE FRAGMENT") >= 0) {
+    //AAD why did I change this?
+    if (line.indexOf("READING $EFRAG GROUP") >= 0) {
       // We have EFP and we're not afraid to use it!!
       // it would be nice is this information was closer to the ab initio
       // molecule
@@ -130,10 +155,10 @@ public class GamessUSReader extends GamessReader {
       readPartialCharges();
       return false;
     }
-    if (line.indexOf("ELECTROSTATIC MOMENTS")>=0){
+    /*if (line.indexOf("SOLUTE ELECTROSTATIC MOMENTS")>=0){
       readDipoleMoment();
       return true;
-    }
+    }*/
     if (line.indexOf("- ALPHA SET -") >= 0)
       alphaBeta = "alpha";
     else if (line.indexOf("- BETA SET -") >= 0)
@@ -141,6 +166,7 @@ public class GamessUSReader extends GamessReader {
     else if  (line.indexOf("  EIGENVECTORS") >= 0
         || line.indexOf("  INITIAL GUESS ORBITALS") >= 0
         || line.indexOf("  MCSCF OPTIMIZED ORBITALS") >= 0
+        || line.indexOf("  MCSCF CANONICAL ORBITALS") >= 0
         || line.indexOf("  MCSCF NATURAL ORBITALS") >= 0
         || line.indexOf("  MOLECULAR ORBITALS") >= 0
         && line
@@ -152,13 +178,23 @@ public class GamessUSReader extends GamessReader {
       return false;
     }
     if (line.indexOf("EDMISTON-RUEDENBERG ENERGY LOCALIZED ORBITALS") >= 0
-        || line.indexOf("  THE PIPEK-MEZEY POPULATION LOCALIZED ORBITALS ARE") >= 0) {
+	|| line.indexOf("  ORIENTED LOCALIZED ORBITALS" ) >= 0
+	|| line.indexOf(" ORDERED LOCALIZED ORBITALS" ) >= 0
+        || line.indexOf("  THE PIPEK-MEZEY POPULATION LOCALIZED ORBITALS ARE") >= 0 
+        || line.indexOf("ORIENTED LOCALIZED ORBITALS") >=0
+        || line.indexOf("THE BOYS LOCALIZED ORBITALS ARE") >=0 
+        || line.indexOf("THE CIM LOCALIZED ORBITALS ARE") >=0) {
       if (!filterMO())
         return true;
       readMolecularOrbitals(HEADER_NONE);
       return false;
     }
-    if (line.indexOf("  NATURAL ORBITALS IN ATOMIC ORBITAL BASIS") >= 0) {
+    if (line.indexOf("  NATURAL ORBITALS IN ATOMIC ORBITAL BASIS") >=0 
+	|| line.indexOf("   SUBSYSTEM ORBITALS") >=0
+	|| line.indexOf("   CIS NATURAL ORBITALS") >=0
+	|| line.indexOf("LEFT  EOM-CC NATURAL ORBITALS") >=0
+	|| line.indexOf("RIGHT EOM-CC NATURAL ORBITALS") >=0
+	|| line.indexOf("  TDDFT NATURAL ORBITALS") >=0) {
       // the for mat of the next orbitals can change depending on the
       // cistep used. This works for ALDET and GUGA
 
@@ -267,6 +303,7 @@ public class GamessUSReader extends GamessReader {
       atom.atomName = atom.elementSymbol + (++n);
       setAtomCoord(atom, x * ANGSTROMS_PER_BOHR, y * ANGSTROMS_PER_BOHR, z * ANGSTROMS_PER_BOHR);
       atomNames.add(atomName);
+      nqm++;
     }
   }
   
@@ -420,7 +457,8 @@ ATOM         MULL.POP.    CHARGE          LOW.POP.     CHARGE
       return; // Not as expected don't read
     Atom[] atoms = atomSetCollection.getAtoms();
     int startAtom = atomSetCollection.getLastAtomSetAtomIndex();
-    int endAtom = atomSetCollection.getAtomCount();
+    //int endAtom = atomSetCollection.getAtomCount();
+    int endAtom = nqm;
     for (int i = startAtom; i < endAtom && readLine() != null; ++i)
       atoms[i].partialCharge = parseFloat(getTokens(prevline)[poploc]);
   }

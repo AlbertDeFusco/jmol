@@ -81,7 +81,7 @@ final public class JmolConstants {
   }
     
   public final static String cvsDate = "$Date$"; //
-  public final static String date = cvsDate.substring(7, 23);
+  public final static String date = "date";//cvsDate.substring(7, 23);
     
   public final static boolean officialRelease = false;
 
