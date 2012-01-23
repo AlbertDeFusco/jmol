@@ -343,6 +343,7 @@ abstract public class MOReader extends BasisFunctionReader {
 	   || line.indexOf("... DONE WITH ENERGY LOCALIZATION ...") >=0
 	   || line.indexOf("... DONE WITH ORIENTATION ...") >=0
 	   || line.indexOf("... END OF SUBSYSTEM ORBITALS ...") >=0
+	   || line.indexOf("Orbital overlap") >= 0
 	   || line.indexOf("... END OF LOCALIZED ORBITALS ...") >=0
 	   || line.indexOf("... END OF RIGHT EOM NATURAL ORBITALS ...") >=0
 	   || line.indexOf("... END OF LEFT EOM NATURAL ORBITALS ...") >=0
