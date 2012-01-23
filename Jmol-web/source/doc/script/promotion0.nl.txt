@@ -1,5 +1,0 @@
-set echo a 50% 50%
-set echo a center
-echo Jmol heeft het downladen gebeëindigd | Nu downloadend inhoud...
-refresh
-script script/promotion1.nl.txt

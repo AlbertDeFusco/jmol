@@ -1,5 +1,0 @@
-set echo a 50% 50%
-set echo a center
-echo Jmol has finished loading | Now loading content...
-refresh
-script script/promotion1.en.txt

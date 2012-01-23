@@ -1,7 +1,0 @@
-Complete(?) list of new Jmol script/JavaScript functionality planned for 11.4 and 
-introduced in prereleases 11.3.x.
-
-See http://www.stolaf.edu/academics/chemapps/jmol/docs for details. Some of these 
-commands are not documented because they are intended for serialization only -- for the
-construction of a Jmol script describing the precise state of the applet or application.
-

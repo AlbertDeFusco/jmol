@@ -1,8 +1,0 @@
-#aframe{position:absolute;top:50px;left:10px;height:600px;width:530px;overflow:auto;}
-#bframe{position:absolute;top:50px;left:550px;height:600px;width:450px;overflow:auto}
-#atable{position:absolute;top:0px;left:10px;width:480px}
-td{font-size:10pt;vertical-align:top}
-#x,.x{visibility:hidden}
-a{text-decoration:none}
-a.ftnote{text-decoration:none;color:red}
-body{background-color:#eeeeee;font-size:10pt}
